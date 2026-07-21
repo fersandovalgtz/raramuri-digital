@@ -59,6 +59,7 @@ test("publishes the multipage technical product architecture", async () => {
   assert.match(terminologyRoute, /base-terminologica-espanol-raramuri-completa\.jsonl/);
   assert.match(variantsRoute, /base-variantes-graficas-completa/);
   assert.match(saltilloRoute, /repositorio-palabras-con-saltillo-completo/);
+  assert.match(saltilloRoute, /glyph.*Todos.*slice\(0, 8\)/);
   assert.equal(JSON.parse(hosting).d1, "DB");
   await Promise.all([
     access(new URL("public/uceees-logo.png", root)),

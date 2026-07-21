@@ -21,7 +21,7 @@ export async function GET(request: Request) {
   const query = normalizeSearch((url.searchParams.get("q") ?? "").slice(0, 160));
   const field = (url.searchParams.get("field") ?? "Todos").slice(0, 20);
   const position = (url.searchParams.get("position") ?? "Todos").slice(0, 20);
-  const glyph = (url.searchParams.get("glyph") ?? "Todos").slice(0, 4);
+  const glyph = (url.searchParams.get("glyph") ?? "Todos").slice(0, 8);
   const mode = url.searchParams.get("mode") === "occurrences" ? "occurrences" : "forms";
   const format = url.searchParams.get("format") ?? "json";
   const page = Math.max(1, Number.parseInt(url.searchParams.get("page") ?? "1", 10) || 1);
