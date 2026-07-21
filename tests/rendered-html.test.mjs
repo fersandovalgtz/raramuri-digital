@@ -5,13 +5,14 @@ import test from "node:test";
 const root = new URL("../", import.meta.url);
 
 test("publishes the multipage technical product architecture", async () => {
-  const [page, header, route, corpusRoute, parallelRoute, terminologyRoute, hosting, products, productPage, explorer, corpusExplorer, parallelExplorer, terminologyExplorer] = await Promise.all([
+  const [page, header, route, corpusRoute, parallelRoute, terminologyRoute, variantsRoute, hosting, products, productPage, explorer, corpusExplorer, parallelExplorer, terminologyExplorer, variantsExplorer] = await Promise.all([
     readFile(new URL("app/page.tsx", root), "utf8"),
     readFile(new URL("app/components/SiteHeader.tsx", root), "utf8"),
     readFile(new URL("app/api/lexicon/route.ts", root), "utf8"),
     readFile(new URL("app/api/corpus/route.ts", root), "utf8"),
     readFile(new URL("app/api/parallel-corpus/route.ts", root), "utf8"),
     readFile(new URL("app/api/terminology/route.ts", root), "utf8"),
+    readFile(new URL("app/api/variants/route.ts", root), "utf8"),
     readFile(new URL(".openai/hosting.json", root), "utf8"),
     readFile(new URL("lib/products.ts", root), "utf8"),
     readFile(new URL("app/productos/[slug]/page.tsx", root), "utf8"),
@@ -19,6 +20,7 @@ test("publishes the multipage technical product architecture", async () => {
     readFile(new URL("app/components/CorpusExplorer.tsx", root), "utf8"),
     readFile(new URL("app/components/ParallelCorpusExplorer.tsx", root), "utf8"),
     readFile(new URL("app/components/TerminologyExplorer.tsx", root), "utf8"),
+    readFile(new URL("app/components/VariantsExplorer.tsx", root), "utf8"),
   ]);
 
   assert.match(page, /<strong>2,581<\/strong>/);
@@ -34,12 +36,15 @@ test("publishes the multipage technical product architecture", async () => {
   assert.match(productPage, /<h2>Esquema<\/h2>/);
   assert.match(productPage, /product\.id === 3 \? <ParallelCorpusExplorer/);
   assert.match(productPage, /product\.id === 4 \? <TerminologyExplorer/);
+  assert.match(productPage, /product\.id === 5 \? <VariantsExplorer/);
   assert.match(explorer, /Exportar CSV/);
   assert.match(corpusExplorer, /Corpus digital rarámuri-español/);
   assert.match(corpusExplorer, /JSONL/);
   assert.match(parallelExplorer, /Corpus paralelo de ejemplos rarámuri-español/);
   assert.match(parallelExplorer, /Extracción completa de los 622 registros con ejemplos/);
   assert.match(terminologyExplorer, /Segunda sección “ESPAÑOL - TARAHUMARA”/);
+  assert.match(variantsExplorer, /Las relaciones gráficas/);
+  assert.match(variantsExplorer, /CANDIDATA/);
   assert.match(route, /raramuri-base-lexicografica-completa\.csv/);
   assert.match(corpusRoute, /raramuri-corpus-completo\.tsv/);
   assert.match(corpusRoute, /raramuri-corpus-completo\.jsonl/);
@@ -47,12 +52,35 @@ test("publishes the multipage technical product architecture", async () => {
   assert.match(parallelRoute, /raramuri-corpus-paralelo-completo\.jsonl/);
   assert.match(terminologyRoute, /base-terminologica-espanol-raramuri-completa\.csv/);
   assert.match(terminologyRoute, /base-terminologica-espanol-raramuri-completa\.jsonl/);
+  assert.match(variantsRoute, /base-variantes-graficas-completa/);
   assert.equal(JSON.parse(hosting).d1, "DB");
   await Promise.all([
     access(new URL("public/uceees-logo.png", root)),
     access(new URL("public/logo-uacj.png", root)),
     access(new URL("public/logo-ca-uacj-113.png", root)),
   ]);
+});
+
+test("materializes the complete graphic-variant derivation", async () => {
+  const [variantsText, reportText, csvText] = await Promise.all([
+    readFile(new URL("data/graphic-variants.json", root), "utf8"),
+    readFile(new URL("data/graphic-variants-report.json", root), "utf8"),
+    readFile(new URL("data/graphic-variants.csv", root), "utf8"),
+  ]);
+  const variants = JSON.parse(variantsText);
+  const report = JSON.parse(reportText);
+  assert.equal(variants.length, 829);
+  assert.equal(report.records, 829);
+  assert.equal(report.graphic_relations, 602);
+  assert.equal(report.explicit_graphic_relations, 54);
+  assert.equal(report.detected_graphic_relations, 548);
+  assert.equal(report.inflection_relations, 225);
+  assert.equal(report.cross_references, 2);
+  assert.equal(report.source_entries, 2581);
+  assert.equal(report.source_entries_with_variant_annotations, 221);
+  assert.deepEqual(report.patterns, { "ba/hua": 27, "g/c": 11, "i/e": 122, "Ø/C inicial": 380, "Otra relación explícita": 48, "r/l": 14 });
+  assert.ok(variants.every((record) => record.variant_id && record.form_a && record.form_b && record.entry_ids.length && record.source_code && record.page_start && record.validation_status));
+  assert.equal(csvText.split("\r\n").length, 830);
 });
 
 test("keeps every extracted source row traceable and seeded", async () => {

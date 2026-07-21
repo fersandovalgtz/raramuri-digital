@@ -1,0 +1,20 @@
+{
+  "records": 829,
+  "graphic_relations": 602,
+  "inflection_relations": 225,
+  "cross_references": 2,
+  "explicit_graphic_relations": 54,
+  "detected_graphic_relations": 548,
+  "source_entries": 2581,
+  "source_entries_with_variant_annotations": 221,
+  "patterns": {
+    "ba/hua": 27,
+    "g/c": 11,
+    "i/e": 122,
+    "Ø/C inicial": 380,
+    "Otra relación explícita": 48,
+    "r/l": 14
+  },
+  "extraction_method": "Relaciones explícitas de lemas y variantes; comparación exhaustiva de lemas documentados para r/l, g/c, i/e, ba/hua y presencia/ausencia de consonante inicial",
+  "validation_status": "Pendiente de cotejo lingüístico"
+}
