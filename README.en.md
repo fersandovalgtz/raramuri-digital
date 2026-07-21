@@ -4,8 +4,22 @@
 
 A Rarámuri–Spanish lexicographic infrastructure for academic consultation, linguistic analysis, digital humanities, and application development.
 
-**Public website:** [raramuri.ceees.mx](https://raramuri.ceees.mx)<br>
-**Data and API:** [raramuri.ceees.mx/descargas](https://raramuri.ceees.mx/descargas)
+🌐 **Public website:** [raramuri.ceees.mx](https://raramuri.ceees.mx)<br>
+📦 **Data and API:** [raramuri.ceees.mx/descargas](https://raramuri.ceees.mx/descargas)
+
+<p align="center">
+  <a href="https://ceees.mx/" title="Universidad CEEES">
+    <img src="public/uceees-logo.png" alt="Universidad CEEES" height="56">
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.uacj.mx/" title="Universidad Autónoma de Ciudad Juárez">
+    <img src="public/logo-uacj.png" alt="Universidad Autónoma de Ciudad Juárez" height="56">
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://erevistas.uacj.mx/ojs/index.php/biniriame/about" title="Academic Group UACJ-113">
+    <img src="public/logo-ca-uacj-113.png" alt="Academic Group UACJ-113, Studies on Educational Practices and Interculturality" height="56">
+  </a>
+</p>
 
 ## Project lead
 
@@ -14,11 +28,11 @@ Academic and technical coordination<br>
 Universidad CEEES · Universidad Autónoma de Ciudad Juárez · Academic Group UACJ-113<br>
 [fernando.sandoval@uacj.mx](mailto:fernando.sandoval@uacj.mx) · [ORCID 0000-0002-3168-6725](https://orcid.org/0000-0002-3168-6725)
 
-## Institutions
+## 🏛️ Institutions
 
-- Universidad CEEES, Centro de Estudios Especializados en Educación Superior.
-- Universidad Autónoma de Ciudad Juárez, Multidisciplinary Division at Cuauhtémoc.
-- Academic Group UACJ-113, Studies on Educational Practices and Interculturality.
+- [Universidad CEEES](https://ceees.mx/), Centro de Estudios Especializados en Educación Superior.
+- [Universidad Autónoma de Ciudad Juárez](https://www.uacj.mx/), Multidisciplinary Division at Cuauhtémoc.
+- [Academic Group UACJ-113](https://erevistas.uacj.mx/ojs/index.php/biniriame/about), Studies on Educational Practices and Interculturality.
 
 ## Coverage
 
@@ -92,6 +106,12 @@ npm run dev
 - **Linguistic validation:** pending.
 
 Authorization for dissemination does not constitute linguistic validation. Corrections must preserve the entry identifier and documentary provenance.
+
+## 🧭 Linguistic rights and governance
+
+Indigenous Peoples have the right to preserve, revitalize, use, develop, and transmit their languages to future generations. This right is recognized by [Article 13 of the United Nations Declaration on the Rights of Indigenous Peoples](https://digitallibrary.un.org/record/606782?ln=en) and, in Mexico, by the [General Law on the Linguistic Rights of Indigenous Peoples](https://www.diputados.gob.mx/LeyesBiblio/pdf/LGDLPI.pdf).
+
+This infrastructure is intended to support Rarámuri documentation, consultation, and teaching. It does not replace the linguistic, cultural, or political authority of communities and speakers. Data reuse must retain attribution and provenance, prevent appropriation and decontextualization, respect community decisions and restrictions, and support effective Rarámuri participation in corpus validation, correction, and governance.
 
 ## License
 

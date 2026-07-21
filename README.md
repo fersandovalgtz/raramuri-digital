@@ -4,8 +4,22 @@
 
 Infraestructura lexicográfica rarámuri–español para consulta académica, análisis lingüístico, humanidades digitales y desarrollo de aplicaciones.
 
-**Sitio público:** [raramuri.ceees.mx](https://raramuri.ceees.mx)<br>
-**Datos y API:** [raramuri.ceees.mx/descargas](https://raramuri.ceees.mx/descargas)
+🌐 **Sitio público:** [raramuri.ceees.mx](https://raramuri.ceees.mx)<br>
+📦 **Datos y API:** [raramuri.ceees.mx/descargas](https://raramuri.ceees.mx/descargas)
+
+<p align="center">
+  <a href="https://ceees.mx/" title="Universidad CEEES">
+    <img src="public/uceees-logo.png" alt="Universidad CEEES" height="56">
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://www.uacj.mx/" title="Universidad Autónoma de Ciudad Juárez">
+    <img src="public/logo-uacj.png" alt="Universidad Autónoma de Ciudad Juárez" height="56">
+  </a>
+  &nbsp;&nbsp;&nbsp;&nbsp;
+  <a href="https://erevistas.uacj.mx/ojs/index.php/biniriame/about" title="Cuerpo Académico UACJ-113">
+    <img src="public/logo-ca-uacj-113.png" alt="Cuerpo Académico UACJ-113, Estudios sobre Prácticas Educativas e Interculturalidad" height="56">
+  </a>
+</p>
 
 ## Responsable
 
@@ -14,11 +28,11 @@ Coordinación académica y técnica<br>
 Universidad CEEES · Universidad Autónoma de Ciudad Juárez · Cuerpo Académico UACJ-113<br>
 [fernando.sandoval@uacj.mx](mailto:fernando.sandoval@uacj.mx) · [ORCID 0000-0002-3168-6725](https://orcid.org/0000-0002-3168-6725)
 
-## Instituciones
+## 🏛️ Instituciones
 
-- Universidad CEEES, Centro de Estudios Especializados en Educación Superior.
-- Universidad Autónoma de Ciudad Juárez, División Multidisciplinaria en Cuauhtémoc.
-- Cuerpo Académico UACJ-113, Estudios sobre Prácticas Educativas e Interculturalidad.
+- [Universidad CEEES](https://ceees.mx/), Centro de Estudios Especializados en Educación Superior.
+- [Universidad Autónoma de Ciudad Juárez](https://www.uacj.mx/), División Multidisciplinaria en Cuauhtémoc.
+- [Cuerpo Académico UACJ-113](https://erevistas.uacj.mx/ojs/index.php/biniriame/about), Estudios sobre Prácticas Educativas e Interculturalidad.
 
 ## Cobertura
 
@@ -92,6 +106,12 @@ npm run dev
 - **Validación lingüística:** pendiente.
 
 La autorización de difusión no equivale a validación lingüística. Las correcciones deben conservar el identificador de entrada y la procedencia documental.
+
+## 🧭 Derechos lingüísticos y gobernanza
+
+Los pueblos indígenas tienen derecho a preservar, revitalizar, utilizar, desarrollar y transmitir sus lenguas a las generaciones futuras. Este derecho está reconocido por el [artículo 13 de la Declaración de las Naciones Unidas sobre los Derechos de los Pueblos Indígenas](https://digitallibrary.un.org/record/606782?ln=es) y por la [Ley General de Derechos Lingüísticos de los Pueblos Indígenas](https://www.diputados.gob.mx/LeyesBiblio/pdf/LGDLPI.pdf) en México.
+
+Esta infraestructura busca apoyar la documentación, consulta y enseñanza del rarámuri. No sustituye la autoridad lingüística, cultural ni política de las comunidades y personas hablantes. La reutilización de los datos debe conservar la atribución y la procedencia, evitar la apropiación y la descontextualización, respetar decisiones y restricciones comunitarias, y promover la participación efectiva de los pueblos rarámuri en la validación, corrección y gobernanza del corpus.
 
 ## Licencia
 
