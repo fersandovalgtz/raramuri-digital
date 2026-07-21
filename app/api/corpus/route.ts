@@ -49,6 +49,23 @@ function serializeDocument(row: typeof lexicalEntries.$inferSelect) {
   };
 }
 
+function serializeJsonlDocument(row: typeof lexicalEntries.$inferSelect) {
+  const document = serializeDocument(row);
+  return {
+    document_id: document.documentId,
+    entry_id: document.entryId,
+    headword_rrm: document.headwordSource,
+    classification: document.classification,
+    translation_es: document.translationEs,
+    context_rrm_es: document.contextRrmEs,
+    token_count: document.tokenCount,
+    source_code: document.sourceCode,
+    page_start: document.pageStart,
+    page_end: document.pageEnd,
+    status: document.status,
+  };
+}
+
 function tsvCell(value: unknown) {
   return String(value ?? "").replaceAll("\t", " ").replaceAll("\r", " ").replaceAll("\n", " ");
 }
@@ -94,7 +111,7 @@ export async function GET(request: Request) {
     if (format === "tsv" || format === "jsonl") {
       const rows = await db.select().from(lexicalEntries).where(whereClause).orderBy(asc(lexicalEntries.id));
       if (format === "jsonl") {
-        return new Response(rows.map((row) => JSON.stringify(serializeDocument(row))).join("\n") + "\n", {
+        return new Response(rows.map((row) => JSON.stringify(serializeJsonlDocument(row))).join("\n") + "\n", {
           headers: {
             "Content-Type": "application/x-ndjson; charset=utf-8",
             "Content-Disposition": 'attachment; filename="raramuri-corpus-completo.jsonl"',
