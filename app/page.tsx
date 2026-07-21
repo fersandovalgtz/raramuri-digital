@@ -27,7 +27,7 @@ export default function Home() {
           <aside className="status-panel">
             <h2>Estado del sistema</h2>
             <dl>
-              <div><dt>Versión</dt><dd>2.0</dd></div>
+              <div><dt>Versión</dt><dd>3.0</dd></div>
               <div><dt>Base maestra</dt><dd><i className="status-dot active" /> Operativa</dd></div>
               <div><dt>Corpus P-02</dt><dd><i className="status-dot active" /> Operativo</dd></div>
               <div><dt>Corpus P-03</dt><dd><i className="status-dot active" /> Operativo</dd></div>
@@ -36,6 +36,7 @@ export default function Home() {
               <div><dt>Saltillo P-06</dt><dd><i className="status-dot active" /> Operativo</dd></div>
               <div><dt>Acentuación P-07</dt><dd><i className="status-dot active" /> Operativa</dd></div>
               <div><dt>Inventarios P-08–P-20</dt><dd><i className="status-dot active" /> Operativos</dd></div>
+              <div><dt>Análisis P-21–P-30</dt><dd><i className="status-dot active" /> Operativos</dd></div>
               <div><dt>Productos</dt><dd>30 rutas</dd></div>
               <div><dt>Validación</dt><dd><i className="status-dot pending" /> Pendiente</dd></div>
               <div><dt>Acceso</dt><dd>Privado</dd></div>
@@ -77,7 +78,7 @@ export default function Home() {
             <article><h3>Objetivo</h3><p>Construir una infraestructura lexicográfica reutilizable a partir del diccionario rarámuri–español y sus ejemplos documentales.</p></article>
             <article><h3>Alcance</h3><p>Base maestra, corpus, inventarios gramaticales, índices, relaciones semánticas, recursos docentes y control de procedencia.</p></article>
             <article><h3>Unidad de datos</h3><p>Entrada lexicográfica identificada por registro, lema, clase, traducción, acepciones, ejemplos, variantes, fuente y página.</p></article>
-            <article><h3>Estado</h3><p>Transcripción completa de la fuente estructurada. Cotejo con facsímil y validación lingüística pendientes.</p></article>
+            <article><h3>Estado</h3><p>Treinta productos materializados. Cotejo con facsímil y validación lingüística, semántica y didáctica pendientes.</p></article>
           </div>
         </section>
 
@@ -96,6 +97,7 @@ export default function Home() {
             <div role="row"><code>DATA</code><strong>lexical_entries</strong><span>Registro canónico y trazabilidad</span><em>OPERATIVO</em></div>
             <div role="row"><code>API</code><strong>/api/lexicon</strong><span>Búsqueda, filtros, paginación y CSV</span><em>OPERATIVO</em></div>
             <div role="row"><code>WEB</code><strong>/productos/[slug]</strong><span>Rutas técnicas por producto</span><em>OPERATIVO</em></div>
+            <div role="row"><code>DERIVED</code><strong>/api/advanced-products</strong><span>P-21–P-30: consulta, filtros y exportación</span><em>OPERATIVO</em></div>
             <div role="row"><code>QA</code><strong>validation_status</strong><span>Cotejo documental y lingüístico</span><em className="pending-text">PENDIENTE</em></div>
           </div>
         </section>

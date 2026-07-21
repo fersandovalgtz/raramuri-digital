@@ -405,6 +405,12 @@ h3 { margin: 0; font-size: 15px; line-height: 1.35; }
 .inventory-related span { color: var(--muted); font: 8px var(--mono); text-transform: uppercase; }
 .inventory-related strong { margin-top: 10px; color: var(--blue); font-size: 18px; }
 .inventory-record-panel ol { margin-top: 4px; }
+.advanced-module { margin-top: 58px; }
+.advanced-table .table-header, .advanced-table > button { grid-template-columns: 116px minmax(110px, .75fr) minmax(190px, 1.45fr) 110px 60px 92px 42px; }
+.advanced-record-panel .aligned-example { padding: 16px 17px; display: grid; grid-template-columns: 70px 1fr; gap: 9px 12px; border-bottom: 1px solid var(--line); }
+.advanced-record-panel .aligned-example span { color: var(--blue); font: 800 8px var(--mono); text-transform: uppercase; }
+.advanced-record-panel .aligned-example p { margin: 0; color: var(--ink); font-size: 11px; line-height: 1.55; }
+.advanced-record-panel code { font-size: 8px; }
 
 .site-footer { width: min(1280px, calc(100% - 48px)); min-height: 112px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr .4fr .5fr 1fr; gap: 25px; align-items: center; border-top: 2px solid var(--ink); }
 .site-footer > div { display: flex; flex-direction: column; gap: 5px; }

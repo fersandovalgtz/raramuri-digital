@@ -15,6 +15,7 @@
     "data:saltillo": "node scripts/extract-glottal-stop-words.mjs",
     "data:accents": "node --no-warnings scripts/extract-accented-words.mjs",
     "data:inventories": "node scripts/extract-grammatical-inventories.mjs",
+    "data:advanced": "node --no-warnings scripts/extract-advanced-products.mjs",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {

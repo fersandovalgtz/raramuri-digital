@@ -1,0 +1,150 @@
+{
+  "records": 15720,
+  "source_entries": 2581,
+  "parallel_pairs": 1027,
+  "products": {
+    "21": {
+      "records": 19,
+      "entries": 18,
+      "pages": 14,
+      "labels": {
+        "Resuelta": 19
+      },
+      "relation_types": {
+        "VÉASE": 19
+      }
+    },
+    "22": {
+      "records": 1825,
+      "entries": 1585,
+      "pages": 85,
+      "labels": {
+        "Acciones": 1254,
+        "Alimentos": 83,
+        "Animales": 79,
+        "Cuerpo": 110,
+        "Espacio": 81,
+        "Familia": 47,
+        "Naturaleza": 128,
+        "Tiempo": 43
+      },
+      "relation_types": {
+        "PERTENECE_A_CAMPO": 1825
+      }
+    },
+    "23": {
+      "records": 7164,
+      "entries": 2581,
+      "pages": 85,
+      "labels": {
+        "Acepción": 2758,
+        "Campo semántico": 1825,
+        "Categoría gramatical": 2581
+      },
+      "relation_types": {
+        "HAS_GRAMMATICAL_CATEGORY": 2581,
+        "HAS_SENSE": 2758,
+        "IN_SEMANTIC_FIELD": 1825
+      }
+    },
+    "24": {
+      "records": 2581,
+      "entries": 2581,
+      "pages": 85,
+      "labels": {
+        "Alta": 12,
+        "Baja": 487,
+        "Media": 167,
+        "Sin evidencia derivada": 1915
+      },
+      "relation_types": {}
+    },
+    "25": {
+      "records": 2581,
+      "entries": 2581,
+      "pages": 85,
+      "labels": {
+        "A": 124,
+        "B": 232,
+        "C": 477,
+        "E": 13,
+        "É": 2,
+        "G": 11,
+        "H": 187,
+        "I": 79,
+        "J": 62,
+        "L": 29,
+        "M": 210,
+        "N": 267,
+        "O": 96,
+        "Ó": 1,
+        "P": 70,
+        "Q": 34,
+        "R": 317,
+        "S": 218,
+        "T": 81,
+        "U": 42,
+        "Ú": 1,
+        "Y": 28
+      },
+      "relation_types": {}
+    },
+    "26": {
+      "records": 492,
+      "entries": 492,
+      "pages": 83,
+      "labels": {
+        "Alimentos": 74,
+        "Animales": 79,
+        "Cuerpo": 104,
+        "Familia": 47,
+        "Naturaleza": 118,
+        "Objeto": 70
+      },
+      "relation_types": {}
+    },
+    "27": {
+      "records": 224,
+      "entries": 224,
+      "pages": 73,
+      "labels": {
+        "Concepto abstracto": 48,
+        "Función gramatical": 176
+      },
+      "relation_types": {}
+    },
+    "28": {
+      "records": 456,
+      "entries": 341,
+      "pages": 50,
+      "labels": {
+        "Inicial A": 397,
+        "Inicial B": 59
+      },
+      "relation_types": {}
+    },
+    "29": {
+      "records": 348,
+      "entries": 281,
+      "pages": 49,
+      "labels": {
+        "Alineación compleja": 263,
+        "Estructura multicláusula": 30,
+        "Extensión": 29,
+        "Subordinación / enlace": 26
+      },
+      "relation_types": {}
+    },
+    "30": {
+      "records": 30,
+      "entries": 0,
+      "pages": 135,
+      "labels": {
+        "Cobertura completa": 30
+      },
+      "relation_types": {}
+    }
+  },
+  "extraction_method": "Derivaciones reproducibles P-21–P-30 sobre P-01 y P-03; reglas y evidencia conservadas por registro.",
+  "validation_status": "Validación lingüística, semántica y didáctica pendiente"
+}
