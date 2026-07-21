@@ -1,98 +1,102 @@
-# vinext-starter
+# Rarámuri Digital
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+[English version](README.en.md)
 
-## Prerequisites
+Infraestructura lexicográfica rarámuri–español para consulta académica, análisis lingüístico, humanidades digitales y desarrollo de aplicaciones.
 
-- Node.js `>=22.13.0`
+**Sitio público:** [raramuri.ceees.mx](https://raramuri.ceees.mx)<br>
+**Datos y API:** [raramuri.ceees.mx/descargas](https://raramuri.ceees.mx/descargas)
 
-## Quick Start
+## Responsable
+
+**Dr. Fernando Sandoval Gutiérrez**<br>
+Coordinación académica y técnica<br>
+Universidad CEEES · Universidad Autónoma de Ciudad Juárez · Cuerpo Académico UACJ-113<br>
+[fernando.sandoval@uacj.mx](mailto:fernando.sandoval@uacj.mx) · [ORCID 0000-0002-3168-6725](https://orcid.org/0000-0002-3168-6725)
+
+## Instituciones
+
+- Universidad CEEES, Centro de Estudios Especializados en Educación Superior.
+- Universidad Autónoma de Ciudad Juárez, División Multidisciplinaria en Cuauhtémoc.
+- Cuerpo Académico UACJ-113, Estudios sobre Prácticas Educativas e Interculturalidad.
+
+## Cobertura
+
+- 2,581 entradas lexicográficas con identificadores persistentes.
+- Lema, forma fuente, forma normalizada y homonimia.
+- Clasificación y familia gramatical.
+- Traducción, acepciones, ejemplos, variantes y comentarios.
+- Fuente, documento, páginas y estado de transcripción.
+- 30 productos derivados: corpus, inventarios, variantes, índices, tesauro, ontología y trazabilidad.
+
+## Formatos interoperables
+
+| Producto | Archivo | Uso |
+|---|---|---|
+| XML lexicográfico | [`raramuri-lexico.xml`](public/downloads/raramuri-lexico.xml) | Humanidades digitales y transformación XML |
+| JSON | [`raramuri-lexico.json`](public/downloads/raramuri-lexico.json) | Aplicaciones web y móviles |
+| CSV | [`raramuri-lexico.csv`](public/downloads/raramuri-lexico.csv) | Investigación y análisis estadístico |
+| SQL | [`raramuri-lexico.sql`](public/downloads/raramuri-lexico.sql) | Base normalizada para SQLite 3 |
+| TEI Lex-0 | [`raramuri-lex0.xml`](public/downloads/raramuri-lex0.xml) | Diccionarios electrónicos interoperables |
+| OpenAPI | [`openapi-lexico.json`](public/downloads/openapi-lexico.json) | Integración de clientes y servicios |
+
+El [manifiesto técnico](public/downloads/manifest.json) registra tamaño, tipo de medio, cobertura y suma SHA-256 de cada exportación.
+
+## API lexicográfica
+
+Punto de acceso de producción:
+
+```text
+GET https://raramuri.ceees.mx/api/lexicon
+```
+
+Ejemplos:
+
+```text
+GET /api/lexicon?id=RD-000001
+GET /api/lexicon?q=agua&limit=25
+GET /api/lexicon?pos=Vt&page=2
+GET /api/lexicon?format=csv
+```
+
+Especificación: [OpenAPI 3.1](https://raramuri.ceees.mx/api/openapi).
+
+## Estructura del repositorio
+
+```text
+app/                 Sitio, páginas, componentes y API
+data/                Bases maestras y productos derivados
+db/                  Esquema relacional
+drizzle/             Migración y carga de la base maestra
+lib/                 Modelos de producto y derivaciones
+public/downloads/    XML, JSON, CSV, SQL, TEI Lex-0 y OpenAPI
+scripts/             Extracción y generación reproducible
+tests/               Pruebas de cobertura e integridad
+```
+
+## Desarrollo
+
+Requiere Node.js 22.13 o posterior.
 
 ```bash
 npm install
+npm run data:exports
+npm test
 npm run dev
-npm run build
 ```
 
-This starter does not use `wrangler.jsonc`.
+## Estado editorial
 
-## Included Shape
+- **Publicación:** autorizada para difusión.
+- **Transcripción:** estructurada con trazabilidad por página.
+- **Validación lingüística:** pendiente.
 
-- edit site code under `app/`
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
+La autorización de difusión no equivale a validación lingüística. Las correcciones deben conservar el identificador de entrada y la procedencia documental.
 
-## Workspace Auth Headers
+## Licencia
 
-OpenAI workspace sites can read the current user's email from
-`oai-authenticated-user-email`.
+Los datos y la documentación producidos por el proyecto se distribuyen bajo [Creative Commons Atribución–NoComercial–CompartirIgual 4.0 Internacional](LICENSE.md). Los facsímiles, textos fuente, logotipos y materiales de terceros conservan sus propios derechos y no se redistribuyen mediante este repositorio.
 
-SIWC-authenticated workspace sites may also receive
-`oai-authenticated-user-full-name` when the user's SIWC profile has a non-empty
-`name` claim. The full-name value is percent-encoded UTF-8 and is accompanied by
-`oai-authenticated-user-full-name-encoding: percent-encoded-utf-8`.
+## Cita
 
-Treat the full name as optional and fall back to email when it is absent:
-
-```tsx
-import { headers } from "next/headers";
-
-export default async function Home() {
-  const requestHeaders = await headers();
-  const email = requestHeaders.get("oai-authenticated-user-email");
-  const encodedFullName = requestHeaders.get("oai-authenticated-user-full-name");
-  const fullName =
-    encodedFullName &&
-    requestHeaders.get("oai-authenticated-user-full-name-encoding") ===
-      "percent-encoded-utf-8"
-      ? decodeURIComponent(encodedFullName)
-      : null;
-
-  const displayName = fullName ?? email;
-  // ...
-}
-```
-
-## Optional Dispatch-Owned ChatGPT Sign-In
-
-Import the ready-to-use helpers from `app/chatgpt-auth.ts` when the site needs
-optional or required ChatGPT sign-in:
-
-- Use `getChatGPTUser()` for optional signed-in UI.
-- Use `requireChatGPTUser(returnTo)` for server-rendered pages that should send
-  anonymous visitors through Sign in with ChatGPT.
-- Use `chatGPTSignInPath(returnTo)` and `chatGPTSignOutPath(returnTo)` for
-  browser links or actions.
-- Pass a same-origin relative `returnTo` path for the destination after sign-in
-  or sign-out. The helper validates and safely encodes it.
-- Mark protected pages with `export const dynamic = "force-dynamic"` because
-  they depend on per-request identity headers.
-
-Dispatch owns `/signin-with-chatgpt`, `/signout-with-chatgpt`, `/callback`, the
-OAuth cookies, and identity header injection. Do not implement app routes for
-those reserved paths. Routes that do not import and call the helper remain
-anonymous-compatible.
-
-SIWC establishes identity only; it does not prove workspace membership. Use the
-Sites hosting platform's access policy controls for workspace-wide restrictions,
-or enforce explicit server-side membership or allowlist checks.
-
-Use SIWC for account pages, user-specific dashboards, saved records, and write
-actions tied to the current ChatGPT user. Leave public content anonymous.
-
-## Useful Commands
-
-- `npm run dev`: start local development
-- `npm run build`: verify the vinext build output
-- `npm test`: build the starter and verify its rendered loading skeleton
-- `npm run db:generate`: generate Drizzle migrations after schema changes
-
-## Learn More
-
-- [vinext Documentation](https://github.com/cloudflare/vinext)
-- [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+Consulte [`CITATION.cff`](CITATION.cff) para generar una referencia bibliográfica del proyecto.
