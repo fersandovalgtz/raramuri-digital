@@ -1,0 +1,63 @@
+{
+  "dataset": "Rarámuri Digital: base lexicográfica maestra",
+  "dataset_version": "1.0.0",
+  "generated": "2026-07-21",
+  "entry_count": 2581,
+  "encoding": "UTF-8",
+  "publication_status": "Autorizada para difusión",
+  "validation_status": "Pendiente de validación lingüística",
+  "license": {
+    "id": "CC BY-NC-SA 4.0",
+    "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+  },
+  "files": [
+    {
+      "label": "XML lexicográfico",
+      "file": "raramuri-lexico.xml",
+      "media_type": "application/xml",
+      "bytes": 2648346,
+      "sha256": "e8ab553ccc87b710c38436803a9aa18b92a450f90deb7588b3ad93f425665fb7",
+      "entry_count": 2581
+    },
+    {
+      "label": "JSON web y móvil",
+      "file": "raramuri-lexico.json",
+      "media_type": "application/json",
+      "bytes": 2078541,
+      "sha256": "9cb6eb6fce65673e8c691a2ca68d265bece7c54621fd84decc1255f564e52ca4",
+      "entry_count": 2581
+    },
+    {
+      "label": "CSV analítico",
+      "file": "raramuri-lexico.csv",
+      "media_type": "text/csv",
+      "bytes": 778203,
+      "sha256": "faefd440c30996d60ebdc0172b8dd94e3ae3e662bd25f41ebc60bd7e9d565bd3",
+      "entry_count": 2581
+    },
+    {
+      "label": "Base SQL SQLite",
+      "file": "raramuri-lexico.sql",
+      "media_type": "application/sql",
+      "bytes": 999415,
+      "sha256": "dd6710513142249ab876920a440f3847ccdeb5bf9ee4c942e47a8f06fcbde9da",
+      "entry_count": 2581
+    },
+    {
+      "label": "TEI Lex-0 0.9.5",
+      "file": "raramuri-lex0.xml",
+      "media_type": "application/tei+xml",
+      "bytes": 1870687,
+      "sha256": "74b0b3e4ea600fe2c805164465ee44a15bab5709878689b5fdd78daf94cd6be9",
+      "entry_count": 2581
+    },
+    {
+      "label": "Especificación OpenAPI",
+      "file": "openapi-lexico.json",
+      "media_type": "application/vnd.oai.openapi+json;version=3.1",
+      "bytes": 5957,
+      "sha256": "ac0851076b6cb8b6e2d85bf8b479d17b2e9abb4ef0375ebb3b3923663bfe0135",
+      "entry_count": 2581
+    }
+  ]
+}

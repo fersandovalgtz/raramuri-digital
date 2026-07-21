@@ -88,6 +88,48 @@ test("publishes the multipage technical product architecture", async () => {
   ]);
 });
 
+test("publishes complete interoperable exports and the authorized lexicographic API", async () => {
+  const [downloadsPage, header, apiRoute, openApiRoute, xmlText, jsonText, csvText, sqlText, teiText, openApiText, manifestText] = await Promise.all([
+    readFile(new URL("app/descargas/page.tsx", root), "utf8"),
+    readFile(new URL("app/components/SiteHeader.tsx", root), "utf8"),
+    readFile(new URL("app/api/lexicon/route.ts", root), "utf8"),
+    readFile(new URL("app/api/openapi/route.ts", root), "utf8"),
+    readFile(new URL("public/downloads/raramuri-lexico.xml", root), "utf8"),
+    readFile(new URL("public/downloads/raramuri-lexico.json", root), "utf8"),
+    readFile(new URL("public/downloads/raramuri-lexico.csv", root), "utf8"),
+    readFile(new URL("public/downloads/raramuri-lexico.sql", root), "utf8"),
+    readFile(new URL("public/downloads/raramuri-lex0.xml", root), "utf8"),
+    readFile(new URL("public/downloads/openapi-lexico.json", root), "utf8"),
+    readFile(new URL("public/downloads/manifest.json", root), "utf8"),
+  ]);
+
+  const json = JSON.parse(jsonText);
+  const openApi = JSON.parse(openApiText);
+  const manifest = JSON.parse(manifestText);
+  assert.equal(json.entries.length, 2581);
+  assert.equal(json.entries[0].record_id, "RD-000001");
+  assert.equal(json.entries.at(-1).record_id, "RD-002581");
+  assert.equal((xmlText.match(/<entry xml:id="RD-/g) ?? []).length, 2581);
+  assert.equal((teiText.match(/<entry xml:id="RD-/g) ?? []).length, 2581);
+  assert.equal(csvText.split("\r\n").length, 2583);
+  assert.equal((sqlText.match(/^INSERT INTO lexical_entries VALUES/gm) ?? []).length, 2581);
+  assert.equal((sqlText.match(/^INSERT INTO senses VALUES/gm) ?? []).length, 2758);
+  assert.equal((sqlText.match(/^INSERT INTO examples VALUES/gm) ?? []).length, 622);
+  assert.equal((sqlText.match(/^INSERT INTO variants VALUES/gm) ?? []).length, 224);
+  assert.equal(manifest.entry_count, 2581);
+  assert.equal(manifest.files.length, 6);
+  assert.ok(manifest.files.every((file) => file.sha256.length === 64 && file.entry_count === 2581));
+  assert.equal(openApi.openapi, "3.1.0");
+  assert.ok(openApi.paths["/api/lexicon"]);
+  assert.match(downloadsPage, /Edición digital TEI Lex-0/);
+  assert.match(downloadsPage, /API lexicográfica/);
+  assert.match(header, /href="\/descargas"/);
+  assert.match(apiRoute, /Autorizada para difusión/);
+  assert.match(apiRoute, /Access-Control-Allow-Origin/);
+  assert.match(apiRoute, /recordId/);
+  assert.match(openApiRoute, /openapi-lexico\.json/);
+});
+
 test("materializes products 21 through 30 as traceable derived datasets", async () => {
   const [recordsText, reportText] = await Promise.all([
     readFile(new URL("data/advanced-products.json", root), "utf8"),

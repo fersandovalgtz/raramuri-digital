@@ -412,6 +412,38 @@ h3 { margin: 0; font-size: 15px; line-height: 1.35; }
 .advanced-record-panel .aligned-example p { margin: 0; color: var(--ink); font-size: 11px; line-height: 1.55; }
 .advanced-record-panel code { font-size: 8px; }
 
+.downloads-heading { min-height: 230px; padding: 34px 0 38px; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(320px, .8fr); gap: 60px; align-items: end; border-bottom: 1px solid var(--line-strong); }
+.downloads-heading h1 { margin-top: 18px; }
+.downloads-heading > p { max-width: 520px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.75; }
+.downloads-metrics { border-top: 0; }
+.downloads-metrics strong { font-size: 24px; letter-spacing: -.03em; }
+.download-section { padding-top: 64px; }
+.download-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+.download-card { min-height: 370px; padding: 22px; display: flex; flex-direction: column; border: 1px solid var(--line-strong); background: var(--surface); }
+.download-card:nth-child(5) { grid-column: 1 / -1; min-height: 300px; }
+.download-card > header { display: flex; justify-content: space-between; align-items: center; }
+.download-card > header code { padding: 6px 8px; color: #fff; background: var(--blue); font: 800 10px var(--mono); }
+.download-card > header span { color: var(--muted); font: 800 9px var(--mono); }
+.download-card h3 { margin-top: 24px; font-size: 20px; letter-spacing: -.025em; }
+.download-card > p { max-width: 690px; margin: 13px 0 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.download-card dl { margin: 26px 0 24px; border-top: 1px solid var(--line); }
+.download-card dl div { min-height: 39px; display: grid; grid-template-columns: 115px 1fr; align-items: center; border-bottom: 1px solid var(--line); }
+.download-card dt { color: var(--muted); font: 8px var(--mono); text-transform: uppercase; }
+.download-card dd { margin: 0; justify-self: end; text-align: right; font-size: 10px; font-weight: 700; }
+.download-card dd code { color: var(--blue); font: 700 8px var(--mono); }
+.download-card .primary-button { width: fit-content; margin-top: auto; }
+.api-grid { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(330px, .85fr); border: 1px solid var(--line-strong); background: var(--surface); }
+.api-grid > article { min-height: 300px; padding: 26px; border-right: 1px solid var(--line); }
+.api-grid > article > code { color: var(--blue); font: 800 10px var(--mono); }
+.api-grid h3 { margin-top: 22px; font-size: 18px; }
+.api-grid p { max-width: 650px; margin: 14px 0 0; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.api-actions { margin-top: 34px; display: flex; align-items: center; gap: 22px; }
+.api-examples { padding: 26px; display: flex; flex-direction: column; gap: 10px; background: var(--surface-2); }
+.api-examples h3 { margin: 0 0 10px; color: var(--blue); font: 800 9px var(--mono); text-transform: uppercase; }
+.api-examples > code { padding: 11px 12px; overflow-x: auto; border: 1px solid var(--line); color: #263550; background: #fff; font: 9px var(--mono); white-space: nowrap; }
+.api-examples .text-link { margin-top: 8px; }
+.manifest-link { margin: 17px 0 0; text-align: right; }
+
 .site-footer { width: min(1280px, calc(100% - 48px)); min-height: 112px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr .4fr .5fr 1fr; gap: 25px; align-items: center; border-top: 2px solid var(--ink); }
 .site-footer > div { display: flex; flex-direction: column; gap: 5px; }
 .site-footer span { color: var(--muted); font: 8px var(--mono); text-transform: uppercase; }
@@ -434,6 +466,9 @@ h3 { margin: 0; font-size: 15px; line-height: 1.35; }
   .query-form, .query-form.corpus-query, .query-form.parallel-query, .query-form.terminology-query, .query-form.variants-query, .query-form.saltillo-query, .query-form.accent-query, .query-form.inventory-query { grid-template-columns: 1fr 1fr; }
   .parallel-layout, .terminology-layout, .variants-layout, .saltillo-layout, .accent-layout, .inventory-layout { grid-template-columns: 1fr; }
   .process-list, .trace-grid { grid-template-columns: 1fr 1fr; }
+  .downloads-heading, .api-grid { grid-template-columns: 1fr; }
+  .downloads-heading { gap: 24px; }
+  .api-grid > article { border-right: 0; border-bottom: 1px solid var(--line); }
   .site-footer { grid-template-columns: 1.5fr 1fr; padding: 20px 0; }
 }
 
@@ -455,6 +490,8 @@ h3 { margin: 0; font-size: 15px; line-height: 1.35; }
   .institutional-logo { min-height: 155px; }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 14px; }
   .metric-grid, .definition-grid, .source-grid, .institution-grid, .responsible-card, .license-grid, .io-grid { grid-template-columns: 1fr; }
+  .download-grid { grid-template-columns: 1fr; }
+  .download-card:nth-child(5) { grid-column: 1; }
   .metric-grid > div { min-height: 88px; border-right: 0; border-bottom: 1px solid var(--line); }
   .metric-grid > div:last-child { border-bottom: 0; }
   .architecture-grid { grid-template-columns: 1fr 1fr; }
@@ -489,6 +526,7 @@ h3 { margin: 0; font-size: 15px; line-height: 1.35; }
   .product-navigation { grid-template-columns: 1fr; }
   .product-navigation > a:last-child { text-align: left; }
   .implementation-state > div { align-items: flex-start; flex-direction: column; }
+  .api-actions { align-items: flex-start; flex-direction: column; gap: 14px; }
   .site-footer { grid-template-columns: 1fr; }
 }
 

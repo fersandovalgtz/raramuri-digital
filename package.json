@@ -16,6 +16,7 @@
     "data:accents": "node --no-warnings scripts/extract-accented-words.mjs",
     "data:inventories": "node scripts/extract-grammatical-inventories.mjs",
     "data:advanced": "node --no-warnings scripts/extract-advanced-products.mjs",
+    "data:exports": "node scripts/generate-interoperability-exports.mjs",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {

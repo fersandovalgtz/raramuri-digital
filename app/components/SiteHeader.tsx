@@ -12,12 +12,13 @@ export function SiteHeader() {
         <nav aria-label="Navegación principal">
           <Link href="/">Inicio</Link>
           <Link href="/productos">Productos</Link>
+          <Link href="/descargas">Datos/API</Link>
           <Link href="/#arquitectura">Arquitectura</Link>
           <Link href="/#fuentes">Fuentes</Link>
           <Link href="/#proyecto">Proyecto</Link>
           <Link href="/#licencia">Licencia</Link>
         </nav>
-        <span className="system-version">v3.0</span>
+        <span className="system-version">v3.1</span>
       </header>
     </>
   );

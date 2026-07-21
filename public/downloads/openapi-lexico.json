@@ -1,0 +1,242 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "API lexicográfica de Rarámuri Digital",
+    "version": "1.0.0",
+    "description": "Consulta pública de 2581 entradas autorizadas para difusión. La validación lingüística está pendiente.",
+    "contact": {
+      "name": "Fernando Sandoval Gutiérrez",
+      "email": "fernando.sandoval@uacj.mx"
+    },
+    "license": {
+      "name": "CC BY-NC-SA 4.0",
+      "identifier": "CC-BY-NC-SA-4.0",
+      "url": "https://creativecommons.org/licenses/by-nc-sa/4.0/"
+    }
+  },
+  "servers": [
+    {
+      "url": "https://raramuri.ceees.mx",
+      "description": "Producción"
+    }
+  ],
+  "paths": {
+    "/api/lexicon": {
+      "get": {
+        "summary": "Consultar entradas autorizadas",
+        "operationId": "listAuthorizedLexicalEntries",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "query",
+            "description": "Identificador exacto, por ejemplo RD-000001",
+            "schema": {
+              "type": "string",
+              "pattern": "^RD-[0-9]{6}$"
+            }
+          },
+          {
+            "name": "q",
+            "in": "query",
+            "description": "Búsqueda en lema, traducción, clasificación y comentarios",
+            "schema": {
+              "type": "string",
+              "maxLength": 160
+            }
+          },
+          {
+            "name": "pos",
+            "in": "query",
+            "description": "Familia de clasificación gramatical",
+            "schema": {
+              "type": "string",
+              "maxLength": 40
+            }
+          },
+          {
+            "name": "page",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "default": 1
+            }
+          },
+          {
+            "name": "limit",
+            "in": "query",
+            "schema": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 200,
+              "default": 50
+            }
+          },
+          {
+            "name": "format",
+            "in": "query",
+            "schema": {
+              "type": "string",
+              "enum": [
+                "json",
+                "csv"
+              ],
+              "default": "json"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Entradas autorizadas y metadatos de paginación",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "$ref": "#/components/schemas/LexiconResponse"
+                }
+              },
+              "text/csv": {
+                "schema": {
+                  "type": "string"
+                }
+              }
+            }
+          },
+          "500": {
+            "description": "Error interno"
+          }
+        }
+      }
+    },
+    "/api/openapi": {
+      "get": {
+        "summary": "Descargar la especificación OpenAPI",
+        "responses": {
+          "200": {
+            "description": "Documento OpenAPI 3.1"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "LexicalEntry": {
+        "type": "object",
+        "required": [
+          "recordId",
+          "headword",
+          "translationRaw",
+          "publicationStatus",
+          "validationStatus"
+        ],
+        "properties": {
+          "recordId": {
+            "type": "string"
+          },
+          "headword": {
+            "type": "string"
+          },
+          "headwordRaw": {
+            "type": "string"
+          },
+          "headwordNormalized": {
+            "type": "string"
+          },
+          "homonymNumber": {
+            "type": [
+              "integer",
+              "null"
+            ]
+          },
+          "classification": {
+            "type": "string"
+          },
+          "classificationFamily": {
+            "type": "string"
+          },
+          "translationRaw": {
+            "type": "string"
+          },
+          "senses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "examples": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "variants": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "commentsRaw": {
+            "type": "string"
+          },
+          "sourceCode": {
+            "type": "string"
+          },
+          "sourceDocument": {
+            "type": "string"
+          },
+          "pageStart": {
+            "type": "integer"
+          },
+          "pageEnd": {
+            "type": "integer"
+          },
+          "transcriptionStatus": {
+            "type": "string"
+          },
+          "publicationStatus": {
+            "type": "string",
+            "const": "Autorizada para difusión"
+          },
+          "validationStatus": {
+            "type": "string",
+            "const": "Pendiente de validación lingüística"
+          }
+        }
+      },
+      "LexiconResponse": {
+        "type": "object",
+        "properties": {
+          "entries": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/LexicalEntry"
+            }
+          },
+          "total": {
+            "type": "integer"
+          },
+          "totalAll": {
+            "type": "integer"
+          },
+          "page": {
+            "type": "integer"
+          },
+          "limit": {
+            "type": "integer"
+          },
+          "pages": {
+            "type": "integer"
+          },
+          "publicationStatus": {
+            "type": "string",
+            "const": "Autorizada para difusión"
+          },
+          "validationStatus": {
+            "type": "string",
+            "const": "Pendiente de validación lingüística"
+          }
+        }
+      }
+    }
+  }
+}

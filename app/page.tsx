@@ -27,7 +27,7 @@ export default function Home() {
           <aside className="status-panel">
             <h2>Estado del sistema</h2>
             <dl>
-              <div><dt>Versión</dt><dd>3.0</dd></div>
+              <div><dt>Versión</dt><dd>3.1</dd></div>
               <div><dt>Base maestra</dt><dd><i className="status-dot active" /> Operativa</dd></div>
               <div><dt>Corpus P-02</dt><dd><i className="status-dot active" /> Operativo</dd></div>
               <div><dt>Corpus P-03</dt><dd><i className="status-dot active" /> Operativo</dd></div>
@@ -37,6 +37,7 @@ export default function Home() {
               <div><dt>Acentuación P-07</dt><dd><i className="status-dot active" /> Operativa</dd></div>
               <div><dt>Inventarios P-08–P-20</dt><dd><i className="status-dot active" /> Operativos</dd></div>
               <div><dt>Análisis P-21–P-30</dt><dd><i className="status-dot active" /> Operativos</dd></div>
+              <div><dt>Interoperabilidad</dt><dd><i className="status-dot active" /> 5 formatos + API</dd></div>
               <div><dt>Productos</dt><dd>30 rutas</dd></div>
               <div><dt>Validación</dt><dd><i className="status-dot pending" /> Pendiente</dd></div>
               <div><dt>Acceso</dt><dd><i className="status-dot active" /> Público</dd></div>
@@ -88,7 +89,7 @@ export default function Home() {
             <article><span>01</span><h3>Fuentes</h3><p>PDF textual y facsímil.</p></article>
             <article><span>02</span><h3>Extracción</h3><p>Segmentación por filas y páginas.</p></article>
             <article><span>03</span><h3>Persistencia</h3><p>Base relacional D1.</p></article>
-            <article><span>04</span><h3>Servicios</h3><p>API JSON y exportación CSV.</p></article>
+            <article><span>04</span><h3>Servicios</h3><p>API REST y exportaciones XML, JSON, CSV, SQL y TEI.</p></article>
             <article><span>05</span><h3>Interfaces</h3><p>Consulta, filtros y fichas.</p></article>
             <article><span>06</span><h3>Derivación</h3><p>30 productos versionados.</p></article>
           </div>
@@ -96,6 +97,7 @@ export default function Home() {
             <div className="table-header" role="row"><span>Capa</span><span>Componente</span><span>Responsabilidad</span><span>Estado</span></div>
             <div role="row"><code>DATA</code><strong>lexical_entries</strong><span>Registro canónico y trazabilidad</span><em>OPERATIVO</em></div>
             <div role="row"><code>API</code><strong>/api/lexicon</strong><span>Búsqueda, filtros, paginación y CSV</span><em>OPERATIVO</em></div>
+            <div role="row"><code>EXPORT</code><strong>/descargas</strong><span>XML, JSON, CSV, SQL, TEI Lex-0 y OpenAPI</span><em>OPERATIVO</em></div>
             <div role="row"><code>WEB</code><strong>/productos/[slug]</strong><span>Rutas técnicas por producto</span><em>OPERATIVO</em></div>
             <div role="row"><code>DERIVED</code><strong>/api/advanced-products</strong><span>P-21–P-30: consulta, filtros y exportación</span><em>OPERATIVO</em></div>
             <div role="row"><code>QA</code><strong>validation_status</strong><span>Cotejo documental y lingüístico</span><em className="pending-text">PENDIENTE</em></div>
