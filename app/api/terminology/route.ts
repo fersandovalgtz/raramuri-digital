@@ -28,7 +28,8 @@ export async function GET(request: Request) {
   const url = new URL(request.url);
   const query = normalizeSearch((url.searchParams.get("q") ?? "").slice(0, 160));
   const label = (url.searchParams.get("label") ?? "Todos").trim().slice(0, 30);
-  const initial = normalizeSearch((url.searchParams.get("initial") ?? "Todas").slice(0, 2));
+  const initialParam = (url.searchParams.get("initial") ?? "Todas").trim();
+  const initial = initialParam === "Todas" ? "todas" : normalizeSearch(initialParam.slice(0, 1));
   const format = url.searchParams.get("format") ?? "json";
   const page = Math.max(1, Number.parseInt(url.searchParams.get("page") ?? "1", 10) || 1);
   const limit = Math.min(200, Math.max(1, Number.parseInt(url.searchParams.get("limit") ?? "50", 10) || 50));
