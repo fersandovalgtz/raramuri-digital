@@ -5,24 +5,38 @@ import { FormEvent, useMemo, useState } from "react";
 type Product = {
   id: number;
   title: string;
-  group: "Datos" | "Corpus" | "Inventarios" | "Análisis" | "Enseñanza";
+  group: "Datos" | "Corpus" | "Inventarios" | "Análisis" | "Docencia";
+};
+
+type Entry = {
+  id: string;
+  lemma: string;
+  pos: string;
+  spanish: string;
+  note: string;
+  example: string;
+  translation: string;
+  source: string;
+  page: string;
+  orthography: string;
+  domain: string;
 };
 
 const products: Product[] = [
-  { id: 1, title: "Base de datos lexicográfica maestra", group: "Datos" },
+  { id: 1, title: "Base lexicográfica maestra", group: "Datos" },
   { id: 2, title: "Corpus digital rarámuri-español", group: "Corpus" },
   { id: 3, title: "Corpus paralelo de ejemplos", group: "Corpus" },
   { id: 4, title: "Base terminológica español-rarámuri", group: "Datos" },
   { id: 5, title: "Base de variantes gráficas", group: "Datos" },
   { id: 6, title: "Repositorio de palabras con saltillo", group: "Corpus" },
   { id: 7, title: "Repositorio de palabras acentuadas", group: "Corpus" },
-  { id: 8, title: "Inventario digital de sustantivos", group: "Inventarios" },
+  { id: 8, title: "Inventario de sustantivos", group: "Inventarios" },
   { id: 9, title: "Inventario de verbos transitivos", group: "Inventarios" },
   { id: 10, title: "Inventario de verbos intransitivos", group: "Inventarios" },
-  { id: 11, title: "Inventario digital de adjetivos", group: "Inventarios" },
-  { id: 12, title: "Inventario digital de adverbios", group: "Inventarios" },
-  { id: 13, title: "Inventario digital de pronombres", group: "Inventarios" },
-  { id: 14, title: "Inventario digital de interjecciones", group: "Inventarios" },
+  { id: 11, title: "Inventario de adjetivos", group: "Inventarios" },
+  { id: 12, title: "Inventario de adverbios", group: "Inventarios" },
+  { id: 13, title: "Inventario de pronombres", group: "Inventarios" },
+  { id: 14, title: "Inventario de interjecciones", group: "Inventarios" },
   { id: 15, title: "Inventario de términos regionales", group: "Inventarios" },
   { id: 16, title: "Inventario de singulares y plurales", group: "Inventarios" },
   { id: 17, title: "Inventario de formas de pasado y futuro", group: "Inventarios" },
@@ -34,352 +48,368 @@ const products: Product[] = [
   { id: 23, title: "Ontología léxica inicial", group: "Análisis" },
   { id: 24, title: "Índice de frecuencia documental", group: "Análisis" },
   { id: 25, title: "Índice alfabético normalizado", group: "Corpus" },
-  { id: 26, title: "Catálogo de palabras ilustrables", group: "Enseñanza" },
-  { id: 27, title: "Catálogo de palabras abstractas", group: "Enseñanza" },
-  { id: 28, title: "Ejemplos para enseñanza inicial", group: "Enseñanza" },
-  { id: 29, title: "Ejemplos para análisis lingüístico", group: "Enseñanza" },
+  { id: 26, title: "Catálogo de palabras ilustrables", group: "Docencia" },
+  { id: 27, title: "Catálogo de palabras abstractas", group: "Docencia" },
+  { id: 28, title: "Ejemplos para enseñanza inicial", group: "Docencia" },
+  { id: 29, title: "Ejemplos para análisis lingüístico", group: "Análisis" },
   { id: 30, title: "Sistema interno de trazabilidad", group: "Datos" },
 ];
 
-const sampleEntries = [
+const entries: Entry[] = [
   {
-    word: "ba’huí",
-    grammar: "sustantivo",
-    meaning: "agua",
+    id: "RD-DEMO-0001",
+    lemma: "ba’huí",
+    pos: "S",
+    spanish: "agua",
+    note: "Sustantivo. Forma con saltillo y acento gráfico.",
     example: "Ba’huí bají.",
     translation: "Toma agua.",
-    note: "Voz registrada con saltillo y acento gráfico.",
-    source: "Transcripción de trabajo · p. 10",
+    source: "Transcripción estructurada de trabajo",
+    page: "10",
+    orthography: "saltillo + acento",
+    domain: "naturaleza",
   },
   {
-    word: "abé",
-    grammar: "adverbio",
-    meaning: "hoy; hace rato",
+    id: "RD-DEMO-0002",
+    lemma: "abé",
+    pos: "Adv",
+    spanish: "hoy; hace rato",
+    note: "Adverbio con dos acepciones y remisión interna.",
     example: "Abé huarú ucuri.",
     translation: "Hoy llovió mucho.",
-    note: "Entrada con dos acepciones y remisión interna.",
-    source: "Transcripción de trabajo · p. 3",
+    source: "Transcripción estructurada de trabajo",
+    page: "3",
+    orthography: "acento",
+    domain: "tiempo",
   },
   {
-    word: "a",
-    grammar: "verbo transitivo",
-    meaning: "buscar",
+    id: "RD-DEMO-0003",
+    lemma: "a",
+    pos: "Vt",
+    spanish: "buscar",
+    note: "Verbo transitivo con pasado, futuro, imperativo y gerundio documentados.",
     example: "Nijeni ama cahué.",
     translation: "Voy a buscar el caballo.",
-    note: "Incluye pasado, futuro, imperativo y gerundio.",
-    source: "Transcripción de trabajo · p. 3",
+    source: "Transcripción estructurada de trabajo",
+    page: "3",
+    orthography: "forma básica",
+    domain: "acción",
   },
 ];
 
-const filters = ["Todos", "Datos", "Corpus", "Inventarios", "Análisis", "Enseñanza"] as const;
+const filters = ["Todos", "Datos", "Corpus", "Inventarios", "Análisis", "Docencia"] as const;
+
+const schemaFields = [
+  ["lemma", "Forma de entrada"],
+  ["pos", "Clase gramatical"],
+  ["sense[]", "Acepciones"],
+  ["form[]", "Flexión y derivación"],
+  ["variant[]", "Variantes gráficas"],
+  ["example[]", "Ejemplos alineados"],
+  ["source", "Documento + página"],
+  ["status", "Estado de validación"],
+];
+
+const pipeline = [
+  ["01", "Transcripción", "Captura de la entrada y su página."],
+  ["02", "Segmentación", "Separación de lema, acepciones, formas y ejemplos."],
+  ["03", "Normalización", "Índice normalizado sin eliminar la grafía fuente."],
+  ["04", "Alineación", "Vinculación oración rarámuri ↔ traducción española."],
+  ["05", "Validación", "Cotejo lingüístico y documental por especialistas."],
+  ["06", "Publicación", "Versión identificable y trazable del registro."],
+];
 
 export default function Home() {
   const [query, setQuery] = useState("");
-  const [submittedQuery, setSubmittedQuery] = useState("");
+  const [submitted, setSubmitted] = useState("");
   const [activeFilter, setActiveFilter] = useState<(typeof filters)[number]>("Todos");
 
   const selectedEntry = useMemo(() => {
-    const normalized = submittedQuery.trim().toLocaleLowerCase("es");
-    if (!normalized) return sampleEntries[0];
-    return (
-      sampleEntries.find((entry) =>
-        [entry.word, entry.meaning, entry.grammar].some((value) =>
-          value.toLocaleLowerCase("es").includes(normalized),
-        ),
-      ) ?? null
-    );
-  }, [submittedQuery]);
+    const normalized = submitted.trim().toLocaleLowerCase("es");
+    if (!normalized) return entries[0];
+    return entries.find((entry) =>
+      [entry.lemma, entry.spanish, entry.pos, entry.domain].some((value) =>
+        value.toLocaleLowerCase("es").includes(normalized),
+      ),
+    ) ?? null;
+  }, [submitted]);
 
-  const visibleProducts =
-    activeFilter === "Todos"
-      ? products
-      : products.filter((product) => product.group === activeFilter);
+  const visibleProducts = activeFilter === "Todos"
+    ? products
+    : products.filter((product) => product.group === activeFilter);
 
-  function handleSearch(event: FormEvent<HTMLFormElement>) {
+  function submitSearch(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmittedQuery(query);
+    setSubmitted(query);
     document.getElementById("resultado")?.scrollIntoView({ behavior: "smooth", block: "center" });
   }
 
   return (
-    <>
+    <div className="site-shell">
       <a className="skip-link" href="#contenido">Saltar al contenido</a>
+      <div className="topline" />
 
       <header className="site-header">
         <a className="brand" href="#inicio" aria-label="Rarámuri Digital, Universidad CEEES">
-          <img src="/uceees-logo.png" alt="Universidad CEEES" />
+          <span className="brand-mark"><img src="/uceees-logo.png" alt="" /></span>
           <span className="brand-copy">
-            <strong>Rarámuri Digital</strong>
-            <small>Archivo lexicográfico abierto</small>
+            <strong>Universidad CEEES</strong>
+            <small>Humanidades digitales</small>
           </span>
         </a>
 
         <nav aria-label="Navegación principal">
-          <a href="#diccionario">Diccionario</a>
-          <a href="#corpus">Corpus</a>
+          <a href="#explorar">Explorar</a>
+          <a href="#modelo">Modelo de datos</a>
           <a href="#productos">Productos</a>
           <a href="#fuentes">Fuentes</a>
         </nav>
 
-        <span className="language-pair">Rarámuri <i>↔</i> Español</span>
+        <span className="build-status"><i /> PROTOTIPO · 0.2</span>
       </header>
 
       <main id="contenido">
         <section className="hero" id="inicio">
-          <div className="hero-intro">
-            <p className="kicker">Patrimonio lingüístico · Universidad CEEES</p>
-            <h1>Rarámuri<br />Digital</h1>
-            <p className="lede">
-              Un archivo vivo para consultar, estudiar y enseñar el léxico rarámuri con rigor
-              documental y procedencia verificable.
+          <div>
+            <p className="eyebrow">Infraestructura lexicográfica rarámuri-español</p>
+            <h1>Rarámuri<br /><em>Digital</em></h1>
+            <p className="hero-intro">
+              Plataforma para integrar, consultar y relacionar entradas, acepciones, formas,
+              ejemplos, variantes y referencias de página.
             </p>
-            <div className="hero-facts" aria-label="Alcance del proyecto">
-              <span><b>30</b> productos</span>
-              <span><b>2</b> fuentes de trabajo</span>
-              <span><b>1</b> ficha maestra</span>
-            </div>
           </div>
 
-          <div className="hero-search" id="diccionario">
-            <p className="eyebrow">Consulta el acervo</p>
-            <h2>Una entrada, todas sus relaciones.</h2>
-            <form className="searchbox" onSubmit={handleSearch}>
-              <span className="search-icon" aria-hidden="true" />
-              <label className="sr-only" htmlFor="search">Buscar en el diccionario</label>
-              <input
-                id="search"
-                type="search"
-                value={query}
-                onChange={(event) => setQuery(event.target.value)}
-                placeholder="Prueba: ba’huí, agua o adverbio…"
-              />
-              <button type="submit">Buscar</button>
-            </form>
-            <div className="search-help">
-              <span>Palabras, traducciones, categorías y variantes.</span>
-              <button type="button" onClick={() => { setQuery("ba’huí"); setSubmittedQuery("ba’huí"); }}>
-                Ver ejemplo
-              </button>
+          <aside className="metric-rail" aria-label="Alcance del proyecto">
+            <div className="metric">
+              <span>30</span>
+              <small>productos derivados<br />de una ficha maestra</small>
             </div>
+            <div className="metric">
+              <span>2</span>
+              <small>fuentes documentales<br />en integración</small>
+            </div>
+            <div className="metric">
+              <span>8</span>
+              <small>campos mínimos<br />por entrada</small>
+              <div className="progress"><i /></div>
+            </div>
+          </aside>
+        </section>
+
+        <section className="search-panel" id="explorar" aria-label="Consulta del corpus">
+          <form className="search-form" onSubmit={submitSearch}>
+            <span className="search-icon" aria-hidden="true" />
+            <label className="sr-only" htmlFor="lexical-search">Buscar en la muestra</label>
+            <input
+              id="lexical-search"
+              type="search"
+              value={query}
+              onChange={(event) => setQuery(event.target.value)}
+              placeholder="Buscar lema, traducción, categoría o campo semántico…"
+              autoComplete="off"
+            />
+            <button type="submit">Consultar muestra</button>
+          </form>
+          <div className="search-meta">
+            <span>ÍNDICES: LEMA · ESPAÑOL · POS · DOMINIO</span>
+            <button type="button" onClick={() => { setQuery("ba’huí"); setSubmitted("ba’huí"); }}>
+              CARGAR REGISTRO DEMO
+            </button>
           </div>
         </section>
 
-        <section className="entry-section" id="resultado" aria-live="polite">
-          <div className="section-heading compact">
-            <div>
-              <p className="eyebrow">Ficha lexicográfica maestra</p>
-              <h2>{selectedEntry ? "Resultado documentado" : "Sin coincidencia en la muestra"}</h2>
-            </div>
-            <span className="prototype-badge">Prototipo estructural</span>
-          </div>
-
+        <section className="workspace" id="resultado" aria-live="polite">
           {selectedEntry ? (
             <article className="entry-card">
-              <div className="entry-main">
-                <div className="entry-head">
-                  <h3>{selectedEntry.word}</h3>
-                  <span>{selectedEntry.grammar}</span>
-                  <strong>{selectedEntry.meaning}</strong>
-                </div>
-                <p className="entry-note"><b>1.</b> {selectedEntry.note}</p>
-                <div className="parallel-example">
-                  <p lang="tar"><span>Rarámuri</span>{selectedEntry.example}</p>
-                  <p><span>Español</span>{selectedEntry.translation}</p>
+              <div className="card-heading">
+                <p className="card-label">Registro lexicográfico</p>
+                <span className="entry-id">{selectedEntry.id}</span>
+              </div>
+              <h2 className="entry-title">
+                {selectedEntry.lemma} <span>· {selectedEntry.pos} · {selectedEntry.spanish}</span>
+              </h2>
+              <div className="definition">
+                <span>01</span>
+                <div>
+                  <strong>{selectedEntry.spanish}</strong>
+                  <p>{selectedEntry.note}</p>
                 </div>
               </div>
-
-              <aside className="trace-card" aria-label="Trazabilidad de la entrada">
-                <p className="eyebrow">Procedencia</p>
-                <b>Diccionario tarahumara de Samachique</b>
-                <span>{selectedEntry.source}</span>
-                <dl>
-                  <div><dt>Entrada</dt><dd>{selectedEntry.word}</dd></div>
-                  <div><dt>Estado</dt><dd>Transcrita</dd></div>
-                  <div><dt>Fuente exacta</dt><dd>Por cotejar</dd></div>
-                </dl>
-                <p className="trace-status">Registro con trazabilidad</p>
-              </aside>
+              <div className="example-block">
+                <p lang="tar"><small>RRM</small>{selectedEntry.example}</p>
+                <p><small>SPA</small>{selectedEntry.translation}</p>
+              </div>
+              <dl className="record-meta">
+                <div><dt>FUENTE</dt><dd>{selectedEntry.source}</dd></div>
+                <div><dt>PÁGINA</dt><dd>{selectedEntry.page}</dd></div>
+                <div><dt>ESTADO</dt><dd><i /> Transcrito · sin cotejo final</dd></div>
+              </dl>
             </article>
           ) : (
-            <div className="empty-state">
-              <b>La maqueta contiene tres entradas de demostración.</b>
-              <span>Prueba “ba’huí”, “abé”, “agua”, “hoy” o “buscar”.</span>
-            </div>
+            <article className="entry-card empty-record">
+              <p className="card-label">Sin coincidencia en la muestra</p>
+              <h2>Índice demostrativo: 3 registros</h2>
+              <p>Pruebe: “ba’huí”, “agua”, “abé”, “hoy”, “buscar”, “S”, “Adv” o “Vt”.</p>
+            </article>
           )}
+
+          <aside className="relations-card" aria-label="Relaciones del registro seleccionado">
+            <div className="relations-head">
+              <h2>Relaciones del registro</h2>
+              <span>GRAPH VIEW</span>
+            </div>
+            {selectedEntry ? (
+              <div className="network" aria-label={`Relaciones de ${selectedEntry.lemma}`}>
+                <span className="edge e1" /><span className="edge e2" />
+                <span className="edge e3" /><span className="edge e4" />
+                <span className="node primary">{selectedEntry.lemma}<small>{selectedEntry.spanish}</small></span>
+                <span className="node n1"><i />POS<small>{selectedEntry.pos}</small></span>
+                <span className="node n2"><i />DOMINIO<small>{selectedEntry.domain}</small></span>
+                <span className="node n3"><i />ORTOGRAFÍA<small>{selectedEntry.orthography}</small></span>
+                <span className="node n4"><i />FUENTE<small>p. {selectedEntry.page}</small></span>
+              </div>
+            ) : <p className="relations-empty">Seleccione un registro válido.</p>}
+          </aside>
         </section>
 
-        <section className="explore-section" id="corpus">
+        <section className="collections" aria-label="Vistas principales">
+          <a href="#corpus"><span>01 / CORPUS</span><i>↗</i><b>Ejemplos alineados</b><small>RRM ↔ SPA + FUENTE</small></a>
+          <a href="#modelo"><span>02 / ESQUEMA</span><i>↗</i><b>Ficha maestra</b><small>LEMA + POS + SENSE + FORM</small></a>
+          <a href="#variantes"><span>03 / FORMA</span><i>↗</i><b>Variación gráfica</b><small>R/L · G/C · I/E · BA/HUA</small></a>
+          <a href="#productos"><span>04 / SALIDAS</span><i>↗</i><b>30 productos</b><small>DATOS + CORPUS + ANÁLISIS</small></a>
+        </section>
+
+        <section className="technical-section" id="modelo">
           <div className="section-heading">
             <div>
-              <p className="eyebrow">Puertas de entrada</p>
-              <h2>Explorar el acervo desde distintas preguntas</h2>
+              <p className="eyebrow">Modelo de datos</p>
+              <h2>Una ficha canónica. Múltiples vistas derivadas.</h2>
             </div>
-            <p>La misma información lexicográfica se reutiliza sin perder su vínculo con la fuente.</p>
+            <p>
+              El sistema conserva la grafía de la fuente y agrega campos normalizados para búsqueda,
+              agrupación y análisis. Ningún producto se mantiene como lista aislada.
+            </p>
           </div>
 
-          <div className="feature-grid">
-            <article className="feature-card featured">
-              <span className="feature-number">01</span>
-              <p className="eyebrow">Diccionario</p>
-              <h3>Entradas rarámuri-español</h3>
-              <p>Palabra, clasificación, acepciones, ejemplos, variantes y procedencia en una ficha unificada.</p>
-              <a href="#diccionario">Consultar una entrada <span>→</span></a>
+          <div className="schema-layout">
+            <article className="schema-card">
+              <header><span>SCHEMA</span><b>lexical_entry</b><i>v0.2</i></header>
+              <div className="schema-fields">
+                {schemaFields.map(([field, description], index) => (
+                  <div key={field}>
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <code>{field}</code>
+                    <p>{description}</p>
+                    <i>{field.includes("[]") ? "ARRAY" : "STRING"}</i>
+                  </div>
+                ))}
+              </div>
             </article>
-            <article className="feature-card">
-              <span className="feature-number">02</span>
-              <p className="eyebrow">Corpus paralelo</p>
-              <h3>Oraciones alineadas</h3>
-              <p>Ejemplos rarámuri y traducciones españolas preparados para búsqueda y análisis.</p>
-              <a href="#ejemplo-paralelo">Ver alineación <span>→</span></a>
-            </article>
-            <article className="feature-card">
-              <span className="feature-number">03</span>
-              <p className="eyebrow">Variación</p>
-              <h3>Alternancias gráficas</h3>
-              <p>Relaciones r/l, g/c, consonante inicial, i/e y ba/hua explicadas y navegables.</p>
-              <a href="#variantes">Explorar variantes <span>→</span></a>
-            </article>
-            <article className="feature-card">
-              <span className="feature-number">04</span>
-              <p className="eyebrow">Enseñanza</p>
-              <h3>Selecciones didácticas</h3>
-              <p>Palabras ilustrables, ejemplos iniciales y materiales de complejidad gradual.</p>
-              <a href="#productos">Ver recursos <span>→</span></a>
+
+            <article className="pipeline-card">
+              <header><span>PIPELINE</span><b>ingesta → publicación</b></header>
+              <ol>
+                {pipeline.map(([number, title, description]) => (
+                  <li key={number}>
+                    <span>{number}</span>
+                    <div><b>{title}</b><p>{description}</p></div>
+                  </li>
+                ))}
+              </ol>
             </article>
           </div>
         </section>
 
-        <section className="parallel-section" id="ejemplo-paralelo">
-          <div className="parallel-copy">
-            <p className="eyebrow">Corpus paralelo de ejemplos</p>
-            <h2>Cada oración permanece junto a su traducción.</h2>
-            <p>
-              La alineación conserva la entrada que originó el ejemplo, su categoría gramatical y la página
-              de procedencia para que el dato pueda volver a verificarse.
-            </p>
-            <div className="alignment-key">
-              <span><i className="dot raramuri" /> texto rarámuri</span>
-              <span><i className="dot spanish" /> traducción española</span>
+        <section className="parallel-section" id="corpus">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">Corpus paralelo</p>
+              <h2>Alineación a nivel de ejemplo.</h2>
             </div>
+            <p>Cada par mantiene vínculo con lema, acepción, documento y página.</p>
           </div>
-          <div className="alignment-card">
-            <div className="alignment-row">
-              <span className="line-number">01</span>
-              <p lang="tar"><small>rarámuri</small>Nijeni ama cahué.</p>
-              <p><small>español</small>Voy a buscar el caballo.</p>
+          <div className="corpus-table" role="table" aria-label="Ejemplos alineados">
+            <div className="table-head" role="row">
+              <span>ID</span><span>RRM</span><span>SPA</span><span>LEMA</span><span>FUENTE</span>
             </div>
-            <div className="alignment-row">
-              <span className="line-number">02</span>
-              <p lang="tar"><small>rarámuri</small>Abé huarú ucuri.</p>
-              <p><small>español</small>Hoy llovió mucho.</p>
-            </div>
-            <div className="alignment-footer">
-              <span>2 ejemplos de demostración</span>
-              <span>Entrada + página + fuente</span>
-            </div>
+            <div role="row"><code>EX-0001</code><p lang="tar">Ba’huí bají.</p><p>Toma agua.</p><b>ba’huí</b><small>p. 10</small></div>
+            <div role="row"><code>EX-0002</code><p lang="tar">Abé huarú ucuri.</p><p>Hoy llovió mucho.</p><b>abé</b><small>p. 3</small></div>
+            <div role="row"><code>EX-0003</code><p lang="tar">Nijeni ama cahué.</p><p>Voy a buscar el caballo.</p><b>a</b><small>p. 3</small></div>
           </div>
         </section>
 
         <section className="variants-section" id="variantes">
           <div className="section-heading compact">
-            <div>
-              <p className="eyebrow">Base de variantes gráficas</p>
-              <h2>Una forma puede conducir a otra.</h2>
-            </div>
-            <p>Alternancias descritas en las advertencias de la fuente.</p>
+            <div><p className="eyebrow">Variación gráfica</p><h2>Alternancias registradas por la fuente.</h2></div>
+            <p>La consulta recuperará la forma documentada y sus variantes relacionadas.</p>
           </div>
-          <div className="variant-strip">
-            <div><b>r / l</b><span>corachi ↔ colachi</span></div>
-            <div><b>g / c</b><span>garé ↔ caré</span></div>
-            <div><b>consonante inicial</b><span>gará ↔ ará</span></div>
-            <div><b>i / e</b><span>quimá ↔ quemá</span></div>
-            <div><b>ba / hua</b><span>basoná ↔ huasoná</span></div>
+          <div className="variant-grid">
+            <div><code>VAR-01</code><b>r ↔ l</b><span>corachi / colachi</span></div>
+            <div><code>VAR-02</code><b>g ↔ c</b><span>garé / caré</span></div>
+            <div><code>VAR-03</code><b>Ø ↔ g/c</b><span>gará / ará</span></div>
+            <div><code>VAR-04</code><b>i ↔ e</b><span>quimá / quemá</span></div>
+            <div><code>VAR-05</code><b>ba ↔ hua</b><span>basoná / huasoná</span></div>
           </div>
         </section>
 
         <section className="products-section" id="productos">
           <div className="section-heading">
-            <div>
-              <p className="eyebrow">Arquitectura completa</p>
-              <h2>Treinta productos, una infraestructura común</h2>
-            </div>
-            <p>La clasificación permite crecer por etapas sin fragmentar el corpus ni duplicar información.</p>
+            <div><p className="eyebrow">Productos derivados</p><h2>Treinta salidas sobre el mismo corpus.</h2></div>
+            <p>Estado actual: arquitectura especificada. La publicación de cada salida dependerá de validación y cobertura suficientes.</p>
           </div>
-
           <div className="product-filters" aria-label="Filtrar productos">
             {filters.map((filter) => (
-              <button
-                type="button"
-                key={filter}
-                className={activeFilter === filter ? "active" : ""}
-                onClick={() => setActiveFilter(filter)}
-                aria-pressed={activeFilter === filter}
-              >
+              <button key={filter} type="button" onClick={() => setActiveFilter(filter)}
+                className={activeFilter === filter ? "active" : ""} aria-pressed={activeFilter === filter}>
                 {filter}
               </button>
             ))}
           </div>
-
           <div className="products-grid">
             {visibleProducts.map((product) => (
-              <article className="product-row" key={product.id}>
-                <span>{String(product.id).padStart(2, "0")}</span>
-                <div>
-                  <small>{product.group}</small>
-                  <h3>{product.title}</h3>
-                </div>
-                <i aria-hidden="true">↗</i>
+              <article key={product.id}>
+                <span>P-{String(product.id).padStart(2, "0")}</span>
+                <small>{product.group}</small>
+                <h3>{product.title}</h3>
+                <i>ESPECIFICADO</i>
               </article>
             ))}
           </div>
         </section>
 
         <section className="sources-section" id="fuentes">
-          <div className="source-intro">
-            <p className="eyebrow">Fuentes y método</p>
-            <h2>La procedencia no es una nota al pie: es parte del dato.</h2>
-            <p>
-              Cada registro futuro deberá indicar entrada, página y documento exactos. La maqueta separa la
-              transcripción de trabajo del facsímil para facilitar el cotejo editorial.
-            </p>
+          <div className="section-heading compact">
+            <div><p className="eyebrow">Control de fuentes</p><h2>Documento, página y estado en cada registro.</h2></div>
+            <p>Los datos mostrados son una muestra funcional. La foliación y la lectura deberán cotejarse antes de marcar un registro como validado.</p>
           </div>
-          <div className="source-list">
+          <div className="source-grid">
             <article>
-              <span>Fuente primaria</span>
-              <b>Diccionario tarahumara de Samachique</b>
-              <p>K. Simón Hilton · edición especial corregida y actualizada, 1993.</p>
-              <small>Fascículo digital · 156 páginas</small>
+              <header><span>SRC-01</span><i>FUENTE PRIMARIA</i></header>
+              <h3>Diccionario tarahumara de Samachique</h3>
+              <p>K. Simón Hilton. Edición especial corregida y actualizada, 1993.</p>
+              <dl><div><dt>Páginas</dt><dd>156</dd></div><div><dt>Formato</dt><dd>Facsímil PDF</dd></div><div><dt>Estado</dt><dd>Disponible</dd></div></dl>
             </article>
             <article>
-              <span>Documento de trabajo</span>
-              <b>Transcripción estructurada rarámuri-español</b>
-              <p>Entradas en columnas con clasificación, traducción, ejemplos y comentarios.</p>
-              <small>PDF de trabajo · 87 páginas</small>
+              <header><span>SRC-02</span><i>DOCUMENTO DE TRABAJO</i></header>
+              <h3>Transcripción estructurada rarámuri-español</h3>
+              <p>Columnas de lema, clasificación, traducción, ejemplos y comentarios.</p>
+              <dl><div><dt>Páginas</dt><dd>87</dd></div><div><dt>Formato</dt><dd>PDF textual</dd></div><div><dt>Estado</dt><dd>Por cotejar</dd></div></dl>
             </article>
           </div>
         </section>
 
-        <aside className="editorial-note">
-          <b>Nota editorial</b>
-          <p>
-            Esta primera versión define la experiencia y la organización del portal. Los conteos finales,
-            la normalización ortográfica y la foliación exacta se validarán durante la carga completa del corpus.
-          </p>
+        <aside className="scope-note">
+          <span>ALCANCE DE ESTA VERSIÓN</span>
+          <p>Interfaz y arquitectura de información. No representa todavía cobertura completa del diccionario ni validación lingüística final.</p>
         </aside>
       </main>
 
       <footer>
-        <div className="footer-brand">
-          <img src="/uceees-logo.png" alt="" />
-          <span><b>Universidad CEEES</b>Centro de Estudios Especializados en Educación Superior</span>
-        </div>
-        <div className="footer-links">
-          <a href="#inicio">Inicio</a>
-          <a href="#productos">Mapa de productos</a>
-          <a href="#fuentes">Metodología</a>
-        </div>
-        <p>Prototipo académico · Cuauhtémoc, Chihuahua</p>
+        <div className="footer-brand"><img src="/uceees-logo.png" alt="" /><span><b>Rarámuri Digital</b>Universidad CEEES</span></div>
+        <div><span>VERSIÓN</span><b>PROTOTIPO 0.2</b></div>
+        <div><span>COBERTURA</span><b>MUESTRA FUNCIONAL</b></div>
+        <div><span>TRAZABILIDAD</span><b>ENTRADA + PÁGINA + FUENTE</b></div>
       </footer>
-    </>
+    </div>
   );
 }
