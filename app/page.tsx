@@ -54,11 +54,13 @@ export default function Home() {
               <span>Universidad CEEES</span>
             </article>
             <article className="institutional-logo uacj-logo-card">
-              <Image src="/logo-uacj.png" width={330} height={117} alt="Universidad Autónoma de Ciudad Juárez" unoptimized />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo-uacj.png" width={330} height={117} alt="Universidad Autónoma de Ciudad Juárez" />
               <span>Universidad Autónoma de Ciudad Juárez</span>
             </article>
             <article className="institutional-logo ca-logo-card">
-              <Image src="/logo-ca-uacj-113.png" width={460} height={148} alt="Cuerpo Académico UACJ-113, Estudios sobre Prácticas Educativas e Interculturalidad" unoptimized />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo-ca-uacj-113.png" width={460} height={148} alt="Cuerpo Académico UACJ-113, Estudios sobre Prácticas Educativas e Interculturalidad" />
               <span>Cuerpo Académico UACJ-113</span>
             </article>
           </div>
