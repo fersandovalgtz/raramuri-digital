@@ -19,7 +19,7 @@ export function SiteHeader() {
           <Link href="/#proyecto">Proyecto</Link>
           <Link href="/#licencia">Licencia</Link>
         </nav>
-        <span className="system-version">v0.6</span>
+        <span className="system-version">v0.7</span>
       </header>
     </>
   );

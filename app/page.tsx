@@ -21,7 +21,6 @@ export default function Home() {
               <h1><span>Rarámuri</span><strong>Digital</strong></h1>
               <span className="title-circuit-line" aria-hidden="true" />
               <p>Infraestructura lexicográfica<br />rarámuri–español</p>
-              <span className="title-owner">UNIVERSIDAD CEEES</span>
             </div>
             <p className="hero-description">Sistema de datos para organizar, consultar y derivar productos lexicográficos con trazabilidad documental.</p>
             <div className="hero-actions"><Link className="primary-button" href="/productos">Productos</Link><Link className="text-link" href={productHref(products[0])}>Base lexicográfica maestra →</Link></div>
@@ -29,9 +28,10 @@ export default function Home() {
           <aside className="status-panel">
             <h2>Estado del sistema</h2>
             <dl>
-              <div><dt>Versión</dt><dd>0.6</dd></div>
+              <div><dt>Versión</dt><dd>0.7</dd></div>
               <div><dt>Base maestra</dt><dd><i className="status-dot active" /> Operativa</dd></div>
               <div><dt>Corpus P-02</dt><dd><i className="status-dot active" /> Operativo</dd></div>
+              <div><dt>Corpus P-03</dt><dd><i className="status-dot active" /> Operativo</dd></div>
               <div><dt>Productos</dt><dd>30 rutas</dd></div>
               <div><dt>Validación</dt><dd><i className="status-dot pending" /> Pendiente</dd></div>
               <div><dt>Acceso</dt><dd>Privado</dd></div>

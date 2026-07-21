@@ -5,32 +5,39 @@ import test from "node:test";
 const root = new URL("../", import.meta.url);
 
 test("publishes the multipage technical product architecture", async () => {
-  const [page, route, corpusRoute, hosting, products, productPage, explorer, corpusExplorer] = await Promise.all([
+  const [page, route, corpusRoute, parallelRoute, hosting, products, productPage, explorer, corpusExplorer, parallelExplorer] = await Promise.all([
     readFile(new URL("app/page.tsx", root), "utf8"),
     readFile(new URL("app/api/lexicon/route.ts", root), "utf8"),
     readFile(new URL("app/api/corpus/route.ts", root), "utf8"),
+    readFile(new URL("app/api/parallel-corpus/route.ts", root), "utf8"),
     readFile(new URL(".openai/hosting.json", root), "utf8"),
     readFile(new URL("lib/products.ts", root), "utf8"),
     readFile(new URL("app/productos/[slug]/page.tsx", root), "utf8"),
     readFile(new URL("app/components/LexiconExplorer.tsx", root), "utf8"),
     readFile(new URL("app/components/CorpusExplorer.tsx", root), "utf8"),
+    readFile(new URL("app/components/ParallelCorpusExplorer.tsx", root), "utf8"),
   ]);
 
   assert.match(page, /<strong>2,581<\/strong>/);
   assert.match(page, /Estado del sistema/);
   assert.match(page, /className="project-lockup"/);
+  assert.doesNotMatch(page, /title-owner/);
   assert.match(page, /logo-uacj\.png/);
   assert.match(page, /logo-ca-uacj-113\.png/);
   assert.equal((products.match(/^  p\(/gm) ?? []).length, 30);
   assert.match(productPage, /generateStaticParams/);
   assert.match(productPage, /<h2>Esquema<\/h2>/);
-  assert.match(productPage, /product\.id === 2 \? <CorpusExplorer/);
+  assert.match(productPage, /product\.id === 3 \? <ParallelCorpusExplorer/);
   assert.match(explorer, /Exportar CSV/);
   assert.match(corpusExplorer, /Corpus digital rarámuri-español/);
   assert.match(corpusExplorer, /JSONL/);
+  assert.match(parallelExplorer, /Corpus paralelo de ejemplos rarámuri-español/);
+  assert.match(parallelExplorer, /Extracción completa de los 622 registros con ejemplos/);
   assert.match(route, /raramuri-base-lexicografica-completa\.csv/);
   assert.match(corpusRoute, /raramuri-corpus-completo\.tsv/);
   assert.match(corpusRoute, /raramuri-corpus-completo\.jsonl/);
+  assert.match(parallelRoute, /raramuri-corpus-paralelo-completo\.tsv/);
+  assert.match(parallelRoute, /raramuri-corpus-paralelo-completo\.jsonl/);
   assert.equal(JSON.parse(hosting).d1, "DB");
   await Promise.all([
     access(new URL("public/uceees-logo.png", root)),
@@ -56,4 +63,27 @@ test("keeps every extracted source row traceable and seeded", async () => {
   assert.equal(entries[0].page_start, 3);
   assert.equal(entries.at(-1).page_end, 87);
   assert.equal((migration.match(/^\('RD-/gm) ?? []).length, 2581);
+});
+
+test("materializes the complete parallel-example derivation", async () => {
+  const entries = JSON.parse(await readFile(new URL("data/lexicon-master.json", root), "utf8"));
+  const { deriveParallelPairs } = await import(new URL("lib/parallel-corpus.ts", root));
+  const rows = entries.map((entry) => ({
+    recordId: entry.record_id,
+    headword: entry.headword,
+    classification: entry.classification,
+    classificationFamily: entry.classification_family,
+    translationRaw: entry.translation_raw,
+    examplesJson: JSON.stringify(entry.examples),
+    sourceCode: entry.source_code,
+    sourceDocument: entry.source_document,
+    pageStart: entry.page_start,
+    pageEnd: entry.page_end,
+    status: entry.status,
+  }));
+  const pairs = deriveParallelPairs(rows);
+  assert.equal(entries.filter((entry) => entry.examples.length).length, 622);
+  assert.equal(pairs.length, 1027);
+  assert.equal(pairs.filter((pair) => pair.alignmentStatus === "Alineado").length, 793);
+  assert.ok(pairs.every((pair) => pair.pairId && pair.entryId && pair.sourceCode && pair.pageStart));
 });

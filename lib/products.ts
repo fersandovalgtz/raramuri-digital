@@ -25,7 +25,7 @@ const p = (
   outputs: string[],
   fields: string[],
   dependencies: number[] = [1],
-): Product => ({ id, slug, title, domain, objective, recordUnit, inputs, outputs, fields, dependencies, status: id <= 2 ? "Operativo" : "Especificado" });
+): Product => ({ id, slug, title, domain, objective, recordUnit, inputs, outputs, fields, dependencies, status: id <= 3 ? "Operativo" : "Especificado" });
 
 export const products: Product[] = [
   p(1, "base-lexicografica-maestra", "Base lexicográfica maestra", "Datos", "Concentrar una fila canónica por entrada del diccionario con trazabilidad documental.", "Entrada lexicográfica", ["SRC-02: transcripción estructurada", "SRC-01: facsímil de cotejo"], ["Consulta web", "CSV completo o filtrado", "API JSON"], ["record_id", "headword", "classification", "translation", "senses[]", "examples[]", "variants[]", "source_page"], []),
