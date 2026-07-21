@@ -217,6 +217,9 @@ h3 { margin: 0; font-size: 15px; line-height: 1.35; }
 .query-form input, .query-form select { min-height: 42px; padding: 0 11px; border: 1px solid var(--line); color: var(--ink); background: var(--surface-2); outline: 0; font-size: 12px; }
 .query-form button { min-height: 42px; padding: 0 14px; border: 1px solid var(--blue); color: #fff; background: var(--blue); font: 750 9px var(--mono); }
 .query-form .secondary-button { color: var(--blue); background: #fff; }
+.query-form.corpus-query { grid-template-columns: minmax(260px, 1fr) 200px 175px auto auto; }
+.export-actions { display: flex; gap: 6px; }
+.export-actions button { min-width: 67px; }
 .lexicon-layout { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(340px, .65fr); gap: 14px; align-items: start; }
 .lexicon-table .table-header, .lexicon-table > button { width: 100%; min-height: 53px; padding: 0 12px; display: grid; grid-template-columns: 92px 140px 70px 1fr 48px; gap: 10px; align-items: center; border: 0; border-bottom: 1px solid var(--line); text-align: left; }
 .lexicon-table .table-header { min-height: 38px; }
@@ -247,6 +250,15 @@ h3 { margin: 0; font-size: 15px; line-height: 1.35; }
 .record-panel ol { margin: 0; padding-left: 17px; }
 .tag-list { margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 4px; list-style: none; }
 .tag-list li { padding: 3px 5px; color: var(--blue); background: var(--blue-soft); font: 8px var(--mono); }
+.corpus-table .table-header, .corpus-table > button { width: 100%; min-height: 53px; padding: 0 12px; display: grid; grid-template-columns: 118px 125px 66px 1fr 52px 46px; gap: 9px; align-items: center; border: 0; border-bottom: 1px solid var(--line); text-align: left; }
+.corpus-table .table-header { min-height: 38px; }
+.corpus-table > button { color: var(--ink); background: #fff; }
+.corpus-table > button:hover, .corpus-table > button.selected { background: var(--blue-soft); }
+.corpus-table > button.selected { box-shadow: inset 4px 0 0 var(--blue); }
+.corpus-table code { color: var(--blue); font: 700 7px var(--mono); }
+.corpus-table strong { font-size: 11px; }
+.corpus-table span { color: var(--muted); font-size: 9px; }
+.corpus-document-panel dd[lang="tar"] { color: var(--blue); font-weight: 750; }
 
 .site-footer { width: min(1280px, calc(100% - 48px)); min-height: 112px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr .4fr .5fr 1fr; gap: 25px; align-items: center; border-top: 2px solid var(--ink); }
 .site-footer > div { display: flex; flex-direction: column; gap: 5px; }
@@ -265,7 +277,7 @@ h3 { margin: 0; font-size: 15px; line-height: 1.35; }
   .product-catalog { grid-template-columns: repeat(2, 1fr); }
   .lexicon-layout { grid-template-columns: 1fr; }
   .record-panel { position: static; }
-  .query-form { grid-template-columns: 1fr 1fr; }
+  .query-form, .query-form.corpus-query { grid-template-columns: 1fr 1fr; }
   .process-list, .trace-grid { grid-template-columns: 1fr 1fr; }
   .site-footer { grid-template-columns: 1.5fr 1fr; padding: 20px 0; }
 }
@@ -297,8 +309,11 @@ h3 { margin: 0; font-size: 15px; line-height: 1.35; }
   .page-header p { font-size: 12px; }
   .process-list, .trace-grid { grid-template-columns: 1fr; }
   .process-list li, .trace-grid div { border-right: 0; border-bottom: 1px solid var(--line); }
-  .query-form { grid-template-columns: 1fr; }
+  .query-form, .query-form.corpus-query { grid-template-columns: 1fr; }
   .lexicon-table .table-header, .lexicon-table > button { min-width: 680px; }
+  .corpus-table { overflow-x: auto; }
+  .corpus-table .table-header, .corpus-table > button { min-width: 760px; }
+  .export-actions button { flex: 1; }
   .product-navigation { grid-template-columns: 1fr; }
   .product-navigation > a:last-child { text-align: left; }
   .implementation-state > div { align-items: flex-start; flex-direction: column; }

@@ -25,6 +25,7 @@ export default function Home() {
             <dl>
               <div><dt>Versión</dt><dd>0.5</dd></div>
               <div><dt>Base maestra</dt><dd><i className="status-dot active" /> Operativa</dd></div>
+              <div><dt>Corpus P-02</dt><dd><i className="status-dot active" /> Operativo</dd></div>
               <div><dt>Productos</dt><dd>30 rutas</dd></div>
               <div><dt>Validación</dt><dd><i className="status-dot pending" /> Pendiente</dd></div>
               <div><dt>Acceso</dt><dd>Privado</dd></div>

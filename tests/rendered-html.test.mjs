@@ -5,13 +5,15 @@ import test from "node:test";
 const root = new URL("../", import.meta.url);
 
 test("publishes the multipage technical product architecture", async () => {
-  const [page, route, hosting, products, productPage, explorer] = await Promise.all([
+  const [page, route, corpusRoute, hosting, products, productPage, explorer, corpusExplorer] = await Promise.all([
     readFile(new URL("app/page.tsx", root), "utf8"),
     readFile(new URL("app/api/lexicon/route.ts", root), "utf8"),
+    readFile(new URL("app/api/corpus/route.ts", root), "utf8"),
     readFile(new URL(".openai/hosting.json", root), "utf8"),
     readFile(new URL("lib/products.ts", root), "utf8"),
     readFile(new URL("app/productos/[slug]/page.tsx", root), "utf8"),
     readFile(new URL("app/components/LexiconExplorer.tsx", root), "utf8"),
+    readFile(new URL("app/components/CorpusExplorer.tsx", root), "utf8"),
   ]);
 
   assert.match(page, /<strong>2,581<\/strong>/);
@@ -19,8 +21,13 @@ test("publishes the multipage technical product architecture", async () => {
   assert.equal((products.match(/^  p\(/gm) ?? []).length, 30);
   assert.match(productPage, /generateStaticParams/);
   assert.match(productPage, /<h2>Esquema<\/h2>/);
+  assert.match(productPage, /product\.id === 2 \? <CorpusExplorer/);
   assert.match(explorer, /Exportar CSV/);
+  assert.match(corpusExplorer, /Corpus digital rarámuri-español/);
+  assert.match(corpusExplorer, /JSONL/);
   assert.match(route, /raramuri-base-lexicografica-completa\.csv/);
+  assert.match(corpusRoute, /raramuri-corpus-completo\.tsv/);
+  assert.match(corpusRoute, /raramuri-corpus-completo\.jsonl/);
   assert.equal(JSON.parse(hosting).d1, "DB");
 });
 
@@ -35,6 +42,7 @@ test("keeps every extracted source row traceable and seeded", async () => {
 
   assert.equal(entries.length, 2581);
   assert.equal(report.records, 2581);
+  assert.equal(report.with_examples, 622);
   assert.equal(entries[0].record_id, "RD-000001");
   assert.equal(entries.at(-1).record_id, "RD-002581");
   assert.equal(entries[0].page_start, 3);
