@@ -1,0 +1,217 @@
+{
+  "records": 3247,
+  "source_entries": 2581,
+  "products": {
+    "8": {
+      "records": 752,
+      "entries": 752,
+      "pages": 85,
+      "with_examples": 151,
+      "labels": {
+        "s": 4,
+        "S": 696,
+        "S esp": 15,
+        "S pl": 21,
+        "S sing": 14,
+        "S, adj": 2
+      },
+      "subtypes": {
+        "S": 752
+      }
+    },
+    "9": {
+      "records": 547,
+      "entries": 547,
+      "pages": 84,
+      "with_examples": 127,
+      "labels": {
+        "vt": 2,
+        "Vt": 510,
+        "VT": 1,
+        "Vt esp": 3,
+        "Vt pl": 19,
+        "Vt pret": 6,
+        "Vt sing": 6
+      },
+      "subtypes": {
+        "Vt": 547
+      }
+    },
+    "10": {
+      "records": 694,
+      "entries": 694,
+      "pages": 85,
+      "with_examples": 187,
+      "labels": {
+        "vi": 3,
+        "Vi": 590,
+        "Vi fut": 4,
+        "Vi pl": 56,
+        "Vi pret": 8,
+        "Vi pret pl": 2,
+        "Vi sg": 4,
+        "Vi sing": 26,
+        "Vipl": 1
+      },
+      "subtypes": {
+        "Vi": 694
+      }
+    },
+    "11": {
+      "records": 184,
+      "entries": 184,
+      "pages": 73,
+      "with_examples": 30,
+      "labels": {
+        "adj": 1,
+        "Adj": 164,
+        "Adj dem": 3,
+        "Adj pl": 6,
+        "Adj sin": 1,
+        "Adj sing": 6,
+        "Adj, adv": 1,
+        "Adj, s": 2
+      },
+      "subtypes": {
+        "Adj": 184
+      }
+    },
+    "12": {
+      "records": 162,
+      "entries": 162,
+      "pages": 67,
+      "with_examples": 67,
+      "labels": {
+        "adv": 1,
+        "Adv": 159,
+        "Adv pl": 1,
+        "Adv sing": 1
+      },
+      "subtypes": {
+        "Adv": 162
+      }
+    },
+    "13": {
+      "records": 22,
+      "entries": 22,
+      "pages": 12,
+      "with_examples": 4,
+      "labels": {
+        "Pron": 19,
+        "Pron dem": 2,
+        "Pron pos": 1
+      },
+      "subtypes": {
+        "Pron": 22
+      }
+    },
+    "14": {
+      "records": 3,
+      "entries": 3,
+      "pages": 2,
+      "with_examples": 1,
+      "labels": {
+        "Interj": 3
+      },
+      "subtypes": {
+        "Interj": 3
+      }
+    },
+    "15": {
+      "records": 11,
+      "entries": 11,
+      "pages": 9,
+      "with_examples": 1,
+      "labels": {
+        "Marca regional explícita": 11
+      },
+      "subtypes": {
+        "S": 7,
+        "Sin clasificar": 1,
+        "Vi": 2,
+        "Vt": 1
+      }
+    },
+    "16": {
+      "records": 179,
+      "entries": 179,
+      "pages": 63,
+      "with_examples": 53,
+      "labels": {
+        "Plural": 95,
+        "Singular": 42,
+        "Singular–plural": 42
+      },
+      "subtypes": {
+        "Clasificación explícita": 137,
+        "Par explícito": 42
+      }
+    },
+    "17": {
+      "records": 170,
+      "entries": 127,
+      "pages": 55,
+      "with_examples": 146,
+      "labels": {
+        "Futuro": 103,
+        "Pasado": 67
+      },
+      "subtypes": {
+        "Clasificación explícita": 20,
+        "Forma etiquetada": 150
+      }
+    },
+    "18": {
+      "records": 23,
+      "entries": 17,
+      "pages": 14,
+      "with_examples": 13,
+      "labels": {
+        "Imperativo": 23
+      },
+      "subtypes": {
+        "Número no indicado": 20,
+        "Plural": 3
+      }
+    },
+    "19": {
+      "records": 75,
+      "entries": 70,
+      "pages": 44,
+      "with_examples": 58,
+      "labels": {
+        "Gerundio": 1,
+        "Participio": 74
+      },
+      "subtypes": {
+        "Clasificación Pp": 23,
+        "Etiqueta pp": 42,
+        "Marca explícita": 1,
+        "Marca pp en comentario": 8,
+        "Remisión pp": 1
+      }
+    },
+    "20": {
+      "records": 425,
+      "entries": 425,
+      "pages": 78,
+      "with_examples": 116,
+      "labels": {
+        "Homonimia": 266,
+        "Homonimia y polisemia": 18,
+        "Polisemia": 141
+      },
+      "subtypes": {
+        "2 acepciones": 126,
+        "3 acepciones": 12,
+        "4 acepciones": 3,
+        "Homónimo 1": 134,
+        "Homónimo 2": 133,
+        "Homónimo 3": 16,
+        "Homónimo 4": 1
+      }
+    }
+  },
+  "extraction_method": "Clasificación por familia gramatical; marcas regionales explícitas; extracción de etiquetas morfológicas; homonimia numerada y acepciones estructuradas",
+  "validation_status": "Pendiente de cotejo lingüístico"
+}

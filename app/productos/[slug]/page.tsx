@@ -8,6 +8,7 @@ import { TerminologyExplorer } from "../../components/TerminologyExplorer";
 import { VariantsExplorer } from "../../components/VariantsExplorer";
 import { GlottalStopExplorer } from "../../components/GlottalStopExplorer";
 import { AccentedWordsExplorer } from "../../components/AccentedWordsExplorer";
+import { InventoryExplorer } from "../../components/InventoryExplorer";
 import { SiteFooter } from "../../components/SiteFooter";
 import { SiteHeader } from "../../components/SiteHeader";
 import { getProduct, productHref, products } from "../../../lib/products";
@@ -54,7 +55,7 @@ export default async function ProductPage({ params }: Props) {
           <dl>
             <div><dt>Estado</dt><dd><i className={`status-dot ${product.status === "Operativo" ? "active" : "pending"}`} /> {product.status}</dd></div>
             <div><dt>Unidad</dt><dd>{product.recordUnit}</dd></div>
-            <div><dt>Versión</dt><dd>{product.id <= 7 ? "1.0" : "0.1"}</dd></div>
+            <div><dt>Versión</dt><dd>{product.id <= 20 ? "1.0" : "0.1"}</dd></div>
           </dl>
         </header>
 
@@ -91,10 +92,10 @@ export default async function ProductPage({ params }: Props) {
 
         <section className="spec-section">
           <h2>Trazabilidad</h2>
-          <div className="trace-grid"><div><span>Identificador</span><strong>P-{String(product.id).padStart(2, "0")}</strong></div><div><span>Fuente mínima</span><strong>{product.id === 4 ? "term_id + SRC-01 + página" : product.id === 5 ? "variant_id + entry_ids + página" : product.id === 6 ? "saltillo_id + entry_id + campo + página" : product.id === 7 ? "accent_id + entry_id + campo + página" : "entry_id + source_code + page"}</strong></div><div><span>Estado de datos</span><strong>{product.id === 1 ? "Transcrito" : product.id === 2 ? "Derivado de P-01" : product.id === 3 ? "Derivado de P-01 y P-02" : product.id === 4 ? "OCR estructurado de SRC-01" : product.id === 5 ? "Derivado completo de P-01" : product.id === 6 ? "835 ocurrencias derivadas de P-01" : product.id === 7 ? "3,433 ocurrencias derivadas de P-01 y P-03" : "No materializado"}</strong></div><div><span>Validación lingüística</span><strong>Pendiente</strong></div></div>
+          <div className="trace-grid"><div><span>Identificador</span><strong>P-{String(product.id).padStart(2, "0")}</strong></div><div><span>Fuente mínima</span><strong>{product.id === 4 ? "term_id + SRC-01 + página" : product.id === 5 ? "variant_id + entry_ids + página" : product.id === 6 ? "saltillo_id + entry_id + campo + página" : product.id === 7 ? "accent_id + entry_id + campo + página" : product.id >= 8 && product.id <= 20 ? "inventory_id + entry_id + evidencia + página" : "entry_id + source_code + page"}</strong></div><div><span>Estado de datos</span><strong>{product.id === 1 ? "Transcrito" : product.id === 2 ? "Derivado de P-01" : product.id === 3 ? "Derivado de P-01 y P-02" : product.id === 4 ? "OCR estructurado de SRC-01" : product.id === 5 ? "Derivado completo de P-01" : product.id === 6 ? "835 ocurrencias derivadas de P-01" : product.id === 7 ? "3,433 ocurrencias derivadas de P-01 y P-03" : product.id >= 8 && product.id <= 20 ? "Materializado desde P-01" : "No materializado"}</strong></div><div><span>Validación lingüística</span><strong>Pendiente</strong></div></div>
         </section>
 
-        {product.id === 1 ? <LexiconExplorer /> : product.id === 2 ? <CorpusExplorer /> : product.id === 3 ? <ParallelCorpusExplorer /> : product.id === 4 ? <TerminologyExplorer /> : product.id === 5 ? <VariantsExplorer /> : product.id === 6 ? <GlottalStopExplorer /> : product.id === 7 ? <AccentedWordsExplorer /> : (
+        {product.id === 1 ? <LexiconExplorer /> : product.id === 2 ? <CorpusExplorer /> : product.id === 3 ? <ParallelCorpusExplorer /> : product.id === 4 ? <TerminologyExplorer /> : product.id === 5 ? <VariantsExplorer /> : product.id === 6 ? <GlottalStopExplorer /> : product.id === 7 ? <AccentedWordsExplorer /> : product.id >= 8 && product.id <= 20 ? <InventoryExplorer productId={product.id} /> : (
           <section className="spec-section implementation-state">
             <h2>Implementación</h2>
             <div><span className="status-chip">ESPECIFICADO</span><p>La ruta, el esquema y el procedimiento están definidos. La materialización de datos se ejecutará a partir de P-01.</p></div>

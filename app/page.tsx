@@ -27,7 +27,7 @@ export default function Home() {
           <aside className="status-panel">
             <h2>Estado del sistema</h2>
             <dl>
-              <div><dt>Versión</dt><dd>1.1</dd></div>
+              <div><dt>Versión</dt><dd>2.0</dd></div>
               <div><dt>Base maestra</dt><dd><i className="status-dot active" /> Operativa</dd></div>
               <div><dt>Corpus P-02</dt><dd><i className="status-dot active" /> Operativo</dd></div>
               <div><dt>Corpus P-03</dt><dd><i className="status-dot active" /> Operativo</dd></div>
@@ -35,6 +35,7 @@ export default function Home() {
               <div><dt>Variantes P-05</dt><dd><i className="status-dot active" /> Operativa</dd></div>
               <div><dt>Saltillo P-06</dt><dd><i className="status-dot active" /> Operativo</dd></div>
               <div><dt>Acentuación P-07</dt><dd><i className="status-dot active" /> Operativa</dd></div>
+              <div><dt>Inventarios P-08–P-20</dt><dd><i className="status-dot active" /> Operativos</dd></div>
               <div><dt>Productos</dt><dd>30 rutas</dd></div>
               <div><dt>Validación</dt><dd><i className="status-dot pending" /> Pendiente</dd></div>
               <div><dt>Acceso</dt><dd>Privado</dd></div>

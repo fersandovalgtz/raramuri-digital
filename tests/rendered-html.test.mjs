@@ -5,7 +5,7 @@ import test from "node:test";
 const root = new URL("../", import.meta.url);
 
 test("publishes the multipage technical product architecture", async () => {
-  const [page, header, route, corpusRoute, parallelRoute, terminologyRoute, variantsRoute, saltilloRoute, accentsRoute, hosting, products, productPage, explorer, corpusExplorer, parallelExplorer, terminologyExplorer, variantsExplorer, saltilloExplorer, accentsExplorer] = await Promise.all([
+  const [page, header, route, corpusRoute, parallelRoute, terminologyRoute, variantsRoute, saltilloRoute, accentsRoute, inventoriesRoute, hosting, products, productPage, explorer, corpusExplorer, parallelExplorer, terminologyExplorer, variantsExplorer, saltilloExplorer, accentsExplorer, inventoryExplorer] = await Promise.all([
     readFile(new URL("app/page.tsx", root), "utf8"),
     readFile(new URL("app/components/SiteHeader.tsx", root), "utf8"),
     readFile(new URL("app/api/lexicon/route.ts", root), "utf8"),
@@ -15,6 +15,7 @@ test("publishes the multipage technical product architecture", async () => {
     readFile(new URL("app/api/variants/route.ts", root), "utf8"),
     readFile(new URL("app/api/glottal-stop-words/route.ts", root), "utf8"),
     readFile(new URL("app/api/accented-words/route.ts", root), "utf8"),
+    readFile(new URL("app/api/inventories/route.ts", root), "utf8"),
     readFile(new URL(".openai/hosting.json", root), "utf8"),
     readFile(new URL("lib/products.ts", root), "utf8"),
     readFile(new URL("app/productos/[slug]/page.tsx", root), "utf8"),
@@ -25,6 +26,7 @@ test("publishes the multipage technical product architecture", async () => {
     readFile(new URL("app/components/VariantsExplorer.tsx", root), "utf8"),
     readFile(new URL("app/components/GlottalStopExplorer.tsx", root), "utf8"),
     readFile(new URL("app/components/AccentedWordsExplorer.tsx", root), "utf8"),
+    readFile(new URL("app/components/InventoryExplorer.tsx", root), "utf8"),
   ]);
 
   assert.match(page, /<strong>2,581<\/strong>/);
@@ -43,6 +45,7 @@ test("publishes the multipage technical product architecture", async () => {
   assert.match(productPage, /product\.id === 5 \? <VariantsExplorer/);
   assert.match(productPage, /product\.id === 6 \? <GlottalStopExplorer/);
   assert.match(productPage, /product\.id === 7 \? <AccentedWordsExplorer/);
+  assert.match(productPage, /product\.id >= 8 && product\.id <= 20 \? <InventoryExplorer/);
   assert.match(explorer, /Exportar CSV/);
   assert.match(corpusExplorer, /Corpus digital rarámuri-español/);
   assert.match(corpusExplorer, /JSONL/);
@@ -55,6 +58,8 @@ test("publishes the multipage technical product architecture", async () => {
   assert.match(saltilloExplorer, /Contexto documental/);
   assert.match(accentsExplorer, /no se infiere división silábica/);
   assert.match(accentsExplorer, /Contexto rarámuri/);
+  assert.match(inventoryExplorer, /Regla de inclusión/);
+  assert.match(inventoryExplorer, /La homonimia conserva la numeración de la fuente/);
   assert.match(route, /raramuri-base-lexicografica-completa\.csv/);
   assert.match(corpusRoute, /raramuri-corpus-completo\.tsv/);
   assert.match(corpusRoute, /raramuri-corpus-completo\.jsonl/);
@@ -67,12 +72,38 @@ test("publishes the multipage technical product architecture", async () => {
   assert.match(saltilloRoute, /glyph.*Todos.*slice\(0, 8\)/);
   assert.match(accentsRoute, /repositorio-palabras-acentuadas-completo/);
   assert.match(accentsRoute, /vowel.*Todas.*slice\(0, 8\)/);
+  assert.match(inventoriesRoute, /base-homonimos-polisemia/);
+  assert.match(inventoriesRoute, /Producto fuera de rango/);
   assert.equal(JSON.parse(hosting).d1, "DB");
   await Promise.all([
     access(new URL("public/uceees-logo.png", root)),
     access(new URL("public/logo-uacj.png", root)),
     access(new URL("public/logo-ca-uacj-113.png", root)),
   ]);
+});
+
+test("materializes products 8 through 20 as complete traceable inventories", async () => {
+  const [recordsText, reportText] = await Promise.all([
+    readFile(new URL("data/grammatical-inventories.json", root), "utf8"),
+    readFile(new URL("data/grammatical-inventories-report.json", root), "utf8"),
+  ]);
+  const records = JSON.parse(recordsText);
+  const report = JSON.parse(reportText);
+  const expectedCounts = { 8: 752, 9: 547, 10: 694, 11: 184, 12: 162, 13: 22, 14: 3, 15: 11, 16: 179, 17: 170, 18: 23, 19: 75, 20: 425 };
+  assert.equal(records.length, 3247);
+  assert.equal(report.records, 3247);
+  assert.equal(report.source_entries, 2581);
+  for (const [productId, expected] of Object.entries(expectedCounts)) {
+    assert.equal(report.products[productId].records, expected);
+    assert.equal(records.filter((record) => record.product_id === Number(productId)).length, expected);
+  }
+  assert.deepEqual(report.products[15].labels, { "Marca regional explícita": 11 });
+  assert.deepEqual(report.products[16].subtypes, { "Clasificación explícita": 137, "Par explícito": 42 });
+  assert.deepEqual(report.products[17].labels, { Futuro: 103, Pasado: 67 });
+  assert.deepEqual(report.products[18].subtypes, { "Número no indicado": 20, Plural: 3 });
+  assert.deepEqual(report.products[19].labels, { Gerundio: 1, Participio: 74 });
+  assert.deepEqual(report.products[20].labels, { Homonimia: 266, "Homonimia y polisemia": 18, Polisemia: 141 });
+  assert.ok(records.every((record) => record.inventory_id && record.product_id >= 8 && record.product_id <= 20 && record.form && record.entry_id && record.source_code && record.page_start && record.validation_status));
 });
 
 test("materializes the complete repository of accented Rarámuri words", async () => {

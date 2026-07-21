@@ -386,6 +386,26 @@ h3 { margin: 0; font-size: 15px; line-height: 1.35; }
 .accent-context p { max-height: 210px; margin: 12px 0 0; overflow: auto; color: #3e4959; font-size: 11px; line-height: 1.75; }
 .accent-context p > strong { padding: 1px 3px; background: #f6dc91; }
 
+.query-form.inventory-query { grid-template-columns: minmax(220px, 1fr) 175px 190px 130px auto auto; }
+.inventory-layout { grid-template-columns: minmax(0, 1.55fr) minmax(390px, .72fr); }
+.inventory-table .table-header, .inventory-table > button { width: 100%; min-height: 66px; padding: 9px 12px; display: grid; grid-template-columns: 110px minmax(110px, .8fr) minmax(175px, 1.35fr) 105px 58px 78px 42px; gap: 9px; align-items: center; border: 0; border-bottom: 1px solid var(--line); text-align: left; }
+.inventory-table .table-header { min-height: 38px; padding-block: 0; }
+.inventory-table > button { color: var(--ink); background: #fff; }
+.inventory-table > button:hover, .inventory-table > button.selected { background: var(--blue-soft); }
+.inventory-table > button.selected { box-shadow: inset 4px 0 0 var(--blue); }
+.inventory-table code { color: var(--blue); font: 700 7px var(--mono); }
+.inventory-table strong { font-size: 11px; }
+.inventory-table span { max-height: 44px; overflow: hidden; color: var(--muted); font-size: 9px; line-height: 1.45; }
+.inventory-table em { color: var(--blue); font: 800 7px var(--mono); font-style: normal; }
+.inventory-record-title { min-height: 140px; padding: 17px; display: grid; grid-template-columns: 1fr auto; align-content: start; border-bottom: 1px solid var(--line); background: var(--blue-soft); }
+.inventory-record-title code { color: var(--blue); font: 700 8px var(--mono); }
+.inventory-record-title strong { grid-column: 1 / -1; margin-top: 20px; font-size: 27px; }
+.inventory-record-title span { grid-row: 1; grid-column: 2; padding: 4px 6px; color: var(--blue); border: 1px solid #b9c7ef; background: #fff; font: 800 8px var(--mono); }
+.inventory-related { min-height: 84px; padding: 15px 17px; display: flex; flex-direction: column; border-bottom: 1px solid var(--line); }
+.inventory-related span { color: var(--muted); font: 8px var(--mono); text-transform: uppercase; }
+.inventory-related strong { margin-top: 10px; color: var(--blue); font-size: 18px; }
+.inventory-record-panel ol { margin-top: 4px; }
+
 .site-footer { width: min(1280px, calc(100% - 48px)); min-height: 112px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr .4fr .5fr 1fr; gap: 25px; align-items: center; border-top: 2px solid var(--ink); }
 .site-footer > div { display: flex; flex-direction: column; gap: 5px; }
 .site-footer span { color: var(--muted); font: 8px var(--mono); text-transform: uppercase; }
@@ -405,8 +425,8 @@ h3 { margin: 0; font-size: 15px; line-height: 1.35; }
   .product-catalog { grid-template-columns: repeat(2, 1fr); }
   .lexicon-layout { grid-template-columns: 1fr; }
   .record-panel { position: static; }
-  .query-form, .query-form.corpus-query, .query-form.parallel-query, .query-form.terminology-query, .query-form.variants-query, .query-form.saltillo-query, .query-form.accent-query { grid-template-columns: 1fr 1fr; }
-  .parallel-layout, .terminology-layout, .variants-layout, .saltillo-layout, .accent-layout { grid-template-columns: 1fr; }
+  .query-form, .query-form.corpus-query, .query-form.parallel-query, .query-form.terminology-query, .query-form.variants-query, .query-form.saltillo-query, .query-form.accent-query, .query-form.inventory-query { grid-template-columns: 1fr 1fr; }
+  .parallel-layout, .terminology-layout, .variants-layout, .saltillo-layout, .accent-layout, .inventory-layout { grid-template-columns: 1fr; }
   .process-list, .trace-grid { grid-template-columns: 1fr 1fr; }
   .site-footer { grid-template-columns: 1.5fr 1fr; padding: 20px 0; }
 }
@@ -434,12 +454,13 @@ h3 { margin: 0; font-size: 15px; line-height: 1.35; }
   .architecture-grid { grid-template-columns: 1fr 1fr; }
   .architecture-grid article:nth-child(3) { border-right: 1px solid var(--line); }
   .architecture-grid article:nth-child(2n) { border-right: 0; }
-  .architecture-table, .lexicon-table, .parallel-table, .terminology-table, .variants-table, .saltillo-table, .accent-table { overflow-x: auto; }
+  .architecture-table, .lexicon-table, .parallel-table, .terminology-table, .variants-table, .saltillo-table, .accent-table, .inventory-table { overflow-x: auto; }
   .parallel-table .table-header, .parallel-table > button { min-width: 850px; }
   .terminology-table .table-header, .terminology-table > button { min-width: 760px; }
   .variants-table .table-header, .variants-table > button { min-width: 760px; }
   .saltillo-table .table-header, .saltillo-table > button { min-width: 780px; }
   .accent-table .table-header, .accent-table > button { min-width: 780px; }
+  .inventory-table .table-header, .inventory-table > button { min-width: 900px; }
   .parallel-note { grid-template-columns: 1fr; gap: 7px; }
   .aligned-sentences { grid-template-columns: 1fr; }
   .aligned-sentences article { min-height: 105px; border-right: 0; border-bottom: 1px solid var(--line); }
@@ -452,7 +473,7 @@ h3 { margin: 0; font-size: 15px; line-height: 1.35; }
   .page-header p { font-size: 12px; }
   .process-list, .trace-grid { grid-template-columns: 1fr; }
   .process-list li, .trace-grid div { border-right: 0; border-bottom: 1px solid var(--line); }
-  .query-form, .query-form.corpus-query, .query-form.parallel-query, .query-form.terminology-query, .query-form.variants-query, .query-form.saltillo-query, .query-form.accent-query { grid-template-columns: 1fr; }
+  .query-form, .query-form.corpus-query, .query-form.parallel-query, .query-form.terminology-query, .query-form.variants-query, .query-form.saltillo-query, .query-form.accent-query, .query-form.inventory-query { grid-template-columns: 1fr; }
   .accent-vowel-distribution { grid-template-columns: 1fr; }
   .accent-vowel-distribution > div { border-right: 0; border-bottom: 1px solid var(--line); }
   .lexicon-table .table-header, .lexicon-table > button { min-width: 680px; }
