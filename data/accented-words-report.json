@@ -1,0 +1,26 @@
+{
+  "records": 3433,
+  "unique_normalized_forms": 2152,
+  "source_entries": 2581,
+  "entries_with_accented_forms": 1873,
+  "occurrences_by_field": {
+    "Lema": 1765,
+    "Variante": 186,
+    "Ejemplo RRM": 1482
+  },
+  "accented_vowels": {
+    "á": 1022,
+    "é": 820,
+    "í": 972,
+    "ó": 353,
+    "ú": 311
+  },
+  "occurrences_by_position": {
+    "Inicial": 15,
+    "Medial": 1300,
+    "Final": 2073,
+    "Múltiple": 45
+  },
+  "extraction_method": "Tokenización Unicode de lemas y variantes; extracción de segmentos rarámuri mediante P-03; detección de vocales con acento agudo y posición vocálica sin inferir sílabas",
+  "validation_status": "Pendiente de cotejo ortográfico y prosódico"
+}

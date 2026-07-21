@@ -13,6 +13,7 @@
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "data:variants": "node scripts/extract-graphic-variants.mjs",
     "data:saltillo": "node scripts/extract-glottal-stop-words.mjs",
+    "data:accents": "node --no-warnings scripts/extract-accented-words.mjs",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {

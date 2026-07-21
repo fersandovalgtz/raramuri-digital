@@ -5,7 +5,7 @@ import test from "node:test";
 const root = new URL("../", import.meta.url);
 
 test("publishes the multipage technical product architecture", async () => {
-  const [page, header, route, corpusRoute, parallelRoute, terminologyRoute, variantsRoute, saltilloRoute, hosting, products, productPage, explorer, corpusExplorer, parallelExplorer, terminologyExplorer, variantsExplorer, saltilloExplorer] = await Promise.all([
+  const [page, header, route, corpusRoute, parallelRoute, terminologyRoute, variantsRoute, saltilloRoute, accentsRoute, hosting, products, productPage, explorer, corpusExplorer, parallelExplorer, terminologyExplorer, variantsExplorer, saltilloExplorer, accentsExplorer] = await Promise.all([
     readFile(new URL("app/page.tsx", root), "utf8"),
     readFile(new URL("app/components/SiteHeader.tsx", root), "utf8"),
     readFile(new URL("app/api/lexicon/route.ts", root), "utf8"),
@@ -14,6 +14,7 @@ test("publishes the multipage technical product architecture", async () => {
     readFile(new URL("app/api/terminology/route.ts", root), "utf8"),
     readFile(new URL("app/api/variants/route.ts", root), "utf8"),
     readFile(new URL("app/api/glottal-stop-words/route.ts", root), "utf8"),
+    readFile(new URL("app/api/accented-words/route.ts", root), "utf8"),
     readFile(new URL(".openai/hosting.json", root), "utf8"),
     readFile(new URL("lib/products.ts", root), "utf8"),
     readFile(new URL("app/productos/[slug]/page.tsx", root), "utf8"),
@@ -23,6 +24,7 @@ test("publishes the multipage technical product architecture", async () => {
     readFile(new URL("app/components/TerminologyExplorer.tsx", root), "utf8"),
     readFile(new URL("app/components/VariantsExplorer.tsx", root), "utf8"),
     readFile(new URL("app/components/GlottalStopExplorer.tsx", root), "utf8"),
+    readFile(new URL("app/components/AccentedWordsExplorer.tsx", root), "utf8"),
   ]);
 
   assert.match(page, /<strong>2,581<\/strong>/);
@@ -40,6 +42,7 @@ test("publishes the multipage technical product architecture", async () => {
   assert.match(productPage, /product\.id === 4 \? <TerminologyExplorer/);
   assert.match(productPage, /product\.id === 5 \? <VariantsExplorer/);
   assert.match(productPage, /product\.id === 6 \? <GlottalStopExplorer/);
+  assert.match(productPage, /product\.id === 7 \? <AccentedWordsExplorer/);
   assert.match(explorer, /Exportar CSV/);
   assert.match(corpusExplorer, /Corpus digital rarámuri-español/);
   assert.match(corpusExplorer, /JSONL/);
@@ -50,6 +53,8 @@ test("publishes the multipage technical product architecture", async () => {
   assert.match(variantsExplorer, /CANDIDATA/);
   assert.match(saltilloExplorer, /Se conservan las grafías fuente/);
   assert.match(saltilloExplorer, /Contexto documental/);
+  assert.match(accentsExplorer, /no se infiere división silábica/);
+  assert.match(accentsExplorer, /Contexto rarámuri/);
   assert.match(route, /raramuri-base-lexicografica-completa\.csv/);
   assert.match(corpusRoute, /raramuri-corpus-completo\.tsv/);
   assert.match(corpusRoute, /raramuri-corpus-completo\.jsonl/);
@@ -60,12 +65,35 @@ test("publishes the multipage technical product architecture", async () => {
   assert.match(variantsRoute, /base-variantes-graficas-completa/);
   assert.match(saltilloRoute, /repositorio-palabras-con-saltillo-completo/);
   assert.match(saltilloRoute, /glyph.*Todos.*slice\(0, 8\)/);
+  assert.match(accentsRoute, /repositorio-palabras-acentuadas-completo/);
+  assert.match(accentsRoute, /vowel.*Todas.*slice\(0, 8\)/);
   assert.equal(JSON.parse(hosting).d1, "DB");
   await Promise.all([
     access(new URL("public/uceees-logo.png", root)),
     access(new URL("public/logo-uacj.png", root)),
     access(new URL("public/logo-ca-uacj-113.png", root)),
   ]);
+});
+
+test("materializes the complete repository of accented Rarámuri words", async () => {
+  const [recordsText, reportText, csvText] = await Promise.all([
+    readFile(new URL("data/accented-words.json", root), "utf8"),
+    readFile(new URL("data/accented-words-report.json", root), "utf8"),
+    readFile(new URL("data/accented-words.csv", root), "utf8"),
+  ]);
+  const records = JSON.parse(recordsText);
+  const report = JSON.parse(reportText);
+  assert.equal(records.length, 3433);
+  assert.equal(report.records, 3433);
+  assert.equal(report.unique_normalized_forms, 2152);
+  assert.equal(report.source_entries, 2581);
+  assert.equal(report.entries_with_accented_forms, 1873);
+  assert.deepEqual(report.occurrences_by_field, { Lema: 1765, Variante: 186, "Ejemplo RRM": 1482 });
+  assert.deepEqual(report.accented_vowels, { "á": 1022, "é": 820, "í": 972, "ó": 353, "ú": 311 });
+  assert.deepEqual(report.occurrences_by_position, { Inicial: 15, Medial: 1300, Final: 2073, Múltiple: 45 });
+  assert.ok(records.every((record) => record.accent_id && record.form && record.accented_vowels.length && record.accent_indexes.length && record.entry_id && record.context && record.source_code && record.page_start && record.validation_status));
+  assert.ok(records.filter((record) => record.source_field === "Ejemplo RRM").every((record) => record.pair_id && record.alignment_confidence !== "No aplica"));
+  assert.equal(csvText.split("\r\n").length, 3434);
 });
 
 test("materializes the complete repository of words with glottal stop", async () => {
