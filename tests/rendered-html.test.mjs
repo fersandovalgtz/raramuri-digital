@@ -33,6 +33,7 @@ test("publishes the multipage technical product architecture", async () => {
 
   assert.match(page, /<strong>2,581<\/strong>/);
   assert.match(page, /Estado del sistema/);
+  assert.match(page, /<dt>Acceso<\/dt><dd><i className="status-dot active" \/> Público<\/dd>/);
   assert.match(page, /className="project-lockup"/);
   assert.doesNotMatch(page, /title-owner/);
   assert.match(page, /logo-uacj\.png/);

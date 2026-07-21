@@ -39,7 +39,7 @@ export default function Home() {
               <div><dt>Análisis P-21–P-30</dt><dd><i className="status-dot active" /> Operativos</dd></div>
               <div><dt>Productos</dt><dd>30 rutas</dd></div>
               <div><dt>Validación</dt><dd><i className="status-dot pending" /> Pendiente</dd></div>
-              <div><dt>Acceso</dt><dd>Privado</dd></div>
+              <div><dt>Acceso</dt><dd><i className="status-dot active" /> Público</dd></div>
             </dl>
           </aside>
         </section>

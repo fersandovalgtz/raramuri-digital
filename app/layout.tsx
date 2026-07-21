@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://raramuri-digital-ceees.fersandovalgtz.chatgpt.site"),
+  metadataBase: new URL("https://raramuri.ceees.mx"),
   title: "Rarámuri Digital | Sistema de datos lexicográficos",
   description:
     "Sistema multipágina para datos lexicográficos rarámuri-español, corpus, inventarios, análisis y trazabilidad documental.",
