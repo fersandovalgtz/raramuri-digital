@@ -1,6 +1,7 @@
 "use client";
 
-import { FormEvent, useMemo, useState } from "react";
+import Image from "next/image";
+import { FormEvent, useEffect, useState } from "react";
 
 type Product = {
   id: number;
@@ -8,33 +9,28 @@ type Product = {
   group: "Datos" | "Corpus" | "Inventarios" | "Análisis" | "Docencia";
 };
 
-type Entry = {
-  id: string;
-  lemma: string;
-  pos: string;
-  spanish: string;
-  note: string;
-  example: string;
-  translation: string;
-  source: string;
-  page: string;
-  orthography: string;
-  domain: string;
-};
-
 type MasterEntry = {
-  id: string;
-  lemma: string;
-  homonym: string;
-  pos: string;
-  translations: string[];
+  id: number;
+  recordId: string;
+  headword: string;
+  headwordRaw: string;
+  headwordNormalized: string;
+  homonymNumber: number | null;
+  classification: string;
+  classificationFamily: string;
+  translationRaw: string;
   senses: string[];
   examples: string[];
   variants: string[];
-  page: string;
-  source: string;
-  status: "Transcrito" | "Cotejado" | "Validado";
+  commentsRaw: string;
+  sourceCode: string;
+  sourceDocument: string;
+  pageStart: number;
+  pageEnd: number;
+  status: string;
 };
+
+type ClassificationCount = { value: string; total: number };
 
 const products: Product[] = [
   { id: 1, title: "Base lexicográfica maestra", group: "Datos" },
@@ -69,113 +65,6 @@ const products: Product[] = [
   { id: 30, title: "Sistema interno de trazabilidad", group: "Datos" },
 ];
 
-const entries: Entry[] = [
-  {
-    id: "RD-DEMO-0001",
-    lemma: "ba’huí",
-    pos: "S",
-    spanish: "agua",
-    note: "Sustantivo. Forma con saltillo y acento gráfico.",
-    example: "Ba’huí bají.",
-    translation: "Toma agua.",
-    source: "Transcripción estructurada de trabajo",
-    page: "10",
-    orthography: "saltillo + acento",
-    domain: "naturaleza",
-  },
-  {
-    id: "RD-DEMO-0002",
-    lemma: "abé",
-    pos: "Adv",
-    spanish: "hoy; hace rato",
-    note: "Adverbio con dos acepciones y remisión interna.",
-    example: "Abé huarú ucuri.",
-    translation: "Hoy llovió mucho.",
-    source: "Transcripción estructurada de trabajo",
-    page: "3",
-    orthography: "acento",
-    domain: "tiempo",
-  },
-  {
-    id: "RD-DEMO-0003",
-    lemma: "a",
-    pos: "Vt",
-    spanish: "buscar",
-    note: "Verbo transitivo con pasado, futuro, imperativo y gerundio documentados.",
-    example: "Nijeni ama cahué.",
-    translation: "Voy a buscar el caballo.",
-    source: "Transcripción estructurada de trabajo",
-    page: "3",
-    orthography: "forma básica",
-    domain: "acción",
-  },
-];
-
-const masterEntries: MasterEntry[] = [
-  {
-    id: "RD-000001", lemma: "a", homonym: "", pos: "Vt", translations: ["buscar"],
-    senses: ["Buscar"], examples: ["Nijeni ama cahué. — Voy a buscar el caballo."],
-    variants: ["pret.: ari", "fut.: ama", "imper.: ábasi", "ger.: ásiga"],
-    page: "3", source: "SRC-02", status: "Transcrito",
-  },
-  {
-    id: "RD-000002", lemma: "abé", homonym: "", pos: "Adv", translations: ["hoy", "hace rato"],
-    senses: ["Hoy", "Hace rato"], examples: ["Abé huarú ucuri. — Hoy llovió mucho."],
-    variants: ["véase jipi", "véase curipi"], page: "3", source: "SRC-02", status: "Transcrito",
-  },
-  {
-    id: "RD-000003", lemma: "abi, abiyena", homonym: "", pos: "Adv", translations: ["sí"],
-    senses: ["Respuesta afirmativa"], examples: ["¿Acha mi ’yárati? Ayena, abi. — ¿Se lo dieron? Sí."],
-    variants: ["abiyena"], page: "3", source: "SRC-02", status: "Transcrito",
-  },
-  {
-    id: "RD-000004", lemma: "abijí", homonym: "", pos: "Adv", translations: ["todavía", "aún"],
-    senses: ["Continuidad temporal"], examples: ["Abijí que cho ucú. — Todavía no llueve."],
-    variants: [], page: "3", source: "SRC-02", status: "Transcrito",
-  },
-  {
-    id: "RD-000005", lemma: "aboni", homonym: "", pos: "Pron", translations: ["ellos", "ellas"],
-    senses: ["Pronombre personal de tercera persona plural"], examples: ["Aboni pirérachi. — Habitación de ellos."],
-    variants: [], page: "3", source: "SRC-02", status: "Transcrito",
-  },
-  {
-    id: "RD-000006", lemma: "acá", homonym: "1", pos: "S", translations: ["cara", "nariz"],
-    senses: ["Cara", "Nariz"], examples: ["Binoy acara. — Su cara."],
-    variants: ["véase cho’ó"], page: "3", source: "SRC-02", status: "Transcrito",
-  },
-  {
-    id: "RD-000007", lemma: "acá", homonym: "2", pos: "Vi", translations: ["tener sal", "estar dulce o sabroso"],
-    senses: ["Tener sal", "Estar dulce o sabroso"], examples: ["¿Acha gará acá muní? — ¿Tienen suficiente sal los frijoles?"],
-    variants: [], page: "3", source: "SRC-02", status: "Transcrito",
-  },
-  {
-    id: "RD-000008", lemma: "acá", homonym: "3", pos: "S", translations: ["huarache"],
-    senses: ["Huarache"], examples: ["Nijeni quetasi te acá. — No tengo huaraches."],
-    variants: [], page: "3", source: "SRC-02", status: "Transcrito",
-  },
-  {
-    id: "RD-000009", lemma: "acá", homonym: "4", pos: "Vi", translations: ["embotarse", "quitarse el filo"],
-    senses: ["Embotarse", "Perder el filo"], examples: ["Ripurá acari rité. — Se embotó el hacha."],
-    variants: [], page: "3", source: "SRC-02", status: "Transcrito",
-  },
-  {
-    id: "RD-000010", lemma: "acáchura", homonym: "", pos: "S", translations: ["abuela paterna", "nieta"],
-    senses: ["Abuela paterna", "Nieta de la abuela paterna"],
-    examples: ["Echi nijé onorá iyera nijé acáchura ju. — La mamá de mi papá es mi abuela paterna."],
-    variants: [], page: "3", source: "SRC-02", status: "Transcrito",
-  },
-  {
-    id: "RD-000011", lemma: "achá", homonym: "", pos: "Vt", translations: ["poner", "colocar"],
-    senses: ["Poner una sola cosa o persona", "Colocar"], examples: ["Echo’ná achámani. — Voy a ponerlo allí."],
-    variants: ["pl.: muchuhua"], page: "4", source: "SRC-02", status: "Transcrito",
-  },
-  {
-    id: "RD-000012", lemma: "achí", homonym: "", pos: "Vt", translations: ["reír", "sonreír"],
-    senses: ["Reír", "Sonreír"], examples: ["Echi jaré rarámuri huabé achiri. — Los rarámuri se rieron mucho."],
-    variants: [], page: "4", source: "SRC-02", status: "Transcrito",
-  },
-];
-
 const filters = ["Todos", "Datos", "Corpus", "Inventarios", "Análisis", "Docencia"] as const;
 
 const schemaFields = [
@@ -200,60 +89,85 @@ const pipeline = [
 ];
 
 export default function Home() {
-  const [query, setQuery] = useState("");
-  const [submitted, setSubmitted] = useState("");
   const [activeFilter, setActiveFilter] = useState<(typeof filters)[number]>("Todos");
+  const [masterDraft, setMasterDraft] = useState("");
   const [masterQuery, setMasterQuery] = useState("");
   const [masterPos, setMasterPos] = useState("Todos");
-  const [selectedMasterId, setSelectedMasterId] = useState(masterEntries[0].id);
-
-  const selectedEntry = useMemo(() => {
-    const normalized = submitted.trim().toLocaleLowerCase("es");
-    if (!normalized) return entries[0];
-    return entries.find((entry) =>
-      [entry.lemma, entry.spanish, entry.pos, entry.domain].some((value) =>
-        value.toLocaleLowerCase("es").includes(normalized),
-      ),
-    ) ?? null;
-  }, [submitted]);
+  const [masterPage, setMasterPage] = useState(1);
+  const [masterRevision, setMasterRevision] = useState(0);
+  const [masterPages, setMasterPages] = useState(1);
+  const [masterEntries, setMasterEntries] = useState<MasterEntry[]>([]);
+  const [masterTotal, setMasterTotal] = useState(0);
+  const [masterTotalAll, setMasterTotalAll] = useState(2581);
+  const [classifications, setClassifications] = useState<ClassificationCount[]>([]);
+  const [selectedMasterId, setSelectedMasterId] = useState("");
+  const [masterLoading, setMasterLoading] = useState(true);
+  const [masterError, setMasterError] = useState("");
 
   const visibleProducts = activeFilter === "Todos"
     ? products
     : products.filter((product) => product.group === activeFilter);
 
-  const visibleMasterEntries = useMemo(() => {
-    const normalized = masterQuery.trim().toLocaleLowerCase("es");
-    return masterEntries.filter((entry) => {
-      const matchesPos = masterPos === "Todos" || entry.pos === masterPos;
-      const values = [entry.lemma, entry.pos, ...entry.translations, ...entry.senses, ...entry.variants];
-      const matchesQuery = !normalized || values.some((value) => value.toLocaleLowerCase("es").includes(normalized));
-      return matchesPos && matchesQuery;
-    });
-  }, [masterPos, masterQuery]);
+  const selectedMasterEntry = masterEntries.find((entry) => entry.recordId === selectedMasterId) ?? masterEntries[0] ?? null;
 
-  const selectedMasterEntry = masterEntries.find((entry) => entry.id === selectedMasterId) ?? masterEntries[0];
+  useEffect(() => {
+    const controller = new AbortController();
+    const params = new URLSearchParams({
+      page: String(masterPage),
+      limit: "50",
+    });
+    if (masterQuery) params.set("q", masterQuery);
+    if (masterPos !== "Todos") params.set("pos", masterPos);
+    fetch(`/api/lexicon?${params}`, { signal: controller.signal })
+      .then(async (response) => {
+        const payload = await response.json();
+        if (!response.ok) throw new Error(payload.error ?? "No fue posible consultar la base.");
+        return payload as {
+          entries: MasterEntry[];
+          total: number;
+          totalAll: number;
+          pages: number;
+          classifications: ClassificationCount[];
+        };
+      })
+      .then((payload) => {
+        setMasterEntries(payload.entries);
+        setMasterTotal(payload.total);
+        setMasterTotalAll(payload.totalAll);
+        setMasterPages(payload.pages);
+        setClassifications(payload.classifications);
+        setSelectedMasterId((current) =>
+          payload.entries.some((entry) => entry.recordId === current)
+            ? current
+            : (payload.entries[0]?.recordId ?? ""),
+        );
+      })
+      .catch((error: unknown) => {
+        if (error instanceof DOMException && error.name === "AbortError") return;
+        setMasterEntries([]);
+        setMasterError(error instanceof Error ? error.message : "Error de consulta.");
+      })
+      .finally(() => {
+        if (!controller.signal.aborted) setMasterLoading(false);
+      });
+    return () => controller.abort();
+  }, [masterPage, masterPos, masterQuery, masterRevision]);
 
   function submitSearch(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    setSubmitted(query);
-    document.getElementById("resultado")?.scrollIntoView({ behavior: "smooth", block: "center" });
+    setMasterLoading(true);
+    setMasterError("");
+    setMasterQuery(masterDraft.trim());
+    setMasterPage(1);
+    setMasterRevision((revision) => revision + 1);
+    document.getElementById("base-maestra")?.scrollIntoView({ behavior: "smooth", block: "start" });
   }
 
   function exportMasterCsv() {
-    const rows = [
-      ["id", "lema", "homonimo", "clasificacion", "traducciones", "acepciones", "ejemplos", "variantes", "fuente", "pagina", "estado"],
-      ...visibleMasterEntries.map((entry) => [
-        entry.id, entry.lemma, entry.homonym, entry.pos, entry.translations.join(" | "), entry.senses.join(" | "),
-        entry.examples.join(" | "), entry.variants.join(" | "), entry.source, entry.page, entry.status,
-      ]),
-    ];
-    const csv = rows.map((row) => row.map((cell) => `"${cell.replaceAll('"', '""')}"`).join(",")).join("\n");
-    const url = URL.createObjectURL(new Blob(["\ufeff", csv], { type: "text/csv;charset=utf-8" }));
-    const link = document.createElement("a");
-    link.href = url;
-    link.download = "raramuri-base-lexicografica-muestra.csv";
-    link.click();
-    URL.revokeObjectURL(url);
+    const params = new URLSearchParams({ format: "csv" });
+    if (masterQuery) params.set("q", masterQuery);
+    if (masterPos !== "Todos") params.set("pos", masterPos);
+    window.location.href = `/api/lexicon?${params}`;
   }
 
   return (
@@ -263,7 +177,7 @@ export default function Home() {
 
       <header className="site-header">
         <a className="brand" href="#inicio" aria-label="Rarámuri Digital, Universidad CEEES">
-          <span className="brand-mark"><img src="/uceees-logo.png" alt="" /></span>
+          <span className="brand-mark"><Image src="/uceees-logo.png" width={54} height={54} alt="" priority /></span>
           <span className="brand-copy">
             <strong>Universidad CEEES</strong>
             <small>Humanidades digitales</small>
@@ -278,7 +192,7 @@ export default function Home() {
           <a href="#licencia">Licencia</a>
         </nav>
 
-        <span className="build-status"><i /> PROTOTIPO · 0.3</span>
+        <span className="build-status"><i /> PROTOTIPO · 0.4</span>
       </header>
 
       <main id="contenido">
@@ -298,12 +212,12 @@ export default function Home() {
               <small>productos derivados<br />de una ficha maestra</small>
             </div>
             <div className="metric">
-              <span>2</span>
-              <small>fuentes documentales<br />en integración</small>
+              <span>2,581</span>
+              <small>registros lexicográficos<br />cargados</small>
             </div>
             <div className="metric">
-              <span>9</span>
-              <small>campos mínimos<br />por entrada</small>
+              <span>85</span>
+              <small>páginas fuente<br />indexadas</small>
               <div className="progress"><i /></div>
             </div>
           </aside>
@@ -322,57 +236,58 @@ export default function Home() {
         <section className="search-panel" id="explorar" aria-label="Consulta del corpus">
           <form className="search-form" onSubmit={submitSearch}>
             <span className="search-icon" aria-hidden="true" />
-            <label className="sr-only" htmlFor="lexical-search">Buscar en la muestra</label>
+            <label className="sr-only" htmlFor="lexical-search">Buscar en la base completa</label>
             <input
               id="lexical-search"
               type="search"
-              value={query}
-              onChange={(event) => setQuery(event.target.value)}
-              placeholder="Buscar lema, traducción, categoría o campo semántico…"
+              value={masterDraft}
+              onChange={(event) => setMasterDraft(event.target.value)}
+              placeholder="Buscar lema, traducción, clase o texto de ejemplo…"
               autoComplete="off"
             />
-            <button type="submit">Consultar muestra</button>
+            <button type="submit">Consultar 2,581 entradas</button>
           </form>
           <div className="search-meta">
-            <span>ÍNDICES: LEMA · ESPAÑOL · POS · DOMINIO</span>
-            <button type="button" onClick={() => { setQuery("ba’huí"); setSubmitted("ba’huí"); }}>
-              CARGAR REGISTRO DEMO
+            <span>ÍNDICES: LEMA NORMALIZADO · ESPAÑOL · POS · EJEMPLOS</span>
+            <button type="button" onClick={() => { setMasterLoading(true); setMasterError(""); setMasterDraft(""); setMasterQuery(""); setMasterPage(1); setMasterRevision((revision) => revision + 1); }}>
+              RESTABLECER CONSULTA
             </button>
           </div>
         </section>
 
         <section className="workspace" id="resultado" aria-live="polite">
-          {selectedEntry ? (
+          {selectedMasterEntry ? (
             <article className="entry-card">
               <div className="card-heading">
                 <p className="card-label">Registro lexicográfico</p>
-                <span className="entry-id">{selectedEntry.id}</span>
+                <span className="entry-id">{selectedMasterEntry.recordId}</span>
               </div>
               <h2 className="entry-title">
-                {selectedEntry.lemma} <span>· {selectedEntry.pos} · {selectedEntry.spanish}</span>
+                {selectedMasterEntry.homonymNumber && <sup>{selectedMasterEntry.homonymNumber}</sup>}
+                {selectedMasterEntry.headword} <span>· {selectedMasterEntry.classification || "Sin clasificar"}</span>
               </h2>
               <div className="definition">
                 <span>01</span>
                 <div>
-                  <strong>{selectedEntry.spanish}</strong>
-                  <p>{selectedEntry.note}</p>
+                  <strong>{selectedMasterEntry.translationRaw || "Sin traducción consignada"}</strong>
+                  <p>{selectedMasterEntry.senses.length} acepción(es) segmentada(s) · {selectedMasterEntry.variants.length} variante(s) o forma(s) detectada(s)</p>
                 </div>
               </div>
               <div className="example-block">
-                <p lang="tar"><small>RRM</small>{selectedEntry.example}</p>
-                <p><small>SPA</small>{selectedEntry.translation}</p>
+                <p lang="tar"><small>FORMA FUENTE</small>{selectedMasterEntry.headwordRaw}</p>
+                <p><small>EJEMPLOS Y COMENTARIOS</small>{selectedMasterEntry.commentsRaw || "Sin ejemplo o comentario en esta entrada."}</p>
               </div>
               <dl className="record-meta">
-                <div><dt>FUENTE</dt><dd>{selectedEntry.source}</dd></div>
-                <div><dt>PÁGINA</dt><dd>{selectedEntry.page}</dd></div>
+                <div><dt>FUENTE</dt><dd>{selectedMasterEntry.sourceDocument}</dd></div>
+                <div><dt>PÁGINA</dt><dd>{selectedMasterEntry.pageStart === selectedMasterEntry.pageEnd ? selectedMasterEntry.pageStart : `${selectedMasterEntry.pageStart}–${selectedMasterEntry.pageEnd}`}</dd></div>
                 <div><dt>ESTADO</dt><dd><i /> Transcrito · sin cotejo final</dd></div>
               </dl>
             </article>
           ) : (
             <article className="entry-card empty-record">
-              <p className="card-label">Sin coincidencia en la muestra</p>
-              <h2>Índice demostrativo: 3 registros</h2>
-              <p>Pruebe: “ba’huí”, “agua”, “abé”, “hoy”, “buscar”, “S”, “Adv” o “Vt”.</p>
+              <p className="card-label">Sin coincidencias</p>
+              <h2>No hay registros para esta consulta.</h2>
+              <p>Pruebe otro lema, traducción o clase gramatical.</p>
             </article>
           )}
 
@@ -381,15 +296,15 @@ export default function Home() {
               <h2>Relaciones del registro</h2>
               <span>GRAPH VIEW</span>
             </div>
-            {selectedEntry ? (
-              <div className="network" aria-label={`Relaciones de ${selectedEntry.lemma}`}>
+            {selectedMasterEntry ? (
+              <div className="network" aria-label={`Relaciones de ${selectedMasterEntry.headword}`}>
                 <span className="edge e1" /><span className="edge e2" />
                 <span className="edge e3" /><span className="edge e4" />
-                <span className="node primary">{selectedEntry.lemma}<small>{selectedEntry.spanish}</small></span>
-                <span className="node n1"><i />POS<small>{selectedEntry.pos}</small></span>
-                <span className="node n2"><i />DOMINIO<small>{selectedEntry.domain}</small></span>
-                <span className="node n3"><i />ORTOGRAFÍA<small>{selectedEntry.orthography}</small></span>
-                <span className="node n4"><i />FUENTE<small>p. {selectedEntry.page}</small></span>
+                <span className="node primary">{selectedMasterEntry.headword}<small>{selectedMasterEntry.translationRaw}</small></span>
+                <span className="node n1"><i />POS<small>{selectedMasterEntry.classificationFamily}</small></span>
+                <span className="node n2"><i />ACEPCIONES<small>{selectedMasterEntry.senses.length}</small></span>
+                <span className="node n3"><i />VARIANTES<small>{selectedMasterEntry.variants.length}</small></span>
+                <span className="node n4"><i />FUENTE<small>p. {selectedMasterEntry.pageStart}</small></span>
               </div>
             ) : <p className="relations-empty">Seleccione un registro válido.</p>}
           </aside>
@@ -409,74 +324,85 @@ export default function Home() {
               <h2>Registro canónico por entrada.</h2>
             </div>
             <p>
-              Muestra inicial de 12 registros transcritos. Incluye lema rarámuri, clasificación,
-              traducción, acepciones, ejemplos, variantes y página de procedencia.
+              Base completa de 2,581 registros transcritos de la fuente de trabajo. Incluye palabra
+              rarámuri, clasificación, traducción, acepciones, ejemplos, variantes y página de procedencia.
             </p>
           </div>
 
           <div className="master-metrics" aria-label="Resumen de la base maestra">
-            <div><span>12</span><small>REGISTROS CARGADOS</small></div>
-            <div><span>5</span><small>CLASES GRAMATICALES</small></div>
+            <div><span>{masterTotalAll.toLocaleString("es-MX")}</span><small>REGISTROS CARGADOS</small></div>
+            <div><span>{classifications.length || 15}</span><small>FAMILIAS GRAMATICALES</small></div>
             <div><span>7</span><small>CAMPOS LEXICOGRÁFICOS</small></div>
             <div><span>0</span><small>REGISTROS VALIDADOS</small></div>
           </div>
 
-          <div className="master-toolbar">
+          <form className="master-toolbar" onSubmit={submitSearch}>
             <label>
               <span>BUSCAR EN REGISTROS</span>
-              <input value={masterQuery} onChange={(event) => setMasterQuery(event.target.value)}
+              <input value={masterDraft} onChange={(event) => setMasterDraft(event.target.value)}
                 type="search" placeholder="Lema, traducción, acepción o variante" />
             </label>
             <label>
               <span>CLASE GRAMATICAL</span>
-              <select value={masterPos} onChange={(event) => setMasterPos(event.target.value)}>
-                {['Todos', 'S', 'Vt', 'Vi', 'Adv', 'Pron'].map((pos) => <option key={pos}>{pos}</option>)}
+              <select value={masterPos} onChange={(event) => { setMasterLoading(true); setMasterError(""); setMasterPos(event.target.value); setMasterPage(1); }}>
+                <option>Todos</option>
+                {classifications.map((item) => <option key={item.value} value={item.value}>{item.value} ({item.total})</option>)}
               </select>
             </label>
+            <button type="submit">Buscar</button>
             <button type="button" onClick={exportMasterCsv}>Exportar CSV</button>
-          </div>
+          </form>
 
           <div className="master-layout">
             <div className="master-table-wrap">
-              <div className="master-table" role="table" aria-label="Muestra de la base lexicográfica maestra">
+              <div className="master-table" role="table" aria-label="Base lexicográfica maestra completa">
                 <div className="master-table-head" role="row">
                   <span>ID</span><span>LEMA</span><span>POS</span><span>TRADUCCIÓN</span><span>PÁG.</span><span>ESTADO</span>
                 </div>
-                {visibleMasterEntries.map((entry) => (
-                  <button type="button" role="row" key={entry.id}
-                    className={entry.id === selectedMasterEntry.id ? "selected" : ""}
-                    onClick={() => setSelectedMasterId(entry.id)}>
-                    <code>{entry.id}</code>
-                    <b>{entry.homonym && <sup>{entry.homonym}</sup>}{entry.lemma}</b>
-                    <span className="pos-chip">{entry.pos}</span>
-                    <span>{entry.translations.join("; ")}</span>
-                    <span>{entry.page}</span>
+                {masterLoading && <p className="master-empty">Consultando la base…</p>}
+                {masterError && <p className="master-empty error">{masterError}</p>}
+                {!masterLoading && !masterError && masterEntries.map((entry) => (
+                  <button type="button" role="row" key={entry.recordId}
+                    className={entry.recordId === selectedMasterEntry?.recordId ? "selected" : ""}
+                    onClick={() => setSelectedMasterId(entry.recordId)}>
+                    <code>{entry.recordId}</code>
+                    <b>{entry.homonymNumber && <sup>{entry.homonymNumber}</sup>}{entry.headword}</b>
+                    <span className="pos-chip">{entry.classification || "—"}</span>
+                    <span>{entry.translationRaw || "Sin traducción consignada"}</span>
+                    <span>{entry.pageStart === entry.pageEnd ? entry.pageStart : `${entry.pageStart}–${entry.pageEnd}`}</span>
                     <i>{entry.status}</i>
                   </button>
                 ))}
-                {visibleMasterEntries.length === 0 && <p className="master-empty">Sin registros para este filtro.</p>}
+                {!masterLoading && !masterError && masterEntries.length === 0 && <p className="master-empty">Sin registros para este filtro.</p>}
               </div>
-              <p className="master-count">{visibleMasterEntries.length} de {masterEntries.length} registros visibles</p>
+              <div className="master-pagination" aria-label="Paginación de resultados">
+                <button type="button" disabled={masterPage <= 1 || masterLoading} onClick={() => { setMasterLoading(true); setMasterError(""); setMasterPage((page) => page - 1); }}>← Anterior</button>
+                <span>Página {masterPage} de {masterPages}</span>
+                <button type="button" disabled={masterPage >= masterPages || masterLoading} onClick={() => { setMasterLoading(true); setMasterError(""); setMasterPage((page) => page + 1); }}>Siguiente →</button>
+              </div>
+              <p className="master-count">{masterEntries.length} en esta página · {masterTotal.toLocaleString("es-MX")} resultados</p>
             </div>
 
-            <aside className="record-inspector" aria-label={`Detalle de ${selectedMasterEntry.lemma}`}>
-              <header>
-                <div><span>RECORD INSPECTOR</span><code>{selectedMasterEntry.id}</code></div>
-                <i>{selectedMasterEntry.status}</i>
-              </header>
-              <div className="inspector-title">
-                <h3>{selectedMasterEntry.homonym && <sup>{selectedMasterEntry.homonym}</sup>}{selectedMasterEntry.lemma}</h3>
-                <span>{selectedMasterEntry.pos}</span>
-              </div>
-              <dl>
-                <div><dt>TRADUCCIÓN</dt><dd>{selectedMasterEntry.translations.join("; ")}</dd></div>
-                <div><dt>ACEPCIONES</dt><dd><ol>{selectedMasterEntry.senses.map((sense) => <li key={sense}>{sense}</li>)}</ol></dd></div>
-                <div><dt>EJEMPLOS</dt><dd>{selectedMasterEntry.examples.map((example) => <p key={example}>{example}</p>)}</dd></div>
-                <div><dt>VARIANTES / FORMAS / REMISIONES</dt><dd className="tag-list">{selectedMasterEntry.variants.length ? selectedMasterEntry.variants.map((variant) => <span key={variant}>{variant}</span>) : <em>Sin dato en la entrada</em>}</dd></div>
-                <div><dt>PROCEDENCIA</dt><dd><code>{selectedMasterEntry.source}</code> · página {selectedMasterEntry.page}</dd></div>
-              </dl>
-              <p className="validation-warning"><i /> Transcripción de trabajo. Requiere cotejo con el facsímil y validación lingüística.</p>
-            </aside>
+            {selectedMasterEntry ? (
+              <aside className="record-inspector" aria-label={`Detalle de ${selectedMasterEntry.headword}`}>
+                <header>
+                  <div><span>RECORD INSPECTOR</span><code>{selectedMasterEntry.recordId}</code></div>
+                  <i>{selectedMasterEntry.status}</i>
+                </header>
+                <div className="inspector-title">
+                  <h3>{selectedMasterEntry.homonymNumber && <sup>{selectedMasterEntry.homonymNumber}</sup>}{selectedMasterEntry.headword}</h3>
+                  <span>{selectedMasterEntry.classification || "Sin clasificar"}</span>
+                </div>
+                <dl>
+                  <div><dt>TRADUCCIÓN</dt><dd>{selectedMasterEntry.translationRaw || "Sin traducción consignada"}</dd></div>
+                  <div><dt>ACEPCIONES</dt><dd>{selectedMasterEntry.senses.length ? <ol>{selectedMasterEntry.senses.map((sense, index) => <li key={`${index}-${sense}`}>{sense}</li>)}</ol> : "Sin acepciones segmentadas"}</dd></div>
+                  <div><dt>EJEMPLOS Y COMENTARIOS</dt><dd>{selectedMasterEntry.examples.length ? selectedMasterEntry.examples.map((example, index) => <p key={`${index}-${example}`}>{example}</p>) : <em>Sin dato en la entrada</em>}</dd></div>
+                  <div><dt>VARIANTES / FORMAS / REMISIONES</dt><dd className="tag-list">{selectedMasterEntry.variants.length ? selectedMasterEntry.variants.map((variant, index) => <span key={`${index}-${variant}`}>{variant}</span>) : <em>Sin dato en la entrada</em>}</dd></div>
+                  <div><dt>PROCEDENCIA</dt><dd><code>{selectedMasterEntry.sourceCode}</code> · {selectedMasterEntry.sourceDocument} · página {selectedMasterEntry.pageStart === selectedMasterEntry.pageEnd ? selectedMasterEntry.pageStart : `${selectedMasterEntry.pageStart}–${selectedMasterEntry.pageEnd}`}</dd></div>
+                </dl>
+                <p className="validation-warning"><i /> Transcripción completa de trabajo. Requiere cotejo con el facsímil y validación lingüística.</p>
+              </aside>
+            ) : <aside className="record-inspector empty-inspector"><p>Seleccione un registro.</p></aside>}
           </div>
         </section>
 
@@ -581,7 +507,7 @@ export default function Home() {
         <section className="sources-section" id="fuentes">
           <div className="section-heading compact">
             <div><p className="eyebrow">Control de fuentes</p><h2>Documento, página y estado en cada registro.</h2></div>
-            <p>Los datos mostrados son una muestra funcional. La foliación y la lectura deberán cotejarse antes de marcar un registro como validado.</p>
+            <p>La transcripción estructurada cubre las 2,581 filas de la fuente de trabajo. La lectura deberá cotejarse con el facsímil antes de marcar un registro como validado.</p>
           </div>
           <div className="source-grid">
             <article>
@@ -676,14 +602,14 @@ export default function Home() {
 
         <aside className="scope-note">
           <span>ALCANCE DE ESTA VERSIÓN</span>
-          <p>Base maestra inicial con 12 registros de muestra. No representa todavía cobertura completa del diccionario ni validación lingüística final.</p>
+          <p>Base maestra completa: 2,581 registros, páginas 3–87 de la transcripción estructurada. Estado documental: transcrito; validación lingüística y cotejo con el facsímil pendientes.</p>
         </aside>
       </main>
 
       <footer>
-        <div className="footer-brand"><img src="/uceees-logo.png" alt="" /><span><b>Rarámuri Digital</b>Universidad CEEES</span></div>
-        <div><span>VERSIÓN</span><b>PROTOTIPO 0.3</b></div>
-        <div><span>COBERTURA</span><b>12 REGISTROS</b></div>
+        <div className="footer-brand"><Image src="/uceees-logo.png" width={54} height={54} alt="" /><span><b>Rarámuri Digital</b>Universidad CEEES</span></div>
+        <div><span>VERSIÓN</span><b>PROTOTIPO 0.4</b></div>
+        <div><span>COBERTURA</span><b>2,581 REGISTROS</b></div>
         <div><span>TRAZABILIDAD</span><b>ENTRADA + PÁGINA + FUENTE</b></div>
       </footer>
     </div>
