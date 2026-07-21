@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
@@ -14,16 +15,21 @@ export default function Home() {
       <SiteHeader />
       <main id="main" className="page-container">
         <section className="system-hero">
-          <div>
+          <div className="hero-main">
             <span className="module-id">SISTEMA RD-01</span>
-            <h1>Rarámuri Digital</h1>
-            <p>Infraestructura de datos para organizar, consultar y derivar productos lexicográficos rarámuri–español con trazabilidad documental.</p>
+            <div className="project-lockup">
+              <h1><span>Rarámuri</span><strong>Digital</strong></h1>
+              <span className="title-circuit-line" aria-hidden="true" />
+              <p>Infraestructura lexicográfica<br />rarámuri–español</p>
+              <span className="title-owner">UNIVERSIDAD CEEES</span>
+            </div>
+            <p className="hero-description">Sistema de datos para organizar, consultar y derivar productos lexicográficos con trazabilidad documental.</p>
             <div className="hero-actions"><Link className="primary-button" href="/productos">Productos</Link><Link className="text-link" href={productHref(products[0])}>Base lexicográfica maestra →</Link></div>
           </div>
           <aside className="status-panel">
             <h2>Estado del sistema</h2>
             <dl>
-              <div><dt>Versión</dt><dd>0.5</dd></div>
+              <div><dt>Versión</dt><dd>0.6</dd></div>
               <div><dt>Base maestra</dt><dd><i className="status-dot active" /> Operativa</dd></div>
               <div><dt>Corpus P-02</dt><dd><i className="status-dot active" /> Operativo</dd></div>
               <div><dt>Productos</dt><dd>30 rutas</dd></div>
@@ -38,6 +44,24 @@ export default function Home() {
           <div><span>Páginas</span><strong>85</strong><small>Fuente estructurada</small></div>
           <div><span>Familias</span><strong>15</strong><small>Clasificación gramatical</small></div>
           <div><span>Productos</span><strong>30</strong><small>Rutas independientes</small></div>
+        </section>
+
+        <section className="institutional-logos" aria-labelledby="institutional-logos-title">
+          <h2 id="institutional-logos-title">Instituciones responsables</h2>
+          <div>
+            <article className="institutional-logo ceees-logo-card">
+              <Image src="/uceees-logo.png" width={118} height={112} alt="Universidad CEEES" />
+              <span>Universidad CEEES</span>
+            </article>
+            <article className="institutional-logo uacj-logo-card">
+              <Image src="/logo-uacj.png" width={330} height={117} alt="Universidad Autónoma de Ciudad Juárez" />
+              <span>Universidad Autónoma de Ciudad Juárez</span>
+            </article>
+            <article className="institutional-logo ca-logo-card">
+              <Image src="/logo-ca-uacj-113.png" width={460} height={148} alt="Cuerpo Académico UACJ-113, Estudios sobre Prácticas Educativas e Interculturalidad" />
+              <span>Cuerpo Académico UACJ-113</span>
+            </article>
+          </div>
         </section>
 
         <section className="content-section" id="proyecto">

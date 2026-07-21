@@ -1,5 +1,5 @@
 import assert from "node:assert/strict";
-import { readFile } from "node:fs/promises";
+import { access, readFile } from "node:fs/promises";
 import test from "node:test";
 
 const root = new URL("../", import.meta.url);
@@ -18,6 +18,9 @@ test("publishes the multipage technical product architecture", async () => {
 
   assert.match(page, /<strong>2,581<\/strong>/);
   assert.match(page, /Estado del sistema/);
+  assert.match(page, /className="project-lockup"/);
+  assert.match(page, /logo-uacj\.png/);
+  assert.match(page, /logo-ca-uacj-113\.png/);
   assert.equal((products.match(/^  p\(/gm) ?? []).length, 30);
   assert.match(productPage, /generateStaticParams/);
   assert.match(productPage, /<h2>Esquema<\/h2>/);
@@ -29,6 +32,11 @@ test("publishes the multipage technical product architecture", async () => {
   assert.match(corpusRoute, /raramuri-corpus-completo\.tsv/);
   assert.match(corpusRoute, /raramuri-corpus-completo\.jsonl/);
   assert.equal(JSON.parse(hosting).d1, "DB");
+  await Promise.all([
+    access(new URL("public/uceees-logo.png", root)),
+    access(new URL("public/logo-uacj.png", root)),
+    access(new URL("public/logo-ca-uacj-113.png", root)),
+  ]);
 });
 
 test("keeps every extracted source row traceable and seeded", async () => {

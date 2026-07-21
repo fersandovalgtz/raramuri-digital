@@ -1,16 +1,16 @@
 @import "tailwindcss";
 
 :root {
-  --bg: #f3f5f7;
+  --bg: #fbfaf6;
   --surface: #ffffff;
   --surface-2: #f8fafb;
-  --ink: #121a2f;
+  --ink: #071a45;
   --muted: #5d6674;
   --line: #d6dbe2;
   --line-strong: #aeb7c4;
-  --blue: #1e3589;
-  --blue-2: #2948ad;
-  --blue-soft: #e9edfb;
+  --blue: #143dbc;
+  --blue-2: #0d2f9c;
+  --blue-soft: #e9edff;
   --green: #648f36;
   --green-soft: #edf5e6;
   --amber: #b56c18;
@@ -38,6 +38,7 @@ button { cursor: pointer; }
 .brand-logo img { width: 48px; height: 48px; object-fit: contain; }
 .site-brand > span:last-child { display: flex; flex-direction: column; line-height: 1.15; }
 .site-brand strong { font-size: 17px; }
+.site-brand strong em { color: var(--blue); font-style: normal; }
 .site-brand small { margin-top: 5px; color: var(--muted); font: 9px var(--mono); text-transform: uppercase; letter-spacing: .06em; }
 .site-header nav { justify-self: center; display: flex; align-items: center; gap: 3px; }
 .site-header nav a { padding: 9px 11px; color: #3d4655; border-bottom: 2px solid transparent; font-size: 12px; font-weight: 700; }
@@ -57,7 +58,17 @@ h3 { margin: 0; font-size: 15px; line-height: 1.35; }
 .primary-button:hover { background: var(--blue-2); }
 
 .system-hero { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(330px, .7fr); gap: 56px; align-items: end; padding: 36px 0 42px; border-bottom: 1px solid var(--line-strong); }
-.system-hero > div > p { max-width: 760px; margin: 22px 0 0; color: #424c5b; font-size: 18px; line-height: 1.65; }
+.project-lockup { position: relative; width: min(620px, 100%); margin-top: 18px; padding: 0 72px 22px 0; overflow: hidden; }
+.project-lockup::before { content: ""; position: absolute; top: -14px; right: 18px; width: 1px; height: calc(100% + 4px); background: linear-gradient(transparent, #cbd6ff 12%, #cbd6ff 88%, transparent); }
+.project-lockup::after { content: ""; position: absolute; top: 4px; right: 15px; width: 7px; height: 7px; border-radius: 50%; background: #9ab2ff; box-shadow: 0 93px 0 var(--blue), 0 225px 0 var(--ink), -34px 275px 0 #9ab2ff; }
+.project-lockup h1 { margin: 0; display: flex; flex-direction: column; font-family: Inter, "Avenir Next", "Arial Black", Arial, sans-serif; font-size: clamp(58px, 6.6vw, 94px); font-weight: 900; line-height: .88; letter-spacing: -.07em; }
+.project-lockup h1 span { color: var(--ink); }
+.project-lockup h1 strong { color: var(--blue); font-weight: 900; }
+.title-circuit-line { position: relative; width: 78%; height: 1px; display: block; margin: 17px 0 13px; background: var(--blue); }
+.title-circuit-line::after { content: ""; position: absolute; top: -3px; right: -1px; width: 7px; height: 7px; border-radius: 50%; background: var(--blue); }
+.project-lockup > p { margin: 0; color: var(--ink); font-size: clamp(17px, 2vw, 24px); font-weight: 850; line-height: 1.05; letter-spacing: -.035em; }
+.title-owner { width: fit-content; margin-top: 20px; padding: 5px 9px; display: block; border: 1px solid #9db3ff; border-radius: 3px; color: var(--blue); background: rgba(255,255,255,.76); font: 800 8px var(--mono); letter-spacing: .16em; }
+.hero-description { max-width: 720px; margin: 13px 0 0; color: #424c5b; font-size: 15px; line-height: 1.65; }
 .hero-actions { margin-top: 26px; display: flex; align-items: center; gap: 22px; }
 .status-panel { border: 1px solid var(--line-strong); background: var(--surface); }
 .status-panel h2 { padding: 14px 17px; color: #fff; background: var(--ink); font: 700 11px var(--mono); text-transform: uppercase; letter-spacing: .06em; }
@@ -79,6 +90,16 @@ h3 { margin: 0; font-size: 15px; line-height: 1.35; }
 .metric-grid.compact { border-top: 1px solid var(--line-strong); margin-top: 24px; }
 .metric-grid.compact > div { min-height: 90px; }
 .metric-grid.compact strong { font-size: 24px; }
+.institutional-logos { padding-top: 42px; }
+.institutional-logos > h2 { margin-bottom: 14px; padding-bottom: 10px; border-bottom: 2px solid var(--ink); }
+.institutional-logos > div { display: grid; grid-template-columns: .72fr 1.08fr 1.6fr; gap: 12px; }
+.institutional-logo { position: relative; min-height: 172px; padding: 20px 18px 35px; display: grid; place-items: center; border: 1px solid var(--line-strong); background: #fff; overflow: hidden; }
+.institutional-logo img { max-width: 100%; max-height: 112px; width: auto; height: auto; object-fit: contain; }
+.institutional-logo > span { position: absolute; inset: auto 14px 10px; color: var(--muted); font: 800 8px var(--mono); text-transform: uppercase; letter-spacing: .05em; }
+.uacj-logo-card img { width: min(330px, 92%); }
+.ca-logo-card { border-color: #1d3568; background: var(--ink); }
+.ca-logo-card img { width: min(460px, 96%); max-height: 124px; }
+.ca-logo-card > span { color: #d7e0f3; }
 
 .content-section { padding-top: 76px; }
 .content-section > h2, .section-title-row { margin-bottom: 22px; padding-bottom: 12px; border-bottom: 2px solid var(--ink); }
@@ -271,6 +292,8 @@ h3 { margin: 0; font-size: 15px; line-height: 1.35; }
   .site-header nav { display: none; }
   .site-header { grid-template-columns: 1fr auto; }
   .system-hero, .page-header, .product-header { grid-template-columns: 1fr; gap: 28px; }
+  .institutional-logos > div { grid-template-columns: 1fr 1fr; }
+  .ca-logo-card { grid-column: 1 / -1; }
   .architecture-grid { grid-template-columns: repeat(3, 1fr); }
   .architecture-grid article:nth-child(3) { border-right: 0; }
   .architecture-grid article { border-bottom: 1px solid var(--line); }
@@ -292,6 +315,12 @@ h3 { margin: 0; font-size: 15px; line-height: 1.35; }
   .system-hero { padding-top: 20px; }
   h1 { font-size: 45px; }
   .system-hero > div > p { font-size: 15px; }
+  .project-lockup { padding-right: 48px; }
+  .project-lockup h1 { font-size: 54px; }
+  .project-lockup > p { font-size: 17px; }
+  .institutional-logos > div { grid-template-columns: 1fr; }
+  .ca-logo-card { grid-column: 1; }
+  .institutional-logo { min-height: 155px; }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 14px; }
   .metric-grid, .definition-grid, .source-grid, .institution-grid, .responsible-card, .license-grid, .io-grid { grid-template-columns: 1fr; }
   .metric-grid > div { min-height: 88px; border-right: 0; border-bottom: 1px solid var(--line); }
