@@ -4,17 +4,22 @@ import test from "node:test";
 
 const root = new URL("../", import.meta.url);
 
-test("publishes the complete master lexicon in the interface", async () => {
-  const [page, route, hosting] = await Promise.all([
+test("publishes the multipage technical product architecture", async () => {
+  const [page, route, hosting, products, productPage, explorer] = await Promise.all([
     readFile(new URL("app/page.tsx", root), "utf8"),
     readFile(new URL("app/api/lexicon/route.ts", root), "utf8"),
     readFile(new URL(".openai/hosting.json", root), "utf8"),
+    readFile(new URL("lib/products.ts", root), "utf8"),
+    readFile(new URL("app/productos/[slug]/page.tsx", root), "utf8"),
+    readFile(new URL("app/components/LexiconExplorer.tsx", root), "utf8"),
   ]);
 
-  assert.match(page, /2,581 registros/);
-  assert.match(page, /Base maestra completa/);
-  assert.match(page, /Exportar CSV/);
-  assert.match(page, /página de procedencia/);
+  assert.match(page, /<strong>2,581<\/strong>/);
+  assert.match(page, /Estado del sistema/);
+  assert.equal((products.match(/^  p\(/gm) ?? []).length, 30);
+  assert.match(productPage, /generateStaticParams/);
+  assert.match(productPage, /<h2>Esquema<\/h2>/);
+  assert.match(explorer, /Exportar CSV/);
   assert.match(route, /raramuri-base-lexicografica-completa\.csv/);
   assert.equal(JSON.parse(hosting).d1, "DB");
 });
