@@ -1,0 +1,12 @@
+{
+  "records": 2090,
+  "source_pages": 50,
+  "pdf_page_min": 91,
+  "pdf_page_max": 140,
+  "printed_page_min": 81,
+  "printed_page_max": 130,
+  "without_equivalent": 0,
+  "source_section": "ESPAÑOL - TARAHUMARA",
+  "extraction_method": "OCR por página, segmentación por etiqueta gramatical y conservación de entrada completa",
+  "validation_status": "Pendiente de cotejo"
+}

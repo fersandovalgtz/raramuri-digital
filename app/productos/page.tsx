@@ -24,8 +24,8 @@ export default function ProductsPage() {
 
         <section className="metric-grid compact">
           <div><span>Total</span><strong>30</strong></div>
-          <div><span>Operativos</span><strong>3</strong></div>
-          <div><span>Especificados</span><strong>27</strong></div>
+          <div><span>Operativos</span><strong>4</strong></div>
+          <div><span>Especificados</span><strong>26</strong></div>
           <div><span>Fuente común</span><strong>P-01</strong></div>
         </section>
 

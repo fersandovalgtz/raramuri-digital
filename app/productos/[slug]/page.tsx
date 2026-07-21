@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { CorpusExplorer } from "../../components/CorpusExplorer";
 import { LexiconExplorer } from "../../components/LexiconExplorer";
 import { ParallelCorpusExplorer } from "../../components/ParallelCorpusExplorer";
+import { TerminologyExplorer } from "../../components/TerminologyExplorer";
 import { SiteFooter } from "../../components/SiteFooter";
 import { SiteHeader } from "../../components/SiteHeader";
 import { getProduct, productHref, products } from "../../../lib/products";
@@ -87,10 +88,10 @@ export default async function ProductPage({ params }: Props) {
 
         <section className="spec-section">
           <h2>Trazabilidad</h2>
-          <div className="trace-grid"><div><span>Identificador</span><strong>P-{String(product.id).padStart(2, "0")}</strong></div><div><span>Fuente mínima</span><strong>entry_id + source_code + page</strong></div><div><span>Estado de datos</span><strong>{product.id === 1 ? "Transcrito" : product.id === 2 ? "Derivado de P-01" : product.id === 3 ? "Derivado de P-01 y P-02" : "No materializado"}</strong></div><div><span>Validación lingüística</span><strong>Pendiente</strong></div></div>
+          <div className="trace-grid"><div><span>Identificador</span><strong>P-{String(product.id).padStart(2, "0")}</strong></div><div><span>Fuente mínima</span><strong>{product.id === 4 ? "term_id + SRC-01 + página" : "entry_id + source_code + page"}</strong></div><div><span>Estado de datos</span><strong>{product.id === 1 ? "Transcrito" : product.id === 2 ? "Derivado de P-01" : product.id === 3 ? "Derivado de P-01 y P-02" : product.id === 4 ? "OCR estructurado de SRC-01" : "No materializado"}</strong></div><div><span>Validación lingüística</span><strong>Pendiente</strong></div></div>
         </section>
 
-        {product.id === 1 ? <LexiconExplorer /> : product.id === 2 ? <CorpusExplorer /> : product.id === 3 ? <ParallelCorpusExplorer /> : (
+        {product.id === 1 ? <LexiconExplorer /> : product.id === 2 ? <CorpusExplorer /> : product.id === 3 ? <ParallelCorpusExplorer /> : product.id === 4 ? <TerminologyExplorer /> : (
           <section className="spec-section implementation-state">
             <h2>Implementación</h2>
             <div><span className="status-chip">ESPECIFICADO</span><p>La ruta, el esquema y el procedimiento están definidos. La materialización de datos se ejecutará a partir de P-01.</p></div>

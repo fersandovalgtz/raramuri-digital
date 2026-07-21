@@ -1,4 +1,3 @@
-import Image from "next/image";
 import Link from "next/link";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
@@ -28,10 +27,11 @@ export default function Home() {
           <aside className="status-panel">
             <h2>Estado del sistema</h2>
             <dl>
-              <div><dt>Versión</dt><dd>0.7</dd></div>
+              <div><dt>Versión</dt><dd>0.8</dd></div>
               <div><dt>Base maestra</dt><dd><i className="status-dot active" /> Operativa</dd></div>
               <div><dt>Corpus P-02</dt><dd><i className="status-dot active" /> Operativo</dd></div>
               <div><dt>Corpus P-03</dt><dd><i className="status-dot active" /> Operativo</dd></div>
+              <div><dt>Terminología P-04</dt><dd><i className="status-dot active" /> Operativa</dd></div>
               <div><dt>Productos</dt><dd>30 rutas</dd></div>
               <div><dt>Validación</dt><dd><i className="status-dot pending" /> Pendiente</dd></div>
               <div><dt>Acceso</dt><dd>Privado</dd></div>
@@ -50,7 +50,8 @@ export default function Home() {
           <h2 id="institutional-logos-title">Instituciones responsables</h2>
           <div>
             <article className="institutional-logo ceees-logo-card">
-              <Image src="/uceees-logo.png" width={118} height={112} alt="Universidad CEEES" />
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/uceees-logo.png" width={118} height={112} alt="Universidad CEEES" />
               <span>Universidad CEEES</span>
             </article>
             <article className="institutional-logo uacj-logo-card">

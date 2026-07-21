@@ -5,17 +5,20 @@ import test from "node:test";
 const root = new URL("../", import.meta.url);
 
 test("publishes the multipage technical product architecture", async () => {
-  const [page, route, corpusRoute, parallelRoute, hosting, products, productPage, explorer, corpusExplorer, parallelExplorer] = await Promise.all([
+  const [page, header, route, corpusRoute, parallelRoute, terminologyRoute, hosting, products, productPage, explorer, corpusExplorer, parallelExplorer, terminologyExplorer] = await Promise.all([
     readFile(new URL("app/page.tsx", root), "utf8"),
+    readFile(new URL("app/components/SiteHeader.tsx", root), "utf8"),
     readFile(new URL("app/api/lexicon/route.ts", root), "utf8"),
     readFile(new URL("app/api/corpus/route.ts", root), "utf8"),
     readFile(new URL("app/api/parallel-corpus/route.ts", root), "utf8"),
+    readFile(new URL("app/api/terminology/route.ts", root), "utf8"),
     readFile(new URL(".openai/hosting.json", root), "utf8"),
     readFile(new URL("lib/products.ts", root), "utf8"),
     readFile(new URL("app/productos/[slug]/page.tsx", root), "utf8"),
     readFile(new URL("app/components/LexiconExplorer.tsx", root), "utf8"),
     readFile(new URL("app/components/CorpusExplorer.tsx", root), "utf8"),
     readFile(new URL("app/components/ParallelCorpusExplorer.tsx", root), "utf8"),
+    readFile(new URL("app/components/TerminologyExplorer.tsx", root), "utf8"),
   ]);
 
   assert.match(page, /<strong>2,581<\/strong>/);
@@ -24,20 +27,26 @@ test("publishes the multipage technical product architecture", async () => {
   assert.doesNotMatch(page, /title-owner/);
   assert.match(page, /logo-uacj\.png/);
   assert.match(page, /logo-ca-uacj-113\.png/);
+  assert.match(page, /<img src="\/uceees-logo\.png"/);
+  assert.doesNotMatch(header, /uceees-logo\.png/);
   assert.equal((products.match(/^  p\(/gm) ?? []).length, 30);
   assert.match(productPage, /generateStaticParams/);
   assert.match(productPage, /<h2>Esquema<\/h2>/);
   assert.match(productPage, /product\.id === 3 \? <ParallelCorpusExplorer/);
+  assert.match(productPage, /product\.id === 4 \? <TerminologyExplorer/);
   assert.match(explorer, /Exportar CSV/);
   assert.match(corpusExplorer, /Corpus digital rarámuri-español/);
   assert.match(corpusExplorer, /JSONL/);
   assert.match(parallelExplorer, /Corpus paralelo de ejemplos rarámuri-español/);
   assert.match(parallelExplorer, /Extracción completa de los 622 registros con ejemplos/);
+  assert.match(terminologyExplorer, /Segunda sección “ESPAÑOL - TARAHUMARA”/);
   assert.match(route, /raramuri-base-lexicografica-completa\.csv/);
   assert.match(corpusRoute, /raramuri-corpus-completo\.tsv/);
   assert.match(corpusRoute, /raramuri-corpus-completo\.jsonl/);
   assert.match(parallelRoute, /raramuri-corpus-paralelo-completo\.tsv/);
   assert.match(parallelRoute, /raramuri-corpus-paralelo-completo\.jsonl/);
+  assert.match(terminologyRoute, /base-terminologica-espanol-raramuri-completa\.csv/);
+  assert.match(terminologyRoute, /base-terminologica-espanol-raramuri-completa\.jsonl/);
   assert.equal(JSON.parse(hosting).d1, "DB");
   await Promise.all([
     access(new URL("public/uceees-logo.png", root)),
@@ -86,4 +95,23 @@ test("materializes the complete parallel-example derivation", async () => {
   assert.equal(pairs.length, 1027);
   assert.equal(pairs.filter((pair) => pair.alignmentStatus === "Alineado").length, 793);
   assert.ok(pairs.every((pair) => pair.pairId && pair.entryId && pair.sourceCode && pair.pageStart));
+});
+
+test("materializes the complete Spanish-Rarámuri terminology section", async () => {
+  const [termsText, reportText, csvText] = await Promise.all([
+    readFile(new URL("data/terminology-spanish-raramuri.json", root), "utf8"),
+    readFile(new URL("data/terminology-extraction-report.json", root), "utf8"),
+    readFile(new URL("data/terminology-spanish-raramuri.csv", root), "utf8"),
+  ]);
+  const terms = JSON.parse(termsText);
+  const report = JSON.parse(reportText);
+  assert.equal(terms.length, 2090);
+  assert.equal(report.records, 2090);
+  assert.equal(report.source_pages, 50);
+  assert.equal(report.printed_page_min, 81);
+  assert.equal(report.printed_page_max, 130);
+  assert.equal(terms[0].term_es, "a pesar de");
+  assert.equal(terms.at(-1).term_es, "zurdo");
+  assert.ok(terms.every((term) => term.term_id && term.term_es && term.equivalents_rrm && term.pdf_page && term.printed_page));
+  assert.equal(csvText.split("\r\n").length, 2091);
 });
