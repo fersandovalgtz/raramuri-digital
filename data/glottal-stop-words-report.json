@@ -1,0 +1,25 @@
+{
+  "records": 835,
+  "unique_normalized_forms": 532,
+  "source_entries": 2581,
+  "entries_with_saltillo": 508,
+  "occurrences_by_field": {
+    "Lema": 392,
+    "Variante": 53,
+    "Ejemplo": 390
+  },
+  "occurrences_by_position": {
+    "Inicial": 98,
+    "Medial": 733,
+    "Final": 3,
+    "Múltiple": 1
+  },
+  "source_glyphs": {
+    "’": 477,
+    "'": 272,
+    "´": 12,
+    "‘": 75
+  },
+  "extraction_method": "Tokenización Unicode de lemas, variantes y ejemplos; detección de representaciones documentales del saltillo; normalización conservadora a U+02BC",
+  "validation_status": "Pendiente de cotejo ortográfico y fonológico"
+}

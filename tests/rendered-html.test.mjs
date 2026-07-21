@@ -5,7 +5,7 @@ import test from "node:test";
 const root = new URL("../", import.meta.url);
 
 test("publishes the multipage technical product architecture", async () => {
-  const [page, header, route, corpusRoute, parallelRoute, terminologyRoute, variantsRoute, hosting, products, productPage, explorer, corpusExplorer, parallelExplorer, terminologyExplorer, variantsExplorer] = await Promise.all([
+  const [page, header, route, corpusRoute, parallelRoute, terminologyRoute, variantsRoute, saltilloRoute, hosting, products, productPage, explorer, corpusExplorer, parallelExplorer, terminologyExplorer, variantsExplorer, saltilloExplorer] = await Promise.all([
     readFile(new URL("app/page.tsx", root), "utf8"),
     readFile(new URL("app/components/SiteHeader.tsx", root), "utf8"),
     readFile(new URL("app/api/lexicon/route.ts", root), "utf8"),
@@ -13,6 +13,7 @@ test("publishes the multipage technical product architecture", async () => {
     readFile(new URL("app/api/parallel-corpus/route.ts", root), "utf8"),
     readFile(new URL("app/api/terminology/route.ts", root), "utf8"),
     readFile(new URL("app/api/variants/route.ts", root), "utf8"),
+    readFile(new URL("app/api/glottal-stop-words/route.ts", root), "utf8"),
     readFile(new URL(".openai/hosting.json", root), "utf8"),
     readFile(new URL("lib/products.ts", root), "utf8"),
     readFile(new URL("app/productos/[slug]/page.tsx", root), "utf8"),
@@ -21,6 +22,7 @@ test("publishes the multipage technical product architecture", async () => {
     readFile(new URL("app/components/ParallelCorpusExplorer.tsx", root), "utf8"),
     readFile(new URL("app/components/TerminologyExplorer.tsx", root), "utf8"),
     readFile(new URL("app/components/VariantsExplorer.tsx", root), "utf8"),
+    readFile(new URL("app/components/GlottalStopExplorer.tsx", root), "utf8"),
   ]);
 
   assert.match(page, /<strong>2,581<\/strong>/);
@@ -37,6 +39,7 @@ test("publishes the multipage technical product architecture", async () => {
   assert.match(productPage, /product\.id === 3 \? <ParallelCorpusExplorer/);
   assert.match(productPage, /product\.id === 4 \? <TerminologyExplorer/);
   assert.match(productPage, /product\.id === 5 \? <VariantsExplorer/);
+  assert.match(productPage, /product\.id === 6 \? <GlottalStopExplorer/);
   assert.match(explorer, /Exportar CSV/);
   assert.match(corpusExplorer, /Corpus digital rarámuri-español/);
   assert.match(corpusExplorer, /JSONL/);
@@ -45,6 +48,8 @@ test("publishes the multipage technical product architecture", async () => {
   assert.match(terminologyExplorer, /Segunda sección “ESPAÑOL - TARAHUMARA”/);
   assert.match(variantsExplorer, /Las relaciones gráficas/);
   assert.match(variantsExplorer, /CANDIDATA/);
+  assert.match(saltilloExplorer, /Se conservan las grafías fuente/);
+  assert.match(saltilloExplorer, /Contexto documental/);
   assert.match(route, /raramuri-base-lexicografica-completa\.csv/);
   assert.match(corpusRoute, /raramuri-corpus-completo\.tsv/);
   assert.match(corpusRoute, /raramuri-corpus-completo\.jsonl/);
@@ -53,12 +58,33 @@ test("publishes the multipage technical product architecture", async () => {
   assert.match(terminologyRoute, /base-terminologica-espanol-raramuri-completa\.csv/);
   assert.match(terminologyRoute, /base-terminologica-espanol-raramuri-completa\.jsonl/);
   assert.match(variantsRoute, /base-variantes-graficas-completa/);
+  assert.match(saltilloRoute, /repositorio-palabras-con-saltillo-completo/);
   assert.equal(JSON.parse(hosting).d1, "DB");
   await Promise.all([
     access(new URL("public/uceees-logo.png", root)),
     access(new URL("public/logo-uacj.png", root)),
     access(new URL("public/logo-ca-uacj-113.png", root)),
   ]);
+});
+
+test("materializes the complete repository of words with glottal stop", async () => {
+  const [recordsText, reportText, csvText] = await Promise.all([
+    readFile(new URL("data/glottal-stop-words.json", root), "utf8"),
+    readFile(new URL("data/glottal-stop-words-report.json", root), "utf8"),
+    readFile(new URL("data/glottal-stop-words.csv", root), "utf8"),
+  ]);
+  const records = JSON.parse(recordsText);
+  const report = JSON.parse(reportText);
+  assert.equal(records.length, 835);
+  assert.equal(report.records, 835);
+  assert.equal(report.unique_normalized_forms, 532);
+  assert.equal(report.source_entries, 2581);
+  assert.equal(report.entries_with_saltillo, 508);
+  assert.deepEqual(report.occurrences_by_field, { Lema: 392, Variante: 53, Ejemplo: 390 });
+  assert.deepEqual(report.occurrences_by_position, { Inicial: 98, Medial: 733, Final: 3, Múltiple: 1 });
+  assert.deepEqual(report.source_glyphs, { "’": 477, "'": 272, "´": 12, "‘": 75 });
+  assert.ok(records.every((record) => record.saltillo_id && record.form && record.normalized_form.includes("ʼ") && record.entry_id && record.context && record.source_code && record.page_start && record.validation_status));
+  assert.equal(csvText.split("\r\n").length, 836);
 });
 
 test("materializes the complete graphic-variant derivation", async () => {

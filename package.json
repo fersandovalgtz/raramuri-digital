@@ -12,6 +12,7 @@
     "test": "npm run build && node --test tests/rendered-html.test.mjs",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "data:variants": "node scripts/extract-graphic-variants.mjs",
+    "data:saltillo": "node scripts/extract-glottal-stop-words.mjs",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {
