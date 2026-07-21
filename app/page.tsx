@@ -22,6 +22,20 @@ type Entry = {
   domain: string;
 };
 
+type MasterEntry = {
+  id: string;
+  lemma: string;
+  homonym: string;
+  pos: string;
+  translations: string[];
+  senses: string[];
+  examples: string[];
+  variants: string[];
+  page: string;
+  source: string;
+  status: "Transcrito" | "Cotejado" | "Validado";
+};
+
 const products: Product[] = [
   { id: 1, title: "Base lexicográfica maestra", group: "Datos" },
   { id: 2, title: "Corpus digital rarámuri-español", group: "Corpus" },
@@ -97,11 +111,77 @@ const entries: Entry[] = [
   },
 ];
 
+const masterEntries: MasterEntry[] = [
+  {
+    id: "RD-000001", lemma: "a", homonym: "", pos: "Vt", translations: ["buscar"],
+    senses: ["Buscar"], examples: ["Nijeni ama cahué. — Voy a buscar el caballo."],
+    variants: ["pret.: ari", "fut.: ama", "imper.: ábasi", "ger.: ásiga"],
+    page: "3", source: "SRC-02", status: "Transcrito",
+  },
+  {
+    id: "RD-000002", lemma: "abé", homonym: "", pos: "Adv", translations: ["hoy", "hace rato"],
+    senses: ["Hoy", "Hace rato"], examples: ["Abé huarú ucuri. — Hoy llovió mucho."],
+    variants: ["véase jipi", "véase curipi"], page: "3", source: "SRC-02", status: "Transcrito",
+  },
+  {
+    id: "RD-000003", lemma: "abi, abiyena", homonym: "", pos: "Adv", translations: ["sí"],
+    senses: ["Respuesta afirmativa"], examples: ["¿Acha mi ’yárati? Ayena, abi. — ¿Se lo dieron? Sí."],
+    variants: ["abiyena"], page: "3", source: "SRC-02", status: "Transcrito",
+  },
+  {
+    id: "RD-000004", lemma: "abijí", homonym: "", pos: "Adv", translations: ["todavía", "aún"],
+    senses: ["Continuidad temporal"], examples: ["Abijí que cho ucú. — Todavía no llueve."],
+    variants: [], page: "3", source: "SRC-02", status: "Transcrito",
+  },
+  {
+    id: "RD-000005", lemma: "aboni", homonym: "", pos: "Pron", translations: ["ellos", "ellas"],
+    senses: ["Pronombre personal de tercera persona plural"], examples: ["Aboni pirérachi. — Habitación de ellos."],
+    variants: [], page: "3", source: "SRC-02", status: "Transcrito",
+  },
+  {
+    id: "RD-000006", lemma: "acá", homonym: "1", pos: "S", translations: ["cara", "nariz"],
+    senses: ["Cara", "Nariz"], examples: ["Binoy acara. — Su cara."],
+    variants: ["véase cho’ó"], page: "3", source: "SRC-02", status: "Transcrito",
+  },
+  {
+    id: "RD-000007", lemma: "acá", homonym: "2", pos: "Vi", translations: ["tener sal", "estar dulce o sabroso"],
+    senses: ["Tener sal", "Estar dulce o sabroso"], examples: ["¿Acha gará acá muní? — ¿Tienen suficiente sal los frijoles?"],
+    variants: [], page: "3", source: "SRC-02", status: "Transcrito",
+  },
+  {
+    id: "RD-000008", lemma: "acá", homonym: "3", pos: "S", translations: ["huarache"],
+    senses: ["Huarache"], examples: ["Nijeni quetasi te acá. — No tengo huaraches."],
+    variants: [], page: "3", source: "SRC-02", status: "Transcrito",
+  },
+  {
+    id: "RD-000009", lemma: "acá", homonym: "4", pos: "Vi", translations: ["embotarse", "quitarse el filo"],
+    senses: ["Embotarse", "Perder el filo"], examples: ["Ripurá acari rité. — Se embotó el hacha."],
+    variants: [], page: "3", source: "SRC-02", status: "Transcrito",
+  },
+  {
+    id: "RD-000010", lemma: "acáchura", homonym: "", pos: "S", translations: ["abuela paterna", "nieta"],
+    senses: ["Abuela paterna", "Nieta de la abuela paterna"],
+    examples: ["Echi nijé onorá iyera nijé acáchura ju. — La mamá de mi papá es mi abuela paterna."],
+    variants: [], page: "3", source: "SRC-02", status: "Transcrito",
+  },
+  {
+    id: "RD-000011", lemma: "achá", homonym: "", pos: "Vt", translations: ["poner", "colocar"],
+    senses: ["Poner una sola cosa o persona", "Colocar"], examples: ["Echo’ná achámani. — Voy a ponerlo allí."],
+    variants: ["pl.: muchuhua"], page: "4", source: "SRC-02", status: "Transcrito",
+  },
+  {
+    id: "RD-000012", lemma: "achí", homonym: "", pos: "Vt", translations: ["reír", "sonreír"],
+    senses: ["Reír", "Sonreír"], examples: ["Echi jaré rarámuri huabé achiri. — Los rarámuri se rieron mucho."],
+    variants: [], page: "4", source: "SRC-02", status: "Transcrito",
+  },
+];
+
 const filters = ["Todos", "Datos", "Corpus", "Inventarios", "Análisis", "Docencia"] as const;
 
 const schemaFields = [
   ["lemma", "Forma de entrada"],
   ["pos", "Clase gramatical"],
+  ["translation[]", "Equivalentes en español"],
   ["sense[]", "Acepciones"],
   ["form[]", "Flexión y derivación"],
   ["variant[]", "Variantes gráficas"],
@@ -123,6 +203,9 @@ export default function Home() {
   const [query, setQuery] = useState("");
   const [submitted, setSubmitted] = useState("");
   const [activeFilter, setActiveFilter] = useState<(typeof filters)[number]>("Todos");
+  const [masterQuery, setMasterQuery] = useState("");
+  const [masterPos, setMasterPos] = useState("Todos");
+  const [selectedMasterId, setSelectedMasterId] = useState(masterEntries[0].id);
 
   const selectedEntry = useMemo(() => {
     const normalized = submitted.trim().toLocaleLowerCase("es");
@@ -138,10 +221,39 @@ export default function Home() {
     ? products
     : products.filter((product) => product.group === activeFilter);
 
+  const visibleMasterEntries = useMemo(() => {
+    const normalized = masterQuery.trim().toLocaleLowerCase("es");
+    return masterEntries.filter((entry) => {
+      const matchesPos = masterPos === "Todos" || entry.pos === masterPos;
+      const values = [entry.lemma, entry.pos, ...entry.translations, ...entry.senses, ...entry.variants];
+      const matchesQuery = !normalized || values.some((value) => value.toLocaleLowerCase("es").includes(normalized));
+      return matchesPos && matchesQuery;
+    });
+  }, [masterPos, masterQuery]);
+
+  const selectedMasterEntry = masterEntries.find((entry) => entry.id === selectedMasterId) ?? masterEntries[0];
+
   function submitSearch(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
     setSubmitted(query);
     document.getElementById("resultado")?.scrollIntoView({ behavior: "smooth", block: "center" });
+  }
+
+  function exportMasterCsv() {
+    const rows = [
+      ["id", "lema", "homonimo", "clasificacion", "traducciones", "acepciones", "ejemplos", "variantes", "fuente", "pagina", "estado"],
+      ...visibleMasterEntries.map((entry) => [
+        entry.id, entry.lemma, entry.homonym, entry.pos, entry.translations.join(" | "), entry.senses.join(" | "),
+        entry.examples.join(" | "), entry.variants.join(" | "), entry.source, entry.page, entry.status,
+      ]),
+    ];
+    const csv = rows.map((row) => row.map((cell) => `"${cell.replaceAll('"', '""')}"`).join(",")).join("\n");
+    const url = URL.createObjectURL(new Blob(["\ufeff", csv], { type: "text/csv;charset=utf-8" }));
+    const link = document.createElement("a");
+    link.href = url;
+    link.download = "raramuri-base-lexicografica-muestra.csv";
+    link.click();
+    URL.revokeObjectURL(url);
   }
 
   return (
@@ -159,23 +271,24 @@ export default function Home() {
         </a>
 
         <nav aria-label="Navegación principal">
-          <a href="#explorar">Explorar</a>
+          <a href="#base-maestra">Base maestra</a>
           <a href="#modelo">Modelo de datos</a>
           <a href="#productos">Productos</a>
-          <a href="#fuentes">Fuentes</a>
+          <a href="#proyecto">Proyecto</a>
+          <a href="#licencia">Licencia</a>
         </nav>
 
-        <span className="build-status"><i /> PROTOTIPO · 0.2</span>
+        <span className="build-status"><i /> PROTOTIPO · 0.3</span>
       </header>
 
       <main id="contenido">
         <section className="hero" id="inicio">
           <div>
-            <p className="eyebrow">Infraestructura lexicográfica rarámuri-español</p>
+            <p className="eyebrow">Proyecto interinstitucional de humanidades digitales</p>
             <h1>Rarámuri<br /><em>Digital</em></h1>
             <p className="hero-intro">
               Plataforma para integrar, consultar y relacionar entradas, acepciones, formas,
-              ejemplos, variantes y referencias de página.
+              ejemplos, variantes y referencias de página. Universidad CEEES · UACJ · UACJ-113.
             </p>
           </div>
 
@@ -189,11 +302,21 @@ export default function Home() {
               <small>fuentes documentales<br />en integración</small>
             </div>
             <div className="metric">
-              <span>8</span>
+              <span>9</span>
               <small>campos mínimos<br />por entrada</small>
               <div className="progress"><i /></div>
             </div>
           </aside>
+        </section>
+
+        <section className="institution-rail" aria-label="Instituciones participantes">
+          <span>INSTITUCIONES PARTICIPANTES</span>
+          <b>Universidad CEEES</b>
+          <i />
+          <b>Universidad Autónoma de Ciudad Juárez</b>
+          <i />
+          <b>CA UACJ-113</b>
+          <small>Estudios sobre Prácticas Educativas e Interculturalidad</small>
         </section>
 
         <section className="search-panel" id="explorar" aria-label="Consulta del corpus">
@@ -273,10 +396,88 @@ export default function Home() {
         </section>
 
         <section className="collections" aria-label="Vistas principales">
-          <a href="#corpus"><span>01 / CORPUS</span><i>↗</i><b>Ejemplos alineados</b><small>RRM ↔ SPA + FUENTE</small></a>
-          <a href="#modelo"><span>02 / ESQUEMA</span><i>↗</i><b>Ficha maestra</b><small>LEMA + POS + SENSE + FORM</small></a>
+          <a href="#base-maestra"><span>01 / BASE</span><i>↗</i><b>Registros maestros</b><small>LEMA + POS + SENSE + SOURCE</small></a>
+          <a href="#corpus"><span>02 / CORPUS</span><i>↗</i><b>Ejemplos alineados</b><small>RRM ↔ SPA + FUENTE</small></a>
           <a href="#variantes"><span>03 / FORMA</span><i>↗</i><b>Variación gráfica</b><small>R/L · G/C · I/E · BA/HUA</small></a>
           <a href="#productos"><span>04 / SALIDAS</span><i>↗</i><b>30 productos</b><small>DATOS + CORPUS + ANÁLISIS</small></a>
+        </section>
+
+        <section className="master-section" id="base-maestra">
+          <div className="section-heading">
+            <div>
+              <p className="eyebrow">Producto 01 · Base lexicográfica maestra</p>
+              <h2>Registro canónico por entrada.</h2>
+            </div>
+            <p>
+              Muestra inicial de 12 registros transcritos. Incluye lema rarámuri, clasificación,
+              traducción, acepciones, ejemplos, variantes y página de procedencia.
+            </p>
+          </div>
+
+          <div className="master-metrics" aria-label="Resumen de la base maestra">
+            <div><span>12</span><small>REGISTROS CARGADOS</small></div>
+            <div><span>5</span><small>CLASES GRAMATICALES</small></div>
+            <div><span>7</span><small>CAMPOS LEXICOGRÁFICOS</small></div>
+            <div><span>0</span><small>REGISTROS VALIDADOS</small></div>
+          </div>
+
+          <div className="master-toolbar">
+            <label>
+              <span>BUSCAR EN REGISTROS</span>
+              <input value={masterQuery} onChange={(event) => setMasterQuery(event.target.value)}
+                type="search" placeholder="Lema, traducción, acepción o variante" />
+            </label>
+            <label>
+              <span>CLASE GRAMATICAL</span>
+              <select value={masterPos} onChange={(event) => setMasterPos(event.target.value)}>
+                {['Todos', 'S', 'Vt', 'Vi', 'Adv', 'Pron'].map((pos) => <option key={pos}>{pos}</option>)}
+              </select>
+            </label>
+            <button type="button" onClick={exportMasterCsv}>Exportar CSV</button>
+          </div>
+
+          <div className="master-layout">
+            <div className="master-table-wrap">
+              <div className="master-table" role="table" aria-label="Muestra de la base lexicográfica maestra">
+                <div className="master-table-head" role="row">
+                  <span>ID</span><span>LEMA</span><span>POS</span><span>TRADUCCIÓN</span><span>PÁG.</span><span>ESTADO</span>
+                </div>
+                {visibleMasterEntries.map((entry) => (
+                  <button type="button" role="row" key={entry.id}
+                    className={entry.id === selectedMasterEntry.id ? "selected" : ""}
+                    onClick={() => setSelectedMasterId(entry.id)}>
+                    <code>{entry.id}</code>
+                    <b>{entry.homonym && <sup>{entry.homonym}</sup>}{entry.lemma}</b>
+                    <span className="pos-chip">{entry.pos}</span>
+                    <span>{entry.translations.join("; ")}</span>
+                    <span>{entry.page}</span>
+                    <i>{entry.status}</i>
+                  </button>
+                ))}
+                {visibleMasterEntries.length === 0 && <p className="master-empty">Sin registros para este filtro.</p>}
+              </div>
+              <p className="master-count">{visibleMasterEntries.length} de {masterEntries.length} registros visibles</p>
+            </div>
+
+            <aside className="record-inspector" aria-label={`Detalle de ${selectedMasterEntry.lemma}`}>
+              <header>
+                <div><span>RECORD INSPECTOR</span><code>{selectedMasterEntry.id}</code></div>
+                <i>{selectedMasterEntry.status}</i>
+              </header>
+              <div className="inspector-title">
+                <h3>{selectedMasterEntry.homonym && <sup>{selectedMasterEntry.homonym}</sup>}{selectedMasterEntry.lemma}</h3>
+                <span>{selectedMasterEntry.pos}</span>
+              </div>
+              <dl>
+                <div><dt>TRADUCCIÓN</dt><dd>{selectedMasterEntry.translations.join("; ")}</dd></div>
+                <div><dt>ACEPCIONES</dt><dd><ol>{selectedMasterEntry.senses.map((sense) => <li key={sense}>{sense}</li>)}</ol></dd></div>
+                <div><dt>EJEMPLOS</dt><dd>{selectedMasterEntry.examples.map((example) => <p key={example}>{example}</p>)}</dd></div>
+                <div><dt>VARIANTES / FORMAS / REMISIONES</dt><dd className="tag-list">{selectedMasterEntry.variants.length ? selectedMasterEntry.variants.map((variant) => <span key={variant}>{variant}</span>) : <em>Sin dato en la entrada</em>}</dd></div>
+                <div><dt>PROCEDENCIA</dt><dd><code>{selectedMasterEntry.source}</code> · página {selectedMasterEntry.page}</dd></div>
+              </dl>
+              <p className="validation-warning"><i /> Transcripción de trabajo. Requiere cotejo con el facsímil y validación lingüística.</p>
+            </aside>
+          </div>
         </section>
 
         <section className="technical-section" id="modelo">
@@ -398,16 +599,91 @@ export default function Home() {
           </div>
         </section>
 
+        <section className="project-section" id="proyecto">
+          <div className="section-heading">
+            <div><p className="eyebrow">Responsabilidad y contacto</p><h2>Proyecto interinstitucional.</h2></div>
+            <p>Los contactos publicados son institucionales. Para asuntos académicos del corpus, escriba al responsable del proyecto.</p>
+          </div>
+
+          <article className="lead-card">
+            <div>
+              <span>RESPONSABLE DEL PROYECTO</span>
+              <h3>Dr. Fernando Sandoval Gutiérrez</h3>
+              <p>Coordinación académica y responsable del proyecto Rarámuri Digital.</p>
+            </div>
+            <dl>
+              <div><dt>Adscripción</dt><dd>Universidad Autónoma de Ciudad Juárez · Universidad CEEES</dd></div>
+              <div><dt>Cuerpo académico</dt><dd>UACJ-113 · Estudios sobre Prácticas Educativas e Interculturalidad</dd></div>
+              <div><dt>Correo</dt><dd><a href="mailto:fernando.sandoval@uacj.mx">fernando.sandoval@uacj.mx</a></dd></div>
+              <div><dt>ORCID</dt><dd><a href="https://orcid.org/0000-0002-3168-6725" target="_blank" rel="noreferrer">0000-0002-3168-6725 ↗</a></dd></div>
+            </dl>
+          </article>
+
+          <div className="institution-grid">
+            <article>
+              <header><span>INST-01</span><i>INSTITUCIÓN PARTICIPANTE</i></header>
+              <h3>Universidad CEEES</h3>
+              <p>Centro de Estudios Especializados en Educación Superior, Cuauhtémoc.</p>
+              <address>Calle Cuarta, entre Guerrero y Allende, Centro, Cuauhtémoc, Chihuahua.</address>
+              <div className="contact-links">
+                <a href="mailto:informes@ceees.mx">informes@ceees.mx</a>
+                <a href="tel:+526251475963">+52 625 147 5963</a>
+                <a href="https://ceees.mx/contact/" target="_blank" rel="noreferrer">ceees.mx ↗</a>
+              </div>
+            </article>
+            <article>
+              <header><span>INST-02</span><i>INSTITUCIÓN PARTICIPANTE</i></header>
+              <h3>Universidad Autónoma de Ciudad Juárez</h3>
+              <p>División Multidisciplinaria en Cuauhtémoc.</p>
+              <address>Km 3.5 Carretera Cuauhtémoc-Anáhuac, C.P. 31600, Chihuahua.</address>
+              <div className="contact-links">
+                <a href="mailto:div.cua@uacj.mx">div.cua@uacj.mx</a>
+                <a href="tel:+526251281700">+52 625 128 1700</a>
+                <a href="https://www.uacj.mx/DMC/" target="_blank" rel="noreferrer">uacj.mx/DMC ↗</a>
+              </div>
+            </article>
+            <article>
+              <header><span>INST-03</span><i>CUERPO ACADÉMICO</i></header>
+              <h3>UACJ-113</h3>
+              <p>Estudios sobre Prácticas Educativas e Interculturalidad.</p>
+              <address>ICSA · División Multidisciplinaria en Cuauhtémoc, UACJ.</address>
+              <div className="contact-links">
+                <a href="mailto:fernando.sandoval@uacj.mx">fernando.sandoval@uacj.mx</a>
+                <a href="https://erevistas.uacj.mx/ojs/index.php/biniriame" target="_blank" rel="noreferrer">Referencia institucional ↗</a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section className="license-section" id="licencia">
+          <div className="license-badge"><b>CC</b><span>BY<br />NC<br />SA</span><i>4.0</i></div>
+          <div className="license-copy">
+            <p className="eyebrow">Licencia de uso</p>
+            <h2>CC BY-NC-SA 4.0 Internacional</h2>
+            <p>
+              Los contenidos originales, la documentación y los datos producidos específicamente por Rarámuri Digital
+              pueden compartirse y adaptarse con atribución, para fines no comerciales y bajo la misma licencia.
+            </p>
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" target="_blank" rel="license noreferrer">Consultar términos de la licencia ↗</a>
+          </div>
+          <aside>
+            <b>ATRIBUCIÓN SUGERIDA</b>
+            <p>Rarámuri Digital. Fernando Sandoval Gutiérrez; Universidad CEEES; Universidad Autónoma de Ciudad Juárez; Cuerpo Académico UACJ-113.</p>
+            <b>EXCLUSIONES</b>
+            <p>La licencia no se extiende a facsímiles, textos fuente, logotipos ni materiales de terceros. Esos elementos conservan sus propios derechos y condiciones de uso.</p>
+          </aside>
+        </section>
+
         <aside className="scope-note">
           <span>ALCANCE DE ESTA VERSIÓN</span>
-          <p>Interfaz y arquitectura de información. No representa todavía cobertura completa del diccionario ni validación lingüística final.</p>
+          <p>Base maestra inicial con 12 registros de muestra. No representa todavía cobertura completa del diccionario ni validación lingüística final.</p>
         </aside>
       </main>
 
       <footer>
         <div className="footer-brand"><img src="/uceees-logo.png" alt="" /><span><b>Rarámuri Digital</b>Universidad CEEES</span></div>
-        <div><span>VERSIÓN</span><b>PROTOTIPO 0.2</b></div>
-        <div><span>COBERTURA</span><b>MUESTRA FUNCIONAL</b></div>
+        <div><span>VERSIÓN</span><b>PROTOTIPO 0.3</b></div>
+        <div><span>COBERTURA</span><b>12 REGISTROS</b></div>
         <div><span>TRAZABILIDAD</span><b>ENTRADA + PÁGINA + FUENTE</b></div>
       </footer>
     </div>
