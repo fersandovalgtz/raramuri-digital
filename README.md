@@ -54,6 +54,7 @@ Universidad CEEES · Universidad Autónoma de Ciudad Juárez · Cuerpo Académic
 - [Informe reproducible de calidad](QUALITY_REPORT.md) · [JSON](public/downloads/quality-report.json)
 - [Gobernanza y derechos lingüísticos](GOVERNANCE.md)
 - [Correcciones y contribuciones](CONTRIBUTING.md)
+- [Autoría y funciones CRediT](CONTRIBUTORS.md)
 - [Registro de cambios](CHANGELOG.md) · [Lista de publicación](RELEASE_CHECKLIST.md)
 - [Metadatos CodeMeta](codemeta.json) · [Cita CFF](CITATION.cff)
 

@@ -89,13 +89,14 @@ test("publishes the multipage technical product architecture", async () => {
 });
 
 test("publishes versioned scientific documentation and reproducible quality controls", async () => {
-  const [metadataText, datasheet, datasheetEn, schema, governance, contributing, changelog, qualityText, documentationPage, header, citation, codemetaText] = await Promise.all([
+  const [metadataText, datasheet, datasheetEn, schema, governance, contributing, contributors, changelog, qualityText, documentationPage, header, citation, codemetaText] = await Promise.all([
     readFile(new URL("project-metadata.json", root), "utf8"),
     readFile(new URL("DATASHEET.md", root), "utf8"),
     readFile(new URL("DATASHEET.en.md", root), "utf8"),
     readFile(new URL("SCHEMA.md", root), "utf8"),
     readFile(new URL("GOVERNANCE.md", root), "utf8"),
     readFile(new URL("CONTRIBUTING.md", root), "utf8"),
+    readFile(new URL("CONTRIBUTORS.md", root), "utf8"),
     readFile(new URL("CHANGELOG.md", root), "utf8"),
     readFile(new URL("public/downloads/quality-report.json", root), "utf8"),
     readFile(new URL("app/documentacion/page.tsx", root), "utf8"),
@@ -119,6 +120,7 @@ test("publishes versioned scientific documentation and reproducible quality cont
   assert.match(schema, /RD-######/);
   assert.match(governance, /autoridad cultural y lingüística/i);
   assert.match(contributing, /VERIFICACIÓN DOCUMENTAL/);
+  assert.match(contributors, /taxonomía CRediT/);
   assert.match(changelog, /Plataforma 3\.1\.0 \/ Datos 1\.0\.0/);
   assert.match(documentationPage, /Documentación científica/);
   assert.match(documentationPage, /quality-report\.json/);

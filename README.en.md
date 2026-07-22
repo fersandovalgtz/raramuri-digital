@@ -54,6 +54,7 @@ Universidad CEEES · Universidad Autónoma de Ciudad Juárez · Academic Group U
 - [Reproducible quality report](QUALITY_REPORT.md) · [JSON](public/downloads/quality-report.json)
 - [Governance and linguistic rights](GOVERNANCE.md)
 - [Corrections and contributions](CONTRIBUTING.md)
+- [Authorship and CRediT roles](CONTRIBUTORS.md)
 - [Changelog](CHANGELOG.md) · [Release checklist](RELEASE_CHECKLIST.md)
 - [CodeMeta metadata](codemeta.json) · [CFF citation](CITATION.cff)
 

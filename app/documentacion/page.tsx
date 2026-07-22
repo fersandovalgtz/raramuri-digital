@@ -13,6 +13,7 @@ const documents = [
   { code: "DOC-04", title: "Gobernanza", description: "Derechos lingüísticos, autoridad comunitaria, correcciones, restricciones y prevención de daño.", es: "GOVERNANCE.md" },
   { code: "DOC-05", title: "Contribuciones", description: "Datos mínimos de un reporte, clasificación, revisión documental, revisión especializada y versionamiento.", es: "CONTRIBUTING.md" },
   { code: "DOC-06", title: "Registro de cambios", description: "Historial de publicaciones de plataforma, datos, documentación y estado de validación.", es: "CHANGELOG.md" },
+  { code: "DOC-07", title: "Contribuciones CRediT", description: "Autoría, funciones, afiliaciones y distinción entre validación técnica y validación lingüística.", es: "CONTRIBUTORS.md" },
 ];
 
 export default function DocumentationPage() {
