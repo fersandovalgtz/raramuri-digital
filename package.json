@@ -1,6 +1,6 @@
 {
-  "name": "site-creator-vinext-starter",
-  "version": "0.1.0",
+  "name": "raramuri-digital",
+  "version": "3.1.0",
   "private": true,
   "engines": {
     "node": ">=22.13.0"
@@ -17,6 +17,8 @@
     "data:inventories": "node scripts/extract-grammatical-inventories.mjs",
     "data:advanced": "node --no-warnings scripts/extract-advanced-products.mjs",
     "data:exports": "node scripts/generate-interoperability-exports.mjs",
+    "data:quality": "node scripts/generate-quality-report.mjs",
+    "validate": "npm run data:exports && npm run data:quality && npm run lint && npm test",
     "db:generate": "drizzle-kit generate"
   },
   "dependencies": {

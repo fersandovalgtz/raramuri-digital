@@ -88,6 +88,46 @@ test("publishes the multipage technical product architecture", async () => {
   ]);
 });
 
+test("publishes versioned scientific documentation and reproducible quality controls", async () => {
+  const [metadataText, datasheet, datasheetEn, schema, governance, contributing, changelog, qualityText, documentationPage, header, citation, codemetaText] = await Promise.all([
+    readFile(new URL("project-metadata.json", root), "utf8"),
+    readFile(new URL("DATASHEET.md", root), "utf8"),
+    readFile(new URL("DATASHEET.en.md", root), "utf8"),
+    readFile(new URL("SCHEMA.md", root), "utf8"),
+    readFile(new URL("GOVERNANCE.md", root), "utf8"),
+    readFile(new URL("CONTRIBUTING.md", root), "utf8"),
+    readFile(new URL("CHANGELOG.md", root), "utf8"),
+    readFile(new URL("public/downloads/quality-report.json", root), "utf8"),
+    readFile(new URL("app/documentacion/page.tsx", root), "utf8"),
+    readFile(new URL("app/components/SiteHeader.tsx", root), "utf8"),
+    readFile(new URL("CITATION.cff", root), "utf8"),
+    readFile(new URL("codemeta.json", root), "utf8"),
+  ]);
+  const metadata = JSON.parse(metadataText);
+  const quality = JSON.parse(qualityText);
+  const codemeta = JSON.parse(codemetaText);
+  assert.equal(metadata.platform_version, "3.1.0");
+  assert.equal(metadata.dataset_version, "1.0.0");
+  assert.equal(quality.scope.entries, 2581);
+  assert.equal(quality.integrity.duplicate_record_ids, 0);
+  assert.equal(quality.integrity.invalid_record_ids, 0);
+  assert.equal(quality.integrity.invalid_page_ranges, 0);
+  assert.equal(quality.integrity.all_export_checksums_present, true);
+  assert.equal(quality.integrity.all_export_entry_counts_match, true);
+  assert.match(datasheet, /Validación lingüística está pendiente/i);
+  assert.match(datasheetEn, /Linguistic validation is pending/i);
+  assert.match(schema, /RD-######/);
+  assert.match(governance, /autoridad cultural y lingüística/i);
+  assert.match(contributing, /VERIFICACIÓN DOCUMENTAL/);
+  assert.match(changelog, /Plataforma 3\.1\.0 \/ Datos 1\.0\.0/);
+  assert.match(documentationPage, /Documentación científica/);
+  assert.match(documentationPage, /quality-report\.json/);
+  assert.match(header, /href="\/documentacion"/);
+  assert.match(citation, /type: dataset/);
+  assert.match(citation, /version: "1\.0\.0"/);
+  assert.equal(codemeta["@type"], "Dataset");
+});
+
 test("publishes complete interoperable exports and the authorized lexicographic API", async () => {
   const [downloadsPage, header, apiRoute, openApiRoute, xmlText, jsonText, csvText, sqlText, teiText, openApiText, manifestText] = await Promise.all([
     readFile(new URL("app/descargas/page.tsx", root), "utf8"),

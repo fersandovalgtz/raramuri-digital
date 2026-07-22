@@ -1,0 +1,6 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Información sensible o solicitud de restricción
+    url: mailto:fernando.sandoval@uacj.mx
+    about: Use este canal para asuntos que no deban quedar en una incidencia pública.
+

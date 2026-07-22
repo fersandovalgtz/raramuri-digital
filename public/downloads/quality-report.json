@@ -1,0 +1,64 @@
+{
+  "report": "Rarámuri Digital: informe de calidad de datos",
+  "generated": "2026-07-21",
+  "platform_version": "3.1.0",
+  "dataset_version": "1.0.0",
+  "publication_status": "Autorizada para difusión",
+  "validation_status": "Pendiente de validación lingüística",
+  "scope": {
+    "entries": 2581,
+    "pages": 85,
+    "page_min": 3,
+    "page_max": 87,
+    "sources": [
+      "SRC-02"
+    ],
+    "senses": 2758,
+    "examples": 622,
+    "variants": 224
+  },
+  "completeness": {
+    "missing_headword": 0,
+    "missing_classification": 163,
+    "missing_translation": 2,
+    "entries_without_senses": 2,
+    "entries_without_examples": 1959,
+    "entries_without_variants": 2360,
+    "missing_source_code": 0,
+    "missing_source_document": 0
+  },
+  "integrity": {
+    "duplicate_record_ids": 0,
+    "invalid_record_ids": 0,
+    "invalid_page_ranges": 0,
+    "source_signature_collisions": 35,
+    "all_export_checksums_present": true,
+    "all_export_entry_counts_match": true
+  },
+  "distributions": {
+    "classification_family": {
+      "Adj": 184,
+      "Adv": 162,
+      "Conj": 3,
+      "Imper": 9,
+      "Interj": 3,
+      "Interr": 9,
+      "Pp": 23,
+      "Prep": 6,
+      "Pron": 22,
+      "S": 752,
+      "Sin clasificar": 163,
+      "V": 1,
+      "Vi": 694,
+      "Vr": 3,
+      "Vt": 547
+    },
+    "transcription_status": {
+      "Transcrito": 2581
+    }
+  },
+  "interpretation": {
+    "source_signature_collisions": "Posibles homógrafos o registros repetidos en una misma página; requieren revisión editorial, no eliminación automática.",
+    "linguistic_validation": "Las comprobaciones de este informe son estructurales y documentales. No equivalen a validación lingüística por personas hablantes o especialistas autorizados."
+  }
+}

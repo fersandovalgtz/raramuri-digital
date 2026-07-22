@@ -1,0 +1,19 @@
+{
+  "project": "Rarámuri Digital",
+  "platform_version": "3.1.0",
+  "dataset_version": "1.0.0",
+  "release_date": "2026-07-21",
+  "language_object": {
+    "code": "tar",
+    "label": "rarámuri / tarahumara"
+  },
+  "language_target": {
+    "code": "es",
+    "label": "español"
+  },
+  "publication_status": "Autorizada para difusión",
+  "validation_status": "Pendiente de validación lingüística",
+  "license": "CC-BY-NC-SA-4.0",
+  "repository": "https://github.com/fersandovalgtz/raramuri-digital",
+  "website": "https://raramuri.ceees.mx"
+}

@@ -6,11 +6,12 @@ import { fileURLToPath } from "node:url";
 const projectRoot = dirname(dirname(fileURLToPath(import.meta.url)));
 const outputDir = join(projectRoot, "public", "downloads");
 const sourcePath = join(projectRoot, "data", "lexicon-master.json");
-const generatedAt = "2026-07-21";
-const datasetVersion = "1.0.0";
-const siteVersion = "3.1";
-const publicationStatus = "Autorizada para difusión";
-const validationStatus = "Pendiente de validación lingüística";
+const metadata = JSON.parse(await readFile(join(projectRoot, "project-metadata.json"), "utf8"));
+const generatedAt = metadata.release_date;
+const datasetVersion = metadata.dataset_version;
+const siteVersion = metadata.platform_version;
+const publicationStatus = metadata.publication_status;
+const validationStatus = metadata.validation_status;
 const license = "CC BY-NC-SA 4.0";
 const licenseUrl = "https://creativecommons.org/licenses/by-nc-sa/4.0/";
 
@@ -334,6 +335,7 @@ for (const [name, , mediaType, label] of files) {
 
 const manifest = {
   dataset: "Rarámuri Digital: base lexicográfica maestra",
+  platform_version: siteVersion,
   dataset_version: datasetVersion,
   generated: generatedAt,
   entry_count: entries.length,

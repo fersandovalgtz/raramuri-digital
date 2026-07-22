@@ -1,13 +1,13 @@
 cff-version: 1.2.0
 message: "Si utiliza este recurso, cite el proyecto Rarámuri Digital. / If you use this resource, please cite the Rarámuri Digital project."
-title: "Rarámuri Digital: infraestructura lexicográfica rarámuri-español"
-type: software
+title: "Rarámuri Digital: conjunto de datos lexicográficos rarámuri-español"
+type: dataset
 authors:
   - family-names: "Sandoval Gutiérrez"
     given-names: "Fernando"
     orcid: "https://orcid.org/0000-0002-3168-6725"
     email: "fernando.sandoval@uacj.mx"
-version: "3.1"
+version: "1.0.0"
 date-released: "2026-07-21"
 url: "https://raramuri.ceees.mx"
 repository-code: "https://github.com/fersandovalgtz/raramuri-digital"
@@ -23,4 +23,5 @@ keywords:
 abstract: >-
   Infraestructura lexicográfica rarámuri-español con 2,581 entradas,
   treinta productos derivados, exportaciones XML, JSON, CSV, SQL y TEI Lex-0,
-  y una API pública documentada mediante OpenAPI 3.1.
+  y una API pública documentada mediante OpenAPI 3.1. El conjunto de datos
+  corresponde a la versión 1.0.0 y se publica mediante la plataforma 3.1.0.

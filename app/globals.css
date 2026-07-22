@@ -444,6 +444,22 @@ h3 { margin: 0; font-size: 15px; line-height: 1.35; }
 .api-examples .text-link { margin-top: 8px; }
 .manifest-link { margin: 17px 0 0; text-align: right; }
 
+.documentation-heading { min-height: 230px; padding: 34px 0 38px; display: grid; grid-template-columns: minmax(0, 1.2fr) minmax(320px, .8fr); gap: 60px; align-items: end; border-bottom: 1px solid var(--line-strong); }
+.documentation-heading h1 { margin-top: 18px; }
+.documentation-heading > p { max-width: 520px; margin: 0; color: var(--muted); font-size: 14px; line-height: 1.75; }
+.documentation-metrics { border-top: 0; }
+.documentation-metrics strong { font-size: 24px; letter-spacing: -.03em; }
+.documentation-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+.documentation-grid article { min-height: 250px; padding: 22px; display: flex; flex-direction: column; border: 1px solid var(--line-strong); background: var(--surface); }
+.documentation-grid article > code { color: var(--blue); font: 800 9px var(--mono); }
+.documentation-grid h3 { margin-top: 26px; font-size: 19px; }
+.documentation-grid p { margin: 13px 0 22px; color: var(--muted); font-size: 12px; line-height: 1.7; }
+.documentation-grid article > div { margin-top: auto; display: flex; flex-wrap: wrap; gap: 14px; }
+.quality-table > div { min-height: 52px; padding: 0 17px; display: grid; grid-template-columns: minmax(180px, .8fr) 130px minmax(260px, 1.2fr); gap: 16px; align-items: center; border-bottom: 1px solid var(--line); }
+.quality-table > div:last-child { border-bottom: 0; }
+.quality-table strong, .quality-table span { font-size: 11px; }
+.quality-table code { color: var(--blue); font: 800 10px var(--mono); }
+
 .site-footer { width: min(1280px, calc(100% - 48px)); min-height: 112px; margin: 0 auto; display: grid; grid-template-columns: 1.5fr .4fr .5fr 1fr; gap: 25px; align-items: center; border-top: 2px solid var(--ink); }
 .site-footer > div { display: flex; flex-direction: column; gap: 5px; }
 .site-footer span { color: var(--muted); font: 8px var(--mono); text-transform: uppercase; }
@@ -466,8 +482,9 @@ h3 { margin: 0; font-size: 15px; line-height: 1.35; }
   .query-form, .query-form.corpus-query, .query-form.parallel-query, .query-form.terminology-query, .query-form.variants-query, .query-form.saltillo-query, .query-form.accent-query, .query-form.inventory-query { grid-template-columns: 1fr 1fr; }
   .parallel-layout, .terminology-layout, .variants-layout, .saltillo-layout, .accent-layout, .inventory-layout { grid-template-columns: 1fr; }
   .process-list, .trace-grid { grid-template-columns: 1fr 1fr; }
-  .downloads-heading, .api-grid { grid-template-columns: 1fr; }
-  .downloads-heading { gap: 24px; }
+  .downloads-heading, .documentation-heading, .api-grid { grid-template-columns: 1fr; }
+  .downloads-heading, .documentation-heading { gap: 24px; }
+  .documentation-grid { grid-template-columns: repeat(2, 1fr); }
   .api-grid > article { border-right: 0; border-bottom: 1px solid var(--line); }
   .site-footer { grid-template-columns: 1.5fr 1fr; padding: 20px 0; }
 }
@@ -491,6 +508,7 @@ h3 { margin: 0; font-size: 15px; line-height: 1.35; }
   .hero-actions { align-items: flex-start; flex-direction: column; gap: 14px; }
   .metric-grid, .definition-grid, .source-grid, .institution-grid, .responsible-card, .license-grid, .io-grid { grid-template-columns: 1fr; }
   .download-grid { grid-template-columns: 1fr; }
+  .documentation-grid { grid-template-columns: 1fr; }
   .download-card:nth-child(5) { grid-column: 1; }
   .metric-grid > div { min-height: 88px; border-right: 0; border-bottom: 1px solid var(--line); }
   .metric-grid > div:last-child { border-bottom: 0; }
@@ -498,6 +516,8 @@ h3 { margin: 0; font-size: 15px; line-height: 1.35; }
   .architecture-grid article:nth-child(3) { border-right: 1px solid var(--line); }
   .architecture-grid article:nth-child(2n) { border-right: 0; }
   .architecture-table, .lexicon-table, .parallel-table, .terminology-table, .variants-table, .saltillo-table, .accent-table, .inventory-table { overflow-x: auto; }
+  .quality-table { overflow-x: auto; }
+  .quality-table > div { min-width: 680px; }
   .parallel-table .table-header, .parallel-table > button { min-width: 850px; }
   .terminology-table .table-header, .terminology-table > button { min-width: 760px; }
   .variants-table .table-header, .variants-table > button { min-width: 760px; }

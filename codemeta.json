@@ -1,0 +1,20 @@
+{
+  "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+  "@type": "Dataset",
+  "name": "Rarámuri Digital",
+  "description": "Infraestructura lexicográfica rarámuri-español con 2,581 entradas, 30 productos derivados, formatos interoperables y API pública.",
+  "version": "1.0.0",
+  "datePublished": "2026-07-21",
+  "codeRepository": "https://github.com/fersandovalgtz/raramuri-digital",
+  "url": "https://raramuri.ceees.mx",
+  "license": "https://spdx.org/licenses/CC-BY-NC-SA-4.0.html",
+  "inLanguage": ["tar", "es"],
+  "author": [{
+    "@type": "Person",
+    "givenName": "Fernando",
+    "familyName": "Sandoval Gutiérrez",
+    "email": "fernando.sandoval@uacj.mx",
+    "@id": "https://orcid.org/0000-0002-3168-6725"
+  }],
+  "keywords": ["Rarámuri", "Tarahumara", "lexicography", "digital humanities", "TEI Lex-0", "corpus linguistics", "Indigenous languages"]
+}

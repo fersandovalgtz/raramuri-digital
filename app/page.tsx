@@ -2,6 +2,7 @@ import Link from "next/link";
 import { SiteFooter } from "./components/SiteFooter";
 import { SiteHeader } from "./components/SiteHeader";
 import { productHref, products } from "../lib/products";
+import metadata from "../project-metadata.json";
 
 const domainCounts = ["Datos", "Corpus", "Inventarios", "Análisis", "Docencia"].map((domain) => ({
   domain,
@@ -27,7 +28,8 @@ export default function Home() {
           <aside className="status-panel">
             <h2>Estado del sistema</h2>
             <dl>
-              <div><dt>Versión</dt><dd>3.1</dd></div>
+              <div><dt>Plataforma</dt><dd>{metadata.platform_version}</dd></div>
+              <div><dt>Datos</dt><dd>{metadata.dataset_version}</dd></div>
               <div><dt>Base maestra</dt><dd><i className="status-dot active" /> Operativa</dd></div>
               <div><dt>Corpus P-02</dt><dd><i className="status-dot active" /> Operativo</dd></div>
               <div><dt>Corpus P-03</dt><dd><i className="status-dot active" /> Operativo</dd></div>
@@ -101,6 +103,16 @@ export default function Home() {
             <div role="row"><code>WEB</code><strong>/productos/[slug]</strong><span>Rutas técnicas por producto</span><em>OPERATIVO</em></div>
             <div role="row"><code>DERIVED</code><strong>/api/advanced-products</strong><span>P-21–P-30: consulta, filtros y exportación</span><em>OPERATIVO</em></div>
             <div role="row"><code>QA</code><strong>validation_status</strong><span>Cotejo documental y lingüístico</span><em className="pending-text">PENDIENTE</em></div>
+          </div>
+        </section>
+
+        <section className="content-section" id="documentacion">
+          <div className="section-title-row"><h2>Documentación científica</h2><Link className="text-link" href="/documentacion">Abrir documentación →</Link></div>
+          <div className="definition-grid">
+            <article><h3>Ficha del conjunto</h3><p>Motivación, composición, fuentes, procesamiento, usos, limitaciones, distribución y mantenimiento.</p></article>
+            <article><h3>Esquema</h3><p>Tipos, cardinalidades, identificadores, vocabularios controlados y reglas de trazabilidad.</p></article>
+            <article><h3>Calidad</h3><p>Informe reproducible de completitud, unicidad, cobertura, integridad y estado de validación.</p></article>
+            <article><h3>Gobernanza</h3><p>Autoridad comunitaria, correcciones, atribución, restricciones y procedimiento de revisión.</p></article>
           </div>
         </section>
 

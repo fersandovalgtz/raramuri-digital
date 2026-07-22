@@ -117,10 +117,11 @@ export default function DownloadsPage() {
             <article><h3>Licencia</h3><p>{manifest.license.id}. Los textos fuente, facsímiles, logotipos y materiales de terceros conservan sus derechos.</p></article>
           </div>
           <p className="manifest-link"><a className="text-link" href="/downloads/manifest.json" download>Descargar manifiesto técnico y sumas SHA-256 →</a></p>
+          <p className="manifest-link"><a className="text-link" href="/downloads/quality-report.json" download>Descargar informe de calidad reproducible →</a></p>
         </section>
 
         <nav className="product-navigation" aria-label="Navegación de datos">
-          <Link href="/"><span>Anterior</span><strong>Inicio del sistema</strong></Link>
+          <Link href="/documentacion"><span>Anterior</span><strong>Documentación científica</strong></Link>
           <Link href="/productos"><span>Siguiente</span><strong>30 productos lexicográficos</strong></Link>
         </nav>
       </main>

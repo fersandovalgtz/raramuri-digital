@@ -7,6 +7,10 @@ Infraestructura lexicográfica rarámuri–español para consulta académica, an
 🌐 **Sitio público:** [raramuri.ceees.mx](https://raramuri.ceees.mx)<br>
 📦 **Datos y API:** [raramuri.ceees.mx/descargas](https://raramuri.ceees.mx/descargas)
 
+| Datos | Plataforma | Entradas | Productos | Estado lingüístico |
+|---|---|---:|---:|---|
+| 1.0.0 | 3.1.0 | 2,581 | 30 | Validación pendiente |
+
 <p align="center">
   <a href="https://ceees.mx/" title="Universidad CEEES">
     <img src="public/uceees-logo.png" alt="Universidad CEEES" height="56">
@@ -42,6 +46,16 @@ Universidad CEEES · Universidad Autónoma de Ciudad Juárez · Cuerpo Académic
 - Traducción, acepciones, ejemplos, variantes y comentarios.
 - Fuente, documento, páginas y estado de transcripción.
 - 30 productos derivados: corpus, inventarios, variantes, índices, tesauro, ontología y trazabilidad.
+
+## Documentación científica
+
+- [Ficha del conjunto de datos](DATASHEET.md) · [English](DATASHEET.en.md)
+- [Esquema y diccionario de datos](SCHEMA.md)
+- [Informe reproducible de calidad](QUALITY_REPORT.md) · [JSON](public/downloads/quality-report.json)
+- [Gobernanza y derechos lingüísticos](GOVERNANCE.md)
+- [Correcciones y contribuciones](CONTRIBUTING.md)
+- [Registro de cambios](CHANGELOG.md) · [Lista de publicación](RELEASE_CHECKLIST.md)
+- [Metadatos CodeMeta](codemeta.json) · [Cita CFF](CITATION.cff)
 
 ## Formatos interoperables
 
@@ -86,6 +100,7 @@ lib/                 Modelos de producto y derivaciones
 public/downloads/    XML, JSON, CSV, SQL, TEI Lex-0 y OpenAPI
 scripts/             Extracción y generación reproducible
 tests/               Pruebas de cobertura e integridad
+*.md                  Ficha, esquema, calidad, gobernanza y publicación
 ```
 
 ## Desarrollo
@@ -95,7 +110,8 @@ Requiere Node.js 22.13 o posterior.
 ```bash
 npm install
 npm run data:exports
-npm test
+npm run data:quality
+npm run validate
 npm run dev
 ```
 
@@ -119,4 +135,4 @@ Los datos y la documentación producidos por el proyecto se distribuyen bajo [Cr
 
 ## Cita
 
-Consulte [`CITATION.cff`](CITATION.cff) para generar una referencia bibliográfica del proyecto.
+Consulte [`CITATION.cff`](CITATION.cff) para generar una referencia bibliográfica del conjunto de datos. La versión citada de los datos es 1.0.0; la plataforma operativa es 3.1.0.

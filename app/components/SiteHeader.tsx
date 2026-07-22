@@ -1,4 +1,5 @@
 import Link from "next/link";
+import metadata from "../../project-metadata.json";
 
 export function SiteHeader() {
   return (
@@ -13,12 +14,13 @@ export function SiteHeader() {
           <Link href="/">Inicio</Link>
           <Link href="/productos">Productos</Link>
           <Link href="/descargas">Datos/API</Link>
+          <Link href="/documentacion">Documentación</Link>
           <Link href="/#arquitectura">Arquitectura</Link>
           <Link href="/#fuentes">Fuentes</Link>
           <Link href="/#proyecto">Proyecto</Link>
           <Link href="/#licencia">Licencia</Link>
         </nav>
-        <span className="system-version">v3.1</span>
+        <span className="system-version">v{metadata.platform_version}</span>
       </header>
     </>
   );

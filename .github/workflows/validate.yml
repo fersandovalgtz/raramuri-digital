@@ -1,0 +1,36 @@
+name: Validar publicación
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Obtener repositorio
+        uses: actions/checkout@v4
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22.13.0"
+          cache: npm
+      - name: Instalar dependencias
+        run: npm ci
+      - name: Regenerar exportaciones
+        run: npm run data:exports
+      - name: Regenerar informe de calidad
+        run: npm run data:quality
+      - name: Verificar reproducibilidad
+        run: git diff --exit-code -- public/downloads QUALITY_REPORT.md
+      - name: Analizar código
+        run: npm run lint
+      - name: Compilar y probar
+        run: npm test
+

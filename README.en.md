@@ -7,6 +7,10 @@ A Rarámuri–Spanish lexicographic infrastructure for academic consultation, li
 🌐 **Public website:** [raramuri.ceees.mx](https://raramuri.ceees.mx)<br>
 📦 **Data and API:** [raramuri.ceees.mx/descargas](https://raramuri.ceees.mx/descargas)
 
+| Dataset | Platform | Entries | Products | Linguistic status |
+|---|---|---:|---:|---|
+| 1.0.0 | 3.1.0 | 2,581 | 30 | Validation pending |
+
 <p align="center">
   <a href="https://ceees.mx/" title="Universidad CEEES">
     <img src="public/uceees-logo.png" alt="Universidad CEEES" height="56">
@@ -42,6 +46,16 @@ Universidad CEEES · Universidad Autónoma de Ciudad Juárez · Academic Group U
 - Translation, senses, examples, variants, and source comments.
 - Source code, document, pages, and transcription status.
 - 30 derived products: corpora, inventories, variants, indexes, thesaurus, ontology, and traceability.
+
+## Scientific documentation
+
+- [Dataset datasheet](DATASHEET.en.md) · [Español](DATASHEET.md)
+- [Data schema and dictionary](SCHEMA.md)
+- [Reproducible quality report](QUALITY_REPORT.md) · [JSON](public/downloads/quality-report.json)
+- [Governance and linguistic rights](GOVERNANCE.md)
+- [Corrections and contributions](CONTRIBUTING.md)
+- [Changelog](CHANGELOG.md) · [Release checklist](RELEASE_CHECKLIST.md)
+- [CodeMeta metadata](codemeta.json) · [CFF citation](CITATION.cff)
 
 ## Interoperable formats
 
@@ -86,6 +100,7 @@ lib/                 Product models and derivations
 public/downloads/    XML, JSON, CSV, SQL, TEI Lex-0, and OpenAPI
 scripts/             Reproducible extraction and generation
 tests/               Coverage and integrity tests
+*.md                  Datasheet, schema, quality, governance, and release documents
 ```
 
 ## Development
@@ -95,7 +110,8 @@ Node.js 22.13 or later is required.
 ```bash
 npm install
 npm run data:exports
-npm test
+npm run data:quality
+npm run validate
 npm run dev
 ```
 
@@ -119,4 +135,4 @@ Project-produced data and documentation are released under the [Creative Commons
 
 ## Citation
 
-Use [`CITATION.cff`](CITATION.cff) to generate a bibliographic reference for the project.
+Use [`CITATION.cff`](CITATION.cff) to generate a bibliographic reference for dataset version 1.0.0. The operating platform version is 3.1.0.

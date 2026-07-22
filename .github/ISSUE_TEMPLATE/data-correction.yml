@@ -1,0 +1,54 @@
+name: Corrección de datos / Data correction
+description: Reportar un problema verificable de transcripción, estructura, trazabilidad o anotación.
+title: "[DATOS] "
+labels: [data, review-required]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        No publique información personal o culturalmente sensible. En esos casos contacte a fernando.sandoval@uacj.mx.
+  - type: input
+    id: record
+    attributes:
+      label: Identificador
+      description: Entrada RD-######, producto P-## o URL afectada.
+      placeholder: RD-000001
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Fuente y página
+      placeholder: SRC-02, página PDF 3
+  - type: textarea
+    id: current
+    attributes:
+      label: Contenido o comportamiento actual
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Corrección propuesta y evidencia
+    validations:
+      required: true
+  - type: dropdown
+    id: review
+    attributes:
+      label: Revisión requerida
+      options:
+        - Técnica
+        - Documental
+        - Lingüística
+        - Cultural o comunitaria
+        - Jurídica o de licencia
+    validations:
+      required: true
+  - type: checkboxes
+    id: provenance
+    attributes:
+      label: Confirmación
+      options:
+        - label: La propuesta conserva o identifica la procedencia documental.
+          required: true
+

@@ -1,5 +1,6 @@
 {
   "dataset": "Rarámuri Digital: base lexicográfica maestra",
+  "platform_version": "3.1.0",
   "dataset_version": "1.0.0",
   "generated": "2026-07-21",
   "entry_count": 2581,
@@ -23,8 +24,8 @@
       "label": "JSON web y móvil",
       "file": "raramuri-lexico.json",
       "media_type": "application/json",
-      "bytes": 2078541,
-      "sha256": "9cb6eb6fce65673e8c691a2ca68d265bece7c54621fd84decc1255f564e52ca4",
+      "bytes": 2078543,
+      "sha256": "98577682da2d87be6a4042e54ccdc196083fa62e41d1de6cecd792d3977701f4",
       "entry_count": 2581
     },
     {
