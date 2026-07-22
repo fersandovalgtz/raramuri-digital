@@ -5,7 +5,8 @@
 A Rarámuri–Spanish lexicographic infrastructure for academic consultation, linguistic analysis, digital humanities, and application development.
 
 🌐 **Public website:** [raramuri.ceees.mx](https://raramuri.ceees.mx)<br>
-📦 **Data and API:** [raramuri.ceees.mx/descargas](https://raramuri.ceees.mx/descargas)
+📦 **Data and API:** [raramuri.ceees.mx/descargas](https://raramuri.ceees.mx/descargas)<br>
+🔗 **Version 1.0.0 DOI:** [10.5281/zenodo.21483353](https://doi.org/10.5281/zenodo.21483353)
 
 | Dataset | Platform | Entries | Products | Linguistic status |
 |---|---|---:|---:|---|
@@ -136,4 +137,6 @@ Project-produced data and documentation are released under the [Creative Commons
 
 ## Citation
 
-Use [`CITATION.cff`](CITATION.cff) to generate a bibliographic reference for dataset version 1.0.0. The operating platform version is 3.1.0.
+Sandoval Gutiérrez, F. (2026). *Rarámuri Digital: conjunto de datos lexicográficos rarámuri–español* (Version 1.0.0) [Data set]. Zenodo. <https://doi.org/10.5281/zenodo.21483353>
+
+Use [`CITATION.cff`](CITATION.cff) to generate additional citation styles. The operating platform version is 3.1.0.

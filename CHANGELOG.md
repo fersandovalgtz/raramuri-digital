@@ -18,10 +18,10 @@ El proyecto utiliza versionamiento semántico independiente para la plataforma y
 - Esquema de datos, gobernanza y protocolo de contribuciones.
 - Informe reproducible de calidad estructural y documental.
 - Metadatos centralizados y distinción explícita entre versión de plataforma y de datos.
+- Depósito citable en Zenodo con DOI `10.5281/zenodo.21483353`.
 - Flujo automatizado de validación y plantilla de corrección de datos.
 
 ### Estado
 
 - Difusión autorizada.
 - Validación lingüística pendiente.
-

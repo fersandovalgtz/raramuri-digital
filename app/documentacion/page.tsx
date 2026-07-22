@@ -34,6 +34,22 @@ export default function DocumentationPage() {
         </section>
 
         <section className="content-section">
+          <h2>Identificador persistente</h2>
+          <div className="definition-grid">
+            <article>
+              <h3>DOI de los datos {metadata.dataset_version}</h3>
+              <p><a className="text-link" href={`https://doi.org/${metadata.doi}`} target="_blank" rel="noreferrer">{metadata.doi} →</a></p>
+              <p>Registro publicado en Zenodo con los archivos interoperables, la ficha del conjunto, el esquema, el informe de calidad, la gobernanza y la cita CFF.</p>
+            </article>
+            <article>
+              <h3>Registro de preservación</h3>
+              <p><a className="text-link" href={metadata.zenodo_record} target="_blank" rel="noreferrer">Zenodo record {metadata.zenodo_record.split("/").at(-1)} →</a></p>
+              <p>La versión depositada es inmutable. Las correcciones futuras se publicarán como nuevas versiones.</p>
+            </article>
+          </div>
+        </section>
+
+        <section className="content-section">
           <h2>Documentos</h2>
           <div className="documentation-grid">
             {documents.map((document) => (

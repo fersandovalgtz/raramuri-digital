@@ -5,6 +5,7 @@
   "description": "Infraestructura lexicográfica rarámuri-español con 2,581 entradas, 30 productos derivados, formatos interoperables y API pública.",
   "version": "1.0.0",
   "datePublished": "2026-07-21",
+  "identifier": "https://doi.org/10.5281/zenodo.21483353",
   "codeRepository": "https://github.com/fersandovalgtz/raramuri-digital",
   "url": "https://raramuri.ceees.mx",
   "license": "https://spdx.org/licenses/CC-BY-NC-SA-4.0.html",

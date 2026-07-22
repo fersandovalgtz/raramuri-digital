@@ -14,6 +14,8 @@
   "publication_status": "Autorizada para difusión",
   "validation_status": "Pendiente de validación lingüística",
   "license": "CC-BY-NC-SA-4.0",
+  "doi": "10.5281/zenodo.21483353",
+  "zenodo_record": "https://zenodo.org/records/21483353",
   "repository": "https://github.com/fersandovalgtz/raramuri-digital",
   "website": "https://raramuri.ceees.mx"
 }

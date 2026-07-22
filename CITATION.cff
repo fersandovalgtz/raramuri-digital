@@ -9,6 +9,7 @@ authors:
     email: "fernando.sandoval@uacj.mx"
 version: "1.0.0"
 date-released: "2026-07-21"
+doi: "10.5281/zenodo.21483353"
 url: "https://raramuri.ceees.mx"
 repository-code: "https://github.com/fersandovalgtz/raramuri-digital"
 license: "CC-BY-NC-SA-4.0"

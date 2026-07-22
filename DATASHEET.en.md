@@ -66,6 +66,7 @@ Lexicographic and terminological consultation; corpus linguistics; preparation o
 
 - **Website:** <https://raramuri.ceees.mx>
 - **Repository:** <https://github.com/fersandovalgtz/raramuri-digital>
+- **Archive and DOI:** <https://doi.org/10.5281/zenodo.21483353>
 - **Project license:** CC BY-NC-SA 4.0, with documented exclusions.
 - **Contact:** <fernando.sandoval@uacj.mx>
 - **Versions:** dataset 1.0.0; platform 3.1.0.
@@ -74,4 +75,3 @@ Lexicographic and terminological consultation; corpus linguistics; preparation o
 ## Known limitations
 
 The source contains 163 entries without an exact grammatical label and two without a translation. Automated example alignment has varying confidence. Candidate graphic variants, semantic fields, teaching levels and ontology relations require expert review. Systematic collation with `SRC-01` and validation by speakers remain pending.
-

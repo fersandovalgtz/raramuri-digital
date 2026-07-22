@@ -70,6 +70,7 @@ No se corrigen silenciosamente las formas rarámuri ni el español regional de l
 
 - **Sitio:** <https://raramuri.ceees.mx>
 - **Repositorio:** <https://github.com/fersandovalgtz/raramuri-digital>
+- **Depósito y DOI:** <https://doi.org/10.5281/zenodo.21483353>
 - **Licencia del proyecto:** CC BY-NC-SA 4.0, con exclusiones documentadas.
 - **Contacto:** <fernando.sandoval@uacj.mx>
 - **Versiones:** datos 1.0.0; plataforma 3.1.0.
@@ -82,4 +83,3 @@ No se corrigen silenciosamente las formas rarámuri ni el español regional de l
 - La segmentación automática de ejemplos rarámuri–español produce pares con diferentes niveles de confianza.
 - Las variantes gráficas candidatas, campos semánticos, niveles didácticos y relaciones ontológicas requieren revisión especializada.
 - El cotejo sistemático contra `SRC-01` y la validación por personas hablantes están pendientes.
-

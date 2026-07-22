@@ -123,6 +123,8 @@ test("publishes versioned scientific documentation and reproducible quality cont
   assert.match(contributors, /taxonomía CRediT/);
   assert.match(changelog, /Plataforma 3\.1\.0 \/ Datos 1\.0\.0/);
   assert.match(documentationPage, /Documentación científica/);
+  assert.match(documentationPage, /metadata\.doi/);
+  assert.match(documentationPage, /metadata\.zenodo_record/);
   assert.match(documentationPage, /quality-report\.json/);
   assert.match(header, /href="\/documentacion"/);
   assert.match(citation, /type: dataset/);
