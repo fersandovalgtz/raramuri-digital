@@ -24,6 +24,16 @@ No incluya información personal o culturalmente sensible en una incidencia púb
 - Los cambios lingüísticos deben registrar quién revisó, con qué competencia y bajo qué alcance.
 - Toda decisión debe quedar asociada a una versión.
 
+## Licencia de las contribuciones
+
+Al enviar una contribución, la persona colaboradora declara que tiene derecho a aportarla y acepta que se distribuya bajo la licencia correspondiente al componente modificado:
+
+- las contribuciones al **código fuente o componentes de software**, bajo la [Licencia MIT](LICENSE.md);
+- las contribuciones a **datos, exportaciones, productos derivados o documentación producida por el proyecto**, bajo [CC BY-NC-SA 4.0](DATA_LICENSE.md);
+- los materiales de terceros o sujetos a restricciones culturales, jurídicas o comunitarias no se incorporarán sin autorización y documentación suficientes.
+
+La aceptación de una contribución no implica validación lingüística ni transferencia de autoridad cultural. La procedencia, las restricciones y el alcance de la revisión deben quedar documentados.
+
 ## Desarrollo
 
 ```bash
@@ -38,5 +48,6 @@ Utilice UTF-8, no modifique archivos fuente sin justificación y no elimine traz
 
 ## English
 
-Reports may address transcription, data structure, provenance, documentation, interface, API, licensing and linguistic proposals. Include the entry or product identifier, affected file or URL, source page, current content, proposed correction, evidence and required review type. Do not post personal or culturally sensitive information publicly; contact the project lead instead. Technical changes must pass automated checks, documentary changes must retain provenance, and linguistic changes require an explicitly recorded qualified review.
+Reports may address transcription, data structure, provenance, documentation, interface, API, licensing, and linguistic proposals. Include the entry or product identifier, affected file or URL, source page, current content, proposed correction, evidence, and required review type. Do not post personal or culturally sensitive information publicly; contact the project lead instead. Technical changes must pass automated checks, documentary changes must retain provenance, and linguistic changes require an explicitly recorded qualified review.
 
+By submitting a contribution, the contributor states that they have the right to provide it and agrees that it may be distributed under the license applicable to the modified component: source code and software under the [MIT License](LICENSE.md); project-produced data, exports, derived products, and documentation under [CC BY-NC-SA 4.0](DATA_LICENSE.md). Third-party or culturally, legally, or community-restricted materials will not be incorporated without sufficient authorization and documentation.

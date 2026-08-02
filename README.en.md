@@ -131,9 +131,15 @@ Indigenous Peoples have the right to preserve, revitalize, use, develop, and tra
 
 This infrastructure is intended to support Rarámuri documentation, consultation, and teaching. It does not replace the linguistic, cultural, or political authority of communities and speakers. Data reuse must retain attribution and provenance, prevent appropriation and decontextualization, respect community decisions and restrictions, and support effective Rarámuri participation in corpus validation, correction, and governance.
 
-## License
+## Licenses
 
-Project-produced data and documentation are released under the [Creative Commons Attribution–NonCommercial–ShareAlike 4.0 International License](LICENSE.md). Facsimiles, source texts, logos, and third-party materials retain their respective rights and are not redistributed through this repository.
+This repository uses separate licenses according to the nature of each component:
+
+- **Source code and software components:** [MIT License](LICENSE.md).
+- **Project-produced data, lexicographic exports, derived products, and documentation:** [Creative Commons Attribution–NonCommercial–ShareAlike 4.0 International](DATA_LICENSE.md).
+- **Facsimiles, source texts, logos, and third-party materials:** retain their original rights and terms; their presence in the repository does not place them under either license above.
+
+The MIT License does not grant permissions over data, cultural materials, or third-party content. Data reuse must preserve attribution and provenance, follow the governance described in [`GOVERNANCE.md`](GOVERNANCE.md), and avoid appropriation or decontextualization.
 
 ## Citation
 

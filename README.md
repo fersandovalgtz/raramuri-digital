@@ -131,9 +131,15 @@ Los pueblos indígenas tienen derecho a preservar, revitalizar, utilizar, desarr
 
 Esta infraestructura busca apoyar la documentación, consulta y enseñanza del rarámuri. No sustituye la autoridad lingüística, cultural ni política de las comunidades y personas hablantes. La reutilización de los datos debe conservar la atribución y la procedencia, evitar la apropiación y la descontextualización, respetar decisiones y restricciones comunitarias, y promover la participación efectiva de los pueblos rarámuri en la validación, corrección y gobernanza del corpus.
 
-## Licencia
+## Licencias
 
-Los datos y la documentación producidos por el proyecto se distribuyen bajo [Creative Commons Atribución–NoComercial–CompartirIgual 4.0 Internacional](LICENSE.md). Los facsímiles, textos fuente, logotipos y materiales de terceros conservan sus propios derechos y no se redistribuyen mediante este repositorio.
+Este repositorio utiliza licencias separadas según la naturaleza de cada componente:
+
+- **Código fuente y componentes de software:** [Licencia MIT](LICENSE.md).
+- **Datos, exportaciones lexicográficas, productos derivados y documentación producida por el proyecto:** [Creative Commons Atribución–NoComercial–CompartirIgual 4.0 Internacional](DATA_LICENSE.md).
+- **Facsímiles, textos fuente, logotipos y materiales de terceros:** conservan sus derechos y condiciones originales; su presencia en el repositorio no los incorpora a ninguna de las licencias anteriores.
+
+La Licencia MIT no concede permisos sobre los datos, los materiales culturales ni los contenidos de terceros. La reutilización de datos debe conservar la atribución y la procedencia, atender la gobernanza descrita en [`GOVERNANCE.md`](GOVERNANCE.md) y evitar la apropiación o descontextualización.
 
 ## Cita
 
