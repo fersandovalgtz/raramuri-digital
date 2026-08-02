@@ -1,22 +1,25 @@
-# Licencia de datos y documentación / Data and documentation license
+# MIT License
 
-Copyright © 2026 Fernando Sandoval Gutiérrez; Universidad CEEES; Universidad Autónoma de Ciudad Juárez; Cuerpo Académico UACJ-113.
+Copyright (c) 2026 Fernando Sandoval Gutiérrez and contributors
 
-Los datos y la documentación producidos por **Rarámuri Digital** se distribuyen bajo la licencia **Creative Commons Atribución–NoComercial–CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)**.
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of the software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-The data and documentation produced by **Rarámuri Digital** are licensed under the **Creative Commons Attribution–NonCommercial–ShareAlike 4.0 International License (CC BY-NC-SA 4.0)**.
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-Texto legal / Legal code: <https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode>
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
 
-## Condiciones / Terms
+---
 
-- **Atribución / Attribution:** debe reconocerse el proyecto y las instituciones responsables.
-- **No comercial / NonCommercial:** no se permite el uso comercial sin autorización adicional.
-- **Compartir igual / ShareAlike:** las adaptaciones deben distribuirse bajo la misma licencia.
-- **Procedencia / Provenance:** las reutilizaciones deben conservar identificadores, fuente y páginas cuando estén disponibles.
-
-## Exclusiones / Exclusions
-
-Los facsímiles, textos fuente, logotipos y materiales de terceros conservan sus propios derechos. Su presencia como referencia bibliográfica o recurso visual no los incorpora a esta licencia.
-
-Facsimiles, source texts, logos, and third-party materials retain their respective rights. Their presence as bibliographic references or visual assets does not place them under this license.
+This license applies to the source code and software components of Rarámuri Digital. Data, project-produced documentation, facsimiles, source texts, logos, and third-party materials are governed separately as described in [`DATA_LICENSE.md`](DATA_LICENSE.md).
