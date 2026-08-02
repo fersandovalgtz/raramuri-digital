@@ -1,16 +1,40 @@
-# Rarámuri Digital
+<p align="center">
+  <img src="public/repository-header-es.svg" alt="Rarámuri Digital — infraestructura lexicográfica rarámuri–español" width="100%">
+</p>
 
-[English version](README.en.md)
+<p align="center">
+  <strong>Infraestructura lexicográfica rarámuri–español para consulta académica, análisis lingüístico, humanidades digitales y desarrollo de aplicaciones.</strong>
+</p>
 
-Infraestructura lexicográfica rarámuri–español para consulta académica, análisis lingüístico, humanidades digitales y desarrollo de aplicaciones.
+<p align="center">
+  <a href="https://doi.org/10.5281/zenodo.21483353"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.21483353.svg" alt="DOI"></a>
+  <a href="public/downloads/manifest.json"><img src="https://img.shields.io/badge/entradas-2%2C581-172033?style=flat-square" alt="2,581 entradas"></a>
+  <a href="public/downloads/manifest.json"><img src="https://img.shields.io/badge/productos-30-7a263a?style=flat-square" alt="30 productos"></a>
+  <a href="https://raramuri.ceees.mx/api/openapi"><img src="https://img.shields.io/badge/API-OpenAPI%203.1-2d6a4f?style=flat-square" alt="API OpenAPI 3.1"></a>
+</p>
 
-🌐 **Sitio público:** [raramuri.ceees.mx](https://raramuri.ceees.mx)<br>
-📦 **Datos y API:** [raramuri.ceees.mx/descargas](https://raramuri.ceees.mx/descargas)<br>
-🔗 **DOI de la versión 1.0.0:** [10.5281/zenodo.21483353](https://doi.org/10.5281/zenodo.21483353)
+<p align="center">
+  <a href="LICENSE.md"><img src="https://img.shields.io/badge/c%C3%B3digo-MIT-172033?style=flat-square" alt="Código MIT"></a>
+  <a href="DATA_LICENSE.md"><img src="https://img.shields.io/badge/datos-CC%20BY--NC--SA%204.0-7a263a?style=flat-square" alt="Datos CC BY-NC-SA 4.0"></a>
+  <a href="#estado-editorial"><img src="https://img.shields.io/badge/validaci%C3%B3n%20ling%C3%BC%C3%ADstica-pendiente-b7791f?style=flat-square" alt="Validación lingüística pendiente"></a>
+</p>
+
+<p align="center">
+  <a href="https://raramuri.ceees.mx"><strong>Sitio público</strong></a> ·
+  <a href="https://raramuri.ceees.mx/descargas">Datos y API</a> ·
+  <a href="#documentaci%C3%B3n-cient%C3%ADfica">Documentación científica</a> ·
+  <a href="#formatos-interoperables">Formatos</a> ·
+  <a href="#api-lexicogr%C3%A1fica">API</a> ·
+  <a href="#derechos-ling%C3%BC%C3%ADsticos-y-gobernanza">Gobernanza</a> ·
+  <a href="#cita">Citar</a> ·
+  <a href="README.en.md">English</a>
+</p>
 
 | Datos | Plataforma | Entradas | Productos | Estado lingüístico |
 |---|---|---:|---:|---|
 | 1.0.0 | 3.1.0 | 2,581 | 30 | Validación pendiente |
+
+---
 
 <p align="center">
   <a href="https://ceees.mx/" title="Universidad CEEES">
