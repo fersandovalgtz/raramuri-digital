@@ -21,6 +21,7 @@
 
 <p align="center">
   <a href="https://raramuri.ceees.mx"><strong>Public website</strong></a> ·
+  <a href="#try-it-in-30-seconds">Try it</a> ·
   <a href="https://raramuri.ceees.mx/descargas">Data and API</a> ·
   <a href="#scientific-documentation">Scientific documentation</a> ·
   <a href="#interoperable-formats">Formats</a> ·
@@ -33,6 +34,28 @@
 | Dataset | Platform | Entries | Products | Linguistic status |
 |---|---|---:|---:|---|
 | 1.0.0 | 3.1.0 | 2,581 | 30 | Validation pending |
+
+## Try it in 30 seconds
+
+Query five results related to `agua` through the public API:
+
+```bash
+curl "https://raramuri.ceees.mx/api/lexicon?q=agua&limit=5"
+```
+
+Download the dataset directly in the format you need:
+
+[CSV](public/downloads/raramuri-lexico.csv) ·
+[JSON](public/downloads/raramuri-lexico.json) ·
+[XML](public/downloads/raramuri-lexico.xml) ·
+[SQL](public/downloads/raramuri-lexico.sql) ·
+[TEI Lex-0](public/downloads/raramuri-lex0.xml) ·
+[OpenAPI](public/downloads/openapi-lexico.json)
+
+> [!NOTE]
+> Publication is authorized for dissemination, but linguistic validation remains pending. Reuse must preserve attribution and provenance and follow [`GOVERNANCE.md`](GOVERNANCE.md).
+
+If this resource supports your research, teaching, or development work, cite the DOI and star ⭐ the repository to improve its discoverability.
 
 ---
 
@@ -79,8 +102,9 @@ Universidad CEEES · Universidad Autónoma de Ciudad Juárez · Academic Group U
 - [Reproducible quality report](QUALITY_REPORT.md) · [JSON](public/downloads/quality-report.json)
 - [Governance and linguistic rights](GOVERNANCE.md)
 - [Corrections and contributions](CONTRIBUTING.md)
+- [Support](SUPPORT.md) · [Security](SECURITY.md) · [Code of conduct](CODE_OF_CONDUCT.md)
 - [Authorship and CRediT roles](CONTRIBUTORS.md)
-- [Changelog](CHANGELOG.md) · [Release checklist](RELEASE_CHECKLIST.md)
+- [Changelog](CHANGELOG.md) · [Release checklist](RELEASE_CHECKLIST.md) · [1.0.0 notes](RELEASE_NOTES_1.0.0.md)
 - [CodeMeta metadata](codemeta.json) · [CFF citation](CITATION.cff)
 
 ## Interoperable formats
