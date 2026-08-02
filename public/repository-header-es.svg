@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="360" viewBox="0 0 1600 360" role="img" aria-labelledby="title desc">
+  <title id="title">Rarámuri Digital</title>
+  <desc id="desc">Cabecera académica del repositorio Rarámuri Digital</desc>
+  <rect width="1600" height="360" fill="#fbfaf7"/>
+  <rect x="0" y="0" width="14" height="360" fill="#7a263a"/>
+  <line x1="88" y1="68" x2="1115" y2="68" stroke="#d9cdbd" stroke-width="2"/>
+  <text x="88" y="52" fill="#7a263a" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="700" letter-spacing="3">REPOSITORIO CIENTÍFICO · HUMANIDADES DIGITALES</text>
+  <text x="88" y="170" fill="#172033" font-family="Georgia, 'Times New Roman', serif" font-size="82" font-weight="700">Rarámuri Digital</text>
+  <text x="92" y="222" fill="#4b5563" font-family="Arial, Helvetica, sans-serif" font-size="31">Infraestructura lexicográfica rarámuri–español</text>
+  <line x1="88" y1="268" x2="1115" y2="268" stroke="#d9cdbd" stroke-width="2"/>
+  <text x="88" y="315" fill="#172033" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing="1.2">2,581 ENTRADAS</text>
+  <circle cx="302" cy="307" r="4" fill="#7a263a"/>
+  <text x="327" y="315" fill="#172033" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing="1.2">30 PRODUCTOS</text>
+  <circle cx="528" cy="307" r="4" fill="#7a263a"/>
+  <text x="553" y="315" fill="#172033" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing="1.2">API PÚBLICA</text>
+  <circle cx="733" cy="307" r="4" fill="#7a263a"/>
+  <text x="758" y="315" fill="#172033" font-family="Arial, Helvetica, sans-serif" font-size="22" font-weight="700" letter-spacing="1.2">DOI Citable</text>
+  <g transform="translate(1215 46)">
+    <path d="M132 0 264 132 132 264 0 132Z" fill="none" stroke="#172033" stroke-width="14"/>
+    <path d="M132 38 226 132 132 226 38 132Z" fill="none" stroke="#c9b79c" stroke-width="14"/>
+    <path d="M132 78 186 132 132 186 78 132Z" fill="none" stroke="#7a263a" stroke-width="14"/>
+    <circle cx="132" cy="132" r="17" fill="#172033"/>
+    <circle cx="132" cy="0" r="8" fill="#7a263a"/>
+    <circle cx="264" cy="132" r="8" fill="#7a263a"/>
+    <circle cx="132" cy="264" r="8" fill="#7a263a"/>
+    <circle cx="0" cy="132" r="8" fill="#7a263a"/>
+  </g>
+  <text x="1215" y="336" fill="#4b5563" font-family="Arial, Helvetica, sans-serif" font-size="18" letter-spacing="1">raramuri.ceees.mx</text>
+</svg>
