@@ -1,0 +1,73 @@
+name: Corrección documental o de procedencia
+about: Proponer una corrección verificable de transcripción, fuente, página, identificador o metadatos
+labels:
+  - documentation
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Las correcciones documentales deben conservar identificadores, fuente y trazabilidad. No publique facsímiles restringidos ni información sensible.
+
+  - type: input
+    id: identifier
+    attributes:
+      label: Identificador de entrada o producto
+      placeholder: RD-000001, nombre del archivo o producto
+    validations:
+      required: true
+
+  - type: input
+    id: location
+    attributes:
+      label: Archivo, URL o ubicación afectada
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Contenido actual
+      description: Transcriba únicamente el fragmento necesario.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Corrección propuesta
+    validations:
+      required: true
+
+  - type: textarea
+    id: source
+    attributes:
+      label: Fuente, documento y páginas
+      description: Incluya la referencia bibliográfica o documental suficiente para verificar la propuesta.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: review
+    attributes:
+      label: Tipo de revisión requerida
+      options:
+        - Documental
+        - Técnica
+        - Lingüística
+        - Cultural o comunitaria
+        - Jurídica o de derechos
+        - Combinada
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmaciones
+      options:
+        - label: La propuesta conserva el identificador persistente y la procedencia.
+          required: true
+        - label: Tengo derecho a compartir la evidencia incluida o solo proporcioné una referencia verificable.
+          required: true
+        - label: No incluí información personal o culturalmente sensible.
+          required: true
