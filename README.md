@@ -21,6 +21,7 @@
 
 <p align="center">
   <a href="https://raramuri.ceees.mx"><strong>Sitio público</strong></a> ·
+  <a href="#pru%C3%A9balo-en-30-segundos">Pruébalo</a> ·
   <a href="https://raramuri.ceees.mx/descargas">Datos y API</a> ·
   <a href="#documentaci%C3%B3n-cient%C3%ADfica">Documentación científica</a> ·
   <a href="#formatos-interoperables">Formatos</a> ·
@@ -33,6 +34,28 @@
 | Datos | Plataforma | Entradas | Productos | Estado lingüístico |
 |---|---|---:|---:|---|
 | 1.0.0 | 3.1.0 | 2,581 | 30 | Validación pendiente |
+
+## Pruébalo en 30 segundos
+
+Consulte cinco resultados relacionados con `agua` desde la API pública:
+
+```bash
+curl "https://raramuri.ceees.mx/api/lexicon?q=agua&limit=5"
+```
+
+Descargue directamente el conjunto de datos en el formato que necesite:
+
+[CSV](public/downloads/raramuri-lexico.csv) ·
+[JSON](public/downloads/raramuri-lexico.json) ·
+[XML](public/downloads/raramuri-lexico.xml) ·
+[SQL](public/downloads/raramuri-lexico.sql) ·
+[TEI Lex-0](public/downloads/raramuri-lex0.xml) ·
+[OpenAPI](public/downloads/openapi-lexico.json)
+
+> [!NOTE]
+> La publicación está autorizada para difusión, pero la validación lingüística permanece pendiente. Toda reutilización debe conservar atribución y procedencia y atender [`GOVERNANCE.md`](GOVERNANCE.md).
+
+Si este recurso resulta útil para su investigación, enseñanza o desarrollo, cite el DOI y marque ⭐ el repositorio para facilitar su descubrimiento.
 
 ---
 
@@ -79,8 +102,9 @@ Universidad CEEES · Universidad Autónoma de Ciudad Juárez · Cuerpo Académic
 - [Informe reproducible de calidad](QUALITY_REPORT.md) · [JSON](public/downloads/quality-report.json)
 - [Gobernanza y derechos lingüísticos](GOVERNANCE.md)
 - [Correcciones y contribuciones](CONTRIBUTING.md)
+- [Soporte](SUPPORT.md) · [Seguridad](SECURITY.md) · [Código de conducta](CODE_OF_CONDUCT.md)
 - [Autoría y funciones CRediT](CONTRIBUTORS.md)
-- [Registro de cambios](CHANGELOG.md) · [Lista de publicación](RELEASE_CHECKLIST.md)
+- [Registro de cambios](CHANGELOG.md) · [Lista de publicación](RELEASE_CHECKLIST.md) · [Notas 1.0.0](RELEASE_NOTES_1.0.0.md)
 - [Metadatos CodeMeta](codemeta.json) · [Cita CFF](CITATION.cff)
 
 ## Formatos interoperables

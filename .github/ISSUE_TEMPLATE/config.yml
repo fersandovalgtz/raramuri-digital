@@ -1,6 +1,11 @@
-blank_issues_enabled: true
+blank_issues_enabled: false
 contact_links:
-  - name: Información sensible o solicitud de restricción
-    url: mailto:fernando.sandoval@uacj.mx
-    about: Use este canal para asuntos que no deban quedar en una incidencia pública.
-
+  - name: Seguridad y privacidad / Security and privacy
+    url: https://github.com/fersandovalgtz/raramuri-digital/security/policy
+    about: Reporte vulnerabilidades, credenciales, datos personales o riesgos sensibles de manera privada.
+  - name: Soporte y elección de canal / Support and choosing a channel
+    url: https://github.com/fersandovalgtz/raramuri-digital/blob/main/SUPPORT.md
+    about: Consulte qué plantilla o canal corresponde antes de abrir una incidencia.
+  - name: Gobernanza y derechos lingüísticos / Governance and linguistic rights
+    url: https://github.com/fersandovalgtz/raramuri-digital/blob/main/GOVERNANCE.md
+    about: Revise los principios aplicables a procedencia, reutilización y autoridad cultural.

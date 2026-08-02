@@ -1,0 +1,90 @@
+name: Propuesta lingüística
+about: Proponer una revisión de forma, traducción, acepción, categoría, variante o análisis lingüístico
+labels:
+  - documentation
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Una propuesta lingüística será registrada y evaluada, pero no se considerará validada sin revisión adecuada. Respete la autoridad de las comunidades y personas hablantes rarámuri.
+
+  - type: input
+    id: identifier
+    attributes:
+      label: Identificador de entrada
+      placeholder: RD-000001
+    validations:
+      required: true
+
+  - type: dropdown
+    id: field
+    attributes:
+      label: Campo o aspecto afectado
+      options:
+        - Forma fuente
+        - Forma normalizada
+        - Traducción
+        - Acepción
+        - Ejemplo
+        - Variante
+        - Categoría o familia gramatical
+        - Comentario lingüístico
+        - Otro
+    validations:
+      required: true
+
+  - type: textarea
+    id: current
+    attributes:
+      label: Registro actual
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Propuesta
+    validations:
+      required: true
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidencia y contexto
+      description: Indique fuente, páginas, variedad, localidad, contexto de uso o testimonio pertinente. No identifique públicamente a una persona hablante sin autorización.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: competence
+    attributes:
+      label: Relación con la propuesta
+      options:
+        - Persona hablante o integrante de comunidad rarámuri
+        - Especialista en lingüística o documentación de lenguas
+        - Docente o investigador/a
+        - Estudiante
+        - Revisión documental sin competencia lingüística declarada
+        - Otra
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Alcance y límites de la revisión
+      description: Explique qué puede sostener la evidencia y qué aspectos requieren otra revisión.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Confirmaciones
+      options:
+        - label: No presento esta propuesta como autoridad lingüística o cultural más allá de mi competencia.
+          required: true
+        - label: No incluí información personal o culturalmente sensible sin autorización.
+          required: true
+        - label: Comprendo que la incorporación depende de revisión, trazabilidad y decisión documentada.
+          required: true
