@@ -1,16 +1,40 @@
-# Rarámuri Digital
+<p align="center">
+  <img src="public/repository-header-en.svg" alt="Rarámuri Digital — Rarámuri–Spanish lexicographic infrastructure" width="100%">
+</p>
 
-[Versión en español](README.md)
+<p align="center">
+  <strong>A Rarámuri–Spanish lexicographic infrastructure for academic consultation, linguistic analysis, digital humanities, and application development.</strong>
+</p>
 
-A Rarámuri–Spanish lexicographic infrastructure for academic consultation, linguistic analysis, digital humanities, and application development.
+<p align="center">
+  <a href="https://doi.org/10.5281/zenodo.21483353"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.21483353.svg" alt="DOI"></a>
+  <a href="public/downloads/manifest.json"><img src="https://img.shields.io/badge/entries-2%2C581-172033?style=flat-square" alt="2,581 entries"></a>
+  <a href="public/downloads/manifest.json"><img src="https://img.shields.io/badge/products-30-7a263a?style=flat-square" alt="30 products"></a>
+  <a href="https://raramuri.ceees.mx/api/openapi"><img src="https://img.shields.io/badge/API-OpenAPI%203.1-2d6a4f?style=flat-square" alt="OpenAPI 3.1 API"></a>
+</p>
 
-🌐 **Public website:** [raramuri.ceees.mx](https://raramuri.ceees.mx)<br>
-📦 **Data and API:** [raramuri.ceees.mx/descargas](https://raramuri.ceees.mx/descargas)<br>
-🔗 **Version 1.0.0 DOI:** [10.5281/zenodo.21483353](https://doi.org/10.5281/zenodo.21483353)
+<p align="center">
+  <a href="LICENSE.md"><img src="https://img.shields.io/badge/code-MIT-172033?style=flat-square" alt="MIT code license"></a>
+  <a href="DATA_LICENSE.md"><img src="https://img.shields.io/badge/data-CC%20BY--NC--SA%204.0-7a263a?style=flat-square" alt="CC BY-NC-SA 4.0 data license"></a>
+  <a href="#editorial-status"><img src="https://img.shields.io/badge/linguistic%20validation-pending-b7791f?style=flat-square" alt="Linguistic validation pending"></a>
+</p>
+
+<p align="center">
+  <a href="https://raramuri.ceees.mx"><strong>Public website</strong></a> ·
+  <a href="https://raramuri.ceees.mx/descargas">Data and API</a> ·
+  <a href="#scientific-documentation">Scientific documentation</a> ·
+  <a href="#interoperable-formats">Formats</a> ·
+  <a href="#lexicographic-api">API</a> ·
+  <a href="#linguistic-rights-and-governance">Governance</a> ·
+  <a href="#citation">Cite</a> ·
+  <a href="README.md">Español</a>
+</p>
 
 | Dataset | Platform | Entries | Products | Linguistic status |
 |---|---|---:|---:|---|
 | 1.0.0 | 3.1.0 | 2,581 | 30 | Validation pending |
+
+---
 
 <p align="center">
   <a href="https://ceees.mx/" title="Universidad CEEES">
