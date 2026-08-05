@@ -1,0 +1,75 @@
+name: Publicar exportaciones PDF
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "data/lexicon-master.csv"
+      - "project-metadata.json"
+      - "scripts/generate-pdf-exports.py"
+      - "requirements-pdf.txt"
+      - ".github/workflows/publish-pdf-exports.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: pdf-exports
+  cancel-in-progress: true
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - name: Obtener repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Instalar fuente y herramientas PDF
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y fonts-dejavu-core poppler-utils
+          python -m pip install --upgrade pip
+          python -m pip install -r requirements-pdf.txt
+
+      - name: Generar ediciones PDF
+        run: python scripts/generate-pdf-exports.py --output dist/pdf
+
+      - name: Verificar archivos PDF
+        run: |
+          test -s dist/pdf/raramuri-lexico-completo.pdf
+          test -s dist/pdf/raramuri-lexico-alfabetico.zip
+          test -s dist/pdf/manifest-pdf.json
+          find dist/pdf -maxdepth 1 -name '*.pdf' -print0 | xargs -0 -n1 pdfinfo >/dev/null
+
+      - name: Conservar paquete como artefacto
+        uses: actions/upload-artifact@v4
+        with:
+          name: raramuri-digital-pdf
+          path: dist/pdf/
+          if-no-files-found: error
+          retention-days: 30
+
+      - name: Publicar release móvil
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          cat > /tmp/pdf-release-notes.md <<'NOTES'
+          Exportaciones PDF reproducibles derivadas de la base maestra de Rarámuri Digital.
+
+          Incluye una edición completa, secciones alfabéticas, un paquete ZIP y un manifiesto con sumas SHA-256. La base estructurada del repositorio sigue siendo la fuente de verdad. La difusión está autorizada y la validación lingüística permanece pendiente.
+
+          Para citar los datos use el DOI 10.5281/zenodo.21483353 y la versión indicada en el manifiesto.
+          NOTES
+          gh release delete pdf-latest --cleanup-tag --yes || true
+          gh release create pdf-latest dist/pdf/* \
+            --target "$GITHUB_SHA" \
+            --title "Rarámuri Digital — exportaciones PDF" \
+            --notes-file /tmp/pdf-release-notes.md
