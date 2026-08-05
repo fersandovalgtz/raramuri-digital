@@ -3,6 +3,8 @@ import { SiteFooter } from "../components/SiteFooter";
 import { SiteHeader } from "../components/SiteHeader";
 import manifest from "../../public/downloads/manifest.json";
 
+const pdfReleaseBase = "https://github.com/fersandovalgtz/raramuri-digital/releases/download/pdf-latest";
+
 const formatDefinitions = [
   {
     key: "raramuri-lexico.xml",
@@ -52,18 +54,18 @@ export default function DownloadsPage() {
       <main id="main" className="page-container inner-page downloads-page">
         <header className="page-heading downloads-heading">
           <div><span className="module-id">INTEROPERABILIDAD RD-EXP-01</span><h1>Datos y servicios</h1></div>
-          <p>Exportaciones completas de la base lexicográfica maestra. Todos los formatos contienen {manifest.entry_count.toLocaleString("es-MX")} entradas.</p>
+          <p>Exportaciones completas de la base lexicográfica maestra. Todos los formatos estructurados contienen {manifest.entry_count.toLocaleString("es-MX")} entradas.</p>
         </header>
 
         <section className="metric-grid downloads-metrics" aria-label="Métricas de interoperabilidad">
-          <div><span>Entradas</span><strong>{manifest.entry_count.toLocaleString("es-MX")}</strong><small>En cada exportación</small></div>
-          <div><span>Formatos</span><strong>5</strong><small>XML, JSON, CSV, SQL, TEI</small></div>
+          <div><span>Entradas</span><strong>{manifest.entry_count.toLocaleString("es-MX")}</strong><small>En cada exportación completa</small></div>
+          <div><span>Formatos</span><strong>7</strong><small>XML, JSON, CSV, SQL, TEI, PDF, ZIP</small></div>
           <div><span>Codificación</span><strong>UTF-8</strong><small>Acentos y saltillos</small></div>
           <div><span>API</span><strong>REST</strong><small>OpenAPI 3.1</small></div>
         </section>
 
         <section className="content-section download-section">
-          <h2>Archivos</h2>
+          <h2>Archivos estructurados</h2>
           <div className="download-grid">
             {formatDefinitions.map((format) => {
               const file = manifest.files.find((item) => item.file === format.key);
@@ -83,6 +85,38 @@ export default function DownloadsPage() {
               );
             })}
           </div>
+        </section>
+
+        <section className="content-section download-section">
+          <h2>Ediciones PDF para lectura e impresión</h2>
+          <p>Estas ediciones se generan automáticamente desde la base maestra. Facilitan la consulta sin conexión, la impresión, la citación y el uso docente, pero no sustituyen los formatos estructurados para correcciones o análisis computacional.</p>
+          <div className="download-grid">
+            <article className="download-card">
+              <header><code>PDF</code><span>Edición completa</span></header>
+              <h3>Diccionario completo</h3>
+              <p>Lema, clasificación, traducción, acepciones, variantes, ejemplos, identificador y procedencia documental de cada entrada.</p>
+              <dl>
+                <div><dt>Registros</dt><dd>{manifest.entry_count.toLocaleString("es-MX")}</dd></div>
+                <div><dt>Uso</dt><dd>Consulta, impresión y lectura sin conexión</dd></div>
+                <div><dt>Generación</dt><dd>Automática y reproducible</dd></div>
+              </dl>
+              <a className="primary-button" href={`${pdfReleaseBase}/raramuri-lexico-completo.pdf`}>Descargar PDF completo</a>
+            </article>
+
+            <article className="download-card">
+              <header><code>ZIP</code><span>Secciones alfabéticas</span></header>
+              <h3>Paquete por letras</h3>
+              <p>PDF independientes por letra inicial para distribuir, imprimir o consultar únicamente una parte del repertorio.</p>
+              <dl>
+                <div><dt>Cobertura</dt><dd>{manifest.entry_count.toLocaleString("es-MX")} entradas</dd></div>
+                <div><dt>Contenido</dt><dd>Un PDF por sección alfabética</dd></div>
+                <div><dt>Integridad</dt><dd>Manifiesto con SHA-256</dd></div>
+              </dl>
+              <a className="primary-button" href={`${pdfReleaseBase}/raramuri-lexico-alfabetico.zip`}>Descargar paquete ZIP</a>
+            </article>
+          </div>
+          <p className="manifest-link"><a className="text-link" href={`${pdfReleaseBase}/manifest-pdf.json`}>Descargar manifiesto de las ediciones PDF →</a></p>
+          <p className="manifest-link"><a className="text-link" href="https://github.com/fersandovalgtz/raramuri-digital/blob/main/PDF_EXPORTS.md">Consultar el método de generación y control editorial →</a></p>
         </section>
 
         <section className="content-section api-section">
