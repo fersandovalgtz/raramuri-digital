@@ -28,6 +28,7 @@ jobs:
         with:
           python-version: "3.12"
           cache: pip
+          cache-dependency-path: requirements-pdf.txt
 
       - name: Instalar dependencias
         run: |
