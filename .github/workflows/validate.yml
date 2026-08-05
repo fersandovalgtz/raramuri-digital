@@ -12,25 +12,49 @@ permissions:
 jobs:
   validate:
     runs-on: ubuntu-latest
-    timeout-minutes: 15
+    timeout-minutes: 20
     steps:
       - name: Obtener repositorio
         uses: actions/checkout@v4
+
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
           node-version: "22.13.0"
           cache: npm
+
+      - name: Configurar Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
       - name: Instalar dependencias
-        run: npm ci
+        run: |
+          npm ci
+          sudo apt-get update
+          sudo apt-get install -y fonts-dejavu-core poppler-utils
+          python -m pip install -r requirements-pdf.txt
+
       - name: Regenerar exportaciones
         run: npm run data:exports
+
       - name: Regenerar informe de calidad
         run: npm run data:quality
-      - name: Verificar reproducibilidad
+
+      - name: Verificar reproducibilidad de datos
         run: git diff --exit-code -- public/downloads QUALITY_REPORT.md
+
+      - name: Probar generador PDF y determinismo
+        run: |
+          python scripts/generate-pdf-exports.py --output .tmp/pdf-1 --max-entries 25 --no-alphabetical
+          python scripts/generate-pdf-exports.py --output .tmp/pdf-2 --max-entries 25 --no-alphabetical
+          cmp .tmp/pdf-1/raramuri-lexico-completo.pdf .tmp/pdf-2/raramuri-lexico-completo.pdf
+          cmp .tmp/pdf-1/manifest-pdf.json .tmp/pdf-2/manifest-pdf.json
+          pdfinfo .tmp/pdf-1/raramuri-lexico-completo.pdf >/dev/null
+
       - name: Analizar código
         run: npm run lint
+
       - name: Compilar y probar
         run: npm test
-
