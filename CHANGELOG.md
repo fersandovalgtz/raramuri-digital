@@ -2,6 +2,22 @@
 
 El proyecto utiliza versionamiento semántico independiente para la plataforma y el conjunto de datos.
 
+## Próxima publicación
+
+### Accesibilidad y consulta
+
+- Generador reproducible de una edición PDF completa derivada de la base maestra.
+- Secciones alfabéticas independientes y paquete ZIP para consulta, impresión y uso docente.
+- Manifiesto PDF con conteos, tamaños y sumas SHA-256.
+- Publicación automatizada de los productos en el release móvil `pdf-latest`.
+- Documentación explícita de que los PDF son productos derivados y no sustituyen la base estructurada.
+
+### Control de calidad
+
+- Prueba de determinismo binario del PDF en integración continua.
+- Verificación de estructura mediante `pdfinfo` y fuente Unicode embebida.
+- Conservación del estado de publicación, validación lingüística, licencia y procedencia en cada edición.
+
 ## Plataforma 3.1.0 / Datos 1.0.0 — 2026-07-21
 
 ### Datos

@@ -19,6 +19,7 @@
     "data:advanced": "node --no-warnings scripts/extract-advanced-products.mjs",
     "data:exports": "node scripts/generate-interoperability-exports.mjs",
     "data:quality": "node scripts/generate-quality-report.mjs",
+    "data:pdf": "python3 scripts/generate-pdf-exports.py",
     "validate": "npm run data:exports && npm run data:quality && npm run lint && npm test",
     "db:generate": "drizzle-kit generate"
   },
