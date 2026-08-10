@@ -4,6 +4,12 @@
 
 Se reciben reportes sobre transcripción, estructura de datos, trazabilidad, documentación, interfaz, API, licencias y propuestas lingüísticas. Una propuesta lingüística no se incorpora como validada sin revisión adecuada.
 
+## Primeras contribuciones
+
+Si desea colaborar por primera vez, revise las incidencias etiquetadas como [`good first issue`](https://github.com/fersandovalgtz/raramuri-digital/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) o [`help wanted`](https://github.com/fersandovalgtz/raramuri-digital/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22). Hay tareas acotadas de documentación, ejemplos de uso, accesibilidad e interoperabilidad que no requieren modificar el contenido lingüístico.
+
+Para conocer la API sin instalar el proyecto completo, consulte los ejemplos reproducibles en [`examples/python-api`](examples/python-api/) y [`examples/r-api`](examples/r-api/).
+
 ## Reporte mínimo
 
 1. Identificador de entrada o producto.
@@ -48,6 +54,6 @@ Utilice UTF-8, no modifique archivos fuente sin justificación y no elimine traz
 
 ## English
 
-Reports may address transcription, data structure, provenance, documentation, interface, API, licensing, and linguistic proposals. Include the entry or product identifier, affected file or URL, source page, current content, proposed correction, evidence, and required review type. Do not post personal or culturally sensitive information publicly; contact the project lead instead. Technical changes must pass automated checks, documentary changes must retain provenance, and linguistic changes require an explicitly recorded qualified review.
+Reports may address transcription, data structure, provenance, documentation, interface, API, licensing, and linguistic proposals. First-time contributors can start with issues labeled [`good first issue`](https://github.com/fersandovalgtz/raramuri-digital/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22) or [`help wanted`](https://github.com/fersandovalgtz/raramuri-digital/issues?q=is%3Aissue+is%3Aopen+label%3A%22help+wanted%22), and can use the reproducible API examples in [`examples/python-api`](examples/python-api/) and [`examples/r-api`](examples/r-api/). Include the entry or product identifier, affected file or URL, source page, current content, proposed correction, evidence, and required review type. Do not post personal or culturally sensitive information publicly; contact the project lead instead. Technical changes must pass automated checks, documentary changes must retain provenance, and linguistic changes require an explicitly recorded qualified review.
 
 By submitting a contribution, the contributor states that they have the right to provide it and agrees that it may be distributed under the license applicable to the modified component: source code and software under the [MIT License](LICENSE.md); project-produced data, exports, derived products, and documentation under [CC BY-NC-SA 4.0](DATA_LICENSE.md). Third-party or culturally, legally, or community-restricted materials will not be incorporated without sufficient authorization and documentation.
