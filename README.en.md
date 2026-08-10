@@ -8,14 +8,27 @@
 
 <p align="center">
   <a href="https://doi.org/10.5281/zenodo.21483353"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.21483353.svg" alt="DOI"></a>
+  <a href="RELEASE_NOTES_1.0.0.md"><img src="https://img.shields.io/badge/dataset-v1.0.0-172033?style=flat-square" alt="Dataset v1.0.0"></a>
+  <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/platform-v3.1.0-7a263a?style=flat-square" alt="Platform v3.1.0"></a>
   <a href="public/downloads/manifest.json"><img src="https://img.shields.io/badge/entries-2%2C581-172033?style=flat-square" alt="2,581 entries"></a>
   <a href="public/downloads/manifest.json"><img src="https://img.shields.io/badge/products-30-7a263a?style=flat-square" alt="30 products"></a>
-  <a href="https://raramuri.ceees.mx/api/openapi"><img src="https://img.shields.io/badge/API-OpenAPI%203.1-2d6a4f?style=flat-square" alt="OpenAPI 3.1 API"></a>
+  <a href="https://orcid.org/0000-0002-3168-6725"><img src="https://img.shields.io/badge/ORCID-0000--0002--3168--6725-A6CE39?style=flat-square&logo=orcid&logoColor=white" alt="ORCID 0000-0002-3168-6725"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/fersandovalgtz/raramuri-digital/actions/workflows/validate.yml"><img src="https://img.shields.io/github/actions/workflow/status/fersandovalgtz/raramuri-digital/validate.yml?branch=main&style=flat-square&label=CI%20validation" alt="CI validation"></a>
+  <a href="public/downloads/raramuri-lex0.xml"><img src="https://img.shields.io/badge/TEI-Lex--0-8A1538?style=flat-square" alt="TEI Lex-0"></a>
+  <a href="https://raramuri.ceees.mx/api/openapi"><img src="https://img.shields.io/badge/OpenAPI-3.1-2d6a4f?style=flat-square&logo=openapiinitiative&logoColor=white" alt="OpenAPI 3.1"></a>
+  <a href="codemeta.json"><img src="https://img.shields.io/badge/metadata-CodeMeta-3b5b92?style=flat-square" alt="CodeMeta metadata"></a>
+  <a href="CITATION.cff"><img src="https://img.shields.io/badge/citation-CFF-4b5563?style=flat-square" alt="Citation File Format"></a>
+  <a href="project-metadata.json"><img src="https://img.shields.io/badge/ISO%20639--3-tar-5b4b8a?style=flat-square" alt="ISO 639-3 tar"></a>
+  <a href="public/downloads/manifest.json"><img src="https://img.shields.io/badge/integrity-SHA--256-455B55?style=flat-square" alt="SHA-256 integrity"></a>
 </p>
 
 <p align="center">
   <a href="LICENSE.md"><img src="https://img.shields.io/badge/code-MIT-172033?style=flat-square" alt="MIT code license"></a>
   <a href="DATA_LICENSE.md"><img src="https://img.shields.io/badge/data-CC%20BY--NC--SA%204.0-7a263a?style=flat-square" alt="CC BY-NC-SA 4.0 data license"></a>
+  <a href="CONTRIBUTORS.md"><img src="https://img.shields.io/badge/authorship-CRediT-6b7280?style=flat-square" alt="CRediT authorship"></a>
   <a href="#editorial-status"><img src="https://img.shields.io/badge/linguistic%20validation-pending-b7791f?style=flat-square" alt="Linguistic validation pending"></a>
 </p>
 
