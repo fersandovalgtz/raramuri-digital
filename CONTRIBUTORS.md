@@ -2,7 +2,7 @@
 
 Las funciones se describen mediante la taxonomía CRediT. Esta lista registra trabajo efectivamente atribuido por el proyecto; no convierte a las instituciones en autoras ni atribuye validación lingüística comunitaria.
 
-## Fernando Sandoval Gutiérrez
+## Fernando Sandoval Gutierrez
 
 ORCID: <https://orcid.org/0000-0002-3168-6725>
 
@@ -22,5 +22,5 @@ Universidad CEEES, Universidad Autónoma de Ciudad Juárez y Cuerpo Académico U
 
 ## English
 
-Roles follow the CRediT taxonomy. Fernando Sandoval Gutiérrez is credited with conceptualization, data curation, methodology, project administration, software, structural and technical validation, visualization, original drafting, and review and editing. Technical validation does not constitute linguistic validation. Future contributors must be listed with consent, affiliation and specific roles; Rarámuri speakers and specialists must receive appropriate authorship, review credit, compensation and acknowledgement of their authority.
+Roles follow the CRediT taxonomy. Fernando Sandoval Gutierrez is credited with conceptualization, data curation, methodology, project administration, software, structural and technical validation, visualization, original drafting, and review and editing. Technical validation does not constitute linguistic validation. Future contributors must be listed with consent, affiliation and specific roles; Rarámuri speakers and specialists must receive appropriate authorship, review credit, compensation and acknowledgement of their authority.
 
