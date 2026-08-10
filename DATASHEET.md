@@ -5,7 +5,7 @@ Documento basado en el modelo *Datasheets for Datasets*. Describe el conjunto pu
 ## Motivación
 
 - **Objetivo:** estructurar y publicar datos lexicográficos rarámuri–español para investigación, humanidades digitales, enseñanza y desarrollo de aplicaciones.
-- **Responsable:** Dr. Fernando Sandoval Gutiérrez, coordinación académica y técnica.
+- **Responsable:** Dr. Fernando Sandoval Gutierrez, coordinación académica y técnica.
 - **Instituciones:** Universidad CEEES, Universidad Autónoma de Ciudad Juárez y Cuerpo Académico UACJ-113, Estudios sobre Prácticas Educativas e Interculturalidad.
 - **Población beneficiaria prevista:** comunidades y personas hablantes de rarámuri, especialistas en lingüística, educación intercultural, lexicografía, documentación y tecnologías del lenguaje.
 
