@@ -1,6 +1,6 @@
 # Licencia de datos y documentación / Data and documentation license
 
-Copyright © 2026 Fernando Sandoval Gutiérrez; Universidad CEEES; Universidad Autónoma de Ciudad Juárez; Cuerpo Académico UACJ-113.
+Copyright © 2026 Fernando Sandoval Gutierrez; Universidad CEEES; Universidad Autónoma de Ciudad Juárez; Cuerpo Académico UACJ-113.
 
 Los datos y la documentación producidos por **Rarámuri Digital** se distribuyen bajo la licencia **Creative Commons Atribución–NoComercial–CompartirIgual 4.0 Internacional (CC BY-NC-SA 4.0)**.
 
