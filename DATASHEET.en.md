@@ -5,7 +5,7 @@ This document follows the *Datasheets for Datasets* approach. It describes the p
 ## Motivation
 
 - **Purpose:** structure and publish Rarámuri–Spanish lexicographic data for research, digital humanities, teaching and application development.
-- **Lead:** Dr Fernando Sandoval Gutiérrez, academic and technical coordination.
+- **Lead:** Dr Fernando Sandoval Gutierrez, academic and technical coordination.
 - **Institutions:** Universidad CEEES, Universidad Autónoma de Ciudad Juárez and Academic Group UACJ-113, Studies on Educational Practices and Interculturality.
 - **Intended beneficiaries:** Rarámuri communities and speakers, and specialists in linguistics, intercultural education, lexicography, documentation and language technology.
 
