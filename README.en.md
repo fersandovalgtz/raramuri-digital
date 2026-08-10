@@ -75,7 +75,7 @@ If this resource supports your research, teaching, or development work, cite the
 
 ## Project lead
 
-**Dr. Fernando Sandoval Gutiérrez**<br>
+**Dr. Fernando Sandoval Gutierrez**<br>
 Academic and technical coordination<br>
 Universidad CEEES · Universidad Autónoma de Ciudad Juárez · Academic Group UACJ-113<br>
 [fernando.sandoval@uacj.mx](mailto:fernando.sandoval@uacj.mx) · [ORCID 0000-0002-3168-6725](https://orcid.org/0000-0002-3168-6725)
@@ -191,6 +191,6 @@ The MIT License does not grant permissions over data, cultural materials, or thi
 
 ## Citation
 
-Sandoval Gutiérrez, F. (2026). *Rarámuri Digital: conjunto de datos lexicográficos rarámuri–español* (Version 1.0.0) [Data set]. Zenodo. <https://doi.org/10.5281/zenodo.21483353>
+Sandoval Gutierrez, F. (2026). *Rarámuri Digital: conjunto de datos lexicográficos rarámuri–español* (Version 1.0.0) [Data set]. Zenodo. <https://doi.org/10.5281/zenodo.21483353>
 
 Use [`CITATION.cff`](CITATION.cff) to generate additional citation styles. The operating platform version is 3.1.0.
