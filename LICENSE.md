@@ -1,6 +1,6 @@
 # MIT License
 
-Copyright (c) 2026 Fernando Sandoval Gutiérrez and contributors
+Copyright (c) 2026 Fernando Sandoval Gutierrez and contributors
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of the software and associated documentation files (the "Software"), to deal
