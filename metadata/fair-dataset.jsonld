@@ -1,0 +1,96 @@
+{
+  "@context": {
+    "schema": "https://schema.org/",
+    "dcterms": "http://purl.org/dc/terms/",
+    "dcat": "http://www.w3.org/ns/dcat#",
+    "prov": "http://www.w3.org/ns/prov#"
+  },
+  "@id": "https://doi.org/10.5281/zenodo.21483353",
+  "@type": "schema:Dataset",
+  "schema:name": "Rarámuri Digital: conjunto de datos lexicográficos rarámuri–español",
+  "schema:description": "Conjunto de datos lexicográficos rarámuri–español versionado para investigación, docencia, humanidades digitales y desarrollo de aplicaciones. La validación lingüística comunitaria permanece pendiente.",
+  "schema:identifier": [
+    "https://doi.org/10.5281/zenodo.21483353",
+    "10.5281/zenodo.21483353"
+  ],
+  "schema:version": "1.0.0",
+  "schema:datePublished": "2026-07-21",
+  "schema:creator": {
+    "@type": "schema:Person",
+    "schema:name": "Fernando Sandoval Gutierrez",
+    "schema:identifier": "https://orcid.org/0000-0002-3168-6725",
+    "schema:affiliation": {
+      "@type": "schema:Organization",
+      "schema:name": "Universidad Autónoma de Ciudad Juárez",
+      "schema:url": "https://www.uacj.mx/"
+    }
+  },
+  "schema:publisher": {
+    "@type": "schema:Organization",
+    "schema:name": "Zenodo",
+    "schema:url": "https://zenodo.org/"
+  },
+  "schema:license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "schema:isAccessibleForFree": true,
+  "schema:inLanguage": [
+    {
+      "@type": "schema:Language",
+      "schema:name": "Central Tarahumara",
+      "schema:alternateName": "Rarámuri",
+      "schema:identifier": "https://iso639-3.sil.org/code/tar"
+    },
+    {
+      "@type": "schema:Language",
+      "schema:name": "Spanish",
+      "schema:identifier": "https://iso639-3.sil.org/code/spa"
+    }
+  ],
+  "schema:keywords": [
+    "Rarámuri",
+    "Tarahumara",
+    "lexicografía",
+    "humanidades digitales",
+    "TEI Lex-0",
+    "lingüística de corpus",
+    "lenguas indígenas"
+  ],
+  "schema:sameAs": [
+    "https://zenodo.org/records/21483353",
+    "https://github.com/fersandovalgtz/raramuri-digital",
+    "https://raramuri.ceees.mx"
+  ],
+  "schema:distribution": [
+    {
+      "@type": "dcat:Distribution",
+      "dcterms:format": "text/csv",
+      "dcat:downloadURL": {"@id": "https://github.com/fersandovalgtz/raramuri-digital/raw/main/public/downloads/raramuri-lexico.csv"}
+    },
+    {
+      "@type": "dcat:Distribution",
+      "dcterms:format": "application/json",
+      "dcat:downloadURL": {"@id": "https://github.com/fersandovalgtz/raramuri-digital/raw/main/public/downloads/raramuri-lexico.json"}
+    },
+    {
+      "@type": "dcat:Distribution",
+      "dcterms:format": "application/xml",
+      "dcat:downloadURL": {"@id": "https://github.com/fersandovalgtz/raramuri-digital/raw/main/public/downloads/raramuri-lexico.xml"}
+    },
+    {
+      "@type": "dcat:Distribution",
+      "dcterms:format": "application/tei+xml",
+      "dcat:downloadURL": {"@id": "https://github.com/fersandovalgtz/raramuri-digital/raw/main/public/downloads/raramuri-lex0.xml"}
+    }
+  ],
+  "prov:wasGeneratedBy": {
+    "@type": "prov:Activity",
+    "dcterms:description": "Extracción estructurada, normalización conservadora, asignación de identificadores persistentes, derivación reproducible de productos y generación de exportaciones con trazabilidad documental."
+  },
+  "prov:wasAttributedTo": {
+    "@id": "https://orcid.org/0000-0002-3168-6725"
+  },
+  "dcterms:conformsTo": [
+    {"@id": "https://www.tei-c.org/release/doc/tei-p5-doc/en/html/DI.html"},
+    {"@id": "https://lex-0.org/"},
+    {"@id": "https://spec.openapis.org/oas/v3.1.0"}
+  ]
+}
