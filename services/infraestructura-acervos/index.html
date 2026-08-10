@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="es-MX">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Infraestructura digital para acervos | Universidad CEEES Cuauhtémoc</title>
+  <meta name="description" content="Convertimos acervos documentales, lingüísticos y académicos dispersos en infraestructura digital trazable, consultable, interoperable y reutilizable." />
+  <meta name="theme-color" content="#071a2b" />
+  <style>
+    :root {
+      --ink:#0d1b2a;
+      --navy:#071a2b;
+      --navy-2:#0d2740;
+      --blue:#1b5b8f;
+      --cyan:#2ca6a4;
+      --sand:#f5efe3;
+      --paper:#fbfbf8;
+      --muted:#5e6b75;
+      --line:#dfe5e8;
+      --white:#ffffff;
+      --shadow:0 22px 60px rgba(3,20,35,.12);
+      --radius:22px;
+      --max:1180px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);line-height:1.55}
+    a{color:inherit;text-decoration:none}
+    .wrap{width:min(calc(100% - 40px),var(--max));margin:auto}
+    .eyebrow{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;font-weight:800;color:var(--cyan)}
+    .topbar{background:#04111d;color:#dbe9f4;font-size:.82rem}
+    .topbar .wrap{display:flex;justify-content:space-between;gap:20px;padding:9px 0}
+    .nav{position:sticky;top:0;z-index:30;background:rgba(251,251,248,.93);backdrop-filter:blur(14px);border-bottom:1px solid rgba(13,27,42,.08)}
+    .nav .wrap{height:76px;display:flex;align-items:center;justify-content:space-between;gap:26px}
+    .brand{display:flex;align-items:center;gap:12px;min-width:0}
+    .brand-mark{width:43px;height:43px;border-radius:12px;background:linear-gradient(145deg,var(--navy),var(--blue));position:relative;box-shadow:0 10px 30px rgba(7,26,43,.18)}
+    .brand-mark:before,.brand-mark:after{content:"";position:absolute;border:2px solid rgba(255,255,255,.85);border-radius:50%}
+    .brand-mark:before{inset:9px}
+    .brand-mark:after{inset:15px;border-color:rgba(44,166,164,.95)}
+    .brand-text{font-weight:900;letter-spacing:.02em;font-size:.96rem;line-height:1.15}
+    .brand-text small{display:block;font-size:.7rem;font-weight:650;color:var(--muted);margin-top:3px;letter-spacing:0}
+    .navlinks{display:flex;align-items:center;gap:24px;font-size:.9rem;font-weight:700;color:#33414b}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border-radius:999px;padding:13px 19px;font-weight:800;border:1px solid transparent;transition:.2s ease;cursor:pointer}
+    .btn-primary{background:var(--navy);color:#fff;box-shadow:0 12px 28px rgba(7,26,43,.18)}
+    .btn-primary:hover{transform:translateY(-2px);background:#0c2b47}
+    .btn-light{background:#fff;border-color:rgba(255,255,255,.28);color:#fff;background:rgba(255,255,255,.08)}
+    .btn-outline{border-color:#c9d5dc;background:#fff;color:var(--navy)}
+    .hero{color:#fff;background:
+      radial-gradient(circle at 78% 20%,rgba(44,166,164,.27),transparent 28%),
+      radial-gradient(circle at 20% 0%,rgba(27,91,143,.4),transparent 34%),
+      linear-gradient(145deg,#04111d 0%,#082138 58%,#0c3550 100%);
+      overflow:hidden;position:relative}
+    .hero:after{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);background-size:44px 44px;mask-image:linear-gradient(to bottom,#000,transparent 82%);pointer-events:none}
+    .hero .wrap{position:relative;z-index:2;padding:94px 0 82px;display:grid;grid-template-columns:1.14fr .86fr;gap:70px;align-items:center}
+    h1{font-size:clamp(2.65rem,5.4vw,5.25rem);line-height:.98;letter-spacing:-.055em;margin:18px 0 24px;max-width:800px}
+    .hero p{font-size:1.15rem;color:#d5e2ea;max-width:690px}
+    .hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+    .trust{margin-top:34px;display:flex;flex-wrap:wrap;gap:18px;color:#bdd0db;font-size:.84rem;font-weight:700}
+    .trust span:before{content:"✓";color:#78d5cc;margin-right:7px}
+    .hero-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);border-radius:30px;padding:24px;box-shadow:0 30px 80px rgba(0,0,0,.22);backdrop-filter:blur(9px)}
+    .flow{display:grid;gap:11px}
+    .flow-item{background:rgba(255,255,255,.94);color:var(--ink);border-radius:17px;padding:16px 17px;display:flex;gap:14px;align-items:center}
+    .flow-item b{display:block;font-size:.94rem}.flow-item small{display:block;color:var(--muted);margin-top:2px}
+    .num{width:34px;height:34px;flex:0 0 34px;border-radius:50%;background:#dff4f1;color:#0b5c60;display:grid;place-items:center;font-weight:900}
+    .arrow{height:12px;display:grid;place-items:center;color:#78d5cc;font-weight:900}
+    section{padding:88px 0}
+    .section-head{max-width:780px;margin-bottom:42px}
+    h2{font-size:clamp(2rem,4vw,3.4rem);letter-spacing:-.04em;line-height:1.05;margin:12px 0 16px}
+    .lead{font-size:1.08rem;color:var(--muted)}
+    .grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;box-shadow:0 8px 25px rgba(7,26,43,.04)}
+    .card h3{margin:9px 0 9px;font-size:1.18rem}.card p{margin:0;color:var(--muted)}
+    .icon{width:44px;height:44px;border-radius:13px;background:#e8f3f8;color:var(--blue);display:grid;place-items:center;font-weight:900;font-size:1.1rem}
+    .problem{background:#f0f5f6}
+    .split{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+    .before,.after{border-radius:28px;padding:32px}
+    .before{background:#fff;border:1px solid #e0e4e6}.after{background:var(--navy);color:#fff;box-shadow:var(--shadow)}
+    .before h3,.after h3{font-size:1.4rem;margin:4px 0 20px}
+    .checklist{display:grid;gap:13px;margin:0;padding:0;list-style:none}
+    .checklist li{display:flex;gap:11px;align-items:flex-start}
+    .checklist li:before{content:"•";font-size:1.5rem;line-height:1;color:#8d9aa3}
+    .after .checklist li:before{content:"✓";font-size:1rem;color:#65d0c7;margin-top:4px}
+    .after .checklist li{color:#dbe7ed}
+    .process-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;counter-reset:step}
+    .process-step{counter-increment:step;background:#fff;border-top:4px solid var(--cyan);border-radius:0 0 18px 18px;padding:24px;border-left:1px solid var(--line);border-right:1px solid var(--line);border-bottom:1px solid var(--line)}
+    .process-step:before{content:"0" counter(step);font-size:.78rem;letter-spacing:.1em;font-weight:900;color:var(--cyan)}
+    .process-step h3{font-size:1.08rem;margin:9px 0}.process-step p{font-size:.94rem;color:var(--muted);margin:0}
+    .packages{background:linear-gradient(#faf7f0,#f4f0e6)}
+    .package{position:relative;padding:31px}
+    .package.featured{border:2px solid var(--navy);transform:translateY(-8px);box-shadow:var(--shadow)}
+    .tag{display:inline-block;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;font-weight:900;padding:6px 9px;border-radius:999px;background:#e5f4f2;color:#0d6666}
+    .package h3{font-size:1.35rem;margin:16px 0 8px}.package .desc{min-height:72px;color:var(--muted)}
+    .package ul{padding-left:19px;color:#33414b}.package li{margin:8px 0}
+    .package .foot{border-top:1px solid var(--line);margin-top:20px;padding-top:18px;font-weight:800;color:var(--navy)}
+    .case{background:var(--navy);color:#fff;position:relative;overflow:hidden}
+    .case:before{content:"";position:absolute;width:560px;height:560px;border-radius:50%;border:1px solid rgba(255,255,255,.1);right:-220px;top:-170px;box-shadow:0 0 0 60px rgba(255,255,255,.025),0 0 0 120px rgba(255,255,255,.02)}
+    .case .wrap{position:relative;z-index:2;display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}
+    .case h2{margin-top:8px}.case p{color:#c8d8e1}
+    .case-metrics{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+    .metric{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.12);border-radius:18px;padding:20px}
+    .metric b{display:block;font-size:1.3rem;color:#fff}.metric span{font-size:.87rem;color:#bdd0da}
+    .limits{display:grid;grid-template-columns:.8fr 1.2fr;gap:40px;align-items:start}
+    .limits-box{background:#fff;border:1px solid var(--line);border-radius:24px;padding:30px}
+    .limits-box strong{display:block;margin-bottom:10px}
+    .audiences{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+    .pill{background:#edf3f5;border:1px solid #d9e1e5;border-radius:999px;padding:8px 12px;font-size:.85rem;font-weight:750;color:#40515d}
+    .cta{padding:72px 0 92px}
+    .cta-box{background:linear-gradient(135deg,#0b2a45,#0c4a5a);color:#fff;border-radius:34px;padding:46px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center;box-shadow:var(--shadow)}
+    .cta-box h2{margin:8px 0 12px}.cta-box p{color:#d6e5eb;margin:0}.cta-actions{display:flex;gap:10px;flex-wrap:wrap;justify-content:flex-end}
+    footer{background:#04111d;color:#aebfca;padding:34px 0}
+    footer .wrap{display:grid;grid-template-columns:1.5fr 1fr;gap:30px;align-items:end}
+    footer strong{display:block;color:#fff;margin-bottom:6px}footer small{line-height:1.6}
+    .footer-links{display:flex;gap:18px;justify-content:flex-end;font-size:.82rem}
+    @media (max-width:920px){
+      .navlinks a:not(.btn){display:none}.hero .wrap,.case .wrap,.limits,.cta-box{grid-template-columns:1fr}.hero .wrap{gap:38px}.grid-3{grid-template-columns:1fr}.process-grid{grid-template-columns:1fr 1fr}.package.featured{transform:none}.cta-actions{justify-content:flex-start}.split{grid-template-columns:1fr}.case-metrics{grid-template-columns:1fr 1fr}
+    }
+    @media (max-width:620px){
+      .topbar .wrap{display:block}.topbar .wrap span:last-child{display:none}.nav .wrap{height:70px}.brand-text{font-size:.82rem}.brand-text small{display:none}.hero .wrap{padding:70px 0 58px}.process-grid,.case-metrics{grid-template-columns:1fr}section{padding:66px 0}.cta-box{padding:30px}footer .wrap{grid-template-columns:1fr}.footer-links{justify-content:flex-start;flex-wrap:wrap}.hero-actions .btn,.cta-actions .btn{width:100%}
+    }
+  </style>
+</head>
+<body>
+  <div class="topbar">
+    <div class="wrap">
+      <span>Universidad Centro de Estudios Especializados en Educación Superior, Cuauhtémoc</span>
+      <span>Infraestructura digital · investigación · preservación documental</span>
+    </div>
+  </div>
+
+  <nav class="nav">
+    <div class="wrap">
+      <a class="brand" href="#inicio" aria-label="Inicio">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-text">Universidad CEEES Cuauhtémoc<small>Servicios institucionales de infraestructura digital</small></span>
+      </a>
+      <div class="navlinks">
+        <a href="#servicio">Servicio</a>
+        <a href="#proceso">Proceso</a>
+        <a href="#caso">Caso demostrativo</a>
+        <a class="btn btn-primary" href="https://wa.me/526251475963?text=Hola%2C%20me%20interesa%20solicitar%20un%20diagn%C3%B3stico%20para%20un%20acervo%20documental%20o%20ling%C3%BC%C3%ADstico." target="_blank" rel="noopener">Solicitar diagnóstico</a>
+      </div>
+    </div>
+  </nav>
+
+  <main id="inicio">
+    <section class="hero">
+      <div class="wrap">
+        <div>
+          <div class="eyebrow">De documentos dispersos a infraestructura reutilizable</div>
+          <h1>Tu acervo puede convertirse en un activo digital institucional.</h1>
+          <p>Transformamos colecciones documentales, lingüísticas y académicas difíciles de consultar en recursos digitales organizados, trazables, interoperables y preparados para investigación, preservación y reutilización.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" style="background:#fff;color:#071a2b" href="https://wa.me/526251475963?text=Hola%2C%20quiero%20platicar%20sobre%20un%20acervo%20que%20necesitamos%20organizar%20y%20digitalizar." target="_blank" rel="noopener">Cuéntanos qué acervo tienes →</a>
+            <a class="btn btn-light" href="#servicio">Ver qué hacemos</a>
+          </div>
+          <div class="trust">
+            <span>Alcance institucional</span><span>Trazabilidad documental</span><span>Entregables transferibles</span>
+          </div>
+        </div>
+        <div class="hero-card" aria-label="Flujo del servicio">
+          <div class="flow">
+            <div class="flow-item"><span class="num">1</span><div><b>Acervo de origen</b><small>PDF, fichas, hojas de cálculo, fotografías, catálogos, transcripciones.</small></div></div>
+            <div class="arrow">↓</div>
+            <div class="flow-item"><span class="num">2</span><div><b>Estructuración y trazabilidad</b><small>Identificadores, metadatos, procedencia, reglas y modelo de datos.</small></div></div>
+            <div class="arrow">↓</div>
+            <div class="flow-item"><span class="num">3</span><div><b>Infraestructura digital</b><small>Base consultable, buscador, formatos reutilizables, documentación y transferencia.</small></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="servicio" class="problem">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">El problema que resolvemos</div>
+          <h2>Que un documento exista no significa que su información esté realmente disponible.</h2>
+          <p class="lead">Muchas instituciones conservan años de trabajo en archivos aislados, PDFs escaneados, fichas o tablas que son difíciles de consultar, cruzar, preservar o reutilizar.</p>
+        </div>
+        <div class="split">
+          <div class="before">
+            <div class="eyebrow" style="color:#7b8790">Antes</div>
+            <h3>Información valiosa, pero atrapada.</h3>
+            <ul class="checklist">
+              <li>Documentos dispersos en carpetas y formatos distintos.</li>
+              <li>Datos sin identificadores persistentes ni modelo común.</li>
+              <li>Dificultad para rastrear de qué fuente salió cada registro.</li>
+              <li>Consultas manuales que consumen tiempo especializado.</li>
+              <li>Riesgo de pérdida, duplicación o dependencia de una sola persona.</li>
+            </ul>
+          </div>
+          <div class="after">
+            <div class="eyebrow">Después</div>
+            <h3>Un recurso institucional explicable y reutilizable.</h3>
+            <ul class="checklist">
+              <li>Datos estructurados con trazabilidad hasta la fuente.</li>
+              <li>Buscador o interfaz de consulta según el caso.</li>
+              <li>Exportaciones en formatos abiertos o interoperables.</li>
+              <li>Documentación técnica y reglas de gobernanza.</li>
+              <li>Paquete transferible para que la institución conserve control.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Qué podemos transformar</div>
+          <h2>Trabajamos sobre acervos que ya existen.</h2>
+          <p class="lead">El valor está en convertir conocimiento acumulado en una infraestructura que pueda consultarse, mantenerse y reutilizarse con reglas claras.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card"><div class="icon">Aa</div><h3>Acervos lingüísticos y lexicográficos</h3><p>Diccionarios, vocabularios, corpus, fichas, transcripciones y colecciones documentales asociadas a una lengua o comunidad.</p></article>
+          <article class="card"><div class="icon">▦</div><h3>Archivos académicos y de investigación</h3><p>Datos históricos de proyectos, catálogos, matrices, colecciones de fuentes y materiales acumulados durante años de investigación.</p></article>
+          <article class="card"><div class="icon">⌂</div><h3>Patrimonio, archivos y memoria institucional</h3><p>Colecciones de municipios, bibliotecas, centros culturales, asociaciones, archivos históricos y unidades de documentación.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="proceso" class="problem">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Cómo trabajamos</div>
+          <h2>Primero entendemos el acervo. Después construimos.</h2>
+          <p class="lead">No empezamos programando una página. Empezamos identificando el problema, las fuentes, los derechos, la calidad de los datos y el resultado institucional esperado.</p>
+        </div>
+        <div class="process-grid">
+          <div class="process-step"><h3>Diagnóstico</h3><p>Inventario, formatos, calidad, derechos, riesgos, responsables y posibilidades de reutilización.</p></div>
+          <div class="process-step"><h3>Modelado</h3><p>Definimos entidades, metadatos, identificadores, procedencia y reglas de transformación.</p></div>
+          <div class="process-step"><h3>Construcción</h3><p>Estructuramos datos y desarrollamos la capa de consulta, exportación o interoperabilidad acordada.</p></div>
+          <div class="process-step"><h3>Transferencia</h3><p>Entregamos documentación, fuentes, criterios de mantenimiento y un paquete que la institución puede conservar.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="packages">
+      <div class="wrap">
+        <div class="section-head">
+          <div class="eyebrow">Tres formas de empezar</div>
+          <h2>El alcance crece sólo cuando el problema lo justifica.</h2>
+          <p class="lead">Cada proyecto se cotiza después de conocer el acervo. El primer paso recomendado es un diagnóstico institucional delimitado.</p>
+        </div>
+        <div class="grid-3">
+          <article class="card package">
+            <span class="tag">Entrada</span>
+            <h3>Diagnóstico y hoja de ruta</h3>
+            <p class="desc">Para instituciones que tienen materiales, pero todavía no saben qué infraestructura necesitan.</p>
+            <ul><li>Inventario y diagnóstico de fuentes</li><li>Mapa de riesgos y derechos</li><li>Modelo objetivo</li><li>Fases, entregables y estimación</li></ul>
+            <div class="foot">Resultado: una decisión informada antes de invertir en desarrollo.</div>
+          </article>
+          <article class="card package featured">
+            <span class="tag">Implementación</span>
+            <h3>Infraestructura digital básica</h3>
+            <p class="desc">Para un acervo delimitado que necesita pasar de documentos dispersos a datos trazables y consultables.</p>
+            <ul><li>Modelo de datos y metadatos</li><li>Transformación reproducible</li><li>Base estructurada y buscador</li><li>Exportaciones y documentación</li></ul>
+            <div class="foot">Resultado: un recurso funcional y transferible.</div>
+          </article>
+          <article class="card package">
+            <span class="tag">Ecosistema</span>
+            <h3>Publicación e interoperabilidad</h3>
+            <p class="desc">Para proyectos que además requieren consulta pública, API, preservación, gobernanza y reutilización avanzada.</p>
+            <ul><li>Sitio de consulta</li><li>API y formatos interoperables</li><li>Documentación técnica</li><li>Gobernanza y paquete reproducible</li></ul>
+            <div class="foot">Resultado: una infraestructura preparada para crecer sin perder trazabilidad.</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="caso" class="case">
+      <div class="wrap">
+        <div>
+          <div class="eyebrow">Caso demostrativo</div>
+          <h2>Rarámuri Digital</h2>
+          <p>Rarámuri Digital muestra cómo una fuente lexicográfica puede convertirse en un recurso digital estructurado con identificadores, procedencia documental, consulta, formatos descargables y documentación reproducible.</p>
+          <p><strong>El caso demuestra capacidad técnica y metodológica.</strong> No implica que cada proyecto tenga el mismo alcance ni que la infraestructura sustituya la validación especializada del contenido.</p>
+          <a class="btn btn-light" href="https://raramuri.ceees.mx" target="_blank" rel="noopener">Ver caso demostrativo</a>
+        </div>
+        <div class="case-metrics">
+          <div class="metric"><b>Datos estructurados</b><span>Información preparada para consulta y reutilización.</span></div>
+          <div class="metric"><b>Trazabilidad</b><span>Relación explícita entre registros y fuentes documentales.</span></div>
+          <div class="metric"><b>Interoperabilidad</b><span>Formatos y documentación para distintos usos técnicos.</span></div>
+          <div class="metric"><b>Reproducibilidad</b><span>Procesos y decisiones documentados para futuras versiones.</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="wrap limits">
+        <div>
+          <div class="eyebrow">Para quién</div>
+          <h2>Clientes institucionales con un acervo concreto.</h2>
+          <p class="lead">Universidades, centros de investigación, archivos, bibliotecas, museos, municipios, dependencias públicas y proyectos culturales o científicos.</p>
+          <div class="audiences"><span class="pill">Universidades</span><span class="pill">Archivos</span><span class="pill">Bibliotecas</span><span class="pill">Centros de investigación</span><span class="pill">Patrimonio cultural</span><span class="pill">Instituciones públicas</span></div>
+        </div>
+        <div class="limits-box">
+          <div class="eyebrow" style="color:#7b8790">Límites claros</div>
+          <h3>La infraestructura no sustituye la autoridad disciplinaria ni comunitaria.</h3>
+          <p>Podemos estructurar, documentar, preservar y publicar información conforme al alcance acordado. No presumimos validación lingüística, histórica, jurídica o comunitaria cuando ésta no haya sido realizada por las personas e instancias competentes.</p>
+          <strong>Antes de iniciar verificamos:</strong>
+          <ul class="checklist"><li>Quién es responsable del acervo.</li><li>Qué derechos y permisos existen sobre las fuentes.</li><li>Qué partes pueden publicarse y cuáles deben mantenerse restringidas.</li><li>Qué afirmaciones requieren validación externa.</li></ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap">
+        <div class="cta-box">
+          <div>
+            <div class="eyebrow">Primer paso</div>
+            <h2>Enséñanos qué tienes.</h2>
+            <p>Una conversación breve permite saber si existe un proyecto viable. Cuéntanos qué materiales conserva tu institución, cómo se consultan hoy y qué te gustaría poder hacer con ellos.</p>
+          </div>
+          <div class="cta-actions">
+            <a class="btn btn-primary" style="background:#fff;color:#071a2b" href="https://wa.me/526251475963?text=Hola%2C%20me%20interesa%20solicitar%20una%20conversaci%C3%B3n%20inicial%20sobre%20un%20acervo%20institucional." target="_blank" rel="noopener">Hablar por WhatsApp</a>
+            <a class="btn btn-light" href="mailto:informes@ceees.mx?subject=Consulta%20sobre%20infraestructura%20digital%20para%20acervos">Enviar correo</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <div>
+        <strong>Universidad Centro de Estudios Especializados en Educación Superior, Cuauhtémoc</strong>
+        <small>Calle Cuarta, entre Guerrero y Allende, Centro de Cuauhtémoc, Chihuahua.<br>WhatsApp: 625 147 59 63 · informes@ceees.mx</small>
+      </div>
+      <div class="footer-links"><a href="https://ceees.mx" target="_blank" rel="noopener">ceees.mx</a><a href="#inicio">Inicio ↑</a></div>
+    </div>
+  </footer>
+</body>
+</html>
