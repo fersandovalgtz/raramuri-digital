@@ -13,6 +13,7 @@
   <a href="public/downloads/manifest.json"><img src="https://img.shields.io/badge/entries-2%2C581-172033?style=flat-square" alt="2,581 entries"></a>
   <a href="public/downloads/manifest.json"><img src="https://img.shields.io/badge/products-30-7a263a?style=flat-square" alt="30 products"></a>
   <a href="https://orcid.org/0000-0002-3168-6725"><img src="https://img.shields.io/badge/ORCID-0000--0002--3168--6725-A6CE39?style=flat-square&logo=orcid&logoColor=white" alt="ORCID 0000-0002-3168-6725"></a>
+  <a href="https://zenodo.org/records/21483353"><img src="https://img.shields.io/badge/OpenAIRE-indexed-6A1B9A?style=flat-square" alt="OpenAIRE indexed"></a>
 </p>
 
 <p align="center">
