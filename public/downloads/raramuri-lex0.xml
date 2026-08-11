@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?xml-model href="https://raw.githubusercontent.com/DARIAH-ERIC/lexicalresources/master/Schemas/TEILex0/out/TEILex0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
+<?xml-model href="https://lex-0.org/schema/lex-0.rng" type="application/xml" schematypens="http://relaxng.org/ns/structure/1.0"?>
 <TEI xmlns="http://www.tei-c.org/ns/1.0" type="lex-0" version="4.9.0">
   <teiHeader>
     <fileDesc>
@@ -9,7 +9,7 @@
         <respStmt><resp>Coordinación académica y técnica</resp><name>Fernando Sandoval Gutiérrez</name></respStmt>
       </titleStmt>
       <editionStmt><edition n="1.0.0">Edición digital completa</edition></editionStmt>
-      <extent>2581 entradas lexicográficas</extent>
+      <extent><measure unit="entries" quantity="2581">2581 entradas lexicográficas</measure></extent>
       <publicationStmt>
         <publisher>Universidad CEEES; Universidad Autónoma de Ciudad Juárez; Cuerpo Académico UACJ-113</publisher>
         <authority role="rightsHolder">Rarámuri Digital</authority>
@@ -18,8 +18,8 @@
       </publicationStmt>
       <sourceDesc>
         <listBibl type="dictionaries">
-          <biblStruct xml:id="SRC-02"><monogr><title>DICCIONARIO raramuri</title><imprint><publisher>Fuente digital del proyecto</publisher></imprint><extent>87 páginas</extent></monogr></biblStruct>
-          <biblStruct xml:id="SRC-01"><monogr><author>K. Simón Hilton</author><title>Diccionario tarahumara de Samachique</title><imprint><date when="1993">1993</date></imprint><extent>156 páginas</extent></monogr></biblStruct>
+          <biblStruct xml:id="SRC-02"><monogr><title>DICCIONARIO raramuri</title><imprint><publisher>Fuente digital del proyecto</publisher></imprint><extent><measure unit="pages" quantity="87">87 páginas</measure></extent></monogr></biblStruct>
+          <biblStruct xml:id="SRC-01"><monogr><author>K. Simón Hilton</author><title>Diccionario tarahumara de Samachique</title><imprint><date when="1993">1993</date></imprint><extent><measure unit="pages" quantity="156">156 páginas</measure></extent></monogr></biblStruct>
         </listBibl>
       </sourceDesc>
     </fileDesc>
