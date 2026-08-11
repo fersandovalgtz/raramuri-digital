@@ -62,11 +62,11 @@ jobs:
         run: |
           mkdir -p .tmp/tei-lex0
           curl --fail --location --retry 3 --retry-all-errors \
-            https://lex-0.org/schema/lex-0.rng \
-            --output .tmp/tei-lex0/lex-0.rng
+            https://lex-0.org/schema/lex-0.xsd \
+            --output .tmp/tei-lex0/lex-0.xsd
 
       - name: Validar TEI Lex-0 contra esquema oficial
-        run: xmllint --noout --relaxng .tmp/tei-lex0/lex-0.rng public/downloads/raramuri-lex0.xml
+        run: xmllint --noout --schema .tmp/tei-lex0/lex-0.xsd public/downloads/raramuri-lex0.xml
 
       - name: Publicar artefactos técnicos para revisión
         uses: actions/upload-artifact@v4
