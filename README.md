@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://doi.org/10.5281/zenodo.21483353"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21483353-1682D4?style=flat-square" alt="DOI"></a>
+  <a href="https://doi.org/10.5281/zenodo.21483353"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.21483353.svg" alt="DOI 10.5281/zenodo.21483353"></a>
   <a href="https://archive.softwareheritage.org/swh:1:snp:0982c208ac90273fdb553b181b8c75c66991e09d"><img src="https://archive.softwareheritage.org/badge/swh:1:snp:0982c208ac90273fdb553b181b8c75c66991e09d/" alt="Software Heritage swh:1:snp:0982c208ac90273fdb553b181b8c75c66991e09d"></a>
   <a href="RELEASE_NOTES_1.0.0.md"><img src="https://img.shields.io/badge/dataset-v1.0.0-172033?style=flat-square" alt="Dataset v1.0.0"></a>
   <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/plataforma-v3.1.0-7a263a?style=flat-square" alt="Plataforma v3.1.0"></a>
@@ -22,9 +22,10 @@
   <a href="public/downloads/raramuri-lex0.xml"><img src="https://img.shields.io/badge/TEI-Lex--0-8A1538?style=flat-square" alt="TEI Lex-0"></a>
   <a href="https://raramuri.ceees.mx/api/openapi"><img src="https://img.shields.io/badge/OpenAPI-3.1-2d6a4f?style=flat-square&logo=openapiinitiative&logoColor=white" alt="OpenAPI 3.1"></a>
   <a href="codemeta.json"><img src="https://img.shields.io/badge/metadatos-CodeMeta-3b5b92?style=flat-square" alt="Metadatos CodeMeta"></a>
-  <a href="CITATION.cff"><img src="https://img.shields.io/badge/citaci%C3%B3n-CFF-4b5563?style=flat-square" alt="Citation File Format"></a>
+  <a href="CITATION.cff"><img src="https://img.shields.io/badge/citaci%C3%B3n-CFF%201.2-4b5563?style=flat-square" alt="Citation File Format"></a>
   <a href="project-metadata.json"><img src="https://img.shields.io/badge/ISO%20639--3-tar-5b4b8a?style=flat-square" alt="ISO 639-3 tar"></a>
   <a href="public/downloads/manifest.json"><img src="https://img.shields.io/badge/integridad-SHA--256-455B55?style=flat-square" alt="Integridad SHA-256"></a>
+  <a href="FAIR_ASSESSMENT.md"><img src="https://img.shields.io/badge/FAIR-self--assessment-2d6a4f?style=flat-square" alt="FAIR self-assessment"></a>
 </p>
 
 <p align="center">
@@ -32,6 +33,27 @@
   <a href="DATA_LICENSE.md"><img src="https://img.shields.io/badge/datos-CC%20BY--NC--SA%204.0-7a263a?style=flat-square" alt="Datos CC BY-NC-SA 4.0"></a>
   <a href="CONTRIBUTORS.md"><img src="https://img.shields.io/badge/autor%C3%ADa-CRediT-6b7280?style=flat-square" alt="Autoría CRediT"></a>
   <a href="#estado-editorial"><img src="https://img.shields.io/badge/validaci%C3%B3n%20ling%C3%BC%C3%ADstica-pendiente-b7791f?style=flat-square" alt="Validación lingüística pendiente"></a>
+  <a href="https://github.com/fersandovalgtz/raramuri-digital/releases/tag/pdf-latest"><img src="https://img.shields.io/badge/release-PDF%20exports%20%C2%B7%202026--08--05-455B55?style=flat-square" alt="PDF release"></a>
+</p>
+
+<p align="center">
+  <a href="https://github.com/fersandovalgtz/raramuri-digital/commits/main"><img src="https://img.shields.io/github/last-commit/fersandovalgtz/raramuri-digital?style=flat-square&label=%C3%BAltimo%20commit" alt="Último commit"></a>
+  <img src="https://img.shields.io/github/commit-activity/m/fersandovalgtz/raramuri-digital?style=flat-square&label=commits%2Fmes" alt="Actividad mensual">
+  <img src="https://img.shields.io/github/repo-size/fersandovalgtz/raramuri-digital?style=flat-square&label=tama%C3%B1o" alt="Tamaño del repositorio">
+  <a href="https://github.com/fersandovalgtz/raramuri-digital/stargazers"><img src="https://img.shields.io/github/stars/fersandovalgtz/raramuri-digital?style=flat-square&logo=github" alt="GitHub stars"></a>
+  <a href="https://github.com/fersandovalgtz/raramuri-digital/forks"><img src="https://img.shields.io/github/forks/fersandovalgtz/raramuri-digital?style=flat-square&logo=github" alt="GitHub forks"></a>
+  <a href="https://github.com/fersandovalgtz/raramuri-digital/issues"><img src="https://img.shields.io/github/issues/fersandovalgtz/raramuri-digital?style=flat-square" alt="Issues"></a>
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/Node-%E2%89%A522.13.0-339933?style=flat-square&logo=nodedotjs&logoColor=white" alt="Node >=22.13.0">
+  <img src="https://img.shields.io/badge/Next.js-16.2.6-000000?style=flat-square&logo=nextdotjs&logoColor=white" alt="Next.js 16.2.6">
+  <img src="https://img.shields.io/badge/React-19.2.6-61DAFB?style=flat-square&logo=react&logoColor=black" alt="React 19.2.6">
+  <img src="https://img.shields.io/badge/TypeScript-5.9.3-3178C6?style=flat-square&logo=typescript&logoColor=white" alt="TypeScript 5.9.3">
+  <img src="https://img.shields.io/badge/Drizzle%20ORM-0.45.2-C5F74F?style=flat-square" alt="Drizzle ORM 0.45.2">
+  <img src="https://img.shields.io/badge/Tailwind-4.2.1-06B6D4?style=flat-square&logo=tailwindcss&logoColor=white" alt="Tailwind CSS 4.2.1">
+  <img src="https://img.shields.io/badge/Vite-8.0.13-646CFF?style=flat-square&logo=vite&logoColor=white" alt="Vite 8.0.13">
+  <img src="https://img.shields.io/badge/Wrangler-4.92.0-F38020?style=flat-square&logo=cloudflare&logoColor=white" alt="Wrangler 4.92.0">
 </p>
 
 <p align="center">
@@ -115,6 +137,7 @@ Universidad CEEES · Universidad Autónoma de Ciudad Juárez · Cuerpo Académic
 - [Ficha del conjunto de datos](DATASHEET.md) · [English](DATASHEET.en.md)
 - [Esquema y diccionario de datos](SCHEMA.md)
 - [Informe reproducible de calidad](QUALITY_REPORT.md) · [JSON](public/downloads/quality-report.json)
+- [Autoevaluación FAIR](FAIR_ASSESSMENT.md)
 - [Gobernanza y derechos lingüísticos](GOVERNANCE.md)
 - [Correcciones y contribuciones](CONTRIBUTING.md)
 - [Soporte](SUPPORT.md) · [Seguridad](SECURITY.md) · [Código de conducta](CODE_OF_CONDUCT.md)
