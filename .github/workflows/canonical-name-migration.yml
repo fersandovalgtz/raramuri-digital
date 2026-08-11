@@ -28,7 +28,7 @@ jobs:
           sudo apt-get install -y fonts-dejavu-core poppler-utils
           python -m pip install -r requirements-pdf.txt
 
-      - name: Normalizar generadores
+      - name: Normalizar fuentes responsables
         run: |
           python - <<'PY'
           from pathlib import Path
@@ -38,6 +38,7 @@ jobs:
           paths = [
               Path("scripts/generate-interoperability-exports.mjs"),
               Path("scripts/generate-pdf-exports.py"),
+              Path("app/page.tsx"),
           ]
           total = 0
           for path in paths:
@@ -48,7 +49,7 @@ jobs:
               path.write_text(text.replace(old, new), encoding="utf-8")
               total += count
               print(f"{path}: replaced {count} occurrence(s)")
-          print(f"Total replacements in generators: {total}")
+          print(f"Total replacements in source files: {total}")
           PY
 
       - name: Regenerar exportaciones de interoperabilidad
@@ -57,8 +58,10 @@ jobs:
       - name: Comprobar metadatos canónicos
         run: |
           node scripts/check-canonical-name.mjs
-          if git grep -n "Fernando Sandoval Gutiérrez" -- ':!*.md' ':!data/**'; then
-            echo "Deprecated responsible-name spelling remains in tracked non-documentary files." >&2
+          if git grep -n "Fernando Sandoval Gutiérrez" -- \
+            ':!.github/workflows/canonical-name-migration.yml' \
+            ':!scripts/check-canonical-name.mjs'; then
+            echo "Deprecated responsible-name spelling remains in tracked files." >&2
             exit 1
           fi
 
@@ -88,7 +91,7 @@ jobs:
           if ! git diff --quiet; then
             git config user.name "github-actions[bot]"
             git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add scripts/generate-interoperability-exports.mjs scripts/generate-pdf-exports.py public/downloads
-            git commit -m "Normalizar nombre canónico en generadores y exportaciones"
+            git add app/page.tsx scripts/generate-interoperability-exports.mjs scripts/generate-pdf-exports.py public/downloads
+            git commit -m "Normalizar nombre canónico en fuentes y exportaciones"
             git push origin HEAD:${{ github.head_ref }}
           fi
