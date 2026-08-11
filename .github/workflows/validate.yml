@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: write
+  contents: read
 
 jobs:
   validate:
@@ -16,8 +16,6 @@ jobs:
     steps:
       - name: Obtener repositorio
         uses: actions/checkout@v4
-        with:
-          ref: ${{ github.event.pull_request.head.sha || github.sha }}
 
       - name: Configurar Node.js
         uses: actions/setup-node@v4
@@ -43,17 +41,6 @@ jobs:
 
       - name: Regenerar exportaciones
         run: npm run data:exports
-
-      - name: Sincronizar TEI Lex-0 versionado durante esta migración
-        if: github.event_name == 'pull_request' && github.head_ref == 'agent/tei-lex0-validation'
-        run: |
-          if ! git diff --quiet -- public/downloads/raramuri-lex0.xml public/downloads/manifest.json; then
-            git config user.name "github-actions[bot]"
-            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-            git add public/downloads/raramuri-lex0.xml public/downloads/manifest.json
-            git commit -m "Regenerar TEI Lex-0 conforme a 0.9.5"
-            git push origin HEAD:${{ github.head_ref }}
-          fi
 
       - name: Validar CLDF con pycldf
         run: python -m pycldf validate public/downloads/cldf/cldf-metadata.json
