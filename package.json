@@ -17,9 +17,12 @@
     "data:accents": "node --no-warnings scripts/extract-accented-words.mjs",
     "data:inventories": "node scripts/extract-grammatical-inventories.mjs",
     "data:advanced": "node --no-warnings scripts/extract-advanced-products.mjs",
-    "data:exports": "node scripts/generate-interoperability-exports.mjs",
+    "data:cldf": "node scripts/generate-cldf.mjs",
+    "data:orthography": "node scripts/generate-orthography-profile.mjs",
+    "data:exports": "node scripts/generate-interoperability-exports.mjs && node scripts/generate-cldf.mjs && node scripts/generate-orthography-profile.mjs",
     "data:quality": "node scripts/generate-quality-report.mjs",
     "data:pdf": "python3 scripts/generate-pdf-exports.py",
+    "validate:cldf": "python -m pycldf validate public/downloads/cldf/cldf-metadata.json",
     "validate": "npm run data:exports && npm run data:quality && npm run lint && npm test",
     "db:generate": "drizzle-kit generate"
   },
