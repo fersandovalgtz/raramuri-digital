@@ -64,6 +64,9 @@ jobs:
           curl --fail --location --retry 3 --retry-all-errors \
             https://lex-0.org/schema/lex-0.xsd \
             --output .tmp/tei-lex0/lex-0.xsd
+          curl --fail --location --retry 3 --retry-all-errors \
+            https://lex-0.org/schema/xml.xsd \
+            --output .tmp/tei-lex0/xml.xsd
 
       - name: Validar TEI Lex-0 contra esquema oficial
         run: xmllint --noout --schema .tmp/tei-lex0/lex-0.xsd public/downloads/raramuri-lex0.xml
