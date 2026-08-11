@@ -1,4 +1,4 @@
-name: Fix CI OpenAPI reproducibility
+name: Remove temporary CI repair workflow
 
 on:
   push:
@@ -10,21 +10,15 @@ permissions:
   contents: write
 
 jobs:
-  fix:
+  cleanup:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Regenerate canonical OpenAPI export
+      - name: Remove temporary workflow
         run: |
-          npm ci
-          npm run data:exports
-          changed="$(git diff --name-only)"
-          printf '%s\n' "$changed"
-          test "$changed" = "public/downloads/openapi-lexico.json"
-      - name: Commit canonical export
-        run: |
+          rm .github/workflows/fix-ci-openapi-contact.yml
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add public/downloads/openapi-lexico.json
-          git commit -m 'fix: regenerate canonical OpenAPI export'
+          git add -u .github/workflows/fix-ci-openapi-contact.yml
+          git commit -m 'chore: remove temporary CI repair workflow [skip ci]'
           git push
