@@ -1,0 +1,49 @@
+name: Link personal GitHub profile
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/link-personal-profile-one-shot.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Add reciprocal personal repository links
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+
+          replacements = {
+              'README.md': (
+                  '[fernando.sandoval@uacj.mx](mailto:fernando.sandoval@uacj.mx) · [ORCID 0000-0002-3168-6725](https://orcid.org/0000-0002-3168-6725)',
+                  '[fernando.sandoval@uacj.mx](mailto:fernando.sandoval@uacj.mx) · [ORCID 0000-0002-3168-6725](https://orcid.org/0000-0002-3168-6725) · [Perfil personal y otros proyectos en GitHub](https://github.com/fersandovalgtz/fersandovalgtz)'
+              ),
+              'README.en.md': (
+                  '[fernando.sandoval@uacj.mx](mailto:fernando.sandoval@uacj.mx) · [ORCID 0000-0002-3168-6725](https://orcid.org/0000-0002-3168-6725)',
+                  '[fernando.sandoval@uacj.mx](mailto:fernando.sandoval@uacj.mx) · [ORCID 0000-0002-3168-6725](https://orcid.org/0000-0002-3168-6725) · [Personal profile and other GitHub projects](https://github.com/fersandovalgtz/fersandovalgtz)'
+              ),
+          }
+
+          for filename, (old, new) in replacements.items():
+              path = Path(filename)
+              text = path.read_text(encoding='utf-8')
+              if new in text:
+                  continue
+              if old not in text:
+                  raise SystemExit(f'Expected contact anchor not found in {filename}')
+              path.write_text(text.replace(old, new, 1), encoding='utf-8')
+          PY
+      - name: Commit changes and remove temporary workflow
+        run: |
+          rm .github/workflows/link-personal-profile-one-shot.yml
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add README.md README.en.md .github/workflows/link-personal-profile-one-shot.yml
+          git commit -m 'docs: link personal GitHub profile from Rarámuri Digital'
+          git push
