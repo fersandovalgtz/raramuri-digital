@@ -1,4 +1,4 @@
-name: Fix CI OpenAPI contact reproducibility
+name: Fix CI OpenAPI reproducibility
 
 on:
   push:
@@ -14,27 +14,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Normalize OpenAPI contact name in generator
-        run: |
-          python - <<'PY'
-          from pathlib import Path
-          path = Path('scripts/generate-interoperability-exports.mjs')
-          text = path.read_text(encoding='utf-8')
-          old = 'contact: { name: "Fernando Sandoval Gutiérrez", email: "fernando.sandoval@uacj.mx" },'
-          new = 'contact: { name: "Fernando Sandoval Gutierrez", email: "fernando.sandoval@uacj.mx" },'
-          if old not in text:
-              raise SystemExit('Expected OpenAPI contact literal not found')
-          path.write_text(text.replace(old, new, 1), encoding='utf-8')
-          PY
-      - name: Verify generated exports are reproducible
+      - name: Regenerate canonical OpenAPI export
         run: |
           npm ci
           npm run data:exports
-          git diff --exit-code -- public/downloads
-      - name: Commit fix
+          changed="$(git diff --name-only)"
+          printf '%s\n' "$changed"
+          test "$changed" = "public/downloads/openapi-lexico.json"
+      - name: Commit canonical export
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add scripts/generate-interoperability-exports.mjs
-          git commit -m 'fix: restore OpenAPI export reproducibility'
+          git add public/downloads/openapi-lexico.json
+          git commit -m 'fix: regenerate canonical OpenAPI export'
           git push
