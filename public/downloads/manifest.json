@@ -16,16 +16,16 @@
       "label": "XML lexicográfico",
       "file": "raramuri-lexico.xml",
       "media_type": "application/xml",
-      "bytes": 2648346,
-      "sha256": "e8ab553ccc87b710c38436803a9aa18b92a450f90deb7588b3ad93f425665fb7",
+      "bytes": 2648345,
+      "sha256": "66bbf59d67bd0d4374b83aa82ea4db4fef12da8559569dc29361fb506ef073b0",
       "entry_count": 2581
     },
     {
       "label": "JSON web y móvil",
       "file": "raramuri-lexico.json",
       "media_type": "application/json",
-      "bytes": 2078543,
-      "sha256": "98577682da2d87be6a4042e54ccdc196083fa62e41d1de6cecd792d3977701f4",
+      "bytes": 2078542,
+      "sha256": "f3d06113e2715d6cb330f0cf43c8131158c5518eb9291e2cec95f337b89b5cce",
       "entry_count": 2581
     },
     {
@@ -48,16 +48,16 @@
       "label": "TEI Lex-0 0.9.5",
       "file": "raramuri-lex0.xml",
       "media_type": "application/tei+xml",
-      "bytes": 1870763,
-      "sha256": "9790d0943093a7b5658bcff4947bc4463a63ffa55c940536e84677407a27bfc8",
+      "bytes": 1870761,
+      "sha256": "1d830e4900bcf05a1b26aab3c545fd40da10b0dfbfbc3147804d98c2f2b370c1",
       "entry_count": 2581
     },
     {
       "label": "Especificación OpenAPI",
       "file": "openapi-lexico.json",
       "media_type": "application/vnd.oai.openapi+json;version=3.1",
-      "bytes": 5957,
-      "sha256": "ac0851076b6cb8b6e2d85bf8b479d17b2e9abb4ef0375ebb3b3923663bfe0135",
+      "bytes": 5956,
+      "sha256": "d7b04297597aad98e873b426f66c36343a7123aa4f99fbdd21a2ba08ade38461",
       "entry_count": 2581
     }
   ]

@@ -46,7 +46,7 @@ DEFAULT_METADATA = PROJECT_ROOT / "project-metadata.json"
 DEFAULT_OUTPUT = PROJECT_ROOT / "dist" / "pdf"
 LICENSE_ID = "CC BY-NC-SA 4.0"
 LICENSE_URL = "https://creativecommons.org/licenses/by-nc-sa/4.0/"
-RESPONSIBLE = "Fernando Sandoval Gutiérrez"
+RESPONSIBLE = "Fernando Sandoval Gutierrez"
 PUBLISHERS = "Universidad CEEES; Universidad Autónoma de Ciudad Juárez; Cuerpo Académico UACJ-113"
 
 

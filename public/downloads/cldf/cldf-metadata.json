@@ -1,0 +1,231 @@
+{
+  "@context": [
+    "http://www.w3.org/ns/csvw",
+    {
+      "@language": "es"
+    }
+  ],
+  "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#Dictionary",
+  "dc:title": "Rarámuri Digital: CLDF Dictionary",
+  "dc:description": "Serialización interoperable de la base lexicográfica publicada por Rarámuri Digital. No constituye validación lingüística adicional.",
+  "dc:bibliographicCitation": "Sandoval Gutierrez, Fernando. Rarámuri Digital, dataset 1.0.0. DOI: 10.5281/zenodo.21483353.",
+  "dc:license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "dc:source": "sources.bib",
+  "dc:version": "1.0.0",
+  "dc:issued": "2026-07-21",
+  "dc:identifier": "https://doi.org/10.5281/zenodo.21483353",
+  "dialect": {
+    "commentPrefix": null
+  },
+  "tables": [
+    {
+      "url": "entries.csv",
+      "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#EntryTable",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "ID",
+            "required": true,
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+            "datatype": {
+              "base": "string",
+              "format": "[a-zA-Z0-9_\\-]+"
+            }
+          },
+          {
+            "name": "Language_ID",
+            "required": true,
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#languageReference",
+            "dc:extent": "singlevalued",
+            "datatype": "string"
+          },
+          {
+            "name": "Headword",
+            "required": true,
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#headword",
+            "dc:extent": "singlevalued",
+            "datatype": "string"
+          },
+          {
+            "name": "Part_Of_Speech",
+            "required": false,
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#partOfSpeech",
+            "datatype": "string"
+          },
+          {
+            "name": "Headword_Raw",
+            "datatype": "string"
+          },
+          {
+            "name": "Headword_Normalized",
+            "datatype": "string"
+          },
+          {
+            "name": "Homonym_Number",
+            "datatype": "integer"
+          },
+          {
+            "name": "Classification_Family",
+            "datatype": "string"
+          },
+          {
+            "name": "Translation_Raw",
+            "datatype": "string"
+          },
+          {
+            "name": "Variants_JSON",
+            "datatype": "string"
+          },
+          {
+            "name": "Examples_JSON",
+            "datatype": "string"
+          },
+          {
+            "name": "Comment",
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#comment",
+            "datatype": "string"
+          },
+          {
+            "name": "Source",
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#source",
+            "separator": ";",
+            "datatype": "string"
+          },
+          {
+            "name": "Publication_Status",
+            "datatype": "string"
+          },
+          {
+            "name": "Validation_Status",
+            "datatype": "string"
+          },
+          {
+            "name": "Transcription_Status",
+            "datatype": "string"
+          }
+        ],
+        "primaryKey": "ID",
+        "foreignKeys": [
+          {
+            "columnReference": "Language_ID",
+            "reference": {
+              "resource": "languages.csv",
+              "columnReference": "ID"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "url": "senses.csv",
+      "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#SenseTable",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "ID",
+            "required": true,
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+            "datatype": {
+              "base": "string",
+              "format": "[a-zA-Z0-9_\\-]+"
+            }
+          },
+          {
+            "name": "Description",
+            "required": true,
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#description",
+            "datatype": "string"
+          },
+          {
+            "name": "Entry_ID",
+            "required": true,
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#entryReference",
+            "datatype": "string"
+          },
+          {
+            "name": "Position",
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#position",
+            "datatype": "integer"
+          },
+          {
+            "name": "Description_Language",
+            "datatype": "string"
+          }
+        ],
+        "primaryKey": "ID",
+        "foreignKeys": [
+          {
+            "columnReference": "Entry_ID",
+            "reference": {
+              "resource": "entries.csv",
+              "columnReference": "ID"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "url": "languages.csv",
+      "dc:conformsTo": "http://cldf.clld.org/v1.0/terms.rdf#LanguageTable",
+      "tableSchema": {
+        "columns": [
+          {
+            "name": "ID",
+            "required": true,
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#id",
+            "datatype": {
+              "base": "string",
+              "format": "[a-zA-Z0-9_\\-]+"
+            }
+          },
+          {
+            "name": "Name",
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#name",
+            "datatype": "string"
+          },
+          {
+            "name": "Macroarea",
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#macroarea",
+            "datatype": "string"
+          },
+          {
+            "name": "Latitude",
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#latitude",
+            "datatype": {
+              "base": "decimal",
+              "minimum": -90,
+              "maximum": 90
+            }
+          },
+          {
+            "name": "Longitude",
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#longitude",
+            "datatype": {
+              "base": "decimal",
+              "minimum": -180,
+              "maximum": 180
+            }
+          },
+          {
+            "name": "Glottocode",
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#glottocode",
+            "datatype": {
+              "base": "string",
+              "format": "[a-z0-9]{4}[1-9][0-9]{3}"
+            },
+            "valueUrl": "http://glottolog.org/resource/languoid/id/{Glottocode}"
+          },
+          {
+            "name": "ISO639P3code",
+            "propertyUrl": "http://cldf.clld.org/v1.0/terms.rdf#iso639P3code",
+            "datatype": {
+              "base": "string",
+              "format": "[a-z]{3}"
+            }
+          }
+        ],
+        "primaryKey": "ID"
+      }
+    }
+  ]
+}
