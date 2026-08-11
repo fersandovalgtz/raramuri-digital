@@ -100,7 +100,7 @@ const genericXml = `<?xml version="1.0" encoding="UTF-8"?>
   <metadata>
     <title>Rarámuri Digital: base lexicográfica maestra</title>
     <publisher>Universidad CEEES; Universidad Autónoma de Ciudad Juárez; Cuerpo Académico UACJ-113</publisher>
-    <responsible>Fernando Sandoval Gutiérrez</responsible>
+    <responsible>Fernando Sandoval Gutierrez</responsible>
     <contact>fernando.sandoval@uacj.mx</contact>
     <languages><objectLanguage code="tar">rarámuri</objectLanguage><targetLanguage code="es">español</targetLanguage></languages>
     <entryCount>${entries.length}</entryCount>
@@ -123,7 +123,7 @@ const jsonExport = {
   generated: generatedAt,
   languages: { object: { code: "tar", label: "rarámuri" }, target: { code: "es", label: "español" } },
   publisher: ["Universidad CEEES", "Universidad Autónoma de Ciudad Juárez", "Cuerpo Académico UACJ-113"],
-  responsible: { name: "Fernando Sandoval Gutiérrez", email: "fernando.sandoval@uacj.mx" },
+  responsible: { name: "Fernando Sandoval Gutierrez", email: "fernando.sandoval@uacj.mx" },
   license: { id: license, url: licenseUrl },
   publication_status: publicationStatus,
   validation_status: validationStatus,
@@ -214,8 +214,8 @@ const teiExport = `<?xml version="1.0" encoding="UTF-8"?>
     <fileDesc>
       <titleStmt>
         <title>Rarámuri Digital: edición lexicográfica TEI Lex-0</title>
-        <principal>Fernando Sandoval Gutiérrez</principal>
-        <respStmt><resp>Coordinación académica y técnica</resp><name>Fernando Sandoval Gutiérrez</name></respStmt>
+        <principal>Fernando Sandoval Gutierrez</principal>
+        <respStmt><resp>Coordinación académica y técnica</resp><name>Fernando Sandoval Gutierrez</name></respStmt>
       </titleStmt>
       <editionStmt><edition n="${datasetVersion}">Edición digital completa</edition></editionStmt>
       <extent>${entries.length} entradas lexicográficas</extent>
@@ -257,7 +257,7 @@ const openApiExport = {
     title: "API lexicográfica de Rarámuri Digital",
     version: datasetVersion,
     description: `Consulta pública de ${entries.length} entradas autorizadas para difusión. La validación lingüística está pendiente.`,
-    contact: { name: "Fernando Sandoval Gutiérrez", email: "fernando.sandoval@uacj.mx" },
+    contact: { name: "Fernando Sandoval Gutierrez", email: "fernando.sandoval@uacj.mx" },
     license: { name: license, identifier: "CC-BY-NC-SA-4.0", url: licenseUrl },
   },
   servers: [{ url: "https://raramuri.ceees.mx", description: "Producción" }],

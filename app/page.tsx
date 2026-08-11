@@ -152,7 +152,7 @@ export default function Home() {
         <section className="content-section" id="responsable">
           <h2>Responsable</h2>
           <div className="responsible-card">
-            <div><span>Nombre</span><strong>Dr. Fernando Sandoval Gutiérrez</strong></div>
+            <div><span>Nombre</span><strong>Dr. Fernando Sandoval Gutierrez</strong></div>
             <div><span>Función</span><strong>Coordinación académica y técnica</strong></div>
             <div><span>Adscripción</span><strong>UACJ · Universidad CEEES · UACJ-113</strong></div>
             <div><span>Correo</span><strong><a href="mailto:fernando.sandoval@uacj.mx">fernando.sandoval@uacj.mx</a></strong></div>
@@ -165,7 +165,7 @@ export default function Home() {
           <div className="license-grid">
             <article><h3>CC BY-NC-SA 4.0</h3><p>Los datos y la documentación producidos por el proyecto pueden compartirse y adaptarse con atribución, para fines no comerciales y bajo la misma licencia.</p><a className="text-link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.es" target="_blank" rel="license noreferrer">Términos de la licencia →</a></article>
             <article><h3>Exclusiones</h3><p>Los facsímiles, textos fuente, logotipos y materiales de terceros conservan sus propios derechos y condiciones de uso.</p></article>
-            <article><h3>Atribución</h3><p>Rarámuri Digital. Fernando Sandoval Gutiérrez; Universidad CEEES; Universidad Autónoma de Ciudad Juárez; Cuerpo Académico UACJ-113.</p></article>
+            <article><h3>Atribución</h3><p>Rarámuri Digital. Fernando Sandoval Gutierrez; Universidad CEEES; Universidad Autónoma de Ciudad Juárez; Cuerpo Académico UACJ-113.</p></article>
           </div>
         </section>
       </main>

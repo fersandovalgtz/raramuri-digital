@@ -5,8 +5,8 @@
     <fileDesc>
       <titleStmt>
         <title>Rarámuri Digital: edición lexicográfica TEI Lex-0</title>
-        <principal>Fernando Sandoval Gutiérrez</principal>
-        <respStmt><resp>Coordinación académica y técnica</resp><name>Fernando Sandoval Gutiérrez</name></respStmt>
+        <principal>Fernando Sandoval Gutierrez</principal>
+        <respStmt><resp>Coordinación académica y técnica</resp><name>Fernando Sandoval Gutierrez</name></respStmt>
       </titleStmt>
       <editionStmt><edition n="1.0.0">Edición digital completa</edition></editionStmt>
       <extent><measure unit="entries" quantity="2581">2581 entradas lexicográficas</measure></extent>
