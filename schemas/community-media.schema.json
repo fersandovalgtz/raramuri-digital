@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raramuri.ceees.mx/schemas/community-media.schema.json",
+  "title": "Rarámuri Digital community media contribution",
+  "description": "Minimum technical metadata for a community or speaker contribution. This schema does not constitute consent and must not contain private contact details or private consent evidence.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "contribution_id",
+    "media_type",
+    "consent_scope",
+    "attribution_mode",
+    "review_status",
+    "created_at",
+    "consent_verified_at"
+  ],
+  "properties": {
+    "contribution_id": {
+      "type": "string",
+      "pattern": "^RDC-[0-9]{6}$"
+    },
+    "record_ids": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^RD-[0-9]{6}$" },
+      "uniqueItems": true,
+      "default": []
+    },
+    "media_type": {
+      "type": "string",
+      "enum": ["audio", "video", "photo", "text", "correction", "other"]
+    },
+    "public_uri": {
+      "type": ["string", "null"],
+      "format": "uri"
+    },
+    "sha256": {
+      "type": ["string", "null"],
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "attribution_mode": {
+      "type": "string",
+      "enum": ["named", "pseudonym", "anonymous"]
+    },
+    "public_attribution": {
+      "type": ["string", "null"],
+      "description": "Public display name or pseudonym only. Do not store private legal identity here when anonymous attribution was chosen."
+    },
+    "language_or_variant_as_reported": {
+      "type": ["string", "null"]
+    },
+    "locality_public": {
+      "type": ["string", "null"],
+      "description": "Only the geographic granularity explicitly authorized for public display."
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "recorded_by_public": {
+      "type": ["string", "null"]
+    },
+    "consent_scope": {
+      "type": "string",
+      "enum": ["public", "research-only", "restricted"]
+    },
+    "consent_version": {
+      "type": ["string", "null"]
+    },
+    "consent_verified_at": {
+      "type": "string",
+      "format": "date"
+    },
+    "reuse_condition": {
+      "type": ["string", "null"],
+      "description": "Human-readable condition that may be more restrictive than the repository's general data license."
+    },
+    "review_status": {
+      "type": "string",
+      "enum": [
+        "submitted",
+        "consent-verified",
+        "speaker-reviewed",
+        "linguist-reviewed",
+        "community-reviewed",
+        "restricted",
+        "withdrawn"
+      ]
+    },
+    "review_note": {
+      "type": ["string", "null"]
+    },
+    "cultural_sensitivity": {
+      "type": "string",
+      "enum": ["not-assessed", "no-known-restriction", "restricted", "do-not-publish"],
+      "default": "not-assessed"
+    },
+    "source_note": {
+      "type": ["string", "null"]
+    },
+    "withdrawn_at": {
+      "type": ["string", "null"],
+      "format": "date"
+    }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "attribution_mode": { "const": "anonymous" } } },
+      "then": { "properties": { "public_attribution": { "type": "null" } } }
+    },
+    {
+      "if": { "properties": { "consent_scope": { "enum": ["research-only", "restricted"] } } },
+      "then": { "properties": { "public_uri": { "type": "null" } } }
+    }
+  ]
+}
