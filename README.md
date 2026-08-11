@@ -93,7 +93,7 @@ Si este recurso resulta útil para su investigación, enseñanza o desarrollo, c
 **Dr. Fernando Sandoval Gutierrez**<br>
 Coordinación académica y técnica<br>
 Universidad CEEES · Universidad Autónoma de Ciudad Juárez · Cuerpo Académico UACJ-113<br>
-[fernando.sandoval@uacj.mx](mailto:fernando.sandoval@uacj.mx) · [ORCID 0000-0002-3168-6725](https://orcid.org/0000-0002-3168-6725)
+[fernando.sandoval@uacj.mx](mailto:fernando.sandoval@uacj.mx) · [ORCID 0000-0002-3168-6725](https://orcid.org/0000-0002-3168-6725) · [Perfil personal y otros proyectos en GitHub](https://github.com/fersandovalgtz/fersandovalgtz)
 
 ## 🏛️ Instituciones
 
