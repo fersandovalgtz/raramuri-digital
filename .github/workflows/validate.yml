@@ -58,6 +58,16 @@ jobs:
           npm run data:orthography -- --output .tmp/orthography-2
           diff -ru .tmp/orthography-1 .tmp/orthography-2
 
+      - name: Publicar artefactos técnicos para revisión
+        uses: actions/upload-artifact@v4
+        with:
+          name: raramuri-interoperability-${{ github.sha }}
+          path: |
+            public/downloads/cldf/
+            public/downloads/orthography/
+          if-no-files-found: error
+          retention-days: 30
+
       - name: Regenerar informe de calidad
         run: npm run data:quality
 
