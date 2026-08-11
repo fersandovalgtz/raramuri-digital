@@ -14,11 +14,16 @@ export function SiteHeader() {
           <Link href="/">Inicio</Link>
           <Link href="/productos">Productos</Link>
           <Link href="/descargas">Datos/API</Link>
+          <Link href="/estadisticas">Estadísticas</Link>
           <Link href="/documentacion">Documentación</Link>
-          <Link href="/#arquitectura">Arquitectura</Link>
           <Link href="/#fuentes">Fuentes</Link>
-          <Link href="/#proyecto">Proyecto</Link>
-          <Link href="/#licencia">Licencia</Link>
+          <span className="language-links" aria-label="Idiomas">
+            <Link href="/">ES</Link>
+            <Link href="/international/en">EN</Link>
+            <Link href="/international/de">DE</Link>
+            <Link href="/international/fr">FR</Link>
+            <Link href="/international/pt">PT</Link>
+          </span>
         </nav>
         <span className="system-version">v{metadata.platform_version}</span>
       </header>
