@@ -50,9 +50,9 @@ El proyecto dispone asimismo de un protocolo operativo para futuras contribucion
 
 ### TEI Lex-0
 
-[TEI Lex-0](https://lex-0.org/) ofrece recomendaciones comunitarias y esquemas oficiales para codificar diccionarios legibles por máquina. Rarámuri Digital ya genera una exportación etiquetada como TEI Lex-0 0.9.5.
+[TEI Lex-0](https://lex-0.org/) ofrece recomendaciones comunitarias y esquemas oficiales para codificar diccionarios legibles por máquina. Rarámuri Digital genera una exportación TEI Lex-0 0.9.5.
 
-**Estado:** se está incorporando validación automática contra el esquema oficial vigente. La instrucción `xml-model` del generador todavía conserva una referencia histórica al antiguo repositorio DARIAH y deberá actualizarse junto con las salidas versionadas una vez terminado el diagnóstico de conformidad.
+**Estado:** el 11 de agosto de 2026 la exportación fue validada contra el XSD oficial. La prueba detectó tres incidencias en `<extent>`; se corrigieron mediante `<measure>`, se actualizó la instrucción `xml-model` a `https://lex-0.org/schema/lex-0.rng`, se regeneró el artefacto y se recalculó su SHA-256. El CI descarga ahora `lex-0.xsd` y `xml.xsd` desde `lex-0.org` y valida el XML regenerado en cada ejecución. Esta conformidad técnica no se presenta como validación lingüística.
 
 ### PanLex
 
@@ -64,7 +64,13 @@ El proyecto dispone asimismo de un protocolo operativo para futuras contribucion
 
 [RichardLitt/low-resource-languages](https://github.com/RichardLitt/low-resource-languages) mantiene una lista curada de herramientas y recursos para lenguas con baja representación digital y acepta propuestas mediante issues y pull requests.
 
-**Estado:** se preparó una propuesta de incorporación de Rarámuri Digital y se verificó que la lista no contiene actualmente una entrada Rarámuri/Tarahumara. La integración de GitHub disponible en este proyecto no tiene permiso de escritura sobre ese repositorio externo y devolvió `403`; por ello la propuesta no se registra como enviada hasta que pueda publicarse efectivamente.
+**Estado:** se preparó una propuesta de incorporación de Rarámuri Digital y se verificó que la lista no contiene actualmente una entrada Rarámuri/Tarahumara. La integración de GitHub devolvió `403 Resource not accessible by integration` al intentar publicar la propuesta en el repositorio externo. Como vía alternativa autorizada, el 11 de agosto se contactó directamente a Richard Littauer mediante el correo público de su perfil. La incorporación sigue pendiente y no se considerará completada hasta que exista un issue, PR o entrada verificable.
+
+### CLARIN / CLARIAH-ES
+
+[CLARIN](https://www.clarin.eu/) ofrece infraestructura europea para descubrimiento y reutilización de recursos lingüísticos mediante servicios como el Virtual Language Observatory (VLO). [CLARIAH-ES](https://www.clariah.es/) es la infraestructura española vinculada con CLARIN y DARIAH.
+
+**Estado:** el 10 de agosto de 2026 se consultó a CLARIN VLO cuál era la vía adecuada para incorporar Rarámuri Digital sin duplicar infraestructura. El 11 de agosto, Dieter Van Uytvanck, Technical Director de CLARIN ERIC, recomendó depositar el dataset mediante un centro CLARIAH-ES porque esa ruta asegurará su visibilidad en VLO. German Rigau incorporó a Ainara Estarrona y Xabier Goenaga, de la oficina de CLARIAH-ES, para apoyar la inclusión. Se respondió en el mismo hilo confirmando disposición para adaptar el paquete. No se desarrollará OAI-PMH/CMDI propio salvo que CLARIAH-ES lo requiera expresamente.
 
 ### GiellaLT y Divvun
 
@@ -81,10 +87,11 @@ El proyecto dispone asimismo de un protocolo operativo para futuras contribucion
 | AmericasNLP | Consulta enviada | Identificar un derivado computacional acotado y metodológicamente defendible |
 | MayanV | Consulta enviada | Precisar usos léxicos complementarios a MT |
 | Living Dictionaries | Gobernanza multimedia implementada; consulta enviada | Diseñar piloto con hablantes antes de cualquier integración |
-| TEI Lex-0 | Exportación existente; validación oficial en implementación | Corregir conformidad y referencia de esquema si procede |
+| TEI Lex-0 | Exportación corregida y validada contra XSD oficial en CI | Mantener conformidad en regeneraciones futuras |
 | Lexibank / Concepticon | Consulta enviada; piloto manual planificado | Evaluar 30–50 sentidos de alta transparencia |
 | PanLex | Licencia/procedencia revisadas; aclaración solicitada | Decidir enlace, registro o no integración según respuesta |
-| Awesome Low Resource Languages | Propuesta preparada; envío externo bloqueado por permisos | Publicar issue/PR cuando exista una vía autorizada |
+| Awesome Low Resource Languages | Propuesta enviada por correo al mantenedor tras bloqueo 403 | Obtener issue, PR o incorporación verificable |
+| CLARIN / CLARIAH-ES | Ruta institucional definida y respuesta enviada | Recibir procedimiento de depósito y completar inclusión en VLO |
 | GiellaLT / Divvun | Referentes de largo plazo | Reconsiderar tras madurez lingüística y comunitaria |
 
 ## Principios para colaboración externa
