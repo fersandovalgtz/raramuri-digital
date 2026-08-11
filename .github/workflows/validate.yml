@@ -42,6 +42,9 @@ jobs:
       - name: Regenerar exportaciones
         run: npm run data:exports
 
+      - name: Verificar nombre canónico del responsable
+        run: node scripts/check-canonical-name.mjs
+
       - name: Validar CLDF con pycldf
         run: python -m pycldf validate public/downloads/cldf/cldf-metadata.json
 
