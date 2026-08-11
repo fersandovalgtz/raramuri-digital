@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://doi.org/10.5281/zenodo.21483353"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.21483353.svg" alt="DOI"></a>
+  <a href="https://doi.org/10.5281/zenodo.21483353"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21483353-1682D4?style=flat-square" alt="DOI"></a>
   <a href="RELEASE_NOTES_1.0.0.md"><img src="https://img.shields.io/badge/dataset-v1.0.0-172033?style=flat-square" alt="Dataset v1.0.0"></a>
   <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/platform-v3.1.0-7a263a?style=flat-square" alt="Platform v3.1.0"></a>
   <a href="public/downloads/manifest.json"><img src="https://img.shields.io/badge/entries-2%2C581-172033?style=flat-square" alt="2,581 entries"></a>

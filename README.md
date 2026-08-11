@@ -7,7 +7,7 @@
 </p>
 
 <p align="center">
-  <a href="https://doi.org/10.5281/zenodo.21483353"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.21483353.svg" alt="DOI"></a>
+  <a href="https://doi.org/10.5281/zenodo.21483353"><img src="https://img.shields.io/badge/DOI-10.5281%2Fzenodo.21483353-1682D4?style=flat-square" alt="DOI"></a>
   <a href="https://archive.softwareheritage.org/swh:1:snp:0982c208ac90273fdb553b181b8c75c66991e09d"><img src="https://archive.softwareheritage.org/badge/swh:1:snp:0982c208ac90273fdb553b181b8c75c66991e09d/" alt="Software Heritage swh:1:snp:0982c208ac90273fdb553b181b8c75c66991e09d"></a>
   <a href="RELEASE_NOTES_1.0.0.md"><img src="https://img.shields.io/badge/dataset-v1.0.0-172033?style=flat-square" alt="Dataset v1.0.0"></a>
   <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/plataforma-v3.1.0-7a263a?style=flat-square" alt="Plataforma v3.1.0"></a>
