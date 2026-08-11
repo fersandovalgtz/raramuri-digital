@@ -36,7 +36,7 @@ jobs:
         run: |
           npm ci
           sudo apt-get update
-          sudo apt-get install -y fonts-dejavu-core poppler-utils
+          sudo apt-get install -y fonts-dejavu-core poppler-utils libxml2-utils
           python -m pip install -r requirements-pdf.txt -r requirements-cldf.txt
 
       - name: Regenerar exportaciones
@@ -57,6 +57,16 @@ jobs:
           npm run data:orthography -- --output .tmp/orthography-1
           npm run data:orthography -- --output .tmp/orthography-2
           diff -ru .tmp/orthography-1 .tmp/orthography-2
+
+      - name: Descargar esquema oficial TEI Lex-0
+        run: |
+          mkdir -p .tmp/tei-lex0
+          curl --fail --location --retry 3 --retry-all-errors \
+            https://lex-0.org/schema/lex-0.rng \
+            --output .tmp/tei-lex0/lex-0.rng
+
+      - name: Validar TEI Lex-0 contra esquema oficial
+        run: xmllint --noout --relaxng .tmp/tei-lex0/lex-0.rng public/downloads/raramuri-lex0.xml
 
       - name: Publicar artefactos técnicos para revisión
         uses: actions/upload-artifact@v4
