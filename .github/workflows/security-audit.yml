@@ -1,0 +1,45 @@
+name: Auditoría npm de seguridad
+
+on:
+  push:
+    branches:
+      - security/npm-audit-2026-08-13
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Obtener repositorio
+        uses: actions/checkout@v4
+
+      - name: Configurar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22.13.0
+          cache: npm
+
+      - name: Instalar dependencias
+        run: npm ci
+
+      - name: Auditar árbol completo
+        run: npm audit --json > npm-audit-full.json || true
+
+      - name: Auditar sólo producción
+        run: npm audit --omit=dev --json > npm-audit-production.json || true
+
+      - name: Registrar dependencias desactualizadas
+        run: npm outdated --json > npm-outdated.json || true
+
+      - name: Publicar evidencia
+        uses: actions/upload-artifact@v4
+        with:
+          name: npm-security-audit
+          path: |
+            npm-audit-full.json
+            npm-audit-production.json
+            npm-outdated.json
+          retention-days: 30
