@@ -6,7 +6,29 @@
   "canonical_assessment": "AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V17.md",
   "entry_point": "RESEARCH_MASTER_INDEX.md",
   "evidence_status": "RESEARCH_EVIDENCE_STATUS.md",
+  "evidence_master_matrix": "EVIDENCE_MASTER_MATRIX_V1.md",
+  "evidence_master_matrix_machine": "data/research/evidence_master_matrix_v1.json",
   "dependencies": "RESEARCH_DEPENDENCIES.md",
+  "validation_policy": {
+    "document": "PROJECT_VALIDATION_POLICY_V1.md",
+    "model": "documentary_source_based_reproducible",
+    "external_human_validation_required": false,
+    "unresolved_cases_policy": "retain_as_unresolved_without_invention"
+  },
+  "interoperability": {
+    "stable_dataset_version": "1.0.0",
+    "candidate_schema_version": "1.1.0-candidate",
+    "candidate_document": "INTEROPERABILITY_1_1_CANDIDATE_V1.md",
+    "candidate_generator": "scripts/generate-candidate-interoperability.mjs",
+    "candidate_ci_run": 31835809358,
+    "candidate_ci_status": "success",
+    "tei_lex0_candidate_valid": true,
+    "cldf_candidate_valid": true,
+    "candidate_typed_variants": 224,
+    "candidate_lexical_relations": 28,
+    "candidate_documentary_adjudications": 4,
+    "candidate_unresolved_lexical_relations": 0
+  },
   "hypotheses": {
     "proto_participial_ame_depth": {
       "status": "high_confidence"
@@ -53,6 +75,23 @@
       ]
     }
   },
+  "priority_candidates": {
+    "A": [
+      "C01 Cotſchimé → Cotſchimeameke / Cochí → cochíami",
+      "C07 tsane-li-ameke ↔ ani-lí-ame constructional bridge",
+      "C09 Tellechea same-root extension families"
+    ],
+    "B": [
+      "C02 Tſchiperameke ↔ Chipérami",
+      "C03 Rosacameke ~ rosacame ↔ Rosacami",
+      "C04 Nessé/Nesséameke ↔ Nisé/Niséami",
+      "C08 tschutschelíameke"
+    ],
+    "C": [
+      "C05 Selíameke ↔ Siríami / Choguita siˈríame",
+      "C06 historical-modern black color bridge"
+    ]
+  },
   "prohibited_shortcuts": [
     "universal -ameke > -ami",
     "automatic -li-ameke > -li-ame",
@@ -60,13 +99,16 @@
     "automatic equivalence of <c>/<k>/<que>/<ke>",
     "automatic projection of modern color -ka into colonial forms",
     "automatic cognacy from graphic similarity",
-    "morphological frequency claims from raw OCR counts"
+    "morphological frequency claims from raw OCR counts",
+    "treating final -ami as automatically participial"
   ],
   "documentary_dependencies": {
     "rodriguez_lopez_2010_full_ingestion": "blocked",
     "tellechea_1826_facsimile_visual_audit": "blocked",
     "colonial_graphematic_control": "depends_on_facsimiles",
-    "second_historical_li_ameke_D1": "not_found"
+    "second_historical_li_ameke_D1": "not_found",
+    "western_sources_1970_1971_full_text": "blocked"
   },
+  "next_action_without_blocked_documents": "Use EVIDENCE_MASTER_MATRIX_V1 to run source-based tests that can move a candidate between evidence tiers; do not require external human validation.",
   "next_action_when_documents_available": "Facsimile-first exhaustive token audit before additional general web searching"
 }
