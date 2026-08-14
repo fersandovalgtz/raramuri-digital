@@ -100,6 +100,22 @@ jobs:
       - name: Validar TEI Lex-0 contra esquema oficial
         run: xmllint --noout --schema .tmp/tei-lex0/lex-0.xsd public/downloads/raramuri-lex0.xml
 
+      - name: Generar y validar interoperabilidad candidata 1.1.0
+        run: |
+          node scripts/generate-candidate-interoperability.mjs --output .tmp/candidate-interop-1
+          node scripts/generate-candidate-interoperability.mjs --output .tmp/candidate-interop-2
+          diff -ru .tmp/candidate-interop-1 .tmp/candidate-interop-2
+          python -m pycldf validate .tmp/candidate-interop-1/cldf/cldf-metadata.json
+          xmllint --noout --schema .tmp/tei-lex0/lex-0.xsd .tmp/candidate-interop-1/raramuri-lex0-1.1.0-candidate.xml
+
+      - name: Publicar artefactos candidatos 1.1.0 para inspección reproducible
+        uses: actions/upload-artifact@v4
+        with:
+          name: raramuri-interoperability-1.1.0-candidate-${{ github.sha }}
+          path: .tmp/candidate-interop-1/
+          if-no-files-found: error
+          retention-days: 30
+
       - name: Publicar artefactos técnicos para revisión
         uses: actions/upload-artifact@v4
         with:
