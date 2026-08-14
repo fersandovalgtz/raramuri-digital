@@ -1,0 +1,119 @@
+{
+  "artifact": "western_newa_mea_parallel_paradigm_v1",
+  "date": "2026-08-13",
+  "status": "research_audit_not_community_validation",
+  "question": "How much of the apparent newa-/me'á- parallel is internally documented in the Western TAC tradition, and what does that imply for the recurrent Western ...li(a)me construction?",
+  "families": {
+    "newa_make": {
+      "secure_lexical_domain": "hacer / crear / preparar",
+      "western_tac_profiles": [
+        {
+          "profile": "finite_le",
+          "form": "newale",
+          "examples": ["John 19:2, soldiers made a crown", "Acts 2, Onorúgame newale e'karúgame..."],
+          "morpheme_segmentation_by_tac": false
+        },
+        {
+          "profile": "ame_form",
+          "form": "newame",
+          "examples": ["John 19:14/31, preparation context for Passover", "Matthew 6:28, clothing-making descriptive context"],
+          "morpheme_segmentation_by_tac": false
+        },
+        {
+          "profile": "alime_form",
+          "form": "newalime",
+          "examples": ["Acts 2:5, piesta newalime", "Matthew 6:33, La newalime ... napu Onorúgame najkí"],
+          "morpheme_segmentation_by_tac": false
+        }
+      ],
+      "independent_morphological_controls": [
+        "Norogachi newá-li = make-PFV",
+        "Norogachi newá-ami = make-NMLZ",
+        "Choguita neˈwa/niwa = make/do",
+        "Compendio Baja-TB allows -me participial/nominalizing constructions"
+      ]
+    },
+    "mea_kill": {
+      "secure_lexical_domain": "matar",
+      "western_tac_profiles": [
+        {
+          "profile": "finite_le",
+          "form": "me'ale",
+          "examples": ["Acts 2:23, gulusichi ujchagá me'ale"],
+          "morpheme_segmentation_by_tac": false
+        },
+        {
+          "profile": "ame_form",
+          "form": "me'ame",
+          "examples": ["Luke 13:34, me'ame ju ... prophets/sent ones"],
+          "morpheme_segmentation_by_tac": false
+        },
+        {
+          "profile": "li_surface_family",
+          "forms": ["me'liboli", "me'liboa", "me'liátikó", "me'líniliga", "me'líliru", "me'limela"],
+          "examples": ["John 19", "Luke 13", "Luke 21", "Matthew 23"],
+          "morpheme_segmentation_by_tac": false
+        }
+      ],
+      "western_1974_complex_form": {
+        "form": "me'líame ju",
+        "source": "Albino Mares Trías, Regá me'líame ju ye ajágame",
+        "variety": "Western/Bacusínare",
+        "word_level_gloss_confirmed": false,
+        "source_internal_segmentation": false
+      },
+      "independent_morphological_controls": [
+        "Compendio me'á + -ame = me'áme 'matón' and explicitly describes -ame/-me as participial",
+        "Compendio passive section applies passive morphology involving -li/-ru to the me'/mi' kill root across varieties including Baja/Baja-TB",
+        "Baja-TB rewa-lí-me independently demonstrates PASSIVE + NOMINALIZER architecture"
+      ]
+    }
+  },
+  "parallelism_matrix": [
+    {
+      "slot": "finite/past-like -le surface",
+      "newa": "newale",
+      "mea": "me'ale",
+      "same_western_tac_tradition": true,
+      "interpretation": "Strong distributional parallel; exact morpheme value should be taken from grammatical sources, not inferred from spelling alone."
+    },
+    {
+      "slot": "-ame surface in predicative/descriptive context",
+      "newa": "newame",
+      "mea": "me'ame",
+      "same_western_tac_tradition": true,
+      "interpretation": "Strong same-variety support that both lexical families productively occur in -ame forms. Independent grammar identifies -ame/-me as participial/nominalizing."
+    },
+    {
+      "slot": "complex li+ame/me-like surface",
+      "newa": "newalime (TAC; 2010 title; 2019 Manual Oeste)",
+      "mea": "me'líame (1974 Bacusínare title)",
+      "same_western_macrotradition": true,
+      "same_tac_corpus": false,
+      "interpretation": "Second-root replication of the complex Western pattern, with direct segmentation still pending for the 1974 target."
+    }
+  ],
+  "assessment": {
+    "same_variety_parallel_newale_meale": "high_confidence",
+    "same_variety_parallel_newame_meame": "high_confidence",
+    "complex_newalime_meliame_parallel": "high_documentary_confidence_moderate_morphological_confidence",
+    "newalime_as_isolated_lexicalization": "strongly_disfavored",
+    "productive_or_recurrent_constructional_family": "strongly_supported_at_surface_level",
+    "exact_li_function_shared_across_roots": "not_adjudicated",
+    "historical_morpheme_identity": "not_adjudicated",
+    "human_reviewed": false,
+    "ai_assisted": true
+  },
+  "epistemic_limits": [
+    "TAC pages provide natural-language forms and contexts, not interlinear segmentation.",
+    "The 1974 title is document-level bilingual evidence, not a word-level gloss.",
+    "A repeated surface paradigm does not by itself prove that every li or ame token is the same morpheme historically.",
+    "The newa and me'á parallels strengthen constructional analysis, not cognacy claims."
+  ],
+  "next_tests": [
+    "Search for additional Western roots showing X-le / X-ame / X-liame patterns.",
+    "Recover the 1974 Bacusínare full text to inspect me'líame outside the title.",
+    "Locate a Western grammatical description that assigns functions to the newa/me'á li alternations.",
+    "Build a token concordance from TAC for newa- and me'á- forms and classify syntactic environments without forcing morphology."
+  ]
+}
