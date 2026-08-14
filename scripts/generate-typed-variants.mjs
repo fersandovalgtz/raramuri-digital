@@ -3,10 +3,14 @@ import { resolve } from "node:path";
 
 const root = resolve(import.meta.dirname, "..");
 const lexiconPath = resolve(root, "data/lexicon-master.json");
+const adjudicationsPath = resolve(root, "data/lexical-relation-target-adjudications.json");
 const typedPath = resolve(root, "data/variants-typed.json");
 const relationsPath = resolve(root, "data/lexical-relations.json");
 
-const entries = JSON.parse(await readFile(lexiconPath, "utf8"));
+const [entries, adjudicationPayload] = await Promise.all([
+  readFile(lexiconPath, "utf8").then(JSON.parse),
+  readFile(adjudicationsPath, "utf8").then(JSON.parse),
+]);
 
 const clean = (value) => String(value ?? "").replace(/\s+/gu, " ").trim();
 const normalize = (value) => clean(value)
@@ -30,7 +34,14 @@ for (const entry of entries) {
   headwordIndex.get(key).push(entry);
 }
 
-function parseTarget(rawTarget) {
+const adjudicationIndex = new Map();
+for (const adjudication of adjudicationPayload.records ?? []) {
+  const key = `${adjudication.source_record_id}|${formKey(adjudication.target_form)}`;
+  if (adjudicationIndex.has(key)) throw new Error(`Duplicate lexical relation adjudication key: ${key}`);
+  adjudicationIndex.set(key, adjudication);
+}
+
+function parseTarget(rawTarget, sourceRecordId = null) {
   const raw = clean(rawTarget).replace(/^[\s(\[]+|[\s)\],:]+$/gu, "");
   const homonymMatch = /^([1-9])\s*(?=[A-Za-zÁÉÍÓÚÜÑáéíóúüñ'’‘])(.+)$/u.exec(raw);
   const homonymNumber = homonymMatch ? Number(homonymMatch[1]) : null;
@@ -38,13 +49,33 @@ function parseTarget(rawTarget) {
   const candidates = headwordIndex.get(formKey(form)) ?? [];
   const filtered = homonymNumber == null ? candidates : candidates.filter((entry) => entry.homonym_number === homonymNumber);
   const ids = filtered.map((entry) => entry.record_id).sort();
-  return {
+  const base = {
     target_raw: raw,
     target_form: form,
     target_homonym_number: homonymNumber,
     target_record_id: ids.length === 1 ? ids[0] : null,
     target_record_ids: ids,
     resolution_status: ids.length === 1 ? "resolved_unique" : ids.length > 1 ? "resolved_ambiguous" : "unresolved",
+    target_resolution_method: "automatic_form_match",
+    target_adjudication_id: null,
+    documentary_basis: null,
+    human_validation_status: null,
+  };
+
+  if (!sourceRecordId) return base;
+  const adjudication = adjudicationIndex.get(`${sourceRecordId}|${formKey(form)}`);
+  if (!adjudication) return base;
+  if (!ids.includes(adjudication.target_record_id)) {
+    throw new Error(`Adjudicated target ${adjudication.target_record_id} is not among candidates for ${sourceRecordId} -> ${form}`);
+  }
+  return {
+    ...base,
+    target_record_id: adjudication.target_record_id,
+    resolution_status: "resolved_unique",
+    target_resolution_method: "documentary_adjudication",
+    target_adjudication_id: adjudication.adjudication_id,
+    documentary_basis: adjudication.documentary_basis,
+    human_validation_status: adjudication.human_validation_status,
   };
 }
 
@@ -138,11 +169,11 @@ for (const entry of entries) {
     if (candidate?.origin === "headword_secondary") nature = "co_headword_form";
     else if (candidate?.origin === "cross_reference") {
       nature = "cross_reference";
-      targetInfo = parseTarget(candidate.target);
+      targetInfo = parseTarget(candidate.target, entry.record_id);
     } else if (candidate?.origin === "bracket_annotation") {
       detail = classifyBracket(candidate.value);
       nature = detail.nature;
-      if (detail.target) targetInfo = parseTarget(detail.target);
+      if (detail.target) targetInfo = parseTarget(detail.target, entry.record_id);
     }
 
     typedRecords.push({
@@ -161,6 +192,10 @@ for (const entry of entries) {
       target_form: targetInfo?.target_form ?? null,
       target_homonym_number: targetInfo?.target_homonym_number ?? null,
       target_resolution_status: targetInfo?.resolution_status ?? null,
+      target_resolution_method: targetInfo?.target_resolution_method ?? null,
+      target_adjudication_id: targetInfo?.target_adjudication_id ?? null,
+      documentary_basis: targetInfo?.documentary_basis ?? null,
+      human_validation_status: targetInfo?.human_validation_status ?? null,
       grammatical_features: detail?.grammatical_features ?? [],
       relation_feature: detail?.relation_feature ?? null,
       validation_status: "Pendiente de cotejo lingüístico",
@@ -187,7 +222,7 @@ function visibleRemissions(entry) {
           raw_evidence: clean(match[0]),
           occurrence,
           target_index: targetIndex + 1,
-          ...parseTarget(targets[targetIndex]),
+          ...parseTarget(targets[targetIndex], entry.record_id),
         });
       }
     }
@@ -210,7 +245,7 @@ function bracketRelations(entry) {
         raw_evidence: clean(match[0]),
         occurrence,
         target_index: 1,
-        ...parseTarget(clean(variantMatch[1])),
+        ...parseTarget(clean(variantMatch[1]), entry.record_id),
       });
       continue;
     }
@@ -230,7 +265,7 @@ function bracketRelations(entry) {
         raw_evidence: clean(match[0]),
         occurrence,
         target_index: 1,
-        ...parseTarget(clean(relationMatch[1])),
+        ...parseTarget(clean(relationMatch[1]), entry.record_id),
       });
       break;
     }
@@ -261,10 +296,16 @@ lexicalRelations.sort((a, b) => a.source_record_id.localeCompare(b.source_record
   || String(a.target_form).localeCompare(String(b.target_form), "es"));
 lexicalRelations = lexicalRelations.map((row, index) => ({ relation_id: `REL-${String(index + 1).padStart(6, "0")}`, ...row }));
 
+const usedAdjudicationIds = new Set(lexicalRelations.filter((row) => row.target_adjudication_id).map((row) => row.target_adjudication_id));
+if (usedAdjudicationIds.size !== (adjudicationPayload.records ?? []).length) {
+  throw new Error(`Expected ${(adjudicationPayload.records ?? []).length} documentary adjudications, applied ${usedAdjudicationIds.size}`);
+}
+
 const typedOutput = {
   schema_version: "1.1.0-candidate",
   base_dataset_version: "1.0.0",
   generated_from: "data/lexicon-master.json",
+  target_adjudications_from: "data/lexical-relation-target-adjudications.json",
   record_count: typedRecords.length,
   unresolved_origin_count: typedRecords.filter((row) => row.variant_origin === "unresolved").length,
   records: typedRecords,
@@ -274,11 +315,13 @@ const relationOutput = {
   schema_version: "1.1.0-candidate",
   base_dataset_version: "1.0.0",
   generated_from: ["translation_raw", "comments_raw"],
+  target_adjudications_from: "data/lexical-relation-target-adjudications.json",
   relation_count: lexicalRelations.length,
   source_remission_occurrence_count: new Set(lexicalRelations.filter((row) => row.relation_type === "cross_reference").map((row) => `${row.source_record_id}|${row.source_field}|${row.occurrence}`)).size,
   unique_resolution_count: lexicalRelations.filter((row) => row.resolution_status === "resolved_unique").length,
   ambiguous_resolution_count: lexicalRelations.filter((row) => row.resolution_status === "resolved_ambiguous").length,
   unresolved_resolution_count: lexicalRelations.filter((row) => row.resolution_status === "unresolved").length,
+  documentary_adjudication_count: lexicalRelations.filter((row) => row.target_resolution_method === "documentary_adjudication").length,
   records: lexicalRelations,
 };
 
@@ -295,4 +338,5 @@ console.log(JSON.stringify({
   resolved_unique: relationOutput.unique_resolution_count,
   resolved_ambiguous: relationOutput.ambiguous_resolution_count,
   unresolved_targets: relationOutput.unresolved_resolution_count,
+  documentary_adjudications: relationOutput.documentary_adjudication_count,
 }, null, 2));
