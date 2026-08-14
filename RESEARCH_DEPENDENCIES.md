@@ -20,22 +20,9 @@ Este documento registra qué falta para elevar de grado las hipótesis vigentes.
 
 La auditoría `TELLECHEA_1826_AME_TOKEN_AUDIT_V4.md` y su JSON clasifican exhaustivamente las 24 ocurrencias crudas en `-amec/-ameque` del OCR completo y distinguen participios explícitos, formas bilingües participiales, metalingüística, otras construcciones, falsos positivos y fragmentos por salto de línea.
 
-Se mantienen como familias OCR fuertes:
+Se mantienen como familias OCR fuertes `atígameque ~ atígame`, `simiámec ~ simíame` y `machiámec ~ machiámeque ~ machíameque ~ machíame`. Se añaden como candidatas OCR pendientes de facsímil `ayoriguámeque ~ ayoriguáme` y `rejoírugameque ~ rejoírugame`.
 
-- `atígameque ~ atígame`;
-- `simiámec ~ simíame`;
-- `machiámec ~ machiámeque ~ machíameque ~ machíame`.
-
-Se añaden como candidatas OCR pendientes de facsímil:
-
-- `ayoriguámeque ~ ayoriguáme`;
-- `rejoírugameque ~ rejoírugame`.
-
-La auditoría corrige además:
-
-- `gameque` → fragmento de `netetugameque`;
-- `támeque` → fragmento de `natámeque`;
-- `gayéname` → fragmento de línea de `gayénameque`, **no variante breve**.
+La auditoría corrige `gameque` como fragmento de `netetugameque`, `támeque` como fragmento de `natámeque` y `gayéname` como fragmento de línea de `gayénameque`, **no variante breve**.
 
 ### Bloqueo restante
 
@@ -77,62 +64,60 @@ La auditoría corrige además:
 
 ### Evidencia ya resuelta
 
-- histórico `Nessé` ‘guardar/cuidar’;
-- histórico `Nesséameke` ‘guardián/custodio’;
-- Merrill `pouguá nesséameke` ‘pastor de ovejas’;
-- Márquez 1999: familia moderna contigua `nesame`, `nesbonama`, `nesema`, `neser`, `neserichi` en el dominio cuidado/pastoreo;
-- Márquez: los verbos se enuncian lexicográficamente por el futuro y el futuro de primera conjugación termina en `-ma`;
-- Márquez: el participio presente se deriva del indicativo correspondiente y la regla general añade `-ame`; ejemplos explícitos `ba-ame`, `os-ame` y `gumim-ame`;
-- Márquez: `-me/-mi` se clasifica como adjetival y participial con verbo;
-- Márquez: los nombres de persona definidos por una actividad suelen ser participios de algún verbo;
-- Tarahumara Baja: `Neseme` en *Tewé Ralámuli Chibá Neseme*, ‘Niña tarahumara que cuida chivas’;
-- Western/Lowland: `neseme` replicado en contexto de cuidadores de animales, sin contarlo como fuente plenamente independiente de la tradición Burgess;
-- SRC-02: `Nisé` ‘cuidar, pastorear’ → `Niséami` ‘pastor’;
-- *Awilichi bawi*: `nise’ami/niseami` en contexto de chivas;
-- 1997: arquitectura `-ame/-me` participial regional;
-- Merrill/Márquez: `e~i` fonológicamente posible, no regular.
+La cadena histórica/moderna ya contiene `Nessé`, `Nesséameke`, `pouguá nesséameke`, la familia moderna `nesema/nesbonama/nesame/neser/neserichi`, `Neseme` Baja/Western, `Nisé/Niséami` de SRC-02 y `nise’ami/niseami` en Balleza. La arquitectura regional `-ame/-me` y la posibilidad interna `e~i/é~í` están documentadas sin convertirlas en leyes universales.
 
-### Resultado del control morfológico v2
+### Control morfológico v3 · completado
 
-La lectura de `nesame` como forma participial/agentiva de la familia `nes-` es ahora **fuertemente predicha por reglas publicadas en la misma obra**. Sin embargo, no se recuperó un parse impreso `nes-ame`, ni la frase ‘participio de nesema’, ni un paradigma token-específico que identifique con seguridad el radical secundario pertinente.
+`C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md` recupera cinco pares internos independientes en Márquez 1999:
 
-La forma de cita `nesema` tampoco permite derivar mecánicamente `nesame`: los lemas verbales son futuros y la gramática distingue radicales primarios/secundarios y clases irregulares. En el material recuperado no se explica la relación exacta del material vocálico interno de `nesema ~ nesame`.
+- `benema ~ bename`;
+- `natogema ~ natogame`;
+- `ne’ogema ~ ne’ogame`;
+- `nichugema ~ nichugame`;
+- `semema ~ semame`.
 
-**Documento:** `C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V2.md`.
+Todos muestran la oposición superficial verbo de cita `...ema` ↔ agente/cualidad `...ame`; `semema ~ semame` ofrece el control más transparente: ‘tocar un instrumento de cuerdas’ ↔ ‘violinista, músico de cuerdas’.
+
+La misma obra declara que los nombres de persona definidos por una actividad suelen ser participios, que el participio presente puede ser sustantivo/adjetivo y que `-ame/-me/-mi` posee función participial/adjetival. Por tanto:
+
+**`nesame` como miembro participial/agentivo de la familia `nes-` = alta confianza interna de fuente.**
+
+La relación `nesema ~ nesame` ya no debe tratarse como una anomalía o ajuste ad hoc. **No buscar más controles genéricos `Xema ~ Xame`: esta dependencia está cerrada.**
 
 ### Cuello de botella restante
 
-Para cambiar C04 a A hace falta **uno** de estos controles fuertes:
+Para cambiar C04 a A hace falta todavía **uno** de estos controles fuertes:
 
-1. una fuente que segmente explícitamente `nesame/neseme` como radical + participial `-ame/-me`, o un paradigma publicado que identifique su radical y la derivación concreta;
+1. una fuente que segmente explícitamente `nesame/neseme` como radical + participial `-ame/-me`, o un paradigma publicado que identifique el radical y la derivación concreta;
 2. una fuente que identifique directamente `Nessé` y `nes-/Nisé` como variantes/cognados históricos.
 
-No sustituir este requisito acumulando más ocurrencias de `neseme`, ni convertir la productividad general de `-ame/-me` en un parse token-específico no publicado.
+El patrón interno de alta confianza no debe presentarse como un parse impreso morfema por morfema que la fuente no ofrece.
 
-### Fuentes prioritarias
+### Fuentes prioritarias sólo si aparece una ruta documental nueva
 
 - Brambila original: paradigma o familia exacta `nes-`;
 - Hilton/Samachique 1993/2016: `nes-/nis-`, pastorear/pastor, categoría y derivados;
 - Burgess 1984 *Western Tarahumara*: análisis morfológico de `neseme` o de la raíz;
 - otra comparación publicada que identifique `Nessé ~ nes-/Nisé`.
 
-### Búsquedas ya realizadas que no deben repetirse sin una ruta documental nueva
+### Búsquedas ya realizadas que no deben repetirse
 
-- búsquedas indexadas de Brambila para `nesame`, `nesema`, `pastor`, `pastorear`: no recuperación; **no equivale a ausencia**;
-- búsqueda dirigida en el diccionario castellano–rarámuri de 1983 desde `pastor/pastorear`: sin equivalencia verificable recuperada;
-- búsquedas indexadas en Burgess 1984: sin parse `neseme` recuperado.
+- Brambila indexado para `nesame`, `nesema`, `pastor`, `pastorear`: no recuperación, no ausencia;
+- diccionario castellano–rarámuri de 1983 desde `pastor/pastorear`: sin equivalencia verificable recuperada;
+- Burgess 1984 indexado: sin parse `neseme` recuperado;
+- controles genéricos `Xema ~ Xame`: **resueltos con cinco pares internos; no seguir acumulando**.
 
 ### Bloqueos técnicos
 
 - Hilton/Samachique: PDF oficial identificado, pero HTTP 403 en el entorno actual;
-- Márquez 1999: texto indexado suficiente para el control morfológico y lexicográfico; la ruta PDF del repositorio/Dropbox ha devuelto `cache miss`, por lo que no se afirma cotejo visual del facsímil;
-- Brambila: rutas digitales localizadas, pero los índices del escaneo no permiten interpretar una búsqueda negativa como ausencia.
+- Márquez 1999: texto indexado suficiente para control gramatical/lexicográfico; la ruta PDF ha devuelto `cache miss`, por lo que no se afirma cotejo visual;
+- Brambila: rutas digitales localizadas, pero la indexación incompleta impide interpretar una búsqueda negativa como ausencia.
 
 ## D7. Genealogía de fuentes modernas
 
 **Objetivo:** evitar que replicaciones editoriales se cuenten como evidencia independiente.
 
-**Estado:** se sabe que Márquez depende parcialmente de Brambila/Hilton y que varias fuentes Lowland/Western comparten la tradición de Don Burgess. La independencia de SRC-02 respecto de cada repertorio moderno debe auditarse caso por caso si llega a afectar una promoción de grado.
+**Estado:** Márquez depende parcialmente de Brambila/Hilton y varias fuentes Lowland/Western comparten tradición de Don Burgess. La independencia de SRC-02 respecto de repertorios modernos debe auditarse sólo si afecta una promoción de grado.
 
 **Regla:** `document_replication != source_independence`.
 
@@ -146,11 +131,11 @@ No sustituir este requisito acumulando más ocurrencias de `neseme`, ni converti
 
 **Máximo rendimiento sin nuevos documentos:** auditar `-ame` de Tellechea sólo alrededor de raíces ya justificadas y paralelos españoles participiales; no usar frecuencia bruta.  
 **Máximo rendimiento con facsímil:** D2, empezando por `ayorigu-`, `rejoíruga-` y límites OCR reconstruidos.  
-**C04:** reabrir D6 sólo si aparece una ruta documental nueva hacia parse token-específico o comparación histórica directa.  
+**C04:** cerrado para búsquedas generales; reabrir sólo si aparece parse/paradigma token-específico o comparación histórica directa.  
 **Siguiente prioridad documental:** D1 Guadalaxara.  
 **Control metodológico paralelo:** D7 genealogía de fuentes.  
 **Prioridad analítica posterior:** D3 y D4.  
 **Prioridad comparativa:** D5.  
 **Prioridad editorial:** D8.
 
-No abrir búsquedas generales sobre `-ameke/-ami`, `e~i` o `neseme`; sólo pruebas que puedan mover un candidato entre niveles, depurar falsos positivos o falsar una hipótesis concreta.
+No abrir búsquedas generales sobre `-ameke/-ami`, `e~i`, `neseme` o nuevos pares `Xema~Xame`; sólo pruebas que puedan mover un candidato entre niveles, depurar falsos positivos o falsar una hipótesis concreta.
