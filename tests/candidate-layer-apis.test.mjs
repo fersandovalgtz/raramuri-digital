@@ -5,11 +5,13 @@ import test from "node:test";
 const root = new URL("../", import.meta.url);
 
 test("publishes candidate lexical-relations and typed-variants APIs", async () => {
-  const [relationsRoute, typedRoute, relations, variants] = await Promise.all([
+  const [relationsRoute, typedRoute, relations, variants, downloadsPage, publicationPolicy] = await Promise.all([
     readFile(new URL("app/api/lexical-relations/route.ts", root), "utf8"),
     readFile(new URL("app/api/typed-variants/route.ts", root), "utf8"),
     readFile(new URL("data/lexical-relations.json", root), "utf8").then(JSON.parse),
     readFile(new URL("data/variants-typed.json", root), "utf8").then(JSON.parse),
+    readFile(new URL("app/descargas/page.tsx", root), "utf8"),
+    readFile(new URL("CANDIDATE_LAYER_PUBLICATION_V1.md", root), "utf8"),
   ]);
 
   assert.equal(relations.schema_version, "1.1.0-candidate");
@@ -31,4 +33,11 @@ test("publishes candidate lexical-relations and typed-variants APIs", async () =
   assert.match(typedRoute, /raramuri-variants-tipados-1\.1\.0-candidate/);
   assert.match(typedRoute, /unresolved_origins/);
   assert.match(typedRoute, /format === "csv" \|\| format === "jsonl"/);
+
+  assert.match(downloadsPage, /Capas experimentales · 1\.1\.0-candidate/);
+  assert.match(downloadsPage, /\/api\/lexical-relations/);
+  assert.match(downloadsPage, /\/api\/typed-variants/);
+  assert.match(downloadsPage, /no equivale a validación lingüística/i);
+  assert.match(publicationPolicy, /No se cambia `dataset_version = 1\.0\.0`/);
+  assert.match(publicationPolicy, /No se inyectan todavía estas capas en TEI Lex-0, CLDF, XML, SQL ni en el manifiesto estable/i);
 });
