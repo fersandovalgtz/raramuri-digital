@@ -1,0 +1,69 @@
+{
+  "artifact": "ani_li_ame_crossvariety_evidence_v1",
+  "date": "2026-08-14",
+  "status": "research_audit_not_cognacy_adjudication",
+  "question": "Does the same ani- lexical family independently support li+ame morphology across Rarámuri varieties, beyond a single segmented Munérachi example?",
+  "evidence": [
+    {
+      "tier": "A1_direct_segmented",
+      "variety": "Munérachi / Cumbre",
+      "source": "Moreno Pineda & Valenzuela Romo, Coherencia discursiva en relatos ralámuli (tarahumara), Expedicionario 4 (2022)",
+      "forms": [
+        "San Isidro ani-lí-ame",
+        "échi wisú ani-lí-ame"
+      ],
+      "source_glosses": [
+        "decir-PSV-AGT",
+        "dicen-CE-NMZ"
+      ],
+      "assessment": "Direct published segmentation of ani + -lí + -ame. This is the anchor analysis."
+    },
+    {
+      "tier": "A2_controlled_dialect_table",
+      "variety": "Oeste",
+      "source": "Manual Ralámuli Escrito para Todas y Todos, UPNECH et al. 2019, Tabla 2",
+      "form": "¿Chú anilíame rewé?",
+      "spanish": "¿Cómo se llama?",
+      "assessment": "Controlled intervariety table independently attests the surface form anilíame in the Western column; it does not itself provide morpheme segmentation."
+    },
+    {
+      "tier": "A3_natural_text_western",
+      "variety": "Western / Lowland Tarahumara (TAC)",
+      "source": "Tarahumara, Western - TAC New Testament, 2008/2009",
+      "forms": [
+        "Matíasi anilime nile bilé",
+        "Uché bilé José napu Barsabasi anilime nile",
+        "Abiena Justo anilime nile",
+        "Anasi anilime nile",
+        "Kaipasi anilime nile",
+        "Jura anilime rió"
+      ],
+      "assessment": "Repeated natural-text use of anilime in naming/being-called contexts. The corpus confirms productivity and lexical identity in Western Rarámuri, but not an interlinear segmentation."
+    }
+  ],
+  "crossvariety_conclusion": {
+    "lexical_family_identity": "very_high",
+    "direct_li_plus_ame_segmentation": "directly_proven_in_Munerachi",
+    "western_surface_replication": "very_high",
+    "western_internal_segmentation": "not_directly_proven_by_the_sources_audited",
+    "constructional_inference": "The simplest comparative reading is that Western anilíame/anilime belongs to the same ani- + li + ame construction directly segmented in Munérachi, but the Western segmentation remains an inference rather than an authored parse."
+  },
+  "importance_for_project": "This is the strongest same-root transvariety replication yet assembled for the li+ame bridge: one variety supplies direct morpheme-by-morpheme segmentation, while Western sources independently supply a controlled dialect-table form and repeated natural-text tokens in the same naming function.",
+  "epistemic_limits": [
+    "Do not convert Western anilíame/anilime into a direct parse solely because Munérachi has ani-lí-ame.",
+    "Do not assume that -lí has exactly the same grammatical label in every variety; source labels differ (PSV/CE) and Western sources audited here are unsegmented.",
+    "Orthographic -ame/-ime variation is not itself treated as a sound law.",
+    "No historical cognacy judgment is performed in this artifact."
+  ],
+  "next_tests": [
+    "Search for a Western grammar or interlinear corpus that explicitly segments anilíame/anilime.",
+    "Search for a third modern lexical root with a direct X-li-ame parse, keeping direct parses separate from paradigm-supported candidates.",
+    "Use ani- as the benchmark case when evaluating historical tsane-li-ameke versus modern li+ame constructional continuity."
+  ],
+  "epistemic_flags": {
+    "ai_assisted": true,
+    "human_reviewed": false,
+    "western_segmentation_inferred": true,
+    "cognacy_judgment_performed": false
+  }
+}
