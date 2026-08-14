@@ -1,0 +1,71 @@
+{
+  "artifact": "pre1980_bilingual_title_context_v1",
+  "date": "2026-08-13",
+  "purpose": "Record verifiable Rarámuri-Spanish title-level alignments for Western Rarámuri materials dated before 1980, while explicitly forbidding word-by-word glossing unless separately supported.",
+  "alignment_level": "whole_title_or_work",
+  "items": [
+    {
+      "year": 1970,
+      "raramuri_title": "Anayábari Ra'icháriara Jipe Nerúgame Ra'íchari",
+      "spanish_title": "Cuentos de Antes y Hoy",
+      "visible_target_strings": ["nerúgame"],
+      "variety": "Western / Rocoroibo",
+      "author_or_compiler": "Donaldo Burgess McGuire",
+      "verification": [
+        "Centro de Información y Documentación Alberto Beltrán (Secretaría de Cultura) catalogues the bilingual title.",
+        "Tarahumara Books reproduces the same bilingual title."
+      ],
+      "word_level_gloss_confirmed": false
+    },
+    {
+      "year": 1972,
+      "raramuri_title": "Hue'cá E'carúgame Nehualíame Ju Imé",
+      "spanish_title": "Hacemos Muchas Cosas con el Mezcal",
+      "visible_target_strings": ["e'carúgame", "nehualíame"],
+      "variety": "Western / Bacusínare",
+      "author": "Albino Mares Trías",
+      "verification": [
+        "El Colegio de México direct digital-object record gives the Spanish alternate title.",
+        "Tarahumara Books and CiNii/bibliographic listings reproduce the bilingual title."
+      ],
+      "word_level_gloss_confirmed": false
+    },
+    {
+      "year": 1974,
+      "raramuri_title": "Regá Me'líame Ju Ye Ajágame",
+      "spanish_title": "Cómo Cazamos y Pescamos",
+      "visible_target_strings": ["me'líame", "ajágame"],
+      "variety": "Western / Bacusínare",
+      "author": "Albino Mares Trías",
+      "verification": [
+        "Biblioteca Central Estatal de Guanajuato catalogues the title as Regá me'líame ju ye ajágame = Cómo cazamos y pescamos.",
+        "Tarahumara Books reproduces the same bilingual title."
+      ],
+      "word_level_gloss_confirmed": false
+    },
+    {
+      "year": 1975,
+      "raramuri_title": "Jena Ra'icha Ralámuli Alué 'Ya Muchígame Chiquime Níliga",
+      "spanish_title": "Aquí Relata la Gente de Antes lo Que Pasaba en Su Tiempo",
+      "visible_target_strings": ["muchígame"],
+      "variety": "Western / Bacusínare",
+      "author": "Albino Mares Trías",
+      "verification": [
+        "CiNii Books gives the bilingual title pair.",
+        "Tarahumara Books reproduces the same bilingual title."
+      ],
+      "word_level_gloss_confirmed": false
+    }
+  ],
+  "methodological_rule": "An editorial Spanish title can establish the semantic topic/proposition of the Rarámuri title as a whole but cannot establish which Rarámuri word corresponds to which Spanish word. Syntactic reordering, paraphrase and free translation remain possible.",
+  "research_value": [
+    "The alignments provide controlled contextual envelopes for pre-1980 -game/-ame strings.",
+    "They allow candidate word-level hypotheses to be generated, but such hypotheses must be tested against a dictionary, grammar, parallel sentence or recovered original page before promotion to confirmed gloss.",
+    "The 1972, 1974 and 1975 items are authored by Albino Mares Trías, providing a community-authored Western usage layer despite editorial mediation."
+  ],
+  "next_steps": [
+    "Recover the downloadable PDFs or page images where possible.",
+    "Use independently analyzed Western Rarámuri texts to test candidate meanings of e'carúgame, nehualíame, me'líame, ajágame, muchígame and nerúgame.",
+    "Build a token-level concordance only after full text is available."
+  ]
+}
