@@ -1,0 +1,130 @@
+{
+  "artifact": "meliame_western_morphological_audit_v1",
+  "date": "2026-08-13",
+  "status": "research_audit_not_community_validation",
+  "question": "What can be established about Western/Bacusínare me'líame in the 1974 title Regá me'líame ju ye ajágame without deriving a word-level gloss from the Spanish title?",
+  "target_document": {
+    "form": "me'líame ju",
+    "full_title": "Regá me'líame ju ye ajágame",
+    "year": 1974,
+    "author": "Albino Mares Trías",
+    "variety": "Tarahumara del oeste de Bacusínare",
+    "institutional_metadata_source": "Colecciones Digitales de El Colegio de México",
+    "spanish_title": "Cómo cazamos y pescamos",
+    "word_level_gloss_confirmed": false,
+    "source_internal_segmentation": false
+  },
+  "same_root_independent_evidence": {
+    "lexical_root": {
+      "form": "me'á",
+      "meaning": "matar",
+      "source": "Compendio básico de la gramática ralámuli, 1997",
+      "confidence": "very_high"
+    },
+    "participial_nominalization": {
+      "source": "Compendio básico de la gramática ralámuli, 1997, Verbo + Sufijo = Nombre",
+      "analysis": "me'á + -ame = me'áme",
+      "gloss": "mata + uno que",
+      "translation": "matón",
+      "varieties": ["Baja", "Baja-TB", "Cumbre", "Sur-B"],
+      "metalinguistic_statement": "The Compendio explicitly states that -ame/-me also functions as a participle.",
+      "outer_ame_participial_support": true
+    },
+    "passive_domain": {
+      "source": "Compendio básico de la gramática ralámuli, 1997, El Pasivo",
+      "metalinguistic_statement": "A combination of passive forms may be used, such as -li with -ru.",
+      "same_root_context": "Translations of 'El hombre fue matado por el oso' use the me'/mi' kill root and are explicitly glossed mata-pasivo across varieties including Baja and Baja-TB.",
+      "ocr_warning": "The digitized strings in the passive examples are graphically corrupted (e.g. lflru-like sequences). Do not normalize their exact spelling from OCR.",
+      "passive_li_zone_source_supported": true,
+      "exact_surface_chain_from_ocr_reconstructed": false
+    },
+    "western_tac_paradigm": {
+      "source": "Tarahumara, Western (TAC) public Bible corpus",
+      "finite_control": {
+        "form": "me'ale",
+        "context": "Acts 2:23, gulusichi ujchagá me'ale",
+        "assessment": "Direct Western finite form in a killing context."
+      },
+      "derived_family": {
+        "forms_observed": ["me'liboli", "me'liboa", "me'liátikó", "me'líniliga", "me'líliru", "me'limela"],
+        "assessment": "Western corpus directly displays a productive me'li- surface family. These forms are not automatically segmented as root + -li."
+      }
+    }
+  },
+  "constructional_control": {
+    "western_liame_ju_series": [
+      "1972 nehualíame ju",
+      "1974 me'líame ju",
+      "2010 newalime ju",
+      "2019 newálime jú"
+    ],
+    "assessment": "me'líame is a second lexical-root member of a recurrent Western/Baja ...li(a)me + ju surface construction."
+  },
+  "competing_analyses": [
+    {
+      "id": "M1",
+      "analysis": "me' + PASS -li + PTCP/NMLZ -ame",
+      "status": "strongest_working_hypothesis_not_directly_segmented_in_target",
+      "support": [
+        "The same root me'á is explicitly documented with participial -ame: me'á + -ame = me'áme.",
+        "The same root is used in the Compendio passive paradigm, and the grammar explicitly says passive -li can combine with -ru.",
+        "Baja-TB independently allows a passive-marked predicate followed by nominalizer -me: rewa-lí-me.",
+        "Western 1974 me'líame contains the expected surface sequence and occurs before copula ju.",
+        "The recurrent Western ...li(a)me + ju construction has at least two lexical families."
+      ],
+      "problems": [
+        "The 1974 title itself has no interlinear segmentation.",
+        "The exact passive strings in the digitized Compendio are OCR-corrupted.",
+        "Western me'li- may involve stem allomorphy or morphophonology in addition to concatenative -li."
+      ]
+    },
+    {
+      "id": "M2",
+      "analysis": "derived/allomorphic stem me'li- + PTCP/NMLZ -ame",
+      "status": "serious_competing_hypothesis",
+      "support": [
+        "Western TAC has many surface me'li- forms in multiple inflectional environments.",
+        "Other Rarámuri varieties also show stem-shape alternations under morphology, so visual li need not always be an independently segmentable suffix."
+      ],
+      "problems": [
+        "The Compendio explicitly identifies passive -li as a grammatical resource and applies passive morphology to the same me'á root.",
+        "A purely lexical-stem account would need to explain why the resulting form aligns with independently documented passive + nominalizer architecture."
+      ]
+    },
+    {
+      "id": "M3",
+      "analysis": "historically different or lexicalized structure not reducible to M1/M2",
+      "status": "retained_as_open_control",
+      "support": [
+        "The target form lacks direct segmentation and the 1974 orthography may preserve distinctions not transparent in later sources."
+      ],
+      "problems": [
+        "It currently has less positive explanatory support than M1/M2."
+      ]
+    }
+  ],
+  "current_assessment": {
+    "root_identity_confidence": "very_high",
+    "same_root_participial_ame_support": "very_high",
+    "same_root_passive_li_zone_support": "high",
+    "western_meli_surface_family_support": "high",
+    "target_exact_segmentation_confidence": "moderate",
+    "preferred_working_analysis": "M1, with M2 retained as a serious morphophonological alternative",
+    "word_level_title_gloss": "not_established",
+    "historical_continuity_judgment": "not_performed",
+    "cognacy_judgment": "not_performed",
+    "human_reviewed": false,
+    "ai_assisted": true
+  },
+  "relevance_to_newalime": {
+    "assessment": "me'líame provides an independent second Western lexical-root replication in which both the internal li-domain and outer -ame domain are source-supported on the same lexical root. This substantially strengthens the constructional analysis of newálime without proving identical morphology in the two words.",
+    "promote_newalime_to_core_historical_evidence": false
+  },
+  "next_tests": [
+    "Recover the full 1974 Bacusínare text and locate me'líame in sentence context beyond the title.",
+    "Search Western grammar/dictionary materials for an explicit me'á/me'li paradigm and segmentation.",
+    "Determine whether Western finite me'ale and me'li- alternations are governed by a documented -li morpheme or stem allomorphy.",
+    "Search additional Albino Mares Trías texts for independent me'liame or other root+liame tokens."
+  ],
+  "epistemic_rule": "Same-root evidence for passive morphology and participial -ame can raise morphological plausibility, but it cannot substitute for direct segmentation of the target token. OCR-corrupted strings must never be silently normalized."
+}
