@@ -1,0 +1,68 @@
+{
+  "schema_version": "1.4",
+  "date": "2026-08-14",
+  "project": "Rarámuri Histórico Digital",
+  "canonical_assessment": "AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md",
+  "matrix_document": "EVIDENCE_MASTER_MATRIX_V5.md",
+  "supersedes": "data/research/evidence_master_matrix_v4.json",
+  "candidates": [
+    {"id":"C01","tier":"A","status":"unchanged"},
+    {
+      "id":"C02",
+      "tier":"B",
+      "strength_note":"B+_strong",
+      "candidate":"Tschipérameke / čipérameke ↔ Chipérami",
+      "historical_support":[
+        "Steffel/Merrill Tschipérameke 'fino, delgado, llano'",
+        "Merrill normalized transcription tschipérameke || čipérameke",
+        "Steffel phrase Guenomí tschipérameke = un metal delgado"
+      ],
+      "modern_support":[
+        "Samachique 2016 chipérami adj. plano",
+        "Samachique walú chipérami = como una tabla ancha",
+        "SRC-02 Chipérami 'Plano', classified Pp",
+        "Cazador de palabras rarámuri chiperami in a tablilla context"
+      ],
+      "historical_affricate_normalization":"directly_published",
+      "historical_modern_root_formal_match":"very_strong",
+      "semantic_continuity":"very_strong",
+      "modern_external_usage":true,
+      "historical_token_specific_parse":"not_recovered",
+      "historical_base":"not_recovered",
+      "lexical_cognacy":"not_formally_declared",
+      "remaining_A_requirement":"historical base/paradigm čiper- or token-specific published historical parse/identification"
+    },
+    {"id":"C03","tier":"B","status":"unchanged"},
+    {
+      "id":"C04",
+      "tier":"B",
+      "strength_note":"B+_exceptional_near_A",
+      "nesame_participial_agentive_membership":"high_confidence_source_internal",
+      "nesema_nesame_pattern_non_ad_hoc":true,
+      "token_specific_nesame_parse":"not_recovered",
+      "historical_modern_cognacy":"not_demonstrated",
+      "status":"preserved_from_v4"
+    },
+    {"id":"C05","tier":"C","status":"unchanged"},
+    {"id":"C06","tier":"C","status":"unchanged"},
+    {"id":"C07","tier":"A","status":"unchanged"},
+    {"id":"C08","tier":"B","status":"unchanged"},
+    {
+      "id":"C09",
+      "tier":"B",
+      "strength_note":"strong_plus_ocr_pending_facsimile",
+      "strong_ocr_extension_families":["ati-","simi-","machi-","netetu-","rejoíruga-"],
+      "probable_ocr_extension_families":["ayorigu-"],
+      "status":"preserved_from_short_audit_v5"
+    }
+  ],
+  "negative_controls":["N01","N02","N03","N04","N05","N06","N07","N08"],
+  "global_constraints":[
+    "No universal -ameke > -ami law.",
+    "No automatic cognacy from very strong formal-semantic similarity.",
+    "No historical token-specific parse for C02 without published structural evidence.",
+    "No token-specific printed parse for C04 inferred from general morphology.",
+    "No promotion of C09 OCR families to facsimile-direct evidence."
+  ],
+  "next_source_test":"Move to another candidate that can change tier. Reopen C02 only for historical base/paradigm or exact analysis; C04 only for exact parse/direct comparison; C09 only with facsimile or new structural evidence."
+}
