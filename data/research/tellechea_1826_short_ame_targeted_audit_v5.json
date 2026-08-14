@@ -1,0 +1,23 @@
+{
+  "schema_version":"1.0",
+  "date":"2026-08-14",
+  "source":"Miguel Tellechea 1826",
+  "predecessor":"TELLECHEA_1826_AME_TOKEN_AUDIT_V4.md",
+  "method":"targeted_short_ame_audit_only_for_justified_roots_or_bilingual_participial_contexts",
+  "raw_short_ame_counts":{"occurrences":168,"distinct_strings":111},
+  "automatic_short_ame_morpheme_assignment":false,
+  "families":[
+    {"family":"ati-","long":["atígameque"],"short":["atígame","atigame"],"status":"strong_same_root_long_short_ocr","confidence":"high","semantic":"morador / el mismo que en los cielos está","facsimile_pending":true},
+    {"family":"simi-","long":["simiámec"],"short":["simíame"],"status":"strong_same_root_long_short_ocr","confidence":"high","semantic":"el que va / caminante","facsimile_pending":true},
+    {"family":"machi-","long":["machiámec","machiámeque","machíameque"],"short":["machíame"],"status":"strong_same_root_extension_network_ocr","confidence":"high","semantic":"saber/ver; el/los que saben","facsimile_pending":true},
+    {"family":"netetu-","long":["netetugameque"],"short":["netétugame"],"status":"strong_same_root_long_short_ocr","confidence":"high","semantic":"el que todo lo ha hecho / todas las cosas ha hecho","long_reconstructed_from_wrap":true,"facsimile_pending":true},
+    {"family":"rejoíruga-","long":["rejoírugameque"],"short":["rejoírugame","rejóirugame"],"status":"strong_same_root_long_short_ocr_pending_facsimile_spelling","confidence":"high_context_medium_high_diplomatic","semantic":"incarnation/birth: hombre fue/se hizo en el vientre de María","facsimile_pending":true},
+    {"family":"ayorigu-","long":["ayoriguámeque"],"short":["ayoriguáme"],"status":"probable_same_root_long_short_ocr","confidence":"medium_high","semantic":"offender/one who hates context","short_boundary":"OCR merged as tamuayoriguáme","facsimile_pending":true},
+    {"family":"yumága-","long_raw":["yumctvameque"],"short":["yumágame"],"status":"candidate_same_semantics_long_ocr_corrupt","confidence":"medium","semantic":"Todopoderoso","do_not_reconstruct_long_diplomatic_form":true,"facsimile_pending":true}
+  ],
+  "rejected_false_short_pairs":[
+    {"candidate":"gayénameque ~ gayéname","reason":"L4895 gayéname followed by que on next OCR line; single long word split"},
+    {"candidate":"natámeque ~ natáme","reason":"L9392 natáme followed by ra on next OCR line; token is natámera"}
+  ],
+  "c09_assessment":{"tier":"B","strength":"strong_plus","strong_ocr_extension_families":5,"probable_ocr_extension_families":1,"corrupt_long_candidate_families":1,"false_short_pairs_rejected":2,"facsimile_required_for_A":true,"universal_ameque_to_amec_to_ame":false}
+}
