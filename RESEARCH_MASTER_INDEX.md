@@ -21,6 +21,7 @@ Este archivo es el punto de entrada estable para la investigación filológica y
 - [`data/research/evidence_master_matrix_v3.json`](data/research/evidence_master_matrix_v3.json): estado legible por máquina.
 - [`CANDIDATE_SOURCE_TESTS_V3.md`](CANDIDATE_SOURCE_TESTS_V3.md): pruebas fuente-basadas de la familia `nes-`.
 - [`C04_NES_FAMILY_MODERN_BRIDGE_V1.md`](C04_NES_FAMILY_MODERN_BRIDGE_V1.md): expediente focal de C04 con Márquez 1999, Tarahumara Baja/Western, Compendio 1997, SRC-02 y Balleza.
+- [`C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V2.md`](C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V2.md): control morfológico de cierre. Demuestra que la lectura participial de `nesame` está fuertemente predicha por la gramática de la misma fuente, pero conserva como no resuelta la segmentación token-específica y la relación exacta `nesema ↔ nesame`.
 
 Las versiones V6–V17, matrices v1/v2 y source tests v1/v2 se conservan como **instantáneas históricas del razonamiento**, no como estado vigente.
 
@@ -44,7 +45,9 @@ La cadena documentada de C04 incluye ahora tres capas modernas además de Steffe
 → `Neseme` Baja/Western  
 ↔ `Nisé/Niséami/nise’ami` en SRC-02 y Balleza.
 
-El *Compendio básico de la gramática ralámuli* de 1997 documenta `-ame/-me` participial regionalmente, lo que vuelve estructuralmente plausible `nesame/neseme`. No se registra todavía un parse token-específico ni una declaración histórica directa `Nessé ~ nes-/Nisé`; por eso C04 sigue en B.
+El control morfológico v2 añade tres hechos estructurales de la misma obra de Márquez: los verbos se citan lexicográficamente mediante el futuro; el participio presente se deriva del correspondiente indicativo con `-ame`; y `-me/-mi` se clasifica como material adjetival/participial con verbo. Además, los nombres de persona definidos por una actividad suelen ser participios. Todo ello vuelve la lectura participial de `nesame` **fuertemente predicha dentro de la misma tradición descriptiva**.
+
+Sin embargo, el paradigma regular no autoriza a derivar mecánicamente `nesame` desde `nesema`: la relación exacta entre los radicales del lexema no está publicada en el material recuperado. No se registra todavía `nes-ame` como parse impreso ni una declaración histórica directa `Nessé ~ nes-/Nisé`; por eso C04 sigue en B.
 
 La replicación Western/Lowland relacionada con Don Burgess se conserva como apoyo intravariedad, no como varias fuentes independientes.
 
@@ -71,9 +74,10 @@ El dataset estable sigue en `1.0.0`; las capas experimentales siguen en `1.1.0-c
 3. `EVIDENCE_MASTER_MATRIX_V3.md`;
 4. `AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md`;
 5. `C04_NES_FAMILY_MODERN_BRIDGE_V1.md`;
-6. `CANDIDATE_SOURCE_TESTS_V3.md`;
-7. `RESEARCH_DEPENDENCIES.md` antes de abrir nuevas búsquedas.
+6. `C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V2.md`;
+7. `CANDIDATE_SOURCE_TESTS_V3.md`;
+8. `RESEARCH_DEPENDENCIES.md` antes de abrir nuevas búsquedas.
 
 ## Regla de mantenimiento
 
-No elevar una hipótesis por cantidad de apariciones, semejanza gráfica, alternancia fonológica documentada en otros lexemas ni repetición dentro de una misma tradición editorial. Para C04, el próximo cambio de nivel exige una segmentación publicada de `nesame/neseme` o una identificación histórica directa de `Nessé ~ nes-/Nisé`. Una cuestión no resuelta permanece explícitamente **no resuelta**.
+No elevar una hipótesis por cantidad de apariciones, semejanza gráfica, alternancia fonológica documentada en otros lexemas ni repetición dentro de una misma tradición editorial. Tampoco convertir una derivación fuertemente predicha por la gramática general en un parse token-específico que la fuente no imprime. Para C04, el próximo cambio de nivel exige una segmentación publicada de `nesame/neseme` o una identificación histórica directa de `Nessé ~ nes-/Nisé`. Una cuestión no resuelta permanece explícitamente **no resuelta**.
