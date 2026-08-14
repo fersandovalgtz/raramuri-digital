@@ -1,0 +1,94 @@
+{
+  "artifact": "tsani_ani_formal_correspondence_audit_v1",
+  "date": "2026-08-13",
+  "status": "research_audit_not_cognacy_adjudication",
+  "question": "How strong is the historical Steffel/Merrill tsaní / tsane-li-ameke ↔ modern ani / ani-li-ame comparison once phonological, lexical and morphological evidence are kept separate?",
+  "historical": {
+    "source": "Merrill et al. 2020, Universidad de Sonora, analysis of Steffel",
+    "root_written": "tsaní",
+    "phonetic_transcription_by_merrill": "¢aní",
+    "meanings": ["decir", "hablar", "platicar", "afirmar"],
+    "affricate_analysis": {
+      "steffel_grapheme": "<ts>",
+      "merrill_value": "voiceless dentoalveolar affricate [¢]",
+      "historical_phonemic_analysis": "<ts> and <tsch> are analyzed by Merrill as allophones of one historical phoneme represented /č/"
+    },
+    "derived_form": {
+      "surface_expected": "tsanelíameke",
+      "explicit_analysis": [
+        "tsaní 'afirmar'",
+        "final í replaced by applicative -e -> tsane- 'afirmarlo'",
+        "passive -li -> tsaneli- 'se afirma'",
+        "participial -ameke -> tsanelíameke 'afirmativo'"
+      ],
+      "source_analysis_explicit": true
+    }
+  },
+  "modern": {
+    "choguita": {
+      "source": "Caballero 2022, A Grammar of Choguita Rarámuri",
+      "form": "aˈni-bi",
+      "analysis": "say-IRR.PL",
+      "root": "ani-",
+      "root_semantics": "say"
+    },
+    "munerachi": {
+      "source": "Moreno Pineda & Valenzuela Romo 2022, Coherencia discursiva en relatos ralámuli (tarahumara)",
+      "forms": ["San Isidro ani-lí-ame", "échi wisú ani-lí-ame"],
+      "analyses": ["decir-PSV-AGT", "dicen-CE-NMZ"],
+      "translation_domain": "al que le dicen / llamado",
+      "segmentation_explicit": true
+    }
+  },
+  "independent_historical_sound_change_control": {
+    "source": "Merrill et al. 2020, pp. 148-150",
+    "generalization": "Tarahumara lost initial consonants or initial syllables between the eighteenth and twentieth centuries.",
+    "examples": [
+      {"historical": "pusáni", "modern": "usáni", "meaning": "seis"},
+      {"historical": "sisí", "modern": "isí", "meaning": "orinar"},
+      {"historical": "gwoká ~ oká", "modern": "oká ~ okwá", "meaning": "dos"}
+    ],
+    "specific_affricate_deletion_series_found": false,
+    "interpretation": "Initial loss is a documented historical process and makes ¢aní ~ ani formally plausible, but no independent series has yet established initial [¢] > Ø specifically."
+  },
+  "evidence_dimensions": {
+    "semantic_correspondence": {
+      "rating": "very_high",
+      "reason": "Historical tsaní is explicitly 'decir, hablar, platicar' and also 'afirmar'; modern ani- is directly 'say' and ani-lí-ame occurs in naming/calling contexts."
+    },
+    "morphological_architecture": {
+      "rating": "very_high",
+      "reason": "Historical tsane-li-ameke is explicitly analyzed as applicative + passive + participial; modern ani-lí-ame is explicitly segmented with internal -lí and outer -ame."
+    },
+    "root_form_correspondence": {
+      "rating": "moderate_high_plausibility_not_demonstrated",
+      "reason": "After removal of historical initial affricate, ¢aní and ani are nearly identical, and initial-segment loss is independently documented in Tarahumara; however, specific [¢] deletion is not independently controlled."
+    },
+    "chronological_fit": {
+      "rating": "high",
+      "reason": "Merrill places the general initial consonant/syllable loss between the Steffel period and twentieth-century Tarahumara."
+    }
+  },
+  "current_assessment": {
+    "candidate_status": "very_high_priority_lexical_morphological_continuity_candidate_with_unresolved_specific_sound_correspondence",
+    "cognacy_judgment": "not_performed",
+    "historical_continuity_judgment": "not_performed",
+    "specific_sound_law": "not_established",
+    "constructional_continuity": "strongly_supported_at_structural_level",
+    "lexical_continuity": "plausible_and_high_priority_not_adjudicated",
+    "human_reviewed": false,
+    "ai_assisted": true
+  },
+  "prohibited_inferences": [
+    "Do not state *¢ > Ø as a Tarahumara sound law from this single lexical comparison.",
+    "Do not equate Merrill's phonetic transcription symbol ¢ with orthographic modern zero; it is a historical affricate.",
+    "Do not declare tsaní and ani cognate until the specific correspondence is independently controlled or comparatively reconstructed.",
+    "Do not confuse verbal tsaní 'decir/afirmar' with the separate tsaní- element discussed by Merrill in the 'hacer el mal' lexical set."
+  ],
+  "next_tests": [
+    "Search Steffel/Merrill for historical initial <ts>/<tsch> roots with secure modern vowel-initial counterparts.",
+    "Search comparative Tarahumaran/Uto-Aztecan sources for a reconstruction of the 'say' root and reflexes in Guarijío or related languages.",
+    "Check twentieth-century Rarámuri dictionaries for ani- and any retained tsani-/chani- dialectal forms.",
+    "Search Guadalaxara 1683 for the 'say/affirm' root to extend the chronology backward."
+  ]
+}
