@@ -61,7 +61,7 @@ export default function DownloadsPage() {
           <div><span>Entradas</span><strong>{manifest.entry_count.toLocaleString("es-MX")}</strong><small>En cada exportación completa</small></div>
           <div><span>Formatos</span><strong>7</strong><small>XML, JSON, CSV, SQL, TEI, PDF, ZIP</small></div>
           <div><span>Codificación</span><strong>UTF-8</strong><small>Acentos y saltillos</small></div>
-          <div><span>API</span><strong>REST</strong><small>OpenAPI 3.1</small></div>
+          <div><span>API</span><strong>REST</strong><small>OpenAPI 3.1 + capas candidatas</small></div>
         </section>
 
         <section className="content-section download-section">
@@ -142,10 +142,36 @@ export default function DownloadsPage() {
           </div>
         </section>
 
+        <section className="content-section api-section">
+          <h2>Capas experimentales · 1.1.0-candidate</h2>
+          <p>Estas interfaces publican estructuras documentales reproducibles para revisión y reutilización sin cambiar la versión estable del conjunto de datos, que continúa en 1.0.0. Su exposición pública no equivale a validación lingüística.</p>
+          <div className="api-grid">
+            <article>
+              <code>GET /api/lexical-relations</code>
+              <h3>Relaciones lexicográficas canónicas</h3>
+              <p>28 relaciones documentales con destino resuelto; incluye remisiones, referencias explícitas de variante y relaciones gramaticales. Cuatro destinos fueron adjudicados documentalmente y permanecen pendientes de cotejo lingüístico humano.</p>
+              <div className="api-actions">
+                <a className="primary-button" href="/api/lexical-relations?limit=28" target="_blank" rel="noreferrer">Consultar relaciones</a>
+                <a className="text-link" href="/api/lexical-relations?format=csv">Exportar CSV →</a>
+              </div>
+            </article>
+            <article>
+              <code>GET /api/typed-variants</code>
+              <h3>Variants tipados</h3>
+              <p>224 tokens heredados del campo compatible <code>variants</code>, tipados por procedencia y naturaleza documental; 0 orígenes permanecen sin resolver.</p>
+              <div className="api-actions">
+                <a className="primary-button" href="/api/typed-variants?limit=50" target="_blank" rel="noreferrer">Consultar capa tipada</a>
+                <a className="text-link" href="/api/typed-variants?format=jsonl">Exportar JSONL →</a>
+              </div>
+            </article>
+          </div>
+          <p className="manifest-link"><a className="text-link" href="https://github.com/fersandovalgtz/raramuri-digital/blob/main/CANDIDATE_LAYER_PUBLICATION_V1.md">Consultar la frontera de publicación y cautelas metodológicas →</a></p>
+        </section>
+
         <section className="content-section integrity-section">
           <h2>Control de publicación</h2>
           <div className="definition-grid">
-            <article><h3>Estado de publicación</h3><p>{manifest.publication_status}. La API y las exportaciones públicas contienen únicamente este conjunto.</p></article>
+            <article><h3>Estado de publicación</h3><p>{manifest.publication_status}. Las exportaciones estables contienen únicamente el conjunto 1.0.0; las capas candidatas están señaladas y separadas.</p></article>
             <article><h3>Estado lingüístico</h3><p>{manifest.validation_status}. El estado se registra explícitamente en todos los formatos.</p></article>
             <article><h3>Procedencia</h3><p>Cada entrada conserva código de fuente, documento, página inicial, página final y estado de transcripción.</p></article>
             <article><h3>Licencia</h3><p>{manifest.license.id}. Los textos fuente, facsímiles, logotipos y materiales de terceros conservan sus derechos.</p></article>
