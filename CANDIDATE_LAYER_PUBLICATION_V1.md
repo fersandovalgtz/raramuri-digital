@@ -8,19 +8,21 @@ Las capas `data/variants-typed.json` y `data/lexical-relations.json` se exponen 
 
 La frontera de publicación se adopta para permitir inspección, reutilización y cotejo de las nuevas estructuras sin confundir una extensión documental reproducible con una nueva edición lingüísticamente validada.
 
+La política vigente del proyecto está definida en `PROJECT_VALIDATION_POLICY_V1.md`: no existe una etapa de validación humana externa como requisito operativo. Las decisiones se clasifican por su base documental, análisis publicado, inferencia del proyecto o estado no resuelto.
+
 ## Interfaces
 
 ### `GET /api/typed-variants`
 
 Expone los 224 tokens heredados de `variants` con procedencia y naturaleza tipadas. Admite búsqueda textual, filtros `origin` y `nature`, paginación y exportación completa en CSV o JSONL.
 
-El estado `1.1.0-candidate` se devuelve explícitamente. Los registros conservan evidencia documental, campos de procedencia y estado de validación. No se presenta la capa como validación lingüística.
+El estado `1.1.0-candidate` se devuelve explícitamente. Los registros conservan evidencia documental, campos de procedencia y estado de validación. No se presenta la capa como validación lingüística externa.
 
 ### `GET /api/lexical-relations`
 
 Expone las 28 relaciones lexicográficas canónicas derivadas de remisiones, referencias de variante y relaciones gramaticales documentales. Admite búsqueda textual, filtros `type` y `method`, paginación y exportación completa en CSV o JSONL.
 
-Las cuatro desambiguaciones documentales se identifican mediante `target_resolution_method = documentary_adjudication`; sus decisiones permanecen separadas de una futura validación lingüística humana.
+Las cuatro desambiguaciones documentales se identifican mediante `target_resolution_method = documentary_adjudication`. Se consideran **resueltas documentalmente para los fines del proyecto**; cualquier campo heredado `human_validation_status` se conserva sólo por compatibilidad histórica y no funciona como requisito de cierre.
 
 ## Estado de resolución
 
@@ -35,8 +37,8 @@ En la generación vigente:
 
 ## Exclusiones deliberadas
 
-No se cambia `dataset_version = 1.0.0`. No se reescribe `data/lexicon-master.json`. No se elimina el campo heredado `variants`. No se inyectan todavía estas capas en TEI Lex-0, CLDF, XML, SQL ni en el manifiesto estable de descargas. No se convierte `Pendiente de cotejo lingüístico` en un estado de validación superior por efecto de la resolución documental.
+No se cambia `dataset_version = 1.0.0`. No se reescribe `data/lexicon-master.json`. No se elimina el campo heredado `variants`. Las capas candidatas sólo podrán entrar en TEI Lex-0/CLDF mediante serializaciones experimentales explícitamente separadas de las exportaciones estables hasta su promoción de versión.
 
 ## Criterio para el siguiente cambio
 
-Antes de promover `1.1.0-candidate`, deberán evaluarse por separado: validación humana de las cuatro adjudicaciones documentales; estabilidad del contrato de ambas APIs; efecto en consumidores derivados; y estrategia explícita de serialización para TEI Lex-0/CLDF. Una promoción de versión deberá ser deliberada y acompañada de actualización del esquema, changelog, metadatos y pruebas de regresión.
+Antes de promover `1.1.0-candidate`, deberán evaluarse: estabilidad del contrato de ambas APIs; efecto en consumidores derivados; serialización candidata explícita para TEI Lex-0/CLDF; reproducibilidad y validaciones automatizadas; y actualización coordinada de esquema, changelog y metadatos. La promoción de versión será deliberada y no dependerá de una validación humana externa.
