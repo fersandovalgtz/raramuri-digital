@@ -1,0 +1,150 @@
+{
+  "artifact": "newa_make_family_multivariety_audit_v3",
+  "date": "2026-08-13",
+  "status": "research_audit_not_community_validation",
+  "supersedes": "newa_make_family_multivariety_audit_v2",
+  "question": "How should Western newálime/nehualíame be analyzed after adding direct evidence for PFV/PST + nominalizer/participle stacking and multivariety newa-li morphology?",
+  "secure_root_evidence": [
+    {
+      "source": "Caballero 2022, A Grammar of Choguita Rarámuri",
+      "forms": ["neˈwa-bo", "niwa-ni-pi"],
+      "analyses": ["make-FUT.PL", "make-DESID-IRR.PL"],
+      "assessment": "Primary independent grammatical confirmation of ne/niwa 'make/do'."
+    },
+    {
+      "source": "Manual Ralámuli Escrito para Todas y Todos, 2019",
+      "forms": ["newálime", "newáliwi", "newáliwa", "newá", "newáwa"],
+      "assessment": "Multivariety forms independently anchor the newá- family in the semantic domain 'hacer'."
+    },
+    {
+      "source": "Villalpando Quiñonez et al. 2021, Norogachi Rarámuri",
+      "forms": ["newá-li-wa", "newá-li-pa", "newá-li", "newá-ami"],
+      "analyses": ["make-PFV-PASV", "make-PFV-PASV", "make-PFV", "make-NMLZ"],
+      "assessment": "Direct interlinear evidence that newá- combines compositionally with PFV -li and separately with NMLZ -ami."
+    }
+  ],
+  "western_documentary_series": [
+    {
+      "year": 1972,
+      "form": "nehualíame",
+      "source": "Albino Mares Trías, Hue'cá e'carúgame nehualíame ju imé",
+      "variety": "Western/Bacusínare",
+      "note": "The string formally preserves ...liame; this is compatible with li + ame but is not itself an authored segmentation."
+    },
+    {
+      "year": 2008,
+      "form": "newale",
+      "source": "Western TAC New Testament / public TAC corpus",
+      "assessment": "Repeated finite past contexts, including 'made/built/created'."
+    },
+    {
+      "year": 2008,
+      "form": "newame",
+      "source": "Western TAC New Testament / public TAC corpus",
+      "assessment": "Relative/descriptive or preparatory contexts; distinct from newalime in the same corpus."
+    },
+    {
+      "year": 2008,
+      "form": "newalime",
+      "source": "Western TAC New Testament / public TAC corpus",
+      "assessment": "Occurs in constructions such as piesta newalime and La newalime ... napu Onorúgame najk; distribution differs from newame."
+    },
+    {
+      "year": 2010,
+      "form": "newalime",
+      "source": "Burgess & Mares Trías, Sunute we’ká e’karúgame newalime ju",
+      "variety": "Western/Lowland Tarahumara",
+      "whole_title_spanish": "Con el maíz se pueden hacer muchas cosas"
+    },
+    {
+      "year": 2019,
+      "form": "newálime jú",
+      "source": "Manual Ralámuli Escrito para Todas y Todos",
+      "variety": "Oeste",
+      "spanish_contexts": ["¿Qué fiesta hacen aquí?", "¿Para qué hacen la fiesta?"],
+      "assessment": "The copular frame newálime jú is directly documented in the Western column."
+    }
+  ],
+  "structural_controls": {
+    "western_baja_tb_participial_me": [
+      "Compendio 1997 explicitly states that -ame/-me functions as participial/nominalizing morphology.",
+      "Baja-TB Gema-rá-me ju is analyzed as cobija-hace-PART es, 'Es uno que hace cobija'.",
+      "Baja-TB rewa-lí-me Juáni is analyzed as nombra-pasivo-NOM Juan, proving a surface -li-me sequence in the relevant regional zone."
+    ],
+    "choguita_stacking": [
+      "Caballero 2022 directly analyzes rihói-li-ame as inhabit.PL-PST-PTCP.",
+      "Therefore PST + PTCP stacking is grammatically possible in Rarámuri and cannot be rejected a priori for newa-li-me."
+    ],
+    "norogachi_newa_morphology": [
+      "newá-li-wa = make-PFV-PASV",
+      "newá-li-pa = make-PFV-PASV",
+      "newá-li = make-PFV",
+      "newá-ami = make-NMLZ",
+      "This separates the PFV -li pathway from a direct -ami nominalization pathway."
+    ],
+    "norogachi_passive_nominalization": [
+      "A separate Norogachi text analyzes chapi-wa-ami as catch-PASV-NMLZ.",
+      "This independently demonstrates an outer NMLZ after passive morphology and provides a structural comparator for Baja-TB rewa-li-me = PASSIVE-NOM."
+    ],
+    "manual_multivariety_pattern": {
+      "sur": "newáliwi",
+      "oeste": "newálime",
+      "centro": "newáliwa",
+      "cumbre": "newáliwi",
+      "assessment": "The recurrent newáli- material is followed by variety-sensitive outer material -me/-wa/-wi."
+    }
+  },
+  "competing_analyses_of_newalime": [
+    {
+      "id": "N1",
+      "analysis": "newa + nominalizing/participial -li + -me",
+      "status": "disfavored_relative_to_N2",
+      "reason": "Independent evidence now gives newa + PFV -li directly; stacking two nominalizers is not needed to explain the form."
+    },
+    {
+      "id": "N2",
+      "analysis": "newa-li (PFV/PST or other inner -li) + outer -me/-ame (NMLZ/PTCP)",
+      "status": "preferred_working_morphological_hypothesis_not_yet_western_authoritative_segmentation",
+      "support": [
+        "Norogachi directly segments newá-li as make-PFV.",
+        "Western TAC directly attests finite newale and distinct newame/newalime distributions.",
+        "Compendio directly documents participial/nominalizing -ame/-me in Baja-TB and a -li-me sequence in rewa-lí-me.",
+        "Caballero directly attests PST -li + PTCP -ame stacking.",
+        "Western 1972 nehualíame is formally compatible with li + ame.",
+        "Western 2019 newálime occurs with copula jú, paralleling Baja-TB participial/nominal predicates in -me + ju."
+      ],
+      "unresolved": [
+        "The exact function of Western -li in newálime remains unadjudicated: PFV/PST, passive, or another historically related function.",
+        "No published Western grammar passage has yet been recovered that explicitly segments the word newálime itself."
+      ]
+    },
+    {
+      "id": "N3",
+      "analysis": "descriptive surface partition newáli- + variety-sensitive final element (-me/-wa/-wi)",
+      "status": "preferred_conservative_notation_when_function_of_li_is_not_being_claimed",
+      "support": [
+        "The Manual 2019 multivariety table visibly preserves newáli- with different final material.",
+        "It remains the safest notation for tables that should not adjudicate the function of -li."
+      ],
+      "note": "N3 and N2 are no longer mutually exclusive: N3 is a conservative surface representation; N2 is the preferred internal working hypothesis."
+    }
+  ],
+  "current_assessment": {
+    "root_semantics_confidence": "very_high",
+    "western_newalime_semantic_domain_confidence": "high",
+    "outer_me_ame_nmlz_ptcp_compatibility": "high",
+    "inner_li_is_real_morphological_material": "high_transdialectally",
+    "western_newalime_exact_internal_segmentation_confidence": "moderate",
+    "preferred_working_hypothesis": "newa-li + -me/-ame, with the function of -li still open",
+    "preferred_conservative_representation": "newáli-me",
+    "add_to_ameke_ame_ami_core_evidence": false,
+    "reason": "The case is now morphologically much stronger, but the exact Western segmentation/function of -li has not been directly adjudicated. Preserve it as a high-value bridge/control rather than merging it into the historical core prematurely."
+  },
+  "next_tests": [
+    "Recover a Western grammatical source that explicitly segments newálime or another newa-li-me form.",
+    "Search Baja-TB for additional root-li-me paradigms corresponding to root-li-wa/root-li-ami elsewhere.",
+    "Test whether Western -le finite forms and pre-nominal -li can be related by documented morphophonology rather than visual similarity.",
+    "Recover full 1972 Bacusínare text pages and build a concordance of nehualíame/newa-related forms."
+  ],
+  "epistemic_rule": "Distinguish four claims: lexical root identity, presence of internal -li, function of -li, and identity/history of outer -me/-ame. Evidence can strongly support the first three levels without licensing a final cognacy judgment."
+}
