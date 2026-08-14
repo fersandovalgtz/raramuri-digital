@@ -2,6 +2,7 @@
   "schema_version": "1.1.0-candidate",
   "base_dataset_version": "1.0.0",
   "generated_from": "data/lexicon-master.json",
+  "target_adjudications_from": "data/lexical-relation-target-adjudications.json",
   "record_count": 224,
   "unresolved_origin_count": 0,
   "records": [
@@ -21,6 +22,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -63,6 +68,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -86,6 +95,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pl",
@@ -119,6 +132,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -161,6 +178,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "sing",
@@ -196,6 +217,10 @@
       "target_form": "ca'rara",
       "target_homonym_number": null,
       "target_resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -219,6 +244,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -242,6 +271,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -284,6 +317,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -326,6 +363,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -368,6 +409,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -401,6 +446,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -443,6 +492,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pl",
@@ -476,6 +529,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -518,6 +575,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "sing",
@@ -551,6 +612,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pl",
@@ -584,6 +649,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -617,6 +686,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pl",
@@ -650,6 +723,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -683,6 +760,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -725,6 +806,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -767,6 +852,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -809,6 +898,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -852,6 +945,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -894,6 +991,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -927,6 +1028,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -960,6 +1065,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -1011,6 +1120,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -1044,6 +1157,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -1077,6 +1194,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -1119,6 +1240,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -1161,6 +1286,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -1194,6 +1323,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -1227,6 +1360,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -1278,6 +1415,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -1320,6 +1461,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pl",
@@ -1353,6 +1498,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -1386,6 +1535,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "sing",
@@ -1428,6 +1581,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pl",
@@ -1461,6 +1618,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -1494,6 +1655,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pl",
@@ -1527,6 +1692,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -1560,6 +1729,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pl",
@@ -1603,6 +1776,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -1636,6 +1813,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pl",
@@ -1669,6 +1850,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -1702,6 +1887,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -1735,6 +1924,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -1768,6 +1961,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -1810,6 +2007,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -1843,6 +2044,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -1876,6 +2081,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "sing",
@@ -1909,6 +2118,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -1942,6 +2155,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -1984,6 +2201,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -2017,6 +2238,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -2061,6 +2286,10 @@
       "target_form": "quimá",
       "target_homonym_number": null,
       "target_resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -2084,6 +2313,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -2117,6 +2350,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -2150,6 +2387,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -2192,6 +2433,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -2234,6 +2479,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pl",
@@ -2267,6 +2516,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -2309,6 +2562,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -2378,6 +2635,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -2411,6 +2672,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -2453,6 +2718,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -2476,6 +2745,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -2528,6 +2801,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -2561,6 +2838,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -2594,6 +2875,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -2617,6 +2902,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -2650,6 +2939,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "sing",
@@ -2683,6 +2976,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "sing",
@@ -2716,6 +3013,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "sing",
@@ -2749,6 +3050,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -2782,6 +3087,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -2815,6 +3124,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pl",
@@ -2848,6 +3161,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -2881,6 +3198,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -2914,6 +3235,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -2956,6 +3281,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -2989,6 +3318,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "sing",
@@ -3022,6 +3355,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -3055,6 +3392,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -3088,6 +3429,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -3121,6 +3466,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "sing",
@@ -3154,6 +3503,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -3177,6 +3530,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -3210,6 +3567,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -3252,6 +3613,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -3285,6 +3650,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -3327,6 +3696,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -3369,6 +3742,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -3420,6 +3797,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -3453,6 +3834,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -3486,6 +3871,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -3528,6 +3917,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -3561,6 +3954,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -3594,6 +3991,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -3654,6 +4055,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -3687,6 +4092,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -3720,6 +4129,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -3743,6 +4156,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -3780,7 +4197,7 @@
       "source_page": 36,
       "source_page_end": 36,
       "raw_evidence": "[futuro de chi’rá]",
-      "target_record_id": null,
+      "target_record_id": "RD-000716",
       "target_record_ids": [
         "RD-000716",
         "RD-000717",
@@ -3788,7 +4205,11 @@
       ],
       "target_form": "chi’rá",
       "target_homonym_number": null,
-      "target_resolution_status": "resolved_ambiguous",
+      "target_resolution_status": "resolved_unique",
+      "target_resolution_method": "documentary_adjudication",
+      "target_adjudication_id": "LRA-000003",
+      "documentary_basis": "Chi’rimea se traduce 'Amanecerá'; 1Chi’rá significa 'Amanecer (el día)' y además documenta el futuro chi’riméa. Los otros homónimos significan 'estar tierno' y 'aplastar'.",
+      "human_validation_status": "Pendiente de cotejo lingüístico",
       "grammatical_features": [],
       "relation_feature": "fut",
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -3812,6 +4233,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -3845,6 +4270,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -3889,6 +4318,10 @@
       "target_form": "chira",
       "target_homonym_number": null,
       "target_resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -3912,6 +4345,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -3945,6 +4382,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -3978,6 +4419,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -4029,6 +4474,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -4071,6 +4520,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -4104,6 +4557,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -4146,6 +4603,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pl",
@@ -4179,6 +4640,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -4212,6 +4677,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -4245,6 +4714,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -4278,6 +4751,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pl",
@@ -4311,6 +4788,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -4344,6 +4825,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -4377,6 +4862,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -4410,6 +4899,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -4443,6 +4936,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -4476,6 +4973,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pl",
@@ -4509,6 +5010,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -4551,6 +5056,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -4584,6 +5093,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "ad",
@@ -4626,6 +5139,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -4651,6 +5168,10 @@
       "target_form": "hua",
       "target_homonym_number": 2,
       "target_resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": "pp",
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -4674,6 +5195,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -4718,6 +5243,10 @@
       "target_form": "huáasi",
       "target_homonym_number": null,
       "target_resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -4741,6 +5270,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -4774,6 +5307,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -4816,6 +5353,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -4849,6 +5390,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -4891,6 +5436,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -4924,6 +5473,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -4957,6 +5510,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pl",
@@ -4990,6 +5547,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "gut",
@@ -5023,6 +5584,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -5056,6 +5621,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -5089,6 +5658,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pl",
@@ -5122,6 +5695,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -5156,6 +5733,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -5189,6 +5770,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -5212,6 +5797,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -5245,6 +5834,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "sing",
@@ -5278,6 +5871,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -5322,6 +5919,10 @@
       "target_form": "uba",
       "target_homonym_number": null,
       "target_resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -5345,6 +5946,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -5378,6 +5983,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -5401,6 +6010,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -5424,6 +6037,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -5466,6 +6083,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -5499,6 +6120,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pl",
@@ -5532,6 +6157,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pl",
@@ -5565,6 +6194,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pl",
@@ -5598,6 +6231,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -5631,6 +6268,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -5664,6 +6305,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pl",
@@ -5706,6 +6351,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pl",
@@ -5739,6 +6388,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -5774,6 +6427,10 @@
       "target_form": "huirá",
       "target_homonym_number": null,
       "target_resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": "pret",
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -5797,6 +6454,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -5839,6 +6500,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -5890,6 +6555,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -5932,6 +6601,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pl",
@@ -5974,6 +6647,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -6009,6 +6686,10 @@
       "target_form": "huatayé",
       "target_homonym_number": null,
       "target_resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6032,6 +6713,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -6065,6 +6750,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6088,6 +6777,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "sing",
@@ -6121,6 +6814,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -6154,6 +6851,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pp",
@@ -6189,6 +6890,10 @@
       "target_form": "huicori",
       "target_homonym_number": null,
       "target_resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6214,6 +6919,10 @@
       "target_form": "igúsuhua",
       "target_homonym_number": null,
       "target_resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6237,6 +6946,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "fut",
@@ -6270,6 +6983,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "pret",
@@ -6312,6 +7029,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6335,6 +7056,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "sing",
@@ -6368,6 +7093,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [
         {
           "source_label": "sing",
@@ -6401,6 +7130,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6424,6 +7157,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6447,6 +7184,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6470,6 +7211,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6493,6 +7238,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6516,6 +7265,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6539,6 +7292,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6562,6 +7319,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6585,6 +7346,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6608,6 +7373,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6631,6 +7400,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6654,6 +7427,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6677,6 +7454,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6700,6 +7481,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6723,6 +7508,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6746,6 +7535,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6769,6 +7562,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6792,6 +7589,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6815,6 +7616,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6838,6 +7643,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6861,6 +7670,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6884,6 +7697,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6907,6 +7724,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6930,6 +7751,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6953,6 +7778,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6976,6 +7805,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -6999,6 +7832,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -7022,6 +7859,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -7045,6 +7886,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -7068,6 +7913,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -7091,6 +7940,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -7114,6 +7967,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -7137,6 +7994,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -7160,6 +8021,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -7183,6 +8048,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -7206,6 +8075,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -7229,6 +8102,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -7252,6 +8129,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -7275,6 +8156,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -7298,6 +8183,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -7321,6 +8210,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",
@@ -7344,6 +8237,10 @@
       "target_form": null,
       "target_homonym_number": null,
       "target_resolution_status": null,
+      "target_resolution_method": null,
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null,
       "grammatical_features": [],
       "relation_feature": null,
       "validation_status": "Pendiente de cotejo lingüístico",

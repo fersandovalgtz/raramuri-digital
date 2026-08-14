@@ -5,11 +5,13 @@
     "translation_raw",
     "comments_raw"
   ],
+  "target_adjudications_from": "data/lexical-relation-target-adjudications.json",
   "relation_count": 28,
   "source_remission_occurrence_count": 18,
-  "unique_resolution_count": 24,
-  "ambiguous_resolution_count": 4,
+  "unique_resolution_count": 28,
+  "ambiguous_resolution_count": 0,
   "unresolved_resolution_count": 0,
+  "documentary_adjudication_count": 4,
   "records": [
     {
       "relation_id": "REL-000001",
@@ -33,7 +35,11 @@
       "target_record_ids": [
         "RD-001154"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     },
     {
       "relation_id": "REL-000002",
@@ -57,7 +63,11 @@
       "target_record_ids": [
         "RD-000600"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     },
     {
       "relation_id": "REL-000003",
@@ -81,7 +91,11 @@
       "target_record_ids": [
         "RD-000762"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     },
     {
       "relation_id": "REL-000004",
@@ -105,7 +119,11 @@
       "target_record_ids": [
         "RD-001576"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     },
     {
       "relation_id": "REL-000005",
@@ -129,7 +147,11 @@
       "target_record_ids": [
         "RD-000430"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     },
     {
       "relation_id": "REL-000006",
@@ -149,14 +171,18 @@
       "target_raw": "acá",
       "target_form": "acá",
       "target_homonym_number": null,
-      "target_record_id": null,
+      "target_record_id": "RD-000008",
       "target_record_ids": [
         "RD-000006",
         "RD-000007",
         "RD-000008",
         "RD-000012"
       ],
-      "resolution_status": "resolved_ambiguous"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "documentary_adjudication",
+      "target_adjudication_id": "LRA-000001",
+      "documentary_basis": "La entrada fuente significa 'Tener huaraches'; entre los cuatro homónimos Acá, sólo 3Acá significa 'Huarache'.",
+      "human_validation_status": "Pendiente de cotejo lingüístico"
     },
     {
       "relation_id": "REL-000007",
@@ -180,7 +206,11 @@
       "target_record_ids": [
         "RD-000036"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     },
     {
       "relation_id": "REL-000008",
@@ -204,7 +234,11 @@
       "target_record_ids": [
         "RD-000722"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     },
     {
       "relation_id": "REL-000009",
@@ -228,7 +262,11 @@
       "target_record_ids": [
         "RD-000342"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     },
     {
       "relation_id": "REL-000010",
@@ -252,7 +290,11 @@
       "target_record_ids": [
         "RD-001877"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     },
     {
       "relation_id": "REL-000011",
@@ -276,7 +318,11 @@
       "target_record_ids": [
         "RD-000039"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     },
     {
       "relation_id": "REL-000012",
@@ -300,7 +346,11 @@
       "target_record_ids": [
         "RD-000859"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     },
     {
       "relation_id": "REL-000013",
@@ -320,14 +370,18 @@
       "target_raw": "cochi",
       "target_form": "cochi",
       "target_homonym_number": null,
-      "target_record_id": null,
+      "target_record_id": "RD-000484",
       "target_record_ids": [
         "RD-000481",
         "RD-000482",
         "RD-000483",
         "RD-000484"
       ],
-      "resolution_status": "resolved_ambiguous"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "documentary_adjudication",
+      "target_adjudication_id": "LRA-000002",
+      "documentary_basis": "La entrada fuente 1Cohuí está glosada '(Pamachi) marrano'; el candidato RD-000484 contiene literalmente 'Cochi, cohuí' y la misma glosa 'Marrano'.",
+      "human_validation_status": "Pendiente de cotejo lingüístico"
     },
     {
       "relation_id": "REL-000014",
@@ -351,7 +405,11 @@
       "target_record_ids": [
         "RD-000489"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     },
     {
       "relation_id": "REL-000015",
@@ -375,7 +433,11 @@
       "target_record_ids": [
         "RD-001067"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     },
     {
       "relation_id": "REL-000016",
@@ -396,13 +458,17 @@
       "target_raw": "chi’rá",
       "target_form": "chi’rá",
       "target_homonym_number": null,
-      "target_record_id": null,
+      "target_record_id": "RD-000716",
       "target_record_ids": [
         "RD-000716",
         "RD-000717",
         "RD-000718"
       ],
-      "resolution_status": "resolved_ambiguous"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "documentary_adjudication",
+      "target_adjudication_id": "LRA-000003",
+      "documentary_basis": "Chi’rimea se traduce 'Amanecerá'; 1Chi’rá significa 'Amanecer (el día)' y además documenta el futuro chi’riméa. Los otros homónimos significan 'estar tierno' y 'aplastar'.",
+      "human_validation_status": "Pendiente de cotejo lingüístico"
     },
     {
       "relation_id": "REL-000017",
@@ -426,7 +492,11 @@
       "target_record_ids": [
         "RD-000719"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     },
     {
       "relation_id": "REL-000018",
@@ -450,7 +520,11 @@
       "target_record_ids": [
         "RD-000433"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     },
     {
       "relation_id": "REL-000019",
@@ -474,7 +548,11 @@
       "target_record_ids": [
         "RD-000939"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     },
     {
       "relation_id": "REL-000020",
@@ -499,7 +577,11 @@
       "target_record_ids": [
         "RD-000862"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     },
     {
       "relation_id": "REL-000021",
@@ -523,7 +605,11 @@
       "target_record_ids": [
         "RD-000864"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     },
     {
       "relation_id": "REL-000022",
@@ -543,12 +629,16 @@
       "target_raw": "huatoná",
       "target_form": "huatoná",
       "target_homonym_number": null,
-      "target_record_id": null,
+      "target_record_id": "RD-000934",
       "target_record_ids": [
         "RD-000934",
         "RD-000935"
       ],
-      "resolution_status": "resolved_ambiguous"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "documentary_adjudication",
+      "target_adjudication_id": "LRA-000004",
+      "documentary_basis": "Huachíami significa 'Derecho (recto)'; RD-000934 Huatoná incluye explícitamente la acepción adjetival 'Derecho, lado derecho, mano derecha'. RD-000935 Huatona significa 'Hacer atole'.",
+      "human_validation_status": "Pendiente de cotejo lingüístico"
     },
     {
       "relation_id": "REL-000023",
@@ -572,7 +662,11 @@
       "target_record_ids": [
         "RD-002511"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     },
     {
       "relation_id": "REL-000024",
@@ -597,7 +691,11 @@
       "target_record_ids": [
         "RD-001010"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     },
     {
       "relation_id": "REL-000025",
@@ -621,7 +719,11 @@
       "target_record_ids": [
         "RD-000930"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     },
     {
       "relation_id": "REL-000026",
@@ -645,7 +747,11 @@
       "target_record_ids": [
         "RD-000964"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     },
     {
       "relation_id": "REL-000027",
@@ -669,7 +775,11 @@
       "target_record_ids": [
         "RD-001067"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     },
     {
       "relation_id": "REL-000028",
@@ -693,7 +803,11 @@
       "target_record_ids": [
         "RD-001016"
       ],
-      "resolution_status": "resolved_unique"
+      "resolution_status": "resolved_unique",
+      "target_resolution_method": "automatic_form_match",
+      "target_adjudication_id": null,
+      "documentary_basis": null,
+      "human_validation_status": null
     }
   ]
 }
