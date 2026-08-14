@@ -3,7 +3,8 @@
 ## Identidad y versiones
 
 - Plataforma: `3.1.0`.
-- Conjunto de datos: `1.0.0`.
+- Conjunto de datos publicado: `1.0.0`.
+- Extensión de esquema en preparación: `1.1.0-candidate`.
 - Identificador de entrada: `RD-######`, único y persistente.
 - Codificación: UTF-8; normalización Unicode NFC en procesos que la requieren.
 - Lenguas: `tar` para rarámuri/tarahumara y `es` para español.
@@ -60,37 +61,61 @@ La auditoría completa de esta representación está documentada en `HEADWORD_VA
 
 La auditoría exhaustiva v3 del 14 de agosto de 2026 reconstruyó la procedencia de los **224 tokens** contenidos en `variants`, presentes en 221 entradas. Todos quedaron tipados: no hubo tokens sin origen ni casos de procedencia múltiple.
 
-Por procedencia de emisión, el inventario contiene:
-
-- 54 formas secundarias procedentes de la misma celda del lema (`headword_secondary`);
-- 168 anotaciones tomadas literalmente de corchetes en `comments_raw` (`bracket_annotation`);
-- 2 remisiones capturadas por la expresión regular histórica (`cross_reference`).
-
-Por naturaleza documental, esos 224 tokens se distribuyen en 54 formas co-presentadas con el lema, 156 anotaciones gramaticales etiquetadas regulares, 2 anotaciones gramaticales con separadores internos no canónicos, 3 relaciones gramaticales expresadas en frase, 6 referencias explícitas de fuente con la fórmula `variante de ...`, 1 anotación mixta con un segmento no etiquetado y 2 remisiones actualmente capturadas.
+Por procedencia de emisión, el inventario contiene 54 formas secundarias del lema (`headword_secondary`), 168 anotaciones de corchetes (`bracket_annotation`) y 2 remisiones capturadas por la expresión regular histórica (`cross_reference`). Por naturaleza documental se distinguen formas co-presentadas, anotaciones gramaticales, relaciones gramaticales expresadas en frase, referencias explícitas `variante de ...`, una anotación mixta sin etiqueta y remisiones.
 
 Estas categorías **no equivalen automáticamente a análisis lingüísticos**. Una forma co-presentada no se presume variante fonológica; una etiqueta gramatical se conserva como evidencia documental antes de normalizarla; y un segmento sin etiqueta no recibe función por inferencia.
 
-El cotejo de fuente confirmó además que:
+El cotejo de fuente confirmó además 18 remisiones visibles `Véase/Vease` en los dos campos textuales principales, aunque sólo 2 están representadas actualmente en `variants`; seis fórmulas `variante de ...`; las etiquetas documentales `ad.` y `gut.`; dos casos con puntuación no canónica entre etiquetas; y un caso con segmento intermedio sin etiqueta.
 
-- la fuente contiene exactamente 6 fórmulas `variante de ...`; las seis apuntan a lemas existentes del corpus y deben modelarse como relaciones explícitas de fuente;
-- hay 18 remisiones visibles `Véase/Vease` en los dos campos textuales principales, pero sólo 2 están actualmente representadas en `variants`;
-- de las 16 remisiones faltantes, 13 están en `comments_raw` y se pierden porque la regex histórica no reconoce `Véase` con acento en la primera `e`, mientras 3 están en `translation_raw`, campo que el extractor de variantes no inspecciona;
-- la fuente imprime literalmente `ad.` y `gut.` en sendas anotaciones; cualquier expansión o normalización es una decisión editorial separada;
-- `RD-000034` y `RD-001023` contienen dos etiquetas gramaticales separadas de manera no canónica, mientras `RD-000726` contiene un segmento intermedio sin etiqueta que no debe completarse por conjetura.
+`variants` se mantiene como vista heredada 1.0.0. La interpretación canónica futura se divide en las dos capas siguientes.
 
-En consecuencia, las remisiones deben modelarse como **relaciones lexicográficas separadas**, no como variantes lingüísticas. El dataset publicado `1.0.0` no se reescribe silenciosamente: la auditoría registra la deuda y prepara una migración reproducible.
+## Capa tipada de variantes — `1.1.0-candidate`
 
-Una revisión futura del esquema deberá tipar al menos:
+`data/variants-typed.json` es una capa derivada, reproducible y no destructiva sobre los 224 tokens heredados de `variants`. Cada token conserva su identificador de entrada y la evidencia documental, pero queda tipado por procedencia y naturaleza.
 
-- `variant_origin`: procedencia física/documental del dato;
-- `variant_nature`: naturaleza editorial/estructural de la relación;
-- `target_record_id`: destino resuelto cuando exista;
-- `source_field`: campo fuente (`headword`, `comments_raw`, `translation_raw`, etc.);
-- `source_page`: página de evidencia;
-- `raw_evidence`: cadena documental intacta;
-- `validation_status`: estado de validación lingüística/editorial.
+Campos nucleares por registro:
 
-`variants` podrá mantenerse como vista de compatibilidad durante la migración. El informe y los datos de control están en `VARIANT_ORIGIN_NATURE_AUDIT_V3.md` y `data/variant-origin-nature-audit-v3.json`.
+| Campo | Regla |
+|---|---|
+| `variant_token_id` | Identificador estable dentro de la entrada: `RD-######` + posición del token |
+| `record_id` | Entrada maestra de procedencia |
+| `form` | Cadena heredada exacta almacenada en `variants` |
+| `variant_origin` | `headword_secondary`, `bracket_annotation`, `cross_reference` o `unresolved` |
+| `variant_nature` | Naturaleza documental/estructural del token, sin imponer equivalencia lingüística |
+| `source_field` | Campo del que se extrajo la evidencia |
+| `source_page` | Página inicial de la entrada en la fuente |
+| `raw_evidence` | Cadena fuente que justifica el token |
+| `target_record_id` | Destino único cuando la relación resuelve inequívocamente; `null` en otro caso |
+| `target_record_ids` | Conjunto de destinos candidatos cuando procede |
+| `grammatical_features` | Grupos de etiqueta y formas reconocidos explícitamente dentro de una anotación |
+| `validation_status` | Estado de validación; el análisis automático no sustituye cotejo lingüístico |
+
+La capa conserva literalmente etiquetas documentales como `ad.` y `gut.`. No convierte `gut` en `fut` ni asigna función a segmentos sin etiqueta. La puntuación no canónica puede ser reconocida por el parser robusto, pero la evidencia original permanece en `raw_evidence`.
+
+## Relaciones lexicográficas — `1.1.0-candidate`
+
+`data/lexical-relations.json` separa relaciones documentales que no deben modelarse como variantes lingüísticas. Se generan desde `translation_raw` y `comments_raw` y conservan procedencia completa.
+
+Tipos iniciales:
+
+- `cross_reference`: remisiones `Véase`/`Vease`;
+- `source_variant_reference`: expresiones donde la fuente dice literalmente `variante de ...`;
+- `grammatical_relation`: expresiones documentales como `futuro de`, `pp de` o `pret de`.
+
+Cada relación conserva `source_record_id`, `source_field`, `source_page`, `raw_evidence`, forma destino, número de homónimo cuando es explícito, candidatos `target_record_ids`, `target_record_id` cuando la resolución es única y `resolution_status` (`resolved_unique`, `resolved_ambiguous`, `unresolved`).
+
+Las remisiones pueden seguir apareciendo dentro de `variants` y de productos derivados por compatibilidad con 1.0.0, pero **su interpretación canónica es relacional**, no varietal.
+
+## Política de análisis morfológico derivado
+
+`scripts/extract-graphic-variants.mjs` reconoce etiquetas morfológicas explícitas aun cuando la puntuación interna sea irregular. La regla epistemológica es conservadora:
+
+- una etiqueta explícita puede asociarse sólo con el material anterior a un segmento semicolon no etiquetado o a la siguiente etiqueta reconocida;
+- un segmento sin etiqueta no hereda automáticamente la etiqueta anterior;
+- `gut.` permanece `gut` en la capa documental;
+- `ad.` permanece `ad`;
+- `raw_evidence` conserva la cadena completa de la fuente;
+- la interpretación lingüística posterior requiere validación independiente.
 
 ## Relaciones
 
@@ -98,26 +123,21 @@ Una revisión futura del esquema deberá tipar al menos:
 source 1 ── n lexical_entry
 lexical_entry 1 ── n sense
 lexical_entry 1 ── n example
-lexical_entry 1 ── n variant
+lexical_entry 1 ── n typed_variant
 lexical_entry 1 ── n lexical_relation
 lexical_entry 1 ── n derived_record
 product 1 ── n derived_record
 ```
 
-Toda unidad derivada debe conservar, directamente o mediante `entry_id`/`entity_id`:
-
-- identificador de entidad;
-- identificador de producto;
-- fuente y página;
-- evidencia o contexto cuando corresponda;
-- método de derivación;
-- estado de validación.
+Toda unidad derivada debe conservar, directamente o mediante `entry_id`/`entity_id`, identificador de entidad, producto, fuente y página, evidencia o contexto, método de derivación y estado de validación.
 
 ## Identificadores derivados
 
 - Pares paralelos: identificador estable de par más `entry_id`.
 - Terminología: `term_id` más página PDF e impresa.
-- Variantes: `variant_id` más lista de entradas relacionadas.
+- Variantes heredadas: `variant_id` más lista de entradas relacionadas.
+- Variantes tipadas: `variant_token_id` más `record_id`.
+- Relaciones lexicográficas: `REL-######` más `source_record_id` y destino(s) resueltos.
 - Saltillo y acentos: identificador de ocurrencia, forma, campo fuente y entrada.
 - Inventarios P-08–P-20: `inventory_id`, `product_id`, `entry_id`.
 - Productos P-21–P-30: `advanced_id`, `product_id`, `entity_id`.
@@ -129,7 +149,8 @@ Toda unidad derivada debe conservar, directamente o mediante `entry_id`/`entity_
 - Los acentos se conservan en índices y publicaciones.
 - No se infieren pronunciación, división silábica ni forma normativa.
 - Ninguna corrección lingüística sobrescribe evidencia de la fuente.
-- Las abreviaturas y etiquetas de la fuente se conservan antes de cualquier mapeo editorial; una normalización derivada debe quedar declarada como tal.
+- Las abreviaturas y etiquetas se conservan antes de cualquier mapeo editorial.
+- La resolución de destinos puede normalizar para búsqueda, pero nunca modifica `target_raw` ni `raw_evidence`.
 
 ## Serializaciones
 
@@ -142,6 +163,16 @@ Toda unidad derivada debe conservar, directamente o mediante `entry_id`/`entity_
 | TEI Lex-0 | Entradas, formas, gramática, sentidos, citas y notas de procedencia |
 | OpenAPI | Contrato de consulta pública de entradas autorizadas |
 
+## Política de migración 1.0.0 → 1.1.0
+
+La extensión tipada es aditiva y está diseñada para ser compatible con consumidores 1.0.0. Durante la fase candidata:
+
+- `data/lexicon-master.json` y sus `RD-######` no se reescriben;
+- `variants` permanece como vista heredada;
+- `data/variants-typed.json` y `data/lexical-relations.json` se regeneran determinísticamente desde la entrada maestra;
+- los productos derivados deben consumir las capas tipadas cuando la semántica requiera distinguir variante, flexión o remisión;
+- no se publica `1.1.0` como versión estable hasta que validaciones, exportaciones y documentación sean coherentes con la nueva capa.
+
 ## English summary
 
-The canonical entity is a lexicographic entry with a persistent `RD-######` identifier. Source and normalized forms are kept separately. In dataset `1.0.0`, `variants` is a backward-compatible heterogeneous container: secondary headword forms, bracketed grammatical annotations, explicit source variant references, and captured cross-references must not be treated as one linguistic class. Cross-references should become separate lexical relations in a future reproducible migration. Every derived record must preserve source evidence and validation status, and documentary forms or labels must never be silently overwritten by normalized or inferred forms.
+The canonical entity remains a lexicographic entry with a persistent `RD-######` identifier. Dataset `1.0.0` keeps a backward-compatible heterogeneous `variants` array. The `1.1.0-candidate` extension adds a typed variant layer and a separate lexical-relations layer, preserving raw evidence, source page, target resolution and validation status. Cross-references are canonically relations rather than linguistic variants. Documentary labels such as `gut.` and `ad.` are preserved rather than silently normalized. No published 1.0.0 record is destructively rewritten during this migration.
