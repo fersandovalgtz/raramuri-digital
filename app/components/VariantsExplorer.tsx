@@ -11,7 +11,7 @@ type VariantRecord = {
 type VariantStats = { records: number; graphic: number; explicit: number; detected: number; inflection: number; crossReferences: number; sourceEntries: number; annotatedEntries: number };
 type Facet = { value: string; total: number };
 
-const initialStats: VariantStats = { records: 829, graphic: 602, explicit: 54, detected: 548, inflection: 225, crossReferences: 2, sourceEntries: 2581, annotatedEntries: 221 };
+const initialStats: VariantStats = { records: 830, graphic: 602, explicit: 54, detected: 548, inflection: 226, crossReferences: 2, sourceEntries: 2581, annotatedEntries: 221 };
 
 export function VariantsExplorer() {
   const [draft, setDraft] = useState("");
