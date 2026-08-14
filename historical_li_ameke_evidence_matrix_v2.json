@@ -1,0 +1,68 @@
+{
+  "artifact": "historical_li_ameke_evidence_matrix_v2",
+  "date": "2026-08-13",
+  "status": "research_audit_not_cognacy_adjudication",
+  "purpose": "Separate direct historical li+ameke parses, paradigm-supported candidates, and graphic false positives after direct audit of the official Merrill 2020 PDF.",
+  "tiers": {
+    "H_D1_direct_parse": [
+      {
+        "form": "tsanelíameke",
+        "root": "tsaní",
+        "meaning": "afirmativo",
+        "source_analysis": "tsaní 'afirmar' -> APPL -e -> PASS -li -> PTCP -ameke",
+        "source": "Merrill et al. 2020 p.836",
+        "direct_parse": true
+      }
+    ],
+    "H_D2_strong_paradigmatic_support_not_direct_parse": [
+      {
+        "form": "tschutschelíameke",
+        "root_family": "tschutschá 'ungir'",
+        "meaning": "ungido",
+        "same_family_forms": ["tschutschá 'ungir'", "tschutschelíla 'unción'"],
+        "source": "Merrill et al. 2020 pp.277, 836, 932, 1002, 1041",
+        "merrill_cross_reference": "cf. tschutschelíameke after the explicit tsanelíameke derivation",
+        "direct_parse": false,
+        "assessment": "Strongly compatible with internal -li followed by -ameke, but the audited PDF does not provide a second explicit morpheme-by-morpheme derivation."
+      }
+    ],
+    "H_FP_graphic_false_positive_controls": [
+      {
+        "form": "uilíameke",
+        "meaning": "parado",
+        "source": "Merrill et al. 2020 pp.846-847",
+        "actual_analysis": "lexical verb uilí 'esperar, quedarse de pie, quedarse quieto' + PTCP -ameke",
+        "contains_passive_li": false,
+        "lesson": "Surface ...líameke is insufficient evidence for suffixal -li."
+      }
+    ]
+  },
+  "independent_historical_morphotactic_controls": [
+    "pigué-li-la 'confesión'",
+    "matschí-ruje-li-la 'enseñanza, instrucción'",
+    "tschapí-ruje-li-la 'boda, casamiento'",
+    "Merrill suffix table explicitly lists passive -li + nominalizer/instrumental -la"
+  ],
+  "counting": {
+    "direct_historical_li_ameke_roots": 1,
+    "direct_names": ["tsaní/tsane-"],
+    "strong_paradigmatic_historical_families": 1,
+    "strong_paradigmatic_names": ["tschutschá/tschutsche-"],
+    "documented_graphic_false_positive_families": 1,
+    "false_positive_names": ["uilí-"],
+    "historical_li_before_outer_suffixes": "high_confidence",
+    "historical_li_plus_ameke_lexical_replication": "directly_proven_in_one_root_only"
+  },
+  "epistemic_rule": "A historical string ending in -líameke counts as li+ameke only if the lexical base or an explicit source parse independently establishes suffixal -li. Graphic substring matching alone is invalidated by uilíameke.",
+  "next_tests": [
+    "Search for an explicit parse of tschutschelíameke in other published analyses of Steffel or the unpublished grammar if accessible.",
+    "Search the historical corpus for additional families where the same root independently has a -li form plus an -ameke form.",
+    "Use the false-positive rule when mechanically mining all historical -ameke strings."
+  ],
+  "epistemic_flags": {
+    "ai_assisted": true,
+    "human_reviewed": false,
+    "automatic_substring_morpheme_assignment": false,
+    "cognacy_judgment_performed": false
+  }
+}
