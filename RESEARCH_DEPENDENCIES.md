@@ -8,21 +8,19 @@ Este documento registra qué falta para elevar de grado las hipótesis vigentes.
 
 **Objetivo:** ingerir de forma estable la edición completa de *Gramática Tarahumara de Thomas de Guadalaxara (1683)*, Abel Rodríguez López, 2010.
 
-**Estado:** localizada digitalmente; adjunto de descarga identificado; ingestión completa no lograda en el entorno actual.
+**Estado:** localizada digitalmente; ingestión completa no lograda en el entorno actual.
 
-**Secciones prioritarias:** Libro Segundo de los verbos; §3.5 sobre /k/; §3.6 sobre letras equívocas; fol. 35r con `tsocamec/otsocamec`; vocabulario final; búsqueda exhaustiva de `ame`, `amec/amek`, `game`, `gamec/gamek`, `liame`, `liamec/liamek`.
-
-**Qué resolvería:** control directo de grafías coloniales, distribución de `ame(+c/k)`, posible segunda evidencia histórica para `li + ame` y mejor evaluación del puente cromático del siglo XVII.
+**Prioridad:** control directo de grafías coloniales, distribución de `ame(+c/k)`, posible segunda evidencia histórica para `li + ame` y mejor evaluación del puente cromático del siglo XVII.
 
 ## D2. Facsímil Tellechea 1826
 
-**Objetivo:** cotejar visualmente las lecturas OCR y extraer sistemáticamente las variantes participiales/adjetivales.
+**Objetivo:** cotejar visualmente las lecturas OCR y extraer sistemáticamente variantes participiales/adjetivales.
 
-**Estado:** facsímil localizado por varias rutas institucionales/digitales; ingestión estable de imágenes/PDF todavía no completada.
+**Estado:** facsímil localizado; ingestión estable de imágenes/PDF no completada.
 
-**Pasajes prioritarios:** p. 6 `camec, camé, cameque`; sección de pretéritos con pérdida `que/ca`; p. 27 y participios; pláticas con `machiámec`, `machiámeque`, `machíame`, `simiámec`, `simíame`, `atígameque/atígame`; inventario completo `-amec/-ameque/-ame/-amek/-ameke`.
+**Prioridad:** p. 6 `camec, camé, cameque`; sección de pretéritos con pérdida `que/ca`; p. 27 y participios; pláticas con `machiámec`, `machiámeque`, `machíame`, `simiámec`, `simíame`, `atígameque/atígame`; inventario completo `-amec/-ameque/-ame/-amek/-ameke`.
 
-**Qué resolvería:** confirmar directamente C09, separar OCR de grafía original, estudiar distribución de variantes y evaluar el condicionamiento. **No se preasume** que el pasaje `que/ca` de los pretéritos explique las alternancias participiales.
+**Regla:** no preasumir que la pérdida `que/ca` de pretéritos explique las alternancias participiales.
 
 ## D3. Grafemática colonial `<c>/<k>/<que>/<ke>`
 
@@ -30,73 +28,81 @@ Este documento registra qué falta para elevar de grado las hipótesis vigentes.
 
 **Dependencias:** D1 + D2 y descripciones ortográficas explícitas de Guadalaxara, Steffel y Tellechea.
 
-**Regla:** no resolver por normalización moderna retrospectiva.
-
 ## D4. Segunda raíz histórica D1 para `X-li-ame(ke)`
 
 **Objetivo:** encontrar una segunda raíz histórica con segmentación publicada o evidencia equivalente para `X + -li + -ame(ke)`.
 
-**Estado:** no encontrada.
+**Estado:** no encontrada. D1 `tsanelíameke`; D2 fuerte `tschutschelíameke`; controles negativos `ganelíameke`, `uilíameke`, `selíameke`.
 
-**Evidencia vigente:** D1 `tsanelíameke`; D2 fuerte `tschutschelíameke`; corroboración `galetsanelíameke`; controles negativos `ganelíameke`, `uilíameke`, `selíameke`.
+## D5. Relación moderna `-ame ~ -me ~ -ami`
 
-## D5. Relación moderna `-ame ~ -ami`
+**Objetivo:** separar variación regional/sincrónica, condicionamiento fonológico y posible cambio diacrónico.
 
-**Objetivo:** separar variación sincrónica, condicionamiento fonológico regional y posible cambio diacrónico.
+**Estado:** el *Compendio básico de la gramática ralámuli* 1997 documenta `-ame/-me` participial en varias regiones, incluidas realizaciones `-me` en Baja-TB; otras fuentes apoyan `-ame ~ -ami`. Merrill y Márquez documentan además alternancias `e~i`, sin demostrar una ley general.
 
-**Estado:** alternancia moderna apoyada al menos en Norogachi. Merrill et al. 2020 documentan además alternancias históricas `e~i/é~í` en otros lexemas de Steffel, pero advierten que son limitadas y sin patrón general evidente.
+**Regla:** no convertir distribución regional en una cadena histórica universal.
 
-**Qué falta:** corpus regional comparable, descripción fonológica explícita por variedad y evidencia histórica intermedia de `-ami` si existe.
+## D6. C04 `Nessé/Nesséameke ↔ nes-/Neseme ↔ Nisé/Niséami`
 
-**Regla:** mantener separadas variación moderna y cambio histórico general. No convertir la existencia de `e~i` en una ley `e > i`.
+**Objetivo:** determinar si C04 puede elevarse de B (`B+ excepcional / cercano a A`) a A.
 
-## D6. C04 `Nessé/Nesséameke ↔ Nisé/Niséami`
-
-**Objetivo:** determinar si la convergencia histórica–moderna de la familia de ‘cuidar/pastorear/pastor’ puede elevarse de B (`B+` interno) a A.
-
-**Estado:** reforzado en v18.
-
-**Ya resuelto:**
+### Evidencia ya resuelta
 
 - histórico `Nessé` ‘guardar/cuidar’;
-- `Nesséameke` ‘guardián/custodio’;
+- histórico `Nesséameke` ‘guardián/custodio’;
 - Merrill `pouguá nesséameke` ‘pastor de ovejas’;
-- SRC-02 `Nisé` ‘cuidar, pastorear’ → `Niséami` ‘pastor’;
-- *Awilichi bawi*: `Echi nise’ami` y `niseami` en relato de cuidado de chivas;
-- plausibilidad independiente de `e~i/é~í` en Steffel/Merrill.
+- Márquez 1999: familia moderna `nesema`, `nesbonama`, `nesame`, `neser`, `neserichi` en el dominio cuidado/pastoreo;
+- Tarahumara Baja: `Neseme` en *Tewé Ralámuli Chibá Neseme*, ‘Niña tarahumara que cuida chivas’;
+- Western/Lowland: `neseme` replicado en contexto de cuidadores de animales, sin contarlo como fuente plenamente independiente de la tradición Burgess;
+- SRC-02: `Nisé` ‘cuidar, pastorear’ → `Niséami` ‘pastor’;
+- *Awilichi bawi*: `nise’ami/niseami` en contexto de chivas;
+- 1997: arquitectura `-ame/-me` participial regional;
+- Márquez: `-ame` y `-me/-mi` compatibles con participio;
+- Merrill/Márquez: `e~i` fonológicamente posible, no regular.
 
-**Qué falta:** una fuente léxica independiente y de variedad claramente identificada que documente la misma familia y reduzca la incertidumbre `Nessé ~ Nisé`.
+### Cuello de botella restante
 
-### Fuente prioritaria identificada
+Para cambiar C04 a A hace falta **uno** de estos controles fuertes:
 
-SIL/ILV cataloga oficialmente:
+1. una fuente que segmente explícitamente `nesame/neseme` como radical + participial `-ame/-me`;
+2. una fuente que identifique directamente `Nessé` y `nes-/Nisé` como variantes/cognados históricos.
 
-- Hilton, Kenneth S. et al. 1993. *Diccionario tarahumara de Samachique, Chihuahua, México*, aprox. 2500 entradas;
-- Shoemaker, Wes. 2016. *Diccionario tarahumara actualizado*, actualización ortográfica de la obra de 1993.
+No sustituir este requisito acumulando más ocurrencias de `neseme`.
 
-**Bloqueo técnico actual:** los PDF oficiales están identificados, pero el servidor devuelve HTTP 403 desde el entorno actual. No atribuir ninguna entrada a estas fuentes hasta ingerirlas directamente.
+### Fuentes prioritarias
 
-**Próxima consulta cuando haya acceso:** `nisé`, `nise`, `niseami`, ‘cuidar’, ‘pastorear’, ‘pastor’, y variantes gráficas próximas.
+- Brambila original: familia `nes-`, categoría y derivación;
+- Hilton/Samachique 1993/2016: `nes-/nis-`, pastorear/pastor y categoría;
+- Burgess 1984 *Western Tarahumara*: análisis morfológico de `neseme` o de la raíz;
+- otra comparación publicada que identifique `Nessé ~ nes-/Nisé`.
 
-## D7. Integración al corpus/producto público
+### Bloqueos técnicos
 
-**Objetivo:** decidir qué hallazgos pasan del expediente de investigación a datos visibles o notas metodológicas del producto Rarámuri Digital.
+- Hilton/Samachique: PDF oficial identificado, pero HTTP 403 en el entorno actual;
+- Márquez 1999: identidad bibliográfica y texto indexado controlados; la ruta PDF del repositorio/Dropbox ha devuelto `cache miss`, por lo que no se afirma cotejo visual del facsímil;
+- Brambila: rutas digitales localizadas en rondas previas, sin ingestión estable de la edición original para este test.
 
-**Precondición:** no integrar segmentaciones provisionales como datos lexicográficos asentados. Cada hallazgo debe etiquetarse como:
+## D7. Genealogía de fuentes modernas
 
-- hecho documental;
-- análisis publicado;
-- inferencia del proyecto;
-- hipótesis no resuelta.
+**Objetivo:** evitar que replicaciones editoriales se cuenten como evidencia independiente.
 
-La valoración humana externa no es requisito de la metodología vigente. Una cuestión sin soporte suficiente se conserva como `no resuelta`.
+**Estado:** se sabe que Márquez depende parcialmente de Brambila/Hilton y que varias fuentes Lowland/Western comparten la tradición de Don Burgess. La independencia de SRC-02 respecto de cada repertorio moderno debe auditarse caso por caso si llega a afectar una promoción de grado.
+
+**Regla:** `document_replication != source_independence`.
+
+## D8. Integración al corpus/producto público
+
+**Objetivo:** decidir qué hallazgos pasan del expediente de investigación a datos visibles o notas metodológicas.
+
+**Precondición:** cada hallazgo debe etiquetarse como hecho documental, análisis publicado, inferencia del proyecto o hipótesis no resuelta. C04 no debe integrarse todavía como segmentación/cognación asentada en el dataset estable.
 
 ## Priorización vigente
 
-**Prioridad documental máxima:** D2 Tellechea y D1 Guadalaxara cuando los facsímiles sean ingeribles.  
-**Prioridad fuente-basada sin esos documentos:** D6, acceso al diccionario de Samachique.  
+**Máximo rendimiento inmediato:** D6, pero sólo mediante parse token-específico o comparación histórica directa.  
+**Prioridad documental:** D2 Tellechea y D1 Guadalaxara cuando sean ingeribles.  
+**Control metodológico paralelo:** D7 genealogía de fuentes.  
 **Prioridad analítica posterior:** D3 y D4.  
 **Prioridad comparativa:** D5.  
-**Prioridad editorial/producto:** D7.
+**Prioridad editorial:** D8.
 
-Mientras los documentos prioritarios sigan bloqueados, no conviene abrir búsquedas generales sobre `-ameke/-ami` o `e~i`; sólo pruebas dirigidas que puedan mover un candidato entre niveles o falsar una hipótesis concreta.
+Mientras estos documentos sigan bloqueados, no abrir búsquedas generales sobre `-ameke/-ami`, `e~i` o `neseme`; sólo pruebas que puedan mover un candidato entre niveles o falsar una hipótesis concreta.
