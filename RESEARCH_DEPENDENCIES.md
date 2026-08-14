@@ -18,9 +18,9 @@ Este documento registra qué falta para elevar de grado las hipótesis vigentes.
 
 ### OCR completado
 
-`TELLECHEA_1826_AME_TOKEN_AUDIT_V4.md` clasifica exhaustivamente las 24 ocurrencias crudas en `-amec/-ameque` y reconstruye falsos límites de línea.
+`TELLECHEA_1826_AME_TOKEN_AUDIT_V4.md` clasifica las 24 ocurrencias crudas en `-amec/-ameque`.
 
-`TELLECHEA_1826_SHORT_AME_TARGETED_AUDIT_V5.md` audita el conjunto breve únicamente alrededor de raíces justificadas y paralelos bilingües. El frente OCR queda **cerrado** después de v5.
+`TELLECHEA_1826_SHORT_AME_TARGETED_AUDIT_V5.md` revisa 168 ocurrencias crudas / 111 cadenas breves sólo alrededor de raíces justificadas y paralelos bilingües. El frente OCR queda **cerrado** después de v5.
 
 ### Redes OCR fuertes
 
@@ -30,36 +30,13 @@ Este documento registra qué falta para elevar de grado las hipótesis vigentes.
 - `netetugameque ~ netétugame`;
 - `rejoírugameque ~ rejoírugame/rejóirugame`.
 
-### Probable pendiente de límite visual
-
-- `ayoriguámeque ~ ayoriguáme`, con la breve fusionada por OCR a `tamú`.
-
-### Candidato con largo OCR corrupto
-
-- `yumága-`: `yumctvameque` en el *Credo* frente a `yumágame` repetido en contextos traducidos “Todopoderoso”. No reconstruir la forma larga sin facsímil.
-
-### Controles negativos OCR
-
-- `gayéname` = fragmento de `gayéname-que`, no forma breve;
-- `natáme` = fragmento de `natáme-ra` / `natámera`, no forma breve;
-- `gameque` = fragmento de `netetu-gameque`;
-- `támeque` = fragmento de `na-támeque`.
+`ayorigu-` permanece probable y `yumága-` conserva un largo OCR corrupto (`yumctvameque`). Los falsos pares `gayénameque ~ gayéname` y `natámeque ~ natáme` se eliminaron por reconstrucción de saltos de línea.
 
 ### Bloqueo restante
 
-**Facsímil:** localizado, pero la ruta técnica de cotejo visual estable no está disponible en el entorno actual para esta ronda.
+**Facsímil:** localizado, pero la ruta técnica de cotejo visual estable no está disponible en el entorno actual.
 
-### Cotejo visual prioritario cuando sea posible
-
-1. forma larga corrupta `yumctvameque`;
-2. límite `tamú | ayoriguáme` y largo `ayoriguámeque`;
-3. grafía/acento `rejoírugameque ~ rejóirugame`;
-4. reconstrucción `netetu-gameque` y lectura de `netétugame`;
-5. falsos pares `gayéname-que` y `natáme-ra` como controles;
-6. lectura diplomática exacta de `Taraijámeque`, `rumgamec` y otros tokens sensibles;
-7. sólo después, relación grafemática `c/que/k/ke`.
-
-**Regla:** no abrir más búsquedas OCR generales de `-ame/-ameque` en Tellechea. La siguiente ganancia de C09 depende del facsímil. La pérdida `que/ca` de pretéritos no se transfiere automáticamente a participios.
+**Regla:** no abrir más búsquedas OCR generales de `-ame/-ameque`. La siguiente ganancia de C09 depende del facsímil y la grafemática.
 
 ## D3. Grafemática colonial `<c>/<k>/<que>/<ke>`
 
@@ -77,87 +54,74 @@ Este documento registra qué falta para elevar de grado las hipótesis vigentes.
 
 **Objetivo:** separar variación regional/sincrónica, condicionamiento fonológico y posible cambio diacrónico.
 
-**Estado:** el *Compendio básico de la gramática ralámuli* 1997 documenta `-ame/-me` participial en varias regiones, incluidas realizaciones `-me` en Baja-TB; otras fuentes apoyan `-ame ~ -ami`. Merrill y Márquez documentan además alternancias `e~i`, sin demostrar una ley general.
+**Estado:** *Compendio básico de la gramática ralámuli* 1997 documenta `-ame/-me` participial regional; otras fuentes apoyan `-ame ~ -ami`. Merrill y Márquez documentan alternancias `e~i`, sin demostrar ley general.
 
-**Regla:** no convertir distribución regional en una cadena histórica universal.
+## D6. C02 `Tschipérameke / čipérameke ↔ Chipérami`
 
-## D6. C04 `Nessé/Nesséameke ↔ nes-/Neseme ↔ Nisé/Niséami`
+**Estado:** B formal, **B+ fuerte**.
 
-**Objetivo:** determinar si C04 puede elevarse de B (`B+ excepcional / cercano a A`) a A.
+### Resuelto
 
-### Evidencia ya resuelta
+- Steffel/Merrill: `Tschipérameke` ‘fino, delgado, llano’.
+- Merrill normaliza/transcribe `tschipérameke || čipérameke`, por lo que `<tsch>~<ch>` deja de ser una discrepancia formal sustantiva.
+- Steffel: `Guenomí tschipérameke` = ‘un metal delgado’.
+- Samachique 2016: `chipérami adj. plano`; `walú chipérami` = ‘como una tabla ancha’.
+- SRC-02: `Chipérami` ‘Plano’, Pp.
+- *Cazador de palabras rarámuri*: `chiperami` en contexto de tablilla.
 
-La cadena histórica/moderna ya contiene `Nessé`, `Nesséameke`, `pouguá nesséameke`, la familia moderna `nesema/nesbonama/nesame/neser/neserichi`, `Neseme` Baja/Western, `Nisé/Niséami` de SRC-02 y `nise’ami/niseami` en Balleza. La arquitectura regional `-ame/-me` y la posibilidad interna `e~i/é~í` están documentadas sin convertirlas en leyes universales.
+La continuidad formal `čipér- ~ chipér-` y semántica ‘fino/delgado/llano/plano’ es **muy fuerte**.
 
-### Control morfológico v3 · completado
+### Cuello de botella
 
-`C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md` recupera cinco pares internos independientes en Márquez 1999:
+C02 sólo puede subir a A si aparece alguno de estos controles:
 
-- `benema ~ bename`;
-- `natogema ~ natogame`;
-- `ne’ogema ~ ne’ogame`;
-- `nichugema ~ nichugame`;
-- `semema ~ semame`.
+1. base/paradigma histórico independiente `čiper-`;
+2. parse publicado del token histórico `čipérameke`;
+3. identificación publicada directa de la continuidad/cognación del lexema.
 
-Todos muestran la oposición superficial verbo de cita `...ema` ↔ agente/cualidad `...ame`; `semema ~ semame` ofrece el control más transparente: ‘tocar un instrumento de cuerdas’ ↔ ‘violinista, músico de cuerdas’.
+**No buscar más ocurrencias modernas genéricas de `chipérami`**: ya existe control lexicográfico, fraseológico y discursivo suficiente. Nuevas apariciones sólo son útiles si aportan análisis morfológico/etimológico.
 
-La misma obra declara que los nombres de persona definidos por una actividad suelen ser participios, que el participio presente puede ser sustantivo/adjetivo y que `-ame/-me/-mi` posee función participial/adjetival. Por tanto:
+## D7. C04 `Nessé/Nesséameke ↔ nes-/Neseme ↔ Nisé/Niséami`
 
-**`nesame` como miembro participial/agentivo de la familia `nes-` = alta confianza interna de fuente.**
+**Estado:** B formal, **B+ excepcional / cercano a A**.
 
-La relación `nesema ~ nesame` ya no debe tratarse como una anomalía o ajuste ad hoc. **No buscar más controles genéricos `Xema ~ Xame`: esta dependencia está cerrada.**
+### Evidencia resuelta
 
-### Cuello de botella restante
+La cadena histórica/moderna contiene `Nessé`, `Nesséameke`, `pouguá nesséameke`, la familia moderna `nesema/nesbonama/nesame/neser/neserichi`, `Neseme` Baja/Western, `Nisé/Niséami` y `nise’ami/niseami`.
 
-Para cambiar C04 a A hace falta todavía **uno** de estos controles fuertes:
+Cinco controles `Xema ~ Xame` (`benema ~ bename`, `natogema ~ natogame`, `ne’ogema ~ ne’ogame`, `nichugema ~ nichugame`, `semema ~ semame`) y las reglas de Márquez permiten tratar `nesame` como miembro participial/agentivo de `nes-` con **alta confianza interna de fuente**.
 
-1. una fuente que segmente explícitamente `nesame/neseme` como radical + participial `-ame/-me`, o un paradigma publicado que identifique el radical y la derivación concreta;
-2. una fuente que identifique directamente `Nessé` y `nes-/Nisé` como variantes/cognados históricos.
+### Cuello de botella
 
-El patrón interno de alta confianza no debe presentarse como un parse impreso morfema por morfema que la fuente no ofrece.
+Para A falta:
 
-### Fuentes prioritarias sólo si aparece una ruta documental nueva
+1. parse/paradigma token-específico de `nesame/neseme`; o
+2. fuente que identifique directamente `Nessé` y `nes-/Nisé` como variantes/cognados históricos.
 
-- Brambila original: paradigma o familia exacta `nes-`;
-- Hilton/Samachique 1993/2016: `nes-/nis-`, pastorear/pastor, categoría y derivados;
-- Burgess 1984 *Western Tarahumara*: análisis morfológico de `neseme` o de la raíz;
-- otra comparación publicada que identifique `Nessé ~ nes-/Nisé`.
+**No buscar más controles genéricos `Xema ~ Xame` ni más ocurrencias de `neseme`.**
 
-### Búsquedas ya realizadas que no deben repetirse
-
-- Brambila indexado para `nesame`, `nesema`, `pastor`, `pastorear`: no recuperación, no ausencia;
-- diccionario castellano–rarámuri de 1983 desde `pastor/pastorear`: sin equivalencia verificable recuperada;
-- Burgess 1984 indexado: sin parse `neseme` recuperado;
-- controles genéricos `Xema ~ Xame`: **resueltos con cinco pares internos; no seguir acumulando**.
-
-### Bloqueos técnicos
-
-- Hilton/Samachique: PDF oficial identificado, pero HTTP 403 en el entorno actual;
-- Márquez 1999: texto indexado suficiente para control gramatical/lexicográfico; la ruta PDF ha devuelto `cache miss`, por lo que no se afirma cotejo visual;
-- Brambila: rutas digitales localizadas, pero la indexación incompleta impide interpretar una búsqueda negativa como ausencia.
-
-## D7. Genealogía de fuentes modernas
+## D8. Genealogía de fuentes modernas
 
 **Objetivo:** evitar que replicaciones editoriales se cuenten como evidencia independiente.
 
-**Estado:** Márquez depende parcialmente de Brambila/Hilton y varias fuentes Lowland/Western comparten tradición de Don Burgess. La independencia de SRC-02 respecto de repertorios modernos debe auditarse sólo si afecta una promoción de grado.
+**Estado:** Márquez depende parcialmente de Brambila/Hilton y varias fuentes Lowland/Western comparten tradición de Don Burgess. La independencia se audita sólo si puede afectar una promoción de grado.
 
 **Regla:** `document_replication != source_independence`.
 
-## D8. Integración al corpus/producto público
+## D9. Integración al corpus/producto público
 
 **Objetivo:** decidir qué hallazgos pasan del expediente de investigación a datos visibles o notas metodológicas.
 
-**Precondición:** cada hallazgo debe etiquetarse como hecho documental, análisis publicado, inferencia del proyecto o hipótesis no resuelta. C04 y las redes OCR de C09 no deben integrarse todavía como segmentaciones/cognaciones asentadas en el dataset estable.
+**Precondición:** cada hallazgo debe etiquetarse como hecho documental, análisis publicado, inferencia del proyecto o hipótesis no resuelta. C02, C04 y C09 no deben integrarse todavía como cognaciones/segmentaciones asentadas en el dataset estable.
 
 ## Priorización vigente
 
-**C09:** OCR cerrado; reabrir sólo con facsímil.  
-**C04:** cerrado para búsquedas generales; reabrir sólo si aparece parse/paradigma token-específico o comparación histórica directa.  
+**C02:** cerrado para acumulación moderna; reabrir sólo con base/paradigma o análisis histórico.  
+**C04:** cerrado para búsquedas generales; reabrir sólo con parse/paradigma o comparación histórica directa.  
+**C09:** OCR cerrado; reabrir sólo con facsímil/grafemática.  
 **Siguiente prioridad documental:** D1 Guadalaxara.  
-**Control metodológico paralelo:** D7 genealogía de fuentes.  
-**Prioridad analítica posterior:** D3 y D4.  
-**Prioridad comparativa:** D5.  
-**Prioridad editorial:** D8.
+**Prioridad analítica:** otro candidato B/C con prueba capaz de cambiar nivel; D4 sigue siendo estructuralmente valioso.  
+**Control metodológico:** D8 genealogía.  
+**Prioridad editorial:** D9.
 
-No abrir búsquedas generales sobre `-ameke/-ami`, `e~i`, `neseme`, nuevos pares `Xema~Xame` ni nuevas cadenas OCR de Tellechea; sólo pruebas que puedan mover un candidato entre niveles, depurar falsos positivos o falsar una hipótesis concreta.
+No abrir búsquedas generales sobre `-ameke/-ami`, `e~i`, `neseme`, `chipérami`, nuevos pares `Xema~Xame` ni nuevas cadenas OCR de Tellechea; sólo pruebas capaces de mover un candidato, depurar falsos positivos o falsar una hipótesis concreta.
