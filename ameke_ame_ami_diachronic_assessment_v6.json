@@ -1,0 +1,49 @@
+{
+  "artifact": "ameke_ame_ami_diachronic_assessment_v6",
+  "date": "2026-08-13",
+  "research_question": "What can be responsibly inferred about historical -ameke/-ame and modern -ame/-ami across a controlled set of Rarámuri lexical and derivational families?",
+  "central_assessment": "The evidence supports continuity of a broad participial/derivational domain centered on -ame, with historical forms in -ameke and modern outputs in -ame/-ami, but it does not support a universal mechanical rule -ameke > -ami.",
+  "methodological_updates_in_v6": [
+    "Documentary genealogy is separated from number of publications so dependent sources do not create pseudoreplication.",
+    "Community and multivariety modern texts are used as independent usage witnesses without importing grammatical labels they do not provide.",
+    "Historical orthography is normalized only when Merrill or another explicit phonetic analysis supports the normalization.",
+    "Candidate grades measure evidence architecture, not probability or demonstrated cognation.",
+    "The blue-green family is now formally audited and raised from A- to A."
+  ],
+  "priority_candidates": [
+    {"family":"dormir","grade":"A","historical":"cotschí / kočí and related -ameke material","modern":"kotʃi and related participial forms","open_question":"status of -mé in kočimé"},
+    {"family":"Nessé/Nisé","grade":"A","historical":"nesé / neséameke","modern":"Nisé/Niséami and Balleza nise’ami","open_question":"diachronic geography of e~i"},
+    {"family":"Tſchiper/Chipér","grade":"A","historical":"čipérameke","modern":"Chipérami and Guerrero chiperami","open_question":"exact suffix history"},
+    {"family":"Selí/Sirí","grade":"A","historical":"Selí → Selíameke","modern":"siˈríame / Siríami","open_question":"competing selígame<selaka etymology"},
+    {"family":"negro","grade":"A","historical":"čókameke","modern":"chó-ka-mi / chó-ka-me / chó-ko-m","open_question":"fine segmentation of color morphology"},
+    {"family":"blanco","grade":"A","historical":"rosácameke ~ tosácameke","modern":"rosá-ka-me / rosá-ka-mi / rosá-ko-m","open_question":"regional allomorph history"},
+    {"family":"azul/verde","grade":"A","historical":"schiógameke, with pamaguéameke as a competing green lexeme","modern":"seyó-/siyó- + -ka/-na + -me/-mi/-m","open_question":"medial glide, -gameke segmentation and lexical competition"}
+  ],
+  "blue_green_update": {
+    "historical_semantics": "Steffel explicitly uses schiógameke for blue and also as an alternative for green; pamaguéameke is another green term.",
+    "modern_semantics": "The 1997 multivariety grammar documents seyó-/siyó- for a combined blue-green category.",
+    "phonological_control": "Historical <sch>=[š] alternates with <s> in other Steffel lexemes; modern Choguita independently palatalizes /s/ before high vowels, and regional sh~s variation is reported in the multivariety grammar.",
+    "morphological_control": "Historical basic colors show -cameke; Merrill considers -gameke a possible variant but cautions that participial segmentation of schiógameke is uncertain. pamaguéameke~pamaguéame directly documents optional final -ke in a historical color form.",
+    "assessment": "Grade A architecture with reconstruction still open."
+  },
+  "source_genealogy_constraints": [
+    "Hilton 1959 and Hilton 1993 are treated as stages of one editorial lineage; Shoemaker 2016 derives from that lineage and does not add an independent lexical witness by publication count alone.",
+    "SRC-02 remains bibliographically unresolved and is not counted independently when its forms could derive from the Hilton/pre-2016 lineage.",
+    "Merrill's analysis of Steffel is an analytical source, not an additional eighteenth-century witness.",
+    "Hill's Rarámuri form cochí derives from Hilton and is not counted as a second Rarámuri witness, although Hill's broader Uto-Aztecan comparison remains analytically relevant."
+  ],
+  "current_conclusion": {
+    "priority_set_all_grade_A": true,
+    "demonstrated_cognations_claimed": false,
+    "universal_sound_laws_claimed": false,
+    "universal_ameke_to_ami_rule_claimed": false,
+    "strongest_generalization": "A historically persistent derivational/participial zone centered on -ame is supported across several independently documented lexical and color families, while -ke, -ka/-na and -e/-i variation require family- and variety-specific reconstruction."
+  },
+  "next_phase": [
+    "Reconstruct the historical and modern internal structure of the color endings -cameke/-gameke versus -ka/-na + -me/-mi.",
+    "Test the function and history of -mé in kočimé against broader participial and aspectual data.",
+    "Trace the competing selíameke versus selígame<selaka accounts to their earliest sources.",
+    "Study the lexical competition and semantic reorganization of pamaguéameke versus schiógameke/siyó in the blue-green domain.",
+    "Continue resolving the exact bibliographic identity of SRC-02."
+  ]
+}
