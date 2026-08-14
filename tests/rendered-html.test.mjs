@@ -270,18 +270,18 @@ test("materializes the complete graphic-variant derivation", async () => {
   ]);
   const variants = JSON.parse(variantsText);
   const report = JSON.parse(reportText);
-  assert.equal(variants.length, 829);
-  assert.equal(report.records, 829);
+  assert.equal(variants.length, 830);
+  assert.equal(report.records, 830);
   assert.equal(report.graphic_relations, 602);
   assert.equal(report.explicit_graphic_relations, 54);
   assert.equal(report.detected_graphic_relations, 548);
-  assert.equal(report.inflection_relations, 225);
+  assert.equal(report.inflection_relations, 226);
   assert.equal(report.cross_references, 2);
   assert.equal(report.source_entries, 2581);
   assert.equal(report.source_entries_with_variant_annotations, 221);
   assert.deepEqual(report.patterns, { "ba/hua": 27, "g/c": 11, "i/e": 122, "Ø/C inicial": 380, "Otra relación explícita": 48, "r/l": 14 });
   assert.ok(variants.every((record) => record.variant_id && record.form_a && record.form_b && record.entry_ids.length && record.source_code && record.page_start && record.validation_status));
-  assert.equal(csvText.split("\r\n").length, 830);
+  assert.equal(csvText.split("\r\n").length, 831);
 });
 
 test("keeps every extracted source row traceable and seeded", async () => {
