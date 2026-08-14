@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.9",
+  "date": "2026-08-14",
+  "project": "Rarámuri Histórico Digital",
+  "canonical_assessment": "AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md",
+  "matrix_document": "EVIDENCE_MASTER_MATRIX_V10.md",
+  "supersedes": "data/research/evidence_master_matrix_v9.json",
+  "candidates": [
+    {"id":"C01","tier":"A","status":"unchanged"},
+    {"id":"C02","tier":"B","strength_note":"B+_strong","status":"unchanged"},
+    {"id":"C03","tier":"B","strength_note":"B+_exceptional_near_A","status":"unchanged"},
+    {"id":"C04","tier":"B","strength_note":"B+_exceptional_near_A","status":"unchanged"},
+    {
+      "id":"C05",
+      "tier":"B",
+      "strength_note":"B+_strong",
+      "candidate":"selí → selíameke ↔ sir-/siríame",
+      "historical_govern_derivation":"direct_published",
+      "modern_sir_govern_family":"direct_documented",
+      "choguita_siriame_productive":true,
+      "historical_l_r_control":true,
+      "historical_e_i_control":true,
+      "lance_family_modern_distinct_entry":"se*l/se*r with long vowel marking",
+      "zingg_lance_bearer_etymology":"source_attested",
+      "SIC_lance_bearer_tradition":"source_attested",
+      "dual_etymology_unresolved":true,
+      "govern_vs_lance_historical_relation":"unresolved",
+      "modern_token_specific_parse":"not_recovered",
+      "historical_modern_cognacy":"not_demonstrated"
+    },
+    {"id":"C06","tier":"B","strength_note":"B+_exceptional_steffel_to_modern","status":"unchanged"},
+    {"id":"C07","tier":"A","status":"unchanged"},
+    {"id":"C08","tier":"A","status":"unchanged"},
+    {"id":"C09","tier":"B","strength_note":"strong_plus_ocr_pending_facsimile","status":"unchanged"}
+  ],
+  "negative_controls": ["N01","N02","N03","N04","N05","N06","N07","N08","N09","N10"],
+  "N10": "A published ethnohistorical etymology does not automatically invalidate an older explicit lexical derivation; preserve both when their historical relationship is unresolved.",
+  "portfolio": {
+    "A": ["C01","C07","C08"],
+    "B_or_Bplus": ["C02","C03","C04","C05","C06","C09"],
+    "C": []
+  },
+  "phase": "structural_resolution",
+  "global_constraints": [
+    "No universal -ameke > -ami law.",
+    "No universal e > i or l > r law.",
+    "No automatic cognacy from formal-semantic similarity.",
+    "No automatic retrospective projection of modern morphology.",
+    "C05 govern-root and lance-bearer trajectories remain historically unresolved rather than mutually erased."
+  ]
+}
