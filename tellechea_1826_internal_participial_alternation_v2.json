@@ -1,0 +1,68 @@
+{
+  "version": "2",
+  "date": "2026-08-14",
+  "source": {
+    "author": "Miguel Tellechea",
+    "year": 1826,
+    "title": "Compendio gramatical para la inteligencia del idioma Tarahumar",
+    "official_facsimile_listed_by": "Dirección General de Bibliotecas, Secretaría de Cultura",
+    "official_facsimile_visual_verification": false,
+    "runtime_issue": "DGB viewer/PDF returned cache miss",
+    "ocr_locator_source": "public reproduction of the 1826 print",
+    "secondary_direct_control": "Francisco Pimentel 1874, who states he consulted Tellechea directly"
+  },
+  "families": [
+    {
+      "root": "machi-",
+      "root_meaning": "saber/ver",
+      "forms": [
+        {"form": "machiámec", "context": "De los participios", "gloss": "el que sabe, ó vé", "status": "OCR-direct, pending facsimile"},
+        {"form": "machiámeque", "context": "catechetical explanation", "gloss": "el que todo lo sabe", "status": "OCR-direct, pending facsimile"},
+        {"form": "machíame", "context": "Iglesia/catechetical passage", "gloss": "los que bien saben", "status": "OCR-direct, pending facsimile"}
+      ],
+      "assessment": "strongest same-root three-way family",
+      "confidence": "high provisional"
+    },
+    {
+      "root": "simi-",
+      "root_meaning": "ir",
+      "forms": [
+        {"form": "simiámec", "context": "De los participios", "gloss": "el que va", "status": "OCR-direct, pending facsimile"},
+        {"form": "simíame", "context": "Iglesia/catechetical passage", "gloss": "caminante", "status": "OCR-direct, pending facsimile"}
+      ],
+      "assessment": "second independent same-root long/short family",
+      "confidence": "high provisional"
+    },
+    {
+      "root": "ati-",
+      "root_meaning": "estar/morar",
+      "forms": [
+        {"form": "atigameke", "context": "Pater Noster from Tellechea as reproduced/analyzed by Pimentel", "gloss": "morador / el que mora, vive, está", "status": "Pimentel direct-control transcription"},
+        {"form": "atígame", "context": "Tellechea catechetical explanation / sick-person sacrament passage", "gloss": "morador / el que está", "status": "OCR-direct, pending facsimile"}
+      ],
+      "assessment": "same-work family recovered through two independent textual routes",
+      "confidence": "moderate-high provisional"
+    }
+  ],
+  "grammar_internal_controls": {
+    "adjective_endings_pimentel_note_78": ["camec", "camé", "cameque"],
+    "present_participle_endings_pimentel_normalized": ["ke", "kameke", "kamek", "kame", "meke", "mek", "yamek", "amek"],
+    "tellechea_truncation_observation": true
+  },
+  "conclusions": {
+    "same_root_internal_extension_variation_1826": true,
+    "historical_variation_extension_confidence": "high",
+    "specific_reduction_pathway_confidence": "moderate",
+    "direct_historical_ami": false,
+    "universal_ameke_to_ame": false,
+    "universal_ameke_to_ami": false,
+    "historical_li_ame_D1_roots": 1
+  },
+  "next_verification_targets": [
+    "Tellechea p.6 adjective endings",
+    "Tellechea p.27 participles and ending list",
+    "Tellechea Pater Noster explanation: atígame",
+    "Tellechea Iglesia passage: simíame and machíame",
+    "Tellechea later catechetical passages: machiámeque"
+  ]
+}
