@@ -1,0 +1,86 @@
+{
+  "artifact": "color_kameke_kame_participial_bridge_v1",
+  "date": "2026-08-13",
+  "question": "How directly can historical color forms in -cameke/-came be related to modern Rarámuri color constructions segmented as root + -ka + -me?",
+  "historical_morphology": {
+    "source": "Merrill et al. 2020 edition and analysis of Steffel",
+    "general_participial_chain": {
+      "form": "-ameke",
+      "analysis": "participial -(a)me with a final -kV/-ke element in Merrill's analysis of complex chains",
+      "steffel_metacomment": "Steffel reports that speakers commonly omitted the final ke in pronunciation and said me or at most mek."
+    },
+    "color_pairs": [
+      {
+        "full": "tschócameke",
+        "phonetic_normalization": "čókameke",
+        "truncated_attested": "tschócame",
+        "truncated_normalization": "čókame",
+        "glosses": ["black", "black (plural context)"]
+      },
+      {
+        "full": "rosácameke",
+        "phonetic_normalization": "rosákameke",
+        "truncated_attested": "rosácame",
+        "truncated_normalization": "rosákame",
+        "glosses": ["white", "white (plural context)"]
+      },
+      {
+        "full": "pamaguéameke",
+        "truncated_attested": "pamaguéame",
+        "glosses": ["green"],
+        "note": "Merrill explicitly treats the missing final -ke as evidence of optional use/truncation of the final element."
+      }
+    ]
+  },
+  "modern_morphology": {
+    "source": "Compendio básico de la gramática ralámuli, 1997",
+    "explicit_analysis": {
+      "-ame/-me": "participio",
+      "-ka/-ga/-cha": "subido",
+      "-na": "se está poniendo / color bajo"
+    },
+    "forms": [
+      {"root":"chó","segmentation":"chó-ka-me","regions":"Baja/Baja-TB and related variants; chó-ka-mi in other regions"},
+      {"root":"rosá","segmentation":"rosá-ka-me","regions":"Centro/Baja/Baja-TB/Cumbre/Norte; rosá-ka-mi in Sur-B"},
+      {"root":"seyó/siyó","segmentation":"seyó-ka-me / siyó-ka-me or -na-me/-na-mi","regions":"multivariety"}
+    ]
+  },
+  "independent_modern_grammar": {
+    "source": "Caballero 2008",
+    "finding": "Choguita Rarámuri has a participial suffix -ame; surface -ami can arise through posttonic front-vowel raising in relevant forms."
+  },
+  "formal_bridge": [
+    {
+      "historical_surface": "čókameke ~ čókame",
+      "modern_surface_and_analysis": "chó-ka-me",
+      "assessment": "After the independently documented historical omission of final -ke, the historical truncated string and modern segmented form are effectively segmentally identical apart from transcription conventions."
+    },
+    {
+      "historical_surface": "rosákameke ~ rosákame",
+      "modern_surface_and_analysis": "rosá-ka-me",
+      "assessment": "The same direct historical-to-modern bridge is independently present in the white-color family."
+    }
+  ],
+  "what_is_demonstrated": [
+    "Historical color words in at least black and white occur both with final -ke and without it.",
+    "Steffel independently reports general optional omission/truncation of final -ke in participial -ameke forms.",
+    "Modern multivariety analysis explicitly segments the corresponding black and white forms as color root + -ka + participial -me/-mi.",
+    "Modern -ame is independently identified as participial by Caballero."
+  ],
+  "what_is_not_demonstrated": [
+    "That every historical -ameke word had the same internal segmentation as modern forms.",
+    "That historical -c/-k before ameke was synchronically the same color morpheme -ka in every relevant eighteenth-century form.",
+    "That plural context caused or conditioned historical -ke omission; the attested color truncations happen to occur in plural contexts, but Steffel describes omission as a general pronunciation pattern.",
+    "A universal transformation -ameke > -ami."
+  ],
+  "assessment": {
+    "bridge_strength_for_black_and_white": "very_high",
+    "bridge_strength_for_general_ameke_domain": "high_but_not_universal",
+    "interpretation": "The color evidence provides a direct surface bridge from historical -kameke~-kame to modern -ka-me in two independent roots. This is stronger than a generic resemblance claim and justifies treating color morphology as the clearest internal demonstration of continuity in the project."
+  },
+  "next_steps": [
+    "Test whether red historical forms have an independently attested -came truncation or another route to modern -ka-me.",
+    "Determine whether historical -c/-k preceding -(a)meke can be independently identified as the ancestor/equivalent of modern color -ka.",
+    "Separate the color-specific bridge from non-color -ameke families in the global diachronic model."
+  ]
+}
