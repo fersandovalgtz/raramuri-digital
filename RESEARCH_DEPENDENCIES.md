@@ -16,13 +16,34 @@ Este documento registra qué falta para elevar de grado las hipótesis vigentes.
 
 **Objetivo:** convertir la red OCR de variantes participiales/adjetivales en evidencia diplomática controlada.
 
-### Ya completado
+### OCR completado
 
-La auditoría `TELLECHEA_1826_AME_TOKEN_AUDIT_V4.md` y su JSON clasifican exhaustivamente las 24 ocurrencias crudas en `-amec/-ameque` del OCR completo y distinguen participios explícitos, formas bilingües participiales, metalingüística, otras construcciones, falsos positivos y fragmentos por salto de línea.
+`TELLECHEA_1826_AME_TOKEN_AUDIT_V4.md` clasifica exhaustivamente las 24 ocurrencias crudas en `-amec/-ameque` y reconstruye falsos límites de línea.
 
-Se mantienen como familias OCR fuertes `atígameque ~ atígame`, `simiámec ~ simíame` y `machiámec ~ machiámeque ~ machíameque ~ machíame`. Se añaden como candidatas OCR pendientes de facsímil `ayoriguámeque ~ ayoriguáme` y `rejoírugameque ~ rejoírugame`.
+`TELLECHEA_1826_SHORT_AME_TARGETED_AUDIT_V5.md` audita el conjunto breve únicamente alrededor de raíces justificadas y paralelos bilingües. El frente OCR queda **cerrado** después de v5.
 
-La auditoría corrige `gameque` como fragmento de `netetugameque`, `támeque` como fragmento de `natámeque` y `gayéname` como fragmento de línea de `gayénameque`, **no variante breve**.
+### Redes OCR fuertes
+
+- `atígameque ~ atígame/atigame`;
+- `simiámec ~ simíame`;
+- `machiámec ~ machiámeque ~ machíameque ~ machíame`;
+- `netetugameque ~ netétugame`;
+- `rejoírugameque ~ rejoírugame/rejóirugame`.
+
+### Probable pendiente de límite visual
+
+- `ayoriguámeque ~ ayoriguáme`, con la breve fusionada por OCR a `tamú`.
+
+### Candidato con largo OCR corrupto
+
+- `yumága-`: `yumctvameque` en el *Credo* frente a `yumágame` repetido en contextos traducidos “Todopoderoso”. No reconstruir la forma larga sin facsímil.
+
+### Controles negativos OCR
+
+- `gayéname` = fragmento de `gayéname-que`, no forma breve;
+- `natáme` = fragmento de `natáme-ra` / `natámera`, no forma breve;
+- `gameque` = fragmento de `netetu-gameque`;
+- `támeque` = fragmento de `na-támeque`.
 
 ### Bloqueo restante
 
@@ -30,13 +51,15 @@ La auditoría corrige `gameque` como fragmento de `netetugameque`, `támeque` co
 
 ### Cotejo visual prioritario cuando sea posible
 
-1. `ayoriguámeque ~ ayoriguáme`;
-2. `rejoírugameque ~ rejoírugame`;
-3. límites `netetu-gameque`, `na-támeque`, `gayéname-que`;
-4. lectura diplomática exacta de `Taraijámeque`, `rumgamec` y `yumctvameque`;
-5. sólo después, relación grafemática `c/que/k/ke`.
+1. forma larga corrupta `yumctvameque`;
+2. límite `tamú | ayoriguáme` y largo `ayoriguámeque`;
+3. grafía/acento `rejoírugameque ~ rejóirugame`;
+4. reconstrucción `netetu-gameque` y lectura de `netétugame`;
+5. falsos pares `gayéname-que` y `natáme-ra` como controles;
+6. lectura diplomática exacta de `Taraijámeque`, `rumgamec` y otros tokens sensibles;
+7. sólo después, relación grafemática `c/que/k/ke`.
 
-**Regla:** el OCR puede generar y depurar candidatos, pero no sustituye el facsímil cuando el límite de palabra o una letra determina la conclusión. La pérdida `que/ca` de pretéritos no se transfiere automáticamente a participios.
+**Regla:** no abrir más búsquedas OCR generales de `-ame/-ameque` en Tellechea. La siguiente ganancia de C09 depende del facsímil. La pérdida `que/ca` de pretéritos no se transfiere automáticamente a participios.
 
 ## D3. Grafemática colonial `<c>/<k>/<que>/<ke>`
 
@@ -125,12 +148,11 @@ El patrón interno de alta confianza no debe presentarse como un parse impreso m
 
 **Objetivo:** decidir qué hallazgos pasan del expediente de investigación a datos visibles o notas metodológicas.
 
-**Precondición:** cada hallazgo debe etiquetarse como hecho documental, análisis publicado, inferencia del proyecto o hipótesis no resuelta. C04 y los nuevos pares OCR de C09 no deben integrarse todavía como segmentaciones/cognaciones asentadas en el dataset estable.
+**Precondición:** cada hallazgo debe etiquetarse como hecho documental, análisis publicado, inferencia del proyecto o hipótesis no resuelta. C04 y las redes OCR de C09 no deben integrarse todavía como segmentaciones/cognaciones asentadas en el dataset estable.
 
 ## Priorización vigente
 
-**Máximo rendimiento sin nuevos documentos:** auditar `-ame` de Tellechea sólo alrededor de raíces ya justificadas y paralelos españoles participiales; no usar frecuencia bruta.  
-**Máximo rendimiento con facsímil:** D2, empezando por `ayorigu-`, `rejoíruga-` y límites OCR reconstruidos.  
+**C09:** OCR cerrado; reabrir sólo con facsímil.  
 **C04:** cerrado para búsquedas generales; reabrir sólo si aparece parse/paradigma token-específico o comparación histórica directa.  
 **Siguiente prioridad documental:** D1 Guadalaxara.  
 **Control metodológico paralelo:** D7 genealogía de fuentes.  
@@ -138,4 +160,4 @@ El patrón interno de alta confianza no debe presentarse como un parse impreso m
 **Prioridad comparativa:** D5.  
 **Prioridad editorial:** D8.
 
-No abrir búsquedas generales sobre `-ameke/-ami`, `e~i`, `neseme` o nuevos pares `Xema~Xame`; sólo pruebas que puedan mover un candidato entre niveles, depurar falsos positivos o falsar una hipótesis concreta.
+No abrir búsquedas generales sobre `-ameke/-ami`, `e~i`, `neseme`, nuevos pares `Xema~Xame` ni nuevas cadenas OCR de Tellechea; sólo pruebas que puedan mover un candidato entre niveles, depurar falsos positivos o falsar una hipótesis concreta.
