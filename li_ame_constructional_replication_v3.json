@@ -1,0 +1,130 @@
+{
+  "artifact": "li_ame_constructional_replication_v3",
+  "date": "2026-08-14",
+  "supersedes_for_counting": "li_ame_constructional_replication_v2",
+  "status": "research_audit_not_community_validation",
+  "purpose": "Update the li+ame inventory after strengthening ani- with same-root cross-variety evidence and testing, without success, for a third direct modern X-li-ame parse in currently accessible annotated sources.",
+  "evidence_tiers": {
+    "D1_direct_source_parse_li_plus_ame": [
+      {
+        "root_family": "ani-",
+        "direct_variety": "Munérachi",
+        "direct_form": "ani-lí-ame",
+        "source_analysis": "decir-PSV-AGT / dicen-CE-NMZ",
+        "source": "Moreno Pineda & Valenzuela Romo 2022",
+        "direct_parse": true,
+        "crossvariety_controls": [
+          "Oeste Manual Ralámuli 2019: ¿Chú anilíame rewé? = ¿Cómo se llama?",
+          "Western TAC: repeated anilime in naming contexts, e.g. Matíasi anilime nile bilé"
+        ],
+        "crossvariety_assessment": "strongest_same_root_crossvariety_benchmark",
+        "western_direct_parse": false
+      },
+      {
+        "root_family": "rihói-",
+        "variety": "Choguita",
+        "form": "rihói-li-ame",
+        "source_analysis": "inhabit.PL-PST-PTCP",
+        "source": "Caballero 2022",
+        "direct_parse": true,
+        "same_example_finite_control": "rihói-li = inhabit.PL-PST"
+      }
+    ],
+    "D2_high_paradigmatic_support_target_not_directly_parsed": [
+      {
+        "root_family": "newa-",
+        "target_forms": ["newalime", "newálime", "nehualíame"],
+        "support": [
+          "Norogachi newá-li = make-PFV",
+          "Norogachi newá-ami = make-NMLZ",
+          "Western TAC newale/newame/newalime",
+          "Oeste Manual 2019 newálime jú",
+          "Bacusínare 1972 nehualíame ju"
+        ],
+        "preferred_working_analysis": "newa-li + -me/-ame",
+        "direct_target_parse": false
+      },
+      {
+        "root_family": "me'á-",
+        "target_form": "me'líame ju",
+        "support": [
+          "Compendio me'á + -ame = me'áme",
+          "Western TAC me'ale/me'ame/extensive me'li- family",
+          "Baja-TB rewa-lí-me proves passive+nominalizer morphotactics"
+        ],
+        "preferred_working_analysis": "me' + PASS -li + PTCP/NMLZ -ame",
+        "serious_alternative": "derived/allomorphic me'li- + -ame",
+        "direct_target_parse": false
+      }
+    ],
+    "D3_candidate_family_not_parsed": [
+      {
+        "root_family": "bini-/bene-",
+        "target_form": "Binilíame",
+        "support": [
+          "Batista passage places form in learning domain",
+          "Choguita /beˈnè/ ~ [biˈnè] = learn",
+          "Choguita biˈnè-ri-ame = learn-CAUS-PTCP",
+          "Choguita biˈnè-ami = learn-PTCP",
+          "Manual 2019 has a rich bini-/bene- derivational network"
+        ],
+        "explicit_same_root_li": false,
+        "direct_target_parse": false,
+        "status": "candidate_not_promoted"
+      }
+    ]
+  },
+  "direct_parse_search_update": {
+    "accessible_sources_rechecked": [
+      "Caballero 2022 Language Science Press source repository (langsci/324)",
+      "public web-indexed Rarámuri linguistic materials"
+    ],
+    "confirmed_direct_forms": ["ani-lí-ame", "rihói-li-ame"],
+    "new_third_direct_root_found": false,
+    "interpretation": "The current documentary ceiling remains two modern lexical roots with direct authored X-li-ame parses. Absence of a third in the searched material is a search result, not evidence that the construction is restricted to two roots."
+  },
+  "western_explicit_parse_access": {
+    "target": "Burgess 1984 Western Tarahumara",
+    "official_metadata_verified": true,
+    "sil_entry": 8587,
+    "official_pdf": "18497.pdf",
+    "direct_pdf_access_this_session": "403_forbidden",
+    "anilime_parse_recovered": false
+  },
+  "counting_rules": {
+    "direct_li_ame_roots": 2,
+    "direct_li_ame_root_names": ["ani-", "rihói-"],
+    "high_paradigmatic_target_families": 2,
+    "high_paradigmatic_family_names": ["newa-", "me'á-"],
+    "unparsed_candidate_families": 1,
+    "unparsed_candidate_names": ["bini-/bene-"],
+    "same_root_crossvariety_benchmark": "ani-",
+    "note": "V3 strengthens evidential depth for ani- but does not inflate the number of direct lexical parses."
+  },
+  "historical_comparator": {
+    "direct_historical_parse": "tsane-li-ameke",
+    "analysis": "affirm/APPL + PASS -li + PTCP -ameke",
+    "source": "Merrill et al. 2020 on Steffel",
+    "second_historical_family": "tschutschelíameke",
+    "second_family_status": "strong_paradigmatic_support_not_direct_parse",
+    "graphic_false_positive_control": "uilíameke = lexical uilí + PTCP -ameke"
+  },
+  "assessment": {
+    "modern_li_plus_ame_construction_exists": "very_high_confidence",
+    "modern_direct_lexical_replication_minimum": 2,
+    "same_root_crossvariety_replication": "very_high_for_ani",
+    "broader_family_replication": "high_confidence",
+    "same_li_function_across_direct_roots": "not_proven",
+    "historical_modern_constructional_bridge": "high_confidence",
+    "automatic_historical_morpheme_identity": false,
+    "human_reviewed": false,
+    "ai_assisted": true
+  },
+  "next_tests": [
+    "Find a third modern lexical root with direct source segmentation X-li-ame.",
+    "Recover a Western grammar/interlinear source that directly parses anilíame/anilime.",
+    "Find a second historical lexical family with a direct source parse X-li-ameke.",
+    "Keep newa-, me'á-, and bini-/bene- in their current evidence tiers unless source-level segmentation changes."
+  ],
+  "epistemic_rule": "Evidence depth and evidence breadth are distinct. Strong cross-variety replication of one root increases robustness without increasing the count of directly parsed lexical roots."
+}
