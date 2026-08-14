@@ -1,0 +1,39 @@
+{
+  "schema_version": "1.0.0",
+  "generated": "2026-08-14",
+  "purpose": "Capa no destructiva de decisiones editoriales verificadas contra la fuente. No modifica la evidencia documental ni reescribe el conjunto de datos 1.0.0.",
+  "decisions": [
+    {
+      "decision_id": "ED-000001",
+      "record_id": "RD-000120",
+      "decision_type": "source_confirmed_blank_fields",
+      "status": "verified_against_source",
+      "source_code": "SRC-02",
+      "source_document": "DICCIONARIO raramuri.pdf",
+      "page_start": 8,
+      "page_end": 9,
+      "finding": "La fuente presenta Auchecho como lema, pero deja en blanco Clasif y Traducción. Los únicos contenidos asociados aparecen en Ejemplos y comentarios: 'Auchecho siné, otra vez.', 'Auchecho siné aní, repetir.' y 'Auchecho siné cu ‘ya, reponer.'.",
+      "action_current_release": "Conservar RD-000120 sin clasificación, traducción ni acepciones inferidas. El vacío es documental y no un fallo de extracción demostrado.",
+      "action_next_release": "Mantener el registro como entrada documentada con campos fuente vacíos y marcarlo explícitamente como source-confirmed blank en controles de calidad.",
+      "verified_against_source": true,
+      "verified_date": "2026-08-14",
+      "evidence_basis": "Cotejo visual de las páginas PDF 8–9 de SRC-02."
+    },
+    {
+      "decision_id": "ED-000002",
+      "record_id": "RD-000860",
+      "decision_type": "source_note_misclassified_as_lexical_entry",
+      "status": "verified_against_source",
+      "source_code": "SRC-02",
+      "source_document": "DICCIONARIO raramuri.pdf",
+      "page_start": 42,
+      "page_end": 42,
+      "finding": "La cadena 'Nota: al principio de la palabra no siempre se pronuncia la hu.' aparece en la fuente como una nota de ancho completo entre Garé y 1Hua; no ocupa una fila lexicográfica ordinaria con columnas de lema, clasificación, traducción y ejemplos.",
+      "action_current_release": "No eliminar ni reescribir silenciosamente RD-000860 del conjunto publicado 1.0.0. Tratarlo en auditorías como nota de fuente representada erróneamente como entrada léxica.",
+      "action_next_release": "Migrar el contenido a una entidad source_note o equivalente, preservando texto, fuente y página, y retirar su conteo como entrada lexicográfica mediante un cambio versionado de esquema/datos.",
+      "verified_against_source": true,
+      "verified_date": "2026-08-14",
+      "evidence_basis": "Cotejo visual de la página PDF 42 de SRC-02."
+    }
+  ]
+}
