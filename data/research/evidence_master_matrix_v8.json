@@ -1,0 +1,53 @@
+{
+  "schema_version": "1.7",
+  "date": "2026-08-14",
+  "project": "Rarámuri Histórico Digital",
+  "canonical_assessment": "AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md",
+  "matrix_document": "EVIDENCE_MASTER_MATRIX_V8.md",
+  "supersedes": "data/research/evidence_master_matrix_v7.json",
+  "candidates": [
+    {"id":"C01","tier":"A","status":"unchanged"},
+    {"id":"C02","tier":"B","strength_note":"B+_strong","status":"preserved"},
+    {"id":"C03","tier":"B","strength_note":"B+_exceptional_near_A","status":"preserved"},
+    {"id":"C04","tier":"B","strength_note":"B+_exceptional_near_A","status":"preserved"},
+    {
+      "id":"C05",
+      "tier":"B",
+      "strength_note":"B+_strong",
+      "candidate":"selí → selíameke ↔ sir-/siríame",
+      "historical_derivation":"direct_published",
+      "historical_base":"selí",
+      "historical_base_meaning":"gobernar",
+      "historical_derived":"selíameke",
+      "historical_derived_meaning":"gobernante/juez del pueblo",
+      "modern_govern_family":["sirnama","sirachi","sirame","sirgame","sergame","siri*ma","sir*nowa","siriame"],
+      "modern_family_semantics":"gobernar, ser cacique, presidencia/juzgado, cacique/jefe/gobernador",
+      "independent_choguita_form":"siríame 'gobernador'",
+      "modern_participial_ame":"explicit_in_Choguita",
+      "historical_l_r_precedent":"cavólameke ~ cavórameke",
+      "historical_e_i_precedent":true,
+      "phonological_correspondence":"plausible_non_ad_hoc_not_regular",
+      "modern_token_specific_parse":"not_recovered",
+      "historical_modern_cognacy":"not_demonstrated",
+      "negative_control":"li in selíameke belongs to lexical root selí; not passive -li",
+      "remaining_A_requirement":"token-specific modern parse plus stronger historical comparison OR published direct identification selí~sirí-"
+    },
+    {"id":"C06","tier":"C","status":"unchanged"},
+    {"id":"C07","tier":"A","status":"unchanged"},
+    {"id":"C08","tier":"A","status":"preserved_from_v7"},
+    {"id":"C09","tier":"B","strength_note":"strong_plus_ocr_pending_facsimile","status":"preserved"}
+  ],
+  "historical_li_ameke_construction": {
+    "status":"two_historical_A_source_explicit_roots",
+    "A_roots":["tsanelíameke","tschutschelíameke"],
+    "negative_controls":["ganelíameke","uilíameke","selíameke"]
+  },
+  "global_constraints":[
+    "No universal -ameke > -ami law.",
+    "No universal e > i or l > r law.",
+    "Documented e~i and l~r precedents make C05 non-ad-hoc but do not demonstrate cognacy.",
+    "Selíameke remains a negative control against automatic passive -li segmentation even while serving as a positive lexical candidate.",
+    "No automatic surface liameke segmentation."
+  ],
+  "next_source_test":"C05 is closed for generic Siríame occurrences. Move to C06 or another candidate capable of tier change; reopen C05 only for exact modern parse/direct historical comparison."
+}
