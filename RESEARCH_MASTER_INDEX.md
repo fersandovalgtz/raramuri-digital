@@ -6,8 +6,8 @@
 
 ## Estado canónico
 
-- [`EVIDENCE_MASTER_MATRIX_V7.md`](EVIDENCE_MASTER_MATRIX_V7.md) + [`data/research/evidence_master_matrix_v7.json`](data/research/evidence_master_matrix_v7.json): matriz vigente.
-- [`CANDIDATE_SOURCE_TESTS_V7.md`](CANDIDATE_SOURCE_TESTS_V7.md): pruebas fuente-basadas vigentes.
+- [`EVIDENCE_MASTER_MATRIX_V8.md`](EVIDENCE_MASTER_MATRIX_V8.md) + [`data/research/evidence_master_matrix_v8.json`](data/research/evidence_master_matrix_v8.json): matriz vigente.
+- [`CANDIDATE_SOURCE_TESTS_V8.md`](CANDIDATE_SOURCE_TESTS_V8.md): pruebas fuente-basadas vigentes.
 - [`RESEARCH_EVIDENCE_STATUS.md`](RESEARCH_EVIDENCE_STATUS.md): síntesis de grados.
 - [`research-state.json`](research-state.json): estado legible por máquina.
 - [`RESEARCH_DEPENDENCIES.md`](RESEARCH_DEPENDENCIES.md): bloqueos y reglas de reapertura.
@@ -29,14 +29,19 @@ La síntesis general permanece en v18 porque las rondas recientes cambian grados
 [`C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md`](C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md).  
 **B formal; B+ excepcional / cercano a A.** La pertenencia participial/agentiva moderna de `nesame` es de alta confianza interna; falta parse exacto o identificación histórica directa.
 
+## C05 · `selí → selíameke ↔ sir-/siríame`
+
+[`C05_SELI_SIRI_GOVERNOR_BRIDGE_V1.md`](C05_SELI_SIRI_GOVERNOR_BRIDGE_V1.md).  
+**B formal; B+ fuerte.** Merrill declara `selíameke` ‘gobernante/juez del pueblo’ derivado de `selí` ‘gobernar’. Márquez documenta una familia moderna `sir-` de gobierno y Caballero aporta Choguita `siríame` ‘gobernador’ junto con `-ame` participial. Precedentes históricos independientes `l~r` y `e~i` vuelven la comparación formal plausible, no una cognación demostrada.
+
+`Selíameke` conserva simultáneamente su papel de control negativo: el `li` pertenece a la raíz `selí`; no es pasivo `-li`.
+
 ## C08 · `Tschutschá → Tschutschelíameke`
 
 [`C08_TSCHUTSCHELIAMEKE_MORPHOLOGICAL_ADJUDICATION_V1.md`](C08_TSCHUTSCHELIAMEKE_MORPHOLOGICAL_ADJUDICATION_V1.md).  
-**A.** Merrill documenta el paradigma `Tschutschá` ‘ungir’ → `Tschutschelíameke` ‘ungido’, identifica `tschutsch-e-` como base con aplicativo `-e`, analiza la cadena pasiva `-li` + participial `-ameke` en `tsanelíameke` y remite directamente a `cf. tschutschelíameke`. La estructura `tschutsch- + -e + -li + -ameke` queda restringida por análisis explícitos de la propia fuente, aunque no exista una sola glosa interlineal del token.
+**A.** Merrill documenta el paradigma, identifica `tschutsch-e-`, analiza `-li` pasivo y `-ameke` participial en la construcción paralela y remite directamente a `tschutschelíameke`.
 
-### Consecuencia
-
-La construcción histórica `X + -li + -ameke` cuenta ahora con **dos raíces A/source-explicit**: `tsanelíameke` y `tschutschelíameke`. Los controles negativos `ganelíameke`, `uilíameke` y `selíameke` se conservan.
+La construcción histórica `X + -li + -ameke` cuenta con **dos raíces A/source-explicit**: `tsanelíameke` y `tschutschelíameke`.
 
 ## C09 · Tellechea
 
@@ -62,11 +67,11 @@ Dataset estable `1.0.0`; capas experimentales `1.1.0-candidate`. Los hallazgos c
 
 1. `PROJECT_VALIDATION_POLICY_V1.md`;
 2. `RESEARCH_EVIDENCE_STATUS.md`;
-3. `EVIDENCE_MASTER_MATRIX_V7.md`;
+3. `EVIDENCE_MASTER_MATRIX_V8.md`;
 4. `AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md`;
 5. auditoría focal del candidato pertinente;
 6. `RESEARCH_DEPENDENCIES.md` antes de abrir nuevas búsquedas.
 
 ## Regla de mantenimiento
 
-No elevar grados por acumulación de apariciones. Un análisis compuesto puede satisfacer A cuando cada componente y el token comparado están explícitamente anclados en la fuente; esto no equivale a inventar una glosa interlineal inexistente. La promoción de C08 no autoriza segmentación automática de cualquier `liameke` superficial.
+No elevar grados por acumulación de apariciones. Precedentes fonológicos independientes vuelven una comparación no ad hoc, pero no prueban cognación. Un análisis compuesto puede satisfacer A cuando cada componente y el token comparado están explícitamente anclados en la fuente. La promoción de C08 no autoriza segmentación automática de cualquier `liameke` superficial, y la promoción léxica de C05 no convierte su `li` en morfema pasivo.
