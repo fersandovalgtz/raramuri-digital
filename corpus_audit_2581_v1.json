@@ -1,0 +1,120 @@
+{
+  "audit": "Rarámuri Digital: auditoría editorial y estructural profunda del corpus público",
+  "version": "1",
+  "date": "2026-08-14",
+  "dataset_version": "1.0.0",
+  "entry_count": 2581,
+  "reproducibility": {
+    "entry_point": "scripts/audit-lexicon-corpus.mjs",
+    "implementation": "scripts/audit-lexicon-corpus-v3.mjs",
+    "validated_commit": "b739f6420063f78fa5f269c7ae5b57f96be15dcf",
+    "workflow": "Validar publicación",
+    "workflow_run_id": 31822686343,
+    "artifact_id": 9227584119,
+    "workflow_conclusion": "success"
+  },
+  "baseline": {
+    "senses": 2758,
+    "examples": 622,
+    "variant_tokens": 224,
+    "missing_classification": 163,
+    "missing_translation": 2,
+    "entries_without_senses": 2,
+    "entries_without_examples": 1959,
+    "entries_without_variants": 2360,
+    "duplicate_record_ids": 0,
+    "invalid_record_ids": 0,
+    "invalid_page_ranges": 0,
+    "source_signature_collisions": 35
+  },
+  "deep_audit": {
+    "exact_content_duplicate_groups": 0,
+    "raw_number_prefix_mismatches": 0,
+    "normalization": {
+      "non_nfc": 0,
+      "boundary_whitespace": 0,
+      "normalized_uppercase": 0,
+      "normalized_curly_apostrophe": 0,
+      "normalized_repeated_space": 0
+    },
+    "critical_records": [
+      {
+        "record_id": "RD-000120",
+        "headword": "Auchecho",
+        "page_start": 8,
+        "page_end": 9,
+        "issue": "missing_translation_and_senses",
+        "action": "direct_source_check_no_inference"
+      },
+      {
+        "record_id": "RD-000860",
+        "headword_raw": "Nota: al principio de la palabra no siempre se pronuncia la hu.",
+        "page_start": 42,
+        "page_end": 42,
+        "issue": "source_note_modeled_as_lexical_entry_candidate",
+        "action": "preserve_source_text_review_note_metadata_model"
+      }
+    ],
+    "classification": {
+      "missing_exact_classification": 163,
+      "unclassified_with_explicit_source_labels": 45,
+      "of_these_multiple_explicit_categories": 42,
+      "of_these_single_explicit_category": 3,
+      "single_category_candidates": [
+        {"record_id": "RD-000771", "headword": "Chopota", "explicit_label": "vi"},
+        {"record_id": "RD-001078", "headword": "Ihuérami", "explicit_label": "adj"},
+        {"record_id": "RD-001093", "headword": "Iná", "explicit_label": "vi"}
+      ],
+      "architectural_inference": "A sense-level or multi-category model should be evaluated before mass-filling entry-level classification."
+    },
+    "source_signature_collisions": {
+      "groups": 35,
+      "records": 71,
+      "same_raw_form_groups": 10,
+      "normalization_only_groups": 25,
+      "other_raw_difference_groups": 0,
+      "same_raw_form_review_queue": [
+        {"raw_form": "Acajihua", "record_ids": ["RD-000018", "RD-000019"]},
+        {"raw_form": "Ané", "record_ids": ["RD-000064", "RD-000065"]},
+        {"raw_form": "Aparocha", "record_ids": ["RD-000078", "RD-000079"]},
+        {"raw_form": "Basú", "record_ids": ["RD-000206", "RD-000207"]},
+        {"raw_form": "Bichíhuari", "record_ids": ["RD-000235", "RD-000236"]},
+        {"raw_form": "Binera", "record_ids": ["RD-000257", "RD-000258"]},
+        {"raw_form": "Buchuhuí", "record_ids": ["RD-000327", "RD-000328"]},
+        {"raw_form": "1ca", "record_ids": ["RD-000357", "RD-000358"]},
+        {"raw_form": "Chipó", "record_ids": ["RD-000712", "RD-000713"]},
+        {"raw_form": "Ri’nahuí", "record_ids": ["RD-002047", "RD-002049"]}
+      ],
+      "interpretation": "Collision is not duplication; 25 of 35 are induced only by normalization and no exact-content duplicate group was found."
+    },
+    "mixed_homonym_numbering": {
+      "groups": 6,
+      "normalized_keys": ["ori", "acara", "choquira", "huica", "machina", "cora"],
+      "action": "source_review_no_automatic_numbering"
+    },
+    "numbered_translation_parsing_candidates": [
+      {"record_id": "RD-000721", "headword": "Chi’ré", "translation_raw": "1. pasar (un tiempo), pernoctar"},
+      {"record_id": "RD-002074", "headword": "Riqué", "translation_raw": "1. vt Pisar"}
+    ],
+    "variants": {
+      "total_tokens": 224,
+      "inflectional_tense_marked": 103,
+      "number_or_valency_marked": 32,
+      "other_grammatical_marked": 23,
+      "explicit_variant_of": 6,
+      "lexical_or_unspecified": 60,
+      "explicit_grammatical_or_inflectional_total": 158,
+      "explicit_grammatical_or_inflectional_percent": 70.54,
+      "architectural_inference": "Preserve documentary tokens and evaluate subtyping lexical variants versus grammatical/inflectional forms."
+    }
+  },
+  "priorities": [
+    {"priority": "P0", "front": "RD-000120 and RD-000860 source/structure review"},
+    {"priority": "P1", "front": "10 same-raw-form collision groups and 6 mixed-numbering families"},
+    {"priority": "P1", "front": "sense-level/multi-category classification model before processing 45 explicit-label records"},
+    {"priority": "P2", "front": "subtype 224 variants tokens while preserving documentary forms"},
+    {"priority": "P3", "front": "examples/variants coverage treated as source coverage, not automatic errors"}
+  ],
+  "lexicon_entries_modified": 0,
+  "epistemic_rule": "No lexical record is corrected automatically from heuristic output; source-grounded review precedes substantive edits."
+}
