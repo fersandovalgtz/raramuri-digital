@@ -1,0 +1,85 @@
+{
+  "artifact": "ameke_ame_ami_diachronic_assessment_v8",
+  "date": "2026-08-13",
+  "central_assessment": "A derivational/stative/participial domain centered on *-ame now has explicit continuity across Proto-Tarahumara reconstruction, a seventeenth-century gamek attestation, Steffel's eighteenth-century -ga + -(a)me + -ke chains, and modern -ga + -me/-ame constructions. The strongest working model for color morphology is retention plus later semantic/analogical specialization, not a universal mechanical -ameke > -ami rule.",
+  "historical_layers": [
+    {
+      "stage": "Proto-Tarahumara",
+      "status": "reconstructed",
+      "evidence": "*-ame adjectivalizer/nominalizer/participial; late PT stative constructions contain *-ame."
+    },
+    {
+      "stage": "1683",
+      "status": "attested",
+      "evidence": "Guadalaxara Pedro norugamek provides a pre-Steffel stative gamek chain."
+    },
+    {
+      "stage": "Steffel eighteenth century",
+      "status": "attested_and_analyzed",
+      "evidence": "Merrill explicitly segments stative -ga~-ja + participial -(a)me + final -ke in chains such as -rúgameke; Steffel reports frequent omission of final -ke."
+    },
+    {
+      "stage": "Modern multivariety Rarámuri",
+      "status": "attested_and_analyzed",
+      "evidence": "Participial -ame/-me, adjective/state -ga-me, color forms in -ka/-ga/-cha + -me, and productive color-state -ga are documented independently."
+    }
+  ],
+  "color_morphology": {
+    "historical_participial_bridge": [
+      "čókameke ~ čókame -> modern chó-ka-me / chó-ka-mi / chó-ko-m",
+      "rosákameke ~ rosákame -> modern rosá-ka-me / rosá-ka-mi / rosá-ko-m"
+    ],
+    "historical_na_bridge": "tsestá-na 'is red' is explicitly segmented historically and compared to modern sitá-na 'be/become red'; modern -na is productive throughout the color paradigm.",
+    "historical_ga_evidence": "Steffel/Merrill explicitly document stative -ga~-ja with -(a)meke. Merrill proposes that -gameke in schiógameke could be a variant of the -cameke ending of the other basic colors because g/c alternate historically.",
+    "modern_ga_evidence": "The 1997 multivariety Compendio explicitly has -ga-me outside and inside colors and productive color-state -ga; it groups -ka/-ga/-cha as high/intense color modifiers before participial -me.",
+    "preferred_model": "retention_plus_specialization",
+    "preferred_model_confidence": "moderate_high",
+    "system_level_ga_ame_continuity": "very_high",
+    "individual_historical_color_segmentation": "moderate"
+  },
+  "hypothesis_ranking": [
+    {
+      "rank": 1,
+      "id": "H3",
+      "label": "Retention plus specialization",
+      "assessment": "An inherited stative -ga + participial -ame(+ke) architecture persisted, while the color subsystem regularized or specialized dialectal -ka/-ga forms and contrasted them with -na."
+    },
+    {
+      "rank": 2,
+      "id": "H1",
+      "label": "Retention without reconstructed specialization chronology",
+      "assessment": "Historical -cameke/-gameke broadly continues old stative/participial morphology, but the modern semantic organization cannot yet be dated."
+    },
+    {
+      "rank": 3,
+      "id": "H2",
+      "label": "Pure late reanalysis",
+      "assessment": "Possible locally, but less economical as a global explanation because explicit -ga+ame architecture exists both historically and modernly."
+    }
+  ],
+  "claims_supported": [
+    "The *-ame domain is reconstructible before the documentary period.",
+    "Stative ga+ame-like architecture predates Steffel and remains visible in modern varieties.",
+    "Steffel's -ameke can contain independently segmentable participial -(a)me plus final -ke; final -ke was often omitted.",
+    "Historical and modern color systems contain at least two independent morphological bridges: -kameke~-kame to -ka-me and -na to -na.",
+    "Modern color morphology itself preserves -ga-me and productive -ga, so modern -ka-me need not be explained solely through late reanalysis."
+  ],
+  "claims_not_supported": [
+    "A universal rule -ameke > -ami.",
+    "Automatic identity of every historical color c/k with stative -ga or modern -ka.",
+    "A single automatic k~g alternation in all Rarámuri environments.",
+    "A securely dated innovation point for the modern semantic contrast -ka/-ga versus -na."
+  ],
+  "priority_candidates": {
+    "all_grade_A_architecture": true,
+    "families": ["dormir", "Nessé/Nisé", "Tſchiper/Chipér", "Selí/Sirí", "negro", "blanco", "azul/verde"],
+    "interpretation": "Grade A marks evidential architecture, not final cognation."
+  },
+  "next_phase": [
+    "Construct a controlled historical-modern k~g series in comparable morphophonological environments.",
+    "Date the emergence/specialization of the modern color opposition -ka/-ga versus -na using earlier twentieth-century descriptions where accessible.",
+    "Seek direct access to the unpublished Steffel 1799 grammar or a scholarly transcription.",
+    "Resolve SRC-02 bibliographic identity separately."
+  ],
+  "epistemic_rule": "System-level continuity and lexeme-level segmentation are separate claims and must carry separate confidence values."
+}
