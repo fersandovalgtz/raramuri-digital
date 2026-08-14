@@ -1,0 +1,76 @@
+{
+  "artifact": "candidate_evidence_independence_matrix_v4",
+  "date": "2026-08-13",
+  "purpose": "Track independence and formal architecture of prioritized historical-modern Rarámuri candidates without converting grades into cognation probabilities.",
+  "grading_rule": {
+    "A": "Historical evidence plus modern evidence independent of the historical editorial lineage, with external controls for the principal formal differences. Important reconstruction problems may remain.",
+    "A-": "Strong historical-modern evidence with at least one significant independence or formal-control gap.",
+    "B": "Plausible candidate with evidence concentrated in a dependent or unresolved modern source or with substantial uncontrolled formal differences.",
+    "B-": "Exploratory candidate whose semantics or form remain weakly controlled."
+  },
+  "candidates": [
+    {
+      "family": "dormir",
+      "historical": "cotschí / kočí",
+      "modern": "kotʃi and related modern forms",
+      "grade": "A",
+      "basis": "Independent Choguita documentation plus historical phonetic control for <tsch>."
+    },
+    {
+      "family": "Nessé/Nisé — cuidar/pastorear/pastor",
+      "historical": "Nessé / Nesséameke, phonetically nesé / neséameke",
+      "modern": "Nisé / Niséami and community nise’ami/niseami",
+      "grade": "A",
+      "basis": "<ss>=[s], historical e~i variation, modern pretonic /e/ raising, and independent Balleza community usage."
+    },
+    {
+      "family": "Tſchiper/Chipér — fino/delgado/plano",
+      "historical": "tschipérameke / čipérameke",
+      "modern": "Chipérami plus community chiperami",
+      "grade": "A",
+      "basis": "Independent <tsch>~tʃ controls, matching stress and semantic field, plus Guerrero community usage."
+    },
+    {
+      "family": "Selí/Sirí — gobernar/gobernador",
+      "historical": "Selí → Selíameke",
+      "modern": "siˈríame / Siríami",
+      "grade": "A",
+      "basis": "Independent Choguita governor form and external controls for e~i, l~r and the participial domain. A competing selígame<selaka etymology remains unresolved."
+    },
+    {
+      "family": "negro",
+      "historical": "tschócameke / čókameke",
+      "modern": "chó-ka-mi / chó-ka-me / chó-ko-m",
+      "grade": "A",
+      "basis": "Direct historical color form plus independent multivariety modern paradigm and controlled historical affricate value."
+    },
+    {
+      "family": "blanco",
+      "historical": "rosácameke ~ tosácameke",
+      "modern": "rosá-ka-me / rosá-ka-mi / rosá-ko-m",
+      "grade": "A",
+      "basis": "Direct historical-modern root and color-morphology continuity with multivariety modern evidence."
+    },
+    {
+      "family": "azul/verde",
+      "historical": "schiógameke; competing green term pamaguéameke",
+      "modern": "seyó-/siyó- + -ka/-na + -me/-mi/-m",
+      "grade": "A",
+      "previous_grade": "A-",
+      "basis": "Steffel explicitly places schiógameke in the blue-green domain; modern seyó/siyó is independently documented across multiple regions; historical š~s has independent controls; historical color morphology provides -cameke and -ameke~-ame controls.",
+      "open_issues": [
+        "Exact treatment of the medial glide in historical schió- versus modern seyó/siyó",
+        "Exact segmentation of historical -gameke/-cameke",
+        "Historical competition and eventual fate of pamaguéameke"
+      ]
+    }
+  ],
+  "current_distribution": {
+    "A": 7,
+    "A-": 0,
+    "B": 0,
+    "B-": 0
+  },
+  "interpretation": "All seven prioritized families now satisfy the project's Grade A architecture criterion. This closes the evidence-independence phase for this candidate set but does not establish seven demonstrated cognations.",
+  "next_phase": "Move from candidate confirmation to targeted reconstruction of unresolved morphological, phonological and lexical histories."
+}
