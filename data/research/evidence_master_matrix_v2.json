@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.1",
+  "date": "2026-08-14",
+  "project": "Rarámuri Histórico Digital",
+  "canonical_assessment": "AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md",
+  "supersedes": "data/research/evidence_master_matrix_v1.json",
+  "policy": {
+    "validation_model": "documentary_source_based_reproducible",
+    "external_human_validation_required": false,
+    "rule": "Documented phonological plausibility is not automatic cognacy or a universal sound law."
+  },
+  "candidates": [
+    {"id":"C01","tier":"A","status":"unchanged_from_v1"},
+    {"id":"C02","tier":"B","status":"unchanged_from_v1"},
+    {"id":"C03","tier":"B","status":"unchanged_from_v1"},
+    {
+      "id":"C04",
+      "tier":"B",
+      "strength_note":"B+",
+      "candidate":"Nessé → Nesséameke ↔ Nisé → Niséami",
+      "new_support":[
+        "Merrill et al. 2020 documents historical e~i and é~í alternations: síneví~síniví, taitéke~taitéki, ¢elé~¢elí.",
+        "Merrill cautions that vowel alternations are limited and show no evident general pattern.",
+        "SEP catalogs Awilichi bawi as a Rarámuri publication from Chihuahua; an indexed textual reproduction preserves Echi nise’ami and repeated niseami in a goat-herding narrative."
+      ],
+      "supports":"The Nessé~Nisé vowel difference is non-ad-hoc and phonologically plausible; pastoral semantic/derivational convergence is reinforced.",
+      "does_not_support":"Automatic cognacy, a regular e>i law, or a universal -ameke>-ami pathway.",
+      "unresolved":["direct lexical cognacy","conditioning of vowel correspondence","modern derivational status","varietal continuity"],
+      "next_source_test":"Recover the care/herd/shepherd family in an independently identified modern variety, ideally Hilton et al. 1993 or the 2016 Samachique update."
+    },
+    {"id":"C05","tier":"C","status":"unchanged_from_v1"},
+    {"id":"C06","tier":"C","status":"unchanged_from_v1"},
+    {"id":"C07","tier":"A","status":"unchanged_from_v1"},
+    {"id":"C08","tier":"B","status":"unchanged_from_v1"},
+    {
+      "id":"C09",
+      "tier":"B",
+      "strength_note":"strong_pending_facsimile",
+      "candidate":"machiámec~machiámeque~machíame; simiámec~simíame; atígameque~atígame",
+      "supports":"Strong same-root extension variation in Tellechea's historical ame domain.",
+      "does_not_support":"A participial-specific deletion mechanism. Tellechea's explicit que/ca deletion statement concerns preterites.",
+      "unresolved":["facsimile reading","c/que/k/ke graphematic relation","conditioning","participial-specific mechanism"]
+    },
+    {"id":"N01","tier":"N","status":"unchanged_from_v1"},
+    {"id":"N02","tier":"N","status":"unchanged_from_v1"},
+    {"id":"N03","tier":"N","status":"unchanged_from_v1"},
+    {"id":"N04","tier":"N","status":"unchanged_from_v1"},
+    {
+      "id":"N05",
+      "tier":"N",
+      "candidate":"documented e~i/é~í alternation = automatic cognacy",
+      "reason":"Merrill documents the alternations but says they are limited and lack an evident pattern; they establish plausibility, not lexical identity."
+    }
+  ],
+  "global_constraints":[
+    "No universal -ameke > -ami law.",
+    "No universal e > i or é > í law.",
+    "No automatic cognacy from a phonological alternation documented in other lexemes.",
+    "No automatic transfer of Tellechea preterite que/ca deletion to participles."
+  ],
+  "authoritative_sources":[
+    "EVIDENCE_MASTER_MATRIX_V2.md",
+    "AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md",
+    "CANDIDATE_SOURCE_TESTS_V2.md",
+    "PROJECT_VALIDATION_POLICY_V1.md"
+  ]
+}
