@@ -42,7 +42,7 @@ jobs:
       - name: Regenerar exportaciones
         run: npm run data:exports
 
-      - name: Comprobar determinismo de capas tipadas
+      - name: Comprobar determinismo de capas tipadas y P-21
         run: |
           mkdir -p .tmp/typed-pass-1
           cp data/variants-typed.json .tmp/typed-pass-1/variants-typed.json
@@ -50,13 +50,19 @@ jobs:
           cp data/graphic-variants.json .tmp/typed-pass-1/graphic-variants.json
           cp data/graphic-variants.csv .tmp/typed-pass-1/graphic-variants.csv
           cp data/graphic-variants-report.json .tmp/typed-pass-1/graphic-variants-report.json
+          cp data/advanced-products.json .tmp/typed-pass-1/advanced-products.json
+          cp data/advanced-products-report.json .tmp/typed-pass-1/advanced-products-report.json
           node scripts/generate-typed-variants.mjs
           node scripts/extract-graphic-variants.mjs
+          node --no-warnings scripts/extract-advanced-products.mjs
+          node scripts/reconcile-remission-product.mjs
           cmp .tmp/typed-pass-1/variants-typed.json data/variants-typed.json
           cmp .tmp/typed-pass-1/lexical-relations.json data/lexical-relations.json
           cmp .tmp/typed-pass-1/graphic-variants.json data/graphic-variants.json
           cmp .tmp/typed-pass-1/graphic-variants.csv data/graphic-variants.csv
           cmp .tmp/typed-pass-1/graphic-variants-report.json data/graphic-variants-report.json
+          cmp .tmp/typed-pass-1/advanced-products.json data/advanced-products.json
+          cmp .tmp/typed-pass-1/advanced-products-report.json data/advanced-products-report.json
 
       - name: Verificar nombre canónico del responsable
         run: node scripts/check-canonical-name.mjs
@@ -114,9 +120,12 @@ jobs:
             .tmp/corpus-audit/
             data/variants-typed.json
             data/lexical-relations.json
+            data/lexical-relation-target-adjudications.json
             data/graphic-variants.json
             data/graphic-variants.csv
             data/graphic-variants-report.json
+            data/advanced-products.json
+            data/advanced-products-report.json
           if-no-files-found: error
           retention-days: 30
 
@@ -142,8 +151,8 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/variants-typed.json data/lexical-relations.json data/graphic-variants.json data/graphic-variants.csv data/graphic-variants-report.json
+          git add data/variants-typed.json data/lexical-relations.json data/graphic-variants.json data/graphic-variants.csv data/graphic-variants-report.json data/advanced-products.json data/advanced-products-report.json
           if ! git diff --cached --quiet; then
-            git commit -m "Refresh typed variant layers"
+            git commit -m "Refresh canonical lexical relation products"
             git push origin HEAD:main
           fi
