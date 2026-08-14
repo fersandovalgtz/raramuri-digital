@@ -1,0 +1,60 @@
+{
+  "artifact": "passive_nominalizer_crossvariety_bridge_v1",
+  "date": "2026-08-13",
+  "status": "research_audit_not_community_validation",
+  "question": "Do independently described Rarámuri varieties permit a passive-marked predicate to be closed by an external nominalizer, and what does that imply for complex forms such as Western newálime?",
+  "comparanda": [
+    {
+      "variety": "Norogachi Rarámuri",
+      "source": "Villalpando Quiñonez, Jesús. ¿Píri mu rimúli?: la narración de los sueños en el rarámuri de Norogachi. Tlalocan.",
+      "form": "chapi-wa-ami",
+      "gloss": "atrapar-PASV-NMLZ",
+      "translation_context": "(el sueño) de los peces que son atrapados",
+      "source_segmentation_explicit": true,
+      "passive_marker": "-wa",
+      "nominalizer": "-ami"
+    },
+    {
+      "variety": "Baja-TB / Tierra Blanca",
+      "source": "Compendio básico de la gramática ralámuli, 1997",
+      "form": "rewa-lí-me Juáni",
+      "gloss": "nombra-pasivo-NOM Juan",
+      "translation_context": "le nombran Juan",
+      "source_segmentation_explicit": true,
+      "passive_marker": "-lí",
+      "nominalizer": "-me"
+    }
+  ],
+  "structural_generalization": {
+    "schema": "[[VERB + PASSIVE] + NOMINALIZER]",
+    "supported": true,
+    "evidence_independent_by_variety": true,
+    "assessment": "Two separately described varieties explicitly attest an outer nominalizer after passive morphology. This establishes the morphotactic availability of nominalizing an already complex passive predicate."
+  },
+  "relevance_to_newalime": {
+    "assessment": "The bridge strengthens the structural plausibility of analyzing Western newálime as an internally complex predicate followed by an external -me/-ame nominalizing/participial element.",
+    "direct_segmentation_of_newalime_proven": false,
+    "function_of_western_li_proven": false,
+    "include_in_core_ameke_ame_ami_evidence": false
+  },
+  "epistemic_flags": {
+    "structural_parallel": true,
+    "passive_marker_identity_across_varieties": false,
+    "nominalizer_identity_universal": false,
+    "historical_correspondence_adjudicated": false,
+    "cognacy_judgment_performed": false,
+    "human_reviewed": false,
+    "ai_assisted": true
+  },
+  "prohibited_inferences": [
+    "Do not infer that Baja-TB -li and Norogachi -wa are historically the same morpheme.",
+    "Do not infer that -me and -ami are interchangeable in every Rarámuri variety or construction.",
+    "Do not use this structural parallel as a substitute for direct Western segmentation of newálime.",
+    "Do not treat the bridge as a sound law or cognacy proof."
+  ],
+  "next_tests": [
+    "Find a same-root or tightly comparable paradigm contrasting Baja-TB -li-me with -wa-ami or -li-wa elsewhere.",
+    "Search additional Baja-TB texts for explicitly analyzable passive + nominalizer sequences.",
+    "Determine whether Western newálime has a published segmentation identifying the function of -li."
+  ]
+}
