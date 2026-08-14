@@ -3,11 +3,12 @@
   "repository": "fersandovalgtz/raramuri-digital",
   "branch": "main",
   "cutoff_date": "2026-08-14",
-  "canonical_assessment": "AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V17.md",
+  "canonical_assessment": "AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md",
   "entry_point": "RESEARCH_MASTER_INDEX.md",
   "evidence_status": "RESEARCH_EVIDENCE_STATUS.md",
-  "evidence_master_matrix": "EVIDENCE_MASTER_MATRIX_V1.md",
-  "evidence_master_matrix_machine": "data/research/evidence_master_matrix_v1.json",
+  "evidence_master_matrix": "EVIDENCE_MASTER_MATRIX_V2.md",
+  "evidence_master_matrix_machine": "data/research/evidence_master_matrix_v2.json",
+  "candidate_source_tests": "CANDIDATE_SOURCE_TESTS_V2.md",
   "dependencies": "RESEARCH_DEPENDENCIES.md",
   "validation_policy": {
     "document": "PROJECT_VALIDATION_POLICY_V1.md",
@@ -30,30 +31,35 @@
     "candidate_unresolved_lexical_relations": 0
   },
   "hypotheses": {
-    "proto_participial_ame_depth": {
-      "status": "high_confidence"
-    },
-    "steffel_ameke_ame_alternation": {
-      "status": "directly_demonstrated"
-    },
+    "proto_participial_ame_depth": {"status": "high_confidence"},
+    "steffel_ameke_ame_alternation": {"status": "directly_demonstrated"},
     "historical_peripheral_reduction": {
-      "status": "high_confidence"
+      "status": "high_confidence",
+      "direct_participial_mechanism_source": "Steffel",
+      "tellechea_role": "same_root_extension_variation_plus_general_reduction_context"
     },
     "tellechea_same_root_extension_variation": {
       "status": "strong_pending_facsimile_control",
+      "formal_tier": "B",
       "families": [
         "machiámec ~ machiámeque ~ machíame",
         "simiámec ~ simíame",
-        "ati-family long ~ short forms"
+        "atígameque ~ atígame"
       ]
     },
-    "modern_ame_ami_variation": {
-      "status": "supported_at_least_norogachi"
-    },
-    "universal_ameke_to_ami": {
+    "tellechea_participial_specific_final_deletion": {
       "status": "not_demonstrated",
-      "use_as_conclusion": false
+      "note": "Explicit que/ca deletion statement concerns preterites."
     },
+    "historical_e_i_alternation": {
+      "status": "directly_documented_in_steffel_via_merrill_2020",
+      "examples": ["síneví ~ síniví", "taitéke ~ taitéki", "¢elé ~ ¢elí"],
+      "regular_rule": false,
+      "caution": "Merrill states vowel alternations are limited and show no evident general pattern."
+    },
+    "modern_ame_ami_variation": {"status": "supported_at_least_norogachi"},
+    "universal_ameke_to_ami": {"status": "not_demonstrated", "use_as_conclusion": false},
+    "universal_e_to_i": {"status": "not_demonstrated", "use_as_conclusion": false},
     "historical_li_ameke": {
       "status": "one_D1_one_strong_D2",
       "D1": ["tsanelíameke"],
@@ -64,6 +70,13 @@
     "modern_li_ame": {
       "status": "high_constructional_confidence",
       "direct_D1_examples": ["ani-lí-ame", "rihói-li-ame"]
+    },
+    "C04_nesse_nise": {
+      "formal_tier": "B",
+      "strength_note": "B+",
+      "phonological_plausibility": "reinforced_non_ad_hoc",
+      "modern_contextual_support": "Awilichi bawi nise’ami/niseami pastoral narrative",
+      "cognacy": "not_demonstrated"
     },
     "color_bridge": {
       "status": "strong_formal_semantic_historical_segmentation_open",
@@ -78,37 +91,47 @@
   "priority_candidates": {
     "A": [
       "C01 Cotſchimé → Cotſchimeameke / Cochí → cochíami",
-      "C07 tsane-li-ameke ↔ ani-lí-ame constructional bridge",
-      "C09 Tellechea same-root extension families"
+      "C07 tsane-li-ameke ↔ ani-lí-ame constructional bridge"
     ],
     "B": [
       "C02 Tſchiperameke ↔ Chipérami",
       "C03 Rosacameke ~ rosacame ↔ Rosacami",
-      "C04 Nessé/Nesséameke ↔ Nisé/Niséami",
-      "C08 tschutschelíameke"
+      "C04 Nessé/Nesséameke ↔ Nisé/Niséami [B+]",
+      "C08 tschutschelíameke",
+      "C09 Tellechea same-root extension families [strong pending facsimile]"
     ],
     "C": [
       "C05 Selíameke ↔ Siríami / Choguita siˈríame",
       "C06 historical-modern black color bridge"
     ]
   },
+  "negative_controls": [
+    "N01 ganelíameke is not automatic passive li+ameke",
+    "N02 uilíameke is not automatic passive li+ameke",
+    "N03 selíameke is not automatic passive li+ameke",
+    "N04 final -ami is not automatically participial",
+    "N05 documented e~i/é~í alternation is not automatic cognacy"
+  ],
   "prohibited_shortcuts": [
     "universal -ameke > -ami",
+    "universal e > i or é > í",
     "automatic -li-ameke > -li-ame",
     "surface li = historical passive -li",
     "automatic equivalence of <c>/<k>/<que>/<ke>",
     "automatic projection of modern color -ka into colonial forms",
-    "automatic cognacy from graphic similarity",
+    "automatic cognacy from graphic similarity or unrelated phonological alternation",
     "morphological frequency claims from raw OCR counts",
-    "treating final -ami as automatically participial"
+    "treating final -ami as automatically participial",
+    "transferring Tellechea preterite que/ca deletion automatically to participles"
   ],
   "documentary_dependencies": {
     "rodriguez_lopez_2010_full_ingestion": "blocked",
     "tellechea_1826_facsimile_visual_audit": "blocked",
     "colonial_graphematic_control": "depends_on_facsimiles",
     "second_historical_li_ameke_D1": "not_found",
-    "western_sources_1970_1971_full_text": "blocked"
+    "western_sources_1970_1971_full_text": "blocked",
+    "samachique_dictionary_1993_2016_pdf_ingestion": "identified_but_http_403_in_current_environment"
   },
-  "next_action_without_blocked_documents": "Use EVIDENCE_MASTER_MATRIX_V1 to run source-based tests that can move a candidate between evidence tiers; do not require external human validation.",
-  "next_action_when_documents_available": "Facsimile-first exhaustive token audit before additional general web searching"
+  "next_action_without_blocked_documents": "Search source-based evidence that directly tests a candidate; for C04 prioritize an independently identified modern lexical source rather than additional generic e~i examples.",
+  "next_action_when_documents_available": "Facsimile-first exhaustive Tellechea token audit and direct Samachique dictionary check for the nise family."
 }
