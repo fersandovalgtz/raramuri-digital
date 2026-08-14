@@ -1,0 +1,89 @@
+{
+  "artifact": "blue_green_siyo_formal_correspondence_audit_v1",
+  "date": "2026-08-13",
+  "scope": "Formal and semantic audit of Steffel schiógameke / pamaguéameke against modern seyó-/siyó- blue-green forms",
+  "status": "research_audit_not_community_validation",
+  "historical_evidence": [
+    {
+      "form": "schiógameke",
+      "source": "Steffel as edited and analyzed by Merrill et al. 2020",
+      "gloss_domain": ["blue", "green"],
+      "notes": "Attested in the published dictionary; Brno manuscript has schiójameke. Merrill states that -gameke may be a variant of -cameke but explicitly cautions that participial segmentation is not certain in this word."
+    },
+    {
+      "form": "pamaguéameke",
+      "source": "Steffel as edited and analyzed by Merrill et al. 2020",
+      "gloss_domain": ["green"],
+      "notes": "A distinct historical green term. A connected-text variant pamaguéame lacks final -ke; Merrill analyzes this as evidence for optional use of the reduplicative -ke element."
+    }
+  ],
+  "modern_multivariety_evidence": {
+    "source": "Compendio básico de la gramática ralámuli, 1997",
+    "domain": "blue/green",
+    "forms": [
+      {"region": "Centro", "form": "seyó-na-me"},
+      {"region": "Baja", "form": "seyó-ka-me"},
+      {"region": "Baja-TB", "form": "siyó-ka-me"},
+      {"region": "Cumbre", "form": "siyó-na-me"},
+      {"region": "Norte", "form": "siyó-na-me"},
+      {"region": "Sur-B", "form": "siyó-na-mi"},
+      {"region": "Sur-T", "form": "siyó-no-m"}
+    ],
+    "notes": "The same source identifies siyó as a basic blue-green color root and documents regional sh~s variation as non-meaning-changing phonetic/orthographic variation."
+  },
+  "independent_formal_controls": [
+    {
+      "feature": "historical <sch> versus modern s/sh",
+      "evidence": "Merrill assigns historical <sch> the value [š] and documents initial alternations schiné~siní, schunú-cu~sunú-cu, schuguí~suguí-simí outside the target lexeme."
+    },
+    {
+      "feature": "modern s~palatalized sibilant",
+      "evidence": "Caballero 2008 documents palatalization of Choguita /s/ before high vowels, including word-initial /suní/ and /si-méa/."
+    },
+    {
+      "feature": "modern seyó~siyó",
+      "evidence": "The 1997 multivariety paradigm itself documents e/i variation across regions in the target color root. This supports modern dialectal variability but is not treated as an independent historical sound law."
+    },
+    {
+      "feature": "historical color ending -gameke/-cameke",
+      "evidence": "Merrill notes that all other basic historical color terms end in -cameke and that historical g~c alternation makes -gameke a possible variant of -cameke."
+    },
+    {
+      "feature": "historical -ke optionality",
+      "evidence": "pamaguéameke~pamaguéame is directly attested inside Steffel's material, supporting internal alternation between an -ameke form and a form ending in -ame."
+    }
+  ],
+  "comparison": {
+    "historical_candidate": "schiógameke",
+    "modern_candidate_family": "seyó-/siyó- + -ka/-na + -me/-mi/-m",
+    "semantic_continuity": "high",
+    "documentary_independence": "high",
+    "formal_plausibility": "high",
+    "major_strengths": [
+      "Steffel explicitly places schiógameke in the same blue-green semantic field occupied by modern seyó/siyó.",
+      "Historical š~s has independent controls in Steffel and modern Rarámuri.",
+      "Modern seyó~siyó and -kame~-name~-kami~-nami variation is documented across multiple regions.",
+      "Historical color morphology independently exhibits -cameke and internal -ameke~-ame alternation."
+    ],
+    "residual_problems": [
+      "Historical schió- lacks an explicitly analyzed glide corresponding to modern orthographic y in seyó/siyó; no general glide epenthesis is asserted.",
+      "Merrill explicitly states that it is uncertain whether the participial suffix is represented in schiógameke.",
+      "The relationship between historical -gameke/-cameke and modern -ka/-na + -me/-mi requires a dedicated morphological reconstruction.",
+      "pamaguéameke represents a competing historical green lexeme and should be studied as lexical competition rather than forced into the siyó lineage."
+    ]
+  },
+  "assessment": {
+    "previous_evidence_grade": "A-",
+    "updated_evidence_grade": "A",
+    "reason": "The candidate now has direct historical semantic evidence, independent modern multivariety evidence, and external controls for the principal initial-sibilant and color-morphology differences. Remaining issues concern exact reconstruction rather than documentary independence or gross formal compatibility.",
+    "cognation_final": false,
+    "sound_law_claimed": false,
+    "morphological_identity_claimed": false
+  },
+  "next_research_questions": [
+    "What is the best reconstruction of the historical schió- versus modern seyó-/siyó-, especially the medial glide?",
+    "How should -gameke/-cameke be segmented relative to modern -ka/-na plus -me/-mi?",
+    "What is the historical distribution and eventual fate of pamaguéameke as a competing green term?"
+  ],
+  "epistemic_rule": "Grade A measures evidence architecture, not demonstrated cognation. Historical and modern morphology must remain separately analyzed until a correspondence series supports reconstruction."
+}
