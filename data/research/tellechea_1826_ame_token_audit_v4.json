@@ -1,0 +1,67 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-08-14",
+  "source": "Miguel Tellechea, Compendio gramatical para la inteligencia del idioma Tarahumar, 1826",
+  "basis": {
+    "representation": "Internet Archive DjVu OCR text",
+    "lines": 11286,
+    "characters": 295047,
+    "current_audit_facsimile_checked": false
+  },
+  "mechanical_counts": {
+    "amec_including_accented": 5,
+    "ameque_including_accented": 19,
+    "long_raw_occurrences": 24,
+    "long_distinct_raw_strings": 22,
+    "ame_including_accented_raw_occurrences": 168,
+    "ame_distinct_raw_strings": 111
+  },
+  "policy": {
+    "automatic_morpheme_assignment": false,
+    "ocr_frequency_is_morphological_frequency": false,
+    "line_wrap_fragments_must_be_reconstructed": true,
+    "facsimile_required_for_graphematic_or_word_boundary_promotion": true
+  },
+  "long_token_audit": [
+    {"raw":"Taraijámeque","reconstructed":"Taraijámeque","ocr_line":1448,"page_marker":15,"classification":"explicit_participle","confidence":"high","spanish_parallel":"El que cuenta","notes":"Paradigm under participios; exact diplomatic medial spelling pending facsimile."},
+    {"raw":"inochameque","reconstructed":"inochameque","ocr_line":1887,"page_marker":25,"classification":"other_verbal_construction","confidence":"high","spanish_parallel":"tu habías de haber trabajado","notes":"Pluperfect/future-infinitive discussion; not counted as participial from ending alone."},
+    {"raw":"Yamec","reconstructed":"Yamec","ocr_line":1969,"page_marker":26,"classification":"metalinguistic_ending_label","confidence":"high","spanish_parallel":null,"notes":"OCR-corrupt list of present-participle endings; not lexical."},
+    {"raw":"simiámec","reconstructed":"simiámec","ocr_line":1969,"page_marker":26,"classification":"explicit_participle","confidence":"high","spanish_parallel":"el que va","notes":"Explicit example in De los participios."},
+    {"raw":"rumgamec","reconstructed":"rumgamec","ocr_line":1970,"page_marker":26,"classification":"explicit_participle","confidence":"high","spanish_parallel":"el que está grueso y tupido","notes":"Explicit example; diplomatic spelling pending facsimile."},
+    {"raw":"machiámec","reconstructed":"machiámec","ocr_line":1971,"page_marker":26,"classification":"explicit_participle","confidence":"high","spanish_parallel":"el que sabe, o ve","notes":"Explicit example in De los participios."},
+    {"raw":"yameque","reconstructed":"yameque","ocr_line":2389,"page_marker":37,"classification":"metalinguistic_participial_material","confidence":"high","spanish_parallel":null,"notes":"Tellechea explicitly refers to participios que tienen ya o yameque."},
+    {"raw":"rorobuségamec","reconstructed":"rorobuségamec","ocr_line":2609,"page_marker":42,"classification":"compound_modifier_uncertain","confidence":"medium_low","spanish_parallel":"ojos de toro","notes":"Occurs in discussion of compounds serving as genitives."},
+    {"raw":"atígameque","reconstructed":"atígameque","ocr_line":2891,"page_marker":49,"classification":"bilingual_participial_nominal_adjectival","confidence":"high","spanish_parallel":"morador (en el cielo)","notes":"Pater Noster bilingual parallel."},
+    {"raw":"ayoriguámeque","reconstructed":"ayoriguámeque","ocr_line":2927,"page_marker":49,"classification":"bilingual_participial_probable","confidence":"medium_high","spanish_parallel":"context of nuestros ofensores / lo malo","notes":"Agent/adjectival function probable; exact alignment pending facsimile."},
+    {"raw":"rejoírugameque","reconstructed":"rejoírugameque","ocr_line":2952,"page_marker":50,"classification":"bilingual_participial_probable","confidence":"medium_high","spanish_parallel":"context: en tu vientre hombre fue hecho","notes":"Later short form rejoíruga-me occurs in Creed exposition."},
+    {"raw":"yumctvameque","reconstructed":"yumctvameque","ocr_line":3001,"page_marker":51,"classification":"bilingual_adjectival_participial_probable","confidence":"medium","spanish_parallel":"Todopoderoso / hacedor (Creed context)","notes":"OCR token is corrupt-looking; diplomatic form pending."},
+    {"raw":"machiámeque","reconstructed":"machiámeque","ocr_line":4894,"page_marker":75,"classification":"bilingual_participial","confidence":"high","spanish_parallel":"el que todo lo sabe","notes":"Spanish parallel lines 4928-4931."},
+    {"raw":"gameque","reconstructed":"netetugameque","ocr_line":4895,"page_marker":75,"classification":"ocr_wrap_fragment_reconstructed_participial","confidence":"high","spanish_parallel":"el que todo lo ha hecho","notes":"Raw gameque is not independent; previous line ends netetu-."},
+    {"raw":"raméque","reconstructed":"raméque","ocr_line":5065,"page_marker":75,"classification":"nonparticipial_or_function_word","confidence":"medium_high","spanish_parallel":null,"notes":"No participial evidence."},
+    {"raw":"támeque","reconstructed":"natámeque","ocr_line":5126,"page_marker":78,"classification":"ocr_wrap_fragment_reconstructed_participial","confidence":"high","spanish_parallel":"los que bien piensan","notes":"Previous line ends na-."},
+    {"raw":"rameque","reconstructed":"rameque","ocr_line":6383,"page_marker":93,"classification":"nonparticipial_or_function_word","confidence":"medium_high","spanish_parallel":null,"notes":"Surface ending insufficient."},
+    {"raw":"raméque","reconstructed":"raméque","ocr_line":6385,"page_marker":93,"classification":"nonparticipial_or_function_word","confidence":"medium_high","spanish_parallel":null,"notes":"No participial alignment."},
+    {"raw":"orámeque","reconstructed":"orámeque","ocr_line":7189,"page_marker":105,"classification":"verbal_or_participial_uncertain","confidence":"medium","spanish_parallel":"nosotros nada pensamos","notes":"Spanish parallel is finite-like."},
+    {"raw":"rameque","reconstructed":"rameque","ocr_line":7209,"page_marker":105,"classification":"nonparticipial_or_function_word","confidence":"medium_high","spanish_parallel":null,"notes":"No participial evidence."},
+    {"raw":"tamachiámeque","reconstructed":"tamachiámeque","ocr_line":7817,"page_marker":112,"classification":"bilingual_participial","confidence":"high","spanish_parallel":"los que a Dios no conocen","notes":"Negative/relative participial function."},
+    {"raw":"beserágameque","reconstructed":"beserágameque","ocr_line":7819,"page_marker":112,"classification":"bilingual_participial","confidence":"high","spanish_parallel":"los que bien se confiesan","notes":"Bilingual parallel."},
+    {"raw":"machíameque","reconstructed":"machíameque","ocr_line":7820,"page_marker":112,"classification":"bilingual_participial","confidence":"high","spanish_parallel":"los que bien saben de Dios los Mandamientos","notes":"Bilingual parallel."},
+    {"raw":"gayénameque","reconstructed":"gayénameque","ocr_line":9470,"page_marker":143,"classification":"bilingual_participial_adjectival","confidence":"high","spanish_parallel":"hacedor de todas las cosas","notes":"Earlier p.75 occurrence is split gayéname + que and is not a short variant."}
+  ],
+  "extension_families": [
+    {"family":"ati-","long":["atígameque"],"short":["atígame"],"status":"strong_same_root_long_short_ocr","confidence":"high","semantic":"morador / morador","facsimile_pending":true},
+    {"family":"simi-","long":["simiámec"],"short":["simíame"],"status":"strong_same_root_long_short_ocr","confidence":"high","semantic":"el que va / caminante","facsimile_pending":true},
+    {"family":"machi-","long":["machiámec","machiámeque","machíameque"],"short":["machíame"],"status":"strong_same_root_extension_network_ocr","confidence":"high","semantic":"saber/ver; relativos de saber","facsimile_pending":true},
+    {"family":"ayorigu-","long":["ayoriguámeque"],"short":["ayoriguáme"],"status":"probable_same_root_long_short_ocr","confidence":"medium_high","semantic":"ofensor/aborrecer context","facsimile_pending":true},
+    {"family":"rejoíruga-","long":["rejoírugameque"],"short":["rejoírugame"],"status":"probable_same_root_long_short_ocr","confidence":"medium_high","semantic":"incarnation/birth context","facsimile_pending":true},
+    {"family":"gayéna-","long":["gayénameque"],"short":[],"status":"rejected_short_pair","confidence":"high","semantic":"hacedor/acabar","reason":"OCR p.75 gayéname is followed by que on next line"}
+  ],
+  "c09_assessment": {
+    "tier": "B",
+    "strength": "strong",
+    "additional_ocr_long_short_candidates": 2,
+    "facsimile_required_for_promotion": true,
+    "universal_ameque_to_amec_to_ame": false,
+    "preterite_que_ca_deletion_transferred_to_participles": false
+  }
+}
