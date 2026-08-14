@@ -6,13 +6,22 @@
 
 ## Propósito
 
-Este archivo es el punto de entrada estable para la investigación filológica y diacrónica acumulada en el repositorio. Su función es evitar que las sucesivas auditorías, versiones y artefactos reproducibles se lean como documentos independientes o equivalentes. Las versiones antiguas se conservan como historial epistemológico; la interpretación vigente debe partir siempre del documento canónico más reciente y del estado de evidencia resumido en [`RESEARCH_EVIDENCE_STATUS.md`](RESEARCH_EVIDENCE_STATUS.md).
+Este archivo es el punto de entrada estable para la investigación filológica y diacrónica acumulada en el repositorio. Su función es evitar que las sucesivas auditorías, versiones y artefactos reproducibles se lean como documentos independientes o equivalentes. Las versiones antiguas se conservan como historial epistemológico; la interpretación vigente debe partir siempre del documento canónico más reciente, de [`RESEARCH_EVIDENCE_STATUS.md`](RESEARCH_EVIDENCE_STATUS.md) y de la matriz maestra [`EVIDENCE_MASTER_MATRIX_V1.md`](EVIDENCE_MASTER_MATRIX_V1.md).
+
+## 0. Política operativa vigente
+
+- [`PROJECT_VALIDATION_POLICY_V1.md`](PROJECT_VALIDATION_POLICY_V1.md): define la validación documental, trazable y reproducible del proyecto. **La valoración humana externa no es requisito, bloqueo ni criterio de promoción.** Cuando la fuente no permite decidir, el estado correcto es `no resuelto`.
+- [`CANDIDATE_LAYER_PUBLICATION_V1.md`](CANDIDATE_LAYER_PUBLICATION_V1.md): frontera entre el dataset estable `1.0.0` y las capas experimentales `1.1.0-candidate`.
+- [`INTEROPERABILITY_1_1_CANDIDATE_V1.md`](INTEROPERABILITY_1_1_CANDIDATE_V1.md): mapeo y validación automatizada de las capas candidatas en TEI Lex-0 y CLDF.
+
+Los campos o textos heredados de versiones anteriores que mencionen revisión o validación humana se conservan sólo como historia del proceso y **no gobiernan la ruta actual**.
 
 ## Jerarquía documental
 
 ### 1. Síntesis canónica vigente
 
 - [`AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V17.md`](AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V17.md): síntesis actual del dominio histórico `*-ame ~ -ameke ~ -ame ~ -ami`, con control de Guadalaxara 1683, Steffel, Tellechea 1826 y datos modernos.
+- [`EVIDENCE_MASTER_MATRIX_V1.md`](EVIDENCE_MASTER_MATRIX_V1.md): jerarquía única de candidatos positivos y controles negativos. Distingue evidencia A/B/C/D/N y separa continuidad de construcción, continuidad léxica e historia del material final.
 
 Las versiones `V6`–`V16` deben tratarse como **instantáneas históricas del razonamiento**, no como estados vigentes. Se conservan para trazabilidad de cambios, rectificaciones y fortalecimiento/debilitamiento de hipótesis.
 
@@ -46,16 +55,26 @@ Las auditorías principales tienen contrapartes JSON cuando el análisis requier
 - `guadalaxara_1683_okamek_independent_control_v1.json`
 - `tellechea_1826_internal_participial_alternation_v2.json`
 - `tellechea_1826_final_velar_deletion_mechanism_v3.json`
-- [`research-state.json`](research-state.json), estado compacto y legible por máquina de las hipótesis vigentes.
+- [`data/research/evidence_master_matrix_v1.json`](data/research/evidence_master_matrix_v1.json), matriz actual legible por máquina;
+- [`research-state.json`](research-state.json), estado compacto de hipótesis vigentes.
+
+### 5. Interoperabilidad y publicación candidata
+
+- `data/variants-typed.json`: 224 tokens tipados por origen/naturaleza documental.
+- `data/lexical-relations.json`: 28 relaciones lexicográficas con destino documental resuelto.
+- `scripts/generate-candidate-interoperability.mjs`: genera el paquete TEI Lex-0/CLDF `1.1.0-candidate` sin modificar las exportaciones estables.
+- La corrida CI `31835809358` validó determinismo, `pycldf`, XSD Lex-0, lint, build y pruebas; el detalle se conserva en `INTEROPERABILITY_1_1_CANDIDATE_V1.md`.
 
 ## Lectura recomendada
 
 Para reconstruir el estado actual sin rehacer toda la historia del proyecto:
 
-1. leer `RESEARCH_EVIDENCE_STATUS.md`;
-2. leer `AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V17.md`;
-3. consultar la auditoría temática correspondiente sólo cuando se necesite revisar procedencia, tokens, grados D1/D2 o controles negativos;
-4. revisar `RESEARCH_DEPENDENCIES.md` antes de abrir nuevas búsquedas, para no duplicar frentes ya bloqueados o pre-registrados.
+1. leer `PROJECT_VALIDATION_POLICY_V1.md`;
+2. leer `RESEARCH_EVIDENCE_STATUS.md`;
+3. leer `EVIDENCE_MASTER_MATRIX_V1.md`;
+4. leer `AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V17.md`;
+5. consultar la auditoría temática correspondiente sólo cuando se necesite revisar procedencia, tokens, grados D1/D2 o controles negativos;
+6. revisar `RESEARCH_DEPENDENCIES.md` antes de abrir nuevas búsquedas, para no duplicar frentes ya bloqueados o pre-registrados.
 
 ## Regla de mantenimiento
 
@@ -64,8 +83,9 @@ Cada avance que cambie una conclusión debe:
 - conservar la versión anterior;
 - crear una nueva síntesis versionada cuando cambie el modelo general;
 - actualizar `RESEARCH_EVIDENCE_STATUS.md` si cambia el grado de alguna hipótesis;
+- actualizar `EVIDENCE_MASTER_MATRIX_V1.md` y su JSON si cambia un candidato o control;
 - actualizar `RESEARCH_DEPENDENCIES.md` si se resuelve o aparece una dependencia documental;
 - actualizar `research-state.json` para mantener un estado de máquina coherente;
 - registrar el hito correspondiente en Notion.
 
-No debe elevarse una hipótesis por semejanza gráfica aislada, por repetición de la misma raíz en fuentes dependientes ni por inferencia retrospectiva desde la morfología moderna.
+No debe elevarse una hipótesis por semejanza gráfica aislada, por repetición de la misma raíz en fuentes dependientes ni por inferencia retrospectiva desde la morfología moderna. La ausencia de una valoración humana externa no autoriza a elevar la certeza: una cuestión sin soporte suficiente permanece explícitamente **no resuelta**.
