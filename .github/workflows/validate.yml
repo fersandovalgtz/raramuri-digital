@@ -87,6 +87,17 @@ jobs:
       - name: Regenerar informe de calidad
         run: npm run data:quality
 
+      - name: Ejecutar auditoría profunda del corpus
+        run: node scripts/audit-lexicon-corpus.mjs --output .tmp/corpus-audit
+
+      - name: Publicar auditoría profunda para revisión
+        uses: actions/upload-artifact@v4
+        with:
+          name: raramuri-corpus-audit-${{ github.sha }}
+          path: .tmp/corpus-audit/
+          if-no-files-found: error
+          retention-days: 30
+
       - name: Verificar reproducibilidad de datos versionados
         run: git diff --exit-code -- public/downloads QUALITY_REPORT.md
 
