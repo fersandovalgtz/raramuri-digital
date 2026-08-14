@@ -23,63 +23,60 @@ Depende de D1/D2 y de prácticas ortográficas explícitas. No resolver por norm
 
 ## D4. Segunda raíz histórica `X-li-ame(ke)`
 
-**RESUELTA.**
-
-La auditoría `C08_TSCHUTSCHELIAMEKE_MORPHOLOGICAL_ADJUDICATION_V1.md` eleva `tschutschelíameke` a **A** mediante análisis explícito compuesto de Merrill et al.:
-
-- `Tschutschá` ‘ungir’ → `Tschutschelíameke` ‘ungido’ documentado directamente;
-- `tschutsch-e-` ‘ungirle’ analizado con aplicativo `-e`;
-- `-li` identificado como pasivo en la construcción comparada;
-- `-ameke` identificado como participial;
-- Merrill remite directamente `cf. tschutschelíameke` dentro del análisis de `-e-li-ameke`.
-
-Existen ahora **dos raíces históricas A/source-explicit** para la arquitectura `X + -li + -ameke`:
-
-1. `tsanelíameke`;
-2. `tschutschelíameke`.
-
-**Regla:** la resolución de D4 no autoriza segmentar cualquier `liameke` superficial. `ganelíameke`, `uilíameke` y `selíameke` siguen como controles negativos.
+**RESUELTA.** `tsanelíameke` y `tschutschelíameke` son ahora dos raíces históricas A/source-explicit. La resolución no autoriza segmentación automática de cualquier `liameke` superficial; `ganelíameke`, `uilíameke` y `selíameke` permanecen controles negativos.
 
 ## D5. Variación moderna `-ame ~ -me ~ -ami`
 
 **Estado:** apoyada regionalmente; no cerrada como cambio histórico.  
-**Regla:** no formular ley universal `-ameke > -ami` ni `e > i`.
+**Regla:** no formular ley universal `-ameke > -ami`, `e > i` ni `l > r`.
 
 ## D6. C02 `čipérameke ↔ Chipérami`
 
-**Estado:** B formal, B+ fuerte.  
-**Cerrado para acumulación moderna.**
-
+**Estado:** B formal, B+ fuerte. Cerrado para acumulación moderna.  
 Reabrir sólo ante base/paradigma histórico `čiper-`, parse histórico token-específico o comparación publicada directa.
 
 ## D7. C03 `Rosácameke ~ rosácame ↔ Rosácame / Rosácami`
 
-**Estado:** B formal, B+ excepcional / cercano a A.  
-**Cerrado para acumulación moderna.**
-
-La continuidad léxica ya no depende de explicar `e > i`, porque `Rosácame` continúa modernamente. Para A falta base/paradigma histórico, parse histórico token-específico o comparación histórica estructural. El parse moderno `ros-ka-me` no autoriza proyectar `-ka` hacia Steffel/Tellechea.
+**Estado:** B formal, B+ excepcional / cercano a A. Cerrado para acumulación moderna.  
+Para A falta base/paradigma histórico, parse histórico token-específico o comparación histórica estructural. No proyectar `ros-ka-me` moderno hacia Steffel/Tellechea.
 
 ## D8. C04 `Nessé/Nesséameke ↔ nes-/Neseme ↔ Nisé/Niséami`
 
-**Estado:** B formal, B+ excepcional / cercano a A.  
-**Cerrado para búsquedas generales.**
-
+**Estado:** B formal, B+ excepcional / cercano a A. Cerrado para búsquedas generales.  
 Reabrir sólo ante parse/paradigma token-específico de `nesame/neseme` o identificación histórica directa `Nessé ~ nes-/Nisé`.
 
-## D9. C08 `tschutschelíameke`
+## D9. C05 `selí → selíameke ↔ sir-/siríame`
 
-**Estado:** **A; cerrado salvo contradicción nueva.**
+**Estado:** **B formal; B+ fuerte.** Cerrado para acumulación general de `Siríame`.
 
-No buscar una glosa interlineal redundante como requisito artificial. El análisis compuesto de la misma fuente satisface el criterio A porque todos los componentes y el token comparado están explícitamente anclados.
+### Resuelto
 
-## D10. Genealogía de fuentes modernas
+- Merrill: `selíameke` ‘juez del pueblo, gobernante’ deriva directamente de `selí` ‘gobernar’;
+- Márquez: familia moderna `sir-` de gobernar/cacique/gobernador (`sirnama`, `sirachi`, `sirame`, `siri*ma`, `sir*nowa`);
+- Caballero: Choguita `siríame` ‘gobernador’ y `-ame` participial;
+- Merrill: precedentes históricos independientes `l~r` y `e~i`, que vuelven `selí ~ sirí-` plausible pero no regular.
+
+### Cuello de botella para A
+
+Reabrir sólo ante:
+
+1. parse moderno token-específico `sir(i)-ame` más control comparativo suficiente; o
+2. fuente que identifique directamente `selí ~ sirí-` como variantes/cognados históricos.
+
+**Regla:** `selíameke` sigue siendo control negativo para pasivo `-li`; su `li` pertenece a la raíz `selí`.
+
+## D10. C08 `tschutschelíameke`
+
+**Estado:** **A; cerrado salvo contradicción nueva.** El análisis compuesto fuente-explícito satisface A aunque no exista una sola glosa interlineal completa.
+
+## D11. Genealogía de fuentes modernas
 
 **Objetivo:** distinguir replicación documental de independencia de fuente.  
 **Regla:** `document_replication != source_independence`.
 
-## D11. Integración al corpus/producto público
+## D12. Integración al corpus/producto público
 
-Los candidatos C02/C03/C04/C09 permanecen en expediente. C08 puede citarse como evidencia histórica A de la construcción `-li + -ameke`, pero la segmentación automática de otros tokens sigue prohibida.
+C02/C03/C04/C05/C09 permanecen en expediente como comparaciones no cerradas. C08 puede citarse como evidencia histórica A de `-li + -ameke`; la segmentación automática de otros tokens sigue prohibida.
 
 ## Priorización vigente
 
@@ -87,8 +84,9 @@ Los candidatos C02/C03/C04/C09 permanecen en expediente. C08 puede citarse como 
 - **C02:** cerrado salvo estructura histórica nueva.
 - **C03:** cerrado salvo estructura histórica nueva.
 - **C04:** cerrado salvo parse/comparación histórica nueva.
+- **C05:** cerrado salvo parse/comparación histórica nueva.
 - **C09:** cerrado salvo facsímil/grafemática.
 - **Siguiente prioridad documental:** Guadalaxara 1683.
-- **Siguiente prioridad analítica sin documentos bloqueados:** C05 o C06, sólo mediante prueba capaz de cambiar de nivel.
+- **Siguiente prioridad analítica sin documentos bloqueados:** C06, sólo mediante prueba capaz de cambiar de nivel y manteniendo separada continuidad cromática de segmentación colonial.
 
-No abrir búsquedas generales de sufijos, `e~i`, `neseme`, `chipérami`, `Rosácame/Rosácami`, `tschutschelíameke` ni nuevas cadenas OCR de Tellechea; sólo pruebas capaces de cambiar un grado, resolver estructura o falsar una hipótesis.
+No abrir búsquedas generales de sufijos, `e~i`, `l~r`, `neseme`, `chipérami`, `Rosácame/Rosácami`, `Siríame`, `tschutschelíameke` ni nuevas cadenas OCR de Tellechea; sólo pruebas capaces de cambiar un grado, resolver estructura o falsar una hipótesis.
