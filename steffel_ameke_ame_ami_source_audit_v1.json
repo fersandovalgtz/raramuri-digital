@@ -1,0 +1,85 @@
+{
+  "title": "Steffel -ameke/-ame/-ami source audit v1",
+  "date": "2026-08-14",
+  "status": "source-controlled research audit",
+  "primary_source": "Matthäus Steffel, Tarahumarisches Wörterbuch, 1809 scan/OCR supplied to the project",
+  "critical_control": "William L. Merrill et al., El Diccionario Tarahumara–Alemán de Matthäus Steffel, Universidad de Sonora, 2020",
+  "locator_method": {
+    "description": "Case-insensitive token sweep over the supplied OCR TXT. Tokens were continuous alphabetic strings; the counts are locators, not lexical or morphological counts.",
+    "ameke": {"token_occurrences": 228, "normalized_unique_strings": 193},
+    "ame": {"token_occurrences": 27, "normalized_unique_strings": 17},
+    "ami": {"token_occurrences": 22, "normalized_unique_strings": 8},
+    "warning": "OCR noise, German words, lexical homographs, split forms and duplicate dictionary sections make these counts unsuitable as lexical frequencies. Every linguistic claim requires source control."
+  },
+  "source_controlled_findings": {
+    "steffel_metalinguistic_statement": "Steffel explicitly describes ameke as the present active participial ending and states that speakers frequently omit/swallow final ke in pronunciation.",
+    "ameke_polyfunctionality": [
+      "adjective -> nominalizer",
+      "noun -> adjectivalizer",
+      "verb -> adjectivalizer/nominalizer [participial]",
+      "cardinal numeral -> ordinal"
+    ],
+    "historical_surface_ameke_ame_pairs": [
+      {"ameke": "rosácameke", "ame": "rosácame", "field": "white"},
+      {"ameke": "tschócameke", "ame": "tschócame", "field": "black"},
+      {"ameke": "pamaguéameke", "ame": "pamaguéame", "field": "green", "note": "Merrill explicitly notes the absence of final -ke in the appendix form"}
+    ],
+    "additional_attested_ame_forms_without_a_matched_ameke_pair_in_this_audit": [
+      "gueléame",
+      "tamatsíame"
+    ],
+    "historical_participial_ami_recovered": false,
+    "ami_negative_control": "Raw OCR strings ending in ami include lexical or otherwise unrelated forms such as Ami 'lose', pamí 'year' and guamí 'there'. No direct historical participial -ami token was recovered in the controlled Steffel sweep."
+  },
+  "li_ameke_substring_audit": [
+    {
+      "form": "tsanelíameke",
+      "grade": "D1",
+      "decision": "direct parse",
+      "analysis": "tsaní + applicative -e + passive -li + participial -ameke",
+      "independence": "benchmark historical construction"
+    },
+    {
+      "form": "galetsanelíameke",
+      "grade": "control",
+      "decision": "supports expected accent/shape of tsanelíameke but is not an independent second root",
+      "analysis": "contains the already controlled tsanelíameke family"
+    },
+    {
+      "form": "tschutschelíameke",
+      "grade": "D2",
+      "decision": "strong controlled structural analogue",
+      "analysis": "paradigm tschutschá 'ungir' / tschutschelíla 'unción' / tschutschelíameke 'ungido'; Merrill cross-references it directly in the explicit discussion of tsanelíameke",
+      "caution": "no morpheme-by-morpheme parse of tschutschelíameke was recovered"
+    },
+    {
+      "form": "ganelíameke",
+      "grade": "D3",
+      "decision": "unparsed candidate",
+      "analysis": "recurrent family with ganiléliki, ganiléruje and ganilíle",
+      "caution": "the internal status/function of li cannot be assigned from surface form"
+    },
+    {
+      "form": "uilíameke",
+      "grade": "negative control",
+      "decision": "exclude as evidence for internal -li + -ameke",
+      "analysis": "Merrill derives the adjective from the lexical verb uilí; li belongs to the root"
+    },
+    {
+      "form": "selíameke",
+      "grade": "negative control for substring segmentation",
+      "decision": "exclude as evidence for internal -li + -ameke",
+      "analysis": "Merrill explicitly derives selíameke from the verb selí 'govern'; the relevant structure is selí + -ameke"
+    }
+  ],
+  "adjudication": {
+    "historical_ameke_ame_variation": "strongly confirmed",
+    "universal_ameke_function": "rejected",
+    "historical_participial_ami": "not recovered",
+    "universal_ameke_to_ami_change": "not supported",
+    "historical_li_plus_ameke_bridge": "D1 confirmed by tsanelíameke; D2 independently strengthened by tschutschelíameke; no second full direct parse recovered",
+    "automatic_suffix_assignment": false
+  },
+  "next_step": "Search targeted historical and modern interlinear/grammatical sources for a second independent D1 parse of X-li-ame(ke); treat ganelíameke as a candidate for dedicated morphological analysis rather than promoting it from spelling alone.",
+  "human_reviewed_by_project": false
+}
