@@ -1,12 +1,13 @@
 {
-  "records": 829,
+  "records": 830,
   "graphic_relations": 602,
-  "inflection_relations": 225,
+  "inflection_relations": 226,
   "cross_references": 2,
   "explicit_graphic_relations": 54,
   "detected_graphic_relations": 548,
   "source_entries": 2581,
   "source_entries_with_variant_annotations": 221,
+  "source_label_policy": "Las etiquetas documentales se conservan literalmente en pattern; gut no se normaliza a fut. Los grupos con puntuación no canónica se reconocen sin asignar segmentos no etiquetados por inferencia.",
   "patterns": {
     "ba/hua": 27,
     "g/c": 11,
@@ -15,6 +16,6 @@
     "Otra relación explícita": 48,
     "r/l": 14
   },
-  "extraction_method": "Relaciones explícitas de lemas y variantes; comparación exhaustiva de lemas documentados para r/l, g/c, i/e, ba/hua y presencia/ausencia de consonante inicial",
+  "extraction_method": "Relaciones explícitas de lemas; parser robusto de etiquetas morfológicas documentales; comparación exhaustiva de lemas documentados para r/l, g/c, i/e, ba/hua y presencia/ausencia de consonante inicial",
   "validation_status": "Pendiente de cotejo lingüístico"
 }
