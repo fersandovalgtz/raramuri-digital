@@ -1,0 +1,138 @@
+{
+  "artifact": "tarahumaran_say_comparative_audit_v1",
+  "date": "2026-08-13",
+  "status": "comparative_research_audit_not_cognacy_adjudication",
+  "question": "What do Rarámuri historical/modern data and sister-language Warihó contribute to the history of the lexical domain 'say/speak/call', especially the comparison Steffel tsaní/¢aní ↔ modern ani-?",
+  "raramuri_historical": {
+    "source": "Merrill et al. 2020, analysis of Steffel",
+    "root": "tsaní",
+    "merrill_transcription": "¢aní",
+    "meanings": ["decir", "hablar", "platicar", "afirmar"],
+    "derived_form": {
+      "form": "tsanelíameke",
+      "analysis": "tsaní -> tsane- (APPL -e) -> tsane-li- (PASS -li) -> tsane-li-ameke (PTCP)",
+      "meaning": "afirmativo",
+      "explicit_analysis": true
+    },
+    "analytical_constraint": "Merrill treats tsaní as the verbal base/root for this derivation; do not resegment it from sister-language evidence without independent comparative proof."
+  },
+  "raramuri_modern": {
+    "choguita": {
+      "source": "Caballero 2022",
+      "form": "aˈni-bi",
+      "analysis": "say-IRR.PL",
+      "root": "ani-"
+    },
+    "munerachi": {
+      "source": "Moreno Pineda & Valenzuela Romo 2022",
+      "form": "ani-lí-ame",
+      "analysis": "decir-PSV-AGT / dicen-CE-NMZ",
+      "domain": "called/named",
+      "segmentation_explicit": true
+    }
+  },
+  "wariho_guarijio": {
+    "chihuahua_recent_field_data": {
+      "source": "Peregrina Llanes 2023",
+      "form": "cha-ni",
+      "analysis": "decir-APLL",
+      "sentence_translation": "La hija de Pedro le dijo eso"
+    },
+    "sonora_recent_field_data": {
+      "source": "Peregrina Llanes 2023",
+      "form": "che-cha-ni-wa",
+      "analysis": "RED-decir-APLL-PAS:HAB",
+      "sentence_translation": "La hija de Pedro le dijo eso"
+    },
+    "miller_narrative_control": {
+      "source": "Miller 1996 as reproduced by Cruz Fimbres & Peregrina Llanes 2022",
+      "form": "ce-rí=ra",
+      "analysis": "decir-PRT-RPT",
+      "translation": "Ella dijo"
+    },
+    "miller_applicative_indexed_form": {
+      "source": "Miller 1996 indexed/snippet evidence",
+      "form": "ca-né-ri=ra",
+      "analysis": "decir-APL-pasado=RPT",
+      "note": "Useful as a bibliographic/form control; exact page context should be recovered before using it in a formal reconstruction."
+    },
+    "comparative_signal": "Warihó preserves a say-family with an initial coronal/sibilant-affricate-like segment and, in applicative forms, a following nasal element -ni/-ne. It does not simply provide an ani- cognate."
+  },
+  "broader_uto_aztecan_control": {
+    "source": "Merrill 2013, The Genetic Unity of Southern Uto-Aztecan",
+    "accepted_specific_proto_tarahumaran_tsani_ani_reconstruction_found": false,
+    "older_pua_proposal_reviewed": "Whorf & Trager proposed PUA **lăwa ~ **lĕw 'speak, say', but Merrill notes that only Hopi supplies the initial l- evidence in that set and does not use it to reconstruct the Rarámuri/Warihó forms under study.",
+    "merrill_appendix_observation": "Merrill calls it suggestive that /t/ is the initial consonant of words meaning 'to say', 'to talk', or 'mouth' in languages in all UA subfamilies.",
+    "interpretive_limit": "This is an observation about a cross-family phonological-semantic tendency, not a reconstructed etymon for Rarámuri tsaní or ani-."
+  },
+  "competing_historical_scenarios": [
+    {
+      "id": "S1_INITIAL_LOSS",
+      "scenario": "historical ¢aní/tsaní > modern ani- through initial affricate loss",
+      "status": "plausible_not_demonstrated",
+      "support": [
+        "Rarámuri independently lost initial consonants/syllables between the Steffel period and modern varieties.",
+        "After loss of the initial historical affricate, the remaining form closely matches ani-."
+      ],
+      "problems": [
+        "No independent series of initial historical [¢]/<ts> > zero has yet been established.",
+        "Warihó retains consonant-initial say roots rather than an ani- cognate."
+      ]
+    },
+    {
+      "id": "S2_MORPHOLOGICAL_RESTRUCTURING",
+      "scenario": "historical and/or Proto-Tarahumaran say forms involved a consonant-initial verbal base plus nasal/applicative material, with later reanalysis or restructuring in Rarámuri",
+      "status": "new_comparative_hypothesis_low_to_moderate_confidence",
+      "support": [
+        "Warihó directly has cha-ni 'say-APLL' and indexed ca-né- forms.",
+        "Historical Rarámuri tsaní is formally suggestive in the same broad consonant+nV zone."
+      ],
+      "problems": [
+        "Merrill explicitly treats tsaní as the base/root and derives tsane- with a distinct applicative -e.",
+        "No regular Rarámuri-Warihó sound/morpheme correspondence has yet been demonstrated for this comparison."
+      ]
+    },
+    {
+      "id": "S3_LEXICAL_REPLACEMENT_OR_COMPETITION",
+      "scenario": "historical tsaní and modern ani- belong to distinct or partially competing lexical histories in the semantic field 'say/speak/call'",
+      "status": "retained_control_hypothesis",
+      "support": [
+        "The semantic field has multiple say-roots across Uto-Aztecan/Taracahitan evidence.",
+        "No accepted reconstruction currently links the target forms."
+      ],
+      "problems": [
+        "The historical-modern semantic and derived-morphology match is unusually close and would require explanation if entirely unrelated."
+      ]
+    }
+  ],
+  "assessment": {
+    "semantic_correspondence_historical_raramuri_to_modern_raramuri": "very_high",
+    "morphological_architecture_correspondence": "very_high",
+    "sister_language_support_for_consonant_initial_say_family": "high",
+    "sister_language_support_for_simple_tsani_to_ani_loss": "low_to_neutral",
+    "specific_sound_correspondence": "unresolved",
+    "proto_tarahumaran_reconstruction": "not_found_in_audited_primary_comparative_sources",
+    "cognacy_judgment": "not_performed",
+    "preferred_current_position": "Maintain tsaní~ani as a very-high-priority continuity candidate, but suspend any single-mechanism explanation. Initial loss, morphological restructuring, and lexical competition must remain separately testable."
+  },
+  "prohibited_inferences": [
+    "Do not resegment historical tsaní as tsa-ni merely because Warihó has cha-ni.",
+    "Do not state that Warihó cha-/ce- is cognate with Rarámuri tsaní without regular correspondences.",
+    "Do not state that modern ani- derives from historical tsaní solely by affricate deletion.",
+    "Do not treat Merrill's broad /t/ observation as a Proto-Tarahumaran reconstruction.",
+    "Do not use Google Books snippet segmentation as equivalent to a full primary-text parse; recover the page before strong claims."
+  ],
+  "next_tests": [
+    "Recover the relevant Miller 1996 pages for ce-ri and ca-ne-ri and model the Warihó allomorphy directly.",
+    "Search Guadalaxara 1683/2010 edition for say/speak forms and applicative paradigms.",
+    "Search primary comparative Tarahumaran work for reconstructed say roots and regular Rarámuri-Warihó correspondences.",
+    "Search Steffel for other <ts>/<tsch>-initial roots with secure Warihó cognates to test the historical correspondence independently."
+  ],
+  "epistemic_flags": {
+    "ai_assisted": true,
+    "human_reviewed": false,
+    "community_validated": false,
+    "automatic_cognacy": false,
+    "automatic_morpheme_resegmentation": false
+  }
+}
