@@ -1,0 +1,60 @@
+{
+  "schema_version":"1.5",
+  "date":"2026-08-14",
+  "project":"Rarámuri Histórico Digital",
+  "canonical_assessment":"AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md",
+  "matrix_document":"EVIDENCE_MASTER_MATRIX_V6.md",
+  "supersedes":"data/research/evidence_master_matrix_v5.json",
+  "candidates":[
+    {"id":"C01","tier":"A","status":"unchanged"},
+    {"id":"C02","tier":"B","strength_note":"B+_strong","status":"preserved_from_v5"},
+    {
+      "id":"C03",
+      "tier":"B",
+      "strength_note":"B+_exceptional_near_A",
+      "candidate":"Rosácameke ~ rosácame ↔ Rosácame / Rosácami",
+      "historical_support":[
+        "Steffel/Merrill Rosácameke 'blanco'",
+        "Steffel/Merrill rosácame 'blancos' in Pú kauguála rosácame húcu",
+        "Merrill transcription rosácame || rosákame ~ rozákame",
+        "Merrill transcription rosácameke || rosákameke ~ rozákameke",
+        "Tellechea 1826 rosacame in context translated 'su carne muy blanca'"
+      ],
+      "modern_support":[
+        "INAH Calí Rosácame = La casa blanca",
+        "INPI Rosácami = Blanco",
+        "SRC-02 Rosacami = Blanco",
+        "Márquez ros/-tos = ser blanco",
+        "Márquez ros-ka-me, ros-na-me = blanco"
+      ],
+      "historical_long_short_pair":"direct",
+      "tellechea_intermediate_rosacame":true,
+      "modern_rosacame":true,
+      "modern_rosacami":true,
+      "modern_root_ros_explicit":true,
+      "modern_ros_ka_me_parse_explicit":true,
+      "e_i_required_for_lexical_continuity":false,
+      "historical_token_specific_parse":"not_recovered",
+      "historical_base":"not_recovered",
+      "historical_ka_identity":"not_demonstrated",
+      "remaining_A_requirement":"historical base/paradigm or token-specific historical parse/comparative structural identification"
+    },
+    {"id":"C04","tier":"B","strength_note":"B+_exceptional_near_A","status":"preserved_from_v5"},
+    {"id":"C05","tier":"C","status":"unchanged"},
+    {"id":"C06","tier":"C","status":"unchanged"},
+    {"id":"C07","tier":"A","status":"unchanged"},
+    {"id":"C08","tier":"B","status":"unchanged"},
+    {"id":"C09","tier":"B","strength_note":"strong_plus_ocr_pending_facsimile","status":"preserved_from_v5"}
+  ],
+  "negative_controls":["N01","N02","N03","N04","N05","N06","N07","N08","N09"],
+  "N09":"Modern ros-ka-me parse does not authorize retrospective segmentation of historical rosácameke/rosácame with autonomous -ka.",
+  "global_constraints":[
+    "No universal -ameke > -ami law.",
+    "No universal e > i law.",
+    "Modern Rosácame continuity means C03 does not require e > i for lexical continuity.",
+    "No retrospective projection of modern ros-ka-me segmentation into historical tokens without source control.",
+    "No promotion of C02/C04 without their remaining structural controls.",
+    "No promotion of C09 OCR families to facsimile-direct evidence."
+  ],
+  "next_source_test":"Move to another candidate that can change tier. Reopen C03 only for historical base/paradigm, historical token-specific parse, or explicit historical-modern structural comparison."
+}
