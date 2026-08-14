@@ -8,6 +8,7 @@ const csvPath = resolve(projectRoot, "data/graphic-variants.csv");
 const reportPath = resolve(projectRoot, "data/graphic-variants-report.json");
 
 const entries = JSON.parse(await readFile(sourcePath, "utf8"));
+const KNOWN_LABEL_PATTERN = /\b(pret|fut|pp|pl|sing|pres|ad|gut)\.?\s*:/giu;
 
 function normalize(value) {
   return value
@@ -29,6 +30,26 @@ function splitHeadword(value) {
 
 function splitForms(value) {
   return value.split(/\s*,\s*/u).map((item) => item.trim()).filter(Boolean);
+}
+
+function robustKnownLabelGroups(value) {
+  const text = String(value ?? "").trim();
+  const matches = [...text.matchAll(KNOWN_LABEL_PATTERN)];
+  return matches.map((match, index) => {
+    const start = match.index + match[0].length;
+    const end = index + 1 < matches.length ? matches[index + 1].index : text.length;
+    const between = text.slice(start, end).replace(/^[\s,;:]+|[\s,;:]+$/gu, "");
+    // If an unlabeled semicolon segment intervenes, only the first segment is
+    // assigned to the explicit label. The remainder stays documentary evidence
+    // and is not classified by inference.
+    const firstSegment = between.split(/\s*;\s*/u)[0] ?? "";
+    return {
+      label: match[1].trim().toLocaleLowerCase("es"),
+      forms: splitForms(firstSegment),
+      raw_value: between,
+      contains_unlabeled_semicolon_segment: /;/u.test(between),
+    };
+  });
 }
 
 function patternFor(left, right) {
@@ -109,23 +130,20 @@ for (const entry of entries) {
       addRelation({
         variant_id: "", form_a: headwordForms[0], form_b: target,
         form_a_normalized: normalize(headwordForms[0]), form_b_normalized: normalize(target),
-        pattern: "Remisión", relation_type: "Remisión", derivation_method: "Explícita en variantes",
+        pattern: "Remisión", relation_type: "Remisión", derivation_method: "Explícita en variants (compatibilidad 1.0.0)",
         entry_id: entry.record_id, entry_ids: [entry.record_id], related_entry_id: "",
         evidence: rawVariant, classification: entry.classification, ...sourceFields(entry),
       });
       continue;
     }
-    if (!rawVariant.includes(":")) continue;
-    for (const segment of rawVariant.split(/\s*;\s*/u)) {
-      const match = /^([^:]+):\s*(.+)$/u.exec(segment.trim());
-      if (!match) continue;
-      const label = match[1].trim().replace(/\.$/u, "").toLocaleLowerCase("es");
-      for (const form of splitForms(match[2])) {
+
+    for (const group of robustKnownLabelGroups(rawVariant)) {
+      for (const form of group.forms) {
         addRelation({
           variant_id: "", form_a: headwordForms[0], form_b: form,
           form_a_normalized: normalize(headwordForms[0]), form_b_normalized: normalize(form),
-          pattern: label === "gut" ? "fut" : label,
-          relation_type: "Flexión", derivation_method: "Etiqueta morfológica explícita",
+          pattern: group.label,
+          relation_type: "Flexión", derivation_method: "Etiqueta morfológica explícita; parser robusto",
           entry_id: entry.record_id, entry_ids: [entry.record_id], related_entry_id: "",
           evidence: rawVariant, classification: entry.classification, ...sourceFields(entry),
         });
@@ -189,8 +207,9 @@ const report = {
   detected_graphic_relations: graphicRelations.filter((relation) => relation.derivation_method.startsWith("Comparación automática")).length,
   source_entries: entries.length,
   source_entries_with_variant_annotations: entries.filter((entry) => entry.variants?.length).length,
+  source_label_policy: "Las etiquetas documentales se conservan literalmente en pattern; gut no se normaliza a fut. Los grupos con puntuación no canónica se reconocen sin asignar segmentos no etiquetados por inferencia.",
   patterns,
-  extraction_method: "Relaciones explícitas de lemas y variantes; comparación exhaustiva de lemas documentados para r/l, g/c, i/e, ba/hua y presencia/ausencia de consonante inicial",
+  extraction_method: "Relaciones explícitas de lemas; parser robusto de etiquetas morfológicas documentales; comparación exhaustiva de lemas documentados para r/l, g/c, i/e, ba/hua y presencia/ausencia de consonante inicial",
   validation_status: "Pendiente de cotejo lingüístico",
 };
 
