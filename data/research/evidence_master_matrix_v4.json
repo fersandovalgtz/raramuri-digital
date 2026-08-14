@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.3",
+  "date": "2026-08-14",
+  "project": "Rarámuri Histórico Digital",
+  "canonical_assessment": "AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md",
+  "matrix_document": "EVIDENCE_MASTER_MATRIX_V4.md",
+  "focused_audit": "C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md",
+  "supersedes": "data/research/evidence_master_matrix_v3.json",
+  "candidates": [
+    {"id":"C01","tier":"A","status":"unchanged"},
+    {"id":"C02","tier":"B","status":"unchanged"},
+    {"id":"C03","tier":"B","status":"unchanged"},
+    {
+      "id":"C04",
+      "tier":"B",
+      "strength_note":"B+_exceptional_near_A",
+      "candidate":"Nessé → Nesséameke ↔ nes-/Neseme ↔ Nisé → Niséami",
+      "modern_nes_family_direct":true,
+      "nesame_participial_agentive_membership":"high_confidence_source_internal",
+      "nesema_nesame_pattern_non_ad_hoc":true,
+      "independent_Xema_Xame_controls":[
+        "benema~bename",
+        "natogema~natogame",
+        "ne’ogema~ne’ogame",
+        "nichugema~nichugame",
+        "semema~semame"
+      ],
+      "token_specific_nesame_parse":"not_recovered",
+      "historical_modern_cognacy":"not_demonstrated",
+      "remaining_A_requirement":"token-specific published parse/paradigm of nesame/neseme OR direct published identification Nessé~nes-/Nisé"
+    },
+    {"id":"C05","tier":"C","status":"unchanged"},
+    {"id":"C06","tier":"C","status":"unchanged"},
+    {"id":"C07","tier":"A","status":"unchanged"},
+    {"id":"C08","tier":"B","status":"unchanged"},
+    {"id":"C09","tier":"B","strength_note":"strong_pending_facsimile","status":"unchanged"}
+  ],
+  "negative_controls":["N01","N02","N03","N04","N05","N06"],
+  "interpretive_rule":"High-confidence source-internal morphological pattern does not equal a token-specific published parse.",
+  "next_source_test":"Only token-specific nesame/neseme paradigm/parse or direct historical Nessé~nes-/Nisé identification can reopen tier promotion."
+}
