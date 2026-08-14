@@ -22,7 +22,7 @@
 | `translation_raw` | string | 1 | Traducción conservada; puede estar vacía cuando falta en la fuente |
 | `senses` | string[] | 0..n | Acepciones españolas en orden documental |
 | `examples` | string[] | 0..n | Ejemplos conservados en orden documental |
-| `variants` | string[] | 0..n | Variantes o formas etiquetadas explícitamente |
+| `variants` | string[] | 0..n | Variantes o formas etiquetadas explícitamente; puede incluir formas secundarias ya visibles en `headword` |
 | `comments_raw` | string | 1 | Texto residual o contexto documental |
 | `source_code` | string | 1 | Llave a catálogo de fuentes |
 | `source_document` | string | 1 | Nombre controlado del documento |
@@ -39,6 +39,22 @@ Estados principales:
 - Publicación: `Autorizada para difusión`.
 - Validación lingüística: `Pendiente de validación lingüística`.
 - Transcripción actual: `Transcrito`.
+
+## Representación dual de formas secundarias del lema
+
+En datos `1.0.0`, cuando la celda fuente contiene varias formas separadas por coma, el extractor conserva la cadena completa en `headword`/`headword_raw` y además copia las formas posteriores a la primera dentro de `variants`. Es una **representación dual deliberada**, no una doble attestación.
+
+La auditoría del 14 de agosto de 2026 identificó 52 entradas multiformes y 54 formas secundarias. Las 54 aparecen también en `variants` y corresponden exactamente, una a una, a las 54 relaciones `Gráfica` con método `Explícita en el lema` generadas por `scripts/extract-graphic-variants.mjs`.
+
+Reglas de consumo:
+
+- `headword_raw` conserva la evidencia documental y nunca se reescribe para eliminar la forma secundaria;
+- `headword` conserva la presentación vigente del lema;
+- `variants` permite consultar estructuradamente las formas secundarias y otras anotaciones extraídas;
+- una misma forma reflejada en `headword`, `variants` y un producto derivado de variantes gráficas cuenta como **una sola evidencia documental**;
+- los consumidores analíticos no deben sumar esas representaciones como attestaciones independientes.
+
+Una revisión futura del esquema podrá tipar la procedencia de cada variante —por ejemplo `headword_secondary`, `bracket_annotation` o `cross_reference`— conservando compatibilidad con `variants` y sin perder las cadenas fuente ni los identificadores persistentes. La auditoría completa está documentada en `HEADWORD_VARIANT_DUAL_REPRESENTATION_AUDIT_V1.md` y `data/headword-variant-dual-representation.json`.
 
 ## Relaciones
 
@@ -90,5 +106,4 @@ Toda unidad derivada debe conservar, directamente o mediante `entry_id`/`entity_
 
 ## English summary
 
-The canonical entity is a lexicographic entry with a persistent `RD-######` identifier. Source and normalized forms are kept separately. Every derived record must preserve a link to the canonical entry or entity, product identifier, source, page, derivation method and validation status. Documentary forms are never silently overwritten by normalized or inferred forms.
-
+The canonical entity is a lexicographic entry with a persistent `RD-######` identifier. Source and normalized forms are kept separately. Secondary headword forms may also be mirrored in `variants`; this is a deliberate denormalized representation of the same documentary evidence and must not be counted twice. Every derived record must preserve a link to the canonical entry or entity, product identifier, source, page, derivation method and validation status. Documentary forms are never silently overwritten by normalized or inferred forms.
