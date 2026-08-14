@@ -2,116 +2,60 @@
 
 **Corte:** 2026-08-14  
 **Síntesis general vigente:** [`AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md`](AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md)  
-**Matriz vigente:** [`EVIDENCE_MASTER_MATRIX_V5.md`](EVIDENCE_MASTER_MATRIX_V5.md)  
-**Auditoría focal C02:** [`C02_CHIPER_DIACHRONIC_BRIDGE_V1.md`](C02_CHIPER_DIACHRONIC_BRIDGE_V1.md)  
-**Auditoría focal C04:** [`C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md`](C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md)  
-**Auditoría focal C09:** [`TELLECHEA_1826_SHORT_AME_TARGETED_AUDIT_V5.md`](TELLECHEA_1826_SHORT_AME_TARGETED_AUDIT_V5.md)
+**Matriz vigente:** [`EVIDENCE_MASTER_MATRIX_V6.md`](EVIDENCE_MASTER_MATRIX_V6.md)  
+**Auditorías focales:** C02 `C02_CHIPER_DIACHRONIC_BRIDGE_V1.md`; C03 `C03_ROSA_WHITE_DIACHRONIC_BRIDGE_V1.md`; C04 `C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md`; C09 `TELLECHEA_1826_SHORT_AME_TARGETED_AUDIT_V5.md`.
 
 ## Estado general
 
-La evidencia sostiene con **alta confianza** la profundidad histórica de un dominio participial/derivacional centrado en `*-ame` y la existencia de reducción/variación de material periférico en fuentes históricas. Steffel documenta directamente `-ameke ~ -ame` y pérdida frecuente de `ke`. Tellechea 1826 aporta familias participiales/adjetivales de distinta extensión, pero su pérdida de `que/ca` en pretéritos no se usa como mecanismo directo de esas alternancias participiales.
+La evidencia sostiene con **alta confianza** la profundidad histórica del dominio participial/derivacional `*-ame`. Steffel documenta directamente `-ameke ~ -ame` y pérdida frecuente de `ke`; Tellechea aporta redes de extensión variable, pero su pérdida de `que/ca` en pretéritos no se transfiere automáticamente a participios. El moderno conserva `-ame` y realizaciones regionales `-ame/-me/-mi`. No está demostrada una ley universal `-ameke > -ami`.
 
-El rarámuri moderno conserva `-ame` participial y presenta realizaciones regionales `-ame/-me/-mi`. No está demostrada una ley universal `-ameke > -ami`, ni una cadena lineal única para todas las formas históricas.
+## C02 · `čipérameke ↔ Chipérami`
 
-## Hipótesis y grados vigentes
+**B formal; B+ fuerte.** La transcripción histórica publicada `čipérameke`, la semántica ‘fino/delgado/llano’ y el moderno `chipérami` ‘plano’ están muy alineados. Falta base/paradigma o parse histórico token-específico.
 
-| ID | Hipótesis / afirmación | Estado | Restricción vigente |
-|---|---|---|---|
-| H1 | `*-ame` posee profundidad protohistórica y función participial/nominalizadora | **Alta confianza** | la función de cada token histórico debe demostrarse individualmente |
-| H2 | Steffel documenta alternancia histórica `-ameke ~ -ame` | **Directamente demostrada** | no todo `-ame` histórico deriva necesariamente de `-ameke` |
-| H3 | Existió reducción/truncación histórica de material periférico | **Alta confianza** | Steffel aporta el mecanismo participial directo; Tellechea aporta contexto general y variación interna |
-| H4 | Tellechea muestra extensiones variables dentro de una misma raíz | **Fuerte+, pendiente de cotejo facsimilar** | cinco familias fuertes por OCR/contexto, una probable y una candidata con largo corrupto |
-| H5 | `-ame ~ -ami` / `-ame ~ -me` existe como variación moderna regional | **Apoyada** | no equivale a demostrar un cambio histórico universal |
-| H6 | Ley universal `-ameke > -ami` | **No demostrada / no usar** | separar variación moderna de reconstrucción diacrónica |
-| H7 | Construcción histórica `li + ameke` | **Un D1 histórico + un D2 fuerte** | no segmentar `li` superficial automáticamente |
-| H8 | Continuidad moderna `li + ame` | **Alta confianza construccional** | continuidad construccional no implica cognación de cada raíz |
-| H9 | Puente cromático histórico–moderno | **Fuerte formal/semánticamente; segmentación abierta** | no proyectar automáticamente `-ka` moderno al siglo XVII |
-| H10 | `<c>/<k>/<que>/<ke>` = mismo morfema final | **No demostrada / prohibida como atajo** | requiere control grafemático y facsimilar |
-| H11 | `e/é ~ i/í` es una alternancia históricamente posible | **Directamente documentada** | no implica ley `e > i` ni cognación automática |
-| H12 | Existe una familia moderna `nes-` de cuidado/pastoreo con vocal `e` | **Directamente documentada** | la relación histórica con `Nessé` permanece abierta |
-| H13 | `nesame` pertenece al patrón participial/agentivo moderno de la familia `nes-` | **Alta confianza interna de fuente** | no equivale a un parse impreso morfema por morfema |
-| H14 | `čipérameke ↔ chipérami` muestra continuidad formal-semántica muy fuerte | **B+ fuerte** | falta base/paradigma o parse histórico token-específico; no equivale a cognación demostrada |
+## C03 · `Rosácameke ~ rosácame ↔ Rosácame / Rosácami`
 
-## C02 · `Tschipérameke / čipérameke ↔ Chipérami`
+**B formal; B+ excepcional / cercano a A.**
 
-**Nivel formal: B. Fuerza interna: B+ fuerte.**
+La edición crítica de Merrill documenta `Rosácameke` = ‘blanco’ y `rosácame` = ‘blancos’ dentro de la oración `Pú kauguála rosácame húcu`, traducida ‘Sus huevos son blancos’. La propia edición transcribe `rosácame || rosákame ~ rozákame` y `rosácameke || rosákameke ~ rozákameke`.
 
-La edición crítica de Merrill et al. 2020 conserva `Tschipérameke` con los valores ‘fino, delgado, llano’ y proporciona directamente la transcripción `tschipérameke || čipérameke`. Steffel usa además la forma en `Guenomí tschipérameke`, traducida como ‘un metal delgado’.
+Tellechea 1826 aporta `rosacame` en un pasaje cuyo paralelo español dice ‘su carne muy blanca’, estableciendo un testigo intermedio.
 
-El extremo moderno está documentado por el borrador actualizado de Samachique: `chipérami adj. plano` y `walú chipérami` ‘como una tabla ancha’. SRC-02 registra `Chipérami` ‘Plano’ como Pp. *Cazador de palabras rarámuri* aporta uso discursivo `chiperami` en una adivinanza cuya versión española alude a una tablilla.
+El moderno conserva directamente `Rosácame`: INAH traduce `Calí Rosácame` como ‘La casa blanca’. INPI y SRC-02 registran también `Rosácami` = ‘Blanco’. Por ello, la continuidad léxica de C03 **ya no depende de demostrar un cambio histórico `e > i`**: la forma con `e` continúa en el presente y `Rosácami` puede estudiarse como variante moderna adicional.
 
-La correspondencia histórica `čipér-` ↔ moderna `chipér-` es, por tanto, **formalmente muy fuerte** una vez aplicada la transcripción publicada de `<tsch>`, y la continuidad semántica ‘fino/delgado/llano/plano’ es igualmente fuerte.
+Márquez 1999 declara además `ros/-tos` = ‘ser blanco’ y analiza `ros-ka-me`, `ros-na-me` = ‘blanco’; la misma gramática incluye `-me/-mi` en el dominio adjetival/participial.
 
-C02 no sube a A porque no se recuperó una base histórica independiente `čiper-`, un paradigma histórico ni un parse publicado del token exacto `čipérameke`; tampoco una fuente que declare directamente la cognación. La fuerza formal-semántica no autoriza una ley universal `-ameke > -ami`.
+Lo que permanece abierto es exclusivamente estructural/histórico: no se recuperó una base histórica `ros-` aislada ni un parse token-específico de `rosácameke/rosácame`; el `-ka` moderno no se proyecta retrospectivamente a Steffel. C03 no sube a A.
 
 ## C04 · `Nessé/Nesséameke ↔ nes-/Neseme ↔ Nisé/Niséami`
 
-**Nivel formal: B. Fuerza interna: B+ excepcional / cercano a A.**
-
-La cadena contiene histórico `Nessé/Nesséameke`, la especialización `pouguá nesséameke` ‘pastor de ovejas’, la familia moderna `nesema/nesame/neser...`, `Neseme` Baja/Western y `Nisé/Niséami/nise’ami` en otras fuentes modernas.
-
-El control morfológico v3 recupera cinco pares internos comparables `Xema ~ Xame`: `benema ~ bename`, `natogema ~ natogame`, `ne’ogema ~ ne’ogame`, `nichugema ~ nichugame` y `semema ~ semame`. Combinados con las reglas gramaticales de la misma fuente, permiten tratar la pertenencia de `nesame` al patrón participial/agentivo de `nes-` como **alta confianza interna de fuente**.
-
-Sigue sin recuperarse un parse token-específico ni una fuente que declare directamente `Nessé ~ nes-/Nisé`; C04 no se promueve a A.
+**B formal; B+ excepcional / cercano a A.** Cinco controles internos `Xema ~ Xame` y las reglas de Márquez permiten tratar `nesame` como miembro participial/agentivo de `nes-` con alta confianza interna. Falta parse token-específico o identificación histórica directa `Nessé ~ nes-/Nisé`.
 
 ## C09 · Tellechea
 
-**Nivel formal: B fuerte+, pendiente de facsímil.**
-
-La auditoría v4 estableció un inventario limpio de 24 ocurrencias crudas en `-amec/-ameque`. La auditoría dirigida v5 revisó 168 ocurrencias crudas / 111 cadenas distintas en `-ame/-áme`, sólo alrededor de raíces justificadas o paralelos bilingües con función participial.
-
-### Cinco redes largas/breves fuertes por OCR + paralelo
-
-- `ati-`: `atígameque ~ atígame/atigame`.
-- `simi-`: `simiámec ~ simíame`.
-- `machi-`: `machiámec ~ machiámeque ~ machíameque ~ machíame`.
-- `netetu-`: `netetugameque ~ netétugame`.
-- `rejoíruga-`: `rejoírugameque ~ rejoírugame/rejóirugame`.
-
-### Una familia probable
-
-- `ayorigu-`: `ayoriguámeque ~ ayoriguáme`; el límite exige facsímil.
-
-### Un candidato con forma larga OCR corrupta
-
-- `yumága-`: largo OCR `yumctvameque`; no se reconstruye como `yumágameque` sin facsímil.
-
-### Dos falsos pares eliminados
-
-- `gayénameque ~ gayéname`: falso por salto de línea.
-- `natámeque ~ natáme`: falso; `natáme` continúa como `natámera`.
-
-C09 no sube a A: las grafías y límites que sostienen la comparación deben comprobarse diplomáticamente en facsímil. La búsqueda OCR general queda cerrada.
+**B fuerte+ OCR, pendiente de facsímil.** Cinco redes fuertes: `ati-`, `simi-`, `machi-`, `netetu-`, `rejoíruga-`; `ayorigu-` probable. El frente OCR queda cerrado y sólo debe reabrirse con facsímil/grafemática.
 
 ## Controles negativos vigentes
 
-- `ganelíameke`, `uilíameke`, `selíameke`: no usar como D1 automáticos de pasivo `li + ameke`.
-- todo final `-ami` ≠ participio.
-- `e~i/é~í` documentado ≠ cognación automática.
-- varias atestiguaciones ≠ varias fuentes independientes.
-- patrón morfológico interno de alta confianza ≠ parse token-específico publicado.
-- correspondencia formal-semántica muy fuerte ≠ cognación o parse histórico demostrado.
-- `gayéname` de Tellechea ≠ forma breve.
-- `natáme` de Tellechea ≠ forma breve.
-- frecuencia OCR de `-ame/-ameque` ≠ frecuencia morfológica sin clasificación contextual.
+- final `-ami` ≠ participio automático;
+- `e~i/é~í` documentado ≠ cognación ni ley universal;
+- replicación documental ≠ independencia de fuente;
+- patrón moderno de alta confianza ≠ parse histórico impreso;
+- `gayéname` y `natáme` de Tellechea son falsos breves por salto de línea;
+- **N09:** el parse moderno `ros-ka-me` no autoriza a segmentar retrospectivamente `rosácameke/rosácame` con un `-ka` histórico autónomo.
 
 ## Afirmaciones prohibidas
 
 No formular como conclusión:
 
 - `-ameke > -ami` como ley universal;
-- `e > i` / `é > í` como ley histórica universal;
-- `čipérameke = čipér- + -ameke` como parse publicado mientras no aparezca análisis token-específico;
-- cognación automática `čipérameke ~ chipérami` por similitud, aunque el candidato sea muy fuerte;
-- `nesame = nes + -ame` como parse publicado mientras no aparezca una fuente token-específica;
-- cognación automática `Nessé ~ nes-/Nisé`;
-- independencia automática de documentos de una misma tradición editorial;
-- `-li-ameke > -li-ame` como cambio automático;
-- `li` superficial = pasivo histórico `-li`;
-- `<c>`, `<k>`, `<que>`, `<ke>` = un mismo morfema sin control;
-- promover las redes OCR de Tellechea como evidencia facsimilar directa;
-- reconstruir `yumctvameque` como `yumágameque` sin lectura visual.
+- `e > i` como ley histórica universal;
+- `rosácameke = ros-ka-me-ke` como parse histórico publicado;
+- identidad histórica automática del `-ka` moderno;
+- cognación automática por parecido formal-semántico;
+- equivalencia automática de `<c>/<k>/<que>/<ke>`;
+- promoción de redes OCR a evidencia facsimilar directa.
 
 ## Estado de publicación científica
 
-El modelo general de v18 no requiere una v19. C02 se incorpora ahora como **B+ fuerte** con raíz y semántica prácticamente alineadas, pero con estructura histórica aún abierta. C04 continúa como B+ excepcional, con morfología moderna de alta confianza interna. C09 continúa B fuerte+ y queda cerrado para más acumulación OCR. El siguiente trabajo debe dirigirse a otro candidato que pueda cambiar de nivel o esperar las fuentes/facsímiles que desbloquean estos tres frentes.
+El modelo general v18 no cambia. C03 se convierte en otro **B+ excepcional**, con continuidad léxico-semántica y documental muy densa y con las objeciones antiguas `e/i` y ‘estatuto moderno’ sustancialmente resueltas. Su último cuello de botella es histórico-estructural, no léxico. C02, C03, C04 y C09 deben considerarse cerrados para acumulación genérica; el siguiente trabajo debe dirigirse a otro candidato capaz de cambiar de nivel.
