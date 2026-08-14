@@ -1,0 +1,83 @@
+{
+  "artifact": "western_liame_ju_construction_v1",
+  "date": "2026-08-13",
+  "status": "research_audit_not_community_validation",
+  "question": "Is Western/Baja newálime jú an isolated lexical form, or part of a recurrent constructional pattern ...li(a)me + ju across time and lexical roots?",
+  "attested_series": [
+    {
+      "year": 1972,
+      "variety": "Western/Bacusínare",
+      "form_in_title": "nehualíame ju",
+      "full_title": "hue'cá e'carúgame nehualíame ju imé",
+      "author": "Albino Mares Trías",
+      "source": "El Colegio de México, object 5h73pz113 / handle COLMEX/10016774",
+      "alternate_spanish_title": "Hacemos muchas cosas con el mezcal",
+      "word_level_gloss_confirmed": false
+    },
+    {
+      "year": 1974,
+      "variety": "Western/Bacusínare",
+      "form_in_title": "me'líame ju",
+      "full_title": "Regá me'líame ju ye ajágame",
+      "author": "Albino Mares Trías",
+      "source": "El Colegio de México / bibliographic controls",
+      "alternate_spanish_title": "Cómo cazamos y pescamos",
+      "word_level_gloss_confirmed": false
+    },
+    {
+      "year": 2010,
+      "variety": "Western/Lowland",
+      "form_in_title": "newalime ju",
+      "full_title": "Sunute we’ká e’karúgame newalime ju",
+      "authors": "Don Burgess and Albino Mares Trías",
+      "alternate_spanish_title": "Con el maíz se pueden hacer muchas cosas",
+      "word_level_gloss_confirmed": false
+    },
+    {
+      "year": 2019,
+      "variety": "Oeste",
+      "form": "newálime jú",
+      "source": "Manual Ralámuli Escrito para Todas y Todos",
+      "spanish_context": "¿Qué fiesta hacen aquí? / ¿Para qué hacen la fiesta?",
+      "word_level_semantic_domain": "hacer",
+      "source_internal_segmentation": false
+    }
+  ],
+  "independent_lexical_controls": {
+    "newa_family": [
+      "newá-/neˈwa-/niwa- independently means 'make/do' across varieties",
+      "Norogachi newá-li = make-PFV and newá-ami = make-NMLZ",
+      "Western TAC distinguishes finite newale, descriptive newame, and newalime"
+    ],
+    "mea_family": [
+      "Compendio 1997: me'á 'mata' + -ame = me'áme 'matón' in Baja/Baja-TB/Cumbre/Sur-B",
+      "Western TAC directly attests finite me'ale in contexts of killing and multiple me'li- forms",
+      "1974 me'líame is therefore a high-priority candidate for a root-related complex, but its exact segmentation is not established"
+    ]
+  },
+  "constructional_assessment": {
+    "surface_pattern": "...li(a)me + ju",
+    "repeated_in_western_baja_tradition": true,
+    "minimum_distinct_lexical_families": 2,
+    "documented_span_years": 47,
+    "newalime_isolated_lexicalization_hypothesis": "weakened",
+    "productive_or_recurrent_template_hypothesis": "substantially_strengthened",
+    "exact_morphological_analysis_proven": false,
+    "historical_continuity_of_each_morpheme_proven": false
+  },
+  "epistemic_flags": {
+    "title_level_alignment_only_for_1972_1974_2010": true,
+    "word_level_gloss_for_meliame": false,
+    "meliame_equals_mea_li_ame": "hypothesis_not_adjudicated",
+    "newalime_equals_newa_li_me": "preferred_working_hypothesis_not_authoritative_western_segmentation",
+    "constructional_surface_continuity": "high_confidence",
+    "human_reviewed": false,
+    "ai_assisted": true
+  },
+  "next_tests": [
+    "Recover full 1974 Bacusínare text and build a concordance for me'á/me'li/me'líame forms.",
+    "Search Western grammar/dictionary materials for explicit segmentation of me'líame.",
+    "Compare me'ale, me'áme, me'li- forms and me'líame to distinguish root alternation from an internal -li morpheme.",
+    "Search the same author's 1972–1975 works for additional ...líame ju tokens with other roots."
+  ]
+}
