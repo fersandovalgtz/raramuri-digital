@@ -1,0 +1,56 @@
+{
+  "date": "2026-08-14",
+  "target": "Guadalaxara 1683 / Rodriguez Lopez 2010 and external historical layers",
+  "correction_to_v11": {
+    "old_claim": "no open digital copy of Rodriguez Lopez 2010 recovered",
+    "new_claim": "public Academia.edu page/copy located and partially machine-readable; full binary/central transcription not ingested in current session",
+    "public_page": "https://www.academia.edu/35779351/Grama_tica_Tarahumara_de_Thomas_de_Guadalaxara_1683_"
+  },
+  "rodriguez_2010": {
+    "publisher": "Universidad Autonoma de Ciudad Juarez",
+    "year": 2010,
+    "pages": 359,
+    "isbn": "978-607-7623-57-1",
+    "source_layers": [
+      "Zapopan manuscript",
+      "1683 printed British Library copy C.38.a.12"
+    ],
+    "structure": [
+      "introductory study",
+      "Zapopan manuscript paleography",
+      "1683 printed grammar transcription with notes",
+      "Tarahumara-Spanish vocabulary"
+    ],
+    "manuscript_book_2": "verbs",
+    "editorial_morphology_scope": "editor explicitly states notes do not delve deeply into Tarahumara morphology",
+    "full_text_ingested": false
+  },
+  "independent_1683_control": {
+    "source": "Merrill and Burgess 2014",
+    "repository": "Smithsonian Research Online",
+    "proto_late_tarahumara_stative": "*-ruame",
+    "analysis": "*-ru- 'be' + participial *-ame",
+    "modern_comparator": "-game = stative -ga- + participial -ame in some dialects",
+    "guadalaxara_attestation": "Pedro norugamek",
+    "folio": "1683:27v",
+    "gloss": "Pedro's son",
+    "supports": "17th-century antiquity of ga/ru + ame(+k) domain",
+    "does_not_support": "second direct historical li+ameke parse"
+  },
+  "current_li_ameke_grades": {
+    "D1": ["tsaneliameke"],
+    "D2_strong": ["tschutscheliameke"],
+    "negative_controls": ["ganeliameke", "uiliameke", "seliameke"]
+  },
+  "second_historical_D1_found": false,
+  "morphology_grade_change": false,
+  "dependency_reframed_as": "full-text access/ingestion rather than source-location",
+  "next_protocol": [
+    "isolate Zapopan Book II and corresponding printed verb section",
+    "extract ame/amek/amec/game/gamek/gamec/liame/liamek/liamec variants",
+    "record page/folio/gloss/paradigm/source layer",
+    "separate root-derived pairs from substring coincidences",
+    "audit explicit participial/passive/stative/nominalization statements",
+    "compare with Steffel and modern only after source-level adjudication"
+  ]
+}
