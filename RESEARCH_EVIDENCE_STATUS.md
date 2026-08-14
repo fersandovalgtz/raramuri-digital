@@ -4,7 +4,7 @@
 **Síntesis general vigente:** [`AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md`](AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md)  
 **Matriz vigente:** [`EVIDENCE_MASTER_MATRIX_V4.md`](EVIDENCE_MASTER_MATRIX_V4.md)  
 **Auditoría focal C04:** [`C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md`](C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md)  
-**Auditoría focal C09:** [`TELLECHEA_1826_AME_TOKEN_AUDIT_V4.md`](TELLECHEA_1826_AME_TOKEN_AUDIT_V4.md)
+**Auditoría focal C09:** [`TELLECHEA_1826_SHORT_AME_TARGETED_AUDIT_V5.md`](TELLECHEA_1826_SHORT_AME_TARGETED_AUDIT_V5.md)
 
 ## Estado general
 
@@ -19,7 +19,7 @@ El rarámuri moderno conserva `-ame` participial y presenta realizaciones region
 | H1 | `*-ame` posee profundidad protohistórica y función participial/nominalizadora | **Alta confianza** | la función de cada token histórico debe demostrarse individualmente |
 | H2 | Steffel documenta alternancia histórica `-ameke ~ -ame` | **Directamente demostrada** | no todo `-ame` histórico deriva necesariamente de `-ameke` |
 | H3 | Existió reducción/truncación histórica de material periférico | **Alta confianza** | Steffel aporta el mecanismo participial directo; Tellechea aporta contexto general y variación interna |
-| H4 | Tellechea muestra extensiones variables dentro de una misma raíz | **Fuerte, pendiente de cotejo facsimilar** | tres familias fuertes por OCR/contexto y dos candidatas adicionales; no inferir automáticamente `-ámeque > -ámec > -áme` |
+| H4 | Tellechea muestra extensiones variables dentro de una misma raíz | **Fuerte+, pendiente de cotejo facsimilar** | cinco familias fuertes por OCR/contexto, una probable y una candidata con largo corrupto; no inferir automáticamente `-ámeque > -ámec > -áme` |
 | H5 | `-ame ~ -ami` / `-ame ~ -me` existe como variación moderna regional | **Apoyada** | no equivale a demostrar un cambio histórico universal |
 | H6 | Ley universal `-ameke > -ami` | **No demostrada / no usar** | separar variación moderna de reconstrucción diacrónica |
 | H7 | Construcción histórica `li + ameke` | **Un D1 histórico + un D2 fuerte** | no segmentar `li` superficial automáticamente |
@@ -44,30 +44,32 @@ Sigue sin recuperarse una línea impresa `nesame = nes- + -ame` o un paradigma t
 
 ## C09 · Tellechea
 
-**Nivel formal: B fuerte, pendiente de facsímil.**
+**Nivel formal: B fuerte+, pendiente de facsímil.**
 
-La auditoría exhaustiva del OCR completo recupera 24 ocurrencias crudas en `-amec/-ameque` (22 cadenas OCR exactas distintas) y demuestra por contexto que el inventario superficial es heterogéneo. Contiene participios explícitos, material metalingüístico, construcciones verbales diferentes, formas dudosas, palabras funcionales y fragmentos generados por saltos de línea.
+La auditoría v4 estableció un inventario limpio de 24 ocurrencias crudas en `-amec/-ameque` y separó participios, metalingüística, otras construcciones y fragmentos OCR. La auditoría dirigida v5 revisó las 168 ocurrencias crudas / 111 cadenas distintas en `-ame/-áme`, pero sólo alrededor de raíces previamente justificadas o de paralelos bilingües con función participial.
 
-### Familias fuertes que sobreviven la auditoría
+### Cinco redes largas/breves fuertes por OCR + paralelo
 
-- `ati-`: `atígameque ~ atígame`, con paralelo “morador”.
+- `ati-`: `atígameque ~ atígame/atigame`, “morador / el mismo que en los cielos está”.
 - `simi-`: `simiámec ~ simíame`, “el que va” ↔ “caminante”.
-- `machi-`: `machiámec ~ machiámeque ~ machíameque ~ machíame`, siempre en el dominio “saber/ver”.
+- `machi-`: `machiámec ~ machiámeque ~ machíameque ~ machíame`, dominio “saber/ver”.
+- `netetu-`: `netetugameque ~ netétugame`, “el que todo lo ha hecho / todas las cosas ha hecho”. La larga se reconstruye de `netetu-` + `gameque` partido por OCR; la breve aparece como palabra continua en otro pasaje.
+- `rejoíruga-`: `rejoírugameque ~ rejoírugame/rejóirugame`, repetido en contextos de la Encarnación: “hombre fue/se hizo en el vientre de María”.
 
-### Dos candidatos adicionales OCR, pendientes de facsímil
+### Una familia probable
 
-- `ayorigu-`: `ayoriguámeque ~ ayoriguáme`, en contextos de ofensor/aborrecer.
-- `rejoíruga-`: `rejoírugameque ~ rejoírugame`, en los pasajes de la Encarnación/nacimiento.
+- `ayorigu-`: `ayoriguámeque ~ ayoriguáme`, en contextos de ofensor/aborrecer. La breve aparece fusionada por OCR con `tamú`, por lo que el límite exige facsímil.
 
-Estos dos pares amplían la red de posibles alternancias intralexémicas, pero no se incorporan todavía como evidencia facsimilar D1.
+### Un candidato con forma larga OCR corrupta
 
-### Correcciones de límites de palabra
+- `yumága-`: el largo OCR `yumctvameque` aparece en el *Credo* junto a “Dios Padre Todopoderoso”; `yumágame` aparece repetidamente en otros pasajes donde el español dice “Todopoderoso”. No se reconstruye la grafía larga como `yumágameque` sin facsímil.
 
-- `gameque` es un fragmento OCR de `netetugameque`, no un token independiente.
-- `támeque` es un fragmento de `natámeque`.
-- la aparente forma breve `gayéname` es en realidad `gayéname-que` partido entre líneas; **no es un par `gayénameque ~ gayéname`**.
+### Dos falsos pares eliminados
 
-La pérdida de `que/ca` descrita por Tellechea en los pretéritos sigue sin tratarse como demostración del mecanismo participial. C09 permanece B hasta cotejo facsimilar.
+- `gayénameque ~ gayéname`: falso; `gayéname` va seguido de `que` en la siguiente línea.
+- `natámeque ~ natáme`: falso; `natáme` va seguido de `ra` en la siguiente línea y corresponde a `natámera`.
+
+El patrón OCR ya no depende de tres ejemplos aislados: existe una red de cinco familias fuertes y controles negativos internos. Sin embargo, el salto a A sigue bloqueado por el mismo principio: las grafías y límites de palabra que sostienen la comparación deben comprobarse diplomáticamente en facsímil. La pérdida `que/ca` de los pretéritos no se trata como demostración del mecanismo participial.
 
 ## Controles negativos vigentes
 
@@ -77,6 +79,7 @@ La pérdida de `que/ca` descrita por Tellechea en los pretéritos sigue sin trat
 - varias atestiguaciones ≠ varias fuentes independientes.
 - patrón morfológico interno de alta confianza ≠ parse token-específico publicado.
 - `gayéname` de Tellechea ≠ forma breve: es fragmento de línea de `gayénameque`.
+- `natáme` de Tellechea ≠ forma breve: es fragmento de línea de `natámera`.
 - frecuencia OCR de `-ame/-ameque` ≠ frecuencia morfológica sin clasificación contextual.
 
 ## Afirmaciones prohibidas
@@ -93,8 +96,9 @@ No formular como conclusión:
 - `<c>`, `<k>`, `<que>`, `<ke>` = un mismo morfema sin control;
 - `-ka` cromático moderno presente necesariamente en todas las formas coloniales;
 - frecuencias morfológicas a partir de OCR bruto;
-- promover los nuevos pares Tellechea `ayorigu-` o `rejoíruga-` sin cotejo facsimilar.
+- promover las redes OCR de Tellechea como evidencia facsimilar directa;
+- reconstruir `yumctvameque` como `yumágameque` sin lectura visual.
 
 ## Estado de publicación científica
 
-El modelo general de v18 no requiere una v19. C04 continúa formalmente en B, pero su componente morfológico moderno ya puede tratarse como **alta confianza interna**; el verdadero cuello de botella ha quedado reducido al parse token-específico y, sobre todo, a la identidad histórica de la raíz. C09 dispone de una auditoría OCR reproducible que limpia falsos positivos y concentra el próximo trabajo facsimilar en un conjunto pequeño de tokens.
+El modelo general de v18 no requiere una v19. C04 continúa formalmente en B, pero su componente morfológico moderno ya puede tratarse como **alta confianza interna**. C09 continúa en B fuerte+, pero ahora posee una red OCR mucho más densa y falsable: cinco familias fuertes, una probable, una candidata corrupta y dos falsos pares eliminados. La búsqueda OCR general de Tellechea debe considerarse **cerrada**; el siguiente salto depende del facsímil, no de acumular más coincidencias textuales.
