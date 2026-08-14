@@ -1,0 +1,64 @@
+{
+  "title": "Guadalaxara 1683 okamek independent control v1",
+  "date": "2026-08-14",
+  "status": "source-controlled comparative audit",
+  "historical_source": {
+    "author": "Leopoldo Valiñas Coalla",
+    "work": "Reflexiones en torno a las lenguas guazapar y tarahumara coloniales",
+    "journal": "Anales de Antropología",
+    "volume": "36",
+    "year": 2002,
+    "doi": "10.22201/iia.24486221e.2002.0.23403",
+    "declared_guadalaxara_source": "Fotocopia incompleta of Guadalaxara 1683",
+    "independent_of_rodriguez_2010": true
+  },
+  "colonial_black_evidence": [
+    {
+      "form": "ookamek",
+      "variant": "okamek",
+      "gloss": "prieto/negro",
+      "source_location": "Guadalaxara 1683, Libro Quinto, Capítulo III, as cited by Valiñas",
+      "context": "example of loss of initial letters/syllables",
+      "morphological_segmentation": "not_adjudicated"
+    },
+    {
+      "form": "tsocamec",
+      "variant": "otsocamec",
+      "gloss": "oscuro/negro",
+      "source_location": "Guadalaxara 1683, fol. 35r, via Rodríguez López 2010",
+      "provenance_note": "reported as the only printed Tarahumara form absent from the Zapopan manuscript",
+      "morphological_segmentation": "not_adjudicated"
+    }
+  ],
+  "later_controls": {
+    "steffel": ["tschócameke", "tschócame"],
+    "merrill_normalization": ["čókameke", "čókame"],
+    "modern_multivariety": ["chó-ka-me", "chó-ka-mi", "chó-ko-m"]
+  },
+  "final_velar_note": {
+    "source": "Guadalaxara prologue as quoted by Valiñas",
+    "observation": "Guazapar speakers were said not to pronounce final ca/que/qui/co/cu as strongly",
+    "interpretation": "relevant historical phonetic context only",
+    "not_equated_with_steffel_ke_loss": true
+  },
+  "modern_ame_ami_control": {
+    "source": "Villalpando Quiñonez, Espino Moreno & Jaime Holguín 2022",
+    "variety": "Norogachi Rarámuri",
+    "finding": "-ame varies with -ami; conditioning not determined; -ame is described as the older form because it occurs in historical Rarámuri records including Guadalaxara 1683 and in sister languages",
+    "historical_universal_change_claim": false
+  },
+  "assessment": {
+    "black_lexical_semantic_continuity": "high",
+    "black_global_formal_continuity": "moderate-high",
+    "colonial_morphological_segmentation": "open",
+    "modern_ame_ami_synchronic_variation": "supported_at_least_in_norogachi",
+    "universal_ameke_to_ami_change": "unsupported",
+    "historical_li_ameke_D1_roots": 1
+  },
+  "next_steps": [
+    "locate and inspect a direct facsimile of Guadalaxara 1683 if available",
+    "cotejar fol. 35r and Libro Quinto Capítulo III",
+    "extract all colonial forms in -ame, -amec/-amek, -gamec/-gamek and liame variants",
+    "keep lexical continuity, sound correspondence and morpheme identity as separate claims"
+  ]
+}
