@@ -1,0 +1,114 @@
+{
+  "artifact": "newa_make_family_multivariety_audit_v2",
+  "date": "2026-08-13",
+  "status": "research_audit_not_community_validation",
+  "question": "What is securely established about the Rarámuri newa-/neˈwa-/niwa- 'make/do' family, and how should Western newálime/nehualíame be analyzed without forcing it into the -ame model?",
+  "secure_root_evidence": [
+    {
+      "source": "Caballero, A Grammar of Choguita Rarámuri",
+      "forms": ["neˈwa-bo", "niwa-ni-pi"],
+      "analyses": ["make-FUT.PL", "make-DESID-IRR.PL"],
+      "assessment": "Primary independent grammatical confirmation that ne/niwa is a productive verbal root in the semantic domain 'make/do'."
+    },
+    {
+      "source": "Manual Ralámuli Escrito para Todas y Todos, 2019",
+      "forms": ["newálime", "newáliwi", "newáliwa", "newá", "newáwa"],
+      "assessment": "Multivariety alignments independently anchor newá- in Spanish 'hacer'."
+    },
+    {
+      "source": "Government of Chihuahua public usage",
+      "form": "Sekáti Newárame",
+      "spanish": "Hecho a Mano",
+      "assessment": "Independent public-domain evidence for the wider newa- derivational family."
+    }
+  ],
+  "western_documentary_layers": [
+    {
+      "year": 1972,
+      "form": "nehualíame",
+      "source": "Albino Mares Trías, Hue'cá E'carúgame Nehualíame Ju Imé",
+      "whole_title_spanish": "Hacemos Muchas Cosas con el Mezcal",
+      "word_level_gloss": "not established from title alone"
+    },
+    {
+      "year": 2010,
+      "form": "newalime",
+      "source": "Western Rarámuri ethnobotanical title involving maize",
+      "whole_title_spanish": "Con el maíz se pueden hacer muchas cosas",
+      "word_level_gloss": "compatible with the independently established newa- family"
+    },
+    {
+      "year": 2019,
+      "form": "newálime",
+      "source": "Manual Ralámuli Escrito para Todas y Todos",
+      "spanish_contexts": ["¿Qué fiesta hacen aquí?", "¿Para qué hacen la fiesta?"],
+      "word_level_semantic_domain": "hacer",
+      "morphological_segmentation": "not supplied"
+    }
+  ],
+  "same_tradition_distribution_control": {
+    "source": "public TAC translation corpus",
+    "finding": "newame and newalime coexist in the same corpus and show different distributions.",
+    "newame_contexts": [
+      "Matthew 6:28 in a relative/descriptive context involving making clothing",
+      "John 19 in a relative/preparatory context involving Passover"
+    ],
+    "newalime_contexts": [
+      "Matthew 6:33 in a complement/deontic-like context 'do what God wants'",
+      "Acts 2 in a context involving making/celebrating a feast"
+    ],
+    "finite_control": "Acts 2 also contains newale in an overt finite context.",
+    "assessment": "newame and newalime should not be collapsed as simple spelling variants; exact categories remain to be established from a Western grammar."
+  },
+  "structural_controls": {
+    "compendio_1997": [
+      "-ame/-me is explicitly described as participial/nominalizing.",
+      "A distinct -li participial/nominalizing resource is also described in forms such as ra'íchali/ra'íchili and sebá-li.",
+      "Elsewhere -li/-le also occurs as past/perfective morphology, demonstrating homophony/function overlap."
+    ],
+    "manual_2019_multivariety_pattern": {
+      "shared_material": "newáli-",
+      "regional_endings": ["-me", "-wi", "-wa"],
+      "interpretation": "The safest descriptive unit is currently newáli- plus a variety-sensitive ending, without claiming internal segmentation of newáli-."
+    },
+    "modern_finite_newali": "Modern pedagogical/narrative materials also use newáli/newali in finite 'made/built' contexts, so the li material cannot automatically be identified with the participial -li."
+  },
+  "competing_analyses_of_newalime": [
+    {
+      "id": "N1",
+      "analysis": "newa + participial/nominalizing -li + -me",
+      "status": "possible_but_unproven",
+      "support": ["Both -li and -ame/-me have participial/nominalizing functions in the broader language."],
+      "problems": ["No direct Western paradigm has been found that segments newálime this way.", "Stacking two nominalizers/participials would require independent functional motivation."]
+    },
+    {
+      "id": "N2",
+      "analysis": "newa-li finite/perfective or derived stem + -me",
+      "status": "possible_but_unproven",
+      "support": ["newali is independently attested as a finite 'made/built' form in modern texts; -li/-le can be past/perfective."],
+      "problems": ["No direct evidence shows that the li in Western newálime is the finite -li.", "The distribution of newalime is not transparently finite in the TAC controls."]
+    },
+    {
+      "id": "N3",
+      "analysis": "lexicalized/dialectal complex stem newáli- + variety-specific final element (-me/-wi/-wa)",
+      "status": "preferred_descriptive_analysis_not_historical_reconstruction",
+      "support": ["The 2019 multivariety table repeatedly preserves newáli- while the final segmental material varies by region."],
+      "problems": ["The historical origin and internal structure of newáli- remain unknown.", "The finals -me/-wi/-wa may not form a single paradigmatic category historically."
+    }
+  ],
+  "current_assessment": {
+    "root_semantics_confidence": "very_high",
+    "western_newalime_semantic_domain_confidence": "high",
+    "newalime_internal_segmentation_confidence": "low",
+    "preferred_current_representation": "newáli-me only as a descriptive surface partition where regional comparison requires it; internal newá-li segmentation remains unresolved",
+    "add_to_ameke_ame_ami_core_evidence": false,
+    "reason": "The newa family is a useful control precisely because its root is secure while its -lime morphology remains ambiguous. Premature inclusion would contaminate the stronger -ame evidence."
+  },
+  "next_tests": [
+    "Search Western Rarámuri grammars and phrasebooks for a direct paradigm containing newa/newali/newame/newalime.",
+    "Recover full pages of the 1972 and 1974 Western books and build token-level concordances.",
+    "Determine the functions of regional final -me/-wi/-wa in other verbs sharing a comparable newáli- pattern.",
+    "Search for independent Western examples where -li and -me are transparently segmentable in the same word."
+  ],
+  "epistemic_rule": "Secure lexical identification does not license secure morpheme segmentation. Keep root, stem, ending and historical reconstruction as separate confidence claims."
+}
