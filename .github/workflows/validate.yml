@@ -54,7 +54,7 @@ jobs:
           cp data/advanced-products-report.json .tmp/typed-pass-1/advanced-products-report.json
           node scripts/generate-typed-variants.mjs
           node scripts/extract-graphic-variants.mjs
-          node --no-warnings scripts/extract-advanced-products.mjs
+          node --experimental-strip-types --no-warnings scripts/extract-advanced-products.mjs
           node scripts/reconcile-remission-product.mjs
           cmp .tmp/typed-pass-1/variants-typed.json data/variants-typed.json
           cmp .tmp/typed-pass-1/lexical-relations.json data/lexical-relations.json
