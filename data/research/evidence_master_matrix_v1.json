@@ -1,0 +1,191 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-08-14",
+  "project": "Rarámuri Histórico Digital",
+  "policy": {
+    "validation_model": "documentary_source_based_reproducible",
+    "external_human_validation_required": false,
+    "rule": "Separate documented form, published analysis, project inference and unresolved questions. Do not promote similarity to cognacy or a universal sound/morphological law."
+  },
+  "evidence_tiers": {
+    "A": "Direct source evidence plus explicit morphological/grammatical analysis on the relevant construction or on both compared endpoints.",
+    "B": "Direct documentary correspondence in form and meaning with source-explicit grammatical support on at least one endpoint; some comparative correspondence remains unresolved.",
+    "C": "Independent formal/semantic triangulation supports a candidate, but morphology or historical identity is not directly established.",
+    "D": "Lexical/grafematic compatibility only; useful as a search target, not as evidence of morphological continuity.",
+    "N": "Negative control or rejected automatic segmentation."
+  },
+  "candidates": [
+    {
+      "id": "C01",
+      "candidate": "Cotſchimé → Cotſchimeameke / Cochí → cochíami",
+      "domain": "lexical_participial_continuity",
+      "tier": "A",
+      "historical_support": "Steffel p.355 documents Cotſchimé ‘Schlafen’ and Cotſchimeameke ‘one who sleeps’; Merrill explicitly analyzes cotschimé-ameke as verbal + participial/adjectival-nominalizing -ameke.",
+      "modern_support": "SRC-02 RD-000483 documents Cochí ‘Dormir’ with source-explicit note ‘pp.: cochíami’.",
+      "supports": "A very strong cross-temporal candidate for the same lexical-semantic domain and participial function.",
+      "does_not_support": "Automatic cognacy of cotschimé and cochí; a general -ameke > -ami law.",
+      "unresolved": ["historical <tsch> vs modern <ch>", "historical root-final -mé vs modern -í", "prosodic and varietal correspondence"],
+      "next_source_test": "Search independent historical/modern attestations of the ‘sleep’ root and recurrent correspondences for the unresolved root material."
+    },
+    {
+      "id": "C02",
+      "candidate": "Tſchiperameke ↔ Chipérami",
+      "domain": "lexical_participial_candidate",
+      "tier": "B",
+      "historical_support": "Historical form Tſchiperameke is part of the Steffel comparison set used in the project.",
+      "modern_support": "SRC-02 classifies Chipérami ‘Plano’ directly as Pp.",
+      "supports": "Formal/semantic candidate strengthened by explicit modern participial classification.",
+      "does_not_support": "Cognacy or a direct historical suffix equation without independent root/correspondence control.",
+      "unresolved": ["full root correspondence", "historical-modern varietal relation", "suffix history"],
+      "next_source_test": "Recover independent attestations of the root and any source-explicit historical derivational analysis."
+    },
+    {
+      "id": "C03",
+      "candidate": "Rosacameke ~ rosacame ↔ Rosacami",
+      "domain": "color_lexical_continuity",
+      "tier": "B",
+      "historical_support": "Steffel documents Rosacameke ‘white’ and rosacame in connected text with the same value; the source also states frequent loss of final ke.",
+      "modern_support": "Rarámuri Digital RD-002179 has Rosacami, Adj singular, ‘Blanco’.",
+      "supports": "High-priority lexical continuity candidate with same basic color meaning and a direct historical long/short pair.",
+      "does_not_support": "That modern -ami necessarily descends from historical -ameke through a universal pathway.",
+      "unresolved": ["final e/i correspondence", "varietal continuity", "modern morphological status beyond lexical classification"],
+      "next_source_test": "Seek independent color/root attestations that control the final vowel correspondence without selecting forms only for similarity."
+    },
+    {
+      "id": "C04",
+      "candidate": "Nessé → Nesséameke ↔ Nisé → Niséami",
+      "domain": "agentive_pastoral_candidate",
+      "tier": "B",
+      "historical_support": "Steffel gives Nessé ‘guard/care for’ → Nesséameke ‘guardian’; Merrill also records pouguá nesséameke ‘shepherd of sheep’.",
+      "modern_support": "SRC-02 gives Nisé ‘care for/herd’ → Niséami ‘shepherd’; Niséami is classified S rather than Pp.",
+      "supports": "Convergence of base meaning, derived agent meaning and specialized pastoral domain.",
+      "does_not_support": "Automatic cognacy or an automatic e/é > i/í correspondence.",
+      "unresolved": ["nessé ~ nisé vowel correspondence", "modern categorial/derivational status", "varietal continuity"],
+      "next_source_test": "Search independent e/é ~ i/í correspondences in comparable lexical environments and additional attestations of the pastoral family."
+    },
+    {
+      "id": "C05",
+      "candidate": "Selíameke ↔ Siríami / Choguita siˈríame",
+      "domain": "governor_lexical_candidate",
+      "tier": "C",
+      "historical_support": "Steffel Selíameke means a governor/village judge; Merrill documents medial l/r variation elsewhere in the historical material.",
+      "modern_support": "SRC-02 Siríami denotes a traditional governor and is classified S; Choguita independently has siˈríame ‘governor(s)’.",
+      "supports": "Semantic and cross-variety convergence plus an independently documented historical l/r alternation makes the comparison non-ad-hoc.",
+      "does_not_support": "That li in Selíameke is passive -li; that Selíameke and Siríami are established cognates.",
+      "unresolved": ["root correspondence beyond l/r", "derivational history", "relationship among modern varieties"],
+      "next_source_test": "Search independent forms of the governor/govern root and recurrent correspondences in the same phonological environment."
+    },
+    {
+      "id": "C06",
+      "candidate": "tsocamec/otsocamec; ookamek/okamek → tschócameke ~ tschócame → Chócami / modern color forms",
+      "domain": "black_color_bridge",
+      "tier": "C",
+      "historical_support": "Seventeenth-century sources provide black/dark forms in ...amec/...amek; Steffel provides tschócameke ~ tschócame ‘black’.",
+      "modern_support": "SRC-02 has Chócami ‘Negro’ as Adj; modern descriptions also contain color morphology involving -ka/-ame in some analyses.",
+      "supports": "Strong lexical-semantic and broad formal continuity across several historical layers.",
+      "does_not_support": "A backward projection of modern -ka segmentation; identity of final <c>/<k>/<que>/<ke>; explicit modern participial status of Chócami.",
+      "unresolved": ["seventeenth-century segmentation", "final velar graphematic relation", "modern morphological parse", "exact source-to-source lexical identity of all black forms"],
+      "next_source_test": "Use facsimile/grafematic controls where available and keep lexical continuity separate from morpheme identity."
+    },
+    {
+      "id": "C07",
+      "candidate": "tsane-li-ameke ↔ ani-lí-ame (constructional bridge)",
+      "domain": "li_ame_construction",
+      "tier": "A",
+      "historical_support": "Merrill explicitly parses tsaní → tsane- → tsane-li- → tsane-li-ameke; this is the unique historical D1 root currently available.",
+      "modern_support": "Modern D1 inventory contains ani-lí-ame and rihói-li-ame; ani- also has western controlled attestations anilíame/anilime.",
+      "supports": "High-confidence constructional recurrence of internal -li followed by external -ame(ke) across historical and modern documentation.",
+      "does_not_support": "Automatic lexical cognacy tsaní ~ ani- or identity of every historical/modern -li function.",
+      "unresolved": ["historical initial consonant correspondence in tsaní ~ ani-", "root-level cognacy", "functional uniformity of -li across varieties"],
+      "next_source_test": "Test the root relation only through independent correspondences; keep constructional continuity distinct from lexical continuity."
+    },
+    {
+      "id": "C08",
+      "candidate": "tschutschelíameke",
+      "domain": "historical_li_ame_construction",
+      "tier": "B",
+      "historical_support": "Steffel Tschutschá ‘anoint’ / Tschutschelíla ‘anointing’ / Tschutschelíameke ‘anointed’; Merrill explicitly compares it with parsed tsanelíameke and elsewhere analyzes passive -li before external material.",
+      "modern_support": "No direct modern cognate is required for its role as a historical construction control.",
+      "supports": "Strong independent historical D2 evidence for X-li-ameke.",
+      "does_not_support": "D1 status, because no recovered published morpheme-by-morpheme parse segments this exact token.",
+      "unresolved": ["direct token-specific published segmentation"],
+      "next_source_test": "Search source analyses for an explicit parse; otherwise retain D2 strong."
+    },
+    {
+      "id": "C09",
+      "candidate": "machiámec ~ machiámeque ~ machíame; simiámec ~ simíame; atígameque ~ atígame",
+      "domain": "tellechea_internal_extension_variation",
+      "tier": "A",
+      "historical_support": "Tellechea 1826 OCR/source tradition gives same-root long/short participial families; Pimentel independently reports/normalizes parts of the same system and Tellechea explicitly describes final loss/truncation elsewhere in verbal morphology.",
+      "modern_support": "Not needed for the internal historical claim.",
+      "supports": "High-confidence historical variation/reduction of peripheral material in the ame domain as a general model.",
+      "does_not_support": "A single demonstrated direction -ámeque > -ámec > -áme for every participle.",
+      "unresolved": ["exact facsimile reading of critical tokens", "graphematic relation among c/que/k/ke", "conditioning of the alternation"],
+      "next_source_test": "Use facsimile evidence if recoverable; otherwise keep the mechanism high-confidence at the general level and the exact path unresolved."
+    },
+    {
+      "id": "N01",
+      "candidate": "ganelíameke as passive li+ameke",
+      "domain": "negative_control",
+      "tier": "N",
+      "historical_support": "Merrill analyzes the related ganilíle as ga- + -nilíle, a stative verb.",
+      "modern_support": "Not applicable.",
+      "supports": "Use as a control showing that surface li is insufficient for segmentation.",
+      "does_not_support": "Passive -li + -ameke.",
+      "unresolved": [],
+      "next_source_test": "None for positive li+ame counting unless new explicit analysis appears."
+    },
+    {
+      "id": "N02",
+      "candidate": "uilíameke as passive li+ameke",
+      "domain": "negative_control",
+      "tier": "N",
+      "historical_support": "The base is uilí ‘wait/remain standing’; li belongs to the lexical root.",
+      "modern_support": "Not applicable.",
+      "supports": "Substring false-positive control.",
+      "does_not_support": "Passive -li + -ameke.",
+      "unresolved": [],
+      "next_source_test": "None unless an independent analysis contradicts the current root segmentation."
+    },
+    {
+      "id": "N03",
+      "candidate": "selíameke as passive li+ameke",
+      "domain": "negative_control",
+      "tier": "N",
+      "historical_support": "The base is selí ‘govern’; li belongs to the lexical root.",
+      "modern_support": "The lexical comparison Selíameke ↔ Siríami remains separately testable as C05.",
+      "supports": "Demonstrates why constructional and lexical comparisons must be separated.",
+      "does_not_support": "Passive -li + -ameke.",
+      "unresolved": [],
+      "next_source_test": "Do not recycle this token as li+ame evidence."
+    },
+    {
+      "id": "N04",
+      "candidate": "final -ami = participle",
+      "domain": "negative_control",
+      "tier": "N",
+      "historical_support": "No historical participial -ami was recovered in Steffel.",
+      "modern_support": "SRC-02 contrasts huáami (ad.) with huacami (pp.) in the same family; only 20 of 214 final-ami records are classified Pp, while Pp also occurs outside final -ami.",
+      "supports": "A direct internal control against automatic morphological tagging from the final string.",
+      "does_not_support": "Treating all final -ami as participial or deriving all -ami from historical -ameke.",
+      "unresolved": ["conditioning of modern -ame ~ -ami variation in relevant varieties"],
+      "next_source_test": "Use source-explicit category/derivational notes, not suffix shape alone."
+    }
+  ],
+  "global_constraints": [
+    "No universal -ameke > -ami law.",
+    "No automatic -li-ameke > -li-ame rule.",
+    "No automatic segmentation of surface li as passive -li.",
+    "No automatic equation of historical <c>, <k>, <que> and <ke>.",
+    "No backward projection of modern color -ka into seventeenth-century forms without source control.",
+    "No cognacy judgment from graphic similarity alone.",
+    "No morphological frequency claim from raw OCR hit counts."
+  ],
+  "authoritative_sources": [
+    "AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V17.md",
+    "RESEARCH_EVIDENCE_STATUS.md",
+    "HISTORICAL_LI_AMEKE_CANDIDATE_AUDIT_V2.md",
+    "PROJECT_VALIDATION_POLICY_V1.md",
+    "Notion milestones 59, 76, 77, 81–85, 209"
+  ]
+}
