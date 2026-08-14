@@ -1,0 +1,80 @@
+{
+  "artifact": "newa_make_family_multivariety_audit_v1",
+  "date": "2026-08-13",
+  "question": "Can the Western pre-1980 forms nehualíame/newalime be independently anchored in the Rarámuri lexical family meaning 'make/do' without inferring their internal morphology from the bilingual book title alone?",
+  "evidence": [
+    {
+      "source": "Manual Ralámuli Escrito para Todas y Todos, UPNECH 2019",
+      "source_access": "institutional existence/authorship verified in UPNECH and Chihuahua government; exact multivariety table consulted through an indexed digital copy",
+      "type": "explicit multivariety Rarámuri-Spanish alignment",
+      "examples": [
+        {
+          "variety": "Oeste",
+          "raramuri": "¿Tachíri omálichi newálime jú jéna?",
+          "spanish": "¿Qué fiesta hacen aquí?"
+        },
+        {
+          "variety": "Oeste",
+          "raramuri": "¿Tachíri gowáme newáwa?",
+          "spanish": "¿Qué comida hacen?"
+        },
+        {
+          "variety": "Oeste",
+          "raramuri": "¿Chóniga newálime jú?",
+          "spanish": "¿Para qué hacen la fiesta?"
+        },
+        {
+          "varieties": ["Sur", "Centro", "Cumbre", "Norte"],
+          "forms": ["newáliwi", "newáliwa", "newá", "newáliwi"],
+          "spanish_domain": "hacer"
+        }
+      ],
+      "assessment": "Directly anchors newá-/newálime and regional cognates in the semantic domain 'hacer'."
+    },
+    {
+      "source": "Government of Chihuahua, Sekáti Newárame festival announcements, 2018/2024",
+      "type": "official public translation",
+      "raramuri": "Sekáti Newárame",
+      "spanish": "Hecho a Mano",
+      "assessment": "Independent official use supports the broader newa- 'make/produce' lexical-derivational family, though Newárame is not assumed to have the same morphology as newálime."
+    },
+    {
+      "source": "Western Rarámuri book title, Albino Mares Trías 1972",
+      "raramuri_title": "Hue'cá E'carúgame Nehualíame Ju Imé",
+      "spanish_title": "Hacemos Muchas Cosas con el Mezcal",
+      "target_form": "nehualíame",
+      "assessment": "Whole-title alignment alone did not permit a word-level gloss; the 2019 multivariety evidence now independently makes a 'hacer' analysis for the newa-/nehua- family well motivated."
+    },
+    {
+      "source": "Burgess & Mares Trías 2010 title",
+      "raramuri_title": "Sunute we’ká e’karúgame newalime ju",
+      "spanish_title": "Con el maíz se pueden hacer muchas cosas",
+      "target_form": "newalime",
+      "assessment": "A second Western title repeats the constructional environment and transparently belongs to the same newa- family, but the internal suffixal analysis remains to be established independently."
+    }
+  ],
+  "formal_comparison": {
+    "western_1972": "nehualíame",
+    "western_2010": "newalime",
+    "western_2019_manual": "newálime",
+    "other_2019_forms": ["newáliwi", "newáliwa", "newá"],
+    "stable_material": "newa-/newá-",
+    "variable_material": ["orthographic h/w representation", "vowel length/accent notation", "-lime/-liame/-liwi/-liwa endings"],
+    "interpretation": "The lexical base associated with 'hacer' is secure; the historical/dialectal relation among the endings requires a separate morphological audit."
+  },
+  "claims_supported": [
+    "newá- is a multivariety Rarámuri lexical family in the semantic domain 'hacer/elaborar'.",
+    "Western newálime is explicitly aligned with Spanish hacer in the 2019 multivariety manual.",
+    "The 1972 and 2010 Western title forms nehualíame/newalime can now be linked to that lexical family without deriving the gloss solely from their Spanish titles."
+  ],
+  "claims_not_supported": [
+    "That the ending of newálime is synchronically or historically identical to participial -ame.",
+    "That nehualíame, newalime and newálime are orthographically identical representations rather than dialectal/historical variants requiring analysis.",
+    "A word-by-word segmentation of the 1972 or 2010 titles."
+  ],
+  "next_steps": [
+    "Audit the morphology of newálime/newáliwi/newáliwa using grammars and paradigms.",
+    "Search pre-1980 Western materials for the base newa- without the target ending.",
+    "Test whether the spelling nehualíame reflects an older orthography for newalime or additional phonological/morphological material."
+  ]
+}
