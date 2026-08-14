@@ -51,36 +51,53 @@ Este documento registra qué falta para elevar de grado las hipótesis vigentes.
 - histórico `Nessé` ‘guardar/cuidar’;
 - histórico `Nesséameke` ‘guardián/custodio’;
 - Merrill `pouguá nesséameke` ‘pastor de ovejas’;
-- Márquez 1999: familia moderna `nesema`, `nesbonama`, `nesame`, `neser`, `neserichi` en el dominio cuidado/pastoreo;
+- Márquez 1999: familia moderna contigua `nesame`, `nesbonama`, `nesema`, `neser`, `neserichi` en el dominio cuidado/pastoreo;
+- Márquez: los verbos se enuncian lexicográficamente por el futuro y el futuro de primera conjugación termina en `-ma`;
+- Márquez: el participio presente se deriva del indicativo correspondiente y la regla general añade `-ame`; ejemplos explícitos `ba-ame`, `os-ame` y `gumim-ame`;
+- Márquez: `-me/-mi` se clasifica como adjetival y participial con verbo;
+- Márquez: los nombres de persona definidos por una actividad suelen ser participios de algún verbo;
 - Tarahumara Baja: `Neseme` en *Tewé Ralámuli Chibá Neseme*, ‘Niña tarahumara que cuida chivas’;
 - Western/Lowland: `neseme` replicado en contexto de cuidadores de animales, sin contarlo como fuente plenamente independiente de la tradición Burgess;
 - SRC-02: `Nisé` ‘cuidar, pastorear’ → `Niséami` ‘pastor’;
 - *Awilichi bawi*: `nise’ami/niseami` en contexto de chivas;
 - 1997: arquitectura `-ame/-me` participial regional;
-- Márquez: `-ame` y `-me/-mi` compatibles con participio;
 - Merrill/Márquez: `e~i` fonológicamente posible, no regular.
+
+### Resultado del control morfológico v2
+
+La lectura de `nesame` como forma participial/agentiva de la familia `nes-` es ahora **fuertemente predicha por reglas publicadas en la misma obra**. Sin embargo, no se recuperó un parse impreso `nes-ame`, ni la frase ‘participio de nesema’, ni un paradigma token-específico que identifique con seguridad el radical secundario pertinente.
+
+La forma de cita `nesema` tampoco permite derivar mecánicamente `nesame`: los lemas verbales son futuros y la gramática distingue radicales primarios/secundarios y clases irregulares. En el material recuperado no se explica la relación exacta del material vocálico interno de `nesema ~ nesame`.
+
+**Documento:** `C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V2.md`.
 
 ### Cuello de botella restante
 
 Para cambiar C04 a A hace falta **uno** de estos controles fuertes:
 
-1. una fuente que segmente explícitamente `nesame/neseme` como radical + participial `-ame/-me`;
+1. una fuente que segmente explícitamente `nesame/neseme` como radical + participial `-ame/-me`, o un paradigma publicado que identifique su radical y la derivación concreta;
 2. una fuente que identifique directamente `Nessé` y `nes-/Nisé` como variantes/cognados históricos.
 
-No sustituir este requisito acumulando más ocurrencias de `neseme`.
+No sustituir este requisito acumulando más ocurrencias de `neseme`, ni convertir la productividad general de `-ame/-me` en un parse token-específico no publicado.
 
 ### Fuentes prioritarias
 
-- Brambila original: familia `nes-`, categoría y derivación;
-- Hilton/Samachique 1993/2016: `nes-/nis-`, pastorear/pastor y categoría;
+- Brambila original: paradigma o familia exacta `nes-`;
+- Hilton/Samachique 1993/2016: `nes-/nis-`, pastorear/pastor, categoría y derivados;
 - Burgess 1984 *Western Tarahumara*: análisis morfológico de `neseme` o de la raíz;
 - otra comparación publicada que identifique `Nessé ~ nes-/Nisé`.
+
+### Búsquedas ya realizadas que no deben repetirse sin una ruta documental nueva
+
+- búsquedas indexadas de Brambila para `nesame`, `nesema`, `pastor`, `pastorear`: no recuperación; **no equivale a ausencia**;
+- búsqueda dirigida en el diccionario castellano–rarámuri de 1983 desde `pastor/pastorear`: sin equivalencia verificable recuperada;
+- búsquedas indexadas en Burgess 1984: sin parse `neseme` recuperado.
 
 ### Bloqueos técnicos
 
 - Hilton/Samachique: PDF oficial identificado, pero HTTP 403 en el entorno actual;
-- Márquez 1999: identidad bibliográfica y texto indexado controlados; la ruta PDF del repositorio/Dropbox ha devuelto `cache miss`, por lo que no se afirma cotejo visual del facsímil;
-- Brambila: rutas digitales localizadas en rondas previas, sin ingestión estable de la edición original para este test.
+- Márquez 1999: texto indexado suficiente para el control morfológico y lexicográfico; la ruta PDF del repositorio/Dropbox ha devuelto `cache miss`, por lo que no se afirma cotejo visual del facsímil;
+- Brambila: rutas digitales localizadas, pero los índices del escaneo no permiten interpretar una búsqueda negativa como ausencia.
 
 ## D7. Genealogía de fuentes modernas
 
@@ -98,7 +115,7 @@ No sustituir este requisito acumulando más ocurrencias de `neseme`.
 
 ## Priorización vigente
 
-**Máximo rendimiento inmediato:** D6, pero sólo mediante parse token-específico o comparación histórica directa.  
+**Máximo rendimiento inmediato:** D6 únicamente si aparece una ruta documental nueva hacia el parse token-específico o una comparación histórica directa.  
 **Prioridad documental:** D2 Tellechea y D1 Guadalaxara cuando sean ingeribles.  
 **Control metodológico paralelo:** D7 genealogía de fuentes.  
 **Prioridad analítica posterior:** D3 y D4.  
