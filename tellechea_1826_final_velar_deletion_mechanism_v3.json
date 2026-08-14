@@ -1,0 +1,67 @@
+{
+  "date": "2026-08-14",
+  "source": "Miguel Tellechea, Compendio gramatical para la inteligencia del idioma Tarahumar, 1826",
+  "access_state": {
+    "official_dgb_catalog_verified": true,
+    "official_dgb_pdf_link_exposed": true,
+    "official_pdf_bytes_ingested": false,
+    "public_ocr_reproduction_used_as_locator": true,
+    "pimentel_1874_used_as_independent_control": true
+  },
+  "explicit_historical_processes": [
+    {
+      "domain": "verbal morphology",
+      "statement": "en la voz viva se suelen quitar las finales que y ca de los preteritos",
+      "interpretation": "explicit loss of final que/ca in speech",
+      "directly_about_participles": false
+    },
+    {
+      "domain": "lexicon/general usage",
+      "statement": "los indios ... partir todos los vocablos, y tomar algunas particulas de ellos, en lugar de todo el vocablo",
+      "interpretation": "general truncation/partial realization",
+      "directly_about_participles": false
+    },
+    {
+      "domain": "composition",
+      "statement": "algunos vocablos pierden las finales, y otros pierden las primeras letras",
+      "interpretation": "loss of peripheral material in composition",
+      "directly_about_participles": false
+    }
+  ],
+  "same_root_participial_families": [
+    {
+      "root": "machi-",
+      "gloss": "ver/saber",
+      "forms": ["machiam ec", "machiameque", "machiame"],
+      "normalized_display": ["machiámec", "machiámeque", "machíame"],
+      "status": "strong_provisional_pending_facsimile_visual_check"
+    },
+    {
+      "root": "simi-",
+      "gloss": "ir",
+      "forms": ["simiamec", "simiame"],
+      "normalized_display": ["simiámec", "simíame"],
+      "status": "strong_provisional_pending_facsimile_visual_check"
+    },
+    {
+      "root": "ati-",
+      "gloss": "estar/morar",
+      "forms": ["atigameque", "atigame", "atigameke"],
+      "status": "strong_convergent_primary_ocr_plus_pimentel_control"
+    }
+  ],
+  "pimentel_1874_control": {
+    "tellechea_directly_consulted": true,
+    "present_participle_inventory": ["ke", "kameke", "kamek", "kame", "meke", "mek", "yamek", "amek"],
+    "adjective_endings_attributed_to_tellechea_p6": ["camec", "came", "cameque"],
+    "interpretive_note": "Pimentel treats most such adjectives as supplied by present participles"
+  },
+  "inference": {
+    "historical_peripheral_reduction_in_ame_domain": "high_confidence",
+    "specific_direction_ameque_to_amec_to_ame": "not_demonstrated",
+    "equivalence_c_que_k_ke": "not_demonstrated",
+    "universal_ameke_to_ami": false,
+    "historical_participial_ami_found": false
+  },
+  "next_step": "visual facsimile collation of pp. 24, 27, 49 and catechetical occurrences; then exhaustive token inventory by form, function, syntax and prosody"
+}
