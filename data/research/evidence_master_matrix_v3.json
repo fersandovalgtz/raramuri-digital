@@ -1,0 +1,80 @@
+{
+  "schema_version": "1.2",
+  "date": "2026-08-14",
+  "project": "Rarámuri Histórico Digital",
+  "canonical_assessment": "AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md",
+  "matrix_document": "EVIDENCE_MASTER_MATRIX_V3.md",
+  "focused_audit": "C04_NES_FAMILY_MODERN_BRIDGE_V1.md",
+  "supersedes": "data/research/evidence_master_matrix_v2.json",
+  "policy": {
+    "validation_model": "documentary_source_based_reproducible",
+    "external_human_validation_required": false,
+    "rule": "Replicated attestations, phonological plausibility and source-compatible morphology do not become token-specific parse or cognacy without direct evidence."
+  },
+  "candidates": [
+    {"id":"C01","tier":"A","status":"unchanged_from_v2"},
+    {"id":"C02","tier":"B","status":"unchanged_from_v2"},
+    {"id":"C03","tier":"B","status":"unchanged_from_v2"},
+    {
+      "id":"C04",
+      "tier":"B",
+      "strength_note":"B+_exceptional_near_A",
+      "candidate":"Nessé → Nesséameke ↔ nes-/Neseme ↔ Nisé → Niséami",
+      "historical_support":[
+        "Steffel Nessé 'guard/care for'",
+        "Steffel Nesséameke 'guardian/custodian'",
+        "Merrill pouguá nesséameke 'shepherd of sheep'"
+      ],
+      "modern_e_vowel_support":[
+        "Márquez 1999 directly records the pastoral/care family nesema, nesbonama, nesame, neser, neserichi",
+        "Campos/Burgess 2004 Lowland Tarahumara title Tewé Ralámuli Chibá Neseme = girl who tends goats",
+        "Western/Lowland Tarahumara Bible replicates neseme in an animal-caretaker context"
+      ],
+      "modern_i_vowel_support":[
+        "SRC-02 Nisé 'care for/herd' and Niséami 'shepherd'",
+        "Awilichi bawi contains nise’ami/niseami in a goat-herding narrative"
+      ],
+      "morphological_support":[
+        "Márquez grammar documents present participial -ame and derivational -me/-mi with participial function",
+        "Compendio básico de la gramática ralámuli 1997 documents regional -ame/-me participial/nominalizing morphology including -me in Baja-TB"
+      ],
+      "phonological_support":[
+        "Merrill documents historical e~i and é~í alternations but states they are limited and non-regular",
+        "Márquez also recognizes i~e alternation in the language"
+      ],
+      "supports":"Direct modern e-vowel pastoral family plus compatible regional participial morphology make the historical-modern comparison substantially stronger and non-ad-hoc.",
+      "does_not_support":"An explicit token parse nesame/neseme = root + participial suffix, direct Nessé~nes-/Nisé cognacy, a universal e>i law, or independent-source counting for every attestation.",
+      "unresolved":[
+        "token-specific published segmentation of nesame/neseme",
+        "direct published historical relation Nessé~nes-/Nisé",
+        "full genealogy of modern lexicographic sources"
+      ],
+      "remaining_A_requirement":"Either a token-specific published morphological parse of nesame/neseme or a published direct identification of Nessé with nes-/Nisé as historical variants/cognates."
+    },
+    {"id":"C05","tier":"C","status":"unchanged_from_v2"},
+    {"id":"C06","tier":"C","status":"unchanged_from_v2"},
+    {"id":"C07","tier":"A","status":"unchanged_from_v2"},
+    {"id":"C08","tier":"B","status":"unchanged_from_v2"},
+    {"id":"C09","tier":"B","strength_note":"strong_pending_facsimile","status":"unchanged_from_v2"},
+    {"id":"N01","tier":"N","status":"unchanged_from_v2"},
+    {"id":"N02","tier":"N","status":"unchanged_from_v2"},
+    {"id":"N03","tier":"N","status":"unchanged_from_v2"},
+    {"id":"N04","tier":"N","status":"unchanged_from_v2"},
+    {"id":"N05","tier":"N","status":"unchanged_from_v2"},
+    {
+      "id":"N06",
+      "tier":"N",
+      "candidate":"document replication = automatic source independence",
+      "reason":"Márquez partially depends on earlier lexicography and multiple Lowland/Western attestations share Burgess-associated editorial genealogy. Replication must be distinguished from independent evidence."
+    }
+  ],
+  "global_constraints":[
+    "No universal -ameke > -ami law.",
+    "No universal e > i or é > í law.",
+    "No automatic segmentation nesame = nes + -ame without token-specific source evidence.",
+    "No automatic cognacy Nessé ~ nes-/Nisé.",
+    "No automatic source-independence count from repeated attestations.",
+    "No automatic transfer of Tellechea preterite que/ca deletion to participles."
+  ],
+  "next_source_test":"Seek only a token-specific morphological analysis of nesame/neseme or a published direct historical comparison Nessé~nes-/Nisé; otherwise retain C04 at B+ exceptional."
+}
