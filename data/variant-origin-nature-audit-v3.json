@@ -1,0 +1,152 @@
+{
+  "audit": "Rarámuri Digital: auditoría exhaustiva de procedencia y naturaleza de variants v3 — control de fuente",
+  "date": "2026-08-14",
+  "dataset_version": "1.0.0",
+  "source_entries": 2581,
+  "entries_with_variants": 221,
+  "variant_tokens": 224,
+  "unique_normalized_variant_strings": 224,
+  "emission_origin_counts": {
+    "bracket_annotation": 168,
+    "cross_reference": 2,
+    "headword_secondary": 54
+  },
+  "nature_counts": {
+    "co_headword_form": 54,
+    "cross_reference": 2,
+    "explicit_source_variant_reference": 6,
+    "grammatical_annotation_labeled": 156,
+    "grammatical_annotation_malformed_punctuation": 2,
+    "grammatical_relation_phrase": 3,
+    "mixed_grammatical_annotation_unlabeled_segment": 1
+  },
+  "unresolved_tokens": 0,
+  "multiple_matching_origin_tokens": 0,
+  "grammatical_annotation_controls": {
+    "historical_parser_label_groups": 221,
+    "robust_known_label_groups": 223,
+    "robust_form_slots_before_deduplication": 227,
+    "historical_label_counts": {
+      "fut": 91,
+      "pret": 49,
+      "pp": 37,
+      "pl": 28,
+      "sing": 13,
+      "ad": 1,
+      "gut": 1,
+      "pres": 1
+    },
+    "robust_known_label_counts": {
+      "fut": 93,
+      "pret": 49,
+      "pp": 37,
+      "pl": 28,
+      "sing": 13,
+      "ad": 1,
+      "gut": 1,
+      "pres": 1
+    },
+    "malformed_punctuation_tokens": [
+      {
+        "record_id": "RD-000034",
+        "variant": "pret.: a'huiri, fut.: a'huimea",
+        "page_start": 4,
+        "robust_groups": [
+          {"label": "pret", "forms": ["a'huiri"]},
+          {"label": "fut", "forms": ["a'huimea"]}
+        ]
+      },
+      {
+        "record_id": "RD-001023",
+        "variant": "pret.: huirírari: fut.: huiriráma",
+        "page_start": 48,
+        "robust_groups": [
+          {"label": "pret", "forms": ["huirírari"]},
+          {"label": "fut", "forms": ["huiriráma"]}
+        ]
+      }
+    ],
+    "mixed_annotation_tokens": [
+      {
+        "record_id": "RD-000726",
+        "variant": "pret.: chirihuéari; chiruérama; pp.: chirihuéami",
+        "page_start": 36,
+        "labeled_groups": [
+          {"label": "pret", "forms": ["chirihuéari"]},
+          {"label": "pp", "forms": ["chirihuéami"]}
+        ],
+        "unlabeled_segment": "chiruérama"
+      }
+    ],
+    "source_literal_labels_requiring_policy": [
+      {"label": "ad", "policy": "Conservar literalmente; no expandir sin análisis adicional."},
+      {"label": "gut", "policy": "Conservar literalmente. El producto actual normaliza gut a fut; no tratar ese mapeo como lectura de fuente."}
+    ]
+  },
+  "explicit_source_variant_references": {
+    "count": 6,
+    "targets_resolving_to_lexicon": 6,
+    "records": [
+      {"record_id": "RD-000734", "source_headword": "Chirohua", "target": "chira", "target_record_ids": ["RD-000719"], "source_explicit_structured_relation": false},
+      {"record_id": "RD-000872", "source_headword": "Huacasí", "target": "huáasi", "target_record_ids": ["RD-000864"], "source_explicit_structured_relation": false},
+      {"record_id": "RD-000952", "source_headword": "Huiba", "target": "uba", "target_record_ids": ["RD-002511"], "source_explicit_structured_relation": false},
+      {"record_id": "RD-001042", "source_headword": "Huitayé", "target": "huatayé", "target_record_ids": ["RD-000930"], "source_explicit_structured_relation": false},
+      {"record_id": "RD-001054", "source_headword": "Icori", "target": "huicori", "target_record_ids": ["RD-000964"], "source_explicit_structured_relation": false, "automatic_relation": "Ø/C inicial"},
+      {"record_id": "RD-001057", "source_headword": "Icúsuhua", "target": "igúsuhua", "target_record_ids": ["RD-001067"], "source_explicit_structured_relation": false, "automatic_relation": "g/c"}
+    ]
+  },
+  "source_control": {
+    "source_document": "DICCIONARIO raramuri.pdf",
+    "source_total_pages": 87,
+    "visually_adjudicated_records": [
+      {"record_id": "RD-000034", "page": 4, "evidence": "[pret.: a'huiri, fut.: a'huimea]"},
+      {"record_id": "RD-000726", "page": 36, "evidence": "[pret.: chirihuéari; chiruérama; pp.: chirihuéami]"},
+      {"record_id": "RD-000862", "page": 42, "evidence": "[ad.: huáami; pp.: huacami]"},
+      {"record_id": "RD-000895", "page": 43, "evidence": "[gut.: huaniméa]"},
+      {"record_id": "RD-001023", "page": 48, "evidence": "[pret.: huirírari: fut.: huiriráma]"}
+    ],
+    "explicit_variant_phrase_source_count": 6
+  },
+  "cross_reference_capture_audit_v3": {
+    "source_visible_remission_count_all_fields": 18,
+    "source_visible_remissions_by_field": {"comments_raw": 15, "translation_raw": 3},
+    "captured_in_current_variants": 2,
+    "missing_from_current_variants": 16,
+    "missing_by_field": {"comments_raw": 13, "translation_raw": 3},
+    "causes": [
+      "La regex histórica aplicada a comments_raw no reconoce la grafía frecuente Véase con acento en la primera e.",
+      "extract_variants no inspecciona translation_raw, donde también hay remisiones documentales."
+    ],
+    "records": [
+      {"record_id":"RD-000002","headword":"Abé","field":"comments_raw","target":"jipi, curipi","evidence":"Véase jipi, curipi","captured":false,"page":3},
+      {"record_id":"RD-000006","headword":"Acá","field":"comments_raw","target":"cho'ó","evidence":"Véase cho'ó","captured":false,"page":3},
+      {"record_id":"RD-000032","headword":"Achigó yiri ju","field":"comments_raw","target":"néchigo","evidence":"Véase néchigo","captured":false,"page":4},
+      {"record_id":"RD-000039","headword":"A'lara","field":"comments_raw","target":"ca'rara","evidence":"Vease ca'rara","captured":true,"page":5},
+      {"record_id":"RD-000086","headword":"Aqué","field":"comments_raw","target":"acá","evidence":"Véase acá","captured":false,"page":7},
+      {"record_id":"RD-000260","headword":"Bi'neri","field":"comments_raw","target":"a'huínari","evidence":"Véase a'huínari","captured":false,"page":16},
+      {"record_id":"RD-000283","headword":"Biteba","field":"comments_raw","target":"chi'reba","evidence":"Véase chi'reba","captured":false,"page":18},
+      {"record_id":"RD-000312","headword":"Borogá","field":"comments_raw","target":"buré","evidence":"Véase buré","captured":false,"page":19},
+      {"record_id":"RD-000386","headword":"Cahuisori","field":"comments_raw","target":"quimá","evidence":"Vease quimá","captured":true,"page":23},
+      {"record_id":"RD-000430","headword":"Ca’rara","field":"comments_raw","target":"a´lara","evidence":"Véase a´lara","captured":false,"page":25},
+      {"record_id":"RD-000433","headword":"Caré","field":"comments_raw","target":"garé","evidence":"Véase garé","captured":false,"page":25},
+      {"record_id":"RD-000495","headword":"Cohuí","field":"translation_raw","target":"cochi","evidence":"véase cochi","captured":false,"page":27},
+      {"record_id":"RD-000546","headword":"Cosísiya","field":"comments_raw","target":"co’huá","evidence":"Véase co’huá","captured":false,"page":29},
+      {"record_id":"RD-000617","headword":"Cusihua","field":"translation_raw","target":"igúsuhua","evidence":"Véase igúsuhua","captured":false,"page":32},
+      {"record_id":"RD-000859","headword":"Garé","field":"translation_raw","target":"2caré)","evidence":"véase 2caré)","captured":false,"page":42},
+      {"record_id":"RD-000865","headword":"Huabé","field":"comments_raw","target":"hue","evidence":"Véase hue","captured":false,"page":42},
+      {"record_id":"RD-000877","headword":"Huachíami","field":"comments_raw","target":"huatoná","evidence":"Véase huatoná","captured":false,"page":42},
+      {"record_id":"RD-001079","headword":"I’hueri","field":"comments_raw","target":"hui’rí","evidence":"Véase hui’rí","captured":false,"page":50}
+    ]
+  },
+  "graphic_product_controls": {
+    "explicit_headword_relations": 54,
+    "flexion_relations_current": 225,
+    "cross_reference_relations_current": 2
+  },
+  "revised_policy": {
+    "source_layer": "Preservar exactamente etiquetas y puntuación de la fuente, incluidas ad. y gut.",
+    "derived_parser": "Reconocer etiquetas conocidas aun con separadores no canónicos, conservando evidencia raw y documentando normalizaciones.",
+    "remissions": "Modelar las remisiones como relaciones separadas, no como variantes lingüísticas; escanear translation_raw y comments_raw en una migración futura.",
+    "dataset_1_0_0": "No reescribir silenciosamente el dataset publicado durante esta auditoría."
+  }
+}
