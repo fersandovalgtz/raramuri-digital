@@ -1,0 +1,59 @@
+{
+  "artifact": "color_black_tsocamec_diachronic_bridge_v1",
+  "date": "2026-08-14",
+  "status": "machine_assisted_audit_pending_human_specialist_review",
+  "historical_layers": [
+    {
+      "date": 1683,
+      "source": "Thomas de Guadalaxara, print; Rodríguez López 2010 transcription/report",
+      "form": ["tsocamec", "otsocamec"],
+      "gloss": ["oscuro", "negro"],
+      "location": "fol. 35r",
+      "provenance_note": "Rodríguez López reports this as the only Tarahumara term in the 1683 print absent from the Zapopan manuscript"
+    },
+    {
+      "date": "18th_century_Steffel",
+      "source": "Steffel; Merrill et al. 2020 critical edition",
+      "form": ["tschócameke", "tschócame", "čókameke", "čókame"],
+      "gloss": ["negro", "negros"]
+    },
+    {
+      "date": "modern",
+      "source": "previously audited modern multi-variety material in raramuri-digital",
+      "form": ["chó-ka-me", "chó-ka-mi", "chó-ko-m"],
+      "gloss": ["negro"]
+    }
+  ],
+  "judgments": {
+    "lexical_semantic_continuity": "high",
+    "global_form_continuity": "moderate_high",
+    "root_identity": "high_priority_hypothesis_not_formally_adjudicated",
+    "segmentation_1683": "unresolved",
+    "final_c_1683_to_ke_steffel": "unresolved",
+    "historical_ca_to_modern_ka_identity": "unresolved",
+    "universal_ameke_to_ami_rule": false
+  },
+  "access": {
+    "rodriguez_2010_public_page_found": true,
+    "academia_document_id": "35779351",
+    "academia_attachment_id": "55656172",
+    "download_link_exposed": true,
+    "download_bytes_retrieved_in_session": false,
+    "failure_mode": "Academia signed attachment returned cache miss in current web runtime",
+    "full_text_ingested": false
+  },
+  "next_controls": [
+    "Rodriguez 2010 section 3.5 on /k/ and expletive reduplication",
+    "Rodriguez 2010 section 3.6 on ambiguous letters",
+    "direct transcription context for Guadalaxara 1683 fol. 35r",
+    "vocabulary entry for tsocamec/otsocamec",
+    "external controls for 17th-to-18th century orthographic correspondences"
+  ],
+  "epistemic_constraints": [
+    "do_not_segment_tsocamec_automatically",
+    "do_not_equate_final_c_with_steffel_ke_without_independent_control",
+    "do_not_project_modern_ka_segmentation_into_1683",
+    "do_not_count_this_as_evidence_for_li_plus_ame",
+    "do_not_claim_cognacy_from_graphic_similarity_alone"
+  ]
+}
