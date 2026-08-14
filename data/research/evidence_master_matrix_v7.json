@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.6",
+  "date": "2026-08-14",
+  "project": "Rarámuri Histórico Digital",
+  "canonical_assessment": "AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md",
+  "matrix_document": "EVIDENCE_MASTER_MATRIX_V7.md",
+  "supersedes": "data/research/evidence_master_matrix_v6.json",
+  "candidates": [
+    {"id":"C01","tier":"A","status":"unchanged"},
+    {"id":"C02","tier":"B","strength_note":"B+_strong","status":"preserved"},
+    {"id":"C03","tier":"B","strength_note":"B+_exceptional_near_A","status":"preserved_from_v6"},
+    {"id":"C04","tier":"B","strength_note":"B+_exceptional_near_A","status":"preserved"},
+    {"id":"C05","tier":"C","status":"unchanged"},
+    {"id":"C06","tier":"C","status":"unchanged"},
+    {"id":"C07","tier":"A","status":"unchanged"},
+    {
+      "id":"C08",
+      "tier":"A",
+      "candidate":"Tschutschá → Tschutschelíameke",
+      "source_direct_paradigm":true,
+      "historical_forms":["Tschutschá","Tschutschelíameke","Tschutschelíla"],
+      "normalized_forms":["čučá","čučelíameke","čučelíla"],
+      "exact_family_applicative_e_analysis":true,
+      "applicative_analysis":"tschutsch-e- 'ungirle' < tschutschá 'ungir'",
+      "passive_li_analysis":true,
+      "participial_ameke_analysis":true,
+      "published_direct_comparison_to_parsed_construction":true,
+      "published_comparator":"cf. tschutschelíameke 'ungido' in tsanelíameke -e-li-ameke analysis",
+      "morpheme_chain_source_constrained":true,
+      "allowed_representation":"tschutsch- + -e + -li + -ameke",
+      "single_line_token_parse":false,
+      "automatic_surface_liameke_segmentation":false
+    },
+    {"id":"C09","tier":"B","strength_note":"strong_plus_ocr_pending_facsimile","status":"preserved"}
+  ],
+  "historical_li_ameke_construction": {
+    "status":"two_historical_A_source_explicit_roots",
+    "A_roots":["tsanelíameke","tschutschelíameke"],
+    "negative_controls":["ganelíameke","uilíameke","selíameke"]
+  },
+  "negative_controls":["N01","N02","N03","N04","N05","N06","N07","N08","N09"],
+  "global_constraints":[
+    "No universal -ameke > -ami law.",
+    "No automatic surface liameke segmentation.",
+    "Composite explicit source analysis can satisfy tier A when every component and the exact comparator are source-anchored; it is not equivalent to claiming a single-line interlinear parse exists.",
+    "No backward projection of modern ros-ka-me into historical rosácame(ke)."
+  ],
+  "next_source_test":"C08 is closed absent contradiction. Move to another candidate capable of changing tier; do not reopen C02/C03/C04/C09 for generic accumulation."
+}
