@@ -1,0 +1,49 @@
+{
+  "schema_version": "1.8",
+  "date": "2026-08-14",
+  "project": "Rarámuri Histórico Digital",
+  "canonical_assessment": "AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md",
+  "matrix_document": "EVIDENCE_MASTER_MATRIX_V9.md",
+  "supersedes": "data/research/evidence_master_matrix_v8.json",
+  "portfolio_summary": {"A":["C01","C07","C08"],"B":["C02","C03","C04","C05","C06","C09"],"C":[]},
+  "candidates": [
+    {"id":"C01","tier":"A","status":"unchanged"},
+    {"id":"C02","tier":"B","strength_note":"B+_strong","status":"preserved"},
+    {"id":"C03","tier":"B","strength_note":"B+_exceptional_near_A","status":"preserved"},
+    {"id":"C04","tier":"B","strength_note":"B+_exceptional_near_A","status":"preserved"},
+    {"id":"C05","tier":"B","strength_note":"B+_strong","status":"preserved_from_v8"},
+    {
+      "id":"C06",
+      "tier":"B",
+      "strength_note":"B+_exceptional_near_A_Steffel_to_modern",
+      "candidate":"tsocamec/otsocamec → čókameke ~ čókame → chó-ka-me",
+      "guadalaxara_1683_black_form":"tsocamec/otsocamec",
+      "guadalaxara_1683_meaning":"oscuro/negro",
+      "guadalaxara_segmentation":"unresolved",
+      "steffel_long_short_pair":["čókameke","čókame"],
+      "published_Steffel_Hilton_Brambila_comparison":true,
+      "historical_color_class_derived_analysis":true,
+      "historical_suffix_inventory":["-game","-came","-queme","final -ke"],
+      "modern_black_root":"čó-",
+      "modern_black_root_meaning":"negro",
+      "modern_kame_analysis":"-ka + participial -ame",
+      "modern_regional_forms":["chó-ka-mi","chó-ka-me","chó-ko-m"],
+      "steffel_modern_structural_continuity":"very_strong",
+      "historical_token_specific_parse":"not_recovered",
+      "historical_ka_identity":"not_demonstrated",
+      "final_c_to_ke_relation":"not_demonstrated",
+      "remaining_A_requirement":"token-specific historical structural analysis OR resolved Guadalaxara segmentation/grafemics"
+    },
+    {"id":"C07","tier":"A","status":"unchanged"},
+    {"id":"C08","tier":"A","status":"preserved"},
+    {"id":"C09","tier":"B","strength_note":"strong_plus_ocr_pending_facsimile","status":"preserved"}
+  ],
+  "global_constraints":[
+    "No universal -ameke > -ami law.",
+    "No backward projection of modern -ka into 1683 or Steffel without token-specific support.",
+    "Published class-level historical derivation does not equal an exact token parse.",
+    "No automatic equivalence of <c>, <k>, <que>, <ke>.",
+    "No automatic cognacy from strong formal-semantic similarity."
+  ],
+  "next_source_test":"No positive candidate remains in tier C. Shift from generic candidate discovery to resolving tier-B structural bottlenecks through facsimiles, paradigms, grafemics, or direct published comparisons."
+}
