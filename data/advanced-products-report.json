@@ -12,7 +12,9 @@
       },
       "relation_types": {
         "VÉASE": 19
-      }
+      },
+      "method": "19 remisiones canónicas tomadas de data/lexical-relations.json; destinos únicos, incluidas cuatro adjudicaciones documentales reproducibles.",
+      "validation_status": "Destinos estructuralmente resueltos; cotejo lingüístico pendiente"
     },
     "22": {
       "records": 1825,

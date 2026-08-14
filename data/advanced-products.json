@@ -6,18 +6,16 @@
     "record_type": "Arista de remisión",
     "form": "Abé",
     "normalized_form": "abé",
-    "related_form": "jipi",
+    "related_form": "Jipi",
     "label": "Resuelta",
     "subtype": "Comentarios",
-    "description": "Abé → jipi",
+    "description": "Abé → Jipi",
     "relation_type": "VÉASE",
     "target_id": "RD-001154",
     "target_type": "Entrada lexicográfica",
     "entity_id": "RD-000002",
     "entry_id": "RD-000002",
     "related_entry_ids": [
-      "RD-001154",
-      "RD-001154",
       "RD-001154"
     ],
     "text_rrm": "",
@@ -37,9 +35,9 @@
     "source_document": "DICCIONARIO raramuri.pdf",
     "page_start": 3,
     "page_end": 3,
-    "method": "Expresión regular sobre traducción, comentarios y variantes; resolución por lema normalizado.",
+    "method": "Relación canónica data/lexical-relations.json; destino resuelto inequívocamente por correspondencia documental de forma.",
     "confidence": "Alta",
-    "validation_status": "Pendiente de validación académica"
+    "validation_status": "Pendiente de cotejo lingüístico"
   },
   {
     "advanced_id": "ADV-21-000002",
@@ -48,18 +46,16 @@
     "record_type": "Arista de remisión",
     "form": "Abé",
     "normalized_form": "abé",
-    "related_form": "curipi",
+    "related_form": "Curipi",
     "label": "Resuelta",
     "subtype": "Comentarios",
-    "description": "Abé → curipi",
+    "description": "Abé → Curipi",
     "relation_type": "VÉASE",
     "target_id": "RD-000600",
     "target_type": "Entrada lexicográfica",
     "entity_id": "RD-000002",
     "entry_id": "RD-000002",
     "related_entry_ids": [
-      "RD-000600",
-      "RD-000600",
       "RD-000600"
     ],
     "text_rrm": "",
@@ -79,9 +75,9 @@
     "source_document": "DICCIONARIO raramuri.pdf",
     "page_start": 3,
     "page_end": 3,
-    "method": "Expresión regular sobre traducción, comentarios y variantes; resolución por lema normalizado.",
+    "method": "Relación canónica data/lexical-relations.json; destino resuelto inequívocamente por correspondencia documental de forma.",
     "confidence": "Alta",
-    "validation_status": "Pendiente de validación académica"
+    "validation_status": "Pendiente de cotejo lingüístico"
   },
   {
     "advanced_id": "ADV-21-000003",
@@ -90,18 +86,16 @@
     "record_type": "Arista de remisión",
     "form": "Acá",
     "normalized_form": "acá",
-    "related_form": "cho'ó",
+    "related_form": "Cho’ó",
     "label": "Resuelta",
     "subtype": "Comentarios",
-    "description": "Acá → cho'ó",
+    "description": "Acá → Cho’ó",
     "relation_type": "VÉASE",
     "target_id": "RD-000762",
     "target_type": "Entrada lexicográfica",
     "entity_id": "RD-000006",
     "entry_id": "RD-000006",
     "related_entry_ids": [
-      "RD-000762",
-      "RD-000762",
       "RD-000762"
     ],
     "text_rrm": "",
@@ -121,9 +115,9 @@
     "source_document": "DICCIONARIO raramuri.pdf",
     "page_start": 3,
     "page_end": 3,
-    "method": "Expresión regular sobre traducción, comentarios y variantes; resolución por lema normalizado.",
+    "method": "Relación canónica data/lexical-relations.json; destino resuelto inequívocamente por correspondencia documental de forma.",
     "confidence": "Alta",
-    "validation_status": "Pendiente de validación académica"
+    "validation_status": "Pendiente de cotejo lingüístico"
   },
   {
     "advanced_id": "ADV-21-000004",
@@ -132,18 +126,16 @@
     "record_type": "Arista de remisión",
     "form": "Achigó yiri ju",
     "normalized_form": "achigó yiri ju",
-    "related_form": "néchigo",
+    "related_form": "Néchigo",
     "label": "Resuelta",
     "subtype": "Comentarios",
-    "description": "Achigó yiri ju → néchigo",
+    "description": "Achigó yiri ju → Néchigo",
     "relation_type": "VÉASE",
     "target_id": "RD-001576",
     "target_type": "Entrada lexicográfica",
     "entity_id": "RD-000032",
     "entry_id": "RD-000032",
     "related_entry_ids": [
-      "RD-001576",
-      "RD-001576",
       "RD-001576"
     ],
     "text_rrm": "",
@@ -163,9 +155,9 @@
     "source_document": "DICCIONARIO raramuri.pdf",
     "page_start": 4,
     "page_end": 4,
-    "method": "Expresión regular sobre traducción, comentarios y variantes; resolución por lema normalizado.",
+    "method": "Relación canónica data/lexical-relations.json; destino resuelto inequívocamente por correspondencia documental de forma.",
     "confidence": "Alta",
-    "validation_status": "Pendiente de validación académica"
+    "validation_status": "Pendiente de cotejo lingüístico"
   },
   {
     "advanced_id": "ADV-21-000005",
@@ -174,18 +166,16 @@
     "record_type": "Arista de remisión",
     "form": "A'lara",
     "normalized_form": "a'lara",
-    "related_form": "ca'rara",
+    "related_form": "Ca’rara",
     "label": "Resuelta",
     "subtype": "Comentarios",
-    "description": "A'lara → ca'rara",
+    "description": "A'lara → Ca’rara",
     "relation_type": "VÉASE",
     "target_id": "RD-000430",
     "target_type": "Entrada lexicográfica",
     "entity_id": "RD-000039",
     "entry_id": "RD-000039",
     "related_entry_ids": [
-      "RD-000430",
-      "RD-000430",
       "RD-000430"
     ],
     "text_rrm": "",
@@ -205,9 +195,9 @@
     "source_document": "DICCIONARIO raramuri.pdf",
     "page_start": 5,
     "page_end": 5,
-    "method": "Expresión regular sobre traducción, comentarios y variantes; resolución por lema normalizado.",
+    "method": "Relación canónica data/lexical-relations.json; destino resuelto inequívocamente por correspondencia documental de forma.",
     "confidence": "Alta",
-    "validation_status": "Pendiente de validación académica"
+    "validation_status": "Pendiente de cotejo lingüístico"
   },
   {
     "advanced_id": "ADV-21-000006",
@@ -216,28 +206,17 @@
     "record_type": "Arista de remisión",
     "form": "Aqué",
     "normalized_form": "aqué",
-    "related_form": "acá",
+    "related_form": "Acá",
     "label": "Resuelta",
     "subtype": "Comentarios",
-    "description": "Aqué → acá",
+    "description": "Aqué → Acá",
     "relation_type": "VÉASE",
-    "target_id": "RD-000006",
+    "target_id": "RD-000008",
     "target_type": "Entrada lexicográfica",
     "entity_id": "RD-000086",
     "entry_id": "RD-000086",
     "related_entry_ids": [
-      "RD-000006",
-      "RD-000006",
-      "RD-000006",
-      "RD-000007",
-      "RD-000007",
-      "RD-000007",
-      "RD-000008",
-      "RD-000008",
-      "RD-000008",
-      "RD-000012",
-      "RD-000012",
-      "RD-000012"
+      "RD-000008"
     ],
     "text_rrm": "",
     "text_spa": "",
@@ -256,9 +235,9 @@
     "source_document": "DICCIONARIO raramuri.pdf",
     "page_start": 7,
     "page_end": 7,
-    "method": "Expresión regular sobre traducción, comentarios y variantes; resolución por lema normalizado.",
+    "method": "Relación canónica data/lexical-relations.json; destino resuelto por adjudicación documental LRA-000001.",
     "confidence": "Alta",
-    "validation_status": "Pendiente de validación académica"
+    "validation_status": "Pendiente de cotejo lingüístico"
   },
   {
     "advanced_id": "ADV-21-000007",
@@ -267,18 +246,16 @@
     "record_type": "Arista de remisión",
     "form": "Bi'neri",
     "normalized_form": "bi'neri",
-    "related_form": "a'huínari",
+    "related_form": "A'huínari",
     "label": "Resuelta",
     "subtype": "Comentarios",
-    "description": "Bi'neri → a'huínari",
+    "description": "Bi'neri → A'huínari",
     "relation_type": "VÉASE",
     "target_id": "RD-000036",
     "target_type": "Entrada lexicográfica",
     "entity_id": "RD-000260",
     "entry_id": "RD-000260",
     "related_entry_ids": [
-      "RD-000036",
-      "RD-000036",
       "RD-000036"
     ],
     "text_rrm": "",
@@ -298,9 +275,9 @@
     "source_document": "DICCIONARIO raramuri.pdf",
     "page_start": 16,
     "page_end": 16,
-    "method": "Expresión regular sobre traducción, comentarios y variantes; resolución por lema normalizado.",
+    "method": "Relación canónica data/lexical-relations.json; destino resuelto inequívocamente por correspondencia documental de forma.",
     "confidence": "Alta",
-    "validation_status": "Pendiente de validación académica"
+    "validation_status": "Pendiente de cotejo lingüístico"
   },
   {
     "advanced_id": "ADV-21-000008",
@@ -309,18 +286,16 @@
     "record_type": "Arista de remisión",
     "form": "Biteba",
     "normalized_form": "biteba",
-    "related_form": "chi'reba",
+    "related_form": "Chi’reba",
     "label": "Resuelta",
     "subtype": "Comentarios",
-    "description": "Biteba → chi'reba",
+    "description": "Biteba → Chi’reba",
     "relation_type": "VÉASE",
     "target_id": "RD-000722",
     "target_type": "Entrada lexicográfica",
     "entity_id": "RD-000283",
     "entry_id": "RD-000283",
     "related_entry_ids": [
-      "RD-000722",
-      "RD-000722",
       "RD-000722"
     ],
     "text_rrm": "",
@@ -340,9 +315,9 @@
     "source_document": "DICCIONARIO raramuri.pdf",
     "page_start": 18,
     "page_end": 18,
-    "method": "Expresión regular sobre traducción, comentarios y variantes; resolución por lema normalizado.",
+    "method": "Relación canónica data/lexical-relations.json; destino resuelto inequívocamente por correspondencia documental de forma.",
     "confidence": "Alta",
-    "validation_status": "Pendiente de validación académica"
+    "validation_status": "Pendiente de cotejo lingüístico"
   },
   {
     "advanced_id": "ADV-21-000009",
@@ -351,18 +326,16 @@
     "record_type": "Arista de remisión",
     "form": "Borogá",
     "normalized_form": "borogá",
-    "related_form": "buré",
+    "related_form": "Buré",
     "label": "Resuelta",
     "subtype": "Comentarios",
-    "description": "Borogá → buré",
+    "description": "Borogá → Buré",
     "relation_type": "VÉASE",
     "target_id": "RD-000342",
     "target_type": "Entrada lexicográfica",
     "entity_id": "RD-000312",
     "entry_id": "RD-000312",
     "related_entry_ids": [
-      "RD-000342",
-      "RD-000342",
       "RD-000342"
     ],
     "text_rrm": "",
@@ -382,9 +355,9 @@
     "source_document": "DICCIONARIO raramuri.pdf",
     "page_start": 19,
     "page_end": 19,
-    "method": "Expresión regular sobre traducción, comentarios y variantes; resolución por lema normalizado.",
+    "method": "Relación canónica data/lexical-relations.json; destino resuelto inequívocamente por correspondencia documental de forma.",
     "confidence": "Alta",
-    "validation_status": "Pendiente de validación académica"
+    "validation_status": "Pendiente de cotejo lingüístico"
   },
   {
     "advanced_id": "ADV-21-000010",
@@ -393,18 +366,16 @@
     "record_type": "Arista de remisión",
     "form": "Cahuisori",
     "normalized_form": "cahuisori",
-    "related_form": "quimá",
+    "related_form": "Quimá",
     "label": "Resuelta",
     "subtype": "Comentarios",
-    "description": "Cahuisori → quimá",
+    "description": "Cahuisori → Quimá",
     "relation_type": "VÉASE",
     "target_id": "RD-001877",
     "target_type": "Entrada lexicográfica",
     "entity_id": "RD-000386",
     "entry_id": "RD-000386",
     "related_entry_ids": [
-      "RD-001877",
-      "RD-001877",
       "RD-001877"
     ],
     "text_rrm": "",
@@ -424,9 +395,9 @@
     "source_document": "DICCIONARIO raramuri.pdf",
     "page_start": 23,
     "page_end": 23,
-    "method": "Expresión regular sobre traducción, comentarios y variantes; resolución por lema normalizado.",
+    "method": "Relación canónica data/lexical-relations.json; destino resuelto inequívocamente por correspondencia documental de forma.",
     "confidence": "Alta",
-    "validation_status": "Pendiente de validación académica"
+    "validation_status": "Pendiente de cotejo lingüístico"
   },
   {
     "advanced_id": "ADV-21-000011",
@@ -434,19 +405,17 @@
     "product_name": "Base de remisiones internas",
     "record_type": "Arista de remisión",
     "form": "Ca’rara",
-    "normalized_form": "caʼrara",
-    "related_form": "a´lara",
+    "normalized_form": "ca’rara",
+    "related_form": "A'lara",
     "label": "Resuelta",
     "subtype": "Comentarios",
-    "description": "Ca’rara → a´lara",
+    "description": "Ca’rara → A'lara",
     "relation_type": "VÉASE",
     "target_id": "RD-000039",
     "target_type": "Entrada lexicográfica",
     "entity_id": "RD-000430",
     "entry_id": "RD-000430",
     "related_entry_ids": [
-      "RD-000039",
-      "RD-000039",
       "RD-000039"
     ],
     "text_rrm": "",
@@ -466,9 +435,9 @@
     "source_document": "DICCIONARIO raramuri.pdf",
     "page_start": 25,
     "page_end": 25,
-    "method": "Expresión regular sobre traducción, comentarios y variantes; resolución por lema normalizado.",
+    "method": "Relación canónica data/lexical-relations.json; destino resuelto inequívocamente por correspondencia documental de forma.",
     "confidence": "Alta",
-    "validation_status": "Pendiente de validación académica"
+    "validation_status": "Pendiente de cotejo lingüístico"
   },
   {
     "advanced_id": "ADV-21-000012",
@@ -477,18 +446,16 @@
     "record_type": "Arista de remisión",
     "form": "Caré",
     "normalized_form": "caré",
-    "related_form": "garé",
+    "related_form": "Garé",
     "label": "Resuelta",
     "subtype": "Comentarios",
-    "description": "Caré → garé",
+    "description": "Caré → Garé",
     "relation_type": "VÉASE",
     "target_id": "RD-000859",
     "target_type": "Entrada lexicográfica",
     "entity_id": "RD-000433",
     "entry_id": "RD-000433",
     "related_entry_ids": [
-      "RD-000859",
-      "RD-000859",
       "RD-000859"
     ],
     "text_rrm": "",
@@ -508,9 +475,9 @@
     "source_document": "DICCIONARIO raramuri.pdf",
     "page_start": 25,
     "page_end": 25,
-    "method": "Expresión regular sobre traducción, comentarios y variantes; resolución por lema normalizado.",
+    "method": "Relación canónica data/lexical-relations.json; destino resuelto inequívocamente por correspondencia documental de forma.",
     "confidence": "Alta",
-    "validation_status": "Pendiente de validación académica"
+    "validation_status": "Pendiente de cotejo lingüístico"
   },
   {
     "advanced_id": "ADV-21-000013",
@@ -519,25 +486,16 @@
     "record_type": "Arista de remisión",
     "form": "Cohuí",
     "normalized_form": "cohuí",
-    "related_form": "cochi",
+    "related_form": "Cochi, cohuí",
     "label": "Resuelta",
     "subtype": "Traducción",
-    "description": "Cohuí → cochi",
+    "description": "Cohuí → Cochi, cohuí",
     "relation_type": "VÉASE",
-    "target_id": "RD-000481",
+    "target_id": "RD-000484",
     "target_type": "Entrada lexicográfica",
     "entity_id": "RD-000495",
     "entry_id": "RD-000495",
     "related_entry_ids": [
-      "RD-000481",
-      "RD-000481",
-      "RD-000481",
-      "RD-000482",
-      "RD-000482",
-      "RD-000482",
-      "RD-000483",
-      "RD-000483",
-      "RD-000483",
       "RD-000484"
     ],
     "text_rrm": "",
@@ -557,9 +515,9 @@
     "source_document": "DICCIONARIO raramuri.pdf",
     "page_start": 27,
     "page_end": 27,
-    "method": "Expresión regular sobre traducción, comentarios y variantes; resolución por lema normalizado.",
+    "method": "Relación canónica data/lexical-relations.json; destino resuelto por adjudicación documental LRA-000002.",
     "confidence": "Alta",
-    "validation_status": "Pendiente de validación académica"
+    "validation_status": "Pendiente de cotejo lingüístico"
   },
   {
     "advanced_id": "ADV-21-000014",
@@ -568,18 +526,16 @@
     "record_type": "Arista de remisión",
     "form": "Cosísiya",
     "normalized_form": "cosísiya",
-    "related_form": "co’huá",
+    "related_form": "Co'huá",
     "label": "Resuelta",
     "subtype": "Comentarios",
-    "description": "Cosísiya → co’huá",
+    "description": "Cosísiya → Co'huá",
     "relation_type": "VÉASE",
     "target_id": "RD-000489",
     "target_type": "Entrada lexicográfica",
     "entity_id": "RD-000546",
     "entry_id": "RD-000546",
     "related_entry_ids": [
-      "RD-000489",
-      "RD-000489",
       "RD-000489"
     ],
     "text_rrm": "",
@@ -599,9 +555,9 @@
     "source_document": "DICCIONARIO raramuri.pdf",
     "page_start": 29,
     "page_end": 29,
-    "method": "Expresión regular sobre traducción, comentarios y variantes; resolución por lema normalizado.",
+    "method": "Relación canónica data/lexical-relations.json; destino resuelto inequívocamente por correspondencia documental de forma.",
     "confidence": "Alta",
-    "validation_status": "Pendiente de validación académica"
+    "validation_status": "Pendiente de cotejo lingüístico"
   },
   {
     "advanced_id": "ADV-21-000015",
@@ -610,10 +566,10 @@
     "record_type": "Arista de remisión",
     "form": "Cusihua",
     "normalized_form": "cusihua",
-    "related_form": "igúsuhua",
+    "related_form": "Igúsuhua, icúsuhua",
     "label": "Resuelta",
     "subtype": "Traducción",
-    "description": "Cusihua → igúsuhua",
+    "description": "Cusihua → Igúsuhua, icúsuhua",
     "relation_type": "VÉASE",
     "target_id": "RD-001067",
     "target_type": "Entrada lexicográfica",
@@ -639,9 +595,9 @@
     "source_document": "DICCIONARIO raramuri.pdf",
     "page_start": 32,
     "page_end": 32,
-    "method": "Expresión regular sobre traducción, comentarios y variantes; resolución por lema normalizado.",
+    "method": "Relación canónica data/lexical-relations.json; destino resuelto inequívocamente por correspondencia documental de forma.",
     "confidence": "Alta",
-    "validation_status": "Pendiente de validación académica"
+    "validation_status": "Pendiente de cotejo lingüístico"
   },
   {
     "advanced_id": "ADV-21-000016",
@@ -650,21 +606,16 @@
     "record_type": "Arista de remisión",
     "form": "Garé",
     "normalized_form": "garé",
-    "related_form": "caré",
+    "related_form": "Caré",
     "label": "Resuelta",
     "subtype": "Traducción",
-    "description": "Garé → caré",
+    "description": "Garé → Caré",
     "relation_type": "VÉASE",
-    "target_id": "RD-000432",
+    "target_id": "RD-000433",
     "target_type": "Entrada lexicográfica",
     "entity_id": "RD-000859",
     "entry_id": "RD-000859",
     "related_entry_ids": [
-      "RD-000432",
-      "RD-000432",
-      "RD-000432",
-      "RD-000433",
-      "RD-000433",
       "RD-000433"
     ],
     "text_rrm": "",
@@ -684,9 +635,9 @@
     "source_document": "DICCIONARIO raramuri.pdf",
     "page_start": 42,
     "page_end": 42,
-    "method": "Expresión regular sobre traducción, comentarios y variantes; resolución por lema normalizado.",
+    "method": "Relación canónica data/lexical-relations.json; destino resuelto inequívocamente por correspondencia documental de forma.",
     "confidence": "Alta",
-    "validation_status": "Pendiente de validación académica"
+    "validation_status": "Pendiente de cotejo lingüístico"
   },
   {
     "advanced_id": "ADV-21-000017",
@@ -695,18 +646,16 @@
     "record_type": "Arista de remisión",
     "form": "Huabé",
     "normalized_form": "huabé",
-    "related_form": "hue",
+    "related_form": "Hue",
     "label": "Resuelta",
     "subtype": "Comentarios",
-    "description": "Huabé → hue",
+    "description": "Huabé → Hue",
     "relation_type": "VÉASE",
     "target_id": "RD-000939",
     "target_type": "Entrada lexicográfica",
     "entity_id": "RD-000865",
     "entry_id": "RD-000865",
     "related_entry_ids": [
-      "RD-000939",
-      "RD-000939",
       "RD-000939"
     ],
     "text_rrm": "",
@@ -726,9 +675,9 @@
     "source_document": "DICCIONARIO raramuri.pdf",
     "page_start": 42,
     "page_end": 42,
-    "method": "Expresión regular sobre traducción, comentarios y variantes; resolución por lema normalizado.",
+    "method": "Relación canónica data/lexical-relations.json; destino resuelto inequívocamente por correspondencia documental de forma.",
     "confidence": "Alta",
-    "validation_status": "Pendiente de validación académica"
+    "validation_status": "Pendiente de cotejo lingüístico"
   },
   {
     "advanced_id": "ADV-21-000018",
@@ -737,22 +686,17 @@
     "record_type": "Arista de remisión",
     "form": "Huachíami",
     "normalized_form": "huachíami",
-    "related_form": "huatoná",
+    "related_form": "Huatoná",
     "label": "Resuelta",
     "subtype": "Comentarios",
-    "description": "Huachíami → huatoná",
+    "description": "Huachíami → Huatoná",
     "relation_type": "VÉASE",
     "target_id": "RD-000934",
     "target_type": "Entrada lexicográfica",
     "entity_id": "RD-000877",
     "entry_id": "RD-000877",
     "related_entry_ids": [
-      "RD-000934",
-      "RD-000934",
-      "RD-000934",
-      "RD-000935",
-      "RD-000935",
-      "RD-000935"
+      "RD-000934"
     ],
     "text_rrm": "",
     "text_spa": "",
@@ -771,9 +715,9 @@
     "source_document": "DICCIONARIO raramuri.pdf",
     "page_start": 42,
     "page_end": 42,
-    "method": "Expresión regular sobre traducción, comentarios y variantes; resolución por lema normalizado.",
+    "method": "Relación canónica data/lexical-relations.json; destino resuelto por adjudicación documental LRA-000004.",
     "confidence": "Alta",
-    "validation_status": "Pendiente de validación académica"
+    "validation_status": "Pendiente de cotejo lingüístico"
   },
   {
     "advanced_id": "ADV-21-000019",
@@ -781,19 +725,17 @@
     "product_name": "Base de remisiones internas",
     "record_type": "Arista de remisión",
     "form": "I’hueri",
-    "normalized_form": "iʼhueri",
-    "related_form": "hui’rí",
+    "normalized_form": "i’hueri",
+    "related_form": "Hui’rí",
     "label": "Resuelta",
     "subtype": "Comentarios",
-    "description": "I’hueri → hui’rí",
+    "description": "I’hueri → Hui’rí",
     "relation_type": "VÉASE",
     "target_id": "RD-001016",
     "target_type": "Entrada lexicográfica",
     "entity_id": "RD-001079",
     "entry_id": "RD-001079",
     "related_entry_ids": [
-      "RD-001016",
-      "RD-001016",
       "RD-001016"
     ],
     "text_rrm": "",
@@ -813,9 +755,9 @@
     "source_document": "DICCIONARIO raramuri.pdf",
     "page_start": 50,
     "page_end": 50,
-    "method": "Expresión regular sobre traducción, comentarios y variantes; resolución por lema normalizado.",
+    "method": "Relación canónica data/lexical-relations.json; destino resuelto inequívocamente por correspondencia documental de forma.",
     "confidence": "Alta",
-    "validation_status": "Pendiente de validación académica"
+    "validation_status": "Pendiente de cotejo lingüístico"
   },
   {
     "advanced_id": "ADV-22-000001",
@@ -602645,11 +602587,11 @@
     "related_entry_ids": [],
     "text_rrm": "",
     "text_spa": "",
-    "evidence": "Unidad: Relación entre formas; registros: 829; fuente mínima: entidad + source_code + página.",
+    "evidence": "Unidad: Relación entre formas; registros: 830; fuente mínima: entidad + source_code + página.",
     "tags": [],
     "score": 0,
     "rank": 0,
-    "record_count": 829,
+    "record_count": 830,
     "example_count": 0,
     "form_count": 0,
     "sense_count": 0,
