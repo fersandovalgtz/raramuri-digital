@@ -1,0 +1,140 @@
+{
+  "artifact": "li_ame_three_root_constructional_replication_v1",
+  "date": "2026-08-13",
+  "status": "research_audit_not_community_validation",
+  "question": "Does the sequence li+ame represent a recurrent compositional Rarámuri construction across independent lexical roots and varieties, rather than an idiosyncratic property of Western newálime?",
+  "root_families": [
+    {
+      "family": "newa_make",
+      "lexical_domain": "hacer / crear",
+      "direct_segmented_evidence": [
+        {
+          "variety": "Norogachi",
+          "form": "newá-li",
+          "analysis": "make-PFV",
+          "source": "Villalpando Quiñonez et al. 2021"
+        },
+        {
+          "variety": "Norogachi",
+          "form": "newá-ami",
+          "analysis": "make-NMLZ",
+          "source": "Villalpando Quiñonez et al. 2021"
+        },
+        {
+          "variety": "Choguita",
+          "form": "rihói-li-ame",
+          "analysis": "inhabit.PL-PST-PTCP",
+          "source": "Caballero 2022",
+          "role": "structural control showing li + ame stacking is grammatical"
+        }
+      ],
+      "western_surface_evidence": [
+        "newalime in Western TAC",
+        "newalime ju in a 2010 Lowland/Western title",
+        "newálime jú in the Oeste column of Manual Ralámuli 2019",
+        "nehualíame ju in Bacusínare 1972"
+      ],
+      "assessment": "Strong evidence for internal li material and independent -ami nominalization; Western newálime exact segmentation remains a preferred working hypothesis rather than an authoritative segmentation."
+    },
+    {
+      "family": "mea_kill",
+      "lexical_domain": "matar",
+      "direct_or_same_root_controls": [
+        {
+          "source": "Compendio básico de la gramática ralámuli 1997",
+          "form": "me'á + -ame = me'áme",
+          "analysis": "kill + participial/nominalizing -ame",
+          "varieties": ["Baja", "Baja-TB", "Cumbre", "Sur-B"]
+        },
+        {
+          "source": "Compendio básico de la gramática ralámuli 1997",
+          "assessment": "The same kill root participates in the passive domain, where the grammar explicitly discusses passive -li combined with -ru; OCR prevents reliable recovery of the exact surface strings."
+        },
+        {
+          "source": "Western TAC",
+          "forms": ["me'ale", "me'ame", "me'li-..."],
+          "assessment": "Same Western lexical family displays finite -le, -ame, and extensive li-surface profiles."
+        }
+      ],
+      "western_complex_form": "me'líame ju (Bacusínare 1974)",
+      "assessment": "Second Western lexical-root replication. M1 me'+PASS -li+PTCP/NMLZ -ame is the strongest working hypothesis; derived/allomorphic me'li- + -ame remains a serious alternative."
+    },
+    {
+      "family": "ani_say_call",
+      "lexical_domain": "decir / llamar",
+      "direct_segmented_evidence": [
+        {
+          "variety": "Munérachi",
+          "form": "San Isidro ani-lí-ame",
+          "analysis": "San Isidro decir-PSV-AGT",
+          "translation_context": "al que le dicen San Isidro",
+          "source": "Moreno Pineda & Valenzuela Romo, Expedicionario 4 (2022)"
+        },
+        {
+          "variety": "Munérachi",
+          "form": "échi wisú ani-lí-ame",
+          "analysis": "DEM tlacuache dicen-CE-NMZ",
+          "translation_context": "al que le dicen tlacuache",
+          "source": "Moreno Pineda & Valenzuela Romo, Expedicionario 4 (2022)"
+        }
+      ],
+      "western_surface_evidence": [
+        {
+          "source": "Manual Ralámuli Escrito para Todas y Todos 2019",
+          "form": "¿Chú anilíame rewé?",
+          "variety_column": "Oeste",
+          "spanish": "¿Cómo se llama?",
+          "access_note": "Form read from an indexed digital copy; official existence and interinstitutional provenance of the Manual are independently verified by UPNECH/Government of Chihuahua."
+        },
+        {
+          "source": "Western TAC",
+          "form": "anilime",
+          "contexts": ["Matíasi anilime nile bilé", "José ... Barsabasi anilime nile", "Sepasi anilime"],
+          "assessment": "Highly recurrent natural-language form in 'called/named X' contexts; TAC provides no interlinear segmentation."
+        },
+        {
+          "source": "Compendio 1997, Baja-TB",
+          "form_as_digitized": "anilfame",
+          "context": "contrast between '¿Cómo le dicen a usted?' and '¿Cómo se nombra usted?'",
+          "ocr_warning": true,
+          "normalization_performed": false
+        }
+      ],
+      "assessment": "Third-root replication and the clearest direct demonstration that ani + li + ame is compositionally analyzable in contemporary Rarámuri. Western surface forms independently converge on the same chain."
+    }
+  ],
+  "replication_assessment": {
+    "minimum_independent_lexical_families": 3,
+    "li_plus_ame_chain_productivity": "high_confidence",
+    "direct_compositional_li_ame_example_exists": true,
+    "direct_compositional_example": "Munérachi ani-lí-ame",
+    "western_surface_recurrence": "high_confidence",
+    "newalime_isolated_lexicalization": "strongly_disfavored",
+    "same_function_of_li_across_roots": "not_proven",
+    "same_function_of_ame_across_all_tokens": "not_proven",
+    "historical_identity_of_li_across_varieties": "not_adjudicated",
+    "historical_identity_of_ame_across_varieties": "not_adjudicated",
+    "historical_continuity_to_steffel_ameke": "not_adjudicated"
+  },
+  "methodological_consequence": "The argument can now distinguish constructional productivity from historical cognacy. A recurrent li+ame chain is directly documented across roots/varieties, but each historical correspondence still requires lexeme- and morpheme-specific adjudication.",
+  "epistemic_flags": {
+    "ai_assisted": true,
+    "human_reviewed": false,
+    "community_validated": false,
+    "automatic_morpheme_assignment": false,
+    "cognacy_judgment_performed": false,
+    "sound_correspondence_judgment_performed": false
+  },
+  "prohibited_inferences": [
+    "Do not infer one universal semantic value for every -li token across newa-, me'á- and ani-.",
+    "Do not normalize OCR-damaged anilfame to anilíame without facsimile verification.",
+    "Do not transfer Munérachi segmentation automatically to Western forms.",
+    "Do not promote constructional productivity to historical cognacy with Steffel -ameke without additional evidence."
+  ],
+  "next_tests": [
+    "Find a fourth lexical root with directly segmented li+ame in a primary linguistic source.",
+    "Search the Manual and Munérachi texts for binilíame/other liame forms and establish roots independently.",
+    "Build a Western TAC concordance for anilime, newalime and me'li... and classify syntactic environments without automatic segmentation.",
+    "Compare historical Steffel forms based on cognate ani-/newa-/me'a roots only if lexical continuity can be independently established."
+  ]
+}
