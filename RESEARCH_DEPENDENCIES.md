@@ -12,15 +12,44 @@ Este documento registra qué falta para elevar de grado las hipótesis vigentes.
 
 **Prioridad:** control directo de grafías coloniales, distribución de `ame(+c/k)`, posible segunda evidencia histórica para `li + ame` y mejor evaluación del puente cromático del siglo XVII.
 
-## D2. Facsímil Tellechea 1826
+## D2. Tellechea 1826
 
-**Objetivo:** cotejar visualmente las lecturas OCR y extraer sistemáticamente variantes participiales/adjetivales.
+**Objetivo:** convertir la red OCR de variantes participiales/adjetivales en evidencia diplomática controlada.
 
-**Estado:** facsímil localizado; ingestión estable de imágenes/PDF no completada.
+### Ya completado
 
-**Prioridad:** p. 6 `camec, camé, cameque`; sección de pretéritos con pérdida `que/ca`; p. 27 y participios; pláticas con `machiámec`, `machiámeque`, `machíame`, `simiámec`, `simíame`, `atígameque/atígame`; inventario completo `-amec/-ameque/-ame/-amek/-ameke`.
+La auditoría `TELLECHEA_1826_AME_TOKEN_AUDIT_V4.md` y su JSON clasifican exhaustivamente las 24 ocurrencias crudas en `-amec/-ameque` del OCR completo y distinguen participios explícitos, formas bilingües participiales, metalingüística, otras construcciones, falsos positivos y fragmentos por salto de línea.
 
-**Regla:** no preasumir que la pérdida `que/ca` de pretéritos explique las alternancias participiales.
+Se mantienen como familias OCR fuertes:
+
+- `atígameque ~ atígame`;
+- `simiámec ~ simíame`;
+- `machiámec ~ machiámeque ~ machíameque ~ machíame`.
+
+Se añaden como candidatas OCR pendientes de facsímil:
+
+- `ayoriguámeque ~ ayoriguáme`;
+- `rejoírugameque ~ rejoírugame`.
+
+La auditoría corrige además:
+
+- `gameque` → fragmento de `netetugameque`;
+- `támeque` → fragmento de `natámeque`;
+- `gayéname` → fragmento de línea de `gayénameque`, **no variante breve**.
+
+### Bloqueo restante
+
+**Facsímil:** localizado, pero la ruta técnica de cotejo visual estable no está disponible en el entorno actual para esta ronda.
+
+### Cotejo visual prioritario cuando sea posible
+
+1. `ayoriguámeque ~ ayoriguáme`;
+2. `rejoírugameque ~ rejoírugame`;
+3. límites `netetu-gameque`, `na-támeque`, `gayéname-que`;
+4. lectura diplomática exacta de `Taraijámeque`, `rumgamec` y `yumctvameque`;
+5. sólo después, relación grafemática `c/que/k/ke`.
+
+**Regla:** el OCR puede generar y depurar candidatos, pero no sustituye el facsímil cuando el límite de palabra o una letra determina la conclusión. La pérdida `que/ca` de pretéritos no se transfiere automáticamente a participios.
 
 ## D3. Grafemática colonial `<c>/<k>/<que>/<ke>`
 
@@ -111,15 +140,17 @@ No sustituir este requisito acumulando más ocurrencias de `neseme`, ni converti
 
 **Objetivo:** decidir qué hallazgos pasan del expediente de investigación a datos visibles o notas metodológicas.
 
-**Precondición:** cada hallazgo debe etiquetarse como hecho documental, análisis publicado, inferencia del proyecto o hipótesis no resuelta. C04 no debe integrarse todavía como segmentación/cognación asentada en el dataset estable.
+**Precondición:** cada hallazgo debe etiquetarse como hecho documental, análisis publicado, inferencia del proyecto o hipótesis no resuelta. C04 y los nuevos pares OCR de C09 no deben integrarse todavía como segmentaciones/cognaciones asentadas en el dataset estable.
 
 ## Priorización vigente
 
-**Máximo rendimiento inmediato:** D6 únicamente si aparece una ruta documental nueva hacia el parse token-específico o una comparación histórica directa.  
-**Prioridad documental:** D2 Tellechea y D1 Guadalaxara cuando sean ingeribles.  
+**Máximo rendimiento sin nuevos documentos:** auditar `-ame` de Tellechea sólo alrededor de raíces ya justificadas y paralelos españoles participiales; no usar frecuencia bruta.  
+**Máximo rendimiento con facsímil:** D2, empezando por `ayorigu-`, `rejoíruga-` y límites OCR reconstruidos.  
+**C04:** reabrir D6 sólo si aparece una ruta documental nueva hacia parse token-específico o comparación histórica directa.  
+**Siguiente prioridad documental:** D1 Guadalaxara.  
 **Control metodológico paralelo:** D7 genealogía de fuentes.  
 **Prioridad analítica posterior:** D3 y D4.  
 **Prioridad comparativa:** D5.  
 **Prioridad editorial:** D8.
 
-Mientras estos documentos sigan bloqueados, no abrir búsquedas generales sobre `-ameke/-ami`, `e~i` o `neseme`; sólo pruebas que puedan mover un candidato entre niveles o falsar una hipótesis concreta.
+No abrir búsquedas generales sobre `-ameke/-ami`, `e~i` o `neseme`; sólo pruebas que puedan mover un candidato entre niveles, depurar falsos positivos o falsar una hipótesis concreta.
