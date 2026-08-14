@@ -33,8 +33,9 @@
     {"id":"C08","tier":"A","status":"unchanged"},
     {"id":"C09","tier":"B","strength_note":"strong_plus_ocr_pending_facsimile","status":"unchanged"}
   ],
-  "negative_controls": ["N01","N02","N03","N04","N05","N06","N07","N08","N09","N10"],
-  "N10": "A published ethnohistorical etymology does not automatically invalidate an older explicit lexical derivation; preserve both when their historical relationship is unresolved.",
+  "negative_controls": ["N01","N02","N03","N04","N05","N06","N07","N08","N09","N10","N11"],
+  "N10": "Modern chó-ka-me analysis does not authorize automatic segmentation of 1683 tsocamec/historical black forms or exact historical ka/c identity.",
+  "N11": "A published ethnohistorical etymology does not automatically invalidate an older explicit lexical derivation; preserve both when their historical relationship is unresolved.",
   "portfolio": {
     "A": ["C01","C07","C08"],
     "B_or_Bplus": ["C02","C03","C04","C05","C06","C09"],
