@@ -7,7 +7,14 @@ Este documento registra qué falta para elevar de grado las hipótesis vigentes 
 ## D1. Guadalaxara 1683 / Rodríguez López 2010
 
 **Estado:** edición localizada; ingestión completa bloqueada.  
-**Qué puede resolver:** grafemática colonial, distribución `ame(+c/k)` y puente cromático del siglo XVII.
+**Prioridad:** **máxima** en la nueva fase.
+
+**Qué puede resolver:**
+
+- segmentación/control grafemático de `tsocamec/otsocamec` y, con ello, el principal cuello de C06;
+- relación colonial `<c>/<k>/<que>/<ke>`;
+- distribución temprana `ame(+c/k)`;
+- control independiente del sistema cromático del siglo XVII.
 
 ## D2. Tellechea 1826
 
@@ -23,7 +30,7 @@ Depende de D1/D2 y de prácticas ortográficas explícitas. No resolver por norm
 
 ## D4. Segunda raíz histórica `X-li-ame(ke)`
 
-**RESUELTA.** `tsanelíameke` y `tschutschelíameke` son ahora dos raíces históricas A/source-explicit. La resolución no autoriza segmentación automática de cualquier `liameke` superficial; `ganelíameke`, `uilíameke` y `selíameke` permanecen controles negativos.
+**RESUELTA.** `tsanelíameke` y `tschutschelíameke` son dos raíces históricas A/source-explicit. La resolución no autoriza segmentación automática de cualquier `liameke` superficial; `ganelíameke`, `uilíameke` y `selíameke` permanecen controles negativos.
 
 ## D5. Variación moderna `-ame ~ -me ~ -ami`
 
@@ -47,46 +54,57 @@ Reabrir sólo ante parse/paradigma token-específico de `nesame/neseme` o identi
 
 ## D9. C05 `selí → selíameke ↔ sir-/siríame`
 
-**Estado:** **B formal; B+ fuerte.** Cerrado para acumulación general de `Siríame`.
+**Estado:** B formal, B+ fuerte. Cerrado para acumulación general de `Siríame`.  
+Reabrir sólo ante parse moderno token-específico `sir(i)-ame` con control comparativo suficiente o una fuente que identifique directamente `selí ~ sirí-`.
+
+`selíameke` sigue siendo control negativo para pasivo `-li`; su `li` pertenece a la raíz `selí`.
+
+## D10. C06 negro `tsocamec/otsocamec → čókameke ~ čókame → chó-ka-me`
+
+**Estado:** **B formal; B+ excepcional / cercano a A en Steffel→moderno.**
 
 ### Resuelto
 
-- Merrill: `selíameke` ‘juez del pueblo, gobernante’ deriva directamente de `selí` ‘gobernar’;
-- Márquez: familia moderna `sir-` de gobernar/cacique/gobernador (`sirnama`, `sirachi`, `sirame`, `siri*ma`, `sir*nowa`);
-- Caballero: Choguita `siríame` ‘gobernador’ y `-ame` participial;
-- Merrill: precedentes históricos independientes `l~r` y `e~i`, que vuelven `selí ~ sirí-` plausible pero no regular.
+- 1683 `tsocamec/otsocamec` = ‘oscuro/negro’ como antecedente léxico;
+- Steffel/Merrill `čókameke ~ čókame` = ‘negro(s)’;
+- comparación historiográfica publicada Steffel `tschocámeke` ↔ Hilton `chócami` ↔ Brambila `chókame`;
+- análisis publicado de la clase cromática histórica como derivada, con `-game/-came/-queme` y `-ke` final;
+- raíz moderna `čó-` = ‘negro’;
+- moderno `-kame` analizado como `-ka + -ame` y variantes regionales `chó-ka-mi/chó-ka-me/chó-ko-m`.
 
 ### Cuello de botella para A
 
-Reabrir sólo ante:
+1. análisis histórico token-específico de `čókameke/čókame` que aísle raíz y material interno; o
+2. resolución de la estructura de `tsocamec/otsocamec` mediante Guadalaxara/Rodríguez López y control grafemático.
 
-1. parse moderno token-específico `sir(i)-ame` más control comparativo suficiente; o
-2. fuente que identifique directamente `selí ~ sirí-` como variantes/cognados históricos.
+**Reglas:** no proyectar automáticamente `-ka` moderno a 1683/Steffel; no identificar `<c>` final 1683 con `-ke` sin grafemática.
 
-**Regla:** `selíameke` sigue siendo control negativo para pasivo `-li`; su `li` pertenece a la raíz `selí`.
+**No buscar más apariciones modernas genéricas de `chókame/chócami`.**
 
-## D10. C08 `tschutschelíameke`
+## D11. C08 `tschutschelíameke`
 
-**Estado:** **A; cerrado salvo contradicción nueva.** El análisis compuesto fuente-explícito satisface A aunque no exista una sola glosa interlineal completa.
+**Estado:** A; cerrado salvo contradicción nueva. El análisis compuesto fuente-explícito satisface A aunque no exista una sola glosa interlineal completa.
 
-## D11. Genealogía de fuentes modernas
+## D12. Genealogía de fuentes modernas
 
 **Objetivo:** distinguir replicación documental de independencia de fuente.  
 **Regla:** `document_replication != source_independence`.
 
-## D12. Integración al corpus/producto público
+## D13. Integración al corpus/producto público
 
-C02/C03/C04/C05/C09 permanecen en expediente como comparaciones no cerradas. C08 puede citarse como evidencia histórica A de `-li + -ameke`; la segmentación automática de otros tokens sigue prohibida.
+C02/C03/C04/C05/C06/C09 permanecen en expediente como comparaciones B no cerradas. C01/C07/C08 son los positivos A. Ningún candidato debe convertirse automáticamente en cognación o segmentación estable por el solo cambio de tier.
+
+## Cambio de fase
+
+**No queda ningún candidato positivo C01–C09 en nivel C.**
+
+La fase de descubrimiento por semejanzas generales queda cerrada. La ruta vigente es `resolve_tier_B_structural_bottlenecks`.
 
 ## Priorización vigente
 
-- **C08/D4:** resueltos.
-- **C02:** cerrado salvo estructura histórica nueva.
-- **C03:** cerrado salvo estructura histórica nueva.
-- **C04:** cerrado salvo parse/comparación histórica nueva.
-- **C05:** cerrado salvo parse/comparación histórica nueva.
-- **C09:** cerrado salvo facsímil/grafemática.
-- **Siguiente prioridad documental:** Guadalaxara 1683.
-- **Siguiente prioridad analítica sin documentos bloqueados:** C06, sólo mediante prueba capaz de cambiar de nivel y manteniendo separada continuidad cromática de segmentación colonial.
+1. **Guadalaxara/Rodríguez López 2010** → C06 + grafemática colonial.
+2. **Facsímil Tellechea 1826** → C09.
+3. **C02/C03** → sólo base/paradigma histórico o parse token-específico.
+4. **C04/C05** → sólo parse/comparación histórica directa.
 
-No abrir búsquedas generales de sufijos, `e~i`, `l~r`, `neseme`, `chipérami`, `Rosácame/Rosácami`, `Siríame`, `tschutschelíameke` ni nuevas cadenas OCR de Tellechea; sólo pruebas capaces de cambiar un grado, resolver estructura o falsar una hipótesis.
+No abrir búsquedas generales de sufijos, `e~i`, `l~r`, `neseme`, `chipérami`, `Rosácame/Rosácami`, `Siríame`, `chókame/chócami`, `tschutschelíameke` ni nuevas cadenas OCR de Tellechea; sólo pruebas capaces de resolver un cuello estructural, cambiar un grado o falsar una hipótesis.
