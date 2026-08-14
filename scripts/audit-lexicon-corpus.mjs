@@ -1,1 +1,1 @@
-import "./audit-lexicon-corpus-v2.mjs";
+import "./audit-lexicon-corpus-v3.mjs";
