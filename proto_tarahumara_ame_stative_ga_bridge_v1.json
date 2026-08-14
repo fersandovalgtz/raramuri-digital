@@ -1,0 +1,50 @@
+{
+  "artifact": "proto_tarahumara_ame_stative_ga_bridge_v1",
+  "date": "2026-08-13",
+  "status": "research_audit_not_community_validation",
+  "question": "How far back can the participial/adjectival -ame domain and the stative ga+ame chain be independently supported before Steffel?",
+  "evidence": [
+    {
+      "layer": "Proto-Tarahumara reconstruction",
+      "source": "Merrill & Burgess 2014",
+      "finding": "The suffix -amV is reconstructed as Proto-Tarahumara *-ame, functioning as an adjectivalizer and nominalizer; the same study also treats *-ame as participial in stative constructions.",
+      "independence_value": "high"
+    },
+    {
+      "layer": "Late Proto-Tarahumara stative reconstruction",
+      "source": "Merrill & Burgess 2014",
+      "finding": "Late Proto-Tarahumara *-rúame is analyzed as *-rú- 'be' plus participial *-ame.",
+      "independence_value": "high"
+    },
+    {
+      "layer": "Modern dialectal morphology",
+      "source": "Merrill & Burgess 2014 citing Burgess 1984:34-36",
+      "finding": "In some modern Ralámuli dialects, -game is explicitly analyzed as stative -ga- plus participial -ame.",
+      "independence_value": "high"
+    },
+    {
+      "layer": "Seventeenth-century attestation",
+      "source": "Guadalaxara 1683:27v as quoted and analyzed by Merrill & Burgess 2014",
+      "finding": "Pedro norugamek 'Pedro's son' attests a stative gamek chain in 1683, roughly a century before Steffel's eighteenth-century lexical data.",
+      "independence_value": "very_high"
+    }
+  ],
+  "demonstrated": [
+    "The *-ame domain is older than Steffel and is reconstructible for Proto-Tarahumara.",
+    "A stative ga+ame analysis exists independently in modern dialectal grammar.",
+    "A gamek stative chain is historically attested in 1683, before Steffel."
+  ],
+  "not_demonstrated": [
+    "That every Steffel form ending in -cameke/-gameke contains the same stative -ga morpheme.",
+    "That the c/k immediately preceding -(a)meke in historical color terms is necessarily an orthographic or phonological reflex of stative -ga.",
+    "That modern color -ka 'subido' preserves unchanged semantics from seventeenth- or eighteenth-century stative -ga.",
+    "A universal derivation -ameke > -ami."
+  ],
+  "impact_on_project": {
+    "previous_model": "The continuity of -ame was supported mainly by Steffel, modern grammars, candidate lexical families and color paradigms.",
+    "updated_model": "The central -ame hypothesis now has a Proto-Tarahumara reconstruction and a pre-Steffel seventeenth-century stative gamek attestation, providing a deeper historical backbone independent of the target color forms.",
+    "confidence_in_broad_ame_continuity": "very_high",
+    "confidence_in_color_specific_c_k_equals_ga": "moderate_and_unresolved"
+  },
+  "epistemic_rule": "Reconstructed morpheme history and lexical segmentation are separate evidential tasks. Proto-*ame and historical gamek strengthen the plausibility of a ga+ame history but do not license automatic segmentation of individual color words."
+}
