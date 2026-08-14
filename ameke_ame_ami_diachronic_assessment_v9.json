@@ -1,0 +1,149 @@
+{
+  "artifact": "ameke_ame_ami_diachronic_assessment_v9",
+  "date": "2026-08-13",
+  "supersedes": "ameke_ame_ami_diachronic_assessment_v8",
+  "central_assessment": "The project now has two independently documented cross-period constructional bridges centered on *-ame: (1) stative -ga + -(a)me(+ke) and (2) internal -li + participial/nominalizing -ameke/-ame. Historical tsane-li-ameke is explicitly analyzed in the Steffel material, while modern ani-li-ame is explicitly segmented and the li+ame chain is replicated across multiple lexical families and varieties. This substantially strengthens constructional continuity, but it still does not license a universal -ameke > -ami rule or automatic lexical cognacy.",
+  "historical_layers": [
+    {
+      "stage": "Proto-Tarahumara",
+      "status": "reconstructed",
+      "evidence": "*-ame adjectivalizer/nominalizer/participial; late PT stative constructions contain *-ame."
+    },
+    {
+      "stage": "1683",
+      "status": "attested",
+      "evidence": "Guadalaxara Pedro norugamek provides a pre-Steffel stative gamek chain."
+    },
+    {
+      "stage": "Steffel eighteenth century",
+      "status": "attested_and_analyzed",
+      "evidence": [
+        "Merrill explicitly segments stative -ga~-ja + participial -(a)me + final -ke in historical chains.",
+        "Steffel reports frequent omission of final -ke.",
+        "Merrill explicitly derives tsane-li-ameke from tsaní 'afirmar' + APPL -e + PASS -li + PTCP -ameke.",
+        "Historical passive -li is independently productive before outer suffixes: -li-la and -li-ameke are directly analyzed."
+      ]
+    },
+    {
+      "stage": "Modern multivariety Rarámuri",
+      "status": "attested_and_analyzed",
+      "evidence": [
+        "Participial/nominalizing -ame/-me and surface -ami are independently documented.",
+        "Stative -ga + -me/-ame and color -ka/-ga/-cha + -me are documented.",
+        "Munérachi ani-lí-ame is directly segmented; Choguita rihói-li-ame demonstrates PST + PTCP stacking.",
+        "The li+ame chain has at least three independently controlled lexical families: newa- 'hacer', me'á- 'matar', ani- 'decir/llamar'."
+      ]
+    }
+  ],
+  "constructional_bridges": {
+    "ga_ame": {
+      "status": "very_high_system_level_continuity",
+      "historical": "-ga~-ja + -(a)me + -ke",
+      "modern": "-ga + -me/-ame and color -ka/-ga + -me/-mi",
+      "limits": "Do not identify every historical c/k with -ga or modern -ka automatically."
+    },
+    "li_ame": {
+      "status": "high_constructional_continuity",
+      "historical_direct_parse": "tsane-li-ameke = affirm/APPL + PASS + PTCP",
+      "historical_morphotactic_controls": [
+        "pigué-li-la",
+        "matschí-ruje-li-la",
+        "tschapí-ruje-li-la"
+      ],
+      "historical_second_family_support": "tschutschá / tschutschelíla / tschutschelíameke is strongly paradigm-compatible but lacks a separately recovered full parse.",
+      "modern_direct_parse": "Munérachi ani-lí-ame",
+      "modern_structural_control": "Choguita rihói-li-ame = inhabit.PL-PST-PTCP",
+      "modern_three_root_replication": ["newa-", "me'á-", "ani-"],
+      "limits": [
+        "The function of -li is not proven identical across every root and variety.",
+        "Historical -li-ameke > modern -li-ame is not formulated as a mechanical sound/morphology rule.",
+        "Constructional continuity does not itself prove cognacy of tsaní and ani-."
+      ]
+    },
+    "na_color": {
+      "status": "very_high_form_function_bridge",
+      "historical": "tsestá-na 'está rojo'",
+      "modern": "sitá-/setá-/sejtá- + -na in color-state paradigms",
+      "limits": "Historical -na is a general verbalizer, not demonstrably color-specific at the earlier stage."
+    }
+  },
+  "color_morphology": {
+    "preferred_model": "retention_plus_specialization",
+    "preferred_model_confidence": "moderate_high",
+    "system_level_ga_ame_continuity": "very_high",
+    "individual_historical_color_segmentation": "moderate",
+    "key_bridges": [
+      "čókameke ~ čókame -> modern chó-ka-me / variants",
+      "rosákameke ~ rosákame -> modern rosá-ka-me / variants",
+      "tsestá-na -> modern sitá-na / regional variants"
+    ]
+  },
+  "li_ame_lexical_focus": {
+    "historical_tsani_modern_ani": {
+      "historical": "tsaní/¢aní 'decir, hablar, platicar; afirmar' -> tsane-li-ameke",
+      "modern": "ani- 'say' -> ani-lí-ame",
+      "semantic_correspondence": "very_high",
+      "morphological_correspondence": "very_high",
+      "specific_sound_correspondence": "unresolved",
+      "comparative_control": "Warihó has consonant-initial say forms ce-/cha-ni, which complicate a single-mechanism initial-loss explanation.",
+      "candidate_status": "very_high_priority_not_cognacy_adjudicated"
+    },
+    "western_newalime": {
+      "preferred_working_analysis": "newa-li + -me/-ame",
+      "conservative_representation": "newáli-me",
+      "exact_western_segmentation": "not_published_or_recovered",
+      "core_historical_evidence": false
+    },
+    "western_meliame": {
+      "preferred_working_analysis": "me' + PASS -li + PTCP/NMLZ -ame",
+      "serious_alternative": "derived/allomorphic me'li- + -ame",
+      "exact_target_segmentation": "not_published_or_recovered",
+      "core_historical_evidence": false
+    }
+  },
+  "comparative_say_domain": {
+    "wariho": [
+      "cha-ni = decir-APLL",
+      "che-cha-ni-wa = RED-decir-APLL-PAS:HAB",
+      "ce-rí=ra = decir-PRT-RPT",
+      "Miller indexed ca-né-ri=ra = decir-APL-pasado=RPT"
+    ],
+    "proto_reconstruction_status": "No accepted specific Proto-Tarahumaran *tsani/*ani reconstruction was found in the audited primary comparative sources.",
+    "active_scenarios": [
+      "S1 initial affricate loss in Rarámuri",
+      "S2 morphological restructuring/reanalysis of an older consonant-initial say construction",
+      "S3 lexical replacement or competition"
+    ]
+  },
+  "claims_supported": [
+    "The *-ame domain is reconstructible before the documentary period.",
+    "Historical and modern Rarámuri both explicitly document stative+participial ga+ame architecture.",
+    "Historical and modern Rarámuri both explicitly document internal-li + outer participial/nominalizing -ameke/-ame architecture.",
+    "Historical passive -li can receive more than one outer derivational suffix, so tsane-li-ameke is not morphotactically ad hoc.",
+    "Modern li+ame is constructionally productive across multiple lexical families; newálime is very unlikely to be an isolated lexicalization.",
+    "The tsaní/ani comparison is semantically and morphologically exceptionally strong, while its specific phonological history remains unresolved."
+  ],
+  "claims_not_supported": [
+    "A universal rule -ameke > -ami.",
+    "A universal rule historical -li-ameke > modern -li-ame.",
+    "Automatic identity of -li function across all roots and varieties.",
+    "Automatic cognacy of tsaní and ani-.",
+    "A sound law *¢ > Ø based on the tsaní/ani comparison alone.",
+    "Resegmentation of historical tsaní as tsa-ni solely from Warihó cha-ni.",
+    "Automatic identity of every historical color c/k with stative -ga or modern -ka."
+  ],
+  "priority_candidates": {
+    "previous_grade_A_families": ["dormir", "Nessé/Nisé", "Tſchiper/Chipér", "Selí/Sirí", "negro", "blanco", "azul/verde"],
+    "new_morphological_priority_family": "tsaní/¢aní -> ani- with tsane-li-ameke / ani-li-ame",
+    "interpretation": "Architecture grades and priority labels describe evidential structure, not final cognacy."
+  },
+  "next_phase": [
+    "Recover or directly audit Guadalaxara 1683 for say/speak roots and applicative paradigms.",
+    "Find an independent historical <ts>/<tsch>-initial > modern vowel-initial series, or a Proto-Tarahumaran reconstruction, before promoting the tsaní/ani sound correspondence.",
+    "Seek a second explicit historical parse of li+ameke; tschutschelíameke is the leading paradigm candidate.",
+    "Find a fourth modern lexical root with directly segmented li+ame to quantify constructional productivity further.",
+    "Resolve the exact Western segmentation/function of -li in newálime and me'líame separately.",
+    "Resolve SRC-02 bibliographic identity separately."
+  ],
+  "epistemic_rule": "Constructional continuity, morpheme-function identity, sound correspondence, and lexical cognacy are four separate claims. Strengthening one level never automatically promotes the others."
+}
