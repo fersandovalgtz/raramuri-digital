@@ -1,0 +1,106 @@
+{
+  "artifact": "li_ame_constructional_replication_v2",
+  "date": "2026-08-13",
+  "supersedes_for_counting": "li_ame_three_root_constructional_replication_v1",
+  "status": "research_audit_not_community_validation",
+  "purpose": "Recalibrate the li+ame evidence inventory by separating direct source parses from paradigm-supported target forms and unparsed candidates.",
+  "evidence_tiers": {
+    "D1_direct_source_parse_li_plus_ame": [
+      {
+        "root_family": "ani-",
+        "variety": "Munérachi",
+        "form": "ani-lí-ame",
+        "source_analysis": "decir-PSV-AGT / dicen-CE-NMZ",
+        "source": "Moreno Pineda & Valenzuela Romo 2022",
+        "direct_parse": true
+      },
+      {
+        "root_family": "rihói-",
+        "variety": "Choguita",
+        "form": "rihói-li-ame",
+        "source_analysis": "inhabit.PL-PST-PTCP",
+        "source": "Caballero 2022",
+        "direct_parse": true,
+        "same_example_finite_control": "rihói-li = inhabit.PL-PST"
+      }
+    ],
+    "D2_high_paradigmatic_support_target_not_directly_parsed": [
+      {
+        "root_family": "newa-",
+        "target_forms": ["newalime", "newálime", "nehualíame"],
+        "support": [
+          "Norogachi newá-li = make-PFV",
+          "Norogachi newá-ami = make-NMLZ",
+          "Western TAC newale/newame/newalime",
+          "Oeste Manual 2019 newálime jú",
+          "Bacusínare 1972 nehualíame ju"
+        ],
+        "preferred_working_analysis": "newa-li + -me/-ame",
+        "direct_target_parse": false
+      },
+      {
+        "root_family": "me'á-",
+        "target_form": "me'líame ju",
+        "support": [
+          "Compendio me'á + -ame = me'áme",
+          "same root occurs in passive domain where -li is a documented passive resource",
+          "Western TAC me'ale/me'ame/extensive me'li- family",
+          "Baja-TB rewa-lí-me proves passive+nominalizer morphotactics"
+        ],
+        "preferred_working_analysis": "me' + PASS -li + PTCP/NMLZ -ame",
+        "serious_alternative": "derived/allomorphic me'li- + -ame",
+        "direct_target_parse": false
+      }
+    ],
+    "D3_candidate_family_not_parsed": [
+      {
+        "root_family": "bini-/bene-",
+        "target_form": "Binilíame",
+        "support": [
+          "Batista passage places form in learning domain",
+          "Choguita /beˈnè/ ~ [biˈnè] = learn",
+          "Choguita biˈnè-ri-ame = learn-CAUS-PTCP",
+          "Choguita biˈnè-ami = learn-PTCP",
+          "Manual 2019 has a rich bini-/bene- derivational network"
+        ],
+        "explicit_same_root_li": false,
+        "direct_target_parse": false,
+        "status": "candidate_not_promoted"
+      }
+    ]
+  },
+  "counting_rules": {
+    "direct_li_ame_roots": 2,
+    "direct_li_ame_root_names": ["ani-", "rihói-"],
+    "high_paradigmatic_target_families": 2,
+    "high_paradigmatic_family_names": ["newa-", "me'á-"],
+    "unparsed_candidate_families": 1,
+    "unparsed_candidate_names": ["bini-/bene-"],
+    "broad_constructional_families_with_substantial_support": 4,
+    "note": "The previous three-root audit demonstrated broad constructional replication but mixed direct and indirect evidential tiers. V2 preserves the data while correcting the count taxonomy."
+  },
+  "historical_comparator": {
+    "direct_historical_parse": "tsane-li-ameke",
+    "analysis": "affirm/APPL + PASS -li + PTCP -ameke",
+    "source": "Merrill et al. 2020 on Steffel",
+    "second_historical_family": "tschutschelíameke",
+    "second_family_status": "strong_paradigmatic_support_not_direct_parse"
+  },
+  "assessment": {
+    "modern_li_plus_ame_construction_exists": "very_high_confidence",
+    "modern_direct_lexical_replication_minimum": 2,
+    "broader_family_replication": "high_confidence",
+    "same_li_function_across_direct_roots": "not_proven",
+    "historical_modern_constructional_bridge": "high_confidence",
+    "automatic_historical_morpheme_identity": false,
+    "human_reviewed": false,
+    "ai_assisted": true
+  },
+  "next_tests": [
+    "Find a third modern lexical root with direct source segmentation X-li-ame.",
+    "Find a second historical lexical family with a direct source parse X-li-ameke.",
+    "Resolve Western newálime and me'líame target segmentation separately.",
+    "Keep Binilíame outside direct counts until same-root -li is independently established."
+  ],
+  "epistemic_rule": "Counts must encode evidence tier. Direct parse, paradigm-supported analysis, and surface candidate are not interchangeable categories."
+}
