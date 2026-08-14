@@ -1,0 +1,82 @@
+{
+  "artifact": "velar_k_g_correspondence_series_v1",
+  "date": "2026-08-13",
+  "question": "How independently controlled is the historical-modern k~g relationship relevant to color -cameke/-gameke and modern -ka/-ga-me?",
+  "historical_series": [
+    {
+      "type": "same_lexeme_free_or_conditioned_variation",
+      "forms": ["cupá", "gupá", "kupá"],
+      "gloss": "cabello",
+      "source": "Steffel as analyzed by Merrill et al. 2020",
+      "value": "Direct c/k/g variation in one lexical item; c and k represent [k], while g represents a distinct voiced velar segment in Merrill's reconstruction."
+    },
+    {
+      "type": "same_lexeme_variation",
+      "forms": ["gubírusi", "kubírusi"],
+      "gloss": "sémola",
+      "source": "Merrill et al. 2020 Table 7.9",
+      "value": "Initial g~k alternation outside color morphology."
+    },
+    {
+      "type": "same_lexeme_variation",
+      "forms": ["čigočík", "čikočík"],
+      "gloss": "en el rincón",
+      "source": "Merrill et al. 2020 Table 7.9",
+      "value": "Medial g~k alternation outside color morphology."
+    },
+    {
+      "type": "grammatical_alternation",
+      "forms": ["mukí", "mumugí"],
+      "gloss": "mujer / mujeres",
+      "source": "Steffel grammar as analyzed by Merrill et al. 2020",
+      "value": "k~g alternation participates in a grammatical plural/reduplication process."
+    }
+  ],
+  "historical_depth": {
+    "finding": "Merrill states that both Guadalaxara and Steffel document [k~g], and considers it likely to reflect changes predating the seventeenth century involving voiced segments derived historically from voiceless stops.",
+    "caution": "The historical language also has k/g minimal contrasts, so alternation is not universal or automatic."
+  },
+  "modern_multivariety_series": [
+    {
+      "type": "same_semantic_lexeme_variation",
+      "forms": ["galá", "ka'lá", "a'lá"],
+      "gloss": "bueno",
+      "variety": "Cumbre",
+      "source": "Compendio básico de la gramática ralámuli 1997",
+      "value": "Modern lexical g~k variation is directly reported in one regional set."
+    },
+    {
+      "type": "same_morphological_slot_across_varieties",
+      "forms": ["roso-bó-cha-ga-me", "rosa-bó-cha-ka-me"],
+      "gloss": "gris",
+      "varieties": ["Baja", "Sur-B"],
+      "source": "Compendio básico de la gramática ralámuli 1997",
+      "value": "The pre-participial slot of the same gray-color construction is realized with -ga- in one variety and -ka- in another."
+    },
+    {
+      "type": "paradigmatic_grouping",
+      "forms": ["-ka", "-ga", "-cha"],
+      "gloss": "subido (color modifier)",
+      "source": "Compendio básico de la gramática ralámuli 1997",
+      "value": "The multivariety description groups k/g/cha forms in the same functional color-modifier domain."
+    }
+  ],
+  "modern_negative_control": {
+    "source": "Caballero 2022, Choguita Rarámuri",
+    "finding": "The Choguita phonemic inventory contains /k/ but no /g/ phoneme.",
+    "interpretation": "A k~g relation cannot be treated as a pan-Rarámuri synchronic rule; it is historical/dialectal and its reflexes must be modeled variety by variety."
+  },
+  "assessment": {
+    "historical_k_g_alternation": "demonstrated",
+    "modern_dialectal_k_g_correspondence": "demonstrated",
+    "pan_raramuri_synchronic_k_g_rule": false,
+    "directional_sound_law": false,
+    "relevance_to_color_morphology": "high",
+    "reason": "The color comparison is no longer the only environment where g/k correspond. Historical same-lexeme pairs and a modern same-slot gray-color pair independently control the relation, while Choguita supplies a negative control against universalization."
+  },
+  "impact_on_color_hypothesis": {
+    "retention_plus_specialization": "strengthened",
+    "confidence": "moderate_high",
+    "constraint": "Model the retained stative/participial architecture as dialectally realized and potentially analogically remodeled, not as a single invariant *ga>ka rule."
+  }
+}
