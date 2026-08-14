@@ -1,0 +1,72 @@
+{
+  "artifact": "historical_li_outer_suffix_productivity_v1",
+  "date": "2026-08-13",
+  "status": "research_audit_not_cognacy_adjudication",
+  "question": "Is historical passive -li independently productive as internal morphology before outer derivational suffixes, or is tsane-li-ameke an isolated architecture?",
+  "directly_analyzed_historical_examples": [
+    {
+      "form": "piguélila",
+      "meaning": "confesión",
+      "analysis": ["pigué 'confesar'", "PASS -li", "INSTR/NMLZ -la"],
+      "source": "Merrill et al. 2020 p.802",
+      "explicit_analysis": true
+    },
+    {
+      "form": "matschirújelilá",
+      "meaning": "enseñanza, instrucción",
+      "analysis": ["matschí 'saber'", "CAUS -ruje", "PASS -li", "INSTR -la"],
+      "source": "Merrill et al. 2020 p.779",
+      "explicit_analysis": true
+    },
+    {
+      "form": "tschapirújelilá",
+      "meaning": "boda, casamiento",
+      "analysis": ["tschapí 'asir'", "CAUS -ruje", "PASS -li", "INSTR -la"],
+      "source": "Merrill et al. 2020 pp.837-838",
+      "explicit_analysis": true
+    },
+    {
+      "form": "tsanelíameke",
+      "meaning": "afirmativo",
+      "analysis": ["tsaní 'afirmar'", "APPL -e", "PASS -li", "PTCP -ameke"],
+      "source": "Merrill et al. 2020 p.836",
+      "explicit_analysis": true
+    }
+  ],
+  "general_suffix_table_control": {
+    "source": "Merrill et al. 2020 p.156",
+    "entry": "-li + -la",
+    "analysis": "verbo pasivo + nominalizador",
+    "example": "nulá-li-la 'mandato' < nulá 'mandar'"
+  },
+  "secondary_comparable_forms_not_promoted": [
+    {
+      "form": "tschutschelíameke",
+      "meaning": "ungido",
+      "related_forms": ["tschutschá 'ungir'", "tschutschelíla 'unción'"],
+      "source": "Merrill et al. 2020 pp.277, 836",
+      "status": "comparable_form_only",
+      "reason": "Merrill cites it as a comparison to tsanelíameke but the audited passage does not provide a full independent morpheme-by-morpheme derivation."
+    }
+  ],
+  "assessment": {
+    "historical_passive_li_before_outer_suffixes": "high_confidence",
+    "outer_suffix_types_directly_attested_after_li": ["-la instrumental/nominalizing", "-ameke participial"],
+    "tsaneliameke_requires_ad_hoc_morphotactics": false,
+    "second_independent_explicit_li_ameke_parse_found": false,
+    "historical_li_ameke_productivity_beyond_one_explicit_lexeme": "plausible_not_yet_directly_replicated",
+    "historical_to_modern_li_ame_continuity": "not_adjudicated",
+    "human_reviewed": false,
+    "ai_assisted": true
+  },
+  "epistemic_limits": [
+    "Examples in -li-la demonstrate historical -li as internal morphology before an outer suffix; they do not constitute additional li-ameke tokens.",
+    "Do not segment tschutschelíameke automatically until an explicit analysis or sufficient independent paradigm is found.",
+    "Do not infer a universal historical rule -li-ameke > modern -li-ame from morphotactic compatibility alone."
+  ],
+  "next_tests": [
+    "Audit tschutschá / tschutschelíla / tschutschelíameke as a possible second historical li-ameke family.",
+    "Search all historical *líameke strings and classify them by independent root/paradigm evidence.",
+    "Compare the historical li-outer-suffix architecture to modern explicitly segmented li-ame across varieties without transferring function automatically."
+  ]
+}
