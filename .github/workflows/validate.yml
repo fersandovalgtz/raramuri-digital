@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   validate:
@@ -41,6 +41,22 @@ jobs:
 
       - name: Regenerar exportaciones
         run: npm run data:exports
+
+      - name: Comprobar determinismo de capas tipadas
+        run: |
+          mkdir -p .tmp/typed-pass-1
+          cp data/variants-typed.json .tmp/typed-pass-1/variants-typed.json
+          cp data/lexical-relations.json .tmp/typed-pass-1/lexical-relations.json
+          cp data/graphic-variants.json .tmp/typed-pass-1/graphic-variants.json
+          cp data/graphic-variants.csv .tmp/typed-pass-1/graphic-variants.csv
+          cp data/graphic-variants-report.json .tmp/typed-pass-1/graphic-variants-report.json
+          node scripts/generate-typed-variants.mjs
+          node scripts/extract-graphic-variants.mjs
+          cmp .tmp/typed-pass-1/variants-typed.json data/variants-typed.json
+          cmp .tmp/typed-pass-1/lexical-relations.json data/lexical-relations.json
+          cmp .tmp/typed-pass-1/graphic-variants.json data/graphic-variants.json
+          cmp .tmp/typed-pass-1/graphic-variants.csv data/graphic-variants.csv
+          cmp .tmp/typed-pass-1/graphic-variants-report.json data/graphic-variants-report.json
 
       - name: Verificar nombre canónico del responsable
         run: node scripts/check-canonical-name.mjs
@@ -99,6 +115,7 @@ jobs:
             data/variants-typed.json
             data/lexical-relations.json
             data/graphic-variants.json
+            data/graphic-variants.csv
             data/graphic-variants-report.json
           if-no-files-found: error
           retention-days: 30
@@ -119,3 +136,14 @@ jobs:
 
       - name: Compilar y probar
         run: npm test
+
+      - name: Versionar capas derivadas deterministas
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/variants-typed.json data/lexical-relations.json data/graphic-variants.json data/graphic-variants.csv data/graphic-variants-report.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Refresh typed variant layers"
+            git push origin HEAD:main
+          fi
