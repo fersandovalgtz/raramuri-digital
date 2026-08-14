@@ -1,0 +1,101 @@
+{
+  "schema_version": "1.0.0",
+  "generated": "2026-08-14",
+  "purpose": "Adjudicación no destructiva de las seis familias detectadas por la auditoría como numeración de homónimos mixta. El criterio rector es la forma gráfica de SRC-02 antes de cualquier normalización sin diacríticos.",
+  "source_code": "SRC-02",
+  "source_document": "DICCIONARIO raramuri.pdf",
+  "decisions": [
+    {
+      "decision_id": "MH-000001",
+      "family_key": "acara",
+      "record_ids": ["RD-000009", "RD-000023", "RD-000024"],
+      "page_start": 3,
+      "page_end": 4,
+      "decision_type": "source_confirmed_mixed_homonym_numbering",
+      "collision_resolution": "retain_source_numbering",
+      "finding": "SRC-02 imprime Acará Vi 'Poner (huaraches)' sin número en la página 3 y, en la página 4, 1Acará Vt 'Herrar' y 2Acará S 'Rostro'. Las tres formas gráficas son Acará; la mezcla numerado/no numerado existe en la fuente y no fue creada por el parser.",
+      "action_current_release": "Conservar los tres registros y sus homonym_number tal como están documentados. No asignar 3, no desplazar 1/2 y no fusionar.",
+      "action_next_release": "Mantener una marca de source-confirmed mixed numbering. Cualquier reorganización requiere argumento filológico o lingüístico adicional y migración versionada.",
+      "verified_against_source": true,
+      "verified_date": "2026-08-14"
+    },
+    {
+      "decision_id": "MH-000002",
+      "family_key": "cora",
+      "record_ids": ["RD-000523", "RD-000524", "RD-000525"],
+      "audit_collision_record_ids": ["RD-000523", "RD-000524"],
+      "page_start": 28,
+      "page_end": 28,
+      "decision_type": "normalization_collision_diacritic",
+      "collision_resolution": "preserve_graphic_distinction",
+      "finding": "SRC-02 distingue Cora Vt 'Obsequiar' sin acento de 1Corá S 'Peña' y 2Corá, cohuara S 'Frente'. La clave normalizada 'cora' elimina el acento y hace colisionar al menos Cora y 1Corá. La segunda forma numerada incluye además la variante cohuara en la celda de lema.",
+      "action_current_release": "No añadir homonym_number a Cora ni retirar la numeración de Corá. Mantener acento y forma fuente como rasgos estructurales.",
+      "action_next_release": "Separar en diagnósticos la igualdad normalizada de la identidad gráfica. Revisar aparte, como cuestión de modelado de variantes, si 2Corá, cohuara debe representarse con Corá como lema principal y cohuara exclusivamente como variante.",
+      "verified_against_source": true,
+      "verified_date": "2026-08-14"
+    },
+    {
+      "decision_id": "MH-000003",
+      "family_key": "choquira",
+      "record_ids": ["RD-000776", "RD-000777", "RD-000778"],
+      "page_start": 38,
+      "page_end": 39,
+      "decision_type": "normalization_collision_diacritic",
+      "collision_resolution": "preserve_graphic_distinction",
+      "finding": "SRC-02 imprime 1Choquira Adj 'Culpable' y 2Choquira 'Principio', ambos sin acento final, seguidos por Choquirá, con acento final, que contiene dos valores internos: vt pl y s. La normalización a choquira borra una distinción gráfica explícita.",
+      "action_current_release": "Conservar 1/2 para Choquira y dejar Choquirá sin homonym_number. No convertir la diferencia acentual en un error de numeración.",
+      "action_next_release": "Hacer que la auditoría de homónimos compare primero forma fuente/diacríticos y use la forma normalizada sólo como señal de revisión.",
+      "verified_against_source": true,
+      "verified_date": "2026-08-14"
+    },
+    {
+      "decision_id": "MH-000004",
+      "family_key": "huica",
+      "record_ids": ["RD-000953", "RD-000954", "RD-000955"],
+      "page_start": 45,
+      "page_end": 45,
+      "decision_type": "normalization_collision_diacritic",
+      "collision_resolution": "preserve_graphic_distinction",
+      "finding": "SRC-02 imprime 1Huicá Vi 'Perderse' y 2Huicá Adj 'Mucho', ambos con acento final, y a continuación Huica S 'Palo picudo (para sembrar maíz)' sin acento. La clave normalizada huica reúne formas que la fuente distingue gráficamente.",
+      "action_current_release": "Conservar la numeración de Huicá y mantener Huica sin número. No inferir un tercer homónimo.",
+      "action_next_release": "Clasificar esta colisión como derivada de normalización y no como numeración editorial incompleta.",
+      "verified_against_source": true,
+      "verified_date": "2026-08-14"
+    },
+    {
+      "decision_id": "MH-000005",
+      "family_key": "machina",
+      "record_ids": ["RD-001235", "RD-001236", "RD-001237"],
+      "page_start": 54,
+      "page_end": 55,
+      "decision_type": "normalization_collision_diacritic",
+      "collision_resolution": "preserve_graphic_distinction",
+      "finding": "SRC-02 imprime 1Machiná Adv 'Afuera' y 2Machiná Adv 'Claramente' con acento final; en la página siguiente imprime Machina Vi 'Salir' sin acento. La normalización machina borra esta oposición gráfica.",
+      "action_current_release": "Conservar 1/2 Machiná y Machina sin número. No aplicar reparación automática de homónimos.",
+      "action_next_release": "Mantener la forma acentuada como clave de control en diagnósticos de homonimia.",
+      "verified_against_source": true,
+      "verified_date": "2026-08-14"
+    },
+    {
+      "decision_id": "MH-000006",
+      "family_key": "ori",
+      "record_ids": ["RD-001765", "RD-001766", "RD-001767", "RD-001768"],
+      "page_start": 68,
+      "page_end": 68,
+      "decision_type": "normalization_collision_diacritic",
+      "collision_resolution": "preserve_graphic_distinction",
+      "finding": "SRC-02 imprime 1Orí S 'Táscate', 2Orí Adj 'Español, mestizo' y 3Orí Vt 'Hacer así', todos con acento final; inmediatamente después aparece Ori Vt pret 'Curar' sin acento. La clave normalizada ori fusiona ambas grafías.",
+      "action_current_release": "Conservar la serie 1–3 de Orí y mantener Ori 'Curar' sin número. No crear un 4Orí ni eliminar la distinción acentual.",
+      "action_next_release": "Tratar ori como colisión de normalización, no como inconsistencia de fuente.",
+      "verified_against_source": true,
+      "verified_date": "2026-08-14"
+    }
+  ],
+  "summary": {
+    "reviewed_family_count": 6,
+    "source_confirmed_mixed_numbering_count": 1,
+    "normalization_collision_diacritic_count": 5,
+    "unresolved_family_count": 0,
+    "automatic_homonym_number_changes_authorized": 0
+  }
+}
