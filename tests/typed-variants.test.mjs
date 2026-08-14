@@ -24,11 +24,23 @@ test("materializes lexical relations separately from variants", async () => {
   assert.equal(payload.relation_count, 28);
   assert.equal(payload.records.length, 28);
   assert.equal(payload.source_remission_occurrence_count, 18);
-  assert.equal(payload.unique_resolution_count, 24);
-  assert.equal(payload.ambiguous_resolution_count, 4);
+  assert.equal(payload.unique_resolution_count, 28);
+  assert.equal(payload.ambiguous_resolution_count, 0);
   assert.equal(payload.unresolved_resolution_count, 0);
+  assert.equal(payload.documentary_adjudication_count, 4);
   const counts = Object.fromEntries([...new Set(payload.records.map((row) => row.relation_type))].sort().map((type) => [type, payload.records.filter((row) => row.relation_type === type).length]));
   assert.deepEqual(counts, { cross_reference: 19, grammatical_relation: 3, source_variant_reference: 6 });
   assert.ok(payload.records.every((row) => row.relation_id && row.source_record_id && row.source_headword && row.source_field && row.source_page && row.raw_evidence && row.target_form && row.target_record_ids.length && row.resolution_status && row.validation_status));
-  assert.equal(payload.records.filter((row) => row.resolution_status === "resolved_ambiguous").length, 4);
+  assert.equal(payload.records.filter((row) => row.resolution_status === "resolved_ambiguous").length, 0);
+  const adjudicated = Object.fromEntries(payload.records
+    .filter((row) => row.target_resolution_method === "documentary_adjudication")
+    .map((row) => [row.source_record_id, row.target_record_id]));
+  assert.deepEqual(adjudicated, {
+    "RD-000086": "RD-000008",
+    "RD-000495": "RD-000484",
+    "RD-000728": "RD-000716",
+    "RD-000877": "RD-000934",
+  });
+  assert.ok(payload.records.filter((row) => row.target_resolution_method === "documentary_adjudication")
+    .every((row) => row.target_adjudication_id && row.documentary_basis && row.human_validation_status === "Pendiente de cotejo lingüístico"));
 });
