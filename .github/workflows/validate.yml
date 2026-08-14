@@ -9,6 +9,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: validar-publicacion-${{ github.ref }}
+  cancel-in-progress: true
+
 jobs:
   validate:
     runs-on: ubuntu-latest
@@ -151,8 +155,24 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/variants-typed.json data/lexical-relations.json data/graphic-variants.json data/graphic-variants.csv data/graphic-variants-report.json data/advanced-products.json data/advanced-products-report.json
-          if ! git diff --cached --quiet; then
+          for attempt in 1 2 3; do
+            git fetch origin main
+            git reset --hard origin/main
+            node scripts/generate-typed-variants.mjs
+            node scripts/extract-graphic-variants.mjs
+            node --experimental-strip-types --no-warnings scripts/extract-advanced-products.mjs
+            node scripts/reconcile-remission-product.mjs
+            git add data/variants-typed.json data/lexical-relations.json data/graphic-variants.json data/graphic-variants.csv data/graphic-variants-report.json data/advanced-products.json data/advanced-products-report.json
+            if git diff --cached --quiet; then
+              echo "Las capas derivadas ya están versionadas en el main más reciente."
+              exit 0
+            fi
             git commit -m "Refresh canonical lexical relation products"
-            git push origin HEAD:main
-          fi
+            if git push origin HEAD:main; then
+              exit 0
+            fi
+            echo "Main avanzó durante el writeback; reintentando sobre el nuevo HEAD ($attempt/3)."
+            sleep 2
+          done
+          echo "No fue posible versionar las capas derivadas tras tres reintentos."
+          exit 1
