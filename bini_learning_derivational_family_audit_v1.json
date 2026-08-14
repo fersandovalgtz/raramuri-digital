@@ -1,0 +1,128 @@
+{
+  "artifact": "bini_learning_derivational_family_audit_v1",
+  "date": "2026-08-13",
+  "status": "research_audit_not_community_validation",
+  "question": "Does the learning-family form Binilíame provide a fourth directly analyzable root+li+ame construction, or is its internal morphology still unresolved?",
+  "secure_lexical_root": {
+    "domain": "aprender / estudiar / enseñar",
+    "confidence": "very_high",
+    "primary_choguita_control": {
+      "source": "Caballero 2022, A Grammar of Choguita Rarámuri",
+      "underlying_form": "/beˈnè/",
+      "surface_variants": ["[biˈnè]", "[beˈnè]"],
+      "meaning": "learn / aprender",
+      "interpretation": "Independent evidence that e~i variation can affect the root surface."
+    }
+  },
+  "directly_segmented_choguita_derivations": [
+    {
+      "form": "biˈnè-ri-ame",
+      "analysis": "learn-CAUS-PTCP",
+      "translation": "one who teaches / el que enseña",
+      "source": "Caballero 2022",
+      "note": "Caballero explicitly notes that participial -ame may induce deletion of the preceding suffix vowel."
+    },
+    {
+      "form": "beˈnè-kame",
+      "analysis": "learn-PST.PTCP",
+      "translation": "one who has studied / el estudiado",
+      "source": "Caballero 2022"
+    },
+    {
+      "form": "biˈnè-ami",
+      "analysis": "learn-PTCP",
+      "translation": "student / estudiante",
+      "source": "Caballero 2022",
+      "note": "Listed in Caballero's agentive material."
+    }
+  ],
+  "batista_2011_candidate": {
+    "form": "Binilíame",
+    "passage_raramuri": [
+      "Ralámuli tamujé wé biniyá ajaré",
+      "Binilíame jú napu ma nóchali olá jarena póblochi"
+    ],
+    "parallel_spanish_passage": [
+      "Los rarámuri andando aprendemos.",
+      "Es un aprendizaje cuando trabajamos en otros pueblos."
+    ],
+    "semantic_alignment_level": "passage_or_sentence_level",
+    "word_level_gloss_confirmed": false,
+    "source_internal_segmentation": false,
+    "assessment": "The candidate is securely located in the semantic field of learning, but its internal li+ame parse is not supplied by the source."
+  },
+  "manual_2019_derivational_network": [
+    {"form": "biníliachi", "spanish": "Escuela"},
+    {"form": "binirúame", "spanish": "Enseñanza"},
+    {"form": "biníame", "spanish": "Alumno"},
+    {"form": "biniwáala", "spanish": "Aprendizaje"},
+    {"form": "binílame", "spanish": "Profesor"},
+    {"form": "benéliame", "spanish": "docente / pedagogo"},
+    {"form": "benériame", "spanish": "maestro"},
+    {"form": "benélia - biniwáala", "spanish": "enseñanza-aprendizaje"}
+  ],
+  "manual_interpretation": "The pedagogical lexicon confirms a productive bini-/bene- derivational network, but it does not provide morpheme-by-morpheme analyses. The diversity of -ri-, -li-, -wa- and -ame surface material increases the need for independent segmentation rather than licensing analogy-based parsing.",
+  "older_lexicographic_controls": [
+    "binimea 'aprender, estudiar'",
+    "binériame 'maestro, profesor'",
+    "binériara 'enseñanza'",
+    "binirame 'aprendiz, discípulo'",
+    "biniwachi 'tiempo en que se estudia'",
+    "biniwame 'lección'"
+  ],
+  "competing_analyses_of_biniliame": [
+    {
+      "id": "B1",
+      "analysis": "bini-/bine- + -li + -ame",
+      "status": "attractive_but_not_demonstrated",
+      "support": [
+        "The surface form contains a liame sequence.",
+        "The broader Rarámuri language independently permits internal -li followed by -ame.",
+        "The passage meaning is compatible with a deverbal nominalization in the learning domain."
+      ],
+      "problems": [
+        "No audited source directly segments Binilíame as bini-li-ame.",
+        "No same-root bini-/bene- + explicit -li form has yet been recovered.",
+        "The learning family has several distinct derivations whose surface shapes can be misleading without grammatical analysis."
+      ]
+    },
+    {
+      "id": "B2",
+      "analysis": "derived/allomorphic binili-/beneli- stem + external -ame/me or another nominalizing structure",
+      "status": "serious_open_alternative",
+      "support": [
+        "Manual 2019 has close but non-identical forms such as binílame and benéliame.",
+        "Caballero shows morphophonological deletion and vowel alternation in related derivations."
+      ]
+    },
+    {
+      "id": "B3",
+      "analysis": "lexicalized or pedagogically conventionalized formation whose internal history is not recoverable from surface spelling alone",
+      "status": "retained_control_hypothesis"
+    }
+  ],
+  "current_assessment": {
+    "root_identity": "very_high_confidence",
+    "semantic_domain_of_biniliame": "high_confidence_at_passage_level",
+    "productive_participial_ame_in_same_root_family": "very_high_confidence",
+    "explicit_same_root_li_before_ame": "not_found",
+    "exact_biniliame_internal_segmentation": "unresolved",
+    "fourth_direct_li_ame_root": false,
+    "candidate_label": "fourth_candidate_family_not_fourth_direct_li_ame_parse",
+    "historical_continuity_judgment": "not_performed",
+    "human_reviewed": false,
+    "ai_assisted": true
+  },
+  "prohibited_inferences": [
+    "Do not convert the bilingual Batista passage into a word-by-word gloss.",
+    "Do not equate Binilíame with Manual binílame solely on orthographic similarity.",
+    "Do not infer -li as an independent morpheme in Binilíame until a same-root or direct grammatical control is found.",
+    "Do not treat Choguita -ri- or -kame as equivalent to the apparent -li- of Binilíame without comparative evidence."
+  ],
+  "next_tests": [
+    "Search primary grammars/corpora for an explicit bini-/bene- + -li form.",
+    "Search for Binilíame in additional natural-language contexts with independent Spanish or linguistic annotation.",
+    "Compare Manual binílame, benéliame and biníame with Choguita bine-ri-ame and bine-ami without forcing one-to-one identity.",
+    "Continue searching for a separate fourth root with directly segmented li+ame rather than promoting Binilíame prematurely."
+  ]
+}
