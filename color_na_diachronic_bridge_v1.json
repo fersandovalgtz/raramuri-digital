@@ -1,0 +1,54 @@
+{
+  "artifact": "color_na_diachronic_bridge_v1",
+  "date": "2026-08-13",
+  "question": "Does historical red tsestá-na provide an independently segmented bridge to modern color -na?",
+  "historical_evidence": {
+    "source": "Merrill et al. 2020 analysis of Steffel",
+    "segmentation": "tsestá-na",
+    "gloss": "está rojo",
+    "base": "tsestá-",
+    "base_gloss": "rojizo",
+    "suffix_analysis": "-na classified by Merrill as a verbalizer with several functions/bases",
+    "dictionary_attestation": "Tsestána. Está rojo.",
+    "modern_comparison_by_merrill": "tsestána ‘es rojo’ || sitána ‘estar rojo; ponerse rojo, enrojecer, ruborizarse’",
+    "phonological_comment": "Merrill notes that the historical red forms and their modern equivalents involve loss/addition of unstressed syllables in addition to other possible changes."
+  },
+  "modern_multivariety_evidence": {
+    "source": "Compendio básico de la gramática ralámuli, 1997",
+    "explicit_suffix_value": "-na ‘se está poniendo/color bajo’",
+    "red_examples": [
+      "sita-ná-som (Centro/Sur-T)",
+      "setáa-na (Baja)",
+      "sejtá-na simí (Baja-TB)",
+      "sitána simí (Cumbre)",
+      "sita-ná-simi (Sur-B/Norte)"
+    ],
+    "other_color_domains": [
+      "seyó-/siyó- + -na in blue/green",
+      "chó- + -na in black",
+      "rosá- + -na in white",
+      "lá-/ulá- + -na in yellow"
+    ]
+  },
+  "comparison": {
+    "historical_form": "tsestá-na",
+    "modern_form_family": "sitá-/setá-/sejtá- + -na",
+    "suffix_form_match": "exact at the segmental level (-na)",
+    "functional_match": "strong: historical ‘be red’ and modern ‘become/be partially red’ in the same color domain",
+    "root_match": "strong but phonologically non-trivial",
+    "independence": "high: historical source and modern multivariety elicitation are independent evidence layers"
+  },
+  "assessment": {
+    "bridge_strength": "very_high",
+    "historical_identity_of_suffix_proven": false,
+    "reason": "The same suffixal shape occurs in an explicitly segmented historical red predicate and a systematically described modern color paradigm with closely matching semantics. However, historical -na is a more general verbalizer and modern color -na may represent semantic specialization or retention rather than simple unchanged identity.",
+    "sound_law_claimed": false,
+    "color_specific_grammaticalization_in_18th_century_claimed": false
+  },
+  "relation_to_kame_bridge": "This is a second, structurally independent color bridge. The first links historical -kameke~-kame to modern -ka-me in black/white; the present bridge links historical tsestá-na to modern sitá-/setá-/sejtá- + -na.",
+  "open_questions": [
+    "Can the historical root tsestá-/stá- and modern sitá-/setá-/sejtá- be reconstructed through a controlled correspondence series?",
+    "Was historical -na already semantically specialized for gradable/inchoative color states, or was its color use one instance of a broader verbalizing function?",
+    "Can modern -na in blue/green, black, white and yellow be linked to independent historical color predicates?"
+  ]
+}
