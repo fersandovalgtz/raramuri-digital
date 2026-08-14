@@ -1,0 +1,77 @@
+{
+  "artifact": "historical_color_ka_segmentation_audit_v1",
+  "date": "2026-08-13",
+  "problem": "Can the historical c/k immediately preceding -(a)meke in Steffel's color words be identified with the modern color modifier -ka?",
+  "direct_answer": "Not yet demonstrated, but the retention-plus-specialization hypothesis is now substantially better motivated than before.",
+  "evidence_matrix": {
+    "direct_historical_color_segmentation_as_ka": false,
+    "proto_tarahumara_ame_reconstructed": true,
+    "modern_stative_ga_plus_ame_explicitly_analyzed": true,
+    "seventeenth_century_gamek_stative_attested": true,
+    "steffel_final_ke_omission_documented": true,
+    "historical_color_kameke_kame_pairs_attested": true,
+    "modern_color_root_plus_ka_plus_me_analysis_explicit": true,
+    "historical_color_specific_k_equals_stative_ga_proven": false
+  },
+  "hypotheses": [
+    {
+      "id": "H1_retention",
+      "label": "Retention of an older stative *-ga + participial *-ame chain",
+      "mechanism": "Historical color -cameke/-gameke reflects an older stative/derivational ga + ame sequence plus final -ke, with orthographic or phonological variation in the consonant.",
+      "support": [
+        "Proto-Tarahumara *-ame is independently reconstructed.",
+        "Modern dialectal -game is explicitly analyzed as -ga + -ame.",
+        "Guadalaxara 1683 already attests a stative gamek chain.",
+        "Steffel's color forms have -kameke~-kame surface variants that align closely with modern -ka-me."
+      ],
+      "problems": [
+        "No published historical analysis yet identifies the color c/k itself as stative -ga.",
+        "The unpublished 1799 grammar cannot presently be audited in full.",
+        "Merrill explicitly leaves segmentation of schiógameke uncertain."
+      ],
+      "current_plausibility": "high_but_unproven"
+    },
+    {
+      "id": "H2_reanalysis",
+      "label": "Later reanalysis of inherited -kame(ke) as modern -ka + -me",
+      "mechanism": "An older opaque or differently segmented chain became resegmented in modern color morphology as degree/color modifier -ka followed by participial -me.",
+      "support": [
+        "Merrill's historical suffix inventory does not independently list a color -ka.",
+        "Modern grammars provide a transparent root + -ka + -me analysis that need not have been synchronically available to eighteenth-century speakers."
+      ],
+      "problems": [
+        "The existence of older ga+ame and 1683 gamek makes a completely new late segmentation less economical than previously thought.",
+        "Historical truncated color forms already produce kame strings virtually identical to modern -ka-me."
+      ],
+      "current_plausibility": "moderate"
+    },
+    {
+      "id": "H3_retention_plus_specialization",
+      "label": "Retention followed by analogical/semantic specialization in the color system",
+      "mechanism": "An inherited stative/participial ga+ame(+ke) domain survived formally, while the color subsystem later regularized or specialized the pre-participial element as -ka 'color subido' and contrasted it with -na 'color bajo/becoming'.",
+      "support": [
+        "Combines the deep history of *-ame and ga+ame with the explicit modern color contrast -ka versus -na.",
+        "Historical color -na has its own direct bridge to modern color -na, suggesting that the color paradigm could have reorganized older general verbal/stative morphology into a specialized semantic opposition.",
+        "Historical -kameke~-kame and modern -ka-me are directly linked at the surface level in black and white."
+      ],
+      "problems": [
+        "The timing and mechanism of semantic specialization are not independently dated.",
+        "Color-specific historical -ga/-ka remains unsegmented in the published Steffel evidence."
+      ],
+      "current_plausibility": "highest_working_hypothesis_but_not_conclusion"
+    }
+  ],
+  "ranking": ["H3_retention_plus_specialization", "H1_retention", "H2_reanalysis"],
+  "epistemic_status": {
+    "preferred_working_hypothesis": "H3_retention_plus_specialization",
+    "confidence": "moderate",
+    "final_reconstruction": false,
+    "reason": "H3 explains both the older ga+ame/gamek evidence and the specialized modern -ka/-na color opposition without forcing modern segmentation unchanged onto the eighteenth century."
+  },
+  "next_tests": [
+    "Locate or obtain a transcription of Steffel's 1799 grammar and search adjective/stative morphology for ca/ka/ga.",
+    "Audit Burgess 1984 and Burgess-Kempton-MacLaury 1983 directly for the internal analysis and semantics of Western Tarahumara color -ka.",
+    "Find historical color predicates beyond red that contain independently segmentable -na or ga/ka.",
+    "Test whether k~g alternation is regular in the relevant morphological environment rather than merely orthographic."
+  ]
+}
