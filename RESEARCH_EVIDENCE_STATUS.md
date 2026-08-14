@@ -2,8 +2,8 @@
 
 **Corte:** 2026-08-14  
 **Síntesis general vigente:** [`AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md`](AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md)  
-**Matriz vigente:** [`EVIDENCE_MASTER_MATRIX_V3.md`](EVIDENCE_MASTER_MATRIX_V3.md)  
-**Auditoría focal C04:** [`C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V2.md`](C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V2.md)  
+**Matriz vigente:** [`EVIDENCE_MASTER_MATRIX_V4.md`](EVIDENCE_MASTER_MATRIX_V4.md)  
+**Auditoría focal C04:** [`C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md`](C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md)  
 **Auditoría focal C09:** [`TELLECHEA_1826_AME_TOKEN_AUDIT_V4.md`](TELLECHEA_1826_AME_TOKEN_AUDIT_V4.md)
 
 ## Estado general
@@ -27,17 +27,20 @@ El rarámuri moderno conserva `-ame` participial y presenta realizaciones region
 | H9 | Puente cromático histórico–moderno | **Fuerte formal/semánticamente; segmentación abierta** | no proyectar automáticamente `-ka` moderno al siglo XVII |
 | H10 | `<c>/<k>/<que>/<ke>` = mismo morfema final | **No demostrada / prohibida como atajo** | requiere control grafemático y facsimilar |
 | H11 | `e/é ~ i/í` es una alternancia históricamente posible | **Directamente documentada** | no implica ley `e > i` ni cognación automática |
-| H12 | Existe una familia moderna `nes-` de cuidado/pastoreo con vocal `e` | **Directamente documentada** | la relación histórica con `Nessé` y la segmentación token-específica de `nesame/neseme` permanecen abiertas |
+| H12 | Existe una familia moderna `nes-` de cuidado/pastoreo con vocal `e` | **Directamente documentada** | la relación histórica con `Nessé` permanece abierta |
+| H13 | `nesame` pertenece al patrón participial/agentivo moderno de la familia `nes-` | **Alta confianza interna de fuente** | no equivale a un parse impreso morfema por morfema |
 
 ## C04 · `Nessé/Nesséameke ↔ nes-/Neseme ↔ Nisé/Niséami`
 
 **Nivel formal: B. Fuerza interna: B+ excepcional / cercano a A.**
 
-La evidencia acumulada ya no es sólo un emparejamiento histórico–moderno por similitud. La cadena contiene histórico `Nessé/Nesséameke`, la especialización `pouguá nesséameke` ‘pastor de ovejas’, la familia moderna `nesema/nesame/neser...`, `Neseme` Baja/Western y `Nisé/Niséami/nise’ami` en otras fuentes modernas.
+La cadena contiene histórico `Nessé/Nesséameke`, la especialización `pouguá nesséameke` ‘pastor de ovejas’, la familia moderna `nesema/nesame/neser...`, `Neseme` Baja/Western y `Nisé/Niséami/nise’ami` en otras fuentes modernas.
 
-El control morfológico v2 establece además que la misma obra de Márquez describe `-ame` y `-me/-mi` como material participial/adjetival y que los nombres de persona definidos por actividad suelen ser participios. Por ello la lectura participial/agentiva de `nesame` está **fuertemente predicha por la gramática de la fuente**, pero no se recuperó un parse token-específico `nes-ame` ni un paradigma del lexema que explique exactamente `nesema ~ nesame`.
+El control morfológico v3 resuelve una objeción que permanecía abierta en v2. Dentro del mismo diccionario aparecen cinco pares comparables de forma verbal en `-ema` y forma nominal/adjetival en `-ame`: `benema ~ bename`, `natogema ~ natogame`, `ne’ogema ~ ne’ogame`, `nichugema ~ nichugame` y `semema ~ semame`. El último es especialmente transparente: ‘tocar un instrumento de cuerdas’ ↔ ‘violinista, músico de cuerdas’. La misma gramática declara además que los nombres de persona que expresan actividad suelen ser participios y que el participio presente puede funcionar como sustantivo/adjetivo.
 
-No se ha recuperado tampoco una fuente que declare directamente `Nessé ~ nes-/Nisé` como variantes o cognados. C04 no se promueve a A.
+Por ello, la pertenencia de `nesame` al patrón participial/agentivo de la familia `nes-` pasa a **alta confianza interna de fuente**. La alternancia superficial `nesema ~ nesame` ya no necesita una explicación inventada exclusivamente para este candidato.
+
+Sigue sin recuperarse una línea impresa `nesame = nes- + -ame` o un paradigma token-específico que fije el límite morfémico exacto; tampoco una fuente que declare directamente `Nessé ~ nes-/Nisé` como variantes o cognados. Por ello C04 **no se promueve a A**.
 
 ## C09 · Tellechea
 
@@ -60,22 +63,20 @@ Estos dos pares amplían la red de posibles alternancias intralexémicas, pero n
 
 ### Correcciones de límites de palabra
 
-- `gameque` es un fragmento OCR de `netetugameque` (`netetu-` + `gameque`), no un token independiente.
-- `támeque` es un fragmento de `natámeque` (`na-` + `támeque`).
-- la aparente forma breve `gayéname` de la plática del Pater Noster es en realidad `gayéname-que` partido entre líneas; **no es un par `gayénameque ~ gayéname`**.
+- `gameque` es un fragmento OCR de `netetugameque`, no un token independiente.
+- `támeque` es un fragmento de `natámeque`.
+- la aparente forma breve `gayéname` es en realidad `gayéname-que` partido entre líneas; **no es un par `gayénameque ~ gayéname`**.
 
-Esta última corrección funciona como control negativo contra pares creados mecánicamente por OCR.
-
-La pérdida de `que/ca` descrita por Tellechea en los pretéritos sigue sin tratarse como demostración del mecanismo participial. C09 permanece B hasta que los límites gráficos y las dos nuevas familias se cotejen contra el facsímil.
+La pérdida de `que/ca` descrita por Tellechea en los pretéritos sigue sin tratarse como demostración del mecanismo participial. C09 permanece B hasta cotejo facsimilar.
 
 ## Controles negativos vigentes
 
 - `ganelíameke`, `uilíameke`, `selíameke`: no usar como D1 automáticos de pasivo `li + ameke`.
 - todo final `-ami` ≠ participio.
 - `e~i/é~í` documentado ≠ cognación automática.
-- varias atestiguaciones ≠ varias fuentes independientes: distinguir replicación de genealogía documental.
-- hits OCR `-ami` en Steffel ≠ participios sin análisis individual.
-- `gayéname` de Tellechea L4895 ≠ forma breve: es fragmento de línea de `gayénameque`.
+- varias atestiguaciones ≠ varias fuentes independientes.
+- patrón morfológico interno de alta confianza ≠ parse token-específico publicado.
+- `gayéname` de Tellechea ≠ forma breve: es fragmento de línea de `gayénameque`.
 - frecuencia OCR de `-ame/-ameque` ≠ frecuencia morfológica sin clasificación contextual.
 
 ## Afirmaciones prohibidas
@@ -84,7 +85,7 @@ No formular como conclusión:
 
 - `-ameke > -ami` como ley universal;
 - `e > i` / `é > í` como ley histórica universal;
-- `nesame = nes + -ame` como parse publicado mientras no aparezca una fuente token-específica;
+- `nesame = nes + -ame` como **parse publicado** mientras no aparezca una fuente token-específica;
 - cognación automática `Nessé ~ nes-/Nisé`;
 - independencia automática de documentos de una misma tradición editorial;
 - `-li-ameke > -li-ame` como cambio automático;
@@ -96,4 +97,4 @@ No formular como conclusión:
 
 ## Estado de publicación científica
 
-El modelo general de v18 no requiere una v19: las nuevas rondas han fortalecido dos frentes concretos sin cambiar la arquitectura diacrónica global. C04 continúa como el B más próximo al umbral A. C09 dispone ahora de una auditoría OCR reproducible que limpia falsos positivos y concentra el próximo trabajo facsimilar en un conjunto pequeño de tokens de alto rendimiento.
+El modelo general de v18 no requiere una v19. C04 continúa formalmente en B, pero su componente morfológico moderno ya puede tratarse como **alta confianza interna**; el verdadero cuello de botella ha quedado reducido al parse token-específico y, sobre todo, a la identidad histórica de la raíz. C09 dispone de una auditoría OCR reproducible que limpia falsos positivos y concentra el próximo trabajo facsimilar en un conjunto pequeño de tokens.
