@@ -2,14 +2,14 @@
 
 **Corte:** 2026-08-14  
 **Síntesis general vigente:** [`AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md`](AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md)  
-**Matriz vigente:** [`EVIDENCE_MASTER_MATRIX_V9.md`](EVIDENCE_MASTER_MATRIX_V9.md)  
-**Auditorías focales:** C02 `C02_CHIPER_DIACHRONIC_BRIDGE_V1.md`; C03 `C03_ROSA_WHITE_DIACHRONIC_BRIDGE_V1.md`; C04 `C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md`; C05 `C05_SELI_SIRI_GOVERNOR_BRIDGE_V1.md`; C06 `C06_BLACK_COLOR_STRUCTURAL_BRIDGE_V2.md`; C08 `C08_TSCHUTSCHELIAMEKE_MORPHOLOGICAL_ADJUDICATION_V1.md`; C09 `TELLECHEA_1826_SHORT_AME_TARGETED_AUDIT_V5.md`.
+**Matriz vigente:** [`EVIDENCE_MASTER_MATRIX_V10.md`](EVIDENCE_MASTER_MATRIX_V10.md)  
+**Auditorías focales:** C02 `C02_CHIPER_DIACHRONIC_BRIDGE_V1.md`; C03 `C03_ROSA_WHITE_DIACHRONIC_BRIDGE_V1.md`; C04 `C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md`; C05 `C05_SELI_SIRI_GOVERNOR_BRIDGE_V2.md`; C06 `C06_BLACK_COLOR_STRUCTURAL_BRIDGE_V2.md`; C08 `C08_TSCHUTSCHELIAMEKE_MORPHOLOGICAL_ADJUDICATION_V1.md`; C09 `TELLECHEA_1826_SHORT_AME_TARGETED_AUDIT_V5.md`.
 
 ## Estado general
 
 La evidencia sostiene con **alta confianza** la profundidad histórica del dominio participial/derivacional `*-ame`. Steffel documenta directamente `-ameke ~ -ame` y pérdida frecuente de `ke`; Tellechea aporta redes de extensión variable, pero su pérdida de `que/ca` en pretéritos no se transfiere automáticamente a participios. El moderno conserva `-ame` y realizaciones regionales `-ame/-me/-mi`. No está demostrada una ley universal `-ameke > -ami`.
 
-La cartera positiva C01–C09 entra ahora en una fase distinta: **no queda ningún candidato en nivel C**. Los grados vigentes son A = C01, C07, C08; B/B+ = C02, C03, C04, C05, C06, C09. Por tanto, la prioridad deja de ser descubrir semejanzas generales y pasa a resolver cuellos estructurales de los candidatos B mediante paradigmas, análisis token-específicos, facsímiles, grafemática o comparaciones publicadas directas.
+La cartera positiva C01–C09 está ya fuera de la fase C: **A = C01, C07, C08; B/B+ = C02, C03, C04, C05, C06, C09; C = ninguno**. La prioridad es resolver cuellos estructurales mediante paradigmas, análisis token-específicos, facsímiles, grafemática, comparaciones publicadas directas y controles adversariales.
 
 ## C02 · `čipérameke ↔ Chipérami`
 
@@ -25,23 +25,29 @@ La cartera positiva C01–C09 entra ahora en una fase distinta: **no queda ning�
 
 ## C05 · `selí → selíameke ↔ sir-/siríame`
 
-**B formal; B+ fuerte.** Merrill declara que `selíameke` deriva de `selí` ‘gobernar’; Márquez documenta una familia moderna `sir-` de gobierno y Caballero aporta Choguita `siríame` ‘gobernador’ junto con `-ame` participial. Precedentes independientes `l~r` y `e~i` vuelven la comparación no ad hoc, pero no prueban cognación. `selíameke` sigue siendo control negativo para la segmentación pasiva de `li`, porque `li` pertenece a la raíz `selí`.
+**B formal; B+ fuerte; etimología dual no resuelta.**
+
+La línea lingüística de gobierno permanece fuerte: Merrill declara `selí` ‘gobernar’ → `selíameke` ‘gobernante/juez del pueblo’; Márquez documenta una familia moderna `sir-` de gobierno y Caballero aporta Choguita `siríame` ‘gobernador’. Precedentes independientes `l~r` y `e~i` vuelven la comparación no ad hoc, sin demostrar cognación.
+
+Se conserva además una línea etnohistórica competidora. Zingg interpreta `selígame` como ‘portador de lanza’ y lo relaciona con un término para ‘lanza’; el Sistema de Información Cultural mantiene una explicación semejante. Márquez distingue sincrónicamente la familia `sir-` de gobierno de `se*l/se*r` ‘lanza’, con vocal larga marcada.
+
+La derivación verbal de Steffel es el hecho lingüístico más directo para el token histórico, pero la tradición de la lanza es evidencia documental real. No se decide todavía si ambas líneas reflejan etimología antigua, reinterpretación cultural, variación regional, convergencia u homofonía parcial.
+
+`dual_etymology_unresolved=true`. C05 conserva B+ fuerte. `selíameke` sigue siendo control negativo para la segmentación pasiva de `li`, porque `li` pertenece a la raíz `selí`.
 
 ## C06 · `tsocamec/otsocamec → čókameke ~ čókame → chó-ka-me`
 
 **B formal; B+ excepcional / cercano a A en el tramo Steffel→moderno.**
 
-El antecedente de 1683 `tsocamec/otsocamec` ‘oscuro/negro’ se conserva como estrato léxico temprano, sin segmentación adjudicada.
+El antecedente de 1683 `tsocamec/otsocamec` ‘oscuro/negro’ se conserva como estrato léxico temprano, sin segmentación adjudicada. Para Steffel, Merrill documenta `čókameke ~ čókame`. Una comparación historiográfica publicada alinea Steffel `tschocámeke`, Hilton `chócami` y Brambila `chókame`, y caracteriza la clase cromática histórica como derivada con material `-game/-came/-queme` y `-ke` final.
 
-Para Steffel, Merrill documenta el par `čókameke ~ čókame` ‘negro(s)’. Estrada Fernández y Grageda Bustamante comparan explícitamente en una misma discusión historiográfica Steffel `tschocámeke`, Hilton `chócami` y Brambila `chókame`; además caracterizan los términos cromáticos históricos como derivados y señalan material `-game/-came/-queme` junto con el `-ke` final.
+En el moderno, Burgess identifica `čó-` ‘negro’ como raíz cromática básica y analiza `-kame` mediante `-ka + -ame`; el *Compendio* documenta `chó-ka-mi`, `chó-ka-me` y `chó-ko-m` regionalmente.
 
-En el moderno, Burgess et al. identifican `čó-` ‘negro’ como raíz cromática básica y analizan `-kame` mediante `-ka` + participial `-ame`; el *Compendio básico de la gramática ralámuli* documenta regionalmente `chó-ka-mi`, `chó-ka-me` y `chó-ko-m`.
-
-La continuidad estructural Steffel→moderno es, por tanto, muy fuerte y ya está mediada por comparación publicada. C06 no sube a A porque no existe todavía un parse histórico token-específico `čó-ka-me-ke`, la segmentación de `tsocamec/otsocamec` sigue abierta y no está demostrada la identidad histórica del material `ka/c` ni la relación `<c>` final 1683 ↔ `-ke`.
+C06 no sube a A porque no hay parse histórico token-específico, la segmentación de 1683 permanece abierta y no está demostrada la identidad histórica de `ka/c` ni `<c>` final ↔ `-ke`.
 
 ## C08 · `Tschutschá → Tschutschelíameke`
 
-**A.** Merrill documenta el paradigma exacto, identifica `tschutsch-e-` con aplicativo `-e`, analiza `-li` pasivo y `-ameke` participial en la construcción paralela y remite directamente a `tschutschelíameke`. La arquitectura histórica `X + -li + -ameke` cuenta ahora con dos raíces A/source-explicit: `tsanelíameke` y `tschutschelíameke`.
+**A.** Merrill documenta el paradigma exacto, identifica `tschutsch-e-`, analiza `-li` pasivo y `-ameke` participial en la construcción paralela y remite directamente a `tschutschelíameke`. La arquitectura histórica `X + -li + -ameke` cuenta con dos raíces A/source-explicit: `tsanelíameke` y `tschutschelíameke`.
 
 ## C09 · Tellechea
 
@@ -54,9 +60,9 @@ La continuidad estructural Steffel→moderno es, por tanto, muy fuerte y ya est�
 - replicación documental ≠ independencia de fuente;
 - patrón moderno de alta confianza ≠ parse histórico impreso;
 - `selíameke` positivo léxicamente ≠ pasivo `li+ameke`;
+- una etimología etnohistórica publicada no anula automáticamente una derivación léxica explícita más antigua: ambas se preservan si su relación histórica sigue abierta;
 - `gayéname` y `natáme` de Tellechea son falsos breves por salto de línea;
-- parse moderno `ros-ka-me` no autoriza segmentación retrospectiva;
-- parse moderno `chó-ka-me` no autoriza segmentación automática de `tsocamec` ni un `-ka` histórico idéntico;
+- parse moderno `ros-ka-me` o `chó-ka-me` no autoriza segmentación retrospectiva;
 - la promoción de C08 no autoriza segmentar automáticamente cualquier `liameke` superficial.
 
 ## Afirmaciones prohibidas
@@ -66,6 +72,7 @@ No formular como conclusión:
 - `-ameke > -ami` como ley universal;
 - `e > i` o `l > r` como leyes históricas universales;
 - cognación automática por parecido formal-semántico;
+- una etimología única gobierno↔lanza para C05 mientras compitan las dos líneas documentales;
 - `rosácameke = ros-ka-me-ke` o `čókameke = čó-ka-me-ke` como parses históricos publicados;
 - proyección automática de `-ka` moderno hacia 1683/Steffel;
 - `liameke = -li + -ameke` sin análisis de la raíz y construcción concreta;
@@ -74,4 +81,4 @@ No formular como conclusión:
 
 ## Estado de publicación científica
 
-El modelo general v18 sigue vigente y no requiere v19. La novedad de v9 es de **madurez de cartera**: C06 pasa de C a B+, de modo que todos los candidatos positivos C01–C09 están ahora en A o B. La fase de descubrimiento por similitud queda cerrada; la siguiente fase es resolver candidatos B con evidencia estructural de mayor poder probatorio. El mayor rendimiento documental esperado está en Guadalaxara/Rodríguez López para C06 y grafemática, y en el facsímil de Tellechea para C09.
+El modelo global v18 sigue vigente. La matriz v10 conserva la cartera de v9 y añade una mejora epistemológica: C05 mantiene B+ fuerte, pero incorpora explícitamente una etimología competidora de ‘portador de lanza’ sin borrar la derivación verbal histórica. La fase sigue siendo `resolve_tier_B_structural_bottlenecks`, con prioridad documental en Guadalaxara/Rodríguez López para C06/grafemática y facsímil Tellechea para C09.
