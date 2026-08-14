@@ -16,16 +16,14 @@ Este archivo es el punto de entrada estable para la investigación filológica y
 
 ## 1. Síntesis y matriz vigentes
 
-- [`AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md`](AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md): síntesis general vigente.
-- [`EVIDENCE_MASTER_MATRIX_V4.md`](EVIDENCE_MASTER_MATRIX_V4.md): matriz A/B/C/D/N vigente. C04 permanece B con fuerza `B+ excepcional / cercano a A`, pero su pertenencia al patrón participial/agentivo moderno pasa a alta confianza interna; C09 permanece B fuerte pendiente de facsímil.
-- [`data/research/evidence_master_matrix_v4.json`](data/research/evidence_master_matrix_v4.json): estado legible por máquina.
-- [`CANDIDATE_SOURCE_TESTS_V4.md`](CANDIDATE_SOURCE_TESTS_V4.md): pruebas fuente-basadas con controles internos `Xema ~ Xame`.
-- [`C04_NES_FAMILY_MODERN_BRIDGE_V1.md`](C04_NES_FAMILY_MODERN_BRIDGE_V1.md): expediente del puente moderno `nes-/Neseme/Nisé`.
-- [`C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md`](C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md): control morfológico vigente de C04; documenta cinco pares internos `Xema ~ Xame` comparables con `nesema ~ nesame`.
-- [`TELLECHEA_1826_AME_TOKEN_AUDIT_V4.md`](TELLECHEA_1826_AME_TOKEN_AUDIT_V4.md): auditoría exhaustiva del OCR largo de Tellechea; clasifica 24 hits, reconstruye saltos de línea, confirma tres familias fuertes y registra dos nuevas candidatas OCR.
-- [`data/research/tellechea_1826_ame_token_audit_v4.json`](data/research/tellechea_1826_ame_token_audit_v4.json): contraparte reproducible de la auditoría C09.
+- [`AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md`](AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md): síntesis general vigente; no se crea v19 porque las últimas rondas fortalecen candidatos concretos sin cambiar el modelo global.
+- [`EVIDENCE_MASTER_MATRIX_V4.md`](EVIDENCE_MASTER_MATRIX_V4.md) y [`data/research/evidence_master_matrix_v4.json`](data/research/evidence_master_matrix_v4.json): matriz vigente.
+- [`CANDIDATE_SOURCE_TESTS_V4.md`](CANDIDATE_SOURCE_TESTS_V4.md): pruebas fuente-basadas vigentes.
+- [`C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md`](C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md): control morfológico vigente de C04; cinco pares internos `Xema ~ Xame` vuelven de alta confianza interna la pertenencia de `nesame` al patrón participial/agentivo, sin convertirla en parse token-específico ni cognación histórica.
+- [`TELLECHEA_1826_SHORT_AME_TARGETED_AUDIT_V5.md`](TELLECHEA_1826_SHORT_AME_TARGETED_AUDIT_V5.md): auditoría focal vigente de C09.
+- [`data/research/tellechea_1826_short_ame_targeted_audit_v5.json`](data/research/tellechea_1826_short_ame_targeted_audit_v5.json): contraparte reproducible de C09 v5.
 
-Las versiones V6–V17, matrices v1–v3 y source tests v1–v3 se conservan como **instantáneas históricas del razonamiento**, no como estado vigente.
+Las versiones anteriores se conservan como **instantáneas históricas del razonamiento**, no como estados vigentes.
 
 ## 2. Auditorías de fuente primaria o edición crítica
 
@@ -36,8 +34,9 @@ Las versiones V6–V17, matrices v1–v3 y source tests v1–v3 se conservan com
 - [`GUADALAXARA_1683_OKAMEK_INDEPENDENT_CONTROL_V1.md`](GUADALAXARA_1683_OKAMEK_INDEPENDENT_CONTROL_V1.md)
 - [`TELLECHEA_1826_PARTICIPIAL_VARIATION_BRIDGE_V1.md`](TELLECHEA_1826_PARTICIPIAL_VARIATION_BRIDGE_V1.md)
 - [`TELLECHEA_1826_INTERNAL_PARTICIPIAL_ALTERNATION_V2.md`](TELLECHEA_1826_INTERNAL_PARTICIPIAL_ALTERNATION_V2.md)
-- [`TELLECHEA_1826_FINAL_VELAR_DELETION_MECHANISM_V3.md`](TELLECHEA_1826_FINAL_VELAR_DELETION_MECHANISM_V3.md) — histórico parcialmente superado por v18: conservar evidencia, no la transferencia causal a participios.
-- [`TELLECHEA_1826_AME_TOKEN_AUDIT_V4.md`](TELLECHEA_1826_AME_TOKEN_AUDIT_V4.md) — auditoría OCR contextual vigente; no equivale a cotejo facsimilar.
+- [`TELLECHEA_1826_FINAL_VELAR_DELETION_MECHANISM_V3.md`](TELLECHEA_1826_FINAL_VELAR_DELETION_MECHANISM_V3.md) — histórico parcialmente superado por v18: conservar evidencia, no transferencia causal a participios.
+- [`TELLECHEA_1826_AME_TOKEN_AUDIT_V4.md`](TELLECHEA_1826_AME_TOKEN_AUDIT_V4.md) y [`data/research/tellechea_1826_ame_token_audit_v4.json`](data/research/tellechea_1826_ame_token_audit_v4.json): inventario exhaustivo de las formas largas OCR.
+- [`TELLECHEA_1826_SHORT_AME_TARGETED_AUDIT_V5.md`](TELLECHEA_1826_SHORT_AME_TARGETED_AUDIT_V5.md): auditoría dirigida de las formas breves y estado focal vigente.
 
 ## 3. Hallazgo focal C04
 
@@ -48,28 +47,35 @@ La cadena documentada de C04 incluye:
 → `Neseme` Baja/Western  
 ↔ `Nisé/Niséami/nise’ami` en SRC-02 y Balleza.
 
-El control morfológico v3 añade cinco controles internos dentro del mismo diccionario: `benema ~ bename`, `natogema ~ natogame`, `ne’ogema ~ ne’ogame`, `nichugema ~ nichugame` y `semema ~ semame`. Todos repiten la relación superficial verbo de cita `...ema` ↔ agente/cualidad `...ame`; `semema ~ semame` contrapone directamente ‘tocar un instrumento de cuerdas’ con ‘violinista, músico de cuerdas’.
+El control morfológico v3 añade cinco controles internos dentro del mismo diccionario: `benema ~ bename`, `natogema ~ natogame`, `ne’ogema ~ ne’ogame`, `nichugema ~ nichugame` y `semema ~ semame`. Combinados con las reglas de la misma obra, permiten tratar la pertenencia de `nesame` al patrón participial/agentivo como **alta confianza interna de fuente**.
 
-Combinados con las reglas de la misma obra —nombres de actividad frecuentemente participiales, participio presente sustantival/adjetival y material `-ame/-me/-mi` participial— estos pares permiten tratar la pertenencia de `nesame` al patrón participial/agentivo de `nes-` como **alta confianza interna de fuente**.
-
-C04 sigue formalmente en B+ excepcional porque no se ha recuperado un parse impreso morfema por morfema del token exacto ni una declaración histórica directa `Nessé ~ nes-/Nisé`. El problema moderno dejó de ser la plausibilidad morfológica; el cuello de botella real es ahora el parse explícito y, sobre todo, la identidad histórica de la raíz.
+C04 sigue formalmente en B+ excepcional porque no se ha recuperado un parse impreso morfema por morfema del token exacto ni una declaración histórica directa `Nessé ~ nes-/Nisé`.
 
 ## 4. Hallazgo focal C09 · Tellechea
 
-La auditoría OCR v4 identifica 24 hits crudos en `-amec/-ameque` y demuestra que no todos son morfológicamente comparables. Las familias fuertes siguen siendo:
+La auditoría v4 depuró las 24 ocurrencias crudas largas. La auditoría v5 revisó las 168 ocurrencias crudas / 111 cadenas breves únicamente alrededor de raíces justificadas o paralelos españoles pertinentes.
 
-- `atígameque ~ atígame`;
+### Redes largas/breves fuertes por OCR + contexto
+
+- `atígameque ~ atígame/atigame`;
 - `simiámec ~ simíame`;
-- `machiámec ~ machiámeque ~ machíameque ~ machíame`.
+- `machiámec ~ machiámeque ~ machíameque ~ machíame`;
+- `netetugameque ~ netétugame`;
+- `rejoírugameque ~ rejoírugame/rejóirugame`.
 
-Se añaden como **candidatos OCR pendientes de facsímil**:
+### Pendientes de facsímil
 
-- `ayoriguámeque ~ ayoriguáme`;
-- `rejoírugameque ~ rejoírugame`.
+- probable `ayoriguámeque ~ ayoriguáme`;
+- candidato `yumága-`: largo OCR `yumctvameque` frente a breves `yumágame`, todos en contexto “Todopoderoso”; no reconstruir la forma larga sin lectura visual.
 
-La auditoría corrige además límites falsos creados por OCR: `gameque` pertenece a `netetu-gameque`, `támeque` a `na-támeque`, y la supuesta forma breve `gayéname` es en realidad `gayéname-que` partido por salto de línea. Esta última no debe volver a usarse como par largo/breve.
+### Controles negativos OCR
 
-C09 permanece **B fuerte** hasta cotejo facsimilar.
+- `gayéname` no es breve: es `gayéname-que` partido por línea;
+- `natáme` no es breve: es `natáme-ra` / `natámera` partido por línea;
+- `gameque` no es lema independiente: reconstruye `netetu-gameque`;
+- `támeque` no es lema independiente: reconstruye `na-támeque`.
+
+C09 permanece **B fuerte+**. La búsqueda OCR general queda cerrada después de v5; el siguiente salto exige facsímil y control grafemático.
 
 ## 5. Puentes morfológicos modernos e históricos
 
@@ -81,11 +87,16 @@ C09 permanece **B fuerte** hasta cotejo facsimilar.
 
 ## 6. Artefactos reproducibles
 
-Las referencias de máquina vigentes son [`data/research/evidence_master_matrix_v4.json`](data/research/evidence_master_matrix_v4.json), [`data/research/tellechea_1826_ame_token_audit_v4.json`](data/research/tellechea_1826_ame_token_audit_v4.json) y [`research-state.json`](research-state.json). Los JSON anteriores se conservan para trazabilidad.
+Las referencias de máquina vigentes son:
+
+- [`data/research/evidence_master_matrix_v4.json`](data/research/evidence_master_matrix_v4.json);
+- [`data/research/tellechea_1826_ame_token_audit_v4.json`](data/research/tellechea_1826_ame_token_audit_v4.json);
+- [`data/research/tellechea_1826_short_ame_targeted_audit_v5.json`](data/research/tellechea_1826_short_ame_targeted_audit_v5.json);
+- [`research-state.json`](research-state.json).
 
 ## 7. Interoperabilidad y publicación candidata
 
-El dataset estable sigue en `1.0.0`; las capas experimentales siguen en `1.1.0-candidate`. C04 y las nuevas familias OCR de C09 permanecen en expediente y **no se integran como segmentaciones/cognaciones asentadas en el corpus estable**.
+El dataset estable sigue en `1.0.0`; las capas experimentales siguen en `1.1.0-candidate`. C04 y las redes OCR de C09 permanecen en expediente y **no se integran como cognaciones o segmentaciones asentadas en el corpus estable**.
 
 ## Lectura recomendada
 
@@ -94,10 +105,10 @@ El dataset estable sigue en `1.0.0`; las capas experimentales siguen en `1.1.0-c
 3. `EVIDENCE_MASTER_MATRIX_V4.md`;
 4. `AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md`;
 5. `C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md`;
-6. `TELLECHEA_1826_AME_TOKEN_AUDIT_V4.md`;
-7. `CANDIDATE_SOURCE_TESTS_V4.md`;
+6. `TELLECHEA_1826_SHORT_AME_TARGETED_AUDIT_V5.md`;
+7. `TELLECHEA_1826_AME_TOKEN_AUDIT_V4.md` para procedencia de hits largos;
 8. `RESEARCH_DEPENDENCIES.md` antes de abrir nuevas búsquedas.
 
 ## Regla de mantenimiento
 
-No elevar una hipótesis por cantidad de apariciones, semejanza gráfica, alternancia fonológica documentada en otros lexemas ni repetición dentro de una misma tradición editorial. Un patrón morfológico interno de alta confianza no debe presentarse como un parse token-específico que la fuente no imprime. Tampoco deben tratarse cortes de línea OCR como límites léxicos. Una cuestión no resuelta permanece explícitamente **no resuelta**.
+No elevar una hipótesis por cantidad de apariciones, semejanza gráfica, alternancia fonológica documentada en otros lexemas ni repetición dentro de una misma tradición editorial. Un patrón morfológico interno de alta confianza no debe presentarse como un parse token-específico que la fuente no imprime. Tampoco deben tratarse cortes de línea OCR como límites léxicos. Para Tellechea, la fase de búsqueda OCR queda cerrada después de v5: una nueva promoción exige evidencia facsimilar/grafemática.
