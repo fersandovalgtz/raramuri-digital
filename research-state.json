@@ -1,0 +1,72 @@
+{
+  "project": "Rarámuri Histórico Digital",
+  "repository": "fersandovalgtz/raramuri-digital",
+  "branch": "main",
+  "cutoff_date": "2026-08-14",
+  "canonical_assessment": "AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V17.md",
+  "entry_point": "RESEARCH_MASTER_INDEX.md",
+  "evidence_status": "RESEARCH_EVIDENCE_STATUS.md",
+  "dependencies": "RESEARCH_DEPENDENCIES.md",
+  "hypotheses": {
+    "proto_participial_ame_depth": {
+      "status": "high_confidence"
+    },
+    "steffel_ameke_ame_alternation": {
+      "status": "directly_demonstrated"
+    },
+    "historical_peripheral_reduction": {
+      "status": "high_confidence"
+    },
+    "tellechea_same_root_extension_variation": {
+      "status": "strong_pending_facsimile_control",
+      "families": [
+        "machiámec ~ machiámeque ~ machíame",
+        "simiámec ~ simíame",
+        "ati-family long ~ short forms"
+      ]
+    },
+    "modern_ame_ami_variation": {
+      "status": "supported_at_least_norogachi"
+    },
+    "universal_ameke_to_ami": {
+      "status": "not_demonstrated",
+      "use_as_conclusion": false
+    },
+    "historical_li_ameke": {
+      "status": "one_D1_one_strong_D2",
+      "D1": ["tsanelíameke"],
+      "D2_strong": ["tschutschelíameke"],
+      "same_root_corroboration": ["galetsanelíameke"],
+      "negative_controls": ["ganelíameke", "uilíameke", "selíameke"]
+    },
+    "modern_li_ame": {
+      "status": "high_constructional_confidence",
+      "direct_D1_examples": ["ani-lí-ame", "rihói-li-ame"]
+    },
+    "color_bridge": {
+      "status": "strong_formal_semantic_historical_segmentation_open",
+      "layers": [
+        "Guadalaxara 1683 tsocamec/otsocamec",
+        "Guadalaxara 1683 independent control ookamek ~ okamek",
+        "Steffel čókameke ~ čókame",
+        "modern chó-ka-me and regional variants"
+      ]
+    }
+  },
+  "prohibited_shortcuts": [
+    "universal -ameke > -ami",
+    "automatic -li-ameke > -li-ame",
+    "surface li = historical passive -li",
+    "automatic equivalence of <c>/<k>/<que>/<ke>",
+    "automatic projection of modern color -ka into colonial forms",
+    "automatic cognacy from graphic similarity",
+    "morphological frequency claims from raw OCR counts"
+  ],
+  "documentary_dependencies": {
+    "rodriguez_lopez_2010_full_ingestion": "blocked",
+    "tellechea_1826_facsimile_visual_audit": "blocked",
+    "colonial_graphematic_control": "depends_on_facsimiles",
+    "second_historical_li_ameke_D1": "not_found"
+  },
+  "next_action_when_documents_available": "Facsimile-first exhaustive token audit before additional general web searching"
+}
