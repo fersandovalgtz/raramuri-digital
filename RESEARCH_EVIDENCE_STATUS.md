@@ -2,8 +2,8 @@
 
 **Corte:** 2026-08-14  
 **Síntesis general vigente:** [`AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md`](AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md)  
-**Matriz vigente:** [`EVIDENCE_MASTER_MATRIX_V7.md`](EVIDENCE_MASTER_MATRIX_V7.md)  
-**Auditorías focales:** C02 `C02_CHIPER_DIACHRONIC_BRIDGE_V1.md`; C03 `C03_ROSA_WHITE_DIACHRONIC_BRIDGE_V1.md`; C04 `C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md`; C08 `C08_TSCHUTSCHELIAMEKE_MORPHOLOGICAL_ADJUDICATION_V1.md`; C09 `TELLECHEA_1826_SHORT_AME_TARGETED_AUDIT_V5.md`.
+**Matriz vigente:** [`EVIDENCE_MASTER_MATRIX_V8.md`](EVIDENCE_MASTER_MATRIX_V8.md)  
+**Auditorías focales:** C02 `C02_CHIPER_DIACHRONIC_BRIDGE_V1.md`; C03 `C03_ROSA_WHITE_DIACHRONIC_BRIDGE_V1.md`; C04 `C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md`; C05 `C05_SELI_SIRI_GOVERNOR_BRIDGE_V1.md`; C08 `C08_TSCHUTSCHELIAMEKE_MORPHOLOGICAL_ADJUDICATION_V1.md`; C09 `TELLECHEA_1826_SHORT_AME_TARGETED_AUDIT_V5.md`.
 
 ## Estado general
 
@@ -21,26 +21,29 @@ La evidencia sostiene con **alta confianza** la profundidad histórica del domin
 
 **B formal; B+ excepcional / cercano a A.** Cinco controles internos `Xema ~ Xame` y las reglas de Márquez permiten tratar `nesame` como miembro participial/agentivo de `nes-` con alta confianza interna. Falta parse token-específico o identificación histórica directa `Nessé ~ nes-/Nisé`.
 
+## C05 · `selí → selíameke ↔ sir-/siríame`
+
+**B formal; B+ fuerte.**
+
+Merrill et al. 2020 declaran directamente que `selíameke` ‘juez del pueblo, gobernante’ deriva del verbo `selí` ‘gobernar’. La relación histórica base → derivado está, por tanto, explícitamente publicada.
+
+Márquez documenta una familia moderna compacta en el mismo dominio: `sirnama` ‘gobernar, ser cacique’, `sirachi` ‘la presidencia/el juzgado’, `sirame` (O.F. `sirgame`, `sergame`) ‘cacique, jefe, gobernador’, `siri*ma` ‘ser jefe, ser cacique’ y `sir*nowa` ‘jefe, cacique, señor’. La gramática usa además `siriame` ‘cacique’ en su paradigma de plural.
+
+Caballero aporta una línea independiente: Choguita `siríame` ‘gobernador’ y una gramática donde `-ame` se identifica explícitamente como sufijo participial.
+
+Las dos diferencias principales entre histórico `selí-` y moderno `sir-/sirí-` cuentan con precedentes independientes en la documentación: Merrill registra alternancia medial `<l>~<r>` (`cavólameke ~ cavórameke`) y alternancias `e~i/é~í` restringidas. Estos controles vuelven la comparación fonológicamente plausible, **no** regular ni cognada por decreto.
+
+No se recuperó una segmentación moderna token-específica `sirí- + -ame` ni una fuente comparativa que declare directamente `selí ~ sirí-` como cognados/continuación. Por eso C05 no sube a A.
+
+### Control negativo preservado
+
+`selíameke` sigue siendo N03 para la segmentación automática: su `li` pertenece a la raíz independiente `selí`; no constituye pasivo `-li`. La misma forma puede ser candidato léxico positivo C05 sin dejar de ser control negativo construccional.
+
 ## C08 · `Tschutschá → Tschutschelíameke`
 
-**A.** La promoción se apoya en análisis explícito compuesto dentro de Merrill et al. 2020.
+**A.** Merrill documenta el paradigma exacto, identifica `tschutsch-e-` con aplicativo `-e`, analiza `-li` pasivo y `-ameke` participial en la construcción paralela y remite directamente a `tschutschelíameke`. La representación `tschutsch- + -e + -li + -ameke` queda restringida por análisis fuente-explícitos aunque no exista una sola glosa interlineal completa.
 
-La fuente documenta directamente `Tschutschá` ‘ungir’, `Tschutschelíameke` ‘ungido’ y `Tschutschelíla` ‘unción’. En otra sección analítica identifica `tschutsch-e-` ‘ungirle’ (`< tschutschá`) como ejemplo del aplicativo `-e ~ -je`. En el análisis de `tsanelíameke`, Merrill explica que el sufijo pasivo `-li` produce una base pasiva y que el sufijo participial `-ameke` convierte esa base en adjetivo; inmediatamente remite con `cf.` a `tschutschelíameke, ‘ungido’`.
-
-La entrada metalingüística `-ameke` lo identifica además como sufijo participial. La estructura permitida queda:
-
-`tschutsch- + -e + -li + -ameke` → ‘ungido’.
-
-No existe una sola línea interlineal con todos los guiones (`single_line_token_parse=false`), pero cada componente y la relación de la construcción están explícitamente anclados en la misma edición crítica y el token exacto es el comparando publicado. Esto satisface el criterio A vigente.
-
-### Consecuencia construccional
-
-La arquitectura histórica `X + -li + -ameke` cuenta ahora con **dos raíces históricas A/source-explicit**:
-
-1. `tsanelíameke`;
-2. `tschutschelíameke`.
-
-Los controles negativos `ganelíameke`, `uilíameke` y `selíameke` siguen vigentes: la subcadena superficial `liameke` no basta para segmentar automáticamente `-li + -ameke`.
+La arquitectura histórica `X + -li + -ameke` cuenta ahora con dos raíces A/source-explicit: `tsanelíameke` y `tschutschelíameke`. Los controles `ganelíameke`, `uilíameke` y `selíameke` se mantienen.
 
 ## C09 · Tellechea
 
@@ -50,24 +53,26 @@ Los controles negativos `ganelíameke`, `uilíameke` y `selíameke` siguen vigen
 
 - final `-ami` ≠ participio automático;
 - `e~i/é~í` documentado ≠ cognación ni ley universal;
+- `l~r` documentado ≠ cognación ni ley universal;
 - replicación documental ≠ independencia de fuente;
 - patrón moderno de alta confianza ≠ parse histórico impreso;
+- `selíameke` positivo léxicamente ≠ pasivo `li+ameke`;
 - `gayéname` y `natáme` de Tellechea son falsos breves por salto de línea;
 - parse moderno `ros-ka-me` no autoriza segmentación retrospectiva;
-- **la promoción de C08 no autoriza a segmentar automáticamente cualquier `liameke` superficial**.
+- la promoción de C08 no autoriza segmentar automáticamente cualquier `liameke` superficial.
 
 ## Afirmaciones prohibidas
 
 No formular como conclusión:
 
 - `-ameke > -ami` como ley universal;
-- `e > i` como ley histórica universal;
+- `e > i` o `l > r` como leyes históricas universales;
+- cognación automática `selí ~ sirí-` por contar con precedentes `e~i/l~r`;
 - `rosácameke = ros-ka-me-ke` como parse histórico publicado;
-- cognación automática por parecido formal-semántico;
 - `liameke = -li + -ameke` sin análisis de la raíz y construcción concreta;
 - equivalencia automática de `<c>/<k>/<que>/<ke>`;
 - promoción de redes OCR a evidencia facsimilar directa.
 
 ## Estado de publicación científica
 
-El modelo general v18 no requiere una v19. C08 sí cambia de grado: pasa a **A** y proporciona una segunda raíz histórica fuente-explícita para `-li + -ameke`. C02, C03 y C04 permanecen B+ con cuellos de botella estructurales claramente delimitados; C09 permanece B fuerte+ pendiente de facsímil. C08 queda cerrado salvo contradicción nueva.
+El modelo general v18 no requiere v19. C05 pasa de C a **B+ fuerte**, porque ambos extremos poseen familias semánticamente concordantes y el histórico tiene derivación explícita. C08 permanece A; C02, C03 y C04 permanecen B+; C09 permanece B fuerte+ pendiente de facsímil. C05 queda cerrado para acumulación general de `Siríame`; el siguiente candidato susceptible de prueba de grado es C06.
