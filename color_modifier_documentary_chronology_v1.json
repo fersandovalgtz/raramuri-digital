@@ -1,0 +1,75 @@
+{
+  "artifact": "color_modifier_documentary_chronology_v1",
+  "date": "2026-08-13",
+  "question": "What is the earliest documentary point at which Rarámuri color modifiers and their degree semantics can be verified without projecting later analyses backward?",
+  "chronology": [
+    {
+      "date": "18th century / Steffel",
+      "evidence_type": "historical lexical and grammatical evidence",
+      "verified": true,
+      "findings": [
+        "Historical basic color forms occur in -cameke/-gameke, with attested truncations in -came for black, white and green.",
+        "Historical stative -ga~-ja is independently analyzed with -(a)meke, and -na is explicitly segmented as a verbalizer in red tsestá-na.",
+        "No accessible published Steffel source audited so far gives the later modern semantic labels 'color subido' versus 'color bajo' for specific color morphemes."
+      ],
+      "epistemic_limit": "Do not assign twentieth-century degree semantics to individual eighteenth-century morphemes unless directly documented."
+    },
+    {
+      "date": "1981",
+      "source": "Donald Burgess, Los colores en tarahumara, Memoria Ra'ítzari--La Palabra, Primer Seminario Sobre Lenguas Habladas en el Estado de Chihuahua, pp. 84-88",
+      "evidence_type": "bibliographic metadata only in current audit",
+      "verified": true,
+      "findings": [
+        "The publication exists and predates the 1983 American Ethnologist article."
+      ],
+      "epistemic_limit": "Full text not recovered in the present audit; no exact morpheme-to-function claim is attributed to the 1981 paper."
+    },
+    {
+      "date": "1983",
+      "source": "Burgess, Kempton & MacLaury, Tarahumara Color Modifiers: Category Structure Presaging Evolutionary Change, American Ethnologist 10:133-149, DOI 10.1525/ae.1983.10.1.02a00080",
+      "evidence_type": "article metadata plus published/reproduced abstract",
+      "verified": true,
+      "findings": [
+        "The abstract states that basic Tarahumara color terms carry obligatory modifiers.",
+        "Those modifiers specify the grade of membership of a color stimulus in a color category.",
+        "Therefore explicit semantic organization by color modifiers is documentable at the system level by 1983."
+      ],
+      "epistemic_limit": "Without the complete article, the exact assignments of individual forms such as -ka or -na are not attributed to this source in the current audit."
+    },
+    {
+      "date": "1997",
+      "source": "Compendio básico de la gramática ralámuli",
+      "evidence_type": "accessible primary multivariety grammatical description",
+      "verified": true,
+      "findings": [
+        "-ame/-me is explicitly labeled participial.",
+        "-ka/-ga/-cha are explicitly grouped as color modifiers for 'subido'.",
+        "-na is explicitly described as 'se está poniendo/color bajo'.",
+        "The mappings are illustrated across multiple color roots and regional varieties."
+      ],
+      "epistemic_limit": "This establishes a secure latest-by date for the exact morpheme-to-function mapping in an accessible primary source, not necessarily the date of innovation."
+    },
+    {
+      "date": "2022",
+      "source": "Caballero, A grammar of Choguita Rarámuri",
+      "evidence_type": "modern independent grammar",
+      "verified": true,
+      "findings": [
+        "Participial -ame is independently described in Choguita.",
+        "Choguita lacks /g/ as a phoneme while retaining /k/, supplying a negative control against a pan-Rarámuri synchronous k~g rule."
+      ],
+      "epistemic_limit": "This source is used for modern grammatical controls rather than for dating the earlier color-degree semantic system."
+    }
+  ],
+  "minimum_verified_dates": {
+    "color_modifier_degree_semantics_at_system_level": "1983",
+    "exact_accessible_primary_morpheme_function_mapping": "1997",
+    "possible_earlier_bibliographic_antecedent": "1981"
+  },
+  "interpretation": "The modern semantic specialization of obligatory color modifiers is explicitly documented by 1983. The current audit can securely map -ka/-ga/-cha and -na to their specific functions only from the accessible 1997 multivariety source. The historical Steffel evidence demonstrates older morphology but does not by itself date the modern degree opposition.",
+  "next_tests": [
+    "Recover the full text of Burgess 1981 to determine whether the specific -ka/-na semantic mapping was already explicit there.",
+    "Recover the full 1983 article to verify the exact forms assigned to central versus marginal category membership.",
+    "Search pre-1980 Rarámuri texts for actual usage of -kame/-game/-name in color contexts, while separating corpus usage from later analyst semantics."
+  ]
+}
