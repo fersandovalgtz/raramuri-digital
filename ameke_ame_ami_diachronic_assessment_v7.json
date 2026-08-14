@@ -1,0 +1,76 @@
+{
+  "artifact": "ameke_ame_ami_diachronic_assessment_v7",
+  "date": "2026-08-13",
+  "research_question": "What historical model best explains the relationship among Proto-Tarahumara *-ame, seventeenth-century gamek, Steffel -ameke/-ame, and modern -ame/-ami and color -ka/-na morphology?",
+  "central_assessment": "The continuity of a derivational/participial domain centered on *-ame is now supported at Proto-Tarahumara, seventeenth-century, eighteenth-century and modern levels. This is substantially stronger than a lexical similarity hypothesis. The color subsystem most plausibly reflects retention of older stative/participial material followed by semantic and analogical specialization, but color-specific historical -c/-k = modern -ka remains unproven.",
+  "historical_backbone": [
+    {
+      "stage": "Proto-Tarahumara",
+      "evidence": "Merrill & Burgess 2014 reconstruct *-ame as adjectivalizer/nominalizer and participial material; late PT *-rúame is *-rú- 'be' + participial *-ame."
+    },
+    {
+      "stage": "1683",
+      "evidence": "Guadalaxara's Pedro norugamek, cited and analyzed by Merrill & Burgess 2014, attests a stative gamek chain before Steffel."
+    },
+    {
+      "stage": "Steffel eighteenth-century lexical evidence",
+      "evidence": "Numerous forms in -ameke and attested truncations in -ame; Steffel reports frequent omission of final -ke in pronunciation. Color pairs include čókameke~čókame and rosákameke~rosákame."
+    },
+    {
+      "stage": "Modern Ralámuli",
+      "evidence": "Participial -ame is independently described; -ami can be a surface reflex in some varieties. Merrill & Burgess report modern -game = stative -ga- + participial -ame in some dialects."
+    }
+  ],
+  "color_subsystem": {
+    "bridge_1_participial": "Historical čókameke~čókame and rosákameke~rosákame align directly with modern chó-ka-me and rosá-ka-me at the surface level.",
+    "bridge_2_na": "Historical tsestá-na 'is red' is explicitly segmented and compared by Merrill with modern sitá-na 'be/become red'; modern multivariety descriptions use -na systematically in color predicates.",
+    "modern_semantic_organization": "Modern color paradigms contrast -kame for a stronger/core color reading with -name/-na for lower/intermediate/becoming color readings across multiple varieties.",
+    "historical_segmentation_limit": "Published historical analyses do not independently segment the c/k before -(a)meke in Steffel's color forms as a color morpheme -ka.",
+    "preferred_working_hypothesis": "retention_plus_specialization",
+    "preferred_hypothesis_confidence": "moderate"
+  },
+  "hypothesis_ranking": [
+    {
+      "rank": 1,
+      "hypothesis": "Retention plus specialization",
+      "summary": "Inherited stative/participial ga+ame(+ke) material survived, while color morphology regularized/specialized a pre-participial -ka and contrasted it with -na."
+    },
+    {
+      "rank": 2,
+      "hypothesis": "Retention without specifying later restructuring",
+      "summary": "Historical color -cameke/-gameke directly continues older stative/participial morphology, but the modern semantic opposition developed without a reconstructible intermediate stage yet."
+    },
+    {
+      "rank": 3,
+      "hypothesis": "Late reanalysis",
+      "summary": "An inherited opaque -kame(ke) chain was later resegmented as -ka + -me; possible, but less economical after the Proto-*ame and 1683 gamek evidence."
+    }
+  ],
+  "priority_candidates": {
+    "count": 7,
+    "all_grade_A_architecture": true,
+    "families": ["dormir", "Nessé/Nisé", "Tſchiper/Chipér", "Selí/Sirí", "negro", "blanco", "azul/verde"],
+    "interpretation": "Grade A remains an evidence-architecture label, not a declaration of demonstrated cognation."
+  },
+  "claims_now_supported": [
+    "A Proto-Tarahumara *-ame can be independently reconstructed.",
+    "Stative combinations involving -ame predate Steffel and include a gamek chain in 1683.",
+    "Steffel preserves widespread -ameke/-ame alternation including direct color pairs.",
+    "Modern Ralámuli independently preserves participial -ame and dialectal stative -ga+-ame.",
+    "The color domain contains at least two independent historical-modern morphological bridges: kameke~kame to ka-me, and -na to -na."
+  ],
+  "claims_still_not_supported": [
+    "A universal mechanical sound/morphology rule -ameke > -ami.",
+    "Automatic segmentation of every historical -cameke/-gameke as -ga/-ka + -ame + -ke.",
+    "Proof that the c/k of each Steffel color word is identical to modern color -ka.",
+    "A securely dated moment when modern color -ka versus -na semantics became specialized."
+  ],
+  "documentary_limit": "Steffel's 1799 Latin grammar remains unpublished according to Estrada Fernández 2021, preventing a full direct search of its adjective/stative morphology in the accessible published corpus.",
+  "next_phase": [
+    "Seek direct access to Steffel 1799 or a scholarly transcription to test ca/ka/ga morphology.",
+    "Audit Burgess 1984 and Burgess-Kempton-MacLaury 1983 directly where full text becomes accessible.",
+    "Build a controlled k~g correspondence series in relevant morphological environments.",
+    "Date the semantic specialization of color -ka versus -na using twentieth-century grammars and elicitation studies.",
+    "Keep SRC-02 provenance resolution active as a separate documentary problem."
+  ]
+}
