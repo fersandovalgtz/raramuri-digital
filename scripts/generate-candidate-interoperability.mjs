@@ -188,7 +188,7 @@ candidateClDfMetadata.tables.push(
       columns: relationsColumns.map((name) => ({
         name,
         datatype: name === "source_page" || name === "source_page_end" || name === "target_homonym_number" ? "integer" : "string",
-        ...(name === "source_record_id" || name === "target_record_id" ? { propertyUrl: "http://cldf.clld.org/v1.0/terms.rdf#entryReference", required: true } : {}),
+        ...((name === "source_record_id" || name === "target_record_id") ? { required: true } : {}),
       })),
       primaryKey: "relation_id",
       foreignKeys: [
