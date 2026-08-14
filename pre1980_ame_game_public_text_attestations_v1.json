@@ -1,0 +1,87 @@
+{
+  "artifact": "pre1980_ame_game_public_text_attestations_v1",
+  "date": "2026-08-13",
+  "purpose": "Document dated pre-1980 written Rarámuri forms containing -ami, -ame and -game in publicly catalogued titles, without imposing grammatical segmentation beyond the visible strings.",
+  "source_collection": "Colecciones Digitales de El Colegio de México, Cartillas indígenas ILV",
+  "attestations": [
+    {
+      "year": 1948,
+      "title": "Rarámuri osirúami",
+      "visible_form": "osirúami",
+      "string_ending": "-ami",
+      "variety": "Tarahumara de Samachique / Central",
+      "handle": "20.500.11986/COLMEX/10016781",
+      "evidence_type": "catalogued Rarámuri title"
+    },
+    {
+      "year": 1950,
+      "title": "Kuíra : Rarámuri osirúami",
+      "visible_form": "osirúami",
+      "string_ending": "-ami",
+      "variety": "Tarahumara de Samachique / Central",
+      "handle": "20.500.11986/COLMEX/10016787",
+      "evidence_type": "catalogued Rarámuri title"
+    },
+    {
+      "year": 1970,
+      "title": "Anayábari ra'icháriara jipe nerúgame ra'íchari",
+      "visible_form": "nerúgame",
+      "string_ending": "-game",
+      "variety": "Tarahumara del oeste, Rocoroibo",
+      "author": "Donald Harris Burgess",
+      "handle": "20.500.11986/COLMEX/10016773",
+      "evidence_type": "catalogued Rarámuri title"
+    },
+    {
+      "year": 1972,
+      "title": "hue'cá e'carúgame nehualíame ju imé",
+      "visible_forms": ["e'carúgame", "nehualíame"],
+      "string_endings": ["-game", "-ame"],
+      "variety": "Tarahumara del oeste, Bacusínare",
+      "author": "Albino Mares Trías",
+      "investigator": "Don Burgess McGuire",
+      "handle": "20.500.11986/COLMEX/10016774",
+      "evidence_type": "catalogued Rarámuri title by Western Rarámuri author"
+    },
+    {
+      "year": 1974,
+      "title": "Regá me'líame ju ye ajágame",
+      "visible_forms": ["me'líame", "ajágame"],
+      "string_endings": ["-ame", "-game"],
+      "variety": "Tarahumara del oeste, Bacusínare",
+      "author": "Albino Mares Trías",
+      "investigator": "Don Burgess McGuire",
+      "handle": "20.500.11986/COLMEX/10016772",
+      "evidence_type": "catalogued Rarámuri title by Western Rarámuri author"
+    },
+    {
+      "year": 1975,
+      "title": "Jena ra'icha ralámuli alué 'ya muchígame chiquime níliga",
+      "visible_form": "muchígame",
+      "string_ending": "-game",
+      "variety": "Tarahumara del oeste, Bacusínare",
+      "author": "Albino Mares Trías",
+      "investigator": "Don Burgess McGuire",
+      "handle": "20.500.11986/COLMEX/10016776",
+      "evidence_type": "catalogued Rarámuri title by Western Rarámuri author"
+    }
+  ],
+  "chronological_findings": [
+    "A written Central form ending in -ami is catalogued by 1948, before Hilton 1959.",
+    "Western title forms ending in -game are catalogued by 1970 and recur in 1972, 1974 and 1975, before the 1978-1980 color-study fieldwork.",
+    "Western -ame forms are visible in titles by Albino Mares Trías in 1972 and 1974.",
+    "The pre-1980 written presence of these strings is therefore independent of the publication date of the 1983 color analysis, although several items belong to ILV/Burgess editorial or research networks."
+  ],
+  "epistemic_limits": [
+    "Title strings alone do not establish morpheme boundaries, grammatical categories or glosses.",
+    "The 1948/1950 -ami form must not automatically be identified with participial -ame/-ami without contextual or grammatical confirmation.",
+    "The Western books are mediated by an ILV publishing environment; Burgess is author, investigator or associated researcher in several items, so institutional independence from his later scholarship is partial rather than complete.",
+    "Albino Mares Trías authors the 1972, 1974 and 1975 items, adding a community-authored usage layer, but editorial normalization may still be present."
+  ],
+  "research_value": "These dated titles supply a documentary floor for the written circulation of -ami, -ame and -game strings before the late-1970s color experiments. They are especially useful as non-color usage controls once full text/context can be inspected.",
+  "next_steps": [
+    "Retrieve page images or OCR for the 1972-1975 Mares Trías books and identify the contexts/glosses of the title forms.",
+    "Search the same texts for additional -game/-ame tokens and color vocabulary.",
+    "Inspect the 1948 and 1950 Central materials to determine the grammatical structure of osirúami rather than inferring it from the title alone."
+  ]
+}
