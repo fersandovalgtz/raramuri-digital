@@ -6,13 +6,13 @@
 
 ## Estado canónico
 
-- [`EVIDENCE_MASTER_MATRIX_V6.md`](EVIDENCE_MASTER_MATRIX_V6.md) + [`data/research/evidence_master_matrix_v6.json`](data/research/evidence_master_matrix_v6.json): matriz vigente.
-- [`CANDIDATE_SOURCE_TESTS_V6.md`](CANDIDATE_SOURCE_TESTS_V6.md): pruebas fuente-basadas vigentes.
+- [`EVIDENCE_MASTER_MATRIX_V7.md`](EVIDENCE_MASTER_MATRIX_V7.md) + [`data/research/evidence_master_matrix_v7.json`](data/research/evidence_master_matrix_v7.json): matriz vigente.
+- [`CANDIDATE_SOURCE_TESTS_V7.md`](CANDIDATE_SOURCE_TESTS_V7.md): pruebas fuente-basadas vigentes.
 - [`RESEARCH_EVIDENCE_STATUS.md`](RESEARCH_EVIDENCE_STATUS.md): síntesis de grados.
 - [`research-state.json`](research-state.json): estado legible por máquina.
 - [`RESEARCH_DEPENDENCIES.md`](RESEARCH_DEPENDENCIES.md): bloqueos y reglas de reapertura.
 
-La síntesis general permanece en v18 porque las rondas recientes fortalecen candidatos concretos sin modificar el modelo diacrónico global.
+La síntesis general permanece en v18 porque las rondas recientes cambian grados de candidatos concretos sin modificar el modelo diacrónico global.
 
 ## C02 · `čipérameke ↔ Chipérami`
 
@@ -22,22 +22,21 @@ La síntesis general permanece en v18 porque las rondas recientes fortalecen can
 ## C03 · `Rosácameke ~ rosácame ↔ Rosácame / Rosácami`
 
 [`C03_ROSA_WHITE_DIACHRONIC_BRIDGE_V1.md`](C03_ROSA_WHITE_DIACHRONIC_BRIDGE_V1.md).  
-**B formal; B+ excepcional / cercano a A.**
-
-Cadena vigente:
-
-`Steffel Rosácameke ~ rosácame`  
-→ `Tellechea 1826 rosacame`  
-→ moderno `Rosácame / Rosácami`.
-
-Merrill documenta directamente `rosácame` en una oración traducida ‘Sus huevos son blancos’. INAH documenta `Calí Rosácame` = ‘La casa blanca’; INPI/SRC-02 documentan `Rosácami` = ‘Blanco’. Márquez identifica `ros/-tos` ‘ser blanco’ y analiza `ros-ka-me`, `ros-na-me` ‘blanco’.
-
-La continuidad ya no requiere postular `e > i`; el moderno conserva también `Rosácame`. Permanece abierto el parse/base históricos y la identidad del `-ka`; no proyectar `ros-ka-me` retrospectivamente.
+**B formal; B+ excepcional / cercano a A.** Largo/breve histórico directo, Tellechea intermedio, moderno `Rosácame/Rosácami` y análisis moderno `ros-ka-me`. No proyectar `-ka` retrospectivamente; falta estructura histórica.
 
 ## C04 · familia `Nessé ~ nes- ~ Nisé`
 
 [`C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md`](C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md).  
 **B formal; B+ excepcional / cercano a A.** La pertenencia participial/agentiva moderna de `nesame` es de alta confianza interna; falta parse exacto o identificación histórica directa.
+
+## C08 · `Tschutschá → Tschutschelíameke`
+
+[`C08_TSCHUTSCHELIAMEKE_MORPHOLOGICAL_ADJUDICATION_V1.md`](C08_TSCHUTSCHELIAMEKE_MORPHOLOGICAL_ADJUDICATION_V1.md).  
+**A.** Merrill documenta el paradigma `Tschutschá` ‘ungir’ → `Tschutschelíameke` ‘ungido’, identifica `tschutsch-e-` como base con aplicativo `-e`, analiza la cadena pasiva `-li` + participial `-ameke` en `tsanelíameke` y remite directamente a `cf. tschutschelíameke`. La estructura `tschutsch- + -e + -li + -ameke` queda restringida por análisis explícitos de la propia fuente, aunque no exista una sola glosa interlineal del token.
+
+### Consecuencia
+
+La construcción histórica `X + -li + -ameke` cuenta ahora con **dos raíces A/source-explicit**: `tsanelíameke` y `tschutschelíameke`. Los controles negativos `ganelíameke`, `uilíameke` y `selíameke` se conservan.
 
 ## C09 · Tellechea
 
@@ -57,17 +56,17 @@ La continuidad ya no requiere postular `e > i`; el moderno conserva también `Ro
 
 ## Interoperabilidad
 
-Dataset estable `1.0.0`; capas experimentales `1.1.0-candidate`. Los hallazgos comparativos C02/C03/C04/C09 permanecen en expediente y no se convierten automáticamente en cognaciones o segmentaciones del corpus estable.
+Dataset estable `1.0.0`; capas experimentales `1.1.0-candidate`. Los hallazgos comparativos no se convierten automáticamente en cognaciones o segmentaciones del corpus estable.
 
 ## Lectura recomendada
 
 1. `PROJECT_VALIDATION_POLICY_V1.md`;
 2. `RESEARCH_EVIDENCE_STATUS.md`;
-3. `EVIDENCE_MASTER_MATRIX_V6.md`;
+3. `EVIDENCE_MASTER_MATRIX_V7.md`;
 4. `AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md`;
 5. auditoría focal del candidato pertinente;
 6. `RESEARCH_DEPENDENCIES.md` antes de abrir nuevas búsquedas.
 
 ## Regla de mantenimiento
 
-No elevar grados por acumulación de apariciones. C02, C03 y C04 sólo deben reabrirse ante evidencia estructural/histórica nueva; C09 sólo ante facsímil. Un análisis moderno explícito no puede proyectarse automáticamente a una forma histórica de estructura no demostrada.
+No elevar grados por acumulación de apariciones. Un análisis compuesto puede satisfacer A cuando cada componente y el token comparado están explícitamente anclados en la fuente; esto no equivale a inventar una glosa interlineal inexistente. La promoción de C08 no autoriza segmentación automática de cualquier `liameke` superficial.
