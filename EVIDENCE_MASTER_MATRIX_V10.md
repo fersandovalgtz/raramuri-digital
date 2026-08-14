@@ -47,7 +47,9 @@ La derivación verbal histórica es el hecho lingüístico más directo disponib
 
 ## Control nuevo
 
-**N10. Una etimología etnohistórica publicada no anula automáticamente una derivación léxica explícita más antigua; ambas deben conservarse cuando su relación histórica no está resuelta.**
+**N11. Una etimología etnohistórica publicada no anula automáticamente una derivación léxica explícita más antigua; ambas deben conservarse cuando su relación histórica no está resuelta.**
+
+N10 permanece reservado al control cromático de v9: el análisis moderno `chó-ka-me` no autoriza segmentación automática de `tsocamec`/formas históricas ni identidad histórica exacta de `ka/c`.
 
 ## Estado de cartera
 
