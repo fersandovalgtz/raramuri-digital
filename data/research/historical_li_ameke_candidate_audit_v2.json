@@ -1,0 +1,76 @@
+{
+  "date": "2026-08-14",
+  "scope": "Steffel historical li+ameke candidates",
+  "method": "OCR locator plus source-critical adjudication against Merrill et al. 2020",
+  "ocr_locator_families": [
+    "selíameke",
+    "tschutschelíameke",
+    "ganelíameke",
+    "uilíameke",
+    "galetsanelíameke"
+  ],
+  "adjudications": [
+    {
+      "form": "tsanelíameke",
+      "grade": "D1",
+      "independent_root": true,
+      "direct_parse": true,
+      "analysis": "tsaní > tsane- + passive -li + participial -ameke",
+      "decision": "retain as sole direct historical D1"
+    },
+    {
+      "form": "galetsanelíameke",
+      "grade": "same-root corroboration",
+      "independent_root": false,
+      "direct_parse": false,
+      "analysis": "contains tsanelíameke family and corroborates expected accent/morphotactics",
+      "decision": "do not increment D1 root count"
+    },
+    {
+      "form": "tschutschelíameke",
+      "grade": "D2-strong",
+      "independent_root": true,
+      "direct_parse": false,
+      "analysis": "tschutschá 'anoint' / tschutschelíla 'anointing' / tschutschelíameke 'anointed'; Merrill cites as comparator to parsed tsanelíameke; passive -li independently demonstrated elsewhere",
+      "decision": "retain as strongest candidate for a second historical D1 but do not promote without explicit published parse"
+    },
+    {
+      "form": "ganelíameke",
+      "grade": "negative-control-opaque",
+      "independent_root": false,
+      "direct_parse": false,
+      "analysis": "family includes ganilíle, which Merrill analyzes as ga- + stative -nilíle; substring li cannot be equated with passive -li",
+      "decision": "remove from positive li+ameke candidate queue"
+    },
+    {
+      "form": "uilíameke",
+      "grade": "negative-control",
+      "independent_root": false,
+      "direct_parse": false,
+      "analysis": "derived from base uilí",
+      "decision": "reject substring-based li segmentation"
+    },
+    {
+      "form": "selíameke",
+      "grade": "negative-control",
+      "independent_root": false,
+      "direct_parse": false,
+      "analysis": "derived from base selí",
+      "decision": "reject substring-based li segmentation"
+    }
+  ],
+  "counts": {
+    "direct_historical_D1_roots": 1,
+    "strong_historical_D2_roots": 1,
+    "same_root_corroborations": 1,
+    "negative_substring_controls": 3
+  },
+  "second_D1_found": false,
+  "next_strategy": "shift from repeated Steffel substring search to external historical sources: Guadalaxara 1683 / Rodriguez Lopez 2010, Steffel 1799 manuscript revision, later grammars and interlinear corpora",
+  "epistemic_rules": {
+    "automatic_li_segmentation": false,
+    "substring_counts_as_morpheme": false,
+    "same_root_counts_as_independent_replication": false,
+    "D1_requires_explicit_published_parse": true
+  }
+}
