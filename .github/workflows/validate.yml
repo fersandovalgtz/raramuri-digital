@@ -94,7 +94,12 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: raramuri-corpus-audit-${{ github.sha }}
-          path: .tmp/corpus-audit/
+          path: |
+            .tmp/corpus-audit/
+            data/variants-typed.json
+            data/lexical-relations.json
+            data/graphic-variants.json
+            data/graphic-variants-report.json
           if-no-files-found: error
           retention-days: 30
 
