@@ -9,7 +9,9 @@
   "evidence_master_matrix": "EVIDENCE_MASTER_MATRIX_V3.md",
   "evidence_master_matrix_machine": "data/research/evidence_master_matrix_v3.json",
   "candidate_source_tests": "CANDIDATE_SOURCE_TESTS_V3.md",
-  "focused_C04_audit": "C04_NES_FAMILY_MODERN_BRIDGE_V1.md",
+  "focused_C04_audit": "C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V2.md",
+  "focused_C09_audit": "TELLECHEA_1826_AME_TOKEN_AUDIT_V4.md",
+  "focused_C09_audit_machine": "data/research/tellechea_1826_ame_token_audit_v4.json",
   "dependencies": "RESEARCH_DEPENDENCIES.md",
   "validation_policy": {
     "document": "PROJECT_VALIDATION_POLICY_V1.md",
@@ -38,15 +40,15 @@
     },
     "tellechea_same_root_extension_variation": {
       "status": "strong_pending_facsimile_control",
-      "formal_tier": "B"
+      "formal_tier": "B",
+      "strong_ocr_families": ["ati-", "simi-", "machi-"],
+      "additional_probable_ocr_families": ["ayorigu-", "rejoíruga-"],
+      "rejected_ocr_short_pair": "gayénameque ~ gayéname",
+      "long_raw_occurrences": 24,
+      "long_distinct_raw_strings": 22
     },
-    "tellechea_participial_specific_final_deletion": {
-      "status": "not_demonstrated"
-    },
-    "historical_e_i_alternation": {
-      "status": "directly_documented",
-      "regular_rule": false
-    },
+    "tellechea_participial_specific_final_deletion": {"status": "not_demonstrated"},
+    "historical_e_i_alternation": {"status": "directly_documented", "regular_rule": false},
     "modern_ame_me_ami_variation": {
       "status": "supported_regional",
       "modern_multi_region_control": "Compendio básico de la gramática ralámuli 1997"
@@ -60,11 +62,12 @@
       "modern_e_family_direct": ["nesema", "nesbonama", "nesame", "neser", "neserichi", "Neseme"],
       "modern_i_family": ["Nisé", "Niséami", "nise’ami", "niseami"],
       "modern_participial_architecture": "-ame/-me documented; -me/-mi compatible in published grammars",
-      "token_specific_nesame_parse": "not_recovered",
+      "token_specific_nesame_parse": "strongly_predicted_not_recovered",
+      "nesema_nesame_exact_stem_relation": "unresolved",
       "phonological_plausibility": "reinforced_non_ad_hoc",
       "historical_modern_cognacy": "not_demonstrated",
       "source_genealogy_independence": "partial_not_full",
-      "remaining_A_requirement": "token-specific published parse of nesame/neseme OR direct published identification Nessé~nes-/Nisé"
+      "remaining_A_requirement": "token-specific published parse/paradigm of nesame/neseme OR direct published identification Nessé~nes-/Nisé"
     },
     "historical_li_ameke": {
       "status": "one_D1_one_strong_D2",
@@ -86,7 +89,7 @@
       "C02 Tſchiperameke ↔ Chipérami",
       "C03 Rosacameke ~ rosacame ↔ Rosacami",
       "C08 tschutschelíameke",
-      "C09 Tellechea same-root extension families [strong pending facsimile]"
+      "C09 Tellechea same-root extension families [strong pending facsimile; two additional OCR candidate families]"
     ],
     "C": [
       "C05 Selíameke ↔ Siríami / Choguita siˈríame",
@@ -99,7 +102,8 @@
     "N03 selíameke is not automatic passive li+ameke",
     "N04 final -ami is not automatically participial",
     "N05 documented e~i/é~í alternation is not automatic cognacy",
-    "N06 documentary replication is not automatic source independence"
+    "N06 documentary replication is not automatic source independence",
+    "N07 Tellechea OCR gayéname at L4895 is a line-wrap fragment of gayénameque, not a short variant"
   ],
   "prohibited_shortcuts": [
     "universal -ameke > -ami",
@@ -111,10 +115,12 @@
     "surface li = historical passive -li",
     "automatic equivalence of <c>/<k>/<que>/<ke>",
     "automatic projection of modern color -ka into colonial forms",
-    "morphological frequency claims from raw OCR counts"
+    "morphological frequency claims from raw OCR counts",
+    "promoting Tellechea ayorigu-/rejoíruga- long-short pairs without facsimile control"
   ],
   "documentary_dependencies": {
     "rodriguez_lopez_2010_full_ingestion": "blocked",
+    "tellechea_1826_ocr_long_token_audit": "completed_v4",
     "tellechea_1826_facsimile_visual_audit": "blocked",
     "colonial_graphematic_control": "depends_on_facsimiles",
     "second_historical_li_ameke_D1": "not_found",
@@ -122,6 +128,6 @@
     "C04_token_specific_nesame_neseme_parse": "not_found",
     "C04_direct_nesse_nes_nise_comparative_identification": "not_found"
   },
-  "next_action_without_blocked_documents": "For C04 seek only token-specific morphological analysis of nesame/neseme or a published direct historical comparison Nessé~nes-/Nisé; avoid additional generic occurrence accumulation.",
-  "next_action_when_documents_available": "Facsimile-first Tellechea audit; direct Samachique/Brambila/Burgess checks for C04."
+  "next_action_without_blocked_documents": "Audit Tellechea short -ame only around justified roots/Spanish participial parallels; do not use raw frequency. C04 remains closed unless a new documentary route appears.",
+  "next_action_when_documents_available": "Facsimile-check Tellechea ayorigu-/rejoíruga- candidates and OCR line-wrap reconstructions; direct Samachique/Brambila/Burgess checks for C04."
 }
