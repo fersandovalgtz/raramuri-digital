@@ -1,0 +1,94 @@
+{
+  "artifact": "historical_color_ka_segmentation_audit_v2",
+  "date": "2026-08-13",
+  "problem": "Can the historical c/k immediately preceding -(a)meke in Steffel's color words be related to the independently attested stative -ga and to the modern color modifiers -ka/-ga?",
+  "direct_answer": "The continuity hypothesis is now strongly supported at the morphological-system level, although identification of the c/k in each individual historical color lexeme remains unproven.",
+  "new_evidence_since_v1": [
+    {
+      "layer": "Steffel/Merrill historical morphology",
+      "finding": "Merrill lists -ga~-ja as an explicit stative suffix, always attested with -(a)meke, and analyzes chains such as -rúgameke as -ru + -ga + -(a)me + -ke."
+    },
+    {
+      "layer": "Steffel/Merrill historical orthography/phonology",
+      "finding": "Steffel treated C/G and K/Q/G among his 'equivocal letters'; Merrill establishes c/k as [k] and documents genuine k~g alternation in addition to contrast. For schiógameke, Merrill explicitly says -gameke could be a variant of the -cameke found in all other basic colors."
+    },
+    {
+      "layer": "Modern multivariety adjective morphology",
+      "finding": "The 1997 Compendio explicitly segments sa'p-é-ga-me as flesh-have-state-PARTICIPLE, demonstrating modern -ga + -me outside the color lexemes under audit."
+    },
+    {
+      "layer": "Modern multivariety color morphology",
+      "finding": "The Compendio groups -ka/-ga/-cha as 'subido' and -ame/-me as participial; it directly attests color forms such as sawaró-ga-me, elamú-ga-me and roso-bó-cha-ga-me."
+    },
+    {
+      "layer": "Modern productive color-state morphology",
+      "finding": "Baja-TB uses -ga 'continuative/state' productively in color appearance predicates: sejtána-g-ili, siyóna-g-ili, chóna-g-ili, rosóna-g-ili, ulána-g-ili and others."
+    }
+  ],
+  "evidence_matrix": {
+    "proto_tarahumara_ame_reconstructed": true,
+    "seventeenth_century_gamek_stative_attested": true,
+    "historical_stative_ga_explicitly_segmented": true,
+    "historical_ga_plus_participial_ame_plus_ke_explicitly_segmented": true,
+    "historical_c_k_g_alternation_independently_documented": true,
+    "historical_gameke_possible_variant_of_color_cameke_explicitly_proposed_by_merrill": true,
+    "historical_color_specific_c_k_segmented_as_ga": false,
+    "modern_ga_plus_me_explicitly_segmented_outside_color": true,
+    "modern_ga_me_attested_in_color": true,
+    "modern_productive_color_state_ga_attested": true,
+    "modern_ka_ga_cha_grouped_functionally_in_color_description": true
+  },
+  "hypotheses": [
+    {
+      "id": "H3_retention_plus_specialization",
+      "rank": 1,
+      "label": "Inherited stative/participial morphology retained and specialized in the color system",
+      "mechanism": "An older stative -ga plus participial -ame(+ke) domain persisted. Across varieties, velar realizations and later analogical organization yielded modern color patterns in -ka/-ga before participial -me/-mi, while -na developed/retained a contrasting lower-or-becoming color function.",
+      "support": [
+        "Proto-Tarahumara *-ame and pre-Steffel gamek provide historical depth.",
+        "Steffel/Merrill directly segment historical stative -ga + -(a)me + -ke.",
+        "Merrill explicitly proposes that -gameke may be a variant of color -cameke given g/c alternation.",
+        "Modern multivariety grammar directly attests -ga + -me and productive color-state -ga.",
+        "Modern color grammar groups -ka/-ga/-cha functionally and contrasts them with -na.",
+        "Independent historical-modern -na bridge shows the color system preserves older verbal/stative morphology beyond the -ame chain."
+      ],
+      "problems": [
+        "Black, white and red historical -cameke forms are not individually segmented by Merrill as root + -ga + -ame + -ke.",
+        "Steffel's k~g alternation is real but not automatic; minimal contrasts also exist.",
+        "The chronology of specialization from general stative morphology to the modern color-degree opposition is not directly dated."
+      ],
+      "current_plausibility": "high_working_hypothesis",
+      "confidence": "moderate_high"
+    },
+    {
+      "id": "H1_retention_without_full_specialization_model",
+      "rank": 2,
+      "label": "Direct retention of older ga+ame(+ke) morphology",
+      "mechanism": "Historical color -cameke/-gameke broadly continues older stative/participial morphology, but the modern -ka/-na semantic organization cannot yet be reconstructed in detail.",
+      "current_plausibility": "high"
+    },
+    {
+      "id": "H2_late_reanalysis",
+      "rank": 3,
+      "label": "Later reanalysis of an inherited opaque -kame(ke) string",
+      "mechanism": "An inherited chain was later resegmented as modern -ka/-ga + -me.",
+      "current_plausibility": "low_to_moderate",
+      "reason_for_downgrade": "Explicit historical -ga+-(a)me+-ke and explicit modern -ga+-me/color-state -ga make a purely late reanalysis less economical, though local reanalysis and analogical remodeling remain possible."
+    }
+  ],
+  "revised_assessment": {
+    "preferred_working_hypothesis": "H3_retention_plus_specialization",
+    "confidence": "moderate_high",
+    "system_level_continuity_ga_ame": "very_high",
+    "color_lexeme_specific_segmentation_confidence": "moderate",
+    "final_reconstruction": false,
+    "reason": "The same stative + participial architecture is explicitly present in historical and modern sources, and the historical g/c/k alternation plus Merrill's own -gameke~-cameke proposal creates a controlled bridge. The remaining uncertainty is lexeme-specific segmentation and chronology of color specialization, not existence of the ga+ame architecture itself."
+  },
+  "epistemic_rule": "System-level morphological continuity may be strongly demonstrated while individual lexical segmentation remains uncertain. Do not promote the former into automatic segmentation of every historical color word.",
+  "next_tests": [
+    "Build a targeted historical-modern k~g/ga~ka correspondence series in morphologically comparable environments.",
+    "Locate earlier twentieth-century descriptions to date when color -ka/-ga versus -na semantics became explicit.",
+    "Search Steffel's accessible lexical material for color or adjectival forms where -ga is independently separable from the root.",
+    "Retain direct audit of the unpublished 1799 grammar as a future documentary priority."
+  ]
+}
