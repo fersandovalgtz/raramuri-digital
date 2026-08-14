@@ -1,0 +1,85 @@
+{
+  "artifact": "color_modifier_documentary_chronology_v2",
+  "date": "2026-08-13",
+  "purpose": "Date and grade the documentation of Rarámuri color-modifier semantics while distinguishing direct primary access from scholarly secondary verification.",
+  "evidence_levels": {
+    "P1": "directly inspected primary source/full text",
+    "P2": "directly inspected primary metadata/abstract but not full relevant passage",
+    "S1": "scholarly secondary source that explicitly attributes an analysis to the primary source and cites the relevant page",
+    "B": "bibliographic existence only"
+  },
+  "chronology": [
+    {
+      "period": "18th century",
+      "source": "Steffel lexical/grammatical materials as critically edited and analyzed by Merrill et al. 2020",
+      "evidence_level": "P1",
+      "verified_content": [
+        "Basic color forms in -cameke/-gameke and truncations in -came/-ame.",
+        "Independent historical stative -ga~-ja combined with -(a)meke.",
+        "Historical -na explicitly segmented in red tsestá-na."
+      ],
+      "not_verified": "The later semantic metalanguage of category-center versus peripheral color membership is not directly recovered from Steffel."
+    },
+    {
+      "year": 1981,
+      "source": "Donald Burgess, Los colores en tarahumara, Memoria Ra'ítzari--La Palabra, pp. 84-88",
+      "evidence_level": "B",
+      "verified_content": ["Existence, title, venue and pagination."],
+      "not_verified": "No exact morpheme-function analysis is attributed until full text is recovered."
+    },
+    {
+      "year": 1983,
+      "source": "Burgess, Kempton & MacLaury, Tarahumara Color Modifiers: Category Structure Presaging Evolutionary Change, American Ethnologist 10:133-149",
+      "evidence_level": "P2+S1",
+      "primary_direct": [
+        "Article metadata and DOI verified.",
+        "Published/reproduced abstract states that basic color terms carry obligatory modifiers and that modifiers specify grade of membership in a color category."
+      ],
+      "secondary_page_level_verification": {
+        "source": "Estrada Fernández & Grageda Bustamante 2018, La historiografía lingüística como ejercicio disciplinario compartido: la obra de Matthäus Steffel, in UNAM/IIB Las lenguas de México. Diálogos historiográficos",
+        "attribution": "The chapter explicitly cites Burgess et al. 1983 and page 137.",
+        "reported_analysis": [
+          "-kame refers to the nucleus/center of the color category.",
+          "-name applies to colors outside the referential center.",
+          "-ka in -kame is described as augmentative and combines with participial -ame.",
+          "-nanti is reported for only two informants and marks a more peripheral concept."
+        ],
+        "fieldwork_context_reported": "Study with Central and Western varieties, including Samachique, Huicochi and Rocoroibo, over 1978-1980."
+      },
+      "epistemic_limit": "The exact page 137 passage has not yet been inspected in the original 1983 article; these detailed morpheme assignments remain S1-confirmed, primary_fulltext_pending."
+    },
+    {
+      "year": 1997,
+      "source": "Compendio básico de la gramática ralámuli",
+      "evidence_level": "P1",
+      "verified_content": [
+        "-ame/-me explicitly labeled participial.",
+        "-ka/-ga/-cha explicitly grouped as color 'subido'.",
+        "-na explicitly described as 'se está poniendo/color bajo'.",
+        "Forms demonstrated across multiple roots and varieties."
+      ]
+    },
+    {
+      "year": 2022,
+      "source": "Caballero, A grammar of Choguita Rarámuri",
+      "evidence_level": "P1",
+      "verified_content": [
+        "Independent modern participial -ame.",
+        "Choguita /k/ but no /g/ phoneme, a negative control against universal synchronic k~g."
+      ]
+    }
+  ],
+  "minimum_dates": {
+    "system_level_color_grade_modifiers_direct_primary_abstract": 1983,
+    "specific_kame_name_nanti_analysis_scholarly_page_level_attribution": 1983,
+    "specific_kame_name_nanti_analysis_primary_fulltext_direct": null,
+    "accessible_primary_exact_ka_ga_cha_na_ame_mapping": 1997,
+    "earlier_bibliographic_candidate": 1981
+  },
+  "interpretation": "The 1983 study can now be linked, through a scholarly UNAM historiographic analysis citing p.137, to the specific -kame/-name distinction and the analysis -ka + participial -ame. This strengthens the dating of the specialized semantic analysis to 1983, while preserving a clear distinction between direct primary inspection and secondary page-level verification.",
+  "next_steps": [
+    "Recover the original 1983 pages, especially p.137, to upgrade S1 details to P1.",
+    "Recover Burgess 1981 and determine whether the same analysis was already explicit two years earlier.",
+    "Search pre-1980 Western/Central Rarámuri texts for actual color forms in -kame/-game/-name, treating corpus usage separately from analyst semantics."
+  ]
+}
