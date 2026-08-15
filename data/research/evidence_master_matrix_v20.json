@@ -1,0 +1,67 @@
+{
+  "schema_version": "2.2",
+  "date": "2026-08-14",
+  "project": "Rarámuri Histórico Digital",
+  "canonical_assessment": "AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md",
+  "matrix_document": "EVIDENCE_MASTER_MATRIX_V20.md",
+  "supersedes": "data/research/evidence_master_matrix_v19.json",
+  "portfolio_summary": {
+    "A": ["C01", "C02", "C03", "C04-core", "C05-government-core", "C06-core", "C07", "C08", "C09-core"],
+    "B": [],
+    "open_subbranches": ["C04-Nisé", "C05-historical-title", "C06-1683", "C09-OCR-network", "C09-mechanism"],
+    "C": []
+  },
+  "candidates": [
+    {"id":"C01","tier":"A","status":"unchanged"},
+    {"id":"C02","tier":"A","status":"unchanged"},
+    {"id":"C03","tier":"A","status":"unchanged"},
+    {"id":"C04-core","tier":"A","status":"unchanged"},
+    {"id":"C04-Nisé","tier":"open_subbranch","status":"unchanged"},
+    {"id":"C05-government-core","tier":"A","status":"unchanged"},
+    {"id":"C05-historical-title","tier":"open_subbranch","status":"unchanged"},
+    {
+      "id":"C06-core",
+      "tier":"A",
+      "scope":"Steffel-to-modern black color lexical-derivational continuity",
+      "steffel_forms":["čókameke","čókame"],
+      "published_historical_modern_alignment":["Steffel tschocámeke","Hilton chócami","Brambila chókame"],
+      "historical_color_derived_class_analysis":true,
+      "historical_ame_family_membership":true,
+      "modern_black_root":"čó-/tsok-",
+      "modern_ame_component":true,
+      "historical_c_boundary":"unresolved_excluded_from_A",
+      "historical_c_equals_modern_ka":"not_demonstrated",
+      "exact_historical_parse":"not_claimed"
+    },
+    {
+      "id":"C06-1683",
+      "tier":"open_subbranch",
+      "forms":["tsocamec/otsocamec","ookamek/okamek"],
+      "meaning":"oscuro/negro; prieto/negro",
+      "Guadalaxara_final_kV_weakening":true,
+      "final_velar_independently_attested":true,
+      "British_Library_copy":"C.38.a.12",
+      "NYPL_copy_identity":"unresolved",
+      "tsocamec_final_c":"unresolved",
+      "relation_to_C06_core":"unresolved"
+    },
+    {"id":"C07","tier":"A","status":"unchanged"},
+    {"id":"C08","tier":"A","status":"unchanged"},
+    {"id":"C09-core","tier":"A","status":"unchanged"},
+    {"id":"C09-OCR-network","tier":"open_subbranch","status":"unchanged"},
+    {"id":"C09-mechanism","tier":"open_subbranch","status":"unchanged"}
+  ],
+  "new_negative_control": {
+    "id":"N21",
+    "rule":"An unresolved graphematic issue in an earlier stratum does not lower a later historical-modern core directly aligned in published comparative literature when scopes are explicitly separated."
+  },
+  "global_constraints":[
+    "C06-core A excludes exact historical c segmentation.",
+    "Do not equate tsocamec with čókameke as a demonstrated formal identity.",
+    "Do not identify 1683 final <c> with /k/, -ke, or -ka without token-specific evidence.",
+    "Do not treat ookamek/okamek as an automatic variant of tsocamec/otsocamec.",
+    "No universal -ameke > -ami law."
+  ],
+  "research_phase":"consolidate_adjudicated_cores_and_resolve_open_subbranches",
+  "next_source_test":"No principal candidate remains in B. Resolve C06-1683 or residual C09 facsimile branches only with direct evidence; otherwise consolidate adjudicated cores into a publication-ready diachronic synthesis."
+}
