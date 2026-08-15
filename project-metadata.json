@@ -5,7 +5,8 @@
   "release_date": "2026-07-21",
   "language_object": {
     "code": "tar",
-    "label": "rarámuri / tarahumara"
+    "label": "rarámuri / tarahumara",
+    "scope_note": "La fuente bibliográfica de referencia se asocia con tarahumara central y Samachique; el dataset no debe generalizarse automáticamente a todas las variedades rarámuri."
   },
   "language_target": {
     "code": "es",
@@ -17,5 +18,67 @@
   "doi": "10.5281/zenodo.21483353",
   "zenodo_record": "https://zenodo.org/records/21483353",
   "repository": "https://github.com/fersandovalgtz/raramuri-digital",
-  "website": "https://raramuri.ceees.mx"
+  "website": "https://raramuri.ceees.mx",
+  "primary_reference": {
+    "source_code": "SRC-01",
+    "creator": "Hilton, K. Simón",
+    "title": "Diccionario tarahumara de Samachique, Chihuahua, México",
+    "year": 1993,
+    "publisher": "Instituto Lingüístico de Verano",
+    "extent": "viii + 146 páginas; aproximadamente 2,500 entradas",
+    "archive": "https://mexico.sil.org/es/resources/archives/10966",
+    "role": "Fuente bibliográfica y facsímil de referencia para cotejo"
+  },
+  "production_source": {
+    "source_code": "SRC-02",
+    "document": "DICCIONARIO raramuri.pdf",
+    "coverage": "Páginas PDF 3–87; 2,581 entradas",
+    "role": "Representación estructurada de trabajo consumida por el pipeline de extracción",
+    "edition_identity_status": "Pendiente de fijación documental concluyente; no se presume identidad automática con Hilton 1993 o Shoemaker 2016"
+  },
+  "documentation": {
+    "sources": "SOURCES.md",
+    "provenance": "PROVENANCE.md",
+    "hilton_source": "docs/HILTON_SOURCE.md",
+    "dataset_datasheet": "DATASHEET.md",
+    "scientific_repository_standard": "SCIENTIFIC_REPOSITORY_STANDARD.md",
+    "ecosystem": "docs/ECOSYSTEM.md",
+    "bibliography": "references.bib"
+  },
+  "related_repositories": [
+    {
+      "name": "Rarámuri Histórico Digital",
+      "url": "https://github.com/fersandovalgtz/raramuri-historico",
+      "relation": "historical-digital research sibling"
+    },
+    {
+      "name": "Rarámuri · recursos educativos",
+      "url": "https://github.com/fersandovalgtz/raramuri-recursos-educativos",
+      "relation": "independent pedagogical layer"
+    },
+    {
+      "name": "Libro de Texto Mexicano Digital",
+      "url": "https://github.com/fersandovalgtz/libro-texto-mexicano-digital",
+      "relation": "digital humanities and documentary heritage sibling"
+    },
+    {
+      "name": "Historia de la educación en Chihuahua",
+      "url": "https://github.com/fersandovalgtz/historia-educacion-chihuahua",
+      "relation": "historical research sibling"
+    },
+    {
+      "name": "Recursos educativos abiertos",
+      "url": "https://github.com/fersandovalgtz/recursos-educativos-abiertos",
+      "relation": "open educational resources sibling"
+    }
+  ],
+  "academic_identity": {
+    "orcid": "https://orcid.org/0000-0002-3168-6725",
+    "github_profile": "https://github.com/fersandovalgtz/fersandovalgtz",
+    "google_scholar": "https://scholar.google.com/citations?user=zNZsYYAAAAAJ&hl=es",
+    "cathi_uacj": "https://cathi.uacj.mx/handle/20.500.11961/3028/browse?authority=0000-0002-3168-6725&type=author",
+    "researchgate": "https://www.researchgate.net/profile/Fernando-Sandoval-Gutierrez",
+    "researchid": "https://researchid.co/fersandovalg",
+    "academia_edu": "https://uacj.academia.edu/FernandoSandoval"
+  }
 }
