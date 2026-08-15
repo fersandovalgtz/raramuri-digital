@@ -1,5 +1,5 @@
 cff-version: 1.2.0
-message: "Si utiliza este recurso, cite el proyecto Rarámuri Digital. / If you use this resource, please cite the Rarámuri Digital project."
+message: "Si utiliza Rarámuri Digital, cite la versión del dataset empleada. Si una afirmación depende de evidencia lexicográfica atribuible a Hilton, cite además Hilton 1993 y la página correspondiente. / If you use Rarámuri Digital, cite the dataset version used. If a claim depends on lexicographic evidence attributable to Hilton, also cite Hilton 1993 and the relevant page."
 title: "Rarámuri Digital: conjunto de datos lexicográficos rarámuri-español"
 type: dataset
 authors:
@@ -16,13 +16,24 @@ license: "CC-BY-NC-SA-4.0"
 keywords:
   - Rarámuri
   - Tarahumara
+  - Central Tarahumara
+  - Samachique
   - lexicography
   - digital humanities
+  - linguistic data
+  - data provenance
+  - open science
   - TEI Lex-0
+  - CLDF
   - corpus linguistics
   - indigenous languages
 abstract: >-
   Infraestructura lexicográfica rarámuri-español con 2,581 entradas,
-  treinta productos derivados, exportaciones XML, JSON, CSV, SQL y TEI Lex-0,
-  y una API pública documentada mediante OpenAPI 3.1. El conjunto de datos
+  treinta productos derivados, identificadores persistentes, procedencia
+  documental explícita, exportaciones XML, JSON, CSV, SQL, TEI Lex-0 y CLDF,
+  y una API pública documentada mediante OpenAPI 3.1. La fuente bibliográfica
+  de referencia incluye el Diccionario tarahumara de Samachique de K. Simón
+  Hilton (1993); el proyecto distingue esta fuente de la representación
+  estructurada de trabajo usada por el pipeline de extracción y documenta
+  sus transformaciones en SOURCES.md y PROVENANCE.md. El conjunto de datos
   corresponde a la versión 1.0.0 y se publica mediante la plataforma 3.1.0.
