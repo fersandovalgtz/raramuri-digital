@@ -4,7 +4,7 @@
 
 ## D1. Buschmann 1857
 
-**RESUELTA la recuperación primaria.** `BUSCHMANN_1857_AME_PRIMARY_SOURCE_AUDIT_V1.md` fija su teoría multicapa y su genealogía Steffel/Tellechea.
+**RESUELTA.** `BUSCHMANN_1857_AME_PRIMARY_SOURCE_AUDIT_V1.md` fija su teoría multicapa y genealogía Steffel/Tellechea.
 
 ## D2. C02
 
@@ -28,97 +28,98 @@
 
 ### C05-government-core
 
-**RESUELTA: A.** Steffel/Merrill + Buschmann + Márquez + Caballero permiten adjudicar el núcleo lingüístico de gobierno.
+**RESUELTA: A.** Steffel/Merrill + Buschmann + Márquez + Caballero adjudican el núcleo lingüístico de gobierno.
 
 ### C05-historical-title
 
-**Subrama abierta.** La relación entre la tradición histórica del título y otra familia léxica permanece no resuelta. Reabrir sólo ante análisis etimológico/comparativo directo.
+**Subrama abierta.** Reabrir sólo ante análisis etimológico/comparativo directo de la relación histórica con otra familia léxica.
 
-## D6. C06 negro — único candidato principal B
+## D6. C06
 
-**B+ excepcional / cercano a A.**
+### C06-core
 
-### Resuelto
+**RESUELTA: A en v20.**
 
-- Guadalaxara 1683 documenta debilitamiento de finales `ca/que/qui/co/cu` en guazapar.
-- Otras formas de 1683 prueban disponibilidad de velar final (`norugamek`, `šunú-k`).
-- Steffel documenta reducción periférica y `čókameke ~ čókame`.
-- El moderno conserva la familia cromática y `tsok-ame = negro-NMLZ`.
-- Buschmann advierte que la `c` del complejo cromático puede pertenecer al radical.
+Alcance:
 
-### Cuello token-específico
+`Steffel čókameke ~ čókame ↔ Hilton chócami ↔ Brambila chókame`.
 
-El `<c>` de `tsocamec/otsocamec` sigue sin valor fonético/morfológico adjudicado.
+La promoción se sostiene en:
 
-No afirmar:
+- par histórico largo/breve de Steffel;
+- comparación histórico-moderna publicada de Estrada Fernández y Grageda Bustamante;
+- reconocimiento publicado del carácter derivado de la clase cromática histórica;
+- análisis modernos `čó-` ‘negro’, `-kame` con `-ame`, variantes regionales y `tsok-ame`.
 
-- `c = /k/`;
-- `c = -ke`;
-- `c = -ka`;
-- `tsocamec = tso/čo + ka + ame + ...`.
+**No incluye** la frontera histórica de `c`, la identidad `c = -ka` ni un parse histórico `čó-ka-me-ke`.
 
-### Testigos materiales
+N21: una incertidumbre grafemática de un estrato anterior no rebaja un núcleo posterior directamente alineado cuando los alcances se separan.
 
-**British Library `C.38.a.12`:** testigo bibliográficamente identificado y prioridad de facsímil, especialmente fol. 35r.
+### C06-1683
 
-**NYPL:** Garone Gravier publica que consultó un ejemplar en la Biblioteca Pública de Nueva York, pero no se recuperó un registro actual verificable ni soporte/signatura que determine su identidad.
+**Subrama abierta.**
 
-Estado:
+Formas:
 
-- `NYPL_copy_report_source_attested=true`;
-- `NYPL_copy_identity=unresolved`;
-- `NYPL_second_original_witness=not_demonstrated`;
-- `NYPL_independence_from_BL=not_demonstrated`.
+- `tsocamec/otsocamec` ‘oscuro/negro’;
+- `ookamek ~ okamek` ‘prieto/negro’.
 
-**N20:** una mención publicada de consulta bibliotecaria no equivale a un testigo material independiente verificado sin identidad, soporte y procedencia.
+Controles:
 
-### Próxima apertura permitida
+- debilitamiento de finales `ca/que/qui/co/cu` en Guadalaxara;
+- velar final histórica en `norugamek`, `šunú-k`;
+- transcripción diplomáticamente fiel de `tsocamec` por Rodríguez;
+- British Library `C.38.a.12` como testigo material estable;
+- NYPL reportado por Garone pero sin identidad/procedencia suficiente para contar como segundo testigo.
 
-1. British Library `C.38.a.12`, fol. 35r;
-2. Rodríguez López 2010, pp. 162–164;
-3. NYPL sólo si aparece signatura/soporte/procedencia.
+Abierto:
 
-## D7. C09 Tellechea
+- valor fonético/morfológico del `<c>` de `tsocamec`;
+- relación `tsocamec/otsocamec ↔ ookamek/okamek`;
+- relación estructural exacta de ambos con C06-core.
+
+Reabrir sólo con BL fol. 35r, Rodríguez pp. 162–164 o análisis histórico token-específico.
+
+## D7. C09
 
 ### C09-core
 
-**RESUELTA: A en v18.** El facsímil confirma directamente variación participial de misma raíz en:
-
-- `atígameque ~ atígame`;
-- `simiámec ~ simíame`;
-- `machiámec ~ machiámeque ~ machíame`.
-
-La sección “De los participios” fija además las terminaciones `Ga, Mec, Camec, Yamec, Amec`.
+**RESUELTA: A.** Facsímil directo para `ati-`, `simi-`, `machi-` y regla explícita “De los participios”.
 
 ### C09-OCR-network
 
-**Subrama abierta:** `netetu-`, `rejoíruga-`, `ayorigu-`; sólo cotejo facsimilar propio puede adjudicarlas.
+**Subrama abierta:** `netetu-`, `rejoíruga-`, `ayorigu-`; sólo cotejo facsimilar propio.
 
 ### C09-mechanism
 
-**Subrama abierta:** el mecanismo común que relacione `-amec/-ameque/-ame` no está demostrado.
+**Subrama abierta:** mecanismo común de `-amec/-ameque/-ame` no demostrado.
 
-**N19:** una alternancia fuente-directa puede adjudicarse sin adjudicar su mecanismo.
+N19: una alternancia fuente-directa puede adjudicarse sin adjudicar su mecanismo.
 
 ## D8. Debilitamiento periférico velar
 
-**Alta confianza por apoyo metalingüístico histórico cruzado.** Guadalaxara 1683 y Steffel documentan, de forma independiente, debilitamiento/omisión de material velar periférico. No se formula ley universal ni identidad automática de morfemas.
+**Alta confianza por apoyo metalingüístico histórico cruzado.** Guadalaxara 1683 y Steffel documentan debilitamiento/omisión de material velar periférico. No se formula ley universal ni identidad automática de morfemas.
 
-## D9. Grafemática colonial
+## D9. Grafemática colonial y procedencia
 
-N12, N17 y N20 siguen vigentes. Fidelidad diplomática, disponibilidad histórica de /k/ o una mención bibliotecaria no equivalen a adjudicación token-específica.
+N12, N17, N20 y N21 siguen vigentes. Fidelidad diplomática, disponibilidad histórica de /k/, mención bibliotecaria o semejanza estructural posterior no equivalen a adjudicación token-específica del estrato anterior.
 
-## Cartera vigente v19
+## Cartera vigente v20
 
-- **A:** C01, C02, C03, C04-core, C05-government-core, C07, C08, C09-core.
-- **B/B+:** C06.
-- **Subramas abiertas:** C04-Nisé, C05-historical-title, C09-OCR-network, C09-mechanism.
+- **A:** C01, C02, C03, C04-core, C05-government-core, C06-core, C07, C08, C09-core.
+- **B:** ninguno.
+- **Subramas/mecanismos abiertos:** C04-Nisé, C05-historical-title, C06-1683, C09-OCR-network, C09-mechanism.
 - **C:** ninguno.
+
+## Fase vigente
+
+`consolidate_adjudicated_cores_and_resolve_open_subbranches`.
 
 ## Priorización
 
-1. **C06 → British Library fol. 35r o Rodríguez pp. 162–164.**
-2. C09 residual → sólo facsímil propio.
-3. C04-Nisé / C05-historical-title → sólo evidencia comparativa específica.
+1. preparar síntesis diacrónica publicable de núcleos A + controles negativos;
+2. C06-1683 → sólo BL fol.35r / Rodríguez pp.162–164 / análisis directo;
+3. C09 residual → sólo facsímil propio;
+4. C04-Nisé / C05-historical-title → sólo evidencia comparativa específica.
 
 No abrir búsquedas generales de semejanzas.
