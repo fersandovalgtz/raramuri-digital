@@ -2,14 +2,29 @@
 
 **Corte:** 2026-08-14  
 **Síntesis general vigente:** [`AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md`](AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md)  
-**Matriz vigente:** [`EVIDENCE_MASTER_MATRIX_V11.md`](EVIDENCE_MASTER_MATRIX_V11.md)  
-**Auditorías focales:** C02 `C02_CHIPER_DIACHRONIC_BRIDGE_V1.md`; C03 `C03_ROSA_WHITE_DIACHRONIC_BRIDGE_V1.md`; C04 `C04_NES_FAMILY_MORPHOLOGICAL_CONTROL_V3.md`; C05 `C05_SELI_SIRI_GOVERNOR_BRIDGE_V2.md`; C06 `C06_BLACK_COLOR_GRAPHEMATIC_PROVENANCE_V3.md`; C08 `C08_TSCHUTSCHELIAMEKE_MORPHOLOGICAL_ADJUDICATION_V1.md`; C09 `TELLECHEA_1826_SHORT_AME_TARGETED_AUDIT_V5.md`.
+**Matriz vigente:** [`EVIDENCE_MASTER_MATRIX_V12.md`](EVIDENCE_MASTER_MATRIX_V12.md)  
+**Pruebas vigentes:** [`CANDIDATE_SOURCE_TESTS_V12.md`](CANDIDATE_SOURCE_TESTS_V12.md)  
+**Nueva auditoría historiográfica:** [`BUSCHMANN_PIMENTEL_AME_KAME_HISTORIOGRAPHY_V1.md`](BUSCHMANN_PIMENTEL_AME_KAME_HISTORIOGRAPHY_V1.md)
 
 ## Estado general
 
-La evidencia sostiene con alta confianza la profundidad histórica del dominio participial/derivacional `*-ame`. Steffel documenta `-ameke ~ -ame` y pérdida frecuente de `ke`; Tellechea aporta redes de extensión variable; el moderno conserva `-ame` y realizaciones regionales `-ame/-me/-mi`. No se ha demostrado una ley universal `-ameke > -ami`.
+La evidencia primaria mantiene con alta confianza un dominio participial/derivacional histórico asociado a `*-ame`. Steffel documenta directamente `-ameke ~ -ame`; Tellechea aporta redes internas de extensión variable; la documentación moderna conserva `-ame/-me/-ami`. No se ha demostrado una ley universal `-ameke > -ami`, `kame > ame` ni `ame > kame`.
 
-La cartera positiva sigue en **A = C01, C07, C08; B/B+ = C02, C03, C04, C05, C06, C09; C = ninguno**. La fase vigente es `resolve_tier_B_structural_bottlenecks`.
+La cartera sigue en **A = C01, C07, C08; B/B+ = C02, C03, C04, C05, C06, C09; C = ninguno**. La fase vigente es `resolve_tier_B_structural_bottlenecks`.
+
+## H15 · controversia analítica `ame` ↔ `kame` en el siglo XIX
+
+Buschmann publicó en 1857 *Die Lautveränderung aztekischer Wörter in den sonorischen Sprachen und die sonorische Endung ame*. El propio título convierte `ame` en objeto explícito de análisis comparativo como “terminación sonorense”. El texto primario completo todavía no ha sido recuperado de forma estable; por ello no se le atribuye aún una función gramatical más precisa ni ejemplos tarahumaras concretos.
+
+Pimentel 1874 discute explícitamente a Buschmann en su sección “Verbales y participios”. Propone `kame` como unidad pertinente, interpreta `ame` y `me` como contracciones y coloca `kame` en la columna **Tarahumar** de su tabla comparativa. En su descripción del tarahumara enumera `ke, kameke, kamek, kame, meke, mek, yamek, amek` como terminaciones de participio presente y da `Tarayaméke` ‘el que cuenta’.
+
+Sin embargo, Pimentel declara que la única gramática tarahumara que pudo consultar fue Tellechea 1826 y que complementó el léxico con Steffel a través de *Mithridates* y Buschmann. Por tanto, **Pimentel no es una nueva atestiguación primaria tarahumara independiente**: su independencia es analítica/historiográfica.
+
+`H15_19c_ame_kame_analysis_dispute = directly_documented`.
+
+### N13
+
+**Una etiqueta comparativa decimonónica (`ame` o `kame`) no equivale por sí sola a la segmentación sincrónica de los tokens primarios reutilizados por el analista.** Buschmann y Pimentel deben tratarse como intérpretes históricos en controversia; Steffel y Tellechea permanecen las fuentes primarias que deben adjudicarse por separado.
 
 ## C02
 
@@ -25,60 +40,38 @@ La cartera positiva sigue en **A = C01, C07, C08; B/B+ = C02, C03, C04, C05, C06
 
 ## C05
 
-**B formal; B+ fuerte; etimología dual no resuelta.** La derivación `selí ‘gobernar’ → selíameke ‘gobernante’` es explícita; la familia moderna `sir-` y Choguita `siríame` son fuertes. Se preserva además la tradición etnohistórica `selígame = portador de lanza`; no se escoge una trayectoria única.
+**B formal; B+ fuerte; etimología dual no resuelta.** Se preservan la derivación histórica `selí ‘gobernar’ → selíameke ‘gobernante’` y la tradición etnohistórica `selígame = portador de lanza`. Ninguna borra automáticamente a la otra.
 
-## C06 · nuevo control grafemático 1683
+## C06
 
-**B formal; B+ excepcional / cercano a A en Steffel→moderno. El grado no cambia.**
-
-Rodríguez López cotejó el manuscrito de Zapopan y el impreso de la British Library y señala que `tsocamec/otsocamec` (fol. 35r), ‘oscuro/negro’, es **el único término rarámuri del impreso que no aparece en el manuscrito**. Por tanto, para este token no existe un doblete zapopano que permita controlar la consonante final.
-
-Sus criterios de edición declaran que la transcripción del impreso respeta los términos escritos y signos del ejemplar británico. En consecuencia, el `<c>` final debe tratarse como grafía histórica del testimonio según la edición, **no** como modernización de 2010.
-
-Sin embargo, fidelidad diplomática no equivale a identificación fonológica o morfológica. Permanecen abiertos:
-
-- valor fonético de `<c>` final;
-- posible carácter expletivo;
-- correspondencia con Steffel `-ke`;
-- segmentación morfológica interna de `tsocamec/otsocamec`.
-
-La edición 2010 contiene los apartados “El fonema oclusivo velar /k/ del tarahumar y la reduplicación expletiva” (p. 162) y “Las letras equívocas” (p. 163). Su existencia demuestra que estos son problemas internos de la edición histórica, pero el cuerpo completo de pp. 162–164 no fue recuperado de forma estable en esta ronda; no se aplica ninguna regla al token sin leerla.
-
-Las descripciones modernas de reduplicación expletiva K + repetición de la vocal final (`gomá~gomáka`, `remé~reméke`, etc.) se conservan sólo como **hipótesis-generadoras**, no como análisis de 1683.
-
-Una publicación de historia del libro reporta además consulta de un ejemplar de Guadalaxara 1683 en la New York Public Library. Falta localizar el registro/facsímil y cotejar fol. 35r.
-
-### N12
-
-**Fidelidad diplomática de un grafema ≠ identificación fonológica o morfológica.** `1683 <c>` no autoriza automáticamente `/k/`, reduplicación expletiva, `-ke` ni identidad con el final de Steffel.
+**B formal; B+ excepcional / cercano a A en Steffel→moderno.** `tsocamec/otsocamec` es exclusivo del impreso de 1683 frente al manuscrito zapopano y su `<c>` final es diplomáticamente antiguo según los criterios editoriales de Rodríguez. Su valor fonético/morfológico permanece abierto. N12 sigue vigente: grafema histórico fiel ≠ `/k/`, reduplicación expletiva, `-ke` o correspondencia exacta con Steffel.
 
 ## C08
 
-**A.** La arquitectura histórica `X + -li + -ameke` cuenta con dos raíces A/source-explicit: `tsanelíameke` y `tschutschelíameke`.
+**A.** Dos raíces históricas fuente-explícitas sostienen `X + -li + -ameke`: `tsanelíameke` y `tschutschelíameke`.
 
 ## C09
 
-**B fuerte+ OCR, pendiente de facsímil.** Cinco redes fuertes y una probable; el frente OCR queda cerrado.
+**B fuerte+ OCR, pendiente de facsímil.** Cinco redes fuertes y una probable; no abrir más búsquedas OCR generales.
 
 ## Controles globales
 
 No usar como conclusiones:
 
 - `-ameke > -ami` universal;
-- `e > i` o `l > r` universales;
-- cognación automática por parecido;
+- `kame > ame` o `ame > kame` universales;
+- Pimentel como dato primario tarahumara independiente de Tellechea;
+- una función específica de `ame` atribuida a Buschmann sin recuperar su texto primario;
 - retroproyección de `-ka` o reduplicación expletiva modernas a 1683;
-- `<c>/<k>/<que>/<ke>` como equivalentes automáticos;
-- `liameke = -li + -ameke` sin análisis concreto;
-- una etimología única gobierno↔lanza en C05;
-- redes OCR de Tellechea como evidencia facsimilar.
+- equivalencia automática `<c>/<k>/<que>/<ke>`;
+- cognación automática por semejanza formal-semántica.
 
 ## Próxima prioridad
 
-1. Rodríguez 2010 pp. 162–164 o facsímil British Library fol. 35r;
-2. localizar/cotejar el ejemplar NYPL reportado;
+1. recuperar el texto primario de Buschmann 1857 y adjudicar su análisis real de `ame`;
+2. Rodríguez 2010 pp. 162–164 / British Library fol. 35r / ejemplar NYPL para C06;
 3. facsímil Tellechea para C09;
 4. estructura histórica C02/C03;
 5. comparación histórica/etimológica C04/C05.
 
-El modelo global v18 sigue vigente; v11 mejora el control grafemático de C06 sin inflar su grado.
+El modelo global v18 sigue vigente; v12 añade una capa historiográfica crítica sin inflar los grados de los candidatos.
