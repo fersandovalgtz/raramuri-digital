@@ -28,32 +28,77 @@
 
 ### C05-government-core
 
-**RESUELTA: A en v17.**
-
-- Steffel/Merrill: `selí` ‘gobernar’ → `selíameke` ‘gobernante/juez del pueblo’, derivación explícita.
-- Buschmann: comparación histórica Steffel `seli-ameke` ~ Tellechea `*seri-game`.
-- Márquez: familia moderna `sir-` con verbo, agente y léxico institucional.
-- Caballero: Choguita `siríame` / `i-sérikame`.
-
-El núcleo lingüístico de gobierno está suficientemente adjudicado y no debe reabrirse por acumulación general.
+**RESUELTA: A.** Steffel/Merrill + Buschmann + Márquez + Caballero permiten adjudicar el núcleo lingüístico de gobierno.
 
 ### C05-historical-title
 
-**Subrama abierta.** Fuentes etnográficas conservan una tradición histórica relacionada con `selígame` y otra familia léxica. Márquez distingue modernamente esa familia de la familia `sir-/ser-` de gobierno. La relación etimológica histórica entre ambas sigue no resuelta.
+**Subrama abierta.** La relación entre la tradición histórica del título y otra familia léxica permanece no resuelta. Reabrir sólo ante análisis etimológico/comparativo directo.
 
-**N18:** una subrama histórico-etimológica no resuelta no reduce el grado de un núcleo lingüístico separable ya adjudicado.
+## D6. C06 negro — único candidato principal B
 
-Reabrir sólo ante análisis comparativo/etimológico directo de esa relación histórica.
+**B+ excepcional / cercano a A.**
 
-## D6. C06 negro
+### Resuelto
 
-**B+ excepcional / cercano a A.** Guadalaxara 1683 documenta debilitamiento de finales `kV`; otras formas prueban velar final; Steffel aporta un segundo control histórico. El `<c>` de `tsocamec/otsocamec` sigue sin valor token-específico adjudicado y Buschmann mantiene viva la posibilidad de material radical.
+- Guadalaxara 1683 documenta debilitamiento de finales `ca/que/qui/co/cu` en guazapar.
+- Otras formas de 1683 prueban disponibilidad de velar final (`norugamek`, `šunú-k`).
+- Steffel documenta reducción periférica y `čókameke ~ čókame`.
+- El moderno conserva la familia cromática y `tsok-ame = negro-NMLZ`.
+- Buschmann advierte que la `c` del complejo cromático puede pertenecer al radical.
 
-Reabrir para promoción sólo con facsímil/regla grafemática token-específica o análisis histórico explícito.
+### Cuello token-específico
+
+El `<c>` de `tsocamec/otsocamec` sigue sin valor fonético/morfológico adjudicado.
+
+No afirmar:
+
+- `c = /k/`;
+- `c = -ke`;
+- `c = -ka`;
+- `tsocamec = tso/čo + ka + ame + ...`.
+
+### Testigos materiales
+
+**British Library `C.38.a.12`:** testigo bibliográficamente identificado y prioridad de facsímil, especialmente fol. 35r.
+
+**NYPL:** Garone Gravier publica que consultó un ejemplar en la Biblioteca Pública de Nueva York, pero no se recuperó un registro actual verificable ni soporte/signatura que determine su identidad.
+
+Estado:
+
+- `NYPL_copy_report_source_attested=true`;
+- `NYPL_copy_identity=unresolved`;
+- `NYPL_second_original_witness=not_demonstrated`;
+- `NYPL_independence_from_BL=not_demonstrated`.
+
+**N20:** una mención publicada de consulta bibliotecaria no equivale a un testigo material independiente verificado sin identidad, soporte y procedencia.
+
+### Próxima apertura permitida
+
+1. British Library `C.38.a.12`, fol. 35r;
+2. Rodríguez López 2010, pp. 162–164;
+3. NYPL sólo si aparece signatura/soporte/procedencia.
 
 ## D7. C09 Tellechea
 
-**B fuerte+ OCR.** El siguiente salto exige facsímil; no abrir más OCR general.
+### C09-core
+
+**RESUELTA: A en v18.** El facsímil confirma directamente variación participial de misma raíz en:
+
+- `atígameque ~ atígame`;
+- `simiámec ~ simíame`;
+- `machiámec ~ machiámeque ~ machíame`.
+
+La sección “De los participios” fija además las terminaciones `Ga, Mec, Camec, Yamec, Amec`.
+
+### C09-OCR-network
+
+**Subrama abierta:** `netetu-`, `rejoíruga-`, `ayorigu-`; sólo cotejo facsimilar propio puede adjudicarlas.
+
+### C09-mechanism
+
+**Subrama abierta:** el mecanismo común que relacione `-amec/-ameque/-ame` no está demostrado.
+
+**N19:** una alternancia fuente-directa puede adjudicarse sin adjudicar su mecanismo.
 
 ## D8. Debilitamiento periférico velar
 
@@ -61,19 +106,19 @@ Reabrir para promoción sólo con facsímil/regla grafemática token-específica
 
 ## D9. Grafemática colonial
 
-N12 y N17 siguen vigentes: fidelidad diplomática o disponibilidad histórica de /k/ no equivalen a identificación del `<c>` en `tsocamec`.
+N12, N17 y N20 siguen vigentes. Fidelidad diplomática, disponibilidad histórica de /k/ o una mención bibliotecaria no equivalen a adjudicación token-específica.
 
-## Cartera vigente v17
+## Cartera vigente v19
 
-- **A:** C01, C02, C03, C04-core, C05-government-core, C07, C08.
-- **B/B+:** C06, C09.
-- **Subramas abiertas:** C04-Nisé, C05-historical-title.
+- **A:** C01, C02, C03, C04-core, C05-government-core, C07, C08, C09-core.
+- **B/B+:** C06.
+- **Subramas abiertas:** C04-Nisé, C05-historical-title, C09-OCR-network, C09-mechanism.
 - **C:** ninguno.
 
 ## Priorización
 
-1. C06 → facsímil/regla grafemática token-específica.
-2. C09 → facsímil Tellechea.
-3. C04-Nisé y C05-historical-title → sólo evidencia comparativa/etimológica directa.
+1. **C06 → British Library fol. 35r o Rodríguez pp. 162–164.**
+2. C09 residual → sólo facsímil propio.
+3. C04-Nisé / C05-historical-title → sólo evidencia comparativa específica.
 
 No abrir búsquedas generales de semejanzas.
