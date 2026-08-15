@@ -6,9 +6,9 @@
   "canonical_assessment": "AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md",
   "entry_point": "RESEARCH_MASTER_INDEX.md",
   "evidence_status": "RESEARCH_EVIDENCE_STATUS.md",
-  "evidence_master_matrix": "EVIDENCE_MASTER_MATRIX_V17.md",
-  "evidence_master_matrix_machine": "data/research/evidence_master_matrix_v17.json",
-  "candidate_source_tests": "CANDIDATE_SOURCE_TESTS_V17.md",
+  "evidence_master_matrix": "EVIDENCE_MASTER_MATRIX_V18.md",
+  "evidence_master_matrix_machine": "data/research/evidence_master_matrix_v18.json",
+  "candidate_source_tests": "CANDIDATE_SOURCE_TESTS_V18.md",
   "buschmann_primary_audit": "BUSCHMANN_1857_AME_PRIMARY_SOURCE_AUDIT_V1.md",
   "focused_C02_audit": "C02_CHIPER_DIACHRONIC_BRIDGE_V2.md",
   "focused_C03_audit": "C03_ROSA_WHITE_DIACHRONIC_BRIDGE_V2.md",
@@ -16,11 +16,16 @@
   "focused_C05_audit": "C05_SELI_SIRI_GOVERNOR_BRIDGE_V3.md",
   "focused_C06_audit": "C06_GUADALAXARA_FINAL_KV_WEAKENING_AUDIT_V4.md",
   "focused_C08_audit": "C08_TSCHUTSCHELIAMEKE_MORPHOLOGICAL_ADJUDICATION_V1.md",
-  "focused_C09_audit": "TELLECHEA_1826_SHORT_AME_TARGETED_AUDIT_V5.md",
+  "focused_C09_audit": "C09_TELLECHEA_FACSIMILE_CORE_ADJUDICATION_V6.md",
   "dependencies": "RESEARCH_DEPENDENCIES.md",
   "validation_policy": {"document":"PROJECT_VALIDATION_POLICY_V1.md","model":"documentary_source_based_reproducible","external_human_validation_required":false,"unresolved_cases_policy":"retain_as_unresolved_without_invention"},
   "interoperability": {"stable_dataset_version":"1.0.0","candidate_schema_version":"1.1.0-candidate","candidate_ci_status":"success","tei_lex0_candidate_valid":true,"cldf_candidate_valid":true},
-  "portfolio_summary": {"A":["C01","C02","C03","C04-core","C05-government-core","C07","C08"],"B":["C06","C09"],"open_subbranches":["C04-Nisé","C05-historical-title"],"C":[]},
+  "portfolio_summary": {
+    "A":["C01","C02","C03","C04-core","C05-government-core","C07","C08","C09-core"],
+    "B":["C06"],
+    "open_subbranches":["C04-Nisé","C05-historical-title","C09-OCR-network","C09-mechanism"],
+    "C":[]
+  },
   "hypotheses": {
     "proto_participial_ame_depth":{"status":"high_confidence"},
     "steffel_ameke_ame_alternation":{"status":"directly_demonstrated"},
@@ -35,18 +40,32 @@
     "C05_historical_title_subbranch":{"formal_tier":"unresolved_subbranch","source_attested":true,"relation_to_government_core":"unresolved","modern_lexical_distinction":"government sir-/ser- distinct from se*l/se*r family in Márquez"},
     "C06_black_color":{"formal_tier":"B","strength_note":"B+_exceptional_near_A","Guadalaxara_1683_final_kV_weakening_in_Guazapar":true,"Guadalaxara_final_velar_independently_attested":true,"modern_black_tsok_root_direct_analysis":"tsok-ame = negro-NMLZ","Buschmann_color_caution":"c may belong to stem","final_c_phonetic_value":"unresolved","final_c_morpheme_identity":"unresolved"},
     "C08_tschutscheliameke":{"formal_tier":"A","morpheme_chain_source_constrained":true},
+    "C09_core":{"formal_tier":"A","scope":"facsimile-direct same-root participial extension variation in ati-/simi-/machi-","explicit_participle_rule_facsimile_direct":true,"facsimile_families":{"ati":["atígameque","atígame"],"simi":["simiámec","simíame"],"machi":["machiámec","machiámeque","machíame"]},"mechanism_included_in_A":false},
+    "C09_OCR_network":{"formal_tier":"unresolved_subbranch","families":["netetu-","rejoíruga-","ayorigu-"],"status":"pending_own_facsimile_control"},
+    "C09_mechanism":{"formal_tier":"unresolved_subbranch","question":"common mechanism relating -amec/-ameque/-ame","status":"unresolved"},
     "historical_li_ameke":{"status":"two_historical_A_source_explicit_roots","A_roots":["tsanelíameke","tschutschelíameke"]}
   },
   "priority_candidates": {
-    "A":["C01","C02","C03","C04-core","C05-government-core","C07","C08"],
-    "B":["C06 [B+ exceptional; token-specific c unresolved]","C09 [strong+ OCR; facsimile required]"],
-    "open_subbranches":["C04-Nisé","C05-historical-title"],
+    "A":["C01","C02","C03","C04-core","C05-government-core","C07","C08","C09-core"],
+    "B":["C06 [B+ exceptional; token-specific c unresolved]"],
+    "open_subbranches":["C04-Nisé","C05-historical-title","C09-OCR-network","C09-mechanism"],
     "C":[]
   },
-  "negative_controls":["N01","N02","N03","N04","N05","N06","N07","N08","N09","N10","N11","N12","N13","N14","N15","N16","N17","N18 unresolved historical-etymological branch does not lower a separable documentary linguistic core"],
-  "prohibited_shortcuts":["universal -ameke > -ami","universal kame > ame or ame > kame","automatic Nessé/nese- ~ Nisé identification","automatic cognacy from formal-semantic similarity","automatic historical c = modern -ka","automatic 1683 final c = /k/ or -ke","automatic identity between C05 government core and historical-title branch","automatic equivalence of <c>/<k>/<que>/<ke>"],
-  "documentary_dependencies": {"C02_historical_structure":"resolved","C03_historical_ame_family":"resolved","C04_core_structure":"resolved","C04_Nise_historical_relation":"unresolved","C05_government_core":"resolved_v17","C05_historical_title_relation":"unresolved","C06_material_graphematic_control":"token_specific_c_unresolved","C09_tellechea_facsimile":"blocked"},
-  "research_phase":"resolve_tier_B_structural_bottlenecks",
-  "next_action_without_blocked_documents":"Only two principal B fronts remain: C06 token-specific graphematic/facsimile control and C09 facsimile. Open subbranches C04-Nisé and C05-historical-title require direct comparative evidence.",
-  "next_action_when_documents_available":"Prioritize C06 fol.35r/final-c graphemics and C09 Tellechea facsimile."
+  "negative_controls":["N01","N02","N03","N04","N05","N06","N07","N08","N09","N10","N11","N12","N13","N14","N15","N16","N17","N18","N19 source-direct alternation may be adjudicated without adjudicating its causal mechanism"],
+  "prohibited_shortcuts":["universal -ameke > -ami","universal kame > ame or ame > kame","automatic Nessé/nese- ~ Nisé identification","automatic cognacy from formal-semantic similarity","automatic historical c = modern -ka","automatic 1683 final c = /k/ or -ke","automatic identity between C05 government core and historical-title branch","automatic equivalence of <c>/<k>/<que>/<ke>","automatic promotion of C09 OCR-only families from the facsimile status of ati/simi/machi","automatic participial deletion law from observed Tellechea extension variation"],
+  "documentary_dependencies": {
+    "C02_historical_structure":"resolved",
+    "C03_historical_ame_family":"resolved",
+    "C04_core_structure":"resolved",
+    "C04_Nise_historical_relation":"unresolved",
+    "C05_government_core":"resolved_v17",
+    "C05_historical_title_relation":"unresolved",
+    "C06_material_graphematic_control":"token_specific_c_unresolved",
+    "C09_facsimile_core":"resolved_v18",
+    "C09_OCR_network":"pending_facsimile",
+    "C09_mechanism":"unresolved"
+  },
+  "research_phase":"resolve_final_principal_B_candidate",
+  "next_action_without_blocked_documents":"C06 is the only principal B candidate. Seek token-specific graphematic/facsimile evidence for 1683 tsocamec/otsocamec. Open subbranches require direct comparative or facsimile evidence.",
+  "next_action_when_documents_available":"Prioritize C06 fol.35r/final-c graphemics; then facsimile-check residual C09 OCR families."
 }
