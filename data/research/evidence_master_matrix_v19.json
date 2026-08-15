@@ -1,0 +1,66 @@
+{
+  "schema_version": "2.1",
+  "date": "2026-08-14",
+  "project": "Rarámuri Histórico Digital",
+  "canonical_assessment": "AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md",
+  "matrix_document": "EVIDENCE_MASTER_MATRIX_V19.md",
+  "supersedes": "data/research/evidence_master_matrix_v18.json",
+  "portfolio_summary": {
+    "A": ["C01", "C02", "C03", "C04-core", "C05-government-core", "C07", "C08", "C09-core"],
+    "B": ["C06"],
+    "open_subbranches": ["C04-Nisé", "C05-historical-title", "C09-OCR-network", "C09-mechanism"],
+    "C": []
+  },
+  "candidates": [
+    {"id":"C01","tier":"A","status":"unchanged"},
+    {"id":"C02","tier":"A","status":"unchanged"},
+    {"id":"C03","tier":"A","status":"unchanged"},
+    {"id":"C04-core","tier":"A","status":"unchanged"},
+    {"id":"C04-Nisé","tier":"open_subbranch","status":"unchanged"},
+    {"id":"C05-government-core","tier":"A","status":"unchanged"},
+    {"id":"C05-historical-title","tier":"open_subbranch","status":"unchanged"},
+    {
+      "id":"C06",
+      "tier":"B",
+      "strength_note":"B+_exceptional_near_A",
+      "status":"only_principal_B_candidate",
+      "british_library_copy": {
+        "identified": true,
+        "shelfmark": "C.38.a.12",
+        "historically_described_as_incomplete": true
+      },
+      "nypl_copy": {
+        "published_report": true,
+        "report_source": "Marina Garone Gravier, Una Babel sobre el papel",
+        "catalog_record_recovered": false,
+        "identity": "unresolved",
+        "second_original_witness": "not_demonstrated",
+        "independence_from_BL": "not_demonstrated"
+      },
+      "token_specific_final_c":"unresolved",
+      "next_material_priority":[
+        "British Library C.38.a.12 fol.35r facsimile or controlled reproduction",
+        "Rodríguez López 2010 pp.162-164",
+        "NYPL only if shelfmark/support/provenance is recovered"
+      ]
+    },
+    {"id":"C07","tier":"A","status":"unchanged"},
+    {"id":"C08","tier":"A","status":"unchanged"},
+    {"id":"C09-core","tier":"A","status":"preserved_from_v18"},
+    {"id":"C09-OCR-network","tier":"open_subbranch","status":"preserved_from_v18"},
+    {"id":"C09-mechanism","tier":"open_subbranch","status":"preserved_from_v18"}
+  ],
+  "new_negative_control": {
+    "id":"N20",
+    "rule":"A published statement that a copy was consulted at a library is not equivalent to a verified independent material witness until bibliographic identity, support, and provenance are recovered."
+  },
+  "global_constraints":[
+    "Do not count the reported NYPL object as a second original witness.",
+    "Do not infer NYPL independence from the British Library copy.",
+    "Do not use catalog non-recovery as proof that Garone's statement is false.",
+    "Do not identify 1683 final <c> with /k/ or -ke without token-specific graphematic evidence.",
+    "No universal -ameke > -ami law."
+  ],
+  "research_phase":"resolve_final_principal_B_candidate",
+  "next_source_test":"Prioritize British Library C.38.a.12 fol.35r or Rodríguez López 2010 pp.162-164; treat NYPL as an unresolved provenance lead, not a confirmed second witness."
+}
