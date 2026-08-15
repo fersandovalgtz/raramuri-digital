@@ -1,54 +1,57 @@
 # Estado consolidado de la evidencia — Rarámuri Histórico Digital
 
 **Corte:** 2026-08-14  
-**Síntesis global vigente:** [`AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md`](AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md)  
-**Matriz vigente:** [`EVIDENCE_MASTER_MATRIX_V14.md`](EVIDENCE_MASTER_MATRIX_V14.md)  
-**Pruebas vigentes:** [`CANDIDATE_SOURCE_TESTS_V14.md`](CANDIDATE_SOURCE_TESTS_V14.md)
+**Síntesis global vigente:** `AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md`  
+**Matriz vigente:** `EVIDENCE_MASTER_MATRIX_V15.md`  
+**Pruebas vigentes:** `CANDIDATE_SOURCE_TESTS_V15.md`
 
 ## Estado general
 
-La cartera queda en **A = C01, C02, C03, C07, C08; B/B+ = C04, C05, C06, C09; C = ninguno**. La fase sigue siendo `resolve_tier_B_structural_bottlenecks`.
+La cartera queda en **A = C01, C02, C03, C04-core, C07, C08; B/B+ = C05, C06, C09; subrama abierta = C04-Nisé; C = ninguno**. La fase sigue siendo `resolve_tier_B_structural_bottlenecks`.
 
-No se ha demostrado una ley universal `-ameke > -ami`, `kame > ame`, `ame > kame`, `e > i` ni una identidad histórica automática `c = -ka`.
+No se ha demostrado una ley universal `-ameke > -ami`, `kame > ame`, `ame > kame`, ni una identidad automática `Nessé/nese- = Nisé`.
 
 ## C02
 
-**A.** Buschmann 1857 aporta análisis histórico token-específico del lexema `Tschipérameke / čipérameke` dentro de la formación `ameke`. La cognación histórico-moderna formalmente declarada sigue siendo una cuestión separada.
+**A.** Buschmann aporta análisis histórico token-específico de `Tschipérameke / čipérameke` dentro de `ameke`.
 
-## C03 · nuevo A
+## C03
 
-**A para la pertenencia histórica a la familia `ame` y la continuidad larga/breve; `c ~ -ka` permanece abierto.**
+**A en el nivel de familia `ame`.** Buschmann ubica `rosa-cameke ~ rosa-came` dentro de la formación histórica; `c ~ -ka` permanece expresamente no demostrado.
 
-Buschmann 1857 explica que los adjetivos pueden formarse mediante `ame` y sus expansiones y, dentro de los colores, enumera `rosa-cameke ~ rosa-came` ‘blanco’. Advierte simultáneamente que el `c` podría pertenecer al radical.
+## C04-core · nuevo A
 
-Esa cautela deja dos fronteras posibles:
+**Alcance:** `Nessé/Nesséameke ↔ nese-/nesame/Neseme`.
 
-- `rosa + cameke/came`;
-- `rosac + ameke/ame`.
+Buschmann presenta `nesse` ‘guardar/cuidar’ → `nesse-ameke` ‘guardián/vigilante’ dentro de sus sustantivos de agente. El extremo histórico tiene, por tanto, análisis base → derivado publicado.
 
-En ambas, el material `ame` sigue explícitamente asignado por Buschmann a la formación. Por ello se resuelve el antiguo bloqueo de **pertenencia histórica al dominio `ame`**, sin resolver ni necesitar para esta afirmación la identidad del `c` precedente.
+Márquez documenta una familia moderna compacta `nesema`, `nesame`, `nesbonama`, `neser`, `neserichi` en el dominio cuidar/pastorear/pastor. Su gramática establece que los nombres de actividad suelen ser participios, permite su uso nominal/adjetival y sitúa `-ame/-me/-mi` en el dominio participial/adjetival.
 
-Steffel/Merrill documentan además directamente el par histórico `Rosácameke ~ rosácame`; Tellechea aporta `rosacame`; y el moderno conserva `Rosácame` y `Rosácami`, junto con raíz `ros-` y análisis moderno `ros-ka-me`.
+Cinco controles internos independientes reproducen el patrón verbo `...ema` ↔ agente/cualidad `...ame`: `benema~bename`, `natogema~natogame`, `ne’ogema~ne’ogame`, `nichugema~nichugame`, `semema~semame`. Por ello `nesema~nesame` queda como **análisis compuesto restringido por la propia fuente**, aunque no exista una sola línea con guiones.
 
-### Restricción
+La Baja Tarahumara aporta además `Neseme` en *Tewé Ralámuli Chibá Neseme*, como control regional del mismo dominio de cuidado/pastoreo.
 
-No escribir como hecho histórico `Rosácameke = ros-ka-me-ke`. La identidad `historical c ~ modern -ka` continúa `not_demonstrated`.
+La correspondencia `Nessé/nesse- ↔ nese-/nes-` y la continuidad semántica ‘guardar/cuidar → guardián’ ↔ ‘cuidar/pastorear → pastor’ son muy fuertes.
 
-### N15
+## C04-Nisé · subrama abierta
 
-**Una incertidumbre sobre un límite morfémico interno no invalida una asignación de familia morfológica que la fuente hace explícita.** C03 permite adjudicar `ame` histórico sin adjudicar `c ~ -ka`.
+`Nisé/Niséami` **no se incluye en A**. Los precedentes `e~i/é~í` sólo hacen la comparación posible; no demuestran continuidad histórica.
 
-## C04
+`Nise_subbranch_historical_continuity=unresolved`.
 
-**B+ excepcional / cercano a A.** `nesame` tiene pertenencia participial/agentiva moderna de alta confianza interna. Falta identificación histórico-moderna directa o parse moderno token-específico suficiente.
+Sólo reabrir ante identificación histórica directa, mecanismo comparativo específico o paradigma que conecte ambas ramas.
+
+### N16
+
+**Una subrama no resuelta no debe reducir el grado de un núcleo documentalmente adjudicado cuando ambas afirmaciones pueden separarse explícitamente.**
 
 ## C05
 
-**B+ fuerte; etimología dual no resuelta.** Buschmann refuerza el puente histórico al yuxtaponer `seli-ameke` y `*seri-game`, pero no resuelve la competencia gobierno↔lanza.
+**B+ fuerte; etimología dual no resuelta.** Buschmann refuerza el puente histórico `seli-ameke ~ *seri-game`, pero no resuelve gobierno↔lanza.
 
 ## C06
 
-**B+ excepcional / cercano a A en Steffel→moderno.** La procedencia 1683 está controlada; Buschmann refuerza la cautela al indicar que en colores el `c` puede pertenecer al radical. El cuello sigue siendo material/grafemático.
+**B+ excepcional / cercano a A.** El cuello sigue siendo material/grafemático: valor de `<c>` y facsímil 1683.
 
 ## C08
 
@@ -58,17 +61,12 @@ No escribir como hecho histórico `Rosácameke = ros-ka-me-ke`. La identidad `hi
 
 **B fuerte+ OCR, pendiente de facsímil.** No reabrir búsqueda OCR general.
 
-## H15
-
-La controversia Buschmann–Pimentel se mantiene como disputa sobre estructura interna de la familia: núcleo, expansión o contracción. N14 permanece vigente: rótulo general `ame` ≠ segmentación uniforme.
-
 ## Próxima prioridad
 
-Quedan cuatro B:
+Quedan tres candidatos B principales:
 
-1. C04 → identificación histórico-moderna directa / parse moderno exacto;
-2. C05 → adjudicación gobierno↔lanza;
-3. C06 → Rodríguez pp.162–164 / facsímil BL o NYPL;
-4. C09 → facsímil Tellechea.
+1. C05 → adjudicación gobierno↔lanza;
+2. C06 → Rodríguez pp.162–164 / facsímil BL o NYPL;
+3. C09 → facsímil Tellechea.
 
-La síntesis global v18 continúa siendo suficiente: v14 resuelve un candidato concreto sin modificar la tesis global.
+C04-Nisé queda como subrama comparativa independiente y sólo se reabre con evidencia directa.
