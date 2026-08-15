@@ -2,7 +2,7 @@
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
   "@type": "Dataset",
   "name": "Rarámuri Digital",
-  "description": "Infraestructura lexicográfica rarámuri-español con 2,581 entradas, 30 productos derivados, formatos interoperables y API pública.",
+  "description": "Infraestructura lexicográfica rarámuri-español con 2,581 entradas, 30 productos derivados, procedencia documental explícita, formatos interoperables y API pública.",
   "version": "1.0.0",
   "datePublished": "2026-07-21",
   "identifier": "https://doi.org/10.5281/zenodo.21483353",
@@ -17,5 +17,25 @@
     "email": "fernando.sandoval@uacj.mx",
     "@id": "https://orcid.org/0000-0002-3168-6725"
   }],
-  "keywords": ["Rarámuri", "Tarahumara", "lexicography", "digital humanities", "TEI Lex-0", "corpus linguistics", "Indigenous languages"]
+  "isBasedOn": "https://mexico.sil.org/es/resources/archives/10966",
+  "citation": "Hilton, K. Simón. 1993. Diccionario tarahumara de Samachique, Chihuahua, México. Instituto Lingüístico de Verano.",
+  "sameAs": [
+    "https://doi.org/10.5281/zenodo.21483353",
+    "https://archive.softwareheritage.org/swh:1:snp:0982c208ac90273fdb553b181b8c75c66991e09d"
+  ],
+  "keywords": [
+    "Rarámuri",
+    "Tarahumara",
+    "Central Tarahumara",
+    "Samachique",
+    "lexicography",
+    "digital humanities",
+    "linguistic data",
+    "data provenance",
+    "open science",
+    "TEI Lex-0",
+    "CLDF",
+    "corpus linguistics",
+    "Indigenous languages"
+  ]
 }
