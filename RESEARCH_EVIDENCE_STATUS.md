@@ -2,14 +2,14 @@
 
 **Corte:** 2026-08-14  
 **Síntesis global vigente:** `AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md`  
-**Matriz vigente:** `EVIDENCE_MASTER_MATRIX_V16.md`  
-**Pruebas vigentes:** `CANDIDATE_SOURCE_TESTS_V16.md`
+**Matriz vigente:** `EVIDENCE_MASTER_MATRIX_V17.md`  
+**Pruebas vigentes:** `CANDIDATE_SOURCE_TESTS_V17.md`
 
 ## Estado general
 
-La cartera queda en **A = C01, C02, C03, C04-core, C07, C08; B/B+ = C05, C06, C09; subrama abierta = C04-Nisé; C = ninguno**. La fase sigue siendo `resolve_tier_B_structural_bottlenecks`.
+La cartera queda en **A = C01, C02, C03, C04-core, C05-government-core, C07, C08; B/B+ = C06, C09; subramas abiertas = C04-Nisé y C05-historical-title; C = ninguno**. La fase sigue siendo `resolve_tier_B_structural_bottlenecks`.
 
-No se ha demostrado una ley universal `-ameke > -ami`, `kame > ame`, `ame > kame`, ni una identidad automática `Nessé/nese- = Nisé`.
+No se ha demostrado una ley universal `-ameke > -ami`, `kame > ame`, `ame > kame`, una identidad automática `Nessé/nese- = Nisé`, ni identidad automática entre la familia de gobierno C05 y la tradición histórica del título asociada a otra familia léxica.
 
 ## C02
 
@@ -17,40 +17,37 @@ No se ha demostrado una ley universal `-ameke > -ami`, `kame > ame`, `ame > kame
 
 ## C03
 
-**A en el nivel de familia `ame`.** Buschmann ubica `rosa-cameke ~ rosa-came` dentro de la formación histórica; `c ~ -ka` permanece expresamente no demostrado.
+**A en el nivel de familia `ame`.** Buschmann ubica `rosa-cameke ~ rosa-came` dentro de la formación histórica; `c ~ -ka` permanece no demostrado.
 
-## C04-core
+## C04-core / C04-Nisé
 
-**A.** `Nessé/Nesséameke ↔ nese-/nesame/Neseme` queda adjudicado mediante análisis histórico Buschmann y análisis compuesto moderno restringido por la propia fuente. La subrama `Nisé/Niséami` permanece separada y abierta.
+**C04-core = A.** `Nessé/Nesséameke ↔ nese-/nesame/Neseme` queda adjudicado. `Nisé/Niséami` permanece como subrama comparativa separada y abierta.
 
-## C05
+## C05-government-core · nuevo A
 
-**B+ fuerte; etimología dual no resuelta.** Buschmann refuerza el puente histórico `seli-ameke ~ *seri-game`, pero no resuelve gobierno↔lanza.
+**A.** La evidencia permite separar un núcleo lingüístico de gobierno de una rama histórico-etimológica independiente.
 
-## C06 · avance v16
+Steffel/Merrill documentan `selí` ‘gobernar’ → `selíameke` ‘gobernante/juez del pueblo’ como derivación explícita. Buschmann compara históricamente Steffel `seli-ameke` con Tellechea `*seri-game`, de modo que la correspondencia `seli- ~ seri-` ya cuenta con una alineación publicada y no depende sólo de precedentes generales `l~r`.
 
-**B+ excepcional / cercano a A. El tier no cambia, pero el control histórico de material velar mejora sustantivamente.**
+Márquez documenta modernamente una familia compacta `sir-` de gobierno (`sirnama`, `sirame/sirgame/sergame`, `sirachi`, `siri*ma`, `sir*nowa`) y Caballero aporta independientemente Choguita `siríame` ‘gobernador’ e `i-sérikame`.
 
-Guadalaxara 1683 declara en su prólogo que los guazapares presentan “trueques de letras” y que **no pronuncian tanto las finales `ca, que, qui, co, cu`**. Por tanto, el debilitamiento de una serie periférica `kV` está metalingüísticamente documentado en el siglo XVII y no depende de retroproyección moderna.
+La continuidad formal-semántica del **núcleo de gobierno** satisface el criterio A compuesto y fuente-controlado.
 
-Merrill & Burgess recuperan además formas de Guadalaxara con velar final, entre ellas `norugamek` y `šunú-k`. La disponibilidad histórica de una velar final queda directamente controlada.
+## C05-historical-title · subrama abierta
 
-Brambila aporta el paralelo moderno de reduplicación expletiva `-ka/-ke/-ki/-ko/-ku`, mientras Estrada Fernández 2020 analiza `tsok-ame` como `negro-NMLZ`, ofreciendo una base moderna explícita del color negro.
+Fuentes etnográficas y patrimoniales conservan otra tradición para `selígame`, vinculada a `seléke/se*l` y a antiguas autoridades identificadas por un atributo cultural específico. Zingg documenta esa interpretación; el Sistema de Información Cultural la organiza históricamente antes del sistema jesuítico de `siríame/serígame`.
 
-Buschmann mantiene abierto el control adversarial: en `tscho-cameke/tscho-came` la `c` podría pertenecer al radical. Por ello el `<c>` de `tsocamec/otsocamec` sigue **sin valor fonético o morfológico token-específico adjudicado**.
+Márquez distingue sincrónicamente `se*l/se*r` (vocal larga) de la familia corta `sir-/ser-` de gobierno. La relación histórica entre ambas tradiciones sigue **no adjudicada**.
 
-### Resultado transversal
+La promoción de C05-government-core a A no promueve esta subrama.
 
-El debilitamiento periférico velar cuenta ahora con apoyo metalingüístico histórico cruzado:
+### N18
 
-- Guadalaxara 1683: finales `ca/que/qui/co/cu` debilitadas en guazapar;
-- Steffel: omisión frecuente de `ke` final en pronunciación.
+Una rama histórico-etimológica no resuelta no debe reducir el grado de un núcleo lingüístico histórico-moderno cuando ambas afirmaciones pueden separarse documentalmente.
 
-Esto fortalece la hipótesis general de variación/reducción periférica, pero **no constituye una ley universal ni demuestra identidad morfémica entre los dos procesos**.
+## C06
 
-### N17
-
-La disponibilidad histórica de una serie fonológica/morfológica no identifica automáticamente un grafema ambiguo de un token concreto. No afirmar `tsocamec final c = /k/`, `= -ke` ni `= reduplicación expletiva`.
+**B+ excepcional / cercano a A.** Guadalaxara 1683 documenta debilitamiento final `ca/que/qui/co/cu` y formas con velar final; Steffel aporta otro testimonio histórico de reducción periférica. El `<c>` de `tsocamec/otsocamec` sigue sin adjudicación token-específica y Buschmann mantiene viva la posibilidad de que material `c` pertenezca al radical.
 
 ## C08
 
@@ -62,10 +59,9 @@ La disponibilidad histórica de una serie fonológica/morfológica no identifica
 
 ## Próxima prioridad
 
-Quedan tres candidatos B principales:
+Sólo quedan dos candidatos B principales:
 
 1. C06 → facsímil/regla grafemática token-específica para `tsocamec/otsocamec`;
-2. C05 → adjudicación gobierno↔lanza;
-3. C09 → facsímil Tellechea.
+2. C09 → facsímil Tellechea.
 
-C04-Nisé queda como subrama comparativa independiente y sólo se reabre con evidencia directa.
+C04-Nisé y C05-historical-title se reabren únicamente ante evidencia comparativa/etimológica directa.
