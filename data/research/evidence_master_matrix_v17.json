@@ -1,0 +1,58 @@
+{
+  "schema_version": "2.6",
+  "date": "2026-08-14",
+  "project": "Rarámuri Histórico Digital",
+  "canonical_assessment": "AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md",
+  "matrix_document": "EVIDENCE_MASTER_MATRIX_V17.md",
+  "supersedes": "data/research/evidence_master_matrix_v16.json",
+  "portfolio": {
+    "A": ["C01","C02","C03","C04-core","C05-government-core","C07","C08"],
+    "B": ["C06","C09"],
+    "open_subbranches": ["C04-Nisé","C05-historical-title"],
+    "C": []
+  },
+  "candidates": [
+    {"id":"C01","tier":"A","status":"unchanged"},
+    {"id":"C02","tier":"A","status":"unchanged"},
+    {"id":"C03","tier":"A","status":"unchanged"},
+    {"id":"C04-core","tier":"A","status":"unchanged"},
+    {"id":"C04-Nisé","tier":"open_subbranch","status":"unchanged"},
+    {
+      "id":"C05-government-core",
+      "tier":"A",
+      "historical_base":"selí",
+      "historical_base_meaning":"gobernar",
+      "historical_derived":"selíameke",
+      "historical_derived_meaning":"gobernante/juez del pueblo",
+      "historical_base_to_derived":"direct_published",
+      "historical_cross_source_alignment":"Buschmann: Steffel seli-ameke ~ Tellechea *seri-game",
+      "historical_cross_source_alignment_status":"direct_published_secondary",
+      "modern_govern_family":["sirnama","sirame","sirgame","sergame","sirachi","siri*ma","sir*nowa"],
+      "independent_modern_form":"Choguita siríame / i-sérikame",
+      "formal_semantic_continuity":"very_strong",
+      "scope":"government lexical core only"
+    },
+    {
+      "id":"C05-historical-title",
+      "tier":"open_subbranch",
+      "source_attested":true,
+      "historical_relation_to_government_core":"unresolved",
+      "modern_lexical_distinction":"Márquez distinguishes government sir-/ser- from se*l/se*r family",
+      "included_in_C05_government_A":false
+    },
+    {"id":"C06","tier":"B","strength_note":"B+_exceptional_near_A","status":"preserved_from_v16"},
+    {"id":"C07","tier":"A","status":"unchanged"},
+    {"id":"C08","tier":"A","status":"unchanged"},
+    {"id":"C09","tier":"B","strength_note":"strong_plus_ocr_pending_facsimile","status":"unchanged"}
+  ],
+  "negative_controls": ["N01","N02","N03","N04","N05","N06","N07","N08","N09","N10","N11","N12","N13","N14","N15","N16","N17","N18"],
+  "N18":"An unresolved historical-etymological branch does not reduce the tier of a documentary linguistic core when the claims can be separated.",
+  "global_constraints":[
+    "C05-government-core A does not adjudicate the separate historical-title etymology.",
+    "No automatic identity between se*l/se*r and sir-/ser-.",
+    "No universal l>r or e>i law.",
+    "No universal -ameke>-ami law."
+  ],
+  "phase":"resolve_tier_B_structural_bottlenecks",
+  "next_source_test":"Only two principal B fronts remain: C06 token-specific graphematic/facsimile control and C09 Tellechea facsimile. Open subbranches C04-Nisé and C05-historical-title require direct comparative evidence."
+}
