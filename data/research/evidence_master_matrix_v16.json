@@ -1,0 +1,68 @@
+{
+  "schema_version": "2.5",
+  "date": "2026-08-14",
+  "project": "Rarámuri Histórico Digital",
+  "canonical_assessment": "AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md",
+  "matrix_document": "EVIDENCE_MASTER_MATRIX_V16.md",
+  "supersedes": "data/research/evidence_master_matrix_v15.json",
+  "portfolio": {
+    "A": ["C01","C02","C03","C04-core","C07","C08"],
+    "B": ["C05","C06","C09"],
+    "open_subbranches": ["C04-Nisé"],
+    "C": []
+  },
+  "candidates": [
+    {"id":"C01","tier":"A","status":"unchanged"},
+    {"id":"C02","tier":"A","status":"unchanged"},
+    {"id":"C03","tier":"A","status":"unchanged"},
+    {"id":"C04-core","tier":"A","status":"unchanged"},
+    {"id":"C04-Nisé","tier":"open_subbranch","status":"unchanged"},
+    {"id":"C05","tier":"B","strength_note":"B+_strong","status":"unchanged"},
+    {
+      "id":"C06",
+      "tier":"B",
+      "strength_note":"B+_exceptional_near_A",
+      "candidate":"tsocamec/otsocamec → čókameke ~ čókame → chó-ka-me",
+      "Guadalaxara_1683_trueques_de_letras":true,
+      "Guadalaxara_1683_final_kV_series_metalinguistic":true,
+      "Guadalaxara_1683_final_kV_weakening_in_Guazapar":true,
+      "Guadalaxara_final_velar_independently_attested":true,
+      "Guadalaxara_gamek_direct_attestation":"Pedro norugamek",
+      "other_Guadalaxara_final_velar_control":"šunú-k",
+      "modern_expletive_kV_control":true,
+      "modern_black_tsok_root_direct_analysis":"tsok-ame = negro-NMLZ",
+      "Buschmann_color_c_may_belong_to_stem":true,
+      "historical_peripheral_velar_weakening_cross_source":"strong_direct_metalinguistic_support",
+      "tsocamec_final_c_phonetic_value":"unresolved",
+      "tsocamec_final_c_morpheme_identity":"unresolved",
+      "tsocamec_c_to_Steffel_ke":"not_demonstrated",
+      "tsocamec_c_as_stem_material":"live_competing_analysis",
+      "remaining_A_requirement":"token-specific graphematic/facsimile rule or direct historical structural analysis of tsocamec/otsocamec"
+    },
+    {"id":"C07","tier":"A","status":"unchanged"},
+    {"id":"C08","tier":"A","status":"unchanged"},
+    {"id":"C09","tier":"B","strength_note":"strong_plus_ocr_pending_facsimile","status":"unchanged"}
+  ],
+  "cross_source_hypotheses": {
+    "historical_peripheral_velar_weakening": {
+      "status":"strong_direct_metalinguistic_support",
+      "sources":[
+        "Guadalaxara 1683: Guazapar final ca/que/qui/co/cu weakened in pronunciation",
+        "Steffel: final ke frequently omitted in pronunciation"
+      ],
+      "universal_law":false,
+      "morpheme_identity_across_sources":"not_demonstrated"
+    }
+  },
+  "negative_controls": ["N01","N02","N03","N04","N05","N06","N07","N08","N09","N10","N11","N12","N13","N14","N15","N16","N17"],
+  "N17":"Historical availability of a phonological/morphological series does not automatically identify an ambiguous grapheme inside a specific token.",
+  "global_constraints": [
+    "No universal -ameke > -ami law.",
+    "No automatic historical c = modern -ka.",
+    "No automatic 1683 final c = /k/ or -ke.",
+    "No automatic identity between modern expletive kV and colonial peripheral velars.",
+    "Buschmann's competing possibility that color c belongs to the stem remains live."
+  ],
+  "phase":"resolve_tier_B_structural_bottlenecks",
+  "next_source_test":"Prioritize token-specific facsimile/graphematic adjudication of C06; then C05 etymological adjudication and C09 Tellechea facsimile."
+}
