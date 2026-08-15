@@ -1,0 +1,59 @@
+{
+  "schema_version": "2.3",
+  "date": "2026-08-14",
+  "project": "Rarámuri Histórico Digital",
+  "canonical_assessment": "AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md",
+  "matrix_document": "EVIDENCE_MASTER_MATRIX_V14.md",
+  "supersedes": "data/research/evidence_master_matrix_v13.json",
+  "portfolio": {
+    "A": ["C01", "C02", "C03", "C07", "C08"],
+    "B_or_Bplus": ["C04", "C05", "C06", "C09"],
+    "C": []
+  },
+  "candidates": [
+    {"id":"C01","tier":"A","status":"unchanged"},
+    {"id":"C02","tier":"A","historical_token_specific_analysis":"direct_published_secondary","analysis_author":"Buschmann_1857","status":"unchanged_from_v13"},
+    {
+      "id":"C03",
+      "tier":"A",
+      "candidate":"Rosácameke ~ rosácame ↔ Rosácame / Rosácami",
+      "historical_long_short_pair":"direct",
+      "historical_ame_family_analysis":"direct_published_secondary",
+      "analysis_author":"Buschmann_1857",
+      "Buschmann_historical_forms":["rosa-cameke","rosa-came"],
+      "Buschmann_analysis_domain":"adjectives formed through ame and its expansions",
+      "historical_c_boundary":"unresolved",
+      "historical_ka_identity":"not_demonstrated",
+      "modern_rosacame":true,
+      "modern_rosacami":true,
+      "modern_root_ros_explicit":true,
+      "modern_ros_ka_me_parse_explicit":true,
+      "e_i_required_for_lexical_continuity":false,
+      "universal_ameke_to_ami":false,
+      "A_scope":"historical ame-family membership and long/short continuity; excludes c~ka identity"
+    },
+    {"id":"C04","tier":"B","strength_note":"B+_exceptional_near_A","status":"unchanged"},
+    {"id":"C05","tier":"B","strength_note":"B+_strong","dual_etymology_unresolved":true,"status":"unchanged"},
+    {"id":"C06","tier":"B","strength_note":"B+_exceptional_near_A_Steffel_to_modern","status":"unchanged"},
+    {"id":"C07","tier":"A","status":"unchanged"},
+    {"id":"C08","tier":"A","status":"unchanged"},
+    {"id":"C09","tier":"B","strength_note":"strong_plus_ocr_pending_facsimile","status":"unchanged"}
+  ],
+  "historiography": {
+    "H15_19c_internal_structure_dispute":"directly_documented",
+    "Buschmann_primary_text_recovered":true,
+    "Buschmann_color_c_may_belong_to_stem":true,
+    "Pimentel_kame_analysis":"direct_published"
+  },
+  "negative_controls":["N01","N02","N03","N04","N05","N06","N07","N08","N09","N10","N11","N12","N13","N14","N15"],
+  "N15":"Uncertainty about one internal morpheme boundary does not invalidate an explicit source-level assignment to a morphological family; for C03 historical ame is adjudicated while c~modern -ka remains unresolved.",
+  "global_constraints":[
+    "No universal -ameke > -ami law.",
+    "No historical Rosácameke = ros-ka-me-ke parse as a fact.",
+    "No automatic historical c = modern -ka identity.",
+    "No automatic cognacy from formal-semantic similarity.",
+    "Do not count Buschmann as independent Tarahumara primary data from Steffel/Tellechea."
+  ],
+  "phase":"structural_resolution",
+  "next_source_test":"Four B fronts remain: C04 direct historical-modern identification/modern exact parse; C05 government-vs-lance adjudication; C06 1683 material/grafhematic control; C09 Tellechea facsimile."
+}
