@@ -1,77 +1,84 @@
 # Estado consolidado de la evidencia — Rarámuri Histórico Digital
 
 **Corte:** 2026-08-14  
-**Síntesis general vigente:** [`AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md`](AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md)  
-**Matriz vigente:** [`EVIDENCE_MASTER_MATRIX_V12.md`](EVIDENCE_MASTER_MATRIX_V12.md)  
-**Pruebas vigentes:** [`CANDIDATE_SOURCE_TESTS_V12.md`](CANDIDATE_SOURCE_TESTS_V12.md)  
-**Nueva auditoría historiográfica:** [`BUSCHMANN_PIMENTEL_AME_KAME_HISTORIOGRAPHY_V1.md`](BUSCHMANN_PIMENTEL_AME_KAME_HISTORIOGRAPHY_V1.md)
+**Síntesis global vigente:** [`AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md`](AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md)  
+**Matriz vigente:** [`EVIDENCE_MASTER_MATRIX_V13.md`](EVIDENCE_MASTER_MATRIX_V13.md)  
+**Pruebas vigentes:** [`CANDIDATE_SOURCE_TESTS_V13.md`](CANDIDATE_SOURCE_TESTS_V13.md)  
+**Buschmann primario:** [`BUSCHMANN_1857_AME_PRIMARY_SOURCE_AUDIT_V1.md`](BUSCHMANN_1857_AME_PRIMARY_SOURCE_AUDIT_V1.md)
 
 ## Estado general
 
-La evidencia primaria mantiene con alta confianza un dominio participial/derivacional histórico asociado a `*-ame`. Steffel documenta directamente `-ameke ~ -ame`; Tellechea aporta redes internas de extensión variable; la documentación moderna conserva `-ame/-me/-ami`. No se ha demostrado una ley universal `-ameke > -ami`, `kame > ame` ni `ame > kame`.
+La evidencia mantiene con alta confianza un dominio histórico participial/derivacional asociado a `*-ame`, pero no una ley universal `-ameke > -ami`, `kame > ame` ni `ame > kame`. La cartera queda ahora en **A = C01, C02, C07, C08; B/B+ = C03, C04, C05, C06, C09; C = ninguno**.
 
-La cartera sigue en **A = C01, C07, C08; B/B+ = C02, C03, C04, C05, C06, C09; C = ninguno**. La fase vigente es `resolve_tier_B_structural_bottlenecks`.
+La fase vigente continúa siendo `resolve_tier_B_structural_bottlenecks`.
 
-## H15 · controversia analítica `ame` ↔ `kame` en el siglo XIX
+## C02 · `Tschipérameke / čipérameke ↔ Chipérami`
 
-Buschmann publicó en 1857 *Die Lautveränderung aztekischer Wörter in den sonorischen Sprachen und die sonorische Endung ame*. El propio título convierte `ame` en objeto explícito de análisis comparativo como “terminación sonorense”. El texto primario completo todavía no ha sido recuperado de forma estable; por ello no se le atribuye aún una función gramatical más precisa ni ejemplos tarahumaras concretos.
+**A.**
 
-Pimentel 1874 discute explícitamente a Buschmann en su sección “Verbales y participios”. Propone `kame` como unidad pertinente, interpreta `ame` y `me` como contracciones y coloca `kame` en la columna **Tarahumar** de su tabla comparativa. En su descripción del tarahumara enumera `ke, kameke, kamek, kame, meke, mek, yamek, amek` como terminaciones de participio presente y da `Tarayaméke` ‘el que cuenta’.
+Buschmann 1857, ya recuperado en texto primario, coloca el lexema histórico de ‘delgado/fino; plano/liso’ dentro de su sección de adjetivos formados mediante `ame`, bajo la subforma `ameke`. Su convención documental establece que las formas tarahumaras sin asterisco proceden de Steffel; la forma corresponde al `Tschipérameke / čipérameke` de Steffel/Merrill.
 
-Sin embargo, Pimentel declara que la única gramática tarahumara que pudo consultar fue Tellechea 1826 y que complementó el léxico con Steffel a través de *Mithridates* y Buschmann. Por tanto, **Pimentel no es una nueva atestiguación primaria tarahumara independiente**: su independencia es analítica/historiográfica.
+El bloqueo estructural histórico queda resuelto mediante un **análisis token-específico publicado**. El moderno `chipérami` mantiene una coincidencia formal de raíz y una continuidad semántica muy fuertes.
 
-`H15_19c_ame_kame_analysis_dispute = directly_documented`.
+La promoción a A es estructural. **No** equivale a una cognación histórico-moderna formalmente declarada ni demuestra una ley universal `-ameke > -ami`.
 
-### N13
+## H15 · controversia decimonónica refinada
 
-**Una etiqueta comparativa decimonónica (`ame` o `kame`) no equivale por sí sola a la segmentación sincrónica de los tokens primarios reutilizados por el analista.** Buschmann y Pimentel deben tratarse como intérpretes históricos en controversia; Steffel y Tellechea permanecen las fuentes primarias que deben adjudicarse por separado.
+La lectura primaria de Buschmann muestra que no puede resumirse la historiografía como `Buschmann = ame` frente a `Pimentel = kame`.
 
-## C02
+Buschmann usa `ame` como rótulo comparativo general, pero en tarahumara analiza `ame + ke → ameke`, reconoce reducción de `ke` a `c/Ø`, formas `me/meke` y expansiones `gameke`, `cameke`, `jameke`, entre otras; en otro pasaje llama `me` el gran elemento participial.
 
-**B formal; B+ fuerte.** `čipérameke ↔ Chipérami`: raíz y semántica muy alineadas; falta base/paradigma o parse histórico exacto.
+Pimentel 1874 critica la primacía de `ame`, propone `kame` y trata `ame/me` como contracciones.
 
-## C03
+**H15:** `19c_internal_structure_dispute = directly_documented`.
 
-**B formal; B+ excepcional / cercano a A.** `Rosácameke ~ rosácame ↔ Rosácame/Rosácami`; moderno `ros-ka-me` explícito, sin retroproyección histórica de `-ka`.
+### N14
+
+**El rótulo general de una familia morfológica no equivale a una teoría uniforme de su segmentación interna.** El título de Buschmann contiene `ame`, pero su teoría efectiva es multicapa.
+
+## Genealogía de Buschmann
+
+Buschmann explicita que las formas con asterisco provienen de Tellechea y las no marcadas de Steffel. Por ello su valor es de **análisis comparativo históricamente independiente**, no de tercer corpus primario tarahumara.
+
+## C03 y C06 · cautela cromática reforzada
+
+Buschmann advierte que para los colores no deben inventarse bases simples no documentadas y señala que en `rosa-cameke/rosa-came` y `tscho-cameke/tscho-came` el `c` puede pertenecer al radical.
+
+Esto refuerza, en lugar de resolver, la prohibición de proyectar retrospectivamente el análisis moderno `ros-ka-me` o `chó-ka-me`. C03 y C06 permanecen B+.
 
 ## C04
 
-**B formal; B+ excepcional / cercano a A.** `nesame` pertenece con alta confianza interna al patrón participial/agentivo de `nes-`; falta parse exacto o identificación histórica directa `Nessé ~ nes-/Nisé`.
+**B+ excepcional / cercano a A.** La morfología moderna de `nesame` está altamente controlada; falta parse exacto o identificación histórica directa `Nessé ~ nes-/Nisé`.
 
 ## C05
 
-**B formal; B+ fuerte; etimología dual no resuelta.** Se preservan la derivación histórica `selí ‘gobernar’ → selíameke ‘gobernante’` y la tradición etnohistórica `selígame = portador de lanza`. Ninguna borra automáticamente a la otra.
-
-## C06
-
-**B formal; B+ excepcional / cercano a A en Steffel→moderno.** `tsocamec/otsocamec` es exclusivo del impreso de 1683 frente al manuscrito zapopano y su `<c>` final es diplomáticamente antiguo según los criterios editoriales de Rodríguez. Su valor fonético/morfológico permanece abierto. N12 sigue vigente: grafema histórico fiel ≠ `/k/`, reduplicación expletiva, `-ke` o correspondencia exacta con Steffel.
+**B+ fuerte; etimología dual no resuelta.** Buschmann añade una comparación histórica explícita Steffel `seli-ameke` ↔ Tellechea `*seri-game`, reforzando el puente formal `l~r`. No se promueve porque persiste la competencia histórica entre la familia de gobierno y la tradición ‘portador de lanza’.
 
 ## C08
 
-**A.** Dos raíces históricas fuente-explícitas sostienen `X + -li + -ameke`: `tsanelíameke` y `tschutschelíameke`.
+**A.** La construcción histórica `X + -li + -ameke` conserva dos raíces A/source-explicit: `tsanelíameke` y `tschutschelíameke`.
 
 ## C09
 
-**B fuerte+ OCR, pendiente de facsímil.** Cinco redes fuertes y una probable; no abrir más búsquedas OCR generales.
+**B fuerte+ OCR, pendiente de facsímil.** No reabrir búsquedas OCR generales.
 
-## Controles globales
+## Controles globales vigentes
 
 No usar como conclusiones:
 
-- `-ameke > -ami` universal;
-- `kame > ame` o `ame > kame` universales;
-- Pimentel como dato primario tarahumara independiente de Tellechea;
-- una función específica de `ame` atribuida a Buschmann sin recuperar su texto primario;
-- retroproyección de `-ka` o reduplicación expletiva modernas a 1683;
+- `-ameke > -ami`, `kame > ame` o `ame > kame` universales;
+- Buschmann o Pimentel como corpus primarios independientes de Steffel/Tellechea;
+- retrosegmentación histórica `-ka/-ca` a partir de la morfología moderna;
 - equivalencia automática `<c>/<k>/<que>/<ke>`;
-- cognación automática por semejanza formal-semántica.
+- cognación automática por parecido formal-semántico;
+- segmentación automática de cualquier `liameke`.
 
 ## Próxima prioridad
 
-1. recuperar el texto primario de Buschmann 1857 y adjudicar su análisis real de `ame`;
-2. Rodríguez 2010 pp. 162–164 / British Library fol. 35r / ejemplar NYPL para C06;
-3. facsímil Tellechea para C09;
-4. estructura histórica C02/C03;
-5. comparación histórica/etimológica C04/C05.
+1. C06: Rodríguez 2010 pp.162–164 / British Library fol.35r / ejemplar NYPL;
+2. C09: facsímil Tellechea;
+3. C03: estructura histórica exacta;
+4. C04: comparación histórica directa;
+5. C05: adjudicación etimológica gobierno↔lanza.
 
-El modelo global v18 sigue vigente; v12 añade una capa historiográfica crítica sin inflar los grados de los candidatos.
+La síntesis global v18 sigue siendo suficiente: v13 cambia el grado de C02 y refina la historiografía sin exigir todavía una nueva formulación global.
