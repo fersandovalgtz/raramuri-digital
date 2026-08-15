@@ -1,0 +1,77 @@
+{
+  "schema_version": "2.2",
+  "date": "2026-08-14",
+  "project": "Rarámuri Histórico Digital",
+  "canonical_assessment": "AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md",
+  "matrix_document": "EVIDENCE_MASTER_MATRIX_V13.md",
+  "supersedes": "data/research/evidence_master_matrix_v12.json",
+  "portfolio": {
+    "A": ["C01", "C02", "C07", "C08"],
+    "B_or_Bplus": ["C03", "C04", "C05", "C06", "C09"],
+    "C": []
+  },
+  "candidates": [
+    {"id":"C01","tier":"A","status":"unchanged"},
+    {
+      "id":"C02",
+      "tier":"A",
+      "candidate":"Tschipérameke / čipérameke ↔ Chipérami",
+      "historical_token_specific_analysis":"direct_published_secondary",
+      "analysis_author":"Buschmann_1857",
+      "primary_lexical_source":"Steffel",
+      "Buschmann_source_marker":"unstarred=Steffel",
+      "Buschmann_section":"adjectives formed with ame; subform ameke",
+      "Buschmann_OCR_form":"ischiper-ameke",
+      "Buschmann_gloss":"thin/fine; flat/smooth",
+      "historical_normalized_form":"čipérameke",
+      "historical_modern_root_match":"very_strong",
+      "semantic_continuity":"very_strong",
+      "modern_external_usage":true,
+      "historical_modern_cognacy":"not_formally_declared",
+      "universal_ameke_to_ami":false
+    },
+    {"id":"C03","tier":"B","strength_note":"B+_exceptional_near_A","Buschmann_color_caution":"c may belong to stem; do not invent unattested simplex","status":"strength_preserved_caution_reinforced"},
+    {"id":"C04","tier":"B","strength_note":"B+_exceptional_near_A","status":"unchanged"},
+    {"id":"C05","tier":"B","strength_note":"B+_strong","Buschmann_historical_alignment":"Steffel seli-ameke ~ Tellechea *seri-game","dual_etymology_unresolved":true,"status":"historical_bridge_strengthened_no_promotion"},
+    {"id":"C06","tier":"B","strength_note":"B+_exceptional_near_A_Steffel_to_modern","Buschmann_color_caution":"c may belong to stem; do not invent unattested simplex","status":"strength_preserved_caution_reinforced"},
+    {"id":"C07","tier":"A","status":"unchanged"},
+    {"id":"C08","tier":"A","status":"unchanged"},
+    {"id":"C09","tier":"B","strength_note":"strong_plus_ocr_pending_facsimile","status":"unchanged"}
+  ],
+  "historiography": {
+    "H15_19c_internal_structure_dispute":"directly_documented",
+    "Buschmann_1857": {
+      "primary_text_recovered":true,
+      "general_label":"ame",
+      "Tarahumara_simple_form_according_to_Buschmann":"ame",
+      "Tarahumara_ame_plus_ke_analysis":true,
+      "ke_to_c_or_zero_analysis":true,
+      "me_meke_family":true,
+      "expansions":["gameke/game","cameke/came","jameke/yame","iameke"],
+      "me_called_large_participial_element":true,
+      "source_genealogy":{"starred":"Tellechea","unstarred":"Steffel"},
+      "primary_Tarahumara_data_independence":false,
+      "interpretive_independence":true
+    },
+    "Pimentel_1874": {
+      "kame_analysis":"direct_published",
+      "ame_me_as_contractions_of_kame":"direct_published",
+      "Tarahumar_kame_table":true,
+      "primary_Tarahumara_data_independence":false,
+      "interpretive_independence":true
+    },
+    "adjudication":"The nineteenth-century dispute concerns which material is core, extension, or contraction; it is not a simple graphical ame-vs-kame binary."
+  },
+  "negative_controls":["N01","N02","N03","N04","N05","N06","N07","N08","N09","N10","N11","N12","N13","N14"],
+  "N14":"The general label of a morphological family does not imply a uniform theory of its internal segmentation; Buschmann's title ame coexists with ame+ke, me/meke and multiple expansions in his analysis.",
+  "global_constraints":[
+    "No universal -ameke > -ami law.",
+    "No universal kame > ame or ame > kame law.",
+    "Do not count Buschmann or Pimentel as independent Tarahumara primary corpora relative to Steffel/Tellechea.",
+    "Do count Buschmann and Pimentel as historically independent comparative interpretations.",
+    "No retrospective color -ka/-ca segmentation from modern morphology; Buschmann explicitly warns c may belong to the stem.",
+    "C02 tier A is structural; historical-modern cognacy remains not formally declared."
+  ],
+  "phase":"structural_resolution",
+  "next_source_test":"Resolve C06 by Rodríguez pp.162-164 or facsimile BL/NYPL; then C09 facsimile Tellechea, C03 historical structure, C04 direct historical comparison, C05 government-vs-lance etymological adjudication."
+}
