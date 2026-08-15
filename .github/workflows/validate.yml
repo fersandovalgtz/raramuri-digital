@@ -21,6 +21,11 @@ jobs:
       - name: Obtener repositorio
         uses: actions/checkout@v4
 
+      - name: Validar CITATION.cff
+        uses: citation-file-format/cffconvert-github-action@2.0.0
+        with:
+          args: "--validate"
+
       - name: Configurar Node.js
         uses: actions/setup-node@v4
         with:
@@ -35,6 +40,12 @@ jobs:
           cache-dependency-path: |
             requirements-pdf.txt
             requirements-cldf.txt
+
+      - name: Validar metadatos JSON
+        run: |
+          python -m json.tool codemeta.json >/dev/null
+          python -m json.tool project-metadata.json >/dev/null
+          python -m json.tool public/downloads/manifest.json >/dev/null
 
       - name: Instalar dependencias
         run: |
