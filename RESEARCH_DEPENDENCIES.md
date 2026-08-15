@@ -4,127 +4,128 @@
 
 Este documento registra qué falta para elevar de grado las hipótesis vigentes y evita búsquedas redundantes.
 
-## D1. Buschmann 1857 · terminación sonorense `ame`
+## D1. Buschmann 1857 · RESUELTA la recuperación primaria
 
-**Nueva prioridad historiográfica.** Johann Karl Eduard Buschmann publicó en 1857 *Die Lautveränderung aztekischer Wörter in den sonorischen Sprachen und die sonorische Endung ame* (pp. 433–557 de las *Abhandlungen der Königlichen Akademie der Wissenschaften in Berlin*; también como separata).
-
-### Localizado
-
-- registro bibliográfico inequívoco;
-- disponibilidad de texto completo/imágenes reportada por catálogos actuales vía HathiTrust;
-- `ame` aparece explícitamente como objeto de estudio en el título.
-
-### No recuperado
-
-El texto primario no ha sido obtenido todavía de manera estable. Por ello quedan abiertos:
-
-1. ejemplos tarahumaras concretos utilizados por Buschmann;
-2. función gramatical exacta que asigna a `ame`;
-3. relación que propone entre `ame`, `kame`, `ameke` u otras extensiones;
-4. fuentes tarahumaras de las que toma sus datos;
-5. alcance real de su comparación sonorense.
-
-**Regla:** no atribuir a Buschmann un análisis morfológico detallado a partir del título o de la crítica de Pimentel.
-
-## D2. Controversia Buschmann–Pimentel
-
-**Estado:** documentada directamente en Pimentel 1874.
-
-Pimentel:
-
-- discute a Buschmann;
-- propone `kame` en lugar de `ame`;
-- interpreta `ame/me` como contracciones;
-- coloca `kame` en la columna Tarahumar;
-- enumera para el participio presente tarahumara `ke, kameke, kamek, kame, meke, mek, yamek, amek` y da `Tarayaméke` ‘el que cuenta’.
-
-### Genealogía
-
-Pimentel declara que la única gramática tarahumara consultada fue Tellechea 1826; complementó léxico con Steffel vía *Mithridates* y Buschmann.
-
-**Consecuencia:** `Pimentel_primary_Tarahumara_data_independence=false`; `Pimentel_interpretive_independence=true`.
-
-**H15:** controversia analítica `ame/kame` del siglo XIX directamente documentada.  
-**N13:** una etiqueta comparativa histórica no equivale a segmentación sincrónica de los tokens primarios reutilizados.
-
-## D3. Guadalaxara 1683 / Rodríguez López 2010
-
-**Estado:** edición localizada e indexada parcialmente. No se recuperó de forma estable el texto completo de pp. 162–164.
+**Estado:** texto primario recuperado y auditado en `BUSCHMANN_1857_AME_PRIMARY_SOURCE_AUDIT_V1.md` mediante el volumen completo de las *Abhandlungen der Königlichen Akademie der Wissenschaften in Berlin* digitalizado en Internet Archive (`abhandlungenderk1856deut`).
 
 ### Resuelto
 
-- cotejo manuscrito Zapopan ↔ impreso British Library;
-- `tsocamec/otsocamec` (fol.35r) exclusivo del impreso;
+Buschmann:
+
+- usa `ame` como rótulo comparativo general;
+- para tarahumara analiza `ame + ke → ameke`;
+- interpreta reducción de `ke` a `c` o cero;
+- reconoce `me/meke`, `gameke/game`, `cameke/came`, `jameke/yame` y otras expansiones;
+- denomina en otro pasaje `me` el gran elemento participial;
+- declara su genealogía: asterisco = Tellechea; sin asterisco = Steffel;
+- compara explícitamente formas de Steffel y Tellechea.
+
+**Consecuencia:** H15 se formula como controversia decimonónica sobre la **estructura interna** de la familia, no simple `ame` vs. `kame`.
+
+## D2. C02 `Tschipérameke / čipérameke ↔ Chipérami` · RESUELTA
+
+**Estado:** **A.**
+
+Buschmann coloca el lexema histórico de ‘delgado/fino; plano/liso’ dentro de su sección de adjetivos formados mediante `ame`, bajo `ameke`, y su convención documental lo identifica como material de Steffel.
+
+El bloqueo de análisis histórico token-específico queda resuelto.
+
+**Cautela restante:** la cognación histórico-moderna no está formalmente declarada por una fuente y no se usa C02 para inferir una ley universal `-ameke > -ami`.
+
+## D3. Controversia Buschmann–Pimentel
+
+**Estado:** refinada y documentada.
+
+- Buschmann: `ame` como rótulo general, `ame+ke`, `me/meke`, expansiones.
+- Pimentel: `kame` como unidad y `ame/me` como contracciones.
+
+**H15:** `19c_internal_structure_dispute=directly_documented`.
+
+**N13:** rótulo comparativo histórico ≠ segmentación primaria automática.  
+**N14:** rótulo general de una familia ≠ teoría interna uniforme.
+
+Buschmann y Pimentel son interpretativamente independientes, pero no corpora tarahumaras primarios independientes de Steffel/Tellechea.
+
+## D4. Guadalaxara 1683 / Rodríguez López 2010
+
+**Estado:** edición localizada e indexada parcialmente. Falta texto estable de pp.162–164.
+
+### Resuelto
+
+- `tsocamec/otsocamec` (fol.35r) exclusivo del impreso frente al manuscrito de Zapopan;
 - fidelidad diplomática del `<c>` final según criterios editoriales;
-- existencia de secciones específicas sobre /k/, reduplicación expletiva y letras equívocas.
+- existencia de apartados sobre /k/, reduplicación expletiva y letras equívocas.
 
 ### No resuelto
 
 - valor fonético/morfológico de `<c>` final;
 - posible carácter expletivo;
 - relación con Steffel `-ke`;
-- segmentación de `tsocamec/otsocamec`.
+- segmentación exacta del token.
 
-## D4. Segundo impreso reportado en NYPL
+## D5. Segundo impreso Guadalaxara reportado en NYPL
 
-Una publicación de historia del libro reporta un ejemplar de Guadalaxara 1683 en New York Public Library. Falta registro inequívoco, identificador digital y cotejo de fol.35r.
+**Estado:** reportado en bibliografía de historia del libro; registro/facsímil aún no recuperados.
 
-## D5. Tellechea 1826
+Valor potencial: cotejo independiente de fol.35r y `<c>` final.
 
-**Estado:** OCR agotado metodológicamente; facsímil todavía bloqueado en las rutas consultadas. Cinco redes fuertes OCR/contexto: `ati-`, `simi-`, `machi-`, `netetu-`, `rejoíruga-`; `ayorigu-` probable.
+## D6. Tellechea 1826
+
+**Estado:** OCR agotado; facsímil todavía bloqueado en las rutas consultadas. C09 permanece B fuerte+.
 
 No abrir más búsquedas OCR generales.
 
-## D6. Grafemática colonial `<c>/<k>/<que>/<ke>`
+## D7. Grafemática colonial `<c>/<k>/<que>/<ke>`
 
-Parcialmente acotada, no resuelta. N12 permanece: fidelidad diplomática de `<c>` ≠ `/k/`, expletivo, `-ke` o identidad con Steffel.
+Parcialmente acotada, no resuelta. N12 permanece: fidelidad diplomática ≠ identidad fonológica/morfológica.
 
-## D7. Segunda raíz histórica `X-li-ame(ke)`
+## D8. C03 `Rosácameke ~ rosácame ↔ Rosácame/Rosácami`
 
-**RESUELTA.** `tsanelíameke` y `tschutschelíameke` son dos raíces históricas A/source-explicit. No segmentar automáticamente otros `liameke`.
+**Estado:** B+ excepcional / cercano a A.
 
-## D8. Variación moderna `-ame ~ -me ~ -ami`
+Buschmann refuerza la cautela: para los colores no deben inventarse bases simples y el `c` puede pertenecer al radical. Reabrir sólo ante estructura histórica token-específica o comparación publicada que resuelva esa ambigüedad.
 
-Apoyada regionalmente; no cerrada como cambio histórico. No formular leyes universales `-ameke > -ami`, `kame > ame`, `ame > kame`, `e > i` o `l > r`.
+## D9. C04 `Nessé/Nesséameke ↔ nes-/Neseme ↔ Nisé/Niséami`
 
-## D9. C02 `čipérameke ↔ Chipérami`
+**Estado:** B+ excepcional / cercano a A.
 
-B formal, B+ fuerte. Reabrir sólo ante base/paradigma histórico, parse exacto o comparación publicada directa.
+Reabrir sólo ante parse/paradigma moderno token-específico o identificación histórico-moderna directa.
 
-## D10. C03 `Rosácameke ~ rosácame ↔ Rosácame/Rosácami`
+## D10. C05 `selí → selíameke ↔ sir-/siríame`
 
-B formal, B+ excepcional. Reabrir sólo ante base/paradigma histórico o parse histórico exacto. No proyectar `ros-ka-me` retrospectivamente.
+**Estado:** B+ fuerte; etimología dual no resuelta.
 
-## D11. C04 `Nessé/Nesséameke ↔ nes-/Neseme ↔ Nisé/Niséami`
+Buschmann añade una alineación histórica explícita Steffel `seli-ameke` ↔ Tellechea `*seri-game`, pero la relación gobierno↔lanza permanece abierta.
 
-B formal, B+ excepcional. Reabrir sólo ante parse/paradigma exacto o identificación histórica directa.
+Reabrir sólo ante evidencia capaz de adjudicar la competencia etimológica o una comparación moderna-histórica directa.
 
-## D12. C05 `selí → selíameke ↔ sir-/siríame`
+## D11. C06 negro
 
-B formal, B+ fuerte; etimología dual no resuelta. Reabrir sólo ante evidencia capaz de adjudicar gobierno↔lanza o comparación etimológica directa.
+**Estado:** B+ excepcional / cercano a A en Steffel→moderno.
 
-## D13. C06 negro
+Buschmann refuerza la cautela cromática al advertir que el `c` puede pertenecer al radical. Reabrir sólo con Rodríguez pp.162–164, facsímil BL/NYPL o análisis histórico token-específico.
 
-B formal, B+ excepcional Steffel→moderno. Reabrir sólo con Rodríguez pp.162–164, facsímil BL/NYPL o análisis histórico token-específico.
+## D12. C08 `tschutschelíameke`
 
-## D14. C08 `tschutschelíameke`
+**Estado:** A; cerrado salvo contradicción nueva.
 
-A; cerrado salvo contradicción nueva.
+## D13. Genealogía y controles adversariales
 
-## D15. Genealogía y controles adversariales
+`document_replication != source_independence` y `interpretive_independence != primary_data_independence`.
 
-`document_replication != source_independence`. Una interpretación histórica puede ser independiente aun cuando reutilice los mismos datos primarios; esa independencia debe etiquetarse como **interpretativa**, no documental.
+## D14. Integración al corpus/producto público
 
-## D16. Integración al corpus/producto público
+- A: C01, C02, C07, C08.
+- B/B+: C03, C04, C05, C06, C09.
 
-C02/C03/C04/C05/C06/C09 permanecen en expediente B; C01/C07/C08 son A. H15 y los análisis del siglo XIX son capas historiográficas, no cognaciones ni segmentaciones automáticas del dataset estable.
+La promoción de un candidato a A no lo convierte automáticamente en cognación histórica estable del dataset público; cada relación debe conservar su tipo de evidencia.
 
 ## Priorización vigente
 
-1. **Buschmann 1857 texto primario** → adjudicar `ame` en primera persona.
-2. **Rodríguez pp.162–164 / BL fol.35r / NYPL** → C06/grafemática.
-3. **Facsímil Tellechea** → C09.
-4. **C02/C03** → estructura histórica exacta.
-5. **C04/C05** → comparación directa/etimológica.
+1. **C06:** Rodríguez pp.162–164 / BL fol.35r / ejemplar NYPL.
+2. **C09:** facsímil Tellechea.
+3. **C03:** estructura histórica exacta.
+4. **C04:** comparación histórico-moderna directa.
+5. **C05:** adjudicación etimológica gobierno↔lanza.
 
-No abrir búsquedas generales de semejanzas; sólo pruebas capaces de resolver estructura, genealogía o una hipótesis competidora.
+No abrir búsquedas generales de semejanzas; sólo pruebas capaces de resolver estructura, genealogía o hipótesis competidoras.
