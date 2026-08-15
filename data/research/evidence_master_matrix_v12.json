@@ -1,0 +1,60 @@
+{
+  "schema_version": "2.1",
+  "date": "2026-08-14",
+  "project": "Rarámuri Histórico Digital",
+  "canonical_assessment": "AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md",
+  "matrix_document": "EVIDENCE_MASTER_MATRIX_V12.md",
+  "supersedes": "data/research/evidence_master_matrix_v11.json",
+  "portfolio": {
+    "A": ["C01", "C07", "C08"],
+    "B_or_Bplus": ["C02", "C03", "C04", "C05", "C06", "C09"],
+    "C": []
+  },
+  "candidates": [
+    {"id":"C01","tier":"A","status":"unchanged"},
+    {"id":"C02","tier":"B","strength_note":"B+_strong","status":"unchanged"},
+    {"id":"C03","tier":"B","strength_note":"B+_exceptional_near_A","status":"unchanged"},
+    {"id":"C04","tier":"B","strength_note":"B+_exceptional_near_A","status":"unchanged"},
+    {"id":"C05","tier":"B","strength_note":"B+_strong","dual_etymology_unresolved":true,"status":"unchanged"},
+    {"id":"C06","tier":"B","strength_note":"B+_exceptional_near_A_Steffel_to_modern","status":"unchanged_from_v11"},
+    {"id":"C07","tier":"A","status":"unchanged"},
+    {"id":"C08","tier":"A","status":"unchanged"},
+    {"id":"C09","tier":"B","strength_note":"strong_plus_ocr_pending_facsimile","status":"unchanged"}
+  ],
+  "historiography": {
+    "H15_19c_ame_kame_analysis_dispute": "directly_documented",
+    "Buschmann_1857": {
+      "title": "Die Lautveränderung aztekischer Wörter in den sonorischen Sprachen und die sonorische Endung ame",
+      "publication": "Abhandlungen der Königlichen Akademie der Wissenschaften in Berlin, 1856 volume, Berlin 1857, pp. 433-557",
+      "ame_explicit_in_title": true,
+      "primary_text_recovered": false,
+      "full_text_reported_via_HathiTrust": true,
+      "specific_ame_function_from_primary": "not_adjudicated"
+    },
+    "Pimentel_1874": {
+      "work": "Cuadro descriptivo y comparativo de las lenguas indígenas de México o Tratado de filología mexicana, tomo I, segunda edición",
+      "kame_analysis": "direct_published",
+      "ame_me_analysis": "contractions_of_kame_according_to_Pimentel",
+      "Tarahumar_kame_table": true,
+      "Tarahumar_present_participle_endings": ["ke","kameke","kamek","kame","meke","mek","yamek","amek"],
+      "Tarahumar_example": "Tarayaméke 'el que cuenta'",
+      "only_Tarahumar_grammar_source_declared": "Tellechea 1826",
+      "Steffel_lexical_access": "via Mithridates and Buschmann",
+      "primary_Tarahumara_data_independence": false,
+      "interpretive_independence": true
+    },
+    "adjudication": "Buschmann and Pimentel are competing nineteenth-century analysts; primary Steffel/Tellechea tokens must be adjudicated separately."
+  },
+  "negative_controls": ["N01","N02","N03","N04","N05","N06","N07","N08","N09","N10","N11","N12","N13"],
+  "N13": "A nineteenth-century comparative label such as ame or kame does not by itself establish the synchronic segmentation of primary-source tokens reused by that analyst.",
+  "global_constraints": [
+    "No universal -ameke > -ami law.",
+    "No universal kame > ame or ame > kame law.",
+    "Do not count Pimentel as independent Tarahumara primary data relative to Tellechea.",
+    "Do count Pimentel as an independent nineteenth-century comparative interpretation.",
+    "Do not attribute a specific grammatical analysis to Buschmann 1857 until his primary text is recovered.",
+    "No automatic equivalence of <c>, <k>, <que>, <ke>."
+  ],
+  "phase": "structural_resolution",
+  "next_source_test": "Recover Buschmann 1857 primary text and identify Tarahumara examples, grammatical function assigned to ame, relationship to kame/ameke, and source genealogy."
+}
