@@ -1,0 +1,90 @@
+{
+  "schema_version": "2.0",
+  "date": "2026-08-14",
+  "project": "Rarámuri Histórico Digital",
+  "canonical_assessment": "AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md",
+  "matrix_document": "EVIDENCE_MASTER_MATRIX_V18.md",
+  "supersedes": "data/research/evidence_master_matrix_v17.json",
+  "portfolio_summary": {
+    "A": ["C01", "C02", "C03", "C04-core", "C05-government-core", "C07", "C08", "C09-core"],
+    "B": ["C06"],
+    "open_subbranches": ["C04-Nisé", "C05-historical-title", "C09-OCR-network", "C09-mechanism"],
+    "C": []
+  },
+  "candidates": [
+    {"id":"C01","tier":"A","status":"unchanged"},
+    {"id":"C02","tier":"A","status":"unchanged"},
+    {"id":"C03","tier":"A","status":"unchanged"},
+    {"id":"C04-core","tier":"A","status":"unchanged"},
+    {"id":"C04-Nisé","tier":"open_subbranch","status":"unchanged"},
+    {"id":"C05-government-core","tier":"A","status":"unchanged"},
+    {"id":"C05-historical-title","tier":"open_subbranch","status":"unchanged"},
+    {
+      "id":"C06",
+      "tier":"B",
+      "strength_note":"B+_exceptional_near_A",
+      "status":"only_principal_B_candidate",
+      "token_specific_final_c":"unresolved"
+    },
+    {"id":"C07","tier":"A","status":"unchanged"},
+    {"id":"C08","tier":"A","status":"unchanged"},
+    {
+      "id":"C09-core",
+      "tier":"A",
+      "scope":"Tellechea same-root participial extension variation attested directly in facsimile",
+      "facsimile_checked":true,
+      "families":[
+        {
+          "root":"ati-",
+          "forms":["atígameque","atígame"],
+          "function":"morador",
+          "pages":[{"printed":49,"pdf":77},{"printed":75,"pdf":104}],
+          "status":"facsimile_direct"
+        },
+        {
+          "root":"simi-",
+          "forms":["simiámec","simíame"],
+          "function":"el que va / caminante",
+          "pages":[{"printed":27,"pdf":55},{"printed":108,"pdf":137}],
+          "status":"facsimile_direct"
+        },
+        {
+          "root":"machi-",
+          "forms":["machiámec","machiámeque","machíame"],
+          "function":"el que sabe / los que bien saben",
+          "pages":[{"printed":27,"pdf":55},{"printed":75,"pdf":104},{"printed":109,"pdf":138},{"printed":115,"pdf":144}],
+          "status":"facsimile_direct"
+        }
+      ],
+      "explicit_participle_rule":{
+        "printed_page":27,
+        "pdf_page":55,
+        "endings":["Ga","Mec","Camec","Yamec","Amec"]
+      },
+      "mechanism_claim":"not_included_in_A"
+    },
+    {
+      "id":"C09-OCR-network",
+      "tier":"open_subbranch",
+      "families":["netetu-","rejoíruga-","ayorigu-"],
+      "status":"pending_own_facsimile_control"
+    },
+    {
+      "id":"C09-mechanism",
+      "tier":"open_subbranch",
+      "question":"common historical/morphological mechanism relating -amec/-ameque/-ame",
+      "status":"unresolved"
+    }
+  ],
+  "new_negative_control": {
+    "id":"N19",
+    "rule":"A source-direct alternation can be adjudicated without adjudicating its causal mechanism."
+  },
+  "global_constraints":[
+    "No universal -ameke > -ami law.",
+    "No automatic participial-specific deletion law from Tellechea preterite remarks.",
+    "Facsimile-direct C09 core does not promote OCR-only families.",
+    "Observed extension variation does not automatically identify -mec/-meque/-me as one synchronic morpheme."
+  ],
+  "next_source_test":"C06 is the only principal tier-B candidate. Prioritize token-specific graphematic/facsimile control of 1683 tsocamec/otsocamec."
+}
