@@ -4,141 +4,127 @@
 
 Este documento registra qué falta para elevar de grado las hipótesis vigentes y evita búsquedas redundantes.
 
-## D1. Guadalaxara 1683 / Rodríguez López 2010
+## D1. Buschmann 1857 · terminación sonorense `ame`
 
-**Estado:** edición localizada e indexada parcialmente; ya se recuperaron criterios editoriales, cotejo de testigos y estructura de la tercera parte. **No** se recuperó de forma estable el texto completo de pp. 162–164.
+**Nueva prioridad historiográfica.** Johann Karl Eduard Buschmann publicó en 1857 *Die Lautveränderung aztekischer Wörter in den sonorischen Sprachen und die sonorische Endung ame* (pp. 433–557 de las *Abhandlungen der Königlichen Akademie der Wissenschaften in Berlin*; también como separata).
+
+### Localizado
+
+- registro bibliográfico inequívoco;
+- disponibilidad de texto completo/imágenes reportada por catálogos actuales vía HathiTrust;
+- `ame` aparece explícitamente como objeto de estudio en el título.
+
+### No recuperado
+
+El texto primario no ha sido obtenido todavía de manera estable. Por ello quedan abiertos:
+
+1. ejemplos tarahumaras concretos utilizados por Buschmann;
+2. función gramatical exacta que asigna a `ame`;
+3. relación que propone entre `ame`, `kame`, `ameke` u otras extensiones;
+4. fuentes tarahumaras de las que toma sus datos;
+5. alcance real de su comparación sonorense.
+
+**Regla:** no atribuir a Buschmann un análisis morfológico detallado a partir del título o de la crítica de Pimentel.
+
+## D2. Controversia Buschmann–Pimentel
+
+**Estado:** documentada directamente en Pimentel 1874.
+
+Pimentel:
+
+- discute a Buschmann;
+- propone `kame` en lugar de `ame`;
+- interpreta `ame/me` como contracciones;
+- coloca `kame` en la columna Tarahumar;
+- enumera para el participio presente tarahumara `ke, kameke, kamek, kame, meke, mek, yamek, amek` y da `Tarayaméke` ‘el que cuenta’.
+
+### Genealogía
+
+Pimentel declara que la única gramática tarahumara consultada fue Tellechea 1826; complementó léxico con Steffel vía *Mithridates* y Buschmann.
+
+**Consecuencia:** `Pimentel_primary_Tarahumara_data_independence=false`; `Pimentel_interpretive_independence=true`.
+
+**H15:** controversia analítica `ame/kame` del siglo XIX directamente documentada.  
+**N13:** una etiqueta comparativa histórica no equivale a segmentación sincrónica de los tokens primarios reutilizados.
+
+## D3. Guadalaxara 1683 / Rodríguez López 2010
+
+**Estado:** edición localizada e indexada parcialmente. No se recuperó de forma estable el texto completo de pp. 162–164.
 
 ### Resuelto
 
-- Rodríguez coteja el manuscrito de Zapopan con el impreso de la British Library.
-- `tsocamec/otsocamec` (fol. 35r), ‘oscuro/negro’, es el único término rarámuri del impreso que no aparece en el manuscrito.
-- La transcripción del impreso declara fidelidad a términos, grafemas, signos, líneas y folios del ejemplar británico.
-- El `<c>` final de `tsocamec/otsocamec` debe, por ello, tratarse como grafía histórica del impreso según la edición, no como modernización de 2010.
-- La edición contiene §3.5 “El fonema oclusivo velar /k/ del tarahumar y la reduplicación expletiva” (p. 162), §3.6 “Las letras equívocas” (p. 163) y el apartado siguiente de aclaraciones ortográficas.
+- cotejo manuscrito Zapopan ↔ impreso British Library;
+- `tsocamec/otsocamec` (fol.35r) exclusivo del impreso;
+- fidelidad diplomática del `<c>` final según criterios editoriales;
+- existencia de secciones específicas sobre /k/, reduplicación expletiva y letras equívocas.
 
 ### No resuelto
 
-- valor fonético del `<c>` final del token;
+- valor fonético/morfológico de `<c>` final;
 - posible carácter expletivo;
-- identidad/correspondencia con Steffel `-ke`;
-- segmentación morfológica de `tsocamec/otsocamec`;
-- aplicación token-específica de las reglas discutidas por Rodríguez en pp. 162–164.
+- relación con Steffel `-ke`;
+- segmentación de `tsocamec/otsocamec`.
 
-### Próximas piezas útiles
+## D4. Segundo impreso reportado en NYPL
 
-1. texto completo de Rodríguez 2010 pp. 162–164;
-2. facsímil del fol. 35r del ejemplar de British Library;
-3. facsímil de un segundo impreso independiente.
+Una publicación de historia del libro reporta un ejemplar de Guadalaxara 1683 en New York Public Library. Falta registro inequívoco, identificador digital y cotejo de fol.35r.
 
-## D2. Segundo impreso reportado en New York Public Library
+## D5. Tellechea 1826
 
-**Estado:** una publicación de historia del libro reporta consulta de un ejemplar del *Compendio* de Guadalaxara 1683 en la New York Public Library.
+**Estado:** OCR agotado metodológicamente; facsímil todavía bloqueado en las rutas consultadas. Cinco redes fuertes OCR/contexto: `ati-`, `simi-`, `machi-`, `netetu-`, `rejoíruga-`; `ayorigu-` probable.
 
-**No recuperado todavía:** registro de catálogo inequívoco, identificador digital ni imagen del fol. 35r.
+No abrir más búsquedas OCR generales.
 
-**Valor potencial:** un segundo impreso permitiría comprobar independientemente `tsocamec/otsocamec` y, en particular, la consonante final, sin depender exclusivamente de la copia británica transcrita por Rodríguez.
+## D6. Grafemática colonial `<c>/<k>/<que>/<ke>`
 
-## D3. Tellechea 1826
+Parcialmente acotada, no resuelta. N12 permanece: fidelidad diplomática de `<c>` ≠ `/k/`, expletivo, `-ke` o identidad con Steffel.
 
-**Estado:** OCR agotado metodológicamente en `TELLECHEA_1826_AME_TOKEN_AUDIT_V4.md` y `TELLECHEA_1826_SHORT_AME_TARGETED_AUDIT_V5.md`. Cinco redes fuertes OCR/contexto: `ati-`, `simi-`, `machi-`, `netetu-`, `rejoíruga-`; `ayorigu-` probable.
+## D7. Segunda raíz histórica `X-li-ame(ke)`
 
-**Bloqueo:** facsímil/grafemática.
+**RESUELTA.** `tsanelíameke` y `tschutschelíameke` son dos raíces históricas A/source-explicit. No segmentar automáticamente otros `liameke`.
 
-**Regla:** no abrir más búsquedas OCR generales.
+## D8. Variación moderna `-ame ~ -me ~ -ami`
 
-## D4. Grafemática colonial `<c>/<k>/<que>/<ke>`
+Apoyada regionalmente; no cerrada como cambio histórico. No formular leyes universales `-ameke > -ami`, `kame > ame`, `ame > kame`, `e > i` o `l > r`.
 
-**Estado:** parcialmente acotada, no resuelta.
+## D9. C02 `čipérameke ↔ Chipérami`
 
-La fidelidad diplomática del `<c>` final de `tsocamec` está establecida, pero su valor fonológico/morfológico no. La resolución depende de pp. 162–164 de Rodríguez, facsímiles del impreso y prácticas ortográficas explícitas de las fuentes.
+B formal, B+ fuerte. Reabrir sólo ante base/paradigma histórico, parse exacto o comparación publicada directa.
 
-**N12:** fidelidad diplomática de un grafema ≠ identificación fonológica o morfológica. `1683 <c>` no equivale automáticamente a `/k/`, reduplicación expletiva, `-ke` ni al final de Steffel.
+## D10. C03 `Rosácameke ~ rosácame ↔ Rosácame/Rosácami`
 
-## D5. Segunda raíz histórica `X-li-ame(ke)`
+B formal, B+ excepcional. Reabrir sólo ante base/paradigma histórico o parse histórico exacto. No proyectar `ros-ka-me` retrospectivamente.
 
-**RESUELTA.** `tsanelíameke` y `tschutschelíameke` son dos raíces históricas A/source-explicit. La resolución no autoriza segmentación automática de cualquier `liameke` superficial; `ganelíameke`, `uilíameke` y `selíameke` permanecen controles negativos.
+## D11. C04 `Nessé/Nesséameke ↔ nes-/Neseme ↔ Nisé/Niséami`
 
-## D6. Variación moderna `-ame ~ -me ~ -ami`
+B formal, B+ excepcional. Reabrir sólo ante parse/paradigma exacto o identificación histórica directa.
 
-**Estado:** apoyada regionalmente; no cerrada como cambio histórico.
+## D12. C05 `selí → selíameke ↔ sir-/siríame`
 
-**Regla:** no formular ley universal `-ameke > -ami`, `e > i` ni `l > r`.
+B formal, B+ fuerte; etimología dual no resuelta. Reabrir sólo ante evidencia capaz de adjudicar gobierno↔lanza o comparación etimológica directa.
 
-## D7. C02 `čipérameke ↔ Chipérami`
+## D13. C06 negro
 
-**Estado:** B formal, B+ fuerte. Cerrado para acumulación moderna.
+B formal, B+ excepcional Steffel→moderno. Reabrir sólo con Rodríguez pp.162–164, facsímil BL/NYPL o análisis histórico token-específico.
 
-Reabrir sólo ante base/paradigma histórico `čiper-`, parse histórico token-específico o comparación publicada directa.
+## D14. C08 `tschutschelíameke`
 
-## D8. C03 `Rosácameke ~ rosácame ↔ Rosácame / Rosácami`
+A; cerrado salvo contradicción nueva.
 
-**Estado:** B formal, B+ excepcional / cercano a A. Cerrado para acumulación moderna.
+## D15. Genealogía y controles adversariales
 
-Para A falta base/paradigma histórico, parse histórico token-específico o comparación histórica estructural. No proyectar `ros-ka-me` moderno hacia Steffel/Tellechea.
+`document_replication != source_independence`. Una interpretación histórica puede ser independiente aun cuando reutilice los mismos datos primarios; esa independencia debe etiquetarse como **interpretativa**, no documental.
 
-## D9. C04 `Nessé/Nesséameke ↔ nes-/Neseme ↔ Nisé/Niséami`
+## D16. Integración al corpus/producto público
 
-**Estado:** B formal, B+ excepcional / cercano a A. Cerrado para búsquedas generales.
-
-Reabrir sólo ante parse/paradigma token-específico de `nesame/neseme` o identificación histórica directa `Nessé ~ nes-/Nisé`.
-
-## D10. C05 `selí → selíameke ↔ sir-/siríame`
-
-**Estado:** B formal, B+ fuerte; **etimología dual no resuelta**. Cerrado para acumulación general de `Siríame`.
-
-Se preservan dos líneas: derivación lingüística histórica `selí ‘gobernar’ → selíameke ‘gobernante’`, y tradición etnohistórica `selígame = portador de lanza`.
-
-Reabrir sólo ante evidencia capaz de adjudicar la relación gobierno↔lanza, parse moderno exacto con control histórico o comparación etimológica directa.
-
-`selíameke` sigue siendo control negativo para pasivo `-li`, pues `li` pertenece a la raíz `selí`.
-
-## D11. C06 negro `tsocamec/otsocamec → čókameke ~ čókame → chó-ka-me`
-
-**Estado:** B formal; B+ excepcional / cercano a A en Steffel→moderno.
-
-### Resuelto
-
-- antecedente léxico 1683;
-- `tsocamec/otsocamec` exclusivo del impreso frente al manuscrito zapopano;
-- fidelidad editorial del `<c>` final como grafema histórico del impreso;
-- par Steffel `čókameke ~ čókame`;
-- comparación publicada Steffel–Hilton–Brambila;
-- carácter derivado de la clase cromática histórica;
-- raíz moderna `čó-` y análisis moderno `-ka + -ame`.
-
-### Cuello para A
-
-1. interpretación fonológica/morfológica controlada del `<c>` final mediante Rodríguez pp. 162–164 o facsímil;
-2. análisis histórico token-específico de `čókameke/čókame`; o
-3. cotejo independiente del fol. 35r en otro ejemplar impreso.
-
-**No buscar más apariciones modernas genéricas de `chókame/chócami`.**
-
-## D12. C08 `tschutschelíameke`
-
-**Estado:** A; cerrado salvo contradicción nueva. El análisis compuesto fuente-explícito satisface A aunque no exista una sola glosa interlineal completa.
-
-## D13. Genealogía y controles adversariales
-
-**Objetivo:** distinguir replicación documental de independencia y conservar hipótesis competidoras relevantes.
-
-**Reglas:** `document_replication != source_independence`; una hipótesis adversarial bien documentada no se descarta sólo porque el tier permanezca igual.
-
-## D14. Integración al corpus/producto público
-
-C02/C03/C04/C05/C06/C09 permanecen en expediente como comparaciones B no cerradas. C01/C07/C08 son positivos A. Ningún candidato debe convertirse automáticamente en cognación o segmentación estable por el solo cambio de tier.
-
-## Cambio de fase
-
-**No queda ningún candidato positivo C01–C09 en nivel C.** La ruta vigente es `resolve_tier_B_structural_bottlenecks`.
+C02/C03/C04/C05/C06/C09 permanecen en expediente B; C01/C07/C08 son A. H15 y los análisis del siglo XIX son capas historiográficas, no cognaciones ni segmentaciones automáticas del dataset estable.
 
 ## Priorización vigente
 
-1. **Rodríguez 2010 pp. 162–164 / British Library fol. 35r** → C06 y grafemática.
-2. **Ejemplar NYPL reportado** → cotejo independiente de C06.
-3. **Facsímil Tellechea 1826** → C09.
-4. **C02/C03** → sólo base/paradigma histórico o parse token-específico.
-5. **C04** → sólo parse/comparación histórica directa.
-6. **C05** → sólo evidencia capaz de adjudicar gobierno↔lanza o comparación etimológica directa.
+1. **Buschmann 1857 texto primario** → adjudicar `ame` en primera persona.
+2. **Rodríguez pp.162–164 / BL fol.35r / NYPL** → C06/grafemática.
+3. **Facsímil Tellechea** → C09.
+4. **C02/C03** → estructura histórica exacta.
+5. **C04/C05** → comparación directa/etimológica.
 
-No abrir búsquedas generales de sufijos, `e~i`, `l~r`, `neseme`, `chipérami`, `Rosácame/Rosácami`, `Siríame`, `chókame/chócami`, `tschutschelíameke` ni nuevas cadenas OCR de Tellechea; sólo pruebas capaces de resolver un cuello estructural, cambiar un grado, introducir un control adversarial relevante o falsar una hipótesis.
+No abrir búsquedas generales de semejanzas; sólo pruebas capaces de resolver estructura, genealogía o una hipótesis competidora.
