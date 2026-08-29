@@ -1,0 +1,3 @@
+language_id,local_name,iso639p3,glottocode,glottolog_name,glottolog_level,mapping_status,mapping_scope,glottolog_version,mapping_note
+tar,"rarámuri / tarahumara",tar,cent2131,Central Tarahumara,language,verified_existing_mapping,"project LanguageTable only",5.3,"Verifica el identificador ya usado por el CLDF; no afirma que cada fuente o entrada represente un dialecto homogéneo."
+spa,español,spa,stan1288,Spanish,language,verified_existing_mapping,"metalanguage LanguageTable only",5.3,"Verifica el identificador de la metalengua española ya usado por el CLDF."
