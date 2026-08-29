@@ -68,8 +68,9 @@ Challenge-specific implementation is intentionally small:
 - `tests/webmcp-registration.test.mjs` — static contract and safety checks.
 - `app/layout.tsx` — one progressive-enhancement mount point.
 - `package.json` — includes the WebMCP test in the existing test suite.
-- `WEBMCP_CHALLENGE.md` — auditable before/after, testing, and demo notes.
-- `README.en.md` — short public explanation for judges and developers.
+- `LICENSE` — standard MIT-license filename for automatic repository/license detection; data licensing remains separate.
+- `WEBMCP_CHALLENGE.md` — auditable before/after, testing, and verification notes.
+- `DEVPOST_SUBMISSION.md` — English submission copy and a sub-three-minute live-demo script.
 
 No corpus or derived scientific dataset is changed by these files.
 
@@ -87,9 +88,11 @@ The repository's existing CI remains authoritative. The WebMCP-specific test che
 
 The full repository workflow continues to run linting, build, existing scientific/API tests, reproducibility checks, CLDF validation, and TEI Lex-0 validation.
 
+The first complete pull-request validation of the WebMCP implementation passed on August 29, 2026: lint, build, tests, CLDF, TEI Lex-0, deterministic exports, corpus audit, PDF determinism, and reproducibility all completed successfully.
+
 ## Browser verification
 
-Judges can test the live site using the ChatGPT in-app browser with WebMCP support or Google Chrome 149+ with WebMCP testing enabled, as specified by the Challenge rules.
+Judges can test the deployed site in a browser/agent implementation that exposes the WebMCP Imperative API used by the Challenge.
 
 Expected tools:
 
@@ -110,7 +113,7 @@ Suggested prompt:
 
 > Using Rarámuri Digital, investigate vocabulary in a coherent semantic field. Find relevant Rarámuri entries, explain their Spanish meanings, identify documented lexical relationships, and verify several forms against bilingual corpus examples. Preserve provenance and flag any evidence that requires review.
 
-The final video must be **less than three minutes**, include audio, show the live application working, and make the WebMCP-mediated multi-step interaction clear.
+The final video must be **less than three minutes**, include audio, show the live application working, and make the WebMCP-mediated multi-step interaction clear. `DEVPOST_SUBMISSION.md` contains a timed 2:15–2:40 script and the prepared English submission copy.
 
 ## Submission checklist
 
@@ -119,11 +122,12 @@ The final video must be **less than three minutes**, include audio, show the liv
 - [x] Four read-only WebMCP tools implemented against existing APIs.
 - [x] Progressive enhancement and cancellation lifecycle implemented.
 - [x] WebMCP-specific tests added.
-- [ ] GitHub Actions passes for the completed branch.
-- [ ] Compatible-browser live verification completed.
+- [x] GitHub Actions passed for the first completed implementation.
+- [x] Devpost English copy and video script prepared.
+- [ ] Compatible-browser live verification completed after deployment.
 - [ ] Challenge branch merged/deployed to the public site.
 - [ ] Public YouTube demo recorded with audio and kept under three minutes.
-- [ ] Devpost description, repository URL, live URL, and video URL entered.
+- [ ] Devpost live URL, repository URL, and video URL entered.
 - [ ] Submission confirmation archived before the September 3, 2026 deadline.
 
 ## Official references
