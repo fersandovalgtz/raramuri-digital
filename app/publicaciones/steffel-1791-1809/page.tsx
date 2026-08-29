@@ -35,8 +35,8 @@ export const metadata: Metadata = {
     "OCR",
     "artificial intelligence",
   ],
-  authors: [{ name: "Fernando Sandoval Gutiérrez", url: "https://orcid.org/0000-0002-3168-6725" }],
-  creator: "Fernando Sandoval Gutiérrez",
+  authors: [{ name: "Fernando Sandoval Gutierrez", url: "https://orcid.org/0000-0002-3168-6725" }],
+  creator: "Fernando Sandoval Gutierrez",
   publisher: "Zenodo",
   alternates: { canonical },
   robots: { index: true, follow: true },
@@ -46,19 +46,19 @@ export const metadata: Metadata = {
     title,
     description,
     publishedTime: "2026-08-29",
-    authors: ["Fernando Sandoval Gutiérrez"],
+    authors: ["Fernando Sandoval Gutierrez"],
   },
   twitter: { card: "summary_large_image", title, description },
   other: {
     citation_title: title,
-    citation_author: "Fernando Sandoval Gutiérrez",
+    citation_author: "Fernando Sandoval Gutierrez",
     citation_publication_date: "2026/08/29",
     citation_doi: doi,
     citation_pdf_url: pdfUrl,
     citation_language: "es",
     citation_technical_report_institution: "Universidad Autónoma de Ciudad Juárez; Universidad CEEES / CEEES Cuauhtémoc",
     "DC.title": title,
-    "DC.creator": "Fernando Sandoval Gutiérrez",
+    "DC.creator": "Fernando Sandoval Gutierrez",
     "DC.date": "2026-08-29",
     "DC.identifier": doiUrl,
     "DC.type": "Technical report",
@@ -84,7 +84,7 @@ const jsonLd = {
   license: "https://creativecommons.org/licenses/by/4.0/",
   author: {
     "@type": "Person",
-    name: "Fernando Sandoval Gutiérrez",
+    name: "Fernando Sandoval Gutierrez",
     identifier: "https://orcid.org/0000-0002-3168-6725",
     sameAs: ["https://orcid.org/0000-0002-3168-6725", "https://github.com/fersandovalgtz"],
     affiliation: [
@@ -158,7 +158,7 @@ export default function SteffelReportLanding() {
 
         <section className="content-section">
           <h2>Autoría</h2>
-          <p><strong>Fernando Sandoval Gutiérrez</strong> · ORCID <a className="text-link" href="https://orcid.org/0000-0002-3168-6725" target="_blank" rel="noreferrer">0000-0002-3168-6725</a>.</p>
+          <p><strong>Fernando Sandoval Gutierrez</strong> · ORCID <a className="text-link" href="https://orcid.org/0000-0002-3168-6725" target="_blank" rel="noreferrer">0000-0002-3168-6725</a>.</p>
           <p>Universidad Autónoma de Ciudad Juárez · Universidad CEEES / CEEES Cuauhtémoc.</p>
         </section>
 
@@ -212,7 +212,7 @@ export default function SteffelReportLanding() {
         <section className="content-section">
           <h2>Citación recomendada</h2>
           <p>
-            Sandoval Gutiérrez, Fernando. 2026. <em>Rarámuri Histórico Digital: edición histórico-digital y corpus computacional del Tarahumarisches Wörterbuch de Matthäus Steffel (1791/1809)</em>. Informe técnico-académico de constitución, procesamiento, trazabilidad y reproducibilidad del Corpus Steffel 1791/1809. Zenodo. <a className="text-link" href={doiUrl}>{doiUrl}</a>.
+            Sandoval Gutierrez, Fernando. 2026. <em>Rarámuri Histórico Digital: edición histórico-digital y corpus computacional del Tarahumarisches Wörterbuch de Matthäus Steffel (1791/1809)</em>. Informe técnico-académico de constitución, procesamiento, trazabilidad y reproducibilidad del Corpus Steffel 1791/1809. Zenodo. <a className="text-link" href={doiUrl}>{doiUrl}</a>.
           </p>
         </section>
 
