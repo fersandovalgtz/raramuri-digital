@@ -16,6 +16,7 @@ export function SiteHeader() {
           <Link href="/descargas">Datos/API</Link>
           <Link href="/estadisticas">Estadísticas</Link>
           <Link href="/documentacion">Documentación</Link>
+          <Link href="/publicaciones">Publicaciones</Link>
           <Link href="/#fuentes">Fuentes</Link>
           <span className="language-links" aria-label="Idiomas">
             <Link href="/">ES</Link>
