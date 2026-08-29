@@ -1,0 +1,25 @@
+sense_id,local_description,concepticon_id,concepticon_gloss,mapping_status,candidate_ids,candidate_glosses,evidence_level,mapping_note,concepticon_version
+RD-000001-S01,Buscar,1468,LOOK FOR,proposed_1to1,,,inferencia_del_proyecto,"Correspondencia semántica directa de búsqueda.",v3.4.0
+RD-000002-S01,Hoy,1283,TODAY,proposed_1to1,,,inferencia_del_proyecto,"Correspondencia temporal directa.",v3.4.0
+RD-000003-S01,Sí,1268,YES,proposed_1to1,,,inferencia_del_proyecto,"Partícula de afirmación.",v3.4.0
+RD-000005-S01,"Ellos, ellas",817,THEY,proposed_1to1,,,inferencia_del_proyecto,"Pronombre de tercera persona plural.",v3.4.0
+RD-000006-S01,"Cara, nariz",,,composite_ambiguous,"1560|1221","FACE|NOSE",inferencia_del_proyecto,"La glosa local reúne dos conceptos; no se fuerza un ID único.",v3.4.0
+RD-000008-S01,Huarache,,,near_not_exact,2047,"STRAW SANDAL",inferencia_del_proyecto,"Concepto cercano pero más específico; no se equipara automáticamente huarache con straw sandal.",v3.4.0
+RD-000013-S01,Salado,1091,SALTY,proposed_1to1,,,inferencia_del_proyecto,"Propiedad gustativa directa.",v3.4.0
+RD-000013-S02,Dulce,,,unresolved_no_exact,,,inferencia_del_proyecto,"No se fija correspondencia genérica exacta en el piloto.",v3.4.0
+RD-000016-S01,Abuela paterna,3015,PATERNAL GRANDMOTHER,proposed_1to1,,,inferencia_del_proyecto,"Relación de parentesco específica coincidente.",v3.4.0
+RD-000018-S01,Correa,2973,STRAP,proposed_1to1,,,inferencia_del_proyecto,"Correspondencia nominal directa.",v3.4.0
+RD-000020-S01,Vivo,1422,BE ALIVE,proposed_1to1,,,inferencia_del_proyecto,"Correspondencia conceptual de estar vivo; se conserva la categoría local.",v3.4.0
+RD-000024-S01,Rostro,1560,FACE,proposed_1to1,,,inferencia_del_proyecto,"Correspondencia anatómica directa.",v3.4.0
+RD-000030-S01,"Reír, sonreír",,,composite_ambiguous,"1355|1451","LAUGH|SMILE",inferencia_del_proyecto,"La glosa local reúne dos acciones diferenciadas en Concepticon.",v3.4.0
+RD-000041-S01,Hígado,1224,LIVER,proposed_1to1,,,inferencia_del_proyecto,"Correspondencia anatómica directa.",v3.4.0
+RD-000043-S01,Rezar,24,PRAY,proposed_1to1,,,inferencia_del_proyecto,"Correspondencia de acción religiosa directa.",v3.4.0
+RD-000048-S01,Amigo,1325,FRIEND,proposed_1to1,,,inferencia_del_proyecto,"Correspondencia social directa.",v3.4.0
+RD-000051-S01,Ala,1257,WING,proposed_1to1,,,inferencia_del_proyecto,"Correspondencia anatómica directa.",v3.4.0
+RD-000057-S01,"Medir, pesar",,,composite_ambiguous,1098,WEIGH,inferencia_del_proyecto,"WEIGH cubre pesar pero no autoriza a reducir medir a pesar.",v3.4.0
+RD-000064-S01,Decir,1458,SAY,proposed_1to1,,,inferencia_del_proyecto,"Correspondencia de acto de habla directa.",v3.4.0
+RD-000087-S01,Nadar,1439,SWIM,proposed_1to1,,,inferencia_del_proyecto,"Correspondencia de movimiento directa.",v3.4.0
+RD-000113-S01,"Arco (para flechas)",994,BOW,proposed_1to1,,,inferencia_del_proyecto,"La especificación local coincide con el arma para disparar flechas.",v3.4.0
+RD-000118-S01,Estornudar,1621,SNEEZE,proposed_1to1,,,inferencia_del_proyecto,"Correspondencia fisiológica directa.",v3.4.0
+RD-000125-S01,Mañana,1329,TOMORROW,proposed_1to1,,,inferencia_del_proyecto,"La acepción corresponde al día siguiente; no al período matutino.",v3.4.0
+RD-000134-S01,Río,666,RIVER,proposed_1to1,,,inferencia_del_proyecto,"Correspondencia geográfica directa.",v3.4.0
