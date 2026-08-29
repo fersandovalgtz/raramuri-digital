@@ -27,7 +27,7 @@ export default function PublicationsPage() {
               <span className="module-id">RHD-REP-01 · 2026</span>
               <h3>Rarámuri Histórico Digital: edición histórico-digital y corpus computacional del <em>Tarahumarisches Wörterbuch</em> de Matthäus Steffel (1791/1809)</h3>
               <p>Informe técnico-académico de constitución, procesamiento, trazabilidad y reproducibilidad del Corpus Steffel 1791/1809.</p>
-              <p><strong>Fernando Sandoval Gutiérrez</strong> · 24 páginas · CC BY 4.0.</p>
+              <p><strong>Fernando Sandoval Gutierrez</strong> · 24 páginas · CC BY 4.0.</p>
               <p><a className="text-link" href="https://doi.org/10.5281/zenodo.22165824" target="_blank" rel="noreferrer">DOI 10.5281/zenodo.22165824 →</a></p>
               <p><Link className="text-link" href="/publicaciones/steffel-1791-1809">Landing académica y metadatos →</Link></p>
             </article>
