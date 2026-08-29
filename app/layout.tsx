@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import WebMCPTools from "./components/WebMCPTools";
 import "./globals.css";
 import "./scientific.css";
 
@@ -154,6 +155,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
   return (
     <html lang="es">
       <body>
+        <WebMCPTools />
         {children}
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(datasetJsonLd) }} />
       </body>
