@@ -1,0 +1,20 @@
+{
+  "challenge": "OpenAI WebMCP Challenge 2026",
+  "project": "Rarámuri Digital",
+  "implementationMerge": "8a55663e98f6735bc6ab96b4032dc145df0aea54",
+  "repository": "https://github.com/fersandovalgtz/raramuri-digital",
+  "pullRequest": "https://github.com/fersandovalgtz/raramuri-digital/pull/34",
+  "webmcp": {
+    "api": "document.modelContext.registerTool",
+    "readOnly": true,
+    "tools": [
+      "search_raramuri_lexicon",
+      "search_spanish_terminology",
+      "get_lexical_relations",
+      "search_parallel_corpus"
+    ]
+  },
+  "scientificDataModifiedByChallenge": false,
+  "softwareLicense": "MIT",
+  "dataLicenseDocument": "DATA_LICENSE.md"
+}
