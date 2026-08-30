@@ -1,0 +1,218 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Atlas documental mínimo — Rarámuri Digital</title>
+  <meta name="description" content="Prototipo cartográfico de geografía documental de Rarámuri Digital con MapLibre GL JS." />
+  <link rel="stylesheet" href="https://unpkg.com/maplibre-gl@6.6.0/dist/maplibre-gl.css" />
+  <style>
+    :root {
+      color-scheme: light;
+      --ink: #172033;
+      --muted: #5f6775;
+      --paper: #f6f1e8;
+      --panel: rgba(255, 255, 255, 0.94);
+      --accent: #7a263a;
+      --border: rgba(23, 32, 51, 0.14);
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; width: 100%; height: 100%; font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--ink); background: var(--paper); }
+    body { display: grid; grid-template-columns: minmax(260px, 340px) 1fr; overflow: hidden; }
+    aside { z-index: 2; padding: 20px; overflow-y: auto; background: var(--panel); border-right: 1px solid var(--border); backdrop-filter: blur(10px); }
+    .eyebrow { margin: 0 0 6px; font-size: 0.76rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); }
+    h1 { margin: 0; font-family: Georgia, "Times New Roman", serif; font-size: clamp(1.55rem, 3vw, 2.25rem); line-height: 1.02; }
+    .lede { color: var(--muted); line-height: 1.5; font-size: 0.93rem; }
+    .warning { padding: 11px 12px; border: 1px solid rgba(122, 38, 58, 0.24); border-radius: 10px; background: rgba(122, 38, 58, 0.06); font-size: 0.84rem; line-height: 1.45; }
+    .node-list { display: grid; gap: 8px; margin-top: 14px; }
+    button.node { width: 100%; padding: 10px 11px; text-align: left; border: 1px solid var(--border); border-radius: 10px; background: #fff; color: var(--ink); cursor: pointer; }
+    button.node:hover, button.node:focus-visible { border-color: rgba(122, 38, 58, 0.5); outline: none; }
+    button.node strong, button.node span { display: block; }
+    button.node span { margin-top: 3px; font-size: 0.78rem; color: var(--muted); }
+    .method { margin-top: 16px; padding-top: 14px; border-top: 1px solid var(--border); color: var(--muted); font-size: 0.78rem; line-height: 1.45; }
+    #map { width: 100%; height: 100%; min-height: 520px; }
+    .maplibregl-popup-content { max-width: 310px; padding: 14px 16px; border-radius: 12px; box-shadow: 0 12px 36px rgba(23, 32, 51, 0.18); }
+    .popup-kicker { margin: 0 0 4px; font-size: 0.72rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--accent); font-weight: 800; }
+    .popup-title { margin: 0 0 8px; font-size: 1.03rem; }
+    .popup-copy { margin: 0 0 9px; color: #424a58; line-height: 1.4; font-size: 0.86rem; }
+    .popup-meta { margin: 0 0 9px; color: #687080; font-size: 0.75rem; line-height: 1.35; }
+    .popup-link { color: var(--accent); font-weight: 700; text-decoration: none; }
+    .popup-link:hover { text-decoration: underline; }
+    @media (max-width: 760px) {
+      body { grid-template-columns: 1fr; grid-template-rows: auto minmax(420px, 1fr); overflow: auto; }
+      aside { border-right: 0; border-bottom: 1px solid var(--border); max-height: none; }
+      #map { min-height: 480px; }
+    }
+  </style>
+</head>
+<body>
+  <aside>
+    <p class="eyebrow">Prototipo · MapLibre GL JS</p>
+    <h1>Atlas documental mínimo</h1>
+    <p class="lede">Cinco nodos que hacen visible la procedencia documental e institucional de Rarámuri Digital. El objetivo es probar navegación, trazabilidad y divulgación sin convertir el mapa en una afirmación sobre fronteras dialectales.</p>
+    <div class="warning"><strong>Lectura correcta:</strong> los puntos representan lugares vinculados con fuentes, edición o desarrollo del proyecto. No representan límites de variedades rarámuri, densidad de hablantes ni autoridad territorial.</div>
+    <div id="node-list" class="node-list" aria-label="Nodos documentales"></div>
+    <p class="method">Coordenadas de referencia tomadas como centros de localidad o ciudad. Son aproximaciones cartográficas para navegación; el significado científico está en el vínculo documental indicado en cada ficha.</p>
+  </aside>
+  <main id="map" aria-label="Mapa interactivo de nodos documentales de Rarámuri Digital"></main>
+
+  <script type="module">
+    import * as maplibregl from 'https://unpkg.com/maplibre-gl@6.6.0/dist/maplibre-gl.mjs';
+
+    const features = [
+      {
+        type: 'Feature',
+        geometry: { type: 'Point', coordinates: [-107.53741, 27.30022] },
+        properties: {
+          id: 'samachique',
+          name: 'Samachique, Chihuahua',
+          kind: 'Fuente lingüística documentada',
+          year: '1993',
+          summary: 'Localidad explícitamente asociada con el Diccionario tarahumara de Samachique y con tarahumara central en la documentación del proyecto.',
+          evidence: 'docs/HILTON_SOURCE.md · sección 5',
+          href: 'https://github.com/fersandovalgtz/raramuri-digital/blob/main/docs/HILTON_SOURCE.md#5-samachique-y-el-alcance-ling%C3%BC%C3%ADstico-de-la-fuente',
+          precision: 'Centro aproximado de la localidad; no delimita una variedad lingüística.'
+        }
+      },
+      {
+        type: 'Feature',
+        geometry: { type: 'Point', coordinates: [-99.12766, 19.42847] },
+        properties: {
+          id: 'mexico-1959',
+          name: 'Ciudad de México',
+          kind: 'Genealogía editorial',
+          year: '1959',
+          summary: 'Nodo editorial del antecedente Tarahumara y español (1959), registrado como publicado en México, D. F., y preservado en el catálogo de El Colegio de México.',
+          evidence: 'docs/HILTON_SOURCE.md · sección 3',
+          href: 'https://github.com/fersandovalgtz/raramuri-digital/blob/main/docs/HILTON_SOURCE.md#3-antecedente-tarahumara-y-espa%C3%B1ol-1959',
+          precision: 'Centro de ciudad; representa un nodo editorial/documental, no trabajo de campo.'
+        }
+      },
+      {
+        type: 'Feature',
+        geometry: { type: 'Point', coordinates: [-110.92648, 32.22174] },
+        properties: {
+          id: 'tucson-1993',
+          name: 'Tucson, Arizona',
+          kind: 'Lugar de publicación',
+          year: '1993',
+          summary: 'Lugar de publicación atribuido por WALS y Glottolog a la edición de 1993 del Diccionario tarahumara de Samachique.',
+          evidence: 'docs/HILTON_SOURCE.md · sección 4',
+          href: 'https://github.com/fersandovalgtz/raramuri-digital/blob/main/docs/HILTON_SOURCE.md#4-edici%C3%B3n-de-referencia-diccionario-tarahumara-de-samachique-1993',
+          precision: 'Centro de ciudad; nodo bibliográfico de publicación.'
+        }
+      },
+      {
+        type: 'Feature',
+        geometry: { type: 'Point', coordinates: [-106.86667, 28.40630] },
+        properties: {
+          id: 'cuauhtemoc-2026',
+          name: 'Cuauhtémoc, Chihuahua',
+          kind: 'Coordinación del proyecto',
+          year: '2026',
+          summary: 'Nodo institucional contemporáneo del proyecto: Universidad CEEES y la División Multidisciplinaria en Cuauhtémoc de la UACJ figuran en la documentación pública del repositorio.',
+          evidence: 'README.md · instituciones y responsable',
+          href: 'https://github.com/fersandovalgtz/raramuri-digital/blob/main/README.md',
+          precision: 'Centro de ciudad; representa coordinación institucional, no procedencia de entradas lexicográficas.'
+        }
+      },
+      {
+        type: 'Feature',
+        geometry: { type: 'Point', coordinates: [-106.46084, 31.72024] },
+        properties: {
+          id: 'juarez-uacj',
+          name: 'Ciudad Juárez, Chihuahua',
+          kind: 'Nodo institucional UACJ',
+          year: '2026',
+          summary: 'Nodo institucional de la Universidad Autónoma de Ciudad Juárez, una de las afiliaciones académicas declaradas por Rarámuri Digital.',
+          evidence: 'README.md · instituciones',
+          href: 'https://github.com/fersandovalgtz/raramuri-digital/blob/main/README.md',
+          precision: 'Centro de ciudad; nodo institucional de referencia.'
+        }
+      }
+    ];
+
+    const geojson = { type: 'FeatureCollection', features };
+
+    const map = new maplibregl.Map({
+      container: 'map',
+      style: 'https://tiles.openfreemap.org/styles/positron',
+      center: [-106.7, 27.8],
+      zoom: 4.4,
+      attributionControl: true,
+      maplibreLogo: true
+    });
+
+    map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
+
+    const popupHtml = (p) => `
+      <p class="popup-kicker">${p.kind} · ${p.year}</p>
+      <h2 class="popup-title">${p.name}</h2>
+      <p class="popup-copy">${p.summary}</p>
+      <p class="popup-meta"><strong>Evidencia:</strong> ${p.evidence}<br><strong>Nota espacial:</strong> ${p.precision}</p>
+      <a class="popup-link" href="${p.href}" target="_blank" rel="noreferrer">Abrir evidencia documental →</a>
+    `;
+
+    function openFeature(feature) {
+      const coords = feature.geometry.coordinates;
+      map.flyTo({ center: coords, zoom: feature.properties.id === 'samachique' ? 9 : 6.2, essential: true });
+      new maplibregl.Popup({ offset: 14, maxWidth: '330px' })
+        .setLngLat(coords)
+        .setHTML(popupHtml(feature.properties))
+        .addTo(map);
+    }
+
+    const list = document.getElementById('node-list');
+    for (const feature of features) {
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'node';
+      button.innerHTML = `<strong>${feature.properties.name}</strong><span>${feature.properties.kind} · ${feature.properties.year}</span>`;
+      button.addEventListener('click', () => openFeature(feature));
+      list.appendChild(button);
+    }
+
+    map.on('load', () => {
+      map.addSource('rd-nodes', { type: 'geojson', data: geojson });
+      map.addLayer({
+        id: 'rd-node-halo',
+        type: 'circle',
+        source: 'rd-nodes',
+        paint: {
+          'circle-radius': 11,
+          'circle-color': '#ffffff',
+          'circle-stroke-color': '#7a263a',
+          'circle-stroke-width': 2,
+          'circle-opacity': 0.9
+        }
+      });
+      map.addLayer({
+        id: 'rd-node-core',
+        type: 'circle',
+        source: 'rd-nodes',
+        paint: {
+          'circle-radius': 5,
+          'circle-color': '#7a263a'
+        }
+      });
+
+      const bounds = new maplibregl.LngLatBounds();
+      features.forEach((feature) => bounds.extend(feature.geometry.coordinates));
+      map.fitBounds(bounds, { padding: 55, maxZoom: 5.2, duration: 0 });
+
+      map.on('click', 'rd-node-core', (event) => {
+        const feature = event.features?.[0];
+        if (feature) openFeature(feature);
+      });
+      map.on('click', 'rd-node-halo', (event) => {
+        const feature = event.features?.[0];
+        if (feature) openFeature(feature);
+      });
+      for (const layer of ['rd-node-core', 'rd-node-halo']) {
+        map.on('mouseenter', layer, () => { map.getCanvas().style.cursor = 'pointer'; });
+        map.on('mouseleave', layer, () => { map.getCanvas().style.cursor = ''; });
+      }
+    });
+  </script>
+</body>
+</html>
