@@ -15,6 +15,11 @@ let tei = await readFile(teiPath, "utf8");
 // que es la forma normalizada esperada por el pipeline histórico del proyecto.
 tei = tei.replace("<extent>viii + 146 páginas</extent>", "<extent>156 páginas</extent>");
 
+// TEI Lex-0 no admite <idno> en la posición emitida por la serialización fuente.
+// SIL 10966 permanece preservado en project-metadata.json, SOURCES.md,
+// la atribución canónica y los demás formatos de exportación.
+tei = tei.replace('<idno type="SIL">10966</idno>', "");
+
 const historicalSchema = /<\?xml-model href="https:\/\/raw\.githubusercontent\.com\/DARIAH-ERIC\/lexicalresources\/master\/Schemas\/TEILex0\/out\/TEILex0\.rng" type="application\/xml" schematypens="http:\/\/relaxng\.org\/ns\/structure\/1\.0"\?>/g;
 const entryExtent = /<extent>(\d+) entradas lexicográficas<\/extent>/g;
 const pageExtent = /<extent>(\d+) páginas<\/extent>/g;
