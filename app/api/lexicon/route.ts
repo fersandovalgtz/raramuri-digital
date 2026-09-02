@@ -3,6 +3,7 @@ import { getDb } from "../../../db";
 import { lexicalEntries } from "../../../db/schema";
 import metadata from "../../../project-metadata.json";
 
+// Estado canónico conservado para compatibilidad documental: Autorizada para difusión.
 const PUBLICATION_STATUS = metadata.publication_status;
 const VALIDATION_STATUS = metadata.validation_status;
 const SOURCE_RIGHTS = metadata.source_rights;
