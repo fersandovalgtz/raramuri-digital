@@ -262,6 +262,7 @@ def entry_story(entry: Entry, styles) -> list:
 
 
 def cover_story(metadata: dict, entry_count: int, scope_label: str, styles) -> list:
+    rights = metadata["source_rights"]
     return [
         Spacer(1, 28 * mm),
         Paragraph("Rarámuri Digital", styles["cover_title"]),
@@ -282,8 +283,13 @@ def cover_story(metadata: dict, entry_count: int, scope_label: str, styles) -> l
             styles["notice"],
         ),
         Paragraph(
-            f"Datos y documentación: {LICENSE_ID}. Código fuente: MIT. "
-            "Los facsímiles, textos fuente, logotipos y materiales de terceros conservan sus propios derechos. "
+            f"<b>Fuente y atribución:</b> {safe(str(rights['canonical_attribution']))}<br/><br/>"
+            f"<b>Derechos de fuente:</b> {safe(str(rights['rights_notice']))}",
+            styles["notice"],
+        ),
+        Paragraph(
+            f"Datos y documentación del proyecto: {LICENSE_ID}. Código fuente: MIT. "
+            "La licencia del proyecto no amplía el permiso específico del Instituto Lingüístico de Verano sobre Hilton 1993. "
             "La disponibilidad de los datos no sustituye la autoridad lingüística, cultural o política de las comunidades y personas hablantes rarámuri.",
             styles["small"],
         ),
@@ -292,7 +298,8 @@ def cover_story(metadata: dict, entry_count: int, scope_label: str, styles) -> l
 
 
 def make_page_callback(metadata: dict, font: str):
-    footer_text = f"Rarámuri Digital · datos {metadata['dataset_version']} · DOI {metadata['doi']} · {metadata['validation_status']}"
+    rights_profile = metadata["source_rights"]["rights_profile"]
+    footer_text = f"Rarámuri Digital · datos {metadata['dataset_version']} · {rights_profile} · uso comercial no autorizado"
 
     def draw_page(canvas_obj, doc):
         canvas_obj.saveState()
@@ -315,8 +322,8 @@ def write_pdf(path: Path, entries: Sequence[Entry], metadata: dict, scope_label:
         str(path), pagesize=LETTER,
         leftMargin=17 * mm, rightMargin=17 * mm, topMargin=17 * mm, bottomMargin=20 * mm,
         title=f"Rarámuri Digital - {scope_label}", author=RESPONSIBLE,
-        subject="Exportación lexicográfica reproducible rarámuri-español",
-        keywords="Rarámuri, Tarahumara, lexicografía, humanidades digitales",
+        subject="Exportación lexicográfica reproducible rarámuri-español; uso académico y no lucrativo",
+        keywords="Rarámuri, Tarahumara, lexicografía, humanidades digitales, Hilton, Samachique, SIL 10966",
     )
     frame = Frame(doc.leftMargin, doc.bottomMargin, doc.width, doc.height, id="normal")
     doc.addPageTemplates([PageTemplate(id="lexicon", frames=[frame], onPage=make_page_callback(metadata, font))])
@@ -384,6 +391,7 @@ def build_exports(entries: list[Entry], metadata: dict, output: Path, alphabetic
         item["sha256"] = sha256(path)
         item["media_type"] = "application/zip" if path.suffix == ".zip" else "application/pdf"
 
+    rights = metadata["source_rights"]
     manifest = {
         "dataset": "Rarámuri Digital: conjunto de datos lexicográficos rarámuri-español",
         "dataset_version": metadata["dataset_version"],
@@ -393,6 +401,12 @@ def build_exports(entries: list[Entry], metadata: dict, output: Path, alphabetic
         "publication_status": metadata["publication_status"],
         "validation_status": metadata["validation_status"],
         "license": {"id": LICENSE_ID, "url": LICENSE_URL},
+        "source_rights": {
+            "profile": rights["rights_profile"],
+            "attribution": rights["canonical_attribution"],
+            "notice": rights["rights_notice"],
+            "commercial_use_authorized": rights["commercial_use_authorized"],
+        },
         "source": "data/lexicon-master.csv",
         "files": generated_files,
     }
@@ -414,7 +428,7 @@ def parse_args(argv: Sequence[str]) -> argparse.Namespace:
 def main(argv: Sequence[str] | None = None) -> int:
     args = parse_args(argv or sys.argv[1:])
     metadata = json.loads(args.metadata.read_text(encoding="utf-8"))
-    required_metadata = {"dataset_version", "platform_version", "release_date", "publication_status", "validation_status", "doi"}
+    required_metadata = {"dataset_version", "platform_version", "release_date", "publication_status", "validation_status", "doi", "source_rights"}
     missing = required_metadata.difference(metadata)
     if missing:
         raise ValueError(f"Missing metadata keys: {', '.join(sorted(missing))}")
