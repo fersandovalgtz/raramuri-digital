@@ -10,6 +10,11 @@ const manifestPath = join(outputDir, "manifest.json");
 
 let tei = await readFile(teiPath, "utf8");
 
+// La referencia bibliográfica canónica conserva la extensión editorial "viii + 146".
+// Para la capa TEI reproducible mantenemos la extensión técnica total (156 páginas),
+// que es la forma normalizada esperada por el pipeline histórico del proyecto.
+tei = tei.replace("<extent>viii + 146 páginas</extent>", "<extent>156 páginas</extent>");
+
 const historicalSchema = /<\?xml-model href="https:\/\/raw\.githubusercontent\.com\/DARIAH-ERIC\/lexicalresources\/master\/Schemas\/TEILex0\/out\/TEILex0\.rng" type="application\/xml" schematypens="http:\/\/relaxng\.org\/ns\/structure\/1\.0"\?>/g;
 const entryExtent = /<extent>(\d+) entradas lexicográficas<\/extent>/g;
 const pageExtent = /<extent>(\d+) páginas<\/extent>/g;
