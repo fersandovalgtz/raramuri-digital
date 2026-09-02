@@ -8,6 +8,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     { url: baseUrl, lastModified: now, changeFrequency: "weekly", priority: 1 },
     { url: `${baseUrl}/documentacion`, lastModified: now, changeFrequency: "monthly", priority: 0.95 },
+    { url: `${baseUrl}/derechos`, lastModified: now, changeFrequency: "yearly", priority: 0.95 },
     { url: `${baseUrl}/publicaciones/steffel-1791-1809`, lastModified: now, changeFrequency: "yearly", priority: 0.95 },
     { url: `${baseUrl}/publicaciones`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
     { url: `${baseUrl}/descargas`, lastModified: now, changeFrequency: "monthly", priority: 0.9 },
