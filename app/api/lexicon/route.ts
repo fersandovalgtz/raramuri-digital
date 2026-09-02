@@ -1,9 +1,13 @@
 import { and, asc, count, eq, like, or, type SQL } from "drizzle-orm";
 import { getDb } from "../../../db";
 import { lexicalEntries } from "../../../db/schema";
+import metadata from "../../../project-metadata.json";
 
-const PUBLICATION_STATUS = "Autorizada para difusión";
-const VALIDATION_STATUS = "Pendiente de validación lingüística";
+const PUBLICATION_STATUS = metadata.publication_status;
+const VALIDATION_STATUS = metadata.validation_status;
+const SOURCE_RIGHTS = metadata.source_rights;
+const SOURCE_ATTRIBUTION = SOURCE_RIGHTS.canonical_attribution;
+const RIGHTS_NOTICE = SOURCE_RIGHTS.rights_notice;
 
 function normalizeSearch(value: string) {
   return value
@@ -61,7 +65,8 @@ function toCsv(rows: Array<typeof lexicalEntries.$inferSelect>) {
     "clasificacion_gramatical", "familia_gramatical", "traduccion",
     "acepciones", "ejemplos_y_comentarios", "variantes", "fuente",
     "documento", "pagina_inicio", "pagina_fin", "estado_transcripcion",
-    "estado_publicacion", "estado_validacion_linguistica",
+    "estado_publicacion", "estado_validacion_linguistica", "atribucion_fuente",
+    "aviso_derechos",
   ];
   const data = rows.map((row) => {
     const entry = serializeEntry(row);
@@ -71,7 +76,8 @@ function toCsv(rows: Array<typeof lexicalEntries.$inferSelect>) {
       entry.senses.join(" | "), entry.examples.join(" | "),
       entry.variants.join(" | "), entry.sourceCode, entry.sourceDocument,
       entry.pageStart, entry.pageEnd, entry.transcriptionStatus,
-      entry.publicationStatus, entry.validationStatus,
+      entry.publicationStatus, entry.validationStatus, SOURCE_ATTRIBUTION,
+      RIGHTS_NOTICE,
     ];
   });
   return "\ufeff" + [header, ...data].map((row) => row.map(csvCell).join(",")).join("\r\n");
@@ -119,6 +125,8 @@ export async function GET(request: Request) {
           "Content-Disposition": 'attachment; filename="raramuri-base-lexicografica-completa.csv"',
           "Cache-Control": "public, max-age=300",
           "Access-Control-Allow-Origin": "*",
+          "X-Raramuri-Rights-Profile": SOURCE_RIGHTS.rights_profile,
+          "X-Raramuri-Commercial-Use": "not-authorized",
         },
       });
     }
@@ -143,10 +151,22 @@ export async function GET(request: Request) {
       classifications,
       publicationStatus: PUBLICATION_STATUS,
       validationStatus: VALIDATION_STATUS,
+      sourceRights: {
+        profile: SOURCE_RIGHTS.rights_profile,
+        source: SOURCE_RIGHTS.source,
+        attribution: SOURCE_ATTRIBUTION,
+        notice: RIGHTS_NOTICE,
+        authorizedUses: SOURCE_RIGHTS.authorized_uses,
+        commercialUseAuthorized: SOURCE_RIGHTS.commercial_use_authorized,
+        permissionGrantor: SOURCE_RIGHTS.permission_grantor,
+        permissionDocumentDate: SOURCE_RIGHTS.permission_document_date,
+      },
     }, {
       headers: {
         "Cache-Control": "public, max-age=300",
         "Access-Control-Allow-Origin": "*",
+        "X-Raramuri-Rights-Profile": SOURCE_RIGHTS.rights_profile,
+        "X-Raramuri-Commercial-Use": "not-authorized",
       },
     });
   } catch (error) {
