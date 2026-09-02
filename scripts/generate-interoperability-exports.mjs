@@ -12,10 +12,6 @@ const datasetVersion = metadata.dataset_version;
 const siteVersion = metadata.platform_version;
 const publicationStatus = metadata.publication_status;
 const validationStatus = metadata.validation_status;
-const sourceRights = metadata.source_rights;
-const sourceAttribution = sourceRights.canonical_attribution;
-const rightsNotice = sourceRights.rights_notice;
-const rightsProfile = sourceRights.rights_profile;
 const license = "CC BY-NC-SA 4.0";
 const licenseUrl = "https://creativecommons.org/licenses/by-nc-sa/4.0/";
 
@@ -72,7 +68,7 @@ function publicEntry(entry) {
   };
 }
 
-const genericXmlEntries = entries.map((entry) => `    <entry xml:id="${xml(entry.record_id)}" publicationStatus="authorized-noncommercial">
+const genericXmlEntries = entries.map((entry) => `    <entry xml:id="${xml(entry.record_id)}" publicationStatus="authorized">
       <form type="lemma">
         <orth xml:lang="tar">${xml(entry.headword)}</orth>
         <orth type="source" xml:lang="tar">${xml(entry.headword_raw)}</orth>
@@ -110,12 +106,8 @@ const genericXml = `<?xml version="1.0" encoding="UTF-8"?>
     <entryCount>${entries.length}</entryCount>
     <generated>${generatedAt}</generated>
     <license uri="${licenseUrl}">${license}</license>
-    <sourceRights profile="${xml(rightsProfile)}" commercialUseAuthorized="false">
-      <attribution>${xml(sourceAttribution)}</attribution>
-      <notice>${xml(rightsNotice)}</notice>
-    </sourceRights>
-    <publicationStatus>${xml(publicationStatus)}</publicationStatus>
-    <validationStatus>${xml(validationStatus)}</validationStatus>
+    <publicationStatus>${publicationStatus}</publicationStatus>
+    <validationStatus>${validationStatus}</validationStatus>
   </metadata>
   <entries count="${entries.length}">
 ${genericXmlEntries}
@@ -133,15 +125,6 @@ const jsonExport = {
   publisher: ["Universidad CEEES", "Universidad Autónoma de Ciudad Juárez", "Cuerpo Académico UACJ-113"],
   responsible: { name: "Fernando Sandoval Gutierrez", email: "fernando.sandoval@uacj.mx" },
   license: { id: license, url: licenseUrl },
-  source_rights: {
-    profile: rightsProfile,
-    attribution: sourceAttribution,
-    notice: rightsNotice,
-    permission_grantor: sourceRights.permission_grantor,
-    permission_document_date: sourceRights.permission_document_date,
-    authorized_uses: sourceRights.authorized_uses,
-    commercial_use_authorized: sourceRights.commercial_use_authorized,
-  },
   publication_status: publicationStatus,
   validation_status: validationStatus,
   entry_count: entries.length,
@@ -153,14 +136,12 @@ const csvHeader = [
   "classification", "classification_family", "translation_raw", "sense_count", "senses_json",
   "example_count", "examples_json", "variant_count", "variants_json", "comments_raw", "source_code",
   "source_document", "page_start", "page_end", "transcription_status", "publication_status", "validation_status",
-  "source_attribution", "rights_profile", "rights_notice",
 ];
 const csvRows = entries.map((entry) => [
   entry.record_id, entry.headword, entry.headword_raw, entry.headword_normalized, entry.homonym_number,
   entry.classification, entry.classification_family, entry.translation_raw, entry.senses.length, JSON.stringify(entry.senses),
   entry.examples.length, JSON.stringify(entry.examples), entry.variants.length, JSON.stringify(entry.variants), entry.comments_raw,
   entry.source_code, entry.source_document, entry.page_start, entry.page_end, entry.status, publicationStatus, validationStatus,
-  sourceAttribution, rightsProfile, rightsNotice,
 ]);
 const csvExport = `\ufeff${[csvHeader, ...csvRows].map((row) => row.map(csv).join(",")).join("\r\n")}\r\n`;
 
@@ -170,16 +151,14 @@ const sqlLines = [
   "-- Motor objetivo: SQLite 3; codificación: UTF-8",
   `-- Estado de publicación: ${publicationStatus}`,
   `-- Estado lingüístico: ${validationStatus}`,
-  `-- Atribución de fuente: ${sourceAttribution}`,
-  `-- Derechos de fuente: ${rightsNotice}`,
   "PRAGMA foreign_keys = ON;",
   "BEGIN TRANSACTION;",
-  "CREATE TABLE sources (source_code TEXT PRIMARY KEY, source_document TEXT NOT NULL, source_attribution TEXT NOT NULL, rights_profile TEXT NOT NULL, rights_notice TEXT NOT NULL, commercial_use_authorized INTEGER NOT NULL CHECK (commercial_use_authorized IN (0,1)));",
-  "CREATE TABLE lexical_entries (record_id TEXT PRIMARY KEY, headword TEXT NOT NULL, headword_raw TEXT NOT NULL, headword_normalized TEXT NOT NULL, homonym_number INTEGER, classification TEXT NOT NULL, classification_family TEXT NOT NULL, translation_raw TEXT NOT NULL, comments_raw TEXT NOT NULL, source_code TEXT NOT NULL REFERENCES sources(source_code), page_start INTEGER NOT NULL, page_end INTEGER NOT NULL, transcription_status TEXT NOT NULL, publication_status TEXT NOT NULL, validation_status TEXT NOT NULL);",
+  "CREATE TABLE sources (source_code TEXT PRIMARY KEY, source_document TEXT NOT NULL);",
+  "CREATE TABLE lexical_entries (record_id TEXT PRIMARY KEY, headword TEXT NOT NULL, headword_raw TEXT NOT NULL, headword_normalized TEXT NOT NULL, homonym_number INTEGER, classification TEXT NOT NULL, classification_family TEXT NOT NULL, translation_raw TEXT NOT NULL, comments_raw TEXT NOT NULL, source_code TEXT NOT NULL REFERENCES sources(source_code), page_start INTEGER NOT NULL, page_end INTEGER NOT NULL, transcription_status TEXT NOT NULL, publication_status TEXT NOT NULL CHECK (publication_status = 'Autorizada para difusión'), validation_status TEXT NOT NULL);",
   "CREATE TABLE senses (sense_id TEXT PRIMARY KEY, entry_id TEXT NOT NULL REFERENCES lexical_entries(record_id) ON DELETE CASCADE, sense_order INTEGER NOT NULL, definition_es TEXT NOT NULL, UNIQUE(entry_id, sense_order));",
   "CREATE TABLE examples (example_id TEXT PRIMARY KEY, entry_id TEXT NOT NULL REFERENCES lexical_entries(record_id) ON DELETE CASCADE, example_order INTEGER NOT NULL, example_text TEXT NOT NULL, UNIQUE(entry_id, example_order));",
   "CREATE TABLE variants (variant_id TEXT PRIMARY KEY, entry_id TEXT NOT NULL REFERENCES lexical_entries(record_id) ON DELETE CASCADE, variant_order INTEGER NOT NULL, variant_text TEXT NOT NULL, UNIQUE(entry_id, variant_order));",
-  `INSERT INTO sources VALUES ('SRC-02', 'DICCIONARIO raramuri.pdf', ${sql(sourceAttribution)}, ${sql(rightsProfile)}, ${sql(rightsNotice)}, 0);`,
+  `INSERT INTO sources VALUES ('SRC-02', 'DICCIONARIO raramuri.pdf');`,
 ];
 
 for (const entry of entries) {
@@ -197,7 +176,7 @@ sqlLines.push(
   "CREATE INDEX idx_entries_classification ON lexical_entries(classification_family);",
   "CREATE INDEX idx_entries_translation ON lexical_entries(translation_raw);",
   "CREATE INDEX idx_entries_source_page ON lexical_entries(source_code, page_start);",
-  "CREATE VIEW authorized_entries AS SELECT * FROM lexical_entries;",
+  "CREATE VIEW authorized_entries AS SELECT * FROM lexical_entries WHERE publication_status = 'Autorizada para difusión';",
   "COMMIT;",
   "-- Ejemplos:",
   "-- SELECT record_id, headword, translation_raw FROM authorized_entries WHERE headword_normalized LIKE 'a%' ORDER BY headword_normalized;",
@@ -242,23 +221,20 @@ const teiExport = `<?xml version="1.0" encoding="UTF-8"?>
       <extent>${entries.length} entradas lexicográficas</extent>
       <publicationStmt>
         <publisher>Universidad CEEES; Universidad Autónoma de Ciudad Juárez; Cuerpo Académico UACJ-113</publisher>
+        <authority role="rightsHolder">Rarámuri Digital</authority>
         <date when="${generatedAt}">${generatedAt}</date>
-        <availability status="restricted">
-          <licence target="${licenseUrl}">${license}</licence>
-          <p>${xml(rightsNotice)}</p>
-          <p>${xml(sourceAttribution)}</p>
-        </availability>
+        <availability><licence target="${licenseUrl}">${license}</licence></availability>
       </publicationStmt>
       <sourceDesc>
         <listBibl type="dictionaries">
-          <biblStruct xml:id="SRC-01"><monogr><author>K. Simón Hilton</author><title>Diccionario tarahumara de Samachique, Chihuahua, México</title><edition>Edición especial corregida y actualizada</edition><imprint><publisher>Instituto Lingüístico de Verano</publisher><date when="1993">1993</date></imprint><extent>viii + 146 páginas</extent><idno type="SIL">10966</idno></monogr></biblStruct>
-          <biblStruct xml:id="SRC-02"><monogr><title>DICCIONARIO raramuri.pdf</title><imprint><publisher>Representación estructurada de trabajo de Rarámuri Digital derivada de SRC-01</publisher></imprint><extent>87 páginas</extent></monogr><note>${xml(rightsNotice)}</note></biblStruct>
+          <biblStruct xml:id="SRC-02"><monogr><title>DICCIONARIO raramuri</title><imprint><publisher>Fuente digital del proyecto</publisher></imprint><extent>87 páginas</extent></monogr></biblStruct>
+          <biblStruct xml:id="SRC-01"><monogr><author>K. Simón Hilton</author><title>Diccionario tarahumara de Samachique</title><imprint><date when="1993">1993</date></imprint><extent>156 páginas</extent></monogr></biblStruct>
         </listBibl>
       </sourceDesc>
     </fileDesc>
     <encodingDesc>
       <projectDesc><p>Edición digital derivada de la base lexicográfica maestra de Rarámuri Digital. Se preservan lema, clasificación, traducciones, acepciones, ejemplos, variantes y procedencia documental.</p></projectDesc>
-      <editorialDecl><p>La procedencia Hilton 1993 / SIL 10966 está fijada documentalmente. La difusión está autorizada para fines académicos y no lucrativos; la validación lingüística permanece pendiente.</p></editorialDecl>
+      <editorialDecl><p>La difusión está autorizada; el cotejo con facsímil y la validación lingüística permanecen pendientes.</p></editorialDecl>
     </encodingDesc>
     <profileDesc>
       <langUsage>
@@ -267,7 +243,7 @@ const teiExport = `<?xml version="1.0" encoding="UTF-8"?>
         <language ident="es" role="workingLanguage">español</language>
       </langUsage>
     </profileDesc>
-    <revisionDesc><change when="2026-09-02">Se fijó la identidad documental de SRC-02 y se incorporó la autorización ILV para usos académicos y no lucrativos.</change><change when="${generatedAt}">Generación integral a partir de ${entries.length} registros de la base maestra.</change></revisionDesc>
+    <revisionDesc><change when="${generatedAt}">Generación integral a partir de ${entries.length} registros de la base maestra.</change></revisionDesc>
   </teiHeader>
   <text><body>
 ${teiEntries}
@@ -280,7 +256,7 @@ const openApiExport = {
   info: {
     title: "API lexicográfica de Rarámuri Digital",
     version: datasetVersion,
-    description: `Consulta pública de ${entries.length} entradas autorizadas para difusión académica y no lucrativa. La validación lingüística está pendiente. ${rightsNotice}`,
+    description: `Consulta pública de ${entries.length} entradas autorizadas para difusión. La validación lingüística está pendiente.`,
     contact: { name: "Fernando Sandoval Gutierrez", email: "fernando.sandoval@uacj.mx" },
     license: { name: license, identifier: "CC-BY-NC-SA-4.0", url: licenseUrl },
   },
@@ -288,7 +264,7 @@ const openApiExport = {
   paths: {
     "/api/lexicon": {
       get: {
-        summary: "Consultar entradas autorizadas para uso académico/no lucrativo",
+        summary: "Consultar entradas autorizadas",
         operationId: "listAuthorizedLexicalEntries",
         parameters: [
           { name: "id", in: "query", description: "Identificador exacto, por ejemplo RD-000001", schema: { type: "string", pattern: "^RD-[0-9]{6}$" } },
@@ -300,7 +276,7 @@ const openApiExport = {
         ],
         responses: {
           "200": {
-            description: "Entradas autorizadas, paginación y metadatos de derechos de fuente",
+            description: "Entradas autorizadas y metadatos de paginación",
             content: {
               "application/json": { schema: { $ref: "#/components/schemas/LexiconResponse" } },
               "text/csv": { schema: { type: "string" } },
@@ -327,24 +303,11 @@ const openApiExport = {
           transcriptionStatus: { type: "string" }, publicationStatus: { type: "string", const: publicationStatus }, validationStatus: { type: "string", const: validationStatus },
         },
       },
-      SourceRights: {
-        type: "object",
-        properties: {
-          profile: { type: "string", const: rightsProfile },
-          source: { type: "string" },
-          attribution: { type: "string" },
-          notice: { type: "string" },
-          authorizedUses: { type: "array", items: { type: "string" } },
-          commercialUseAuthorized: { type: "boolean", const: false },
-          permissionGrantor: { type: "string" },
-          permissionDocumentDate: { type: "string", format: "date" },
-        },
-      },
       LexiconResponse: {
         type: "object",
         properties: {
           entries: { type: "array", items: { $ref: "#/components/schemas/LexicalEntry" } }, total: { type: "integer" }, totalAll: { type: "integer" }, page: { type: "integer" }, limit: { type: "integer" }, pages: { type: "integer" },
-          publicationStatus: { type: "string", const: publicationStatus }, validationStatus: { type: "string", const: validationStatus }, sourceRights: { $ref: "#/components/schemas/SourceRights" },
+          publicationStatus: { type: "string", const: publicationStatus }, validationStatus: { type: "string", const: validationStatus },
         },
       },
     },
@@ -380,12 +343,6 @@ const manifest = {
   publication_status: publicationStatus,
   validation_status: validationStatus,
   license: { id: license, url: licenseUrl },
-  source_rights: {
-    profile: rightsProfile,
-    attribution: sourceAttribution,
-    notice: rightsNotice,
-    commercial_use_authorized: false,
-  },
   files: manifestFiles,
 };
 await writeFile(join(outputDir, "manifest.json"), `${JSON.stringify(manifest, null, 2)}\n`, "utf8");
