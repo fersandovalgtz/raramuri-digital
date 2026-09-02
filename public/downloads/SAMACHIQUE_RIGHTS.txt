@@ -1,0 +1,20 @@
+Rarámuri Digital — aviso de procedencia y derechos de la fuente de Samachique
+
+Fuente:
+Hilton, K. Simón (1993). Diccionario tarahumara de Samachique, Chihuahua, México, edición especial corregida y actualizada. Instituto Lingüístico de Verano, archivo SIL 10966.
+
+Autorización:
+El Instituto Lingüístico de Verano, A. C., mediante comunicación formal suscrita por Lydia Good, Gerente de publicaciones lingüísticas, fechada el 12 de agosto de 2026 y recibida por Rarámuri Digital el 18 de agosto de 2026, autorizó la reutilización de esta obra exclusivamente para fines académicos y no lucrativos.
+
+Usos comprendidos:
+Transcripción estructurada; consulta web gratuita; descargas en formatos de datos; incorporación a una API; materiales educativos; publicación académica impresa o digital.
+
+Condiciones:
+Deben conservarse los créditos correspondientes y observarse los lineamientos del Instituto Lingüístico de Verano, A. C. No se autoriza monetización, licenciamiento comercial ni otro uso lucrativo. Cualquier uso comercial futuro requiere autorización adicional y específica.
+
+Relación documental dentro del proyecto:
+SRC-01 = Hilton 1993, fuente bibliográfica y facsímil de referencia.
+SRC-02 = DICCIONARIO raramuri.pdf, representación estructurada de trabajo derivada de SRC-01 y utilizada por el pipeline de extracción. La identidad documental quedó fijada el 2 de septiembre de 2026. Esta fijación de procedencia no equivale a validación lingüística contemporánea.
+
+Regla canónica completa:
+docs/SAMACHIQUE_RIGHTS.md
