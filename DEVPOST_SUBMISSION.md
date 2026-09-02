@@ -1,6 +1,6 @@
 # Devpost submission draft — Rarámuri Digital WebMCP
 
-This file contains the English submission copy and live-demo script for the OpenAI WebMCP Challenge 2026. Replace only the bracketed evidence placeholders after deployment/video upload; do not inflate claims beyond verified behavior.
+This file contains the English submission copy and live-demo script for the OpenAI WebMCP Challenge 2026. Replace only the bracketed evidence placeholders after browser verification/video upload; do not inflate claims beyond verified behavior.
 
 ## Project title
 
@@ -21,10 +21,12 @@ https://github.com/fersandovalgtz/raramuri-digital
 ## Challenge implementation evidence
 
 - Challenge branch: `feat/webmcp-challenge-2026`
-- Pull request: https://github.com/fersandovalgtz/raramuri-digital/pull/33
+- Merged pull request: https://github.com/fersandovalgtz/raramuri-digital/pull/34
+- Merge commit: `8a55663e98f6735bc6ab96b4032dc145df0aea54`
 - Pre-challenge baseline: `38dd3bc3343548db20e2a1a19e7fd35a47ea7996`
 - Challenge implementation notes: `WEBMCP_CHALLENGE.md`
 - License: MIT for software; data licensing remains separately documented in `DATA_LICENSE.md`.
+- Administrative history: PR #33 contained the same challenge branch as a draft and was closed unmerged after the connector could not transition the draft state; PR #34 is the authoritative merged submission PR.
 
 ## What we built
 
@@ -89,15 +91,17 @@ This is especially important because technical publication of an Indigenous-lang
 
 ## What changed during the Challenge
 
-The last repository commit before the Challenge window was `38dd3bc3343548db20e2a1a19e7fd35a47ea7996` on August 15, 2026. The WebMCP work is isolated in the challenge branch/PR and documented file-by-file.
+The last repository commit before the Challenge window was `38dd3bc3343548db20e2a1a19e7fd35a47ea7996` on August 15, 2026. The WebMCP work was isolated in `feat/webmcp-challenge-2026`, reviewed in the challenge PR, and merged through PR #34.
 
 Three Concepticon/Glottolog pilot commits entered `main` on August 29 before the WebMCP branch was created. They are unrelated scientific work and are explicitly excluded from the Challenge novelty claim.
 
 ## Verification
 
-Automated validation for the first completed challenge implementation passed on GitHub Actions, including lint, build, tests, scientific-format validation, determinism, and corpus-integrity checks.
+Automated validation for the completed challenge implementation passed on GitHub Actions, including lint, build, tests, scientific-format validation, determinism, and corpus-integrity checks.
 
-After deployment, verify in a compatible browser that these four tools are discoverable:
+The public project URL and lexicon API were independently reachable on September 2, 2026. Final browser-native WebMCP discovery still must be recorded in a compatible browser before submission.
+
+Verify that these four tools are discoverable:
 
 ```text
 get_lexical_relations
@@ -106,9 +110,11 @@ search_raramuri_lexicon
 search_spanish_terminology
 ```
 
-Suggested agent prompt:
+Recommended deterministic demo prompt:
 
-> Using Rarámuri Digital, investigate vocabulary in a coherent semantic field. Find relevant Rarámuri entries, explain their Spanish meanings, identify documented lexical relationships, and verify several forms against bilingual corpus examples. Preserve provenance and flag any evidence that requires review.
+> Use all four Rarámuri Digital WebMCP tools to investigate the Rarámuri form “Abé” and the Spanish concept “hoy”. First search the lexicon for Abé; then search Spanish terminology for hoy; inspect lexical relations for Abé; finally verify Abé in the parallel corpus. Preserve source-page provenance and explicitly flag pending validation states.
+
+Why this demo target: `Abé` is a documented lexicon entry meaning “Hoy”, carries a source-page example, and has documented lexical cross-references to `jipi` and `curipi`, making it a compact flow for showing lexicon evidence, terminology, relations, provenance, and bilingual verification.
 
 ## Demo video script — target 2:15–2:40
 
@@ -131,15 +137,13 @@ Open the compatible agent/browser view and show the four discovered tools:
 
 ### 0:40–1:45 — Multi-step research flow
 
-Run the suggested research prompt with a semantic field confirmed to return useful evidence.
+Run the recommended `Abé` / `hoy` prompt above. Show the coordinated calls and point out:
 
-Show at least three coordinated calls, ideally all four. On screen, point out:
-
-- Rarámuri headword and Spanish meaning;
+- the Rarámuri headword `Abé` and Spanish meaning `Hoy`;
 - source document/page provenance;
-- a documented lexical relation;
-- a bilingual corpus example;
-- a pending/review status where applicable.
+- the documented cross-references from `Abé` to `jipi` and `curipi`;
+- a bilingual corpus example involving `Abé` if returned by the live tool;
+- pending/review status where applicable.
 
 > The important part is that the agent is not scraping labels from the interface. It is invoking explicit capabilities and receiving structured evidence with provenance and validation states intact.
 
@@ -149,7 +153,7 @@ Show at least three coordinated calls, ideally all four. On screen, point out:
 
 ### 2:10–2:30 — Auditability
 
-Show GitHub PR #33 and `WEBMCP_CHALLENGE.md`.
+Show GitHub PR #34 and `WEBMCP_CHALLENGE.md`.
 
 > The implementation is public and auditable. The WebMCP change is isolated from the scientific corpus, the software is MIT-licensed, and the existing validation pipeline passes.
 
@@ -157,10 +161,11 @@ End on the project URL.
 
 ## Final evidence fields
 
-Fill these only after they exist:
+Fill the remaining bracketed fields only after they exist:
 
-- Deployed WebMCP verification date: `[PENDING]`
-- Merged challenge commit/PR: `[PENDING]`
+- Public site/API reachability checked: `2026-09-02`
+- Deployed WebMCP browser-discovery verification date: `[PENDING]`
+- Merged challenge commit/PR: `PR #34 — 8a55663e98f6735bc6ab96b4032dc145df0aea54`
 - Public YouTube demo: `[PENDING]`
 - Devpost submission URL: `[PENDING]`
 - Devpost submission confirmation/date: `[PENDING]`
