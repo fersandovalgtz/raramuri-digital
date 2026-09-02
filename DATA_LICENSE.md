@@ -21,6 +21,16 @@ This license applies to datasets, lexicographic exports, derived products, and d
 - **Compartir igual / ShareAlike:** las adaptaciones deben distribuirse bajo la misma licencia.
 - **Procedencia / Provenance:** las reutilizaciones deben conservar identificadores, fuente y páginas cuando estén disponibles.
 
+## Condición específica — Hilton 1993 / SIL 10966
+
+El contenido atribuible al *Diccionario tarahumara de Samachique, Chihuahua, México*, de K. Simón Hilton, edición especial corregida y actualizada de 1993, archivo SIL 10966, se reutiliza en Rarámuri Digital con autorización expresa del **Instituto Lingüístico de Verano, A. C.**, mediante comunicación formal de Lydia Good fechada el 12 de agosto de 2026 y recibida el 18 de agosto de 2026.
+
+La autorización comprende exclusivamente usos **académicos y no lucrativos**: transcripción estructurada, consulta web gratuita, descargas en formatos de datos, incorporación a una API, materiales educativos y publicación académica impresa o digital. Deben conservarse los créditos correspondientes y observarse los lineamientos del Instituto Lingüístico de Verano, A. C.
+
+**No se autoriza el uso comercial.** La licencia CC BY-NC-SA 4.0 aplicada a los productos de Rarámuri Digital no amplía, sustituye ni elimina las condiciones específicas impuestas por la autorización del ILV. Para el contenido procedente de Hilton 1993 se aplica la condición más restrictiva cuando exista una diferencia de interpretación.
+
+Véase [`docs/SAMACHIQUE_RIGHTS.md`](docs/SAMACHIQUE_RIGHTS.md) para la atribución canónica y la regla operativa completa.
+
 ## Código fuente / Source code
 
 El código fuente y los componentes de software del repositorio se distribuyen separadamente bajo la [Licencia MIT](LICENSE.md). La Licencia MIT no modifica ni amplía los permisos aplicables a los datos, la documentación, los materiales culturales o los contenidos de terceros.
@@ -29,7 +39,7 @@ The repository source code and software components are separately released under
 
 ## Exclusiones / Exclusions
 
-Los facsímiles, textos fuente, logotipos y materiales de terceros conservan sus propios derechos. Su presencia como referencia bibliográfica o recurso visual no los incorpora a esta licencia.
+Los facsímiles, textos fuente, logotipos y materiales de terceros conservan sus propios derechos. Su presencia como referencia bibliográfica o recurso visual no los incorpora a esta licencia. La autorización específica del ILV permite los usos académicos y no lucrativos expresamente enumerados para Hilton 1993, pero no convierte el facsímil completo en un archivo sujeto a la licencia general del dataset.
 
 Facsimiles, source texts, logos, and third-party materials retain their respective rights. Their presence as bibliographic references or visual assets does not place them under this license.
 

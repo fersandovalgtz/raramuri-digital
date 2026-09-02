@@ -24,22 +24,47 @@
     "creator": "Hilton, K. Simón",
     "title": "Diccionario tarahumara de Samachique, Chihuahua, México",
     "year": 1993,
+    "edition": "Edición especial corregida y actualizada",
     "publisher": "Instituto Lingüístico de Verano",
     "extent": "viii + 146 páginas; aproximadamente 2,500 entradas",
+    "archive_id": "SIL 10966",
     "archive": "https://mexico.sil.org/es/resources/archives/10966",
-    "role": "Fuente bibliográfica y facsímil de referencia para cotejo"
+    "role": "Fuente bibliográfica y facsímil de referencia; fuente documental de la representación estructurada SRC-02"
   },
   "production_source": {
     "source_code": "SRC-02",
     "document": "DICCIONARIO raramuri.pdf",
-    "coverage": "Páginas PDF 3–87; 2,581 entradas",
-    "role": "Representación estructurada de trabajo consumida por el pipeline de extracción",
-    "edition_identity_status": "Pendiente de fijación documental concluyente; no se presume identidad automática con Hilton 1993 o Shoemaker 2016"
+    "coverage": "87 páginas de representación estructurada; el pipeline vigente extrae 2,581 entradas de las páginas PDF 3–87",
+    "role": "Representación estructurada de trabajo derivada de SRC-01 y consumida por el pipeline de extracción",
+    "edition_identity_status": "Identidad documental fijada el 2026-09-02: la portada y los preliminares de SRC-02 identifican a K. Simón Hilton, el Instituto Lingüístico de Verano y la edición especial corregida y actualizada de 1993. SRC-02 es una representación estructurada de trabajo de Hilton 1993, no un facsímil integral ni una fuente lexicográfica independiente. Su reutilización en Rarámuri Digital está autorizada por el Instituto Lingüístico de Verano, A. C. exclusivamente para fines académicos y no lucrativos; el uso comercial no está autorizado.",
+    "identity_verified_on": "2026-09-02"
+  },
+  "source_rights": {
+    "rights_profile": "ILV-SAMACHIQUE-2026-NC",
+    "permission_grantor": "Instituto Lingüístico de Verano, A. C.",
+    "permission_signatory": "Lydia Good, Gerente de publicaciones lingüísticas",
+    "permission_document_date": "2026-08-12",
+    "permission_received_date": "2026-08-18",
+    "source": "Hilton, K. Simón. Diccionario tarahumara de Samachique, Chihuahua, México. Edición especial corregida y actualizada, 1993. Instituto Lingüístico de Verano. Archivo SIL 10966.",
+    "canonical_attribution": "Hilton, K. Simón (1993). Diccionario tarahumara de Samachique, Chihuahua, México, edición especial corregida y actualizada. Instituto Lingüístico de Verano, archivo SIL 10966. Reutilización académica y no lucrativa en Rarámuri Digital autorizada por el Instituto Lingüístico de Verano, A. C., mediante comunicación de Lydia Good fechada el 12 de agosto de 2026.",
+    "rights_notice": "Uso académico y no lucrativo únicamente. La autorización del ILV comprende transcripción estructurada, consulta web gratuita, descargas de datos, incorporación a una API, materiales educativos y publicación académica impresa o digital. Deben conservarse los créditos correspondientes y observarse los lineamientos del Instituto Lingüístico de Verano, A. C. No se autoriza monetización, licenciamiento comercial ni otro uso lucrativo; cualquier uso comercial futuro requiere autorización adicional y específica.",
+    "authorized_uses": [
+      "transcripción estructurada",
+      "consulta web gratuita",
+      "descargas en formatos de datos",
+      "incorporación a una API",
+      "materiales educativos",
+      "publicación académica impresa o digital"
+    ],
+    "commercial_use_authorized": false,
+    "attribution_required": true,
+    "applies_to": ["SRC-01", "SRC-02", "datos y productos derivados que reproduzcan o transformen contenido de la fuente"]
   },
   "documentation": {
     "sources": "SOURCES.md",
     "provenance": "PROVENANCE.md",
     "hilton_source": "docs/HILTON_SOURCE.md",
+    "samachique_rights": "docs/SAMACHIQUE_RIGHTS.md",
     "dataset_datasheet": "DATASHEET.md",
     "scientific_repository_standard": "SCIENTIFIC_REPOSITORY_STANDARD.md",
     "ecosystem": "docs/ECOSYSTEM.md",
