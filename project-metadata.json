@@ -1,6 +1,6 @@
 {
   "project": "Rarámuri Digital",
-  "platform_version": "3.1.1",
+  "platform_version": "3.1.0",
   "dataset_version": "1.0.0",
   "release_date": "2026-07-21",
   "language_object": {
@@ -12,7 +12,7 @@
     "code": "es",
     "label": "español"
   },
-  "publication_status": "Autorizada para difusión académica y no lucrativa",
+  "publication_status": "Autorizada para difusión",
   "validation_status": "Pendiente de validación lingüística",
   "license": "CC-BY-NC-SA-4.0",
   "doi": "10.5281/zenodo.21483353",
@@ -36,7 +36,7 @@
     "document": "DICCIONARIO raramuri.pdf",
     "coverage": "87 páginas de representación estructurada; el pipeline vigente extrae 2,581 entradas de las páginas PDF 3–87",
     "role": "Representación estructurada de trabajo derivada de SRC-01 y consumida por el pipeline de extracción",
-    "edition_identity_status": "Identidad documental fijada el 2026-09-02: la portada y los preliminares de SRC-02 identifican a K. Simón Hilton, el Instituto Lingüístico de Verano y la edición especial corregida y actualizada de 1993. SRC-02 es una representación estructurada de trabajo de Hilton 1993, no un facsímil integral ni una fuente lexicográfica independiente.",
+    "edition_identity_status": "Identidad documental fijada el 2026-09-02: la portada y los preliminares de SRC-02 identifican a K. Simón Hilton, el Instituto Lingüístico de Verano y la edición especial corregida y actualizada de 1993. SRC-02 es una representación estructurada de trabajo de Hilton 1993, no un facsímil integral ni una fuente lexicográfica independiente. Su reutilización en Rarámuri Digital está autorizada por el Instituto Lingüístico de Verano, A. C. exclusivamente para fines académicos y no lucrativos; el uso comercial no está autorizado.",
     "identity_verified_on": "2026-09-02"
   },
   "source_rights": {
