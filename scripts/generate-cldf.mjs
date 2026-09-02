@@ -34,6 +34,7 @@ function bibEscape(value) {
 const outputDir = outputDirectory();
 const entries = JSON.parse(await readFile(sourcePath, "utf8"));
 const project = JSON.parse(await readFile(metadataPath, "utf8"));
+const rights = project.source_rights;
 await mkdir(outputDir, { recursive: true });
 
 const entryHeader = [
@@ -82,7 +83,7 @@ const languagesRows = [
 
 const distinctSources = [...new Map(entries.map((entry) => [entry.source_code, entry.source_document])).entries()]
   .sort(([a], [b]) => a.localeCompare(b));
-const sourcesBib = distinctSources.map(([code, title]) => `@misc{${code},\n  title = {${bibEscape(title)}},\n  note = {Fuente documental registrada por Rarámuri Digital; véase la procedencia por entrada y página.}\n}`).join("\n\n") + "\n";
+const sourcesBib = distinctSources.map(([code, title]) => `@misc{${code},\n  title = {${bibEscape(title)}},\n  note = {Representación estructurada derivada de Hilton 1993, SIL 10966. ${bibEscape(rights.rights_notice)}}\n}`).join("\n\n") + `\n\n@book{SRC-01,\n  author = {Hilton, K. Simón},\n  title = {Diccionario tarahumara de Samachique, Chihuahua, México},\n  year = {1993},\n  publisher = {Instituto Lingüístico de Verano},\n  note = {Edición especial corregida y actualizada; archivo SIL 10966. ${bibEscape(rights.rights_notice)}}\n}\n`;
 
 const term = "http://cldf.clld.org/v1.0/terms.rdf#";
 const metadata = {
@@ -92,10 +93,14 @@ const metadata = {
   "dc:description": "Serialización interoperable de la base lexicográfica publicada por Rarámuri Digital. No constituye validación lingüística adicional.",
   "dc:bibliographicCitation": `Sandoval Gutierrez, Fernando. Rarámuri Digital, dataset ${project.dataset_version}. DOI: ${project.doi}.`,
   "dc:license": "https://creativecommons.org/licenses/by-nc-sa/4.0/",
+  "dc:rights": rights.rights_notice,
   "dc:source": "sources.bib",
   "dc:version": project.dataset_version,
   "dc:issued": project.release_date,
   "dc:identifier": `https://doi.org/${project.doi}`,
+  "rd:rightsProfile": rights.rights_profile,
+  "rd:sourceAttribution": rights.canonical_attribution,
+  "rd:commercialUseAuthorized": rights.commercial_use_authorized,
   dialect: { commentPrefix: null },
   tables: [
     {
@@ -144,7 +149,7 @@ const metadata = {
       "dc:conformsTo": `${term}LanguageTable`,
       tableSchema: {
         columns: [
-          { name: "ID", required: true, propertyUrl: `${term}id`, datatype: { base: "string", format: "[a-zA-Z0-9_\\-]+" } },
+          { name: "ID", required: true, propertyUrl: `${term}id`, datatype: { base: "string", format: "[a-z0-9_\\-]+" } },
           { name: "Name", propertyUrl: `${term}name`, datatype: "string" },
           { name: "Macroarea", propertyUrl: `${term}macroarea`, datatype: "string" },
           { name: "Latitude", propertyUrl: `${term}latitude`, datatype: { base: "decimal", minimum: -90, maximum: 90 } },
@@ -168,6 +173,6 @@ await writeCsv("senses.csv", senseHeader, senseRows);
 await writeCsv("languages.csv", ["ID", "Name", "Macroarea", "Latitude", "Longitude", "Glottocode", "ISO639P3code"], languagesRows);
 await writeFile(join(outputDir, "sources.bib"), sourcesBib, "utf8");
 await writeFile(join(outputDir, "cldf-metadata.json"), `${JSON.stringify(metadata, null, 2)}\n`, "utf8");
-await writeFile(join(outputDir, "README.md"), `# Rarámuri Digital — CLDF Dictionary\n\nDataset version: ${project.dataset_version}. Entries: ${entries.length}. Senses: ${senseRows.length}.\n\nThis package is generated deterministically from \`data/lexicon-master.json\`. It preserves Rarámuri Digital identifiers and source-page references. Documentary examples remain serialized as data columns and are not promoted to CLDF ExampleTable until linguistic segmentation and review are available.\n\nPublication status: ${project.publication_status}. Linguistic validation: ${project.validation_status}.\n`, "utf8");
+await writeFile(join(outputDir, "README.md"), `# Rarámuri Digital — CLDF Dictionary\n\nDataset version: ${project.dataset_version}. Entries: ${entries.length}. Senses: ${senseRows.length}.\n\nThis package is generated deterministically from \`data/lexicon-master.json\`. It preserves Rarámuri Digital identifiers and source-page references. Documentary examples remain serialized as data columns and are not promoted to CLDF ExampleTable until linguistic segmentation and review are available.\n\nPublication status: ${project.publication_status}. Linguistic validation: ${project.validation_status}.\n\nSource attribution: ${rights.canonical_attribution}\n\nRights: ${rights.rights_notice}\n`, "utf8");
 
 console.log(`CLDF Dictionary generated in ${outputDir}: ${entries.length} entries, ${senseRows.length} senses.`);
