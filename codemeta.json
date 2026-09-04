@@ -1,14 +1,14 @@
 {
   "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
-  "@type": "Dataset",
-  "name": "Rarámuri Digital",
-  "description": "Infraestructura lexicográfica rarámuri-español con 2,581 entradas, 30 productos derivados, procedencia documental explícita, formatos interoperables y API pública.",
-  "version": "1.0.0",
+  "@type": "SoftwareSourceCode",
+  "name": "Rarámuri Digital — software/API",
+  "description": "Software e infraestructura API de Rarámuri Digital para publicar, consultar y transformar recursos lexicográficos rarámuri-español con procedencia documental explícita, formatos interoperables y servicios web reproducibles.",
+  "version": "3.1.0",
   "datePublished": "2026-07-21",
-  "identifier": "https://doi.org/10.5281/zenodo.21483353",
+  "identifier": "https://doi.org/10.5281/zenodo.21893632",
   "codeRepository": "https://github.com/fersandovalgtz/raramuri-digital",
   "url": "https://raramuri.ceees.mx",
-  "license": "https://spdx.org/licenses/CC-BY-NC-SA-4.0.html",
+  "license": "https://spdx.org/licenses/MIT.html",
   "inLanguage": ["tar", "es"],
   "author": [{
     "@type": "Person",
@@ -17,10 +17,13 @@
     "email": "fernando.sandoval@uacj.mx",
     "@id": "https://orcid.org/0000-0002-3168-6725"
   }],
-  "isBasedOn": "https://mexico.sil.org/es/resources/archives/10966",
-  "citation": "Hilton, K. Simón. 1993. Diccionario tarahumara de Samachique, Chihuahua, México. Instituto Lingüístico de Verano.",
+  "isBasedOn": {
+    "@type": "Dataset",
+    "@id": "https://doi.org/10.5281/zenodo.21483353",
+    "name": "Rarámuri Digital — dataset v1.0.0"
+  },
   "sameAs": [
-    "https://doi.org/10.5281/zenodo.21483353",
+    "https://doi.org/10.5281/zenodo.21893632",
     "https://archive.softwareheritage.org/swh:1:snp:0982c208ac90273fdb553b181b8c75c66991e09d"
   ],
   "keywords": [
@@ -28,6 +31,8 @@
     "Tarahumara",
     "Central Tarahumara",
     "Samachique",
+    "research software",
+    "API",
     "lexicography",
     "digital humanities",
     "linguistic data",
