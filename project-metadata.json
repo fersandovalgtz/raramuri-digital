@@ -17,6 +17,10 @@
   "license": "CC-BY-NC-SA-4.0",
   "doi": "10.5281/zenodo.21483353",
   "zenodo_record": "https://zenodo.org/records/21483353",
+  "software_doi": "10.5281/zenodo.21893632",
+  "software_zenodo_record": "https://zenodo.org/records/21893632",
+  "software_heritage_swhid": "swh:1:snp:0982c208ac90273fdb553b181b8c75c66991e09d",
+  "software_heritage_url": "https://archive.softwareheritage.org/swh:1:snp:0982c208ac90273fdb553b181b8c75c66991e09d",
   "repository": "https://github.com/fersandovalgtz/raramuri-digital",
   "website": "https://raramuri.ceees.mx",
   "primary_reference": {
