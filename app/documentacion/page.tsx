@@ -62,15 +62,25 @@ export default function DocumentationPage() {
         </section>
 
         <section className="content-section">
-          <h2>Identificador persistente</h2>
+          <h2>Identificadores persistentes</h2>
           <div className="definition-grid">
             <article>
-              <h3>DOI de los datos {metadata.dataset_version}</h3>
+              <h3>DOI del dataset {metadata.dataset_version}</h3>
               <p><a className="text-link" href={`https://doi.org/${metadata.doi}`} target="_blank" rel="noreferrer">{metadata.doi} →</a></p>
-              <p>Registro publicado en Zenodo con archivos interoperables, documentación científica y metadatos de citación.</p>
+              <p>Identifica los datos y sus exportaciones publicadas en Zenodo. Debe utilizarse al citar el contenido estructurado del conjunto.</p>
             </article>
             <article>
-              <h3>Registro de preservación</h3>
+              <h3>DOI del software/API</h3>
+              <p><a className="text-link" href={`https://doi.org/${metadata.software_doi}`} target="_blank" rel="noreferrer">{metadata.software_doi} →</a></p>
+              <p>Identifica la infraestructura computacional, el código y la API de Rarámuri Digital. Es distinto del DOI del dataset y ambos objetos permanecen relacionados.</p>
+            </article>
+            <article>
+              <h3>Preservación del código</h3>
+              <p><a className="text-link" href={metadata.software_heritage_url} target="_blank" rel="noreferrer">{metadata.software_heritage_swhid} →</a></p>
+              <p>Snapshot persistente de Software Heritage para preservar la referencia al código fuente además de los depósitos en Zenodo.</p>
+            </article>
+            <article>
+              <h3>Registro del dataset</h3>
               <p><a className="text-link" href={metadata.zenodo_record} target="_blank" rel="noreferrer">Zenodo record {metadata.zenodo_record.split("/").at(-1)} →</a></p>
               <p>La versión depositada es un objeto citable fijado. Las correcciones científicas futuras deben publicarse como nuevas versiones cuando corresponda.</p>
             </article>
@@ -178,8 +188,12 @@ export default function DocumentationPage() {
               <p>Si una afirmación depende de una forma, glosa, ejemplo o clasificación atribuible a Hilton, cite Hilton 1993 y, cuando sea posible, la página concreta.</p>
             </article>
             <article>
-              <h3>Transformación digital</h3>
-              <p>Si depende de un registro estructurado, normalización, API o producto derivado, cite además la versión específica de Rarámuri Digital mediante su DOI y el identificador <code>RD-######</code> cuando corresponda.</p>
+              <h3>Datos estructurados</h3>
+              <p>Si depende de un registro normalizado o una exportación del conjunto, cite el DOI del dataset <a className="text-link" href={`https://doi.org/${metadata.doi}`} target="_blank" rel="noreferrer">{metadata.doi}</a> y el identificador <code>RD-######</code> cuando corresponda.</p>
+            </article>
+            <article>
+              <h3>Software y API</h3>
+              <p>Si depende del código, de un endpoint o de la infraestructura computacional, cite el DOI del software/API <a className="text-link" href={`https://doi.org/${metadata.software_doi}`} target="_blank" rel="noreferrer">{metadata.software_doi}</a>.</p>
             </article>
           </div>
         </section>
