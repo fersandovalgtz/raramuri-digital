@@ -8,14 +8,15 @@
 </p>
 
 <p align="center">
-  <a href="https://doi.org/10.5281/zenodo.21483353"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.21483353.svg" alt="DOI 10.5281/zenodo.21483353"></a>
+  <a href="https://doi.org/10.5281/zenodo.21483353"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.21483353.svg" alt="Dataset DOI 10.5281/zenodo.21483353"></a>
+  <a href="https://doi.org/10.5281/zenodo.21893632"><img src="https://img.shields.io/badge/software%20DOI-10.5281%2Fzenodo.21893632-1682D4?style=flat-square" alt="Software DOI 10.5281/zenodo.21893632"></a>
   <a href="https://archive.softwareheritage.org/swh:1:snp:0982c208ac90273fdb553b181b8c75c66991e09d"><img src="https://archive.softwareheritage.org/badge/swh:1:snp:0982c208ac90273fdb553b181b8c75c66991e09d/" alt="Software Heritage"></a>
   <a href="RELEASE_NOTES_1.0.0.md"><img src="https://img.shields.io/badge/dataset-v1.0.0-172033?style=flat-square" alt="Dataset v1.0.0"></a>
   <a href="CHANGELOG.md"><img src="https://img.shields.io/badge/platform-v3.1.0-7a263a?style=flat-square" alt="Platform v3.1.0"></a>
   <a href="public/downloads/manifest.json"><img src="https://img.shields.io/badge/entries-2%2C581-172033?style=flat-square" alt="2,581 entries"></a>
   <a href="public/downloads/manifest.json"><img src="https://img.shields.io/badge/products-30-7a263a?style=flat-square" alt="30 products"></a>
   <a href="https://orcid.org/0000-0002-3168-6725"><img src="https://img.shields.io/badge/ORCID-0000--0002--3168--6725-A6CE39?style=flat-square&logo=orcid&logoColor=white" alt="ORCID"></a>
-  <a href="https://zenodo.org/records/21483353"><img src="https://img.shields.io/badge/OpenAIRE-indexed-6A1B9A?style=flat-square" alt="OpenAIRE indexed"></a>
+  <a href="https://zenodo.org/records/21483353"><img src="https://img.shields.io/badge/OpenAIRE-dataset%20indexed-6A1B9A?style=flat-square" alt="Dataset indexed in OpenAIRE"></a>
 </p>
 
 <p align="center">
@@ -68,6 +69,16 @@
 |---|---|---:|---:|---|
 | 1.0.0 | 3.1.0 | 2,581 | 30 | Validation pending |
 
+## Persistent identifiers
+
+Rarámuri Digital maintains distinct but related scholarly objects. Cite the identifier that corresponds to the object actually used:
+
+- **Dataset v1.0.0:** [10.5281/zenodo.21483353](https://doi.org/10.5281/zenodo.21483353).
+- **Software/API:** [10.5281/zenodo.21893632](https://doi.org/10.5281/zenodo.21893632).
+- **Code preservation:** [`swh:1:snp:0982c208ac90273fdb553b181b8c75c66991e09d`](https://archive.softwareheritage.org/swh:1:snp:0982c208ac90273fdb553b181b8c75c66991e09d).
+
+The dataset DOI identifies the data and published exports; the software/API DOI identifies the computational infrastructure. These identifiers are related to the same project but should not be interchanged in citations or metadata.
+
 ## What Rarámuri Digital is
 
 **Rarámuri Digital** is a research infrastructure that publishes and transforms Rarámuri–Spanish lexicographic data into **traceable, versioned, citable, interoperable, and reproducible** research objects. The project explicitly separates documentary evidence, working representations, computational normalization, derived products, and linguistic validation.
@@ -95,7 +106,7 @@ Download the dataset directly:
 > [!NOTE]
 > Publication is authorized for dissemination, but linguistic validation remains pending. Reuse must preserve attribution and provenance and follow [`GOVERNANCE.md`](GOVERNANCE.md).
 
-If this resource supports your research, teaching, or development work, cite the DOI and star ⭐ the repository to improve discoverability.
+If this resource supports your research, teaching, or development work, cite the dataset DOI when using the data and the software/API DOI when using or describing the computational infrastructure. Star ⭐ the repository to improve discoverability.
 
 ---
 
@@ -161,7 +172,7 @@ Rarámuri Digital **does not conflate this bibliographic genealogy with its prod
 - [Support](SUPPORT.md) · [Security](SECURITY.md) · [Code of conduct](CODE_OF_CONDUCT.md)
 - [Authorship and CRediT roles](CONTRIBUTORS.md)
 - [Changelog](CHANGELOG.md) · [Release checklist](RELEASE_CHECKLIST.md) · [1.0.0 notes](RELEASE_NOTES_1.0.0.md)
-- [CodeMeta metadata](codemeta.json) · [CFF citation](CITATION.cff) · [Project metadata](project-metadata.json)
+- [Software metadata in CodeMeta](codemeta.json) · [Dataset citation in CFF](CITATION.cff) · [Canonical project metadata](project-metadata.json)
 
 ## Interoperable formats
 
@@ -272,10 +283,14 @@ Academic discovery: [ORCID](https://orcid.org/0000-0002-3168-6725) · [Google Sc
 
 Sandoval Gutierrez, F. (2026). *Rarámuri Digital: conjunto de datos lexicográficos rarámuri–español* (Version 1.0.0) [Data set]. Zenodo. <https://doi.org/10.5281/zenodo.21483353>
 
+### Software/API
+
+Sandoval Gutierrez, F. (2026). *Rarámuri Digital — software/API* [Software]. Zenodo. <https://doi.org/10.5281/zenodo.21893632>
+
 ### Lexicographic source
 
 Hilton, K. Simón. (1993). *Diccionario tarahumara de Samachique, Chihuahua, México*. Instituto Lingüístico de Verano.
 
-When a claim depends on a form, gloss, example, or classification attributable to Hilton, cite **Hilton 1993 and the relevant page**. When it depends on the digital representation, normalization, API, or a derived Rarámuri Digital product, also cite **Rarámuri Digital and the version used**. This dual-citation policy separates source authority from editorial/computational responsibility.
+When a claim depends on a form, gloss, example, or classification attributable to Hilton, cite **Hilton 1993 and the relevant page**. When it depends on structured data or an exported dataset artifact, cite the **dataset DOI**. When it depends on the API, source code, or computational infrastructure, cite the **software/API DOI**. If a result depends on more than one object, cite the relevant identifiers together. This keeps documentary authority, data editorial responsibility, and software responsibility distinct.
 
-Use [`CITATION.cff`](CITATION.cff) for citation tooling, [`references.bib`](references.bib) for BibTeX, and [`docs/HILTON_SOURCE.md`](docs/HILTON_SOURCE.md) for the documentary dossier. The dataset version cited here is 1.0.0; the operating platform version is 3.1.0.
+Use [`CITATION.cff`](CITATION.cff) for the dataset citation, [`codemeta.json`](codemeta.json) for canonical software metadata, [`references.bib`](references.bib) for BibTeX, and [`docs/HILTON_SOURCE.md`](docs/HILTON_SOURCE.md) for the documentary dossier. The dataset version cited here is 1.0.0; the operating platform version is 3.1.0.
