@@ -5,6 +5,7 @@ import { fileURLToPath } from "node:url";
 const projectRoot = dirname(dirname(fileURLToPath(import.meta.url)));
 const sourcePath = join(projectRoot, "data", "lexicon-master.json");
 const metadataPath = join(projectRoot, "project-metadata.json");
+const bibliographyPath = join(projectRoot, "sources.bib");
 
 function outputDirectory() {
   const index = process.argv.indexOf("--output");
@@ -23,17 +24,11 @@ function pageContext(entry) {
   return `${entry.page_start}-${entry.page_end}`;
 }
 
-function bibEscape(value) {
-  return String(value ?? "")
-    .replaceAll("\\", "\\\\")
-    .replaceAll("{", "\\{")
-    .replaceAll("}", "\\}")
-    .replaceAll("\n", " ");
-}
-
 const outputDir = outputDirectory();
 const entries = JSON.parse(await readFile(sourcePath, "utf8"));
 const project = JSON.parse(await readFile(metadataPath, "utf8"));
+const sourceBibliography = await readFile(bibliographyPath, "utf8");
+const sourcesBib = sourceBibliography.endsWith("\n") ? sourceBibliography : `${sourceBibliography}\n`;
 await mkdir(outputDir, { recursive: true });
 
 const entryHeader = [
@@ -80,9 +75,14 @@ const languagesRows = [
   ["spa", "español", "Eurasia", "", "", "stan1288", "spa"],
 ];
 
-const distinctSources = [...new Map(entries.map((entry) => [entry.source_code, entry.source_document])).entries()]
-  .sort(([a], [b]) => a.localeCompare(b));
-const sourcesBib = distinctSources.map(([code, title]) => `@misc{${code},\n  title = {${bibEscape(title)}},\n  note = {Fuente documental registrada por Rarámuri Digital; véase la procedencia por entrada y página.}\n}`).join("\n\n") + "\n";
+const sourceCodes = [...new Set(entries.map((entry) => entry.source_code))].sort((a, b) => a.localeCompare(b));
+const bibliographyKeys = new Set(
+  [...sourcesBib.matchAll(/@\w+\s*\{\s*([^,\s]+)\s*,/g)].map((match) => match[1]),
+);
+const missingSources = sourceCodes.filter((code) => !bibliographyKeys.has(code));
+if (missingSources.length > 0) {
+  throw new Error(`Faltan referencias canónicas en sources.bib para: ${missingSources.join(", ")}`);
+}
 
 const term = "http://cldf.clld.org/v1.0/terms.rdf#";
 const metadata = {
