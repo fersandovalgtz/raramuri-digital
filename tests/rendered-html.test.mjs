@@ -129,7 +129,8 @@ test("publishes versioned scientific documentation and reproducible quality cont
   assert.match(header, /href="\/documentacion"/);
   assert.match(citation, /type: dataset/);
   assert.match(citation, /version: "1\.0\.0"/);
-  assert.equal(codemeta["@type"], "Dataset");
+  assert.equal(codemeta["@type"], "SoftwareSourceCode");
+  assert.equal(codemeta.isBasedOn?.["@type"], "Dataset");
 });
 
 test("publishes complete interoperable exports and the authorized lexicographic API", async () => {
