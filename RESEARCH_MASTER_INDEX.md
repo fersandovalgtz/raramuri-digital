@@ -92,3 +92,10 @@ Prioridad:
 4. C04-Nisé y C05-historical-title sólo con evidencia comparativa específica.
 
 No volver a búsquedas generales de semejanzas.
+
+
+## Nueva fuente crítica · 2026-09-19
+
+Se incorpora `data/research/RODRIGUEZ_LOPEZ_2023_LOST_COMPENDIUM_ASSESSMENT_V1.md` como evaluación fuente-crítica de Rodríguez López (2023). El hallazgo **no cambia la cartera A/B/C**: abre una línea documental separada, `DT01`, según la cual la doctrina cristiana y las pláticas bilingües perdidas del Compendio de Guadalaxara (1683) podrían sobrevivir en Tellechea (1826).
+
+Consecuencia operativa: la ingestión de Tellechea debe preservar estructura documental, orden, bilingüismo y unidades textuales además de los datos lingüísticos. `DT01` permanece atribuida al autor y pendiente de cotejo primario reproducible; no implica copia directa, identidad íntegra ni modificación de C06-1683.
