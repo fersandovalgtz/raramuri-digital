@@ -1,6 +1,6 @@
 # Estado consolidado de la evidencia — Rarámuri Histórico Digital
 
-**Corte:** 2026-08-14  
+**Corte:** 2026-09-19  
 **Síntesis global vigente:** `AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md`  
 **Matriz vigente:** `EVIDENCE_MASTER_MATRIX_V20.md`  
 **Pruebas vigentes:** `CANDIDATE_SOURCE_TESTS_V20.md`
