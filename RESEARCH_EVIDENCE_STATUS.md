@@ -111,3 +111,12 @@ Ya no existe un candidato principal B. Las incertidumbres restantes están **enc
 2. C06-1683 → sólo con BL fol. 35r / Rodríguez pp. 162–164 o análisis histórico token-específico;
 3. C09 residual → sólo con facsímil propio;
 4. C04-Nisé y C05-historical-title → sólo con evidencia comparativa directa.
+
+
+## DT01 · transmisión textual Guadalaxara 1683 → Tellechea 1826
+
+**Hipótesis documental atribuida; sin efecto sobre los grados A vigentes.** Rodríguez López (2023) concluye que la doctrina cristiana y las pláticas bilingües perdidas del Compendio de 1683 pueden encontrarse muy probablemente íntegras en Tellechea 1826. Se incorpora como pregunta fuente-crítica independiente.
+
+Estado: **pendiente de verificación primaria reproducible**. Deben distinguirse copia directa, transmisión mediada, fuente común, tradición formularia y reelaboración posterior. La semejanza temática no prueba filiación textual. El PDF completo del artículo no fue recuperable en la integración del 19-sep-2026; la evaluación queda explícitamente sujeta a cotejo final de pp. 15–44.
+
+Documento de control: `data/research/RODRIGUEZ_LOPEZ_2023_LOST_COMPENDIUM_ASSESSMENT_V1.md`.
