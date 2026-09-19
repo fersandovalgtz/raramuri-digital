@@ -1,6 +1,6 @@
 # Índice maestro de investigación — Rarámuri Histórico Digital
 
-**Estado de corte:** 2026-08-14  
+**Estado de corte:** 2026-09-19  
 **Repositorio:** `fersandovalgtz/raramuri-digital`  
 **Síntesis global vigente:** `AMEKE_AME_AMI_DIACHRONIC_ASSESSMENT_V18.md`
 
