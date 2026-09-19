@@ -123,3 +123,12 @@ N12, N17, N20 y N21 siguen vigentes. Fidelidad diplomática, disponibilidad hist
 4. C04-Nisé / C05-historical-title → sólo evidencia comparativa específica.
 
 No abrir búsquedas generales de semejanzas.
+
+
+## D10. Rodríguez López 2023 / transmisión del Compendio perdido
+
+**NUEVA DEPENDENCIA DOCUMENTAL, no lingüística.** Rodríguez López (2023) propone que la doctrina cristiana y las pláticas bilingües perdidas del Compendio de Guadalaxara (1683) pueden conservarse muy probablemente íntegras en Tellechea (1826).
+
+Para probarlo, la ingestión de Tellechea debe conservar y segmentar las secciones doctrinales y su correspondencia bilingüe. La adjudicación exige paralelos textuales primarios y control de alternativas de transmisión; no basta coincidencia temática o estructural.
+
+Esta dependencia no reabre ni modifica C06-1683, C09-core o la cartera A/B/C. Ver `data/research/RODRIGUEZ_LOPEZ_2023_LOST_COMPENDIUM_ASSESSMENT_V1.md`.
