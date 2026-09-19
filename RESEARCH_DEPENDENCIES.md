@@ -1,6 +1,6 @@
 # Dependencias y bloqueos de investigación — Rarámuri Histórico Digital
 
-**Corte:** 2026-08-14
+**Corte:** 2026-09-19
 
 ## D1. Buschmann 1857
 
