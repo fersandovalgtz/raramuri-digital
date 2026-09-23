@@ -22,7 +22,9 @@ Este documento organiza los metadatos existentes de **Rarámuri Digital** para f
 | Formatos | CSV, JSON, XML, SQL, TEI Lex-0, OpenAPI |
 | API | https://raramuri.ceees.mx/api/lexicon |
 | Metadatos técnicos existentes | `CITATION.cff`, `codemeta.json`, `DATASHEET.md`, `SCHEMA.md`, `QUALITY_REPORT.md`, `manifest.json` |
-| Indexación externa confirmada | OpenAIRE, a través del registro Zenodo |
+| Indexación externa confirmada | OpenAIRE; CLARIAH-HiTZ; CLARIN VLO |
+| DOI / PID CLARIAH-HiTZ | 10.71845/hitz-35 · Handle 20.500.14614/46 |
+| Registro CLARIN VLO | https://vlo.clarin.eu/record/https_58__47__47_hdl.handle.net_47_20.500.14614_47_46_64_format_61_cmdi?1&fqType=nationalProject:or&fq=nationalProject:CLARIAH-ES&index=2&count=31 |
 
 ## Correspondencia de alto nivel
 
@@ -45,16 +47,9 @@ Este documento organiza los metadatos existentes de **Rarámuri Digital** para f
 
 ## Ruta CLARIN VLO
 
-La guía de CLARIN de julio de 2026 indica que repositorios generales con **OAI-PMH y metadatos ricos**, entre ellos Zenodo, son candidatos razonables para cosecha, aunque la incorporación no es automática ni está garantizada. CLARIN recomienda depositar en un centro CLARIN cuando sea posible porque esa vía garantiza la compatibilidad de cosecha. GitHub por sí mismo no es un candidato natural porque no expone OAI-PMH.
+La ruta institucional ya quedó completada. El 11 de agosto de 2026, CLARIN ERIC recomendó depositar Rarámuri Digital mediante un centro CLARIAH-ES. El Centro B de CLARIAH-HiTZ aceptó el depósito; la copia especializada quedó publicada con DOI **10.71845/hitz-35** y Handle **20.500.14614/46**. El 23 de septiembre de 2026, HiTZ confirmó que el recurso ya es accesible desde **CLARIN VLO**.
 
-Rarámuri Digital ya dispone de un registro Zenodo con DOI y metadatos ricos. La ruta prioritaria es, por tanto:
-
-1. corregir y enriquecer el registro Zenodo/DataCite, incluida la forma canónica `Fernando Sandoval Gutierrez`, ORCID, lenguas, licencia, palabras clave y relaciones persistentes;
-2. solicitar a CLARIN una evaluación concreta del registro Zenodo para determinar si puede ser cosechado por el VLO;
-3. si no se acepta la cosecha directa, utilizar el Language Resource Inventory (LRT) para este registro estático o depositar una copia/registro en un centro CLARIN compatible;
-4. reservar un endpoint OAI-PMH propio para el momento en que existan múltiples recursos o versiones públicas que justifiquen mantenimiento continuo.
-
-Para colecciones con muchos registros o cambios frecuentes, CLARIN prefiere OAI-PMH y, de ser posible, CMDI; también puede trabajar con OLAC. Para pocos registros estáticos, la documentación de CLARIN contempla LRT, cuyos registros se convierten a CMDI antes de aparecer en el VLO.
+Esta incorporación cierra la necesidad de construir infraestructura OAI-PMH propia para este recurso. El DOI de Zenodo **10.5281/zenodo.21483353** permanece como identificador canónico del dataset v1.0.0; el DOI/Handle de HiTZ identifican la copia especializada y el registro VLO aporta descubrimiento internacional. Ninguno de estos hechos equivale a validación lingüística o comunitaria.
 
 ## Ruta OLAC
 
@@ -83,22 +78,18 @@ JOSS constituye una meta de mayor autoridad porque revisa externamente tanto el 
 
 ## Brechas actuales
 
-1. El registro Zenodo todavía debe normalizar el apellido del responsable a `Gutierrez` y revisar metadatos DataCite.
-2. OpenAIRE ya está confirmado; falta reflejar esa evidencia en la cabecera del repositorio.
-3. No consta todavía incorporación efectiva al VLO de CLARIN.
-4. No existe todavía un proveedor OLAC que exponga este registro.
-5. No consta todavía archivado del repositorio en Software Heritage ni SWHID documentado.
-6. JOSS requiere maduración de la historia pública, adopción y evidencia de impacto antes de una eventual presentación.
-7. Cualquier publicación especializada debe conservar la declaración de validación lingüística pendiente y las condiciones de gobernanza.
+1. No existe todavía un proveedor OLAC que exponga este registro.
+2. JOSS requiere maduración de la historia pública, adopción y evidencia de impacto antes de una eventual presentación.
+3. La prioridad científica posterior a la incorporación en CLARIN VLO es demostrar **reutilización, citación, adopción y colaboración externa**, no acumular depósitos equivalentes.
+4. Cualquier publicación especializada debe conservar la declaración de validación lingüística pendiente y las condiciones de gobernanza.
 
 ## Próximos pasos recomendados
 
-1. Corregir y enriquecer Zenodo/DataCite; mantener el DOI como registro canónico del dataset.
-2. Añadir al README un badge de `OpenAIRE indexed` únicamente porque la indexación ya está confirmada externamente.
-3. Solicitar evaluación de cosecha del registro Zenodo por CLARIN VLO; usar LRT o un centro CLARIN si la cosecha directa no procede.
-4. Solicitar archivado en Software Heritage; después documentar el SWHID y añadir el distintivo correspondiente.
-5. Resolver la ruta OLAC mediante un proveedor externo antes de valorar OAI-PMH propio.
-6. Acumular uso externo, citas, contribuciones y al menos seis meses de historia pública antes de evaluar JOSS.
+1. Mantener Zenodo como registro canónico del dataset y CLARIAH-HiTZ/CLARIN VLO como capa especializada de descubrimiento.
+2. Registrar usos, citas, integraciones y reutilizaciones externas verificables.
+3. Resolver la ruta OLAC mediante un proveedor externo antes de valorar infraestructura propia.
+4. Acumular uso externo, citas, contribuciones e historia pública antes de evaluar JOSS.
+5. No abrir otro ciclo de infraestructura para CLARIN: la ruta de incorporación ya está cumplida.
 
 ## Referencias técnicas
 
