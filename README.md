@@ -17,6 +17,8 @@
   <a href="public/downloads/manifest.json"><img src="https://img.shields.io/badge/productos-30-7a263a?style=flat-square" alt="30 productos"></a>
   <a href="https://orcid.org/0000-0002-3168-6725"><img src="https://img.shields.io/badge/ORCID-0000--0002--3168--6725-A6CE39?style=flat-square&logo=orcid&logoColor=white" alt="ORCID 0000-0002-3168-6725"></a>
   <a href="https://zenodo.org/records/21483353"><img src="https://img.shields.io/badge/OpenAIRE-dataset%20indexed-6A1B9A?style=flat-square" alt="Dataset indexed in OpenAIRE"></a>
+  <a href="https://doi.org/10.71845/hitz-35"><img src="https://img.shields.io/badge/CLARIAH--HiTZ-10.71845%2Fhitz--35-4b5563?style=flat-square" alt="CLARIAH-HiTZ DOI 10.71845/hitz-35"></a>
+  <a href="https://vlo.clarin.eu/record/https_58__47__47_hdl.handle.net_47_20.500.14614_47_46_64_format_61_cmdi?1&fqType=nationalProject:or&fq=nationalProject:CLARIAH-ES&index=2&count=31"><img src="https://img.shields.io/badge/CLARIN%20VLO-visible-5b4b8a?style=flat-square" alt="Rarámuri Digital visible in CLARIN VLO"></a>
 </p>
 
 <p align="center">
@@ -85,9 +87,11 @@ Rarámuri Digital mantiene objetos académicos distintos y relacionados. Para ev
 
 - **Dataset v1.0.0:** [10.5281/zenodo.21483353](https://doi.org/10.5281/zenodo.21483353).
 - **Software/API:** [10.5281/zenodo.21893632](https://doi.org/10.5281/zenodo.21893632).
+- **Copia especializada CLARIAH-HiTZ:** [10.71845/hitz-35](https://doi.org/10.71845/hitz-35) · [Handle 20.500.14614/46](https://hdl.handle.net/20.500.14614/46).
+- **Descubrimiento especializado:** [registro en CLARIN VLO](https://vlo.clarin.eu/record/https_58__47__47_hdl.handle.net_47_20.500.14614_47_46_64_format_61_cmdi?1&fqType=nationalProject:or&fq=nationalProject:CLARIAH-ES&index=2&count=31).
 - **Preservación del código:** [`swh:1:snp:0982c208ac90273fdb553b181b8c75c66991e09d`](https://archive.softwareheritage.org/swh:1:snp:0982c208ac90273fdb553b181b8c75c66991e09d).
 
-El DOI del dataset identifica los datos y sus exportaciones; el DOI del software/API identifica la infraestructura computacional. Ambos objetos permanecen relacionados con este repositorio y no deben intercambiarse en citas o metadatos.
+El DOI de Zenodo del dataset sigue siendo el identificador canónico de la versión 1.0.0; el DOI y Handle de HiTZ identifican la copia depositada en esa infraestructura especializada y el registro de CLARIN VLO funciona como superficie de descubrimiento. El DOI del software/API identifica la infraestructura computacional. La presencia en CLARIN VLO no modifica el estado de validación lingüística o comunitaria.
 
 ## Qué es Rarámuri Digital
 
