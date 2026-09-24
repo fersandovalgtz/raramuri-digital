@@ -26,6 +26,8 @@ Una release científica sólo debe declararse citable cuando el objeto publicado
 - [ ] Confirmar que la cita recomendada del dataset utiliza el DOI de la versión correcta.
 - [ ] Confirmar la política de citación doble cuando una afirmación dependa tanto de la fuente histórica como de una transformación de Rarámuri Digital.
 - [ ] Revisar que README en español e inglés no contradigan los metadatos estructurados.
+- [ ] Revisar `docs/ZENODO_RELEASE_METADATA.md` y confirmar que autoría, ORCID, licencia, lenguas, keywords, relaciones y estrategia de continuidad DOI siguen vigentes.
+- [ ] No añadir o activar `.zenodo.json` por inercia: si se utiliza, recordar que Zenodo le da precedencia sobre `CITATION.cff` para releases archivados desde GitHub.
 
 ## Generación y calidad
 
@@ -53,8 +55,10 @@ Una release científica sólo debe declararse citable cuando el objeto publicado
 - [ ] Crear etiqueta Git anotada para la versión de datos cuando corresponda.
 - [ ] Crear release de GitHub con manifiesto y archivos interoperables.
 - [ ] Verificar que el release móvil `pdf-latest` corresponda al commit publicado y contenga PDF completo, ZIP alfabético y manifiesto.
+- [ ] Para el dataset de Rarámuri Digital, crear la siguiente versión desde el registro Zenodo existente mediante **New version**; no abrir un depósito paralelo ni un archivado automático de GitHub hasta verificar que conserva la continuidad del DOI.
 - [ ] Depositar la misma versión en Zenodo u otro repositorio académico y registrar el DOI sin ambigüedad.
 - [ ] Comprobar que el DOI resuelva hacia la versión publicada y que GitHub/Zenodo no describan versiones distintas como si fueran la misma.
+- [ ] Añadir comunidades Zenodo sólo con identificadores exactos y pertinencia verificados; la ausencia de una comunidad válida no bloquea el release.
 - [ ] Confirmar preservación de código en Software Heritage cuando corresponda a una release mayor o científicamente significativa.
 
 ## Sitio, API y ecosistema
