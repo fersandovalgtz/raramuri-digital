@@ -1,0 +1,7 @@
+__pycache__/
+private/
+*.journal.json
+state.json
+result.json
+pilot.bundle.json
+.env*
